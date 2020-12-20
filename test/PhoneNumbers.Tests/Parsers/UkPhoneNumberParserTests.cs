@@ -42,6 +42,15 @@ namespace PhoneNumbers.Tests.Parsers
         }
 
         [Theory]
+        [InlineData("0113111222")] // 6 digit local number
+        [InlineData("011311122222")] // 8 digit local number
+        public void Parse_1XX_Local_Number_Not_7_Digits_Throws_Exception(string value)
+        {
+            var parser = new UkPhoneNumberParser();
+            var exception = Assert.Throws<NotSupportedException>(() => parser.Parse(value));
+        }
+
+        [Theory]
         [InlineData("01100000000")]
         [InlineData("01110000000")]
         [InlineData("01120000000")]

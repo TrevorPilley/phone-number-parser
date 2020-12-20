@@ -66,6 +66,12 @@ namespace PhoneNumbers.Parsers
 
             var areaCode = value.Substring(1, areaCodeLength);
             var localNumber = value.Substring(_trunkPrefix.Length + areaCodeLength);
+
+            if (areaCode.Length == 3 && localNumber.Length != 7)
+            {
+                throw new NotSupportedException(localNumber);
+            }
+
             var geographicArea = LookupGeographicArea(areaCode);
 
             return new GeographicPhoneNumber(
