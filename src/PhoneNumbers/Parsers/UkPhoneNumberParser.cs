@@ -24,7 +24,7 @@ namespace PhoneNumbers.Parsers
             ["141"] = "Glasgow",
             ["151"] = "Liverpool",
             ["161"] = "Manchester",
-            ["191"] = "Tyneside and Durham",
+            ["191"] = "Tyneside, Sunderland and Durham",
         };
 
         private readonly IReadOnlyDictionary<KeyValuePair<string, char>, string> _geographicAreas2 = new Dictionary<KeyValuePair<string, char>, string>

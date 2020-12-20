@@ -42,7 +42,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("01412872000", "141", "2872000", "Glasgow")]
         [InlineData("01512333000", "151", "2333000", "Liverpool")]
         [InlineData("01612343235", "161", "2343235", "Manchester")]
-        [InlineData("01914277000", "191", "4277000", "Tyneside and Durham")]
+        [InlineData("01914277000", "191", "4277000", "Tyneside, Sunderland and Durham")]
         [InlineData("02076416000", "20", "76416000", "London")]
         [InlineData("02380833000", "23", "80833000", "Southampton")]
         [InlineData("02392822251", "23", "92822251", "Portsmouth")]
