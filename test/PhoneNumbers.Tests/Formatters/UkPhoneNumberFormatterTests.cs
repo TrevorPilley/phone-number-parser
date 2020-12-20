@@ -17,7 +17,7 @@ namespace PhoneNumbers.Tests.Formatters
         [InlineData("02076416000", "020 7641 6000")] // 2X
         [InlineData("07100112233", "07100 112233")] // 7X
         public void Format_Display(string value, string expected) =>
-            Assert.Equal(expected, new UkPhoneNumberFormatter().Format(PhoneNumber.Parse("GB", value), "D"));
+            Assert.Equal(expected, new UkPhoneNumberFormatter().Format(PhoneNumber.Parse(value, "GB"), "D"));
 
         [Theory]
         [InlineData("01132224444", "+441132224444")] // 11X
@@ -25,7 +25,7 @@ namespace PhoneNumbers.Tests.Formatters
         [InlineData("02076416000", "+442076416000")] // 2X
         [InlineData("07100112233", "+447100112233")] // 7X
         public void Format_International(string value, string expected) =>
-            Assert.Equal(expected, new UkPhoneNumberFormatter().Format(PhoneNumber.Parse("GB", value), "I"));
+            Assert.Equal(expected, new UkPhoneNumberFormatter().Format(PhoneNumber.Parse(value, "GB"), "I"));
 
         [Theory]
         [InlineData("01132224444", "01132224444")] // 11X
@@ -33,6 +33,6 @@ namespace PhoneNumbers.Tests.Formatters
         [InlineData("02076416000", "02076416000")] // 2X
         [InlineData("07100112233", "07100112233")] // 7X
         public void Format_National(string value, string expected) =>
-            Assert.Equal(expected, new UkPhoneNumberFormatter().Format(PhoneNumber.Parse("GB", value), "N"));
+            Assert.Equal(expected, new UkPhoneNumberFormatter().Format(PhoneNumber.Parse(value, "GB"), "N"));
     }
 }

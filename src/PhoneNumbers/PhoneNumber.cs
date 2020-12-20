@@ -33,20 +33,70 @@ namespace PhoneNumbers
 
         public string TrunkPrefix { get; }
 
-        public static PhoneNumber Parse(string countryCode, string value)
+        public static PhoneNumber Parse(string value, string countryCode)
         {
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                throw new NotSupportedException();
+            }
+
+            if (value[0] != '0')
+            {
+                throw new NotSupportedException(value);
+            }
+
             if (_parsers.TryGetValue(countryCode, out PhoneNumberParser? parser))
             {
-                return parser.Parse(value);
+                return parser.Parse(ReadDigitsOnly(value));
             }
 
             throw new NotSupportedException(countryCode);
         }
 
         public override string ToString() =>
-            ToString("I");
+            ToString(PhoneNumberFormatter.DefaultFormat);
 
         public string ToString(string format) =>
             _formatters[CallingCode].Format(this, format);
+
+        private static string ReadDigitsOnly(string value)
+        {
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                throw new NotSupportedException();
+            }
+
+            int digits = 0;
+
+            for (int i = 0; i < value.Length; i++)
+            {
+                var charVal = value[i];
+
+                if (charVal >= '0' && charVal <= '9')
+                {
+                    digits++;
+                }
+            }
+
+            if (digits == value.Length)
+            {
+                return value;
+            }
+
+            var chars = new char[digits];
+            int charPos = 0;
+
+            for (int i = 0; i < value.Length; i++)
+            {
+                var charVal = value[i];
+
+                if (charVal >= '0' && charVal <= '9')
+                {
+                    chars[charPos++] = charVal;
+                }
+            }
+
+            return new string(chars);
+        }
     }
 }

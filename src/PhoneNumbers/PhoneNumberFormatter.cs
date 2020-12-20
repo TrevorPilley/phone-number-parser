@@ -4,6 +4,8 @@ namespace PhoneNumbers
 {
     public abstract class PhoneNumberFormatter
     {
+        internal const string DefaultFormat = "I";
+
         public string Format(PhoneNumber phoneNumber, string format)
         {
             switch (format)
