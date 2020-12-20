@@ -12,7 +12,12 @@ namespace PhoneNumbers.Formatters
                 return $"{phoneNumber.TrunkPrefix}{phoneNumber.AreaCode} {phoneNumber.LocalNumber.Substring(0, 4)} {phoneNumber.LocalNumber.Substring(4)}";
             }
 
-            return $"{phoneNumber.TrunkPrefix}{phoneNumber.AreaCode} {phoneNumber.LocalNumber.Substring(0, 3)} {phoneNumber.LocalNumber.Substring(3)}";
+            if (phoneNumber.AreaCode.Length == 3)
+            {
+                return $"{phoneNumber.TrunkPrefix}{phoneNumber.AreaCode} {phoneNumber.LocalNumber.Substring(0, 3)} {phoneNumber.LocalNumber.Substring(3)}";
+            }
+
+            return $"{phoneNumber.TrunkPrefix}{phoneNumber.AreaCode} {phoneNumber.LocalNumber}";
         }
     }
 }

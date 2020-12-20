@@ -52,6 +52,9 @@ namespace PhoneNumbers.Parsers
                 case '2':
                     return ParseGeographicPhoneNumber(value);
 
+                case '7':
+                    return ParseMobilePhoneNumber(value);
+
                 default:
                     throw new NotSupportedException(value);
             }
@@ -90,7 +93,7 @@ namespace PhoneNumbers.Parsers
                 areaCodeLength = 2;
             }
 
-            var areaCode = value.Substring(1, areaCodeLength);
+            var areaCode = value.Substring(_trunkPrefix.Length, areaCodeLength);
             var localNumber = value.Substring(_trunkPrefix.Length + areaCodeLength);
 
             if (areaCode.Length == 2 && localNumber.Length != 8
@@ -107,6 +110,49 @@ namespace PhoneNumbers.Parsers
                 areaCode,
                 localNumber,
                 geographicArea);
+        }
+
+        private PhoneNumber ParseMobilePhoneNumber(string value)
+        {
+            // Including the Trunk Prefix, all UK mobile numbers are 11 digits
+            if (value.Length != 11)
+            {
+                throw new NotSupportedException(value);
+            }
+
+            // 72xx is not a mobile area code
+            if (value[2] == '2')
+            {
+                throw new NotSupportedException(value);
+            }
+
+            var areaCode = value.Substring(1, 4);
+
+            var localNumber = value.Substring(5);
+
+            // UK Wifi (data only plans) start 7911 2xx or 8xx
+            var isDataOnly = areaCode == "7911" && (value[5] == '2' || value[5] == '8');
+
+            // start 7911 2xx or 8xx
+            if (areaCode == "7911" && value[5] != '2' && value[5] != '8')
+            {
+                throw new NotSupportedException(value);
+            }
+
+            // UK pagers start 76 except 7624 which is in use for the Isle of Man
+            var isPager = value[2] == '6' && areaCode != "7624";
+
+            // UK virtual (personal numbers) start 70
+            var isVirtual = value[2] == '0';
+
+            return new MobilePhoneNumber(
+                _callingCode,
+                _trunkPrefix,
+                areaCode,
+                localNumber,
+                isDataOnly,
+                isPager,
+                isVirtual);
         }
     }
 }
