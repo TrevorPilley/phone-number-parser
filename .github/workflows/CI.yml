@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+env:
+  # Stop wasting time caching packages
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+  # Disable sending usage data to Microsoft
+  DOTNET_CLI_TELEMETRY_OPTOUT: true
+  # Do not extract XML documentation files from nuget packages
+  NUGET_XMLDOC_MODE: skip
+  NETCORE_VERSION: '5.0.101'
+  NUGET_SOURCE: 'https://api.nuget.org/v3/index.json'
+  PROJECT_CONFIGURATION: Release
+
+
+jobs:
+  build:
+    name: Build
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup .NET Core ${{ env.NETCORE_VERSION }}
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: ${{ env.NETCORE_VERSION }}
+
+    - name: dotnet restore
+      run: dotnet restore
+
+    - name: dotnet build ${{ env.PROJECT_CONFIGURATION }}
+      run: dotnet build --configuration ${{ env.PROJECT_CONFIGURATION }} --no-restore
+
+    - name: dotnet test
+      run: dotnet test --no-build --verbosity normal
