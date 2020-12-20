@@ -19,6 +19,12 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("01164541002", "116", "4541002", "Leicester")]
         [InlineData("01179222000", "117", "9222000", "Bristol")]
         [InlineData("01189373787", "118", "9373787", "Reading")]
+        [InlineData("01216754806", "121", "6754806", "Birmingham")]
+        [InlineData("01312002000", "131", "2002000", "Edinburgh")]
+        [InlineData("01412872000", "141", "2872000", "Glasgow")]
+        [InlineData("01512333000", "151", "2333000", "Liverpool")]
+        [InlineData("01612343235", "161", "2343235", "Manchester")]
+        [InlineData("01914277000", "191", "4277000", "Tyneside and Durham")]
         public void Parse_1XX_Known_PhoneNumbers(string value, string areaCode, string localNumber, string geographicArea)
         {
             var parser = new UkPhoneNumberParser();
@@ -40,6 +46,8 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("01110000000")]
         [InlineData("01120000000")]
         [InlineData("01190000000")]
+        [InlineData("01710000000")]
+        [InlineData("01810000000")]
         public void Parse_1XX_Unknown_Number_Throws_Exception(string value)
         {
             var parser = new UkPhoneNumberParser();

@@ -15,6 +15,12 @@ namespace PhoneNumbers.Parsers
             ["116"] = "Leicester",
             ["117"] = "Bristol",
             ["118"] = "Reading",
+            ["121"] = "Birmingham",
+            ["131"] = "Edinburgh",
+            ["141"] = "Glasgow",
+            ["151"] = "Liverpool",
+            ["161"] = "Manchester",
+            ["191"] = "Tyneside and Durham",
         };
 
         private readonly string _trunkPrefix = "0";
@@ -52,7 +58,8 @@ namespace PhoneNumbers.Parsers
         {
             int areaCodeLength = 0;
 
-            if (value[1] == '1' && value[2] == '1')
+            // 11X or 1X1
+            if (value[1] == '1' && (value[2] == '1' || value[3] == '1'))
             {
                 areaCodeLength = 3;
             }
