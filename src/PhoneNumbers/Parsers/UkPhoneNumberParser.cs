@@ -9,6 +9,10 @@ namespace PhoneNumbers.Parsers
 
         private readonly IReadOnlyDictionary<string, string> _geographicAreas = new Dictionary<string, string>
         {
+            ["20"] = "London",
+            ["24"] = "Coventry",
+            ["28"] = "Northern Ireland",
+            ["29"] = "Cardiff",
             ["113"] = "Leeds",
             ["114"] = "Sheffield",
             ["115"] = "Nottingham",
@@ -23,6 +27,12 @@ namespace PhoneNumbers.Parsers
             ["191"] = "Tyneside and Durham",
         };
 
+        private readonly IReadOnlyDictionary<KeyValuePair<string, char>, string> _geographicAreas2 = new Dictionary<KeyValuePair<string, char>, string>
+        {
+            [new KeyValuePair<string, char>("23", '8')] = "Southampton",
+            [new KeyValuePair<string, char>("23", '9')] = "Portsmouth",
+        };
+
         private readonly string _trunkPrefix = "0";
 
         public override PhoneNumber Parse(string value)
@@ -35,6 +45,7 @@ namespace PhoneNumbers.Parsers
             switch (value[1])
             {
                 case '1':
+                case '2':
                     return ParseGeographicPhoneNumber(value);
 
                 default:
@@ -42,11 +53,16 @@ namespace PhoneNumbers.Parsers
             }
         }
 
-        private string LookupGeographicArea(string areaCode)
+        private string LookupGeographicArea(string areaCode, string localNumber)
         {
             string? geographicArea = null;
 
             if (_geographicAreas.TryGetValue(areaCode, out geographicArea))
+            {
+                return geographicArea;
+            }
+
+            if (_geographicAreas2.TryGetValue(new KeyValuePair<string, char>(areaCode, localNumber[0]), out geographicArea))
             {
                 return geographicArea;
             }
@@ -64,15 +80,22 @@ namespace PhoneNumbers.Parsers
                 areaCodeLength = 3;
             }
 
+            // 2X
+            if (value[1] == '2')
+            {
+                areaCodeLength = 2;
+            }
+
             var areaCode = value.Substring(1, areaCodeLength);
             var localNumber = value.Substring(_trunkPrefix.Length + areaCodeLength);
 
-            if (areaCode.Length == 3 && localNumber.Length != 7)
+            if (areaCode.Length == 2 && localNumber.Length != 8
+                || areaCode.Length == 3 && localNumber.Length != 7)
             {
                 throw new NotSupportedException(localNumber);
             }
 
-            var geographicArea = LookupGeographicArea(areaCode);
+            var geographicArea = LookupGeographicArea(areaCode, localNumber);
 
             return new GeographicPhoneNumber(
                 _callingCode,
