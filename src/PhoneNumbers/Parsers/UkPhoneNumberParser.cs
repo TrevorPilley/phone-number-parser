@@ -3,6 +3,10 @@ using System.Collections.Generic;
 
 namespace PhoneNumbers.Parsers
 {
+    /// <remarks>
+    /// https://en.m.wikipedia.org/wiki/Telephone_numbers_in_the_United_Kingdom
+    /// https://en.wikipedia.org/wiki/List_of_dialling_codes_in_the_United_Kingdom
+    /// </remarks>
     public sealed class UkPhoneNumberParser : PhoneNumberParser
     {
         private readonly string _callingCode = "+44";

@@ -1,5 +1,8 @@
 namespace PhoneNumbers.Formatters
 {
+    /// <remarks>
+    /// https://www.area-codes.org.uk/formatting.php
+    /// </remarks>
     public sealed class UkPhoneNumberFormatter : PhoneNumberFormatter
     {
         protected override string FormatDisplay(PhoneNumber phoneNumber)

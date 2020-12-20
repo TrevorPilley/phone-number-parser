@@ -5,6 +5,9 @@ using PhoneNumbers.Parsers;
 
 namespace PhoneNumbers
 {
+    /// <remarks>
+    /// https://en.wikipedia.org/wiki/List_of_country_calling_codes
+    /// </remarks>
     public abstract class PhoneNumber
     {
         private static readonly IReadOnlyDictionary<string, PhoneNumberParser> _parsers = new Dictionary<string, PhoneNumberParser>
