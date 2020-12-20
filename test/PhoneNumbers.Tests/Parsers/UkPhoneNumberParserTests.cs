@@ -19,7 +19,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("01164541002", "116", "4541002", "Leicester")]
         [InlineData("01179222000", "117", "9222000", "Bristol")]
         [InlineData("01189373787", "118", "9373787", "Reading")]
-        public void Parse_11X_Known_PhoneNumbers(string value, string areaCode, string localNumber, string geographicArea)
+        public void Parse_1XX_Known_PhoneNumbers(string value, string areaCode, string localNumber, string geographicArea)
         {
             var parser = new UkPhoneNumberParser();
             var phoneNumber = parser.Parse(value);
@@ -40,7 +40,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("01110000000")]
         [InlineData("01120000000")]
         [InlineData("01190000000")]
-        public void Parse_11X_Unknown_Number_Throws_Exception(string value)
+        public void Parse_1XX_Unknown_Number_Throws_Exception(string value)
         {
             var parser = new UkPhoneNumberParser();
             var exception = Assert.Throws<NotSupportedException>(() => parser.Parse(value));
