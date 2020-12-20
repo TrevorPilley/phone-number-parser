@@ -86,9 +86,7 @@ namespace PhoneNumbers.Parsers
             {
                 areaCodeLength = 3;
             }
-
-            // 2X
-            if (value[1] == '2')
+            else if (value[1] == '2') // 2X
             {
                 areaCodeLength = 2;
             }
