@@ -1,3 +1,4 @@
+﻿using System;
 using PhoneNumbers.Formatters;
 using Xunit;
 
@@ -34,5 +35,9 @@ namespace PhoneNumbers.Tests.Formatters
         [InlineData("07100112233", "07100112233")] // 7X
         public void Format_National(string value, string expected) =>
             Assert.Equal(expected, new UkPhoneNumberFormatter().Format(PhoneNumber.Parse(value, "GB"), "N"));
+
+        [Fact]
+        public void Format_Throws_Exception_For_Invalid_Format() =>
+            Assert.Throws<FormatException>(() => new UkPhoneNumberFormatter().Format(PhoneNumber.Parse("+441132224444"), "C"));
     }
 }

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using PhoneNumbers.Parsers;
 using Xunit;
 
@@ -18,7 +18,7 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_1XX_Local_Number_Not_7_Digits_Throws_Exception(string value)
         {
             var parser = new UkPhoneNumberParser();
-            var exception = Assert.Throws<NotSupportedException>(() => parser.Parse(value));
+            NotSupportedException exception = Assert.Throws<NotSupportedException>(() => parser.Parse(value, CountryInfo.UK));
         }
 
         [Theory]
@@ -27,7 +27,7 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_2X_Local_Number_Not_8_Digits_Throws_Exception(string value)
         {
             var parser = new UkPhoneNumberParser();
-            var exception = Assert.Throws<NotSupportedException>(() => parser.Parse(value));
+            NotSupportedException exception = Assert.Throws<NotSupportedException>(() => parser.Parse(value, CountryInfo.UK));
         }
 
         [Theory]
@@ -36,7 +36,25 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_7X_Local_Number_Not_6_Digits_Throws_Exception(string value)
         {
             var parser = new UkPhoneNumberParser();
-            var exception = Assert.Throws<NotSupportedException>(() => parser.Parse(value));
+            NotSupportedException exception = Assert.Throws<NotSupportedException>(() => parser.Parse(value, CountryInfo.UK));
+        }
+
+        [Theory]
+        [InlineData("07781112233")] // Guernsey Mobile
+        [InlineData("07839112233")] // Guernsey Mobile
+        [InlineData("07911112233")] // Guernsey Mobile
+        [InlineData("07509112233")] // Jersey Mobile
+        [InlineData("07797112233")] // Jersey Mobile
+        [InlineData("07937112233")] // Jersey Mobile
+        [InlineData("07700112233")] // Jersey Mobile
+        [InlineData("07829112233")] // Jersey Mobile
+        [InlineData("07524112233")] // Isle of Man Mobile
+        [InlineData("07624112233")] // Isle of Man Mobile
+        [InlineData("07924112233")] // Isle of Man Mobile
+        public void Parse_Crown_Dependency_MobileNumber_Throws_Exception(string value)
+        {
+            var parser = new UkPhoneNumberParser();
+            NotSupportedException exception = Assert.Throws<NotSupportedException>(() => parser.Parse(value, CountryInfo.UK));
         }
 
         [Theory]
@@ -61,17 +79,16 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Known_GeographicPhoneNumber(string value, string areaCode, string localNumber, string geographicArea)
         {
             var parser = new UkPhoneNumberParser();
-            var phoneNumber = parser.Parse(value);
+            PhoneNumber phoneNumber = parser.Parse(value, CountryInfo.UK);
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<GeographicPhoneNumber>(phoneNumber);
 
             var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
             Assert.Equal(areaCode, geographicPhoneNumber.AreaCode);
-            Assert.Equal("+44", geographicPhoneNumber.CallingCode);
+            Assert.Equal(CountryInfo.UK, geographicPhoneNumber.Country);
             Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
             Assert.Equal(localNumber, geographicPhoneNumber.LocalNumber);
-            Assert.Equal("0", geographicPhoneNumber.TrunkPrefix);
         }
 
         [Theory]
@@ -79,26 +96,25 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07300112233", "7300", "112233")]
         [InlineData("07400112233", "7400", "112233")]
         [InlineData("07500112233", "7500", "112233")]
-        [InlineData("07624112233", "7624", "112233")] // Isle of Man Mobile
-        [InlineData("07700112233", "7700", "112233")]
+        // TODO: 7700 is listed as Jersey and also UK Mobiles so check
+        //[InlineData("07700112233", "7700", "112233")]
         [InlineData("07800112233", "7800", "112233")]
         [InlineData("07900112233", "7900", "112233")]
         public void Parse_Known_MobilePhoneNumber(string value, string areaCode, string localNumber)
         {
             var parser = new UkPhoneNumberParser();
-            var phoneNumber = parser.Parse(value);
+            PhoneNumber phoneNumber = parser.Parse(value, CountryInfo.UK);
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<MobilePhoneNumber>(phoneNumber);
 
             var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
             Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
-            Assert.Equal("+44", mobilePhoneNumber.CallingCode);
+            Assert.Equal(CountryInfo.UK, mobilePhoneNumber.Country);
             Assert.False(mobilePhoneNumber.IsDataOnly);
             Assert.False(mobilePhoneNumber.IsPager);
             Assert.False(mobilePhoneNumber.IsVirtual);
             Assert.Equal(localNumber, mobilePhoneNumber.LocalNumber);
-            Assert.Equal("0", mobilePhoneNumber.TrunkPrefix);
         }
 
         [Theory]
@@ -107,19 +123,18 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Known_MobilePhoneNumber_DataOnly(string value, string areaCode, string localNumber)
         {
             var parser = new UkPhoneNumberParser();
-            var phoneNumber = parser.Parse(value);
+            PhoneNumber phoneNumber = parser.Parse(value, CountryInfo.UK);
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<MobilePhoneNumber>(phoneNumber);
 
             var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
             Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
-            Assert.Equal("+44", mobilePhoneNumber.CallingCode);
+            Assert.Equal(CountryInfo.UK, mobilePhoneNumber.Country);
             Assert.True(mobilePhoneNumber.IsDataOnly);
             Assert.False(mobilePhoneNumber.IsPager);
             Assert.False(mobilePhoneNumber.IsVirtual);
             Assert.Equal(localNumber, mobilePhoneNumber.LocalNumber);
-            Assert.Equal("0", mobilePhoneNumber.TrunkPrefix);
         }
 
         [Theory]
@@ -127,19 +142,18 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Known_MobilePhoneNumber_Pager(string value, string areaCode, string localNumber)
         {
             var parser = new UkPhoneNumberParser();
-            var phoneNumber = parser.Parse(value);
+            PhoneNumber phoneNumber = parser.Parse(value, CountryInfo.UK);
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<MobilePhoneNumber>(phoneNumber);
 
             var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
             Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
-            Assert.Equal("+44", mobilePhoneNumber.CallingCode);
+            Assert.Equal(CountryInfo.UK, mobilePhoneNumber.Country);
             Assert.False(mobilePhoneNumber.IsDataOnly);
             Assert.True(mobilePhoneNumber.IsPager);
             Assert.False(mobilePhoneNumber.IsVirtual);
             Assert.Equal(localNumber, mobilePhoneNumber.LocalNumber);
-            Assert.Equal("0", mobilePhoneNumber.TrunkPrefix);
         }
 
         [Theory]
@@ -147,19 +161,41 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Known_MobilePhoneNumber_Virtual(string value, string areaCode, string localNumber)
         {
             var parser = new UkPhoneNumberParser();
-            var phoneNumber = parser.Parse(value);
+            PhoneNumber phoneNumber = parser.Parse(value, CountryInfo.UK);
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<MobilePhoneNumber>(phoneNumber);
 
             var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
             Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
-            Assert.Equal("+44", mobilePhoneNumber.CallingCode);
+            Assert.Equal(CountryInfo.UK, mobilePhoneNumber.Country);
             Assert.False(mobilePhoneNumber.IsDataOnly);
             Assert.False(mobilePhoneNumber.IsPager);
             Assert.True(mobilePhoneNumber.IsVirtual);
             Assert.Equal(localNumber, mobilePhoneNumber.LocalNumber);
-            Assert.Equal("0", mobilePhoneNumber.TrunkPrefix);
+        }
+
+        [Fact]
+        public void Parse_Throws_Exception_If_CallingCode_Invalid()
+        {
+            var parser = new UkPhoneNumberParser();
+            ArgumentException exception = Assert.Throws<ArgumentException>(() => parser.Parse("+1111111111", CountryInfo.UK));
+            Assert.Equal($"The value must be a GB phone number starting {CountryInfo.UK.TrunkPrefix} or {CountryInfo.UK.CallingCode}. (Parameter 'value')", exception.Message);
+        }
+
+        [Fact]
+        public void Parse_Throws_Exception_If_ServiceType_Invalid()
+        {
+            var parser = new UkPhoneNumberParser();
+            NotSupportedException exception = Assert.Throws<NotSupportedException>(() => parser.Parse("0411111111", CountryInfo.UK));
+        }
+
+        [Fact]
+        public void Parse_Throws_Exception_If_TrunkPrefix_Invalid()
+        {
+            var parser = new UkPhoneNumberParser();
+            ArgumentException exception = Assert.Throws<ArgumentException>(() => parser.Parse("1111111111", CountryInfo.UK));
+            Assert.Equal($"The value must be a GB phone number starting {CountryInfo.UK.TrunkPrefix} or {CountryInfo.UK.CallingCode}. (Parameter 'value')", exception.Message);
         }
 
         [Theory]
@@ -179,21 +215,7 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Unknown_AreaCode_Or_LocalNumber_Throws_Exception(string value)
         {
             var parser = new UkPhoneNumberParser();
-            var exception = Assert.Throws<NotSupportedException>(() => parser.Parse(value));
-        }
-
-        [Fact]
-        public void Parse_Throws_Exception_If_ServiceType_Invalid()
-        {
-            var parser = new UkPhoneNumberParser();
-            var exception = Assert.Throws<NotSupportedException>(() => parser.Parse("0411111111"));
-        }
-
-        [Fact]
-        public void Parse_Throws_Exception_If_TrunkPrefix_Invalid()
-        {
-            var parser = new UkPhoneNumberParser();
-            var exception = Assert.Throws<NotSupportedException>(() => parser.Parse("1111111111"));
+            NotSupportedException exception = Assert.Throws<NotSupportedException>(() => parser.Parse(value, CountryInfo.UK));
         }
     }
 }
