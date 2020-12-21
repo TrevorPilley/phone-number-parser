@@ -1,15 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8EEA7F3E-5B2D-4945-8276-1D63DFAD1879}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneNumbers", "src\PhoneNumbers\PhoneNumbers.csproj", "{97292714-0BEE-4008-AD7D-084BA5B9C314}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneNumbers", "src\PhoneNumbers\PhoneNumbers.csproj", "{97292714-0BEE-4008-AD7D-084BA5B9C314}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{946E2981-1A3F-4243-8757-704A20FEADEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneNumbers.Tests", "test\PhoneNumbers.Tests\PhoneNumbers.Tests.csproj", "{679E80C9-D352-4024-9599-5E3A743105F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneNumbers.Tests", "test\PhoneNumbers.Tests\PhoneNumbers.Tests.csproj", "{679E80C9-D352-4024-9599-5E3A743105F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "github", "github", "{7C8CBC4A-FB52-4E1D-AAD1-0E75917CBB02}"
+	ProjectSection(SolutionItems) = preProject
+		.github\dependabot.yml = .github\dependabot.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{A5D3232C-78A8-47D2-9CE7-B174C84EE208}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\CI.yml = .github\workflows\CI.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,9 +29,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{97292714-0BEE-4008-AD7D-084BA5B9C314}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -49,8 +56,15 @@ Global
 		{679E80C9-D352-4024-9599-5E3A743105F7}.Release|x86.ActiveCfg = Release|Any CPU
 		{679E80C9-D352-4024-9599-5E3A743105F7}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{97292714-0BEE-4008-AD7D-084BA5B9C314} = {8EEA7F3E-5B2D-4945-8276-1D63DFAD1879}
 		{679E80C9-D352-4024-9599-5E3A743105F7} = {946E2981-1A3F-4243-8757-704A20FEADEB}
+		{A5D3232C-78A8-47D2-9CE7-B174C84EE208} = {7C8CBC4A-FB52-4E1D-AAD1-0E75917CBB02}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D8622AE-AFA6-495F-B818-454F7C644DAA}
 	EndGlobalSection
 EndGlobal
