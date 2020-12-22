@@ -6,9 +6,7 @@ if (Test-Path $testResults) {
     Remove-Item -Path $testResults -Recurse
 }
 
-if ((Test-NetConnection).PingSucceeded) {
-    dotnet tool update --global dotnet-reportgenerator-globaltool
-}
+dotnet tool update --global dotnet-reportgenerator-globaltool
 
 dotnet clean
 dotnet build
