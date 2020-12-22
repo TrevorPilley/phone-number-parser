@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace PhoneNumbers.Parsers
 {
@@ -9,151 +10,119 @@ namespace PhoneNumbers.Parsers
     /// <remarks>
     /// https://en.m.wikipedia.org/wiki/Telephone_numbers_in_the_United_Kingdom
     /// https://en.wikipedia.org/wiki/List_of_dialling_codes_in_the_United_Kingdom
+    /// https://www.area-codes.org.uk/full-uk-area-code-list.php
     /// </remarks>
-    internal sealed class UkPhoneNumberParser : PhoneNumberParser
+    internal sealed class UKPhoneNumberParser : PhoneNumberParser
     {
-        private static readonly List<string> s_crownDependencyAreas = new List<string>
-        {
-            // Guernsey Mobile
-            "7781",
-            "7839",
-            "7911",
-            // Jersey Mobile
-            "7509",
-            "7797",
-            "7937",
-            "7700",
-            "7829",
-            // Isle of Man Mobile
-            "7524",
-            "7624",
-            "7924",
-        };
+        private static readonly IReadOnlyDictionary<string, string> s_geographicAreas =
+            ResourceUtility.ReadLines("uk_geographic_area_codes.csv").Select(x => x.Split('|')).ToDictionary(x => x[0], x => x[1]);
 
-        // The geographic areas which can be identified by an area code alone.
-        private static readonly IReadOnlyDictionary<string, string> s_geographicAreas = new Dictionary<string, string>
-        {
-            ["20"] = "London",
-            ["24"] = "Coventry",
-            ["28"] = "Northern Ireland",
-            ["29"] = "Cardiff",
-            ["113"] = "Leeds",
-            ["114"] = "Sheffield",
-            ["115"] = "Nottingham",
-            ["116"] = "Leicester",
-            ["117"] = "Bristol",
-            ["118"] = "Reading",
-            ["121"] = "Birmingham",
-            ["131"] = "Edinburgh",
-            ["141"] = "Glasgow",
-            ["151"] = "Liverpool",
-            ["161"] = "Manchester",
-            ["191"] = "Tyneside, Sunderland and Durham",
-        };
+        private static readonly HashSet<string> s_mobileAreaCodes =
+            new HashSet<string>(ResourceUtility.ReadLines("uk_mobile_area_codes.csv"));
 
-        // For when the first digit of the local number is required in addition to the area code to identify the geographic area.
-        private static readonly IReadOnlyDictionary<KeyValuePair<string, char>, string> s_geographicAreas2 = new Dictionary<KeyValuePair<string, char>, string>
-        {
-            [new KeyValuePair<string, char>("23", '8')] = "Southampton",
-            [new KeyValuePair<string, char>("23", '9')] = "Portsmouth",
-        };
+        private static readonly HashSet<string> s_nonGeographicAreaCodes =
+            new HashSet<string>(ResourceUtility.ReadLines("uk_non_geographic_area_codes.csv"));
 
         /// <inheritdoc/>
-        /// <remarks>By the time this method is called, the value will start with the TrunkPrefix and contain digits only.</remarks>
-        protected override PhoneNumber ParsePhoneNumber(string value, CountryInfo countryInfo)
+        /// <remarks>By the time this method is called, nsnValue will have been validated against the <see cref="CountryInfo"/>.NsnLengths and contain digits only.</remarks>
+        protected override PhoneNumber ParseNationalSignificantNumber(string nsnValue, CountryInfo countryInfo)
         {
-            // UK NSN lengths are 7,9 & 10
-
-            switch (value[1])
+            switch (nsnValue[0])
             {
                 case '1':
                 case '2':
-                    return ParseGeographicPhoneNumber(value, countryInfo);
+                    return ParseGeographicPhoneNumber(nsnValue, countryInfo);
+
+                case '3':
+                case '8':
+                    return ParseNonGeographicPhoneNumber(nsnValue, countryInfo);
 
                 case '7':
-                    return ParseMobilePhoneNumber(value, countryInfo);
+                    return ParseMobilePhoneNumber(nsnValue, countryInfo);
 
                 default:
-                    throw new NotSupportedException(value);
+                    throw new NotSupportedException(nsnValue);
             }
         }
 
-        private static string LookupGeographicArea(string areaCode, string localNumber)
+        private static PhoneNumber ParseGeographicPhoneNumber(string nsnValue, CountryInfo countryInfo)
         {
-            if (s_geographicAreas.TryGetValue(areaCode, out string? geographicArea))
-            {
-                return geographicArea;
-            }
-
-            if (s_geographicAreas2.TryGetValue(new KeyValuePair<string, char>(areaCode, localNumber[0]), out geographicArea))
-            {
-                return geographicArea;
-            }
-
-            throw new NotSupportedException(areaCode);
-        }
-
-        private static PhoneNumber ParseGeographicPhoneNumber(string value, CountryInfo countryInfo)
-        {
-            int areaCodeLength = 0;
+            int areaCodeLength = 4;
 
             // 11X or 1X1
-            if (value[1] == '1' && (value[2] == '1' || value[3] == '1'))
+            if (nsnValue[0] == '1' && (nsnValue[1] == '1' || nsnValue[2] == '1'))
             {
                 areaCodeLength = 3;
             }
-            else if (value[1] == '2') // 2X
+            else if (nsnValue[0] == '2') // 2X
             {
                 areaCodeLength = 2;
             }
 
-            string areaCode = value.Substring(countryInfo.TrunkPrefix.Length, areaCodeLength);
-            string localNumber = value.Substring(countryInfo.TrunkPrefix.Length + areaCodeLength);
+            string areaCode = nsnValue.Substring(0, areaCodeLength);
+            string localNumber = nsnValue.Substring(areaCodeLength);
 
             if (areaCode.Length == 2 && localNumber.Length != 8
                 || areaCode.Length == 3 && localNumber.Length != 7)
             {
-                throw new NotSupportedException(localNumber);
+                throw new ArgumentException($"The for the area code {areaCode}, the local number must be {10 - areaCode.Length} digits.");
             }
 
-            string geographicArea = LookupGeographicArea(areaCode, localNumber);
+            if (!s_geographicAreas.TryGetValue(areaCode, out string? geographicArea))
+            {
+                throw new ArgumentException($"The area code {areaCode} is invalid.");
+            }
 
             return new GeographicPhoneNumber(countryInfo, areaCode, localNumber, geographicArea);
         }
 
-        private static PhoneNumber ParseMobilePhoneNumber(string value, CountryInfo countryInfo)
+        private static PhoneNumber ParseMobilePhoneNumber(string nsnValue, CountryInfo countryInfo)
         {
-            // Including the Trunk Prefix, all UK mobile numbers are 11 digits
-            if (value.Length != 11)
+            // All UK mobile numbers have a 10 digit NSN.
+            if (nsnValue.Length != 10)
             {
-                throw new NotSupportedException(value);
+                throw new ArgumentException("For a UK mobile phone, the national significant number of the phone number must be 10 digits.");
             }
 
-            // 72xx is not a mobile area code
-            if (value[2] == '2')
-            {
-                throw new NotSupportedException(value);
-            }
+            string areaCode = nsnValue.Substring(0, 4);
+            string localNumber = nsnValue.Substring(4);
 
-            string areaCode = value.Substring(1, 4);
-            string localNumber = value.Substring(5);
-
-            if (s_crownDependencyAreas.Contains(areaCode) &&
-                !(areaCode == "7911" && (localNumber[0] == '2' || localNumber[0] == '8')))
+            // 70XX are personal numbers but won't be in the phone area codes list.
+            if (!s_mobileAreaCodes.Contains(areaCode) && areaCode[1] != '0')
             {
-                throw new NotSupportedException($"{value} is not a GB mobile");
+                throw new ArgumentException($"The area code {areaCode} is invalid.");
             }
 
             // UK Wifi (data only plans) start 7911 2xx or 8xx
             bool isDataOnly = areaCode == "7911" && (localNumber[0] == '2' || localNumber[0] == '8');
 
-            // UK pagers start 76 except 7624 which is in use for the Isle of Man
+            // UK pagers start 76 (except 7624 which is used by mobile phones in Isle of Man)
             bool isPager = areaCode[1] == '6' && areaCode != "7624";
 
             // UK virtual (personal numbers) start 70
             bool isVirtual = areaCode[1] == '0';
 
             return new MobilePhoneNumber(countryInfo, areaCode, localNumber, isDataOnly, isPager, isVirtual);
+        }
+
+        private static PhoneNumber ParseNonGeographicPhoneNumber(string nsnValue, CountryInfo countryInfo)
+        {
+            // All UK non geographic numbers have a 10 digit NSN.
+            if (nsnValue.Length != 10)
+            {
+                throw new ArgumentException("For a UK non-geographic number, the national significant number of the phone number must be 10 digits.");
+            }
+
+            string areaCode = nsnValue.Substring(0, 3);
+
+            if (!s_nonGeographicAreaCodes.Contains(areaCode))
+            {
+                throw new ArgumentException($"The area code {areaCode} is invalid.");
+            }
+
+            string localNumber = nsnValue.Substring(3);
+
+            return new NonGeographicPhoneNumber(countryInfo, areaCode, localNumber);
         }
     }
 }

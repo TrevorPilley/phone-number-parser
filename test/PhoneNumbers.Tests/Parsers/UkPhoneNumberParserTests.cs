@@ -5,217 +5,117 @@ using Xunit;
 namespace PhoneNumbers.Tests.Parsers
 {
     /// <summary>
-    /// Contains unit tests for the <see cref="UkPhoneNumberParser"/> class.
+    /// Contains unit tests for the <see cref="UKPhoneNumberParser"/> class.
     /// </summary>
     /// <remarks>
-    /// All valid number tests use the local council number for the area code.
+    /// All valid number tests use the local council number for the area code, or a public company/charity number for non geographic numbers.
     /// </remarks>
-    public class UkPhoneNumberParserTests
+    public partial class UKPhoneNumberParserTests
     {
-        [Theory]
-        [InlineData("0113111222")] // 6 digit local number
-        [InlineData("011311122222")] // 8 digit local number
-        public void Parse_1XX_Local_Number_Not_7_Digits_Throws_Exception(string value)
+        [Fact]
+        public void Parse_Throws_Exception_For_1XX_AreaCode_And_Local_Number_Not_7_Digits()
         {
-            var parser = new UkPhoneNumberParser();
-            NotSupportedException exception = Assert.Throws<NotSupportedException>(() => parser.Parse(value, CountryInfo.UK));
+            var parser = new UKPhoneNumberParser();
+            ArgumentException exception = Assert.Throws<ArgumentException>(() => parser.Parse("0113111222", CountryInfo.UK));
+            Assert.Equal("The for the area code 113, the local number must be 7 digits.", exception.Message);
+        }
+
+        [Fact]
+        public void Parse_Throws_Exception_For_2X_AreaCode_And_Local_Number_Not_8_Digits()
+        {
+            var parser = new UKPhoneNumberParser();
+            ArgumentException exception = Assert.Throws<ArgumentException>(() => parser.Parse("0201112222", CountryInfo.UK));
+            Assert.Equal("The for the area code 20, the local number must be 8 digits.", exception.Message);
+        }
+
+        [Fact]
+        public void Parse_Throws_Exception_For_3XX_AreaCode_And_Local_Number_Not_7_Digits()
+        {
+            var parser = new UKPhoneNumberParser();
+            ArgumentException exception = Assert.Throws<ArgumentException>(() => parser.Parse("0300111111", CountryInfo.UK));
+            Assert.Equal("For a UK non-geographic number, the national significant number of the phone number must be 10 digits.", exception.Message);
+        }
+
+        [Fact]
+        public void Parse_Throws_Exception_For_7XXX_AreaCode_And_Local_Number_Not_6_Digits()
+        {
+            var parser = new UKPhoneNumberParser();
+            ArgumentException exception = Assert.Throws<ArgumentException>(() => parser.Parse("0700012345", CountryInfo.UK));
+            Assert.Equal("For a UK mobile phone, the national significant number of the phone number must be 10 digits.", exception.Message);
         }
 
         [Theory]
-        [InlineData("0200001111")] // 7 digit local number
-        [InlineData("020000111111")] // 9 digit local number
-        public void Parse_2X_Local_Number_Not_8_Digits_Throws_Exception(string value)
+        [InlineData("01100000000", "110")]
+        [InlineData("01110000000", "111")]
+        [InlineData("01120000000", "112")]
+        [InlineData("01190000000", "119")]
+        [InlineData("01710000000", "171")]
+        [InlineData("01810000000", "181")]
+        [InlineData("02100000000", "21")]
+        [InlineData("02200000000", "22")]
+        [InlineData("02500000000", "25")]
+        [InlineData("02600000000", "26")]
+        [InlineData("02700000000", "27")]
+        [InlineData("03100000000", "310")]
+        [InlineData("03200000000", "320")]
+        [InlineData("03500000000", "350")]
+        [InlineData("03600000000", "360")]
+        [InlineData("03800000000", "380")]
+        [InlineData("03900000000", "390")]
+        [InlineData("07200000000", "7200")]
+        public void Parse_Throws_Exception_If_AreaCode_Invalid(string value, string areaCode)
         {
-            var parser = new UkPhoneNumberParser();
-            NotSupportedException exception = Assert.Throws<NotSupportedException>(() => parser.Parse(value, CountryInfo.UK));
-        }
-
-        [Theory]
-        [InlineData("0700012345")] // 5 digit local number
-        [InlineData("070001234567")] // 7 digit local number
-        public void Parse_7X_Local_Number_Not_6_Digits_Throws_Exception(string value)
-        {
-            var parser = new UkPhoneNumberParser();
-            NotSupportedException exception = Assert.Throws<NotSupportedException>(() => parser.Parse(value, CountryInfo.UK));
-        }
-
-        [Theory]
-        [InlineData("07781112233")] // Guernsey Mobile
-        [InlineData("07839112233")] // Guernsey Mobile
-        [InlineData("07911112233")] // Guernsey Mobile
-        [InlineData("07509112233")] // Jersey Mobile
-        [InlineData("07797112233")] // Jersey Mobile
-        [InlineData("07937112233")] // Jersey Mobile
-        [InlineData("07700112233")] // Jersey Mobile
-        [InlineData("07829112233")] // Jersey Mobile
-        [InlineData("07524112233")] // Isle of Man Mobile
-        [InlineData("07624112233")] // Isle of Man Mobile
-        [InlineData("07924112233")] // Isle of Man Mobile
-        public void Parse_Crown_Dependency_MobileNumber_Throws_Exception(string value)
-        {
-            var parser = new UkPhoneNumberParser();
-            NotSupportedException exception = Assert.Throws<NotSupportedException>(() => parser.Parse(value, CountryInfo.UK));
-        }
-
-        [Theory]
-        [InlineData("01132224444", "113", "2224444", "Leeds")]
-        [InlineData("01142734567", "114", "2734567", "Sheffield")]
-        [InlineData("01159155555", "115", "9155555", "Nottingham")]
-        [InlineData("01164541002", "116", "4541002", "Leicester")]
-        [InlineData("01179222000", "117", "9222000", "Bristol")]
-        [InlineData("01189373787", "118", "9373787", "Reading")]
-        [InlineData("01216754806", "121", "6754806", "Birmingham")]
-        [InlineData("01312002000", "131", "2002000", "Edinburgh")]
-        [InlineData("01412872000", "141", "2872000", "Glasgow")]
-        [InlineData("01512333000", "151", "2333000", "Liverpool")]
-        [InlineData("01612343235", "161", "2343235", "Manchester")]
-        [InlineData("01914277000", "191", "4277000", "Tyneside, Sunderland and Durham")]
-        [InlineData("02076416000", "20", "76416000", "London")]
-        [InlineData("02380833000", "23", "80833000", "Southampton")]
-        [InlineData("02392822251", "23", "92822251", "Portsmouth")]
-        [InlineData("02476832222", "24", "76832222", "Coventry")]
-        [InlineData("02890320202", "28", "90320202", "Northern Ireland")] // Belfast
-        [InlineData("02920872087", "29", "20872087", "Cardiff")]
-        public void Parse_Known_GeographicPhoneNumber(string value, string areaCode, string localNumber, string geographicArea)
-        {
-            var parser = new UkPhoneNumberParser();
-            PhoneNumber phoneNumber = parser.Parse(value, CountryInfo.UK);
-
-            Assert.NotNull(phoneNumber);
-            Assert.IsType<GeographicPhoneNumber>(phoneNumber);
-
-            var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
-            Assert.Equal(areaCode, geographicPhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.UK, geographicPhoneNumber.Country);
-            Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
-            Assert.Equal(localNumber, geographicPhoneNumber.LocalNumber);
-        }
-
-        [Theory]
-        [InlineData("07100112233", "7100", "112233")]
-        [InlineData("07300112233", "7300", "112233")]
-        [InlineData("07400112233", "7400", "112233")]
-        [InlineData("07500112233", "7500", "112233")]
-        // TODO: 7700 is listed as Jersey and also UK Mobiles so check
-        //[InlineData("07700112233", "7700", "112233")]
-        [InlineData("07800112233", "7800", "112233")]
-        [InlineData("07900112233", "7900", "112233")]
-        public void Parse_Known_MobilePhoneNumber(string value, string areaCode, string localNumber)
-        {
-            var parser = new UkPhoneNumberParser();
-            PhoneNumber phoneNumber = parser.Parse(value, CountryInfo.UK);
-
-            Assert.NotNull(phoneNumber);
-            Assert.IsType<MobilePhoneNumber>(phoneNumber);
-
-            var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
-            Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.UK, mobilePhoneNumber.Country);
-            Assert.False(mobilePhoneNumber.IsDataOnly);
-            Assert.False(mobilePhoneNumber.IsPager);
-            Assert.False(mobilePhoneNumber.IsVirtual);
-            Assert.Equal(localNumber, mobilePhoneNumber.LocalNumber);
-        }
-
-        [Theory]
-        [InlineData("07911212345", "7911", "212345")]
-        [InlineData("07911812345", "7911", "812345")]
-        public void Parse_Known_MobilePhoneNumber_DataOnly(string value, string areaCode, string localNumber)
-        {
-            var parser = new UkPhoneNumberParser();
-            PhoneNumber phoneNumber = parser.Parse(value, CountryInfo.UK);
-
-            Assert.NotNull(phoneNumber);
-            Assert.IsType<MobilePhoneNumber>(phoneNumber);
-
-            var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
-            Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.UK, mobilePhoneNumber.Country);
-            Assert.True(mobilePhoneNumber.IsDataOnly);
-            Assert.False(mobilePhoneNumber.IsPager);
-            Assert.False(mobilePhoneNumber.IsVirtual);
-            Assert.Equal(localNumber, mobilePhoneNumber.LocalNumber);
-        }
-
-        [Theory]
-        [InlineData("07600112233", "7600", "112233")]
-        public void Parse_Known_MobilePhoneNumber_Pager(string value, string areaCode, string localNumber)
-        {
-            var parser = new UkPhoneNumberParser();
-            PhoneNumber phoneNumber = parser.Parse(value, CountryInfo.UK);
-
-            Assert.NotNull(phoneNumber);
-            Assert.IsType<MobilePhoneNumber>(phoneNumber);
-
-            var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
-            Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.UK, mobilePhoneNumber.Country);
-            Assert.False(mobilePhoneNumber.IsDataOnly);
-            Assert.True(mobilePhoneNumber.IsPager);
-            Assert.False(mobilePhoneNumber.IsVirtual);
-            Assert.Equal(localNumber, mobilePhoneNumber.LocalNumber);
-        }
-
-        [Theory]
-        [InlineData("07000112233", "7000", "112233")]
-        public void Parse_Known_MobilePhoneNumber_Virtual(string value, string areaCode, string localNumber)
-        {
-            var parser = new UkPhoneNumberParser();
-            PhoneNumber phoneNumber = parser.Parse(value, CountryInfo.UK);
-
-            Assert.NotNull(phoneNumber);
-            Assert.IsType<MobilePhoneNumber>(phoneNumber);
-
-            var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
-            Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.UK, mobilePhoneNumber.Country);
-            Assert.False(mobilePhoneNumber.IsDataOnly);
-            Assert.False(mobilePhoneNumber.IsPager);
-            Assert.True(mobilePhoneNumber.IsVirtual);
-            Assert.Equal(localNumber, mobilePhoneNumber.LocalNumber);
+            var parser = new UKPhoneNumberParser();
+            ArgumentException exception = Assert.Throws<ArgumentException>(() => parser.Parse(value, CountryInfo.UK));
+            Assert.Equal($"The area code {areaCode} is invalid.", exception.Message);
         }
 
         [Fact]
         public void Parse_Throws_Exception_If_CallingCode_Invalid()
         {
-            var parser = new UkPhoneNumberParser();
+            var parser = new UKPhoneNumberParser();
             ArgumentException exception = Assert.Throws<ArgumentException>(() => parser.Parse("+1111111111", CountryInfo.UK));
-            Assert.Equal($"The value must be a GB phone number starting {CountryInfo.UK.TrunkPrefix} or {CountryInfo.UK.CallingCode}. (Parameter 'value')", exception.Message);
+            Assert.Equal($"The value must be a GB phone number starting {CountryInfo.UK.TrunkPrefix} or {CountryInfo.UK.CallingCode}.", exception.Message);
+        }
+
+        [Theory]
+        [InlineData("07101111111")]
+        public void Parse_Throws_Exception_If_LocalNumber_Invalid_For_AreaCode(string value)
+        {
+            var parser = new UKPhoneNumberParser();
+            ArgumentException exception = Assert.Throws<ArgumentException>(() => parser.Parse(value, CountryInfo.UK));
+            Assert.Equal($"The area code {value.Substring(1, 4)} is invalid.", exception.Message);
+        }
+
+        [Theory]
+        [InlineData("02")]
+        [InlineData("020")]
+        [InlineData("0201")]
+        [InlineData("02011")]
+        [InlineData("020111")]
+        [InlineData("0201111")]
+        [InlineData("020111111")] // 8
+        [InlineData("020111111111")] // 11
+        public void Parse_Throws_Exception_If_Nsn_Incorrect_Length(string value)
+        {
+            var parser = new UKPhoneNumberParser();
+            ArgumentException exception = Assert.Throws<ArgumentException>(() => parser.Parse(value, CountryInfo.UK));
+            Assert.Equal("The national significant number of the phone number must be 7,9,10 in length.", exception.Message);
         }
 
         [Fact]
         public void Parse_Throws_Exception_If_ServiceType_Invalid()
         {
-            var parser = new UkPhoneNumberParser();
+            var parser = new UKPhoneNumberParser();
             NotSupportedException exception = Assert.Throws<NotSupportedException>(() => parser.Parse("0411111111", CountryInfo.UK));
         }
 
         [Fact]
         public void Parse_Throws_Exception_If_TrunkPrefix_Invalid()
         {
-            var parser = new UkPhoneNumberParser();
+            var parser = new UKPhoneNumberParser();
             ArgumentException exception = Assert.Throws<ArgumentException>(() => parser.Parse("1111111111", CountryInfo.UK));
-            Assert.Equal($"The value must be a GB phone number starting {CountryInfo.UK.TrunkPrefix} or {CountryInfo.UK.CallingCode}. (Parameter 'value')", exception.Message);
-        }
-
-        [Theory]
-        [InlineData("01100000000")]
-        [InlineData("01110000000")]
-        [InlineData("01120000000")]
-        [InlineData("01190000000")]
-        [InlineData("01710000000")]
-        [InlineData("01810000000")]
-        [InlineData("02100000000")]
-        [InlineData("02200000000")]
-        [InlineData("02500000000")]
-        [InlineData("02600000000")]
-        [InlineData("02700000000")]
-        [InlineData("07200000000")]
-        [InlineData("07911111111")]
-        public void Parse_Unknown_AreaCode_Or_LocalNumber_Throws_Exception(string value)
-        {
-            var parser = new UkPhoneNumberParser();
-            NotSupportedException exception = Assert.Throws<NotSupportedException>(() => parser.Parse(value, CountryInfo.UK));
+            Assert.Equal($"The value must be a GB phone number starting {CountryInfo.UK.TrunkPrefix} or {CountryInfo.UK.CallingCode}.", exception.Message);
         }
     }
 }

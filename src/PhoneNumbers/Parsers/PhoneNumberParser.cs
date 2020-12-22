@@ -11,7 +11,7 @@ namespace PhoneNumbers.Parsers
         /// Parses the phone number represented in the specified string into a <see cref="PhoneNumber"/> instance.
         /// </summary>
         /// <param name="value">A string containing a phone number.</param>
-        /// <param name="countryInfo"></param>
+        /// <param name="countryInfo">The <see cref="CountryInfo"/> of the country for the phone number.</param>
         /// <returns>A <see cref="PhoneNumber"/> instance representing the specified string.</returns>
         public PhoneNumber Parse(string value, CountryInfo countryInfo)
         {
@@ -27,19 +27,26 @@ namespace PhoneNumbers.Parsers
 
             if (!countryInfo.IsNumber(value))
             {
-                throw new ArgumentException($"The value must be a {countryInfo.CountryCode} phone number starting {countryInfo.TrunkPrefix} or {countryInfo.CallingCode}.", nameof(value));
+                throw new ArgumentException($"The value must be a {countryInfo.CountryCode} phone number starting {countryInfo.TrunkPrefix} or {countryInfo.CallingCode}.");
             }
 
-            return ParsePhoneNumber(countryInfo.ConvertToNationalNumber(value), countryInfo);
+            string nsnValue = countryInfo.GetNationalSignificantNumber(value);
+
+            if (!countryInfo.NsnLengths.Contains(nsnValue.Length))
+            {
+                throw new ArgumentException($"The national significant number of the phone number must be {string.Join(",", countryInfo.NsnLengths)} in length.");
+            }
+
+            return ParseNationalSignificantNumber(nsnValue, countryInfo);
         }
 
         /// <summary>
         /// Parses the phone number represented in the specified string into a <see cref="PhoneNumber"/> instance.
         /// </summary>
-        /// <param name="value">A string containing a phone number.</param>
+        /// <param name="nsnValue">A string containing the national significant number.</param>
         /// <param name="countryInfo"></param>
         /// <returns>A <see cref="PhoneNumber"/> instance representing the specified string.</returns>
-        /// <remarks>By the time this method is called, the value will start with the TrunkPrefix and contain digits only.</remarks>
-        protected abstract PhoneNumber ParsePhoneNumber(string value, CountryInfo countryInfo);
+        /// <remarks>By the time this method is called, nsnValue will have been validated against the <see cref="CountryInfo"/>.NsnLengths and contain digits only.</remarks>
+        protected abstract PhoneNumber ParseNationalSignificantNumber(string nsnValue, CountryInfo countryInfo);
     }
 }

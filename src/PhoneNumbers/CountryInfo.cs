@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using PhoneNumbers.Formatters;
 using PhoneNumbers.Parsers;
 
@@ -19,21 +20,23 @@ namespace PhoneNumbers
         /// <param name="trunkPrefix">The trunk prefix.</param>
         /// <param name="formatter">The <see cref="PhoneNumberFormatter"/>.</param>
         /// <param name="parser">The <see cref="PhoneNumberParser"/>.</param>
+        /// <param name="nsnLengths">The permitted lengths for the national significant number.</param>
         private CountryInfo(
             string countryCode,
             string callingCode,
             string internationalCallPrefix,
             string trunkPrefix,
             PhoneNumberFormatter formatter,
-            PhoneNumberParser parser) =>
-            (CountryCode, CallingCode, Formatter, InternationalCallPrefix, Parser, TrunkPrefix) =
-            (countryCode, callingCode, formatter, internationalCallPrefix, parser, trunkPrefix);
+            PhoneNumberParser parser,
+            int[] nsnLengths) =>
+            (CountryCode, CallingCode, Formatter, InternationalCallPrefix, Parser, TrunkPrefix, NsnLengths) =
+            (countryCode, callingCode, formatter, internationalCallPrefix, parser, trunkPrefix, new ReadOnlyCollection<int>(nsnLengths));
 
         /// <summary>
         /// Gets the <see cref="CountryInfo"/> for the United Kingdom.
         /// </summary>
         /// <remarks>Covers England, Scotland, Wales and Northern Ireland.</remarks>
-        public static CountryInfo UK { get; } = new CountryInfo("GB", "+44", "00", "0", new UkPhoneNumberFormatter(), new UkPhoneNumberParser());
+        public static CountryInfo UK { get; } = new CountryInfo("GB", "+44", "00", "0", new UKPhoneNumberFormatter(), new UKPhoneNumberParser(), new[] { 7, 9, 10 });
 
         /// <summary>
         /// Gets the country calling code.
@@ -61,6 +64,11 @@ namespace PhoneNumbers
         internal PhoneNumberFormatter Formatter { get; }
 
         /// <summary>
+        /// Gets the permitted lenghts of the national significant number.
+        /// </summary>
+        internal ReadOnlyCollection<int> NsnLengths { get; }
+
+        /// <summary>
         /// Gets the <see cref="PhoneNumberParser"/> for the country.
         /// </summary>
         internal PhoneNumberParser Parser { get; }
@@ -86,18 +94,24 @@ namespace PhoneNumbers
                 _ => throw new NotSupportedException(countryCode),
             };
 
-        internal string ConvertToNationalNumber(string value)
+        /// <summary>
+        /// Gets the national significant number (NSN) from the specified phone number value.
+        /// </summary>
+        /// <param name="value">A string containing a phone number.</param>
+        /// <returns>The national significant number (NSN).</returns>
+        /// <remarks>This excludes the CallingCode and TrunkPrefix.</remarks>
+        internal string GetNationalSignificantNumber(string value)
         {
             if (string.IsNullOrWhiteSpace(value))
             {
-                throw new ArgumentException();
+                throw new ArgumentException("The value must not be blank", nameof(value));
             }
 
-            // The number will either start with the international calling code (+XX) or the Trunk Prefix
-            // If it starts with the calling code, replace it with the trunk prefix.
-            bool isInternationalNumber = IsInternationalNumber(value);
-            int startPos = isInternationalNumber ? CallingCode.Length : 0;
-            int digits = isInternationalNumber ? TrunkPrefix.Length : 0;
+            int startPos = IsInternationalNumber(value)
+                ? CallingCode.Length
+                : value.IndexOf(TrunkPrefix, StringComparison.Ordinal) + 1;
+
+            int digits = 0;
 
             for (int i = startPos; i < value.Length; i++)
             {
@@ -107,21 +121,13 @@ namespace PhoneNumbers
                 }
             }
 
-            if (digits == value.Length)
+            if (startPos + digits == value.Length)
             {
-                return value;
+                return value.Substring(startPos);
             }
 
             char[] chars = new char[digits];
             int charPos = 0;
-
-            if (isInternationalNumber)
-            {
-                foreach (char charVal in TrunkPrefix)
-                {
-                    chars[charPos++] = charVal;
-                }
-            }
 
             for (int i = startPos; i < value.Length; i++)
             {

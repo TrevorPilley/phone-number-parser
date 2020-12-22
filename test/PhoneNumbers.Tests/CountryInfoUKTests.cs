@@ -19,9 +19,10 @@ namespace PhoneNumbers.Tests
             CountryInfo countryInfo = CountryInfo.UK;
 
             Assert.Equal("+44", countryInfo.CallingCode);
-            Assert.IsType<UkPhoneNumberFormatter>(countryInfo.Formatter);
+            Assert.IsType<UKPhoneNumberFormatter>(countryInfo.Formatter);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
-            Assert.IsType<UkPhoneNumberParser>(countryInfo.Parser);
+            Assert.Equal(new[] { 7, 9, 10 }, countryInfo.NsnLengths);
+            Assert.IsType<UKPhoneNumberParser>(countryInfo.Parser);
             Assert.Equal("0", countryInfo.TrunkPrefix);
         }
 
@@ -29,8 +30,8 @@ namespace PhoneNumbers.Tests
         [InlineData("+441132224444")]
         [InlineData("(0113) 222 4444")]
         [InlineData("01132224444")]
-        public void UK_ConvertToNationalNumber(string value) =>
-            Assert.Equal("01132224444", CountryInfo.UK.ConvertToNationalNumber(value));
+        public void UK_GetNationalSignificantNumber(string value) =>
+            Assert.Equal("1132224444", CountryInfo.UK.GetNationalSignificantNumber(value));
 
         [Theory]
         [InlineData("+35312222222")]

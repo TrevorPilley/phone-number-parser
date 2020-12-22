@@ -14,12 +14,12 @@ namespace PhoneNumbers.Tests.Formatters
     public class PhoneNumberParserTests
     {
         [Fact]
-        public void Parse_Throws_Exception_For_Null_CountryInfo() =>
-            Assert.Throws<ArgumentNullException>(() => GetParser().Parse("012345667788", null));
-
-        [Fact]
         public void Parse_Throws_Exception_For_Empty_Value() =>
             Assert.Throws<ArgumentException>(() => GetParser().Parse(" ", CountryInfo.UK));
+
+        [Fact]
+        public void Parse_Throws_Exception_For_Null_CountryInfo() =>
+            Assert.Throws<ArgumentNullException>(() => GetParser().Parse("012345667788", null));
 
         [Fact]
         public void Parse_Throws_Exception_For_Null_Value() =>

@@ -1,0 +1,615 @@
+﻿113|Leeds
+114|Sheffield
+115|Nottingham
+116|Leicester
+117|Bristol
+118|Reading
+1200|Clitheroe
+1202|Bournemouth
+1204|Bolton
+1205|Boston
+1206|Colchester
+1207|Consett
+1208|Bodmin
+1209|Redruth
+121|Birmingham
+1223|Cambridge
+1224|Aberdeen
+1225|Bath
+1226|Barnsley
+1227|Canterbury
+1228|Carlisle
+1229|Barrow-in Furness / Millom
+1233|Ashford (Kent)
+1234|Bedford
+1235|Abingdon
+1236|Coatbridge
+1237|Bideford
+1239|Cardigan
+1241|Arbroath
+1242|Cheltenham
+1243|Chichester
+1244|Chester
+1245|Chelmsford
+1246|Chesterfield
+1248|Bangor (Gwynedd)
+1249|Chippenham
+1250|Blairgowrie
+1252|Aldershot
+1253|Blackpool
+1254|Blackburn
+1255|Clacton-on-Sea
+1256|Basingstoke
+1257|Coppull
+1258|Blandford
+1259|Alloa
+1260|Congleton
+1261|Banff
+1262|Bridlington
+1263|Cromer
+1264|Andover
+1267|Carmarthen
+1268|Basildon
+1269|Ammanford
+1270|Crewe
+1271|Barnstaple
+1273|Brighton
+1274|Bradford
+1275|Clevedon
+1276|Camberley
+1277|Brentwood
+1278|Bridgwater
+1279|Bishops Stortford
+1280|Buckingham
+1282|Burnley
+1283|Burton-on-Trent
+1284|Bury-St-Edmunds
+1285|Cirencester
+1286|Caernarfon
+1287|Guisborough
+1288|Bude
+1289|Berwick-on-Tweed
+1290|Cumnock
+1291|Chepstow
+1292|Ayr
+1293|Crawley
+1294|Ardrossan
+1295|Banbury
+1296|Aylesbury
+1297|Axminster
+1298|Buxton
+1299|Bewdley
+1300|Cerne Abbas
+1301|Arrochar
+1302|Doncaster
+1303|Folkestone
+1304|Dover
+1305|Dorchester
+1306|Dorking
+1307|Forfar
+1308|Bridport
+1309|Forres
+131|Edinburgh
+1320|Fort Augustus
+1322|Dartford
+1323|Eastbourne
+1324|Falkirk
+1325|Darlington
+1326|Falmouth
+1327|Daventry
+1328|Fakenham
+1329|Fareham
+1330|Banchory
+1332|Derby
+1333|Anstruther
+1334|St Andrews
+1335|Ashbourne
+1337|Ladybank
+1339|Aboyne / Ballater
+13397|Ballater
+13398|Aboyne
+1340|Craigellachie
+1341|Barmouth
+1342|East Grinstead
+1343|Elgin
+1344|Bracknell
+1346|Fraserburgh
+1347|Easingwold
+1348|Fishguard
+1349|Dingwall
+1350|Dunkeld
+1352|Mold
+1353|Ely
+1354|Chatteris
+1355|East Kilbride
+1356|Brechin
+1357|Strathaven
+1358|Ellon
+1359|Pakenham
+1360|Killearn
+1361|Duns
+1362|Dereham
+1363|Crediton
+1364|Ashburton
+1366|Downham Market
+1367|Faringdon
+1368|Dunbar
+1369|Dunoon
+1371|Great Dunmow
+1372|Esher
+1373|Frome
+1375|Grays Thurrock
+1376|Braintree
+1377|Driffield
+1379|Diss
+1380|Devizes
+1381|Fortrose
+1382|Dundee
+1383|Dunfermline
+1384|Dudley
+1386|Evesham
+1387|Dumfries
+13873|Langholm
+1388|Bishop Auckland / Stanhope
+1389|Dumbarton
+1392|Exeter
+1394|Felixstowe
+1395|Budleigh Salterton
+1397|Fort William
+1398|Dulverton
+1400|Honington
+1403|Horsham
+1404|Honiton
+1405|Goole
+1406|Holbeach
+1407|Holyhead
+1408|Golspie
+1409|Holsworthy
+141|Glasgow
+1420|Alton
+1422|Halifax
+1423|Boroughbridge / Harrogate
+1424|Hastings
+1425|Ringwood
+1427|Gainsborough
+1428|Haslemere
+1429|Hartlepool
+1430|Market Weighton / North Cave
+1431|Helmsdale
+1432|Hereford
+1433|Hathersage
+1434|Bellingham / Haltwhistle / Hexham
+1435|Heathfield
+1436|Helensburgh
+1437|Clynderwen / Haverfordwest
+1438|Stevenage
+1439|Helmsley
+1440|Haverhill
+1442|Hemel Hempstead
+1443|Pontypridd
+1444|Haywards Heath
+1445|Gairloch
+1446|Barry
+1449|Stowmarket
+1450|Hawick
+1451|Stow-on-the-Wold
+1452|Gloucester
+1453|Dursley
+1454|Chipping Sodbury
+1455|Hinckley
+1456|Glenurquhart
+1457|Glossop
+1458|Glastonbury
+1460|Chard
+1461|Gretna
+1462|Hitchin
+1463|Inverness
+1464|Insch
+1465|Girvan
+1466|Huntly
+1467|Inverurie
+1469|Killingholme
+1470|Isle of Skye – Edinbane
+1471|Isle of Skye – Broadford
+1472|Grimsby
+1473|Ipswich
+1474|Gravesend
+1475|Greenock
+1476|Grantham
+1477|Holmes Chapel
+1478|Isle of Skye – Portree
+1479|Grantown-on-Spey
+1480|Huntingdon
+1481|Guernsey
+1482|Hull
+1483|Guildford
+1484|Huddersfield
+1485|Hunstanton
+1487|Warboys
+1488|Hungerford
+1489|Bishops Waltham
+1490|Corwen
+1491|Henley-on-Thames
+1492|Colwyn Bay
+1493|Great Yarmouth
+1494|High Wycombe
+1495|Pontypool
+1496|Islay and Jura
+1497|Hay-on-Wye
+1499|Inveraray
+1501|Harthill
+1502|Lowestoft
+1503|Looe
+1505|Johnstone
+1506|Bathgate
+1507|Alford / Louth / Horncastle
+1508|Brooke
+1509|Loughborough
+151|Liverpool
+1520|Lochcarron
+1522|Lincoln
+1524|Lancaster
+15242|Hornby
+1525|Leighton Buzzard
+1526|Martin
+1527|Redditch
+1528|Laggan
+1529|Sleaford
+1530|Coalville
+1531|Ledbury
+1534|Jersey
+1535|Keighley
+1536|Kettering
+1538|Leek
+1539|Kendal
+15394|Hawkshead
+15395|Grange-Over-Sands
+15396|Sedbergh
+1540|Kingussie
+1542|Keith
+1543|Cannock
+1544|Kington
+1545|Llanarth
+1546|Lochgilphead
+1547|Knighton
+1548|Kingsbridge
+1549|Lairg
+1550|Llandovery
+1553|King's Lynn
+1554|Llanelli
+1555|Lanark
+1556|Castle Douglas
+1557|Kirkcudbright
+1558|Llandeilo
+1559|Llandysul
+1560|Moscow
+1561|Laurencekirk
+1562|Kidderminster
+1563|Kilmarnock
+1564|Lapworth
+1565|Knutsford
+1566|Launceston
+1567|Killin
+1568|Leominster
+1569|Stonehaven
+1570|Lampeter
+1571|Lochinver
+1572|Oakham
+1573|Kelso
+1575|Kirriemuir
+1576|Lockerbie
+1577|Kinross
+1578|Lauder
+1579|Liskeard
+1580|Cranbrook
+1581|New Luce
+1582|Luton
+1583|Carradale
+1584|Ludlow
+1586|Campbeltown
+1588|Bishops Castle
+1590|Lymington
+1591|Llanwrtyd Wells
+1592|Kirkcaldy
+1593|Lybster
+1594|Lydney
+1595|Lerwick, Shetland Islands
+1597|Llandrindod Wells
+1598|Lynton
+1599|Kyle
+1600|Monmouth
+1603|Norwich
+1604|Northampton
+1606|Northwich
+1608|Chipping Norton
+1609|Northallerton
+161|Manchester
+1620|North Berwick
+1621|Maldon
+1622|Maidstone
+1623|Mansfield
+1624|Isle of Man
+1625|Macclesfield
+1626|Newton Abbot
+1628|Maidenhead
+1629|Matlock
+1630|Market Drayton
+1631|Oban
+1633|Newport
+1634|Medway
+1635|Newbury
+1636|Newark
+1637|Newquay
+1638|Newmarket
+1639|Neath
+1641|Strathy
+1642|Middlesbrough
+1643|Minehead
+1644|New Galloway
+1646|Milford Haven
+1647|Moretonhampstead
+1650|Cemmaes Road
+1651|Oldmeldrum
+1652|Brigg
+1653|Malton
+1654|Machynlleth
+1655|Maybole
+1656|Bridgend
+1659|Sanquhar
+1661|Prudhoe
+1663|New Mills
+1664|Melton Mowbray
+1665|Alnwick
+1666|Malmesbury
+1667|Nairn
+1668|Bamburgh
+1669|Rothbury
+1670|Morpeth
+1671|Newton Stewart
+1672|Marlborough
+1673|Market Rasen
+1674|Montrose
+1675|Coleshill
+1676|Meriden
+1677|Bedale
+1678|Bala
+1680|Isle of Mull – Craignure
+1681|Isle of Mull – Fionnphort
+1683|Moffat
+1684|Malvern
+1685|Merthyr Tydfil
+1686|Llanidloes / Newtown
+1687|Mallaig
+1688|Isle of Mull – Tobermory
+1689|Orpington
+1690|Betws-y-Coed
+1691|Oswestry
+1692|North Walsham
+1694|Church Stretton
+1695|Skelmersdale
+1697|Brampton
+16973|Wigton
+16974|Raughton Head
+16977|Brampton
+1698|Motherwell
+1700|Rothesay
+1702|Southend-on-Sea
+1704|Southport
+1706|Rochdale
+1707|Welwyn Garden City
+1708|Romford
+1709|Rotherham
+1720|Isles of Scilly
+1721|Peebles
+1722|Salisbury
+1723|Scarborough
+1724|Scunthorpe
+1725|Rockbourne
+1726|St Austell
+1727|St Albans
+1728|Saxmundham
+1729|Settle
+1730|Petersfield
+1732|Sevenoaks
+1733|Peterborough
+1736|Penzance
+1737|Redhill
+1738|Perth
+1740|Sedgefield
+1743|Shrewsbury
+1744|St Helens
+1745|Rhyl
+1746|Bridgnorth
+1747|Shaftesbury
+1748|Richmond
+1749|Shepton Mallet
+1750|Selkirk
+1751|Pickering
+1752|Plymouth
+1753|Slough
+1754|Skegness
+1756|Skipton
+1757|Selby
+1758|Pwllheli
+1759|Pocklington
+1760|Swaffham
+1761|Temple Cloud
+1763|Royston
+1764|Crieff
+1765|Ripon
+1766|Porthmadog
+1767|Sandy
+1768|Penrith
+17683|Appleby
+17684|Pooley Bridge
+17687|Keswick
+1769|South Molton
+1770|Isle of Arran
+1771|Maud
+1772|Preston
+1773|Ripley
+1775|Spalding
+1776|Stranraer
+1777|Retford
+1778|Bourne
+1779|Peterhead
+1780|Stamford
+1782|Stoke-on-Trent
+1784|Staines
+1785|Stafford
+1786|Stirling
+1787|Sudbury
+1788|Rugby
+1789|Stratford-upon-Avon
+1790|Spilsby
+1792|Swansea
+1793|Swindon
+1794|Romsey
+1795|Sittingbourne
+1796|Pitlochry
+1797|Rye
+1798|Pulborough
+1799|Saffron Walden
+1803|Torquay
+1805|Torrington
+1806|Sullom Voe, Shetland Islands
+1807|Ballindalloch
+1808|Tomatin
+1809|Tomdoun
+1821|Kinrossie
+1822|Tavistock
+1823|Taunton
+1824|Ruthin
+1825|Uckfield
+1827|Tamworth
+1828|Coupar Angus
+1829|Tarporley
+1830|Kirkwhelpington
+1832|Clopton
+1833|Barnard Castle
+1834|Narberth
+1835|St Boswells
+1837|Okehampton
+1838|Dalmally
+1840|Camelford
+1841|Padstow
+1842|Thetford
+1843|Thanet
+1844|Thame
+1845|Thirsk
+1847|Thurso / Tongue
+1848|Thornhill
+1851|Lewis and Great Bernera, Outer Hebrides
+1852|Kilmelford
+1854|Ullapool
+1855|Ballachulish
+1856|Orkney
+1857|Sanday
+1858|Market Harborough
+1859|Harris, Outer Hebrides
+1862|Tain
+1863|Ardgay
+1864|Abington
+1865|Oxford
+1866|Kilchrenan
+1869|Bicester
+1870|Benebecula, Outer Hebrides
+1871|Barra, Outer Hebrides
+1872|Truro
+1873|Abergavenny
+1874|Brecon
+1875|Tranent
+1876|North Uist, Outer Hebrides
+1877|Callander
+1878|South Uist, Outer Hebrides
+1879|Tiree and Coll
+1880|Tarbert
+1882|Kinloch Rannoch
+1883|Caterham
+1884|Tiverton
+1885|Bromyard
+1886|Knightwick
+1887|Aberfeldy
+1888|Turriff
+1889|Rugeley
+1890|Ayton / Coldstream
+1892|Tunbridge Wells
+1895|Uxbridge
+1896|Galashiels
+1899|Biggar
+1900|Workington
+1902|Wolverhampton
+1903|Worthing
+1904|York
+1905|Worcester
+1908|Milton Keynes
+1909|Worksop
+191|Tyneside / Durham / Sunderland
+1920|Ware
+1922|Walsall
+1923|Watford
+1924|Wakefield
+1925|Warrington
+1926|Warwick
+1928|Runcorn
+1929|Wareham
+1931|Shap
+1932|Weybridge
+1933|Wellingborough
+1934|Weston-Super-Mare
+1935|Yeovil
+1937|Wetherby
+1938|Welshpool
+1939|Wem
+1942|Wigan
+1943|Guiseley
+1944|West Heslerton
+1945|Wisbech
+1946|Whitehaven
+19467|Gosforth
+1947|Whitby
+1948|Whitchurch
+1949|Whatton
+1950|Sandwick, Shetland Islands
+1951|Colonsay
+1952|Telford
+1953|Wymondham
+1954|Madingley
+1955|Wick
+1957|Mid Yell, Shetland Islands
+1959|Westerham
+1962|Winchester
+1963|Wincanton
+1964|Hornsea / Patrington
+1967|Strontian
+1968|Penicuik
+1969|Leyburn
+1970|Aberystwyth
+1971|Scourie
+1972|Glenborrodale
+1974|Llanon
+1975|Alford (Aberdeen) / Strathdon
+19755|Alford (Aberdeen)
+19756|Strathdon
+1977|Pontefract
+1978|Wrexham
+1980|Amesbury
+1981|Wormbridge
+1982|Builth Wells
+1983|Isle of Wight
+1984|Watchet
+1985|Warminster
+1986|Bungay
+1987|Ebbsfleet
+1988|Wigtown
+1989|Ross-on-Wye
+1992|Lea Valley
+1993|Witney
+1994|St Clears
+1995|Garstang
+1997|Strathpeffer
+20|London
+23|Southampton / Portsmouth
+24|Coventry
+28|Northern Ireland
+29|Cardiff

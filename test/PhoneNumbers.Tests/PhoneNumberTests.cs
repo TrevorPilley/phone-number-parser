@@ -15,10 +15,6 @@ namespace PhoneNumbers.Tests
             Assert.NotNull(PhoneNumber.Parse("0114 123 4567", "GB"));
 
         [Fact]
-        public void Parse_UK_CallingCode() =>
-            Assert.NotNull(PhoneNumber.Parse("+441141234567"));
-
-        [Fact]
         public void Parse_Throws_If_Value_Does_Not_Start_With_Plus() =>
             Assert.Throws<ArgumentException>(() => PhoneNumber.Parse("441141234567"));
 
@@ -29,6 +25,10 @@ namespace PhoneNumbers.Tests
         [Fact]
         public void Parse_Throws_If_Value_Null() =>
             Assert.Throws<ArgumentException>(() => PhoneNumber.Parse(null));
+
+        [Fact]
+        public void Parse_UK_CallingCode() =>
+            Assert.NotNull(PhoneNumber.Parse("+441141234567"));
 
         [Fact]
         public void ToString_Returns_Default_Formatted_PhoneNumber()

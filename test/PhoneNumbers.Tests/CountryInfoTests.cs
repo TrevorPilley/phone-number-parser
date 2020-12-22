@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using Xunit;
 
 namespace PhoneNumbers.Tests
@@ -8,7 +7,7 @@ namespace PhoneNumbers.Tests
     {
         [Fact]
         public void AllSupported_Contains_All() =>
-            Assert.Equal(1, CountryInfo.AllSupported().Count());
+            Assert.Single(CountryInfo.AllSupported());
 
         [Fact]
         public void Find_Throws_For_Null_Country_Code() =>
