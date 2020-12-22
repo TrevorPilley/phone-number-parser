@@ -2,7 +2,7 @@
 
 A library for parsing phone numbers.
 
-Install via nuget `dotnet add package PhoneNumbers`
+Install via nuget `dotnet add package PhoneNumbers` _not yet published_
 
 Parsing a phone number is achieved via the `PhoneNumber.Parse` method, there are 2 overloads:
 
@@ -50,6 +50,8 @@ phoneNumber.ToString("N");                      // 01141234567   (format for nat
 Currently supports parsing the following:
 
 ### United Kingdom
+
+_note the ISO code for the United Kingdom is GB rather than UK._
 
 - 01, 02, 03, 07 and 08 numbers are supported.
 - 01 and 02 numbers are geographically assigned so the geographic area is included.
