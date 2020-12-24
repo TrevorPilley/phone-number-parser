@@ -1,0 +1,18 @@
+# Set default behavior to automatically normalize line endings.
+* text=auto
+
+*.txt  diff=astextplain
+
+# Force bash scripts to always use lf line endings so that if a repo is accessed
+# in Unix via a file share from Windows, the scripts will work.
+*.sh text eol=lf
+
+# Likewise, force cmd and batch scripts to always use crlf
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+*.cs text=auto diff=
+*.resx text=auto
+
+*.csproj text=auto
+*.sln text=auto eol=crlf
