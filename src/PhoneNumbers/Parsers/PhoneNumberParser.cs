@@ -5,7 +5,7 @@ namespace PhoneNumbers.Parsers
     /// <summary>
     /// The base class for a class which parses a string containing a phone number into a <see cref="PhoneNumber"/> instance.
     /// </summary>
-    public abstract class PhoneNumberParser
+    internal abstract class PhoneNumberParser
     {
         /// <summary>
         /// Parses the phone number represented in the specified string into a <see cref="PhoneNumber"/> instance.
@@ -13,13 +13,8 @@ namespace PhoneNumbers.Parsers
         /// <param name="value">A string containing a phone number.</param>
         /// <param name="countryInfo">The <see cref="CountryInfo"/> of the country for the phone number.</param>
         /// <returns>A <see cref="PhoneNumber"/> instance representing the specified string.</returns>
-        public PhoneNumber Parse(string value, CountryInfo countryInfo)
+        internal PhoneNumber Parse(string value, CountryInfo countryInfo)
         {
-            if (string.IsNullOrWhiteSpace(value))
-            {
-                throw new ArgumentException("A value must be specified.", nameof(value));
-            }
-
             if (countryInfo is null)
             {
                 throw new ArgumentNullException(nameof(countryInfo));

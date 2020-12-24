@@ -12,7 +12,7 @@ namespace PhoneNumbers
         /// <param name="areaCode">The area code of the phone number.</param>
         /// <param name="localNumber">The local number of the phone number.</param>
         /// <param name="geographicArea">The name of the geographic area the phone number the area code is allocated to.</param>
-        public GeographicPhoneNumber(
+        internal GeographicPhoneNumber(
             CountryInfo countryInfo,
             string areaCode,
             string localNumber,

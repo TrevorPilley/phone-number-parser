@@ -14,7 +14,7 @@ namespace PhoneNumbers
         /// <param name="isDataOnly"></param>
         /// <param name="isPager"></param>
         /// <param name="isVirtual"></param>
-        public MobilePhoneNumber(
+        internal MobilePhoneNumber(
             CountryInfo countryInfo,
             string areaCode,
             string localNumber,

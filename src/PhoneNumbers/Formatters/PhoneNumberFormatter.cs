@@ -5,7 +5,7 @@ namespace PhoneNumbers.Formatters
     /// <summary>
     /// The base class for a class which formats a <see cref="PhoneNumber"/>.
     /// </summary>
-    public abstract class PhoneNumberFormatter
+    internal abstract class PhoneNumberFormatter
     {
         internal const string DefaultFormat = "I";
 
@@ -16,7 +16,7 @@ namespace PhoneNumbers.Formatters
         /// <param name="format">The format string to use.</param>
         /// <exception cref="FormatException">Thrown if the format string is not valid.</exception>
         /// <returns>The string representation of the phone number as specified by the format.</returns>
-        public string Format(PhoneNumber phoneNumber, string format)
+        internal string Format(PhoneNumber phoneNumber, string format)
         {
             if (phoneNumber is null)
             {

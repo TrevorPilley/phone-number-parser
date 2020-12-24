@@ -11,7 +11,7 @@ namespace PhoneNumbers
         /// <param name="countryInfo">The <see cref="CountryInfo"/> for the phone number.</param>
         /// <param name="areaCode">The area code of the phone number.</param>
         /// <param name="localNumber">The local number of the phone number.</param>
-        public NonGeographicPhoneNumber(
+        internal NonGeographicPhoneNumber(
             CountryInfo countryInfo,
             string areaCode,
             string localNumber)
