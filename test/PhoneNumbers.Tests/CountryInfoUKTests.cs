@@ -27,13 +27,6 @@ namespace PhoneNumbers.Tests
         }
 
         [Theory]
-        [InlineData("+441132224444")]
-        [InlineData("(0113) 222 4444")]
-        [InlineData("01132224444")]
-        public void UK_GetNationalSignificantNumber(string value) =>
-            Assert.Equal("1132224444", CountryInfo.UK.GetNationalSignificantNumber(value));
-
-        [Theory]
         [InlineData("+35312222222")]
         [InlineData(" ")]
         [InlineData(default(string))]
@@ -57,5 +50,12 @@ namespace PhoneNumbers.Tests
         [InlineData("01132224444")]
         public void UK_IsNumber_True(string value) =>
             Assert.True(CountryInfo.UK.IsNumber(value));
+
+        [Theory]
+        [InlineData("+441132224444")]
+        [InlineData("(0113) 222 4444")]
+        [InlineData("01132224444")]
+        public void UK_ReadNationalSignificantNumber(string value) =>
+            Assert.Equal("1132224444", CountryInfo.UK.ReadNationalSignificantNumber(value));
     }
 }

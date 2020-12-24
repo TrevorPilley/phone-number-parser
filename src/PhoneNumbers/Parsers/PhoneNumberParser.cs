@@ -25,7 +25,7 @@ namespace PhoneNumbers.Parsers
                 throw new ArgumentException($"The value must be a {countryInfo.CountryCode} phone number starting {countryInfo.TrunkPrefix} or {countryInfo.CallingCode}.");
             }
 
-            var nsnValue = countryInfo.GetNationalSignificantNumber(value);
+            var nsnValue = countryInfo.ReadNationalSignificantNumber(value);
 
             if (!countryInfo.NsnLengths.Contains(nsnValue.Length))
             {

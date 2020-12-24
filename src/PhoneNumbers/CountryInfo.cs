@@ -94,54 +94,6 @@ namespace PhoneNumbers
                 _ => throw new NotSupportedException(countryCode),
             };
 
-        /// <summary>
-        /// Gets the national significant number (NSN) from the specified phone number value.
-        /// </summary>
-        /// <param name="value">A string containing a phone number.</param>
-        /// <returns>The national significant number (NSN).</returns>
-        /// <remarks>This excludes the CallingCode and TrunkPrefix.</remarks>
-        internal string GetNationalSignificantNumber(string value)
-        {
-            if (string.IsNullOrWhiteSpace(value))
-            {
-                throw new ArgumentException("The value must not be blank", nameof(value));
-            }
-
-            var startPos = IsInternationalNumber(value)
-                ? CallingCode.Length
-                : value.IndexOf(TrunkPrefix, StringComparison.Ordinal) + 1;
-
-            var digits = 0;
-
-            for (var i = startPos; i < value.Length; i++)
-            {
-                if (IsDigit(value[i]))
-                {
-                    digits++;
-                }
-            }
-
-            if (startPos + digits == value.Length)
-            {
-                return value.Substring(startPos);
-            }
-
-            var chars = new char[digits];
-            var charPos = 0;
-
-            for (var i = startPos; i < value.Length; i++)
-            {
-                var charVal = value[i];
-
-                if (IsDigit(charVal))
-                {
-                    chars[charPos++] = charVal;
-                }
-            }
-
-            return new string(chars);
-        }
-
         internal bool IsInternationalNumber(string value) =>
             value?.StartsWith(CallingCode, StringComparison.Ordinal) == true;
 
@@ -182,6 +134,54 @@ namespace PhoneNumbers
             }
 
             return true;
+        }
+
+        /// <summary>
+        /// Reads the national significant number (NSN) from the specified phone number value.
+        /// </summary>
+        /// <param name="value">A string containing a phone number.</param>
+        /// <returns>The national significant number (NSN).</returns>
+        /// <remarks>This excludes the CallingCode and TrunkPrefix.</remarks>
+        internal string ReadNationalSignificantNumber(string value)
+        {
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                throw new ArgumentException("The value must not be blank", nameof(value));
+            }
+
+            var startPos = IsInternationalNumber(value)
+                ? CallingCode.Length
+                : value.IndexOf(TrunkPrefix, StringComparison.Ordinal) + 1;
+
+            var digits = 0;
+
+            for (var i = startPos; i < value.Length; i++)
+            {
+                if (IsDigit(value[i]))
+                {
+                    digits++;
+                }
+            }
+
+            if (startPos + digits == value.Length)
+            {
+                return value.Substring(startPos);
+            }
+
+            var chars = new char[digits];
+            var charPos = 0;
+
+            for (var i = startPos; i < value.Length; i++)
+            {
+                var charVal = value[i];
+
+                if (IsDigit(charVal))
+                {
+                    chars[charPos++] = charVal;
+                }
+            }
+
+            return new string(chars);
         }
 
         /// <remarks>Char.IsDigit returns true for more than 0-9 so use a more restricted version.</remarks>
