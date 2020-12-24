@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using PhoneNumbers.Formatters;
 
 namespace PhoneNumbers
@@ -48,12 +49,11 @@ namespace PhoneNumbers
         /// <returns>A <see cref="PhoneNumber"/> instance representing the specified string.</returns>
         public static PhoneNumber Parse(string value)
         {
-            foreach (var countryInfo in CountryInfo.AllSupported())
+            var countryInfo = CountryInfo.AllSupported().SingleOrDefault(x => x.IsInternationalNumber(value));
+
+            if (countryInfo != null)
             {
-                if (countryInfo.IsInternationalNumber(value))
-                {
-                    return countryInfo.Parser.Parse(value, countryInfo);
-                }
+                return countryInfo.Parser.Parse(value, countryInfo);
             }
 
             throw new ArgumentException("Parse(value) only supports a value starting with a supported calling code, otherwise Parse(value, countryCode) must be used.", nameof(value));
