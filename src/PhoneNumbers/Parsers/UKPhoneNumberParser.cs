@@ -14,14 +14,11 @@ namespace PhoneNumbers.Parsers
     /// </remarks>
     internal sealed class UKPhoneNumberParser : PhoneNumberParser
     {
-        private static readonly IReadOnlyDictionary<string, string> s_geographicAreas =
-            ResourceUtility.ReadLines("uk_geographic_area_codes.csv").Select(x => x.Split('|')).ToDictionary(x => x[0], x => x[1]);
+        private static readonly string[] s_5DigitAreaCodes =
+            ResourceUtility.ReadLines("uk_area_codes.txt").Select(x => x.Split('|')).Where(x => x[0].Length == 5).Select(x => x[0]).ToArray();
 
-        private static readonly HashSet<string> s_mobileAreaCodes =
-            new HashSet<string>(ResourceUtility.ReadLines("uk_mobile_area_codes.csv"));
-
-        private static readonly HashSet<string> s_nonGeographicAreaCodes =
-            new HashSet<string>(ResourceUtility.ReadLines("uk_non_geographic_area_codes.csv"));
+        private static readonly IReadOnlyDictionary<string, AreaCodeInfo> s_areaCodes =
+            ResourceUtility.ReadLines("uk_area_codes.txt").Select(x => x.Split('|')).ToDictionary(x => x[0], x => new AreaCodeInfo(x[0], x[1]));
 
         /// <inheritdoc/>
         /// <remarks>By the time this method is called, nsnValue will have been validated against the <see cref="CountryInfo"/>.NsnLengths and contain digits only.</remarks>
@@ -47,9 +44,10 @@ namespace PhoneNumbers.Parsers
 
         private static PhoneNumber ParseGeographicPhoneNumber(string nsnValue, CountryInfo countryInfo)
         {
+            // Most UK area codes are 4 digits.
             var areaCodeLength = 4;
 
-            // 11X or 1X1
+            // 11X or 1X1 area codes are 3 digits.
             if (nsnValue[0] == '1' && (nsnValue[1] == '1' || nsnValue[2] == '1'))
             {
                 areaCodeLength = 3;
@@ -58,22 +56,36 @@ namespace PhoneNumbers.Parsers
             {
                 areaCodeLength = 2;
             }
-
-            var areaCode = nsnValue.Substring(0, areaCodeLength);
-            var localNumber = nsnValue.Substring(areaCode.Length);
-
-            if (areaCode.Length == 2 && localNumber.Length != 8
-                || areaCode.Length == 3 && localNumber.Length != 7)
+            else
             {
-                throw new ArgumentException($"The for the area code {areaCode}, the local number must be {10 - areaCode.Length} digits.");
+                for (var i = 0; i < s_5DigitAreaCodes.Length; i++)
+                {
+                    if (nsnValue.StartsWith(s_5DigitAreaCodes[i], StringComparison.Ordinal))
+                    {
+                        areaCodeLength = 5;
+                        break;
+                    }
+                }
             }
 
-            if (!s_geographicAreas.TryGetValue(areaCode, out var geographicArea))
+            var areaCode = nsnValue.Substring(0, areaCodeLength);
+
+            if (!s_areaCodes.TryGetValue(areaCode, out var areaCodeInfo))
             {
                 throw new ArgumentException($"The area code {areaCode} is invalid.");
             }
 
-            return new GeographicPhoneNumber(countryInfo, areaCode, localNumber, geographicArea);
+            var localNumber = nsnValue.Substring(areaCode.Length);
+
+            if (areaCode.Length == 2 && localNumber.Length != 8
+                || areaCode.Length == 3 && localNumber.Length != 7
+                || areaCode.Length == 4 && localNumber.Length != 6
+                || areaCode.Length == 5 && localNumber.Length != 5)
+            {
+                throw new ArgumentException($"The for the area code {areaCode}, the local number must be {10 - areaCode.Length} digits.");
+            }
+
+            return new GeographicPhoneNumber(countryInfo, areaCode, localNumber, areaCodeInfo.GeographicArea!);
         }
 
         private static PhoneNumber ParseMobilePhoneNumber(string nsnValue, CountryInfo countryInfo)
@@ -88,7 +100,7 @@ namespace PhoneNumbers.Parsers
             var localNumber = nsnValue.Substring(areaCode.Length);
 
             // 70XX are personal numbers but won't be in the phone area codes list.
-            if (!s_mobileAreaCodes.Contains(areaCode) && areaCode[1] != '0')
+            if (!s_areaCodes.ContainsKey(areaCode) && areaCode[1] != '0')
             {
                 throw new ArgumentException($"The area code {areaCode} is invalid.");
             }
@@ -116,7 +128,7 @@ namespace PhoneNumbers.Parsers
             // All Non geographic phone numbers have a 3 digit area code (3XX or 8XX).
             var areaCode = nsnValue.Substring(0, 3);
 
-            if (!s_nonGeographicAreaCodes.Contains(areaCode))
+            if (!s_areaCodes.ContainsKey(areaCode))
             {
                 throw new ArgumentException($"The area code {areaCode} is invalid.");
             }

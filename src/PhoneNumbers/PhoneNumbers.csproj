@@ -46,15 +46,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="DataFiles\uk_geographic_area_codes.csv" />
-    <None Remove="DataFiles\uk_mobile_area_codes.csv" />
-    <None Remove="DataFiles\uk_non_geographic_area_codes.csv" />
+    <None Remove="DataFiles\uk_area_codes.txt" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="DataFiles\uk_geographic_area_codes.csv" />
-    <EmbeddedResource Include="DataFiles\uk_mobile_area_codes.csv" />
-    <EmbeddedResource Include="DataFiles\uk_non_geographic_area_codes.csv" />
+    <EmbeddedResource Include="DataFiles\uk_area_codes.txt" />
   </ItemGroup>
 
   <ItemGroup>

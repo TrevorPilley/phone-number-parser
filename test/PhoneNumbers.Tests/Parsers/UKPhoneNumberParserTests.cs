@@ -7,9 +7,6 @@ namespace PhoneNumbers.Tests.Parsers
     /// <summary>
     /// Contains unit tests for the <see cref="UKPhoneNumberParser"/> class.
     /// </summary>
-    /// <remarks>
-    /// All valid number tests use the local council number for the area code, or a public company/charity number for non geographic numbers.
-    /// </remarks>
     public partial class UKPhoneNumberParserTests
     {
         [Fact]
