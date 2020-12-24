@@ -60,7 +60,7 @@ namespace PhoneNumbers.Parsers
             }
 
             var areaCode = nsnValue.Substring(0, areaCodeLength);
-            var localNumber = nsnValue.Substring(areaCodeLength);
+            var localNumber = nsnValue.Substring(areaCode.Length);
 
             if (areaCode.Length == 2 && localNumber.Length != 8
                 || areaCode.Length == 3 && localNumber.Length != 7)
@@ -85,7 +85,7 @@ namespace PhoneNumbers.Parsers
             }
 
             var areaCode = nsnValue.Substring(0, 4);
-            var localNumber = nsnValue.Substring(4);
+            var localNumber = nsnValue.Substring(areaCode.Length);
 
             // 70XX are personal numbers but won't be in the phone area codes list.
             if (!s_mobileAreaCodes.Contains(areaCode) && areaCode[1] != '0')
@@ -113,6 +113,7 @@ namespace PhoneNumbers.Parsers
                 throw new ArgumentException("For a UK non-geographic number, the national significant number of the phone number must be 10 digits.");
             }
 
+            // All Non geographic phone numbers have a 3 digit area code (3XX or 8XX).
             var areaCode = nsnValue.Substring(0, 3);
 
             if (!s_nonGeographicAreaCodes.Contains(areaCode))
@@ -120,7 +121,7 @@ namespace PhoneNumbers.Parsers
                 throw new ArgumentException($"The area code {areaCode} is invalid.");
             }
 
-            var localNumber = nsnValue.Substring(3);
+            var localNumber = nsnValue.Substring(areaCode.Length);
 
             return new NonGeographicPhoneNumber(countryInfo, areaCode, localNumber);
         }
