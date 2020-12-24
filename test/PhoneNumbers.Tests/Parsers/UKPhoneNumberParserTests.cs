@@ -30,7 +30,7 @@ namespace PhoneNumbers.Tests.Parsers
         {
             var parser = new UKPhoneNumberParser();
             var exception = Assert.Throws<ArgumentException>(() => parser.Parse("0300111111", CountryInfo.UK));
-            Assert.Equal("For a UK non-geographic number, the national significant number of the phone number must be 10 digits.", exception.Message);
+            Assert.Equal("The for the area code 300, the local number must be 7 digits.", exception.Message);
         }
 
         [Fact]
@@ -38,7 +38,7 @@ namespace PhoneNumbers.Tests.Parsers
         {
             var parser = new UKPhoneNumberParser();
             var exception = Assert.Throws<ArgumentException>(() => parser.Parse("0700012345", CountryInfo.UK));
-            Assert.Equal("For a UK mobile phone, the national significant number of the phone number must be 10 digits.", exception.Message);
+            Assert.Equal("The for the area code 7000, the local number must be 6 digits.", exception.Message);
         }
 
         [Theory]
