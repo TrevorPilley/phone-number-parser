@@ -1,4 +1,4 @@
-﻿namespace PhoneNumbers.Formatters
+namespace PhoneNumbers.Formatters
 {
     /// <summary>
     /// A <see cref="PhoneNumberFormatter"/> for UK phone numbers.

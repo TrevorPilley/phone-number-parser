@@ -1,4 +1,4 @@
-﻿namespace PhoneNumbers
+namespace PhoneNumbers
 {
     /// <summary>
     /// An implementation of <see cref="PhoneNumber"/> which represents a phone number which is not assigned to a geographic area.

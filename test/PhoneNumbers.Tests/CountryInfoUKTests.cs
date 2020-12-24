@@ -1,4 +1,4 @@
-﻿using PhoneNumbers.Formatters;
+using PhoneNumbers.Formatters;
 using PhoneNumbers.Parsers;
 using Xunit;
 
@@ -16,7 +16,7 @@ namespace PhoneNumbers.Tests
             Assert.Same(CountryInfo.UK, CountryInfo.UK);
             Assert.Same(CountryInfo.UK, CountryInfo.Find("GB"));
 
-            CountryInfo countryInfo = CountryInfo.UK;
+            var countryInfo = CountryInfo.UK;
 
             Assert.Equal("+44", countryInfo.CallingCode);
             Assert.IsType<UKPhoneNumberFormatter>(countryInfo.Formatter);

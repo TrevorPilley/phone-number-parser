@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using PhoneNumbers.Formatters;
@@ -107,13 +107,13 @@ namespace PhoneNumbers
                 throw new ArgumentException("The value must not be blank", nameof(value));
             }
 
-            int startPos = IsInternationalNumber(value)
+            var startPos = IsInternationalNumber(value)
                 ? CallingCode.Length
                 : value.IndexOf(TrunkPrefix, StringComparison.Ordinal) + 1;
 
-            int digits = 0;
+            var digits = 0;
 
-            for (int i = startPos; i < value.Length; i++)
+            for (var i = startPos; i < value.Length; i++)
             {
                 if (IsDigit(value[i]))
                 {
@@ -126,12 +126,12 @@ namespace PhoneNumbers
                 return value.Substring(startPos);
             }
 
-            char[] chars = new char[digits];
-            int charPos = 0;
+            var chars = new char[digits];
+            var charPos = 0;
 
-            for (int i = startPos; i < value.Length; i++)
+            for (var i = startPos; i < value.Length; i++)
             {
-                char charVal = value[i];
+                var charVal = value[i];
 
                 if (IsDigit(charVal))
                 {
@@ -162,9 +162,9 @@ namespace PhoneNumbers
                 return true;
             }
 
-            int firstDigit = 0;
+            var firstDigit = 0;
 
-            for (int i = 0; i < value.Length; i++)
+            for (var i = 0; i < value.Length; i++)
             {
                 if (IsDigit(value[i]))
                 {
@@ -173,7 +173,7 @@ namespace PhoneNumbers
                 }
             }
 
-            for (int i = 0; i < TrunkPrefix.Length; i++)
+            for (var i = 0; i < TrunkPrefix.Length; i++)
             {
                 if (value[firstDigit++] != TrunkPrefix[i])
                 {

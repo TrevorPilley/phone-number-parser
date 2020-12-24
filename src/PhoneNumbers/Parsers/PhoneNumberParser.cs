@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace PhoneNumbers.Parsers
 {
@@ -30,7 +30,7 @@ namespace PhoneNumbers.Parsers
                 throw new ArgumentException($"The value must be a {countryInfo.CountryCode} phone number starting {countryInfo.TrunkPrefix} or {countryInfo.CallingCode}.");
             }
 
-            string nsnValue = countryInfo.GetNationalSignificantNumber(value);
+            var nsnValue = countryInfo.GetNationalSignificantNumber(value);
 
             if (!countryInfo.NsnLengths.Contains(nsnValue.Length))
             {

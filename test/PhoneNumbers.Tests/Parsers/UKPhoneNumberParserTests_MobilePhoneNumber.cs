@@ -1,4 +1,4 @@
-﻿using PhoneNumbers.Parsers;
+using PhoneNumbers.Parsers;
 using Xunit;
 
 namespace PhoneNumbers.Tests.Parsers
@@ -25,7 +25,7 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Known_MobilePhoneNumber(string value, string areaCode, string localNumber)
         {
             var parser = new UKPhoneNumberParser();
-            PhoneNumber phoneNumber = parser.Parse(value, CountryInfo.UK);
+            var phoneNumber = parser.Parse(value, CountryInfo.UK);
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<MobilePhoneNumber>(phoneNumber);
@@ -45,7 +45,7 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Known_MobilePhoneNumber_DataOnly(string value, string areaCode, string localNumber)
         {
             var parser = new UKPhoneNumberParser();
-            PhoneNumber phoneNumber = parser.Parse(value, CountryInfo.UK);
+            var phoneNumber = parser.Parse(value, CountryInfo.UK);
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<MobilePhoneNumber>(phoneNumber);
@@ -64,7 +64,7 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Known_MobilePhoneNumber_Pager(string value, string areaCode, string localNumber)
         {
             var parser = new UKPhoneNumberParser();
-            PhoneNumber phoneNumber = parser.Parse(value, CountryInfo.UK);
+            var phoneNumber = parser.Parse(value, CountryInfo.UK);
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<MobilePhoneNumber>(phoneNumber);
@@ -83,7 +83,7 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Known_MobilePhoneNumber_Virtual(string value, string areaCode, string localNumber)
         {
             var parser = new UKPhoneNumberParser();
-            PhoneNumber phoneNumber = parser.Parse(value, CountryInfo.UK);
+            var phoneNumber = parser.Parse(value, CountryInfo.UK);
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<MobilePhoneNumber>(phoneNumber);

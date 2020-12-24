@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using PhoneNumbers.Formatters;
 
 namespace PhoneNumbers
@@ -48,7 +48,7 @@ namespace PhoneNumbers
         /// <returns>A <see cref="PhoneNumber"/> instance representing the specified string.</returns>
         public static PhoneNumber Parse(string value)
         {
-            foreach (CountryInfo countryInfo in CountryInfo.AllSupported())
+            foreach (var countryInfo in CountryInfo.AllSupported())
             {
                 if (countryInfo.IsInternationalNumber(value))
                 {
@@ -67,7 +67,7 @@ namespace PhoneNumbers
         /// <returns>A <see cref="PhoneNumber"/> instance representing the specified string.</returns>
         public static PhoneNumber Parse(string value, string countryCode)
         {
-            CountryInfo countryInfo = CountryInfo.Find(countryCode);
+            var countryInfo = CountryInfo.Find(countryCode);
 
             return countryInfo.Parser.Parse(value, countryInfo);
         }

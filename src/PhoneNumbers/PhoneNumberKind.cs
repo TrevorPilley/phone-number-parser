@@ -1,4 +1,4 @@
-﻿namespace PhoneNumbers
+namespace PhoneNumbers
 {
     /// <summary>
     /// The kinds of <see cref="PhoneNumber"/>.

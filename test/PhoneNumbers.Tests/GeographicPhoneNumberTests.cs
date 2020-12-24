@@ -1,4 +1,4 @@
-﻿using Xunit;
+using Xunit;
 
 namespace PhoneNumbers.Tests
 {
@@ -7,7 +7,7 @@ namespace PhoneNumbers.Tests
         [Fact]
         public void Constructor_Sets_Properties()
         {
-            CountryInfo countryInfo = CountryInfo.UK;
+            var countryInfo = CountryInfo.UK;
             var phoneNumber = new GeographicPhoneNumber(countryInfo, "12345", "667788", "N/A");
 
             Assert.Equal("12345", phoneNumber.AreaCode);
