@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using PhoneNumbers.Formatters;
 using PhoneNumbers.Parsers;
 
@@ -9,6 +10,7 @@ namespace PhoneNumbers
     /// <summary>
     /// A class which contains country information related to phone numbers.
     /// </summary>
+    [DebuggerDisplay("{" + nameof(GetDebuggerDisplay) + "(),nq}")]
     public sealed class CountryInfo
     {
         /// <summary>
@@ -187,5 +189,8 @@ namespace PhoneNumbers
         /// <remarks>Char.IsDigit returns true for more than 0-9 so use a more restricted version.</remarks>
         private static bool IsDigit(char charVal) =>
             charVal >= '0' && charVal <= '9';
+
+        private string GetDebuggerDisplay() =>
+            $"{CountryCode} {CallingCode}";
     }
 }
