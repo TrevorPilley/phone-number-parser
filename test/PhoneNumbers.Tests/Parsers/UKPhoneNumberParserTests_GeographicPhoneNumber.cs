@@ -31,8 +31,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("02920872087", "29", "20872087", "Cardiff")]
         public void Parse_Known_GeographicPhoneNumber(string value, string areaCode, string localNumber, string geographicArea)
         {
-            var parser = new UKPhoneNumberParser();
-            var phoneNumber = parser.Parse(value, CountryInfo.UK);
+            var phoneNumber = _parser.Parse(value, CountryInfo.UK);
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<GeographicPhoneNumber>(phoneNumber);

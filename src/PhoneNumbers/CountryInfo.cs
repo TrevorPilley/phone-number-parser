@@ -38,7 +38,7 @@ namespace PhoneNumbers
         /// Gets the <see cref="CountryInfo"/> for the United Kingdom.
         /// </summary>
         /// <remarks>Covers England, Scotland, Wales and Northern Ireland.</remarks>
-        public static CountryInfo UK { get; } = new CountryInfo("GB", "+44", "00", "0", new UKPhoneNumberFormatter(), new UKPhoneNumberParser(), new[] { 7, 9, 10 });
+        public static CountryInfo UK { get; } = new CountryInfo("GB", "+44", "00", "0", new UKPhoneNumberFormatter(), UKPhoneNumberParser.Create(), new[] { 7, 9, 10 });
 
         /// <summary>
         /// Gets the country calling code.

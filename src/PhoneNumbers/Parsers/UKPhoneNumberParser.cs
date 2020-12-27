@@ -15,10 +15,41 @@ namespace PhoneNumbers.Parsers
     /// </remarks>
     internal sealed class UKPhoneNumberParser : PhoneNumberParser
     {
-        private static readonly IReadOnlyDictionary<string, AreaCodeInfo> s_areaCodes = LoadAreaCodes();
+        private readonly IReadOnlyDictionary<string, AreaCodeInfo> _areaCodes;
 
-        // HACK: Ensure this line is declared after s_areaCodes as it refers to it.
-        private static readonly string[] s_areaCodesWith5Digits = s_areaCodes.Keys.Where(x => x.Length == 5).ToArray();
+        private readonly string[] _areaCodesWith5Digits;
+
+        private UKPhoneNumberParser(IReadOnlyDictionary<string, AreaCodeInfo> areaCodes)
+        {
+            _areaCodes = areaCodes;
+            _areaCodesWith5Digits = areaCodes.Keys.Where(x => x.Length == 5).ToArray();
+        }
+
+        internal static PhoneNumberParser Create()
+        {
+            // There are very few local number lengths so cache and re-use them to avoid loads of identical int arrays.
+            var localNumberLengthsCache = new Dictionary<string, int[]>();
+
+            // each line in uk_area_codes.txt is pipe separated and contains the following values in the specified order:
+            // AREA_CODE is a mandatory string
+            // GEOGRAPHIC_AREA is optional string which will be represented as an empty string (we switch that to null)
+            // LOCAL_NUMBER_LENGTHS is a mandatory comma separated list of integers
+            var areaCodes = ResourceUtility.ReadLines("uk_area_codes.txt")
+                .Select(x => x.Split('|'))
+                .Select(x =>
+                {
+                    if (!localNumberLengthsCache.TryGetValue(x[2], out var localNumberLengths))
+                    {
+                        localNumberLengths = x[2].Split(',').Select(x => int.Parse(x, CultureInfo.InvariantCulture)).ToArray();
+                        localNumberLengthsCache.Add(x[2], localNumberLengths);
+                    }
+
+                    return new AreaCodeInfo(x[0], x[1].Length > 0 ? x[1] : null, localNumberLengths);
+                })
+                .ToDictionary(x => x.AreaCode, x => x);
+
+            return new UKPhoneNumberParser(areaCodes);
+        }
 
         /// <inheritdoc/>
         /// <remarks>By the time this method is called, nsnValue will have been validated against the <see cref="CountryInfo"/>.NsnLengths and contain digits only.</remarks>
@@ -42,31 +73,7 @@ namespace PhoneNumbers.Parsers
             }
         }
 
-        private static IReadOnlyDictionary<string, AreaCodeInfo> LoadAreaCodes()
-        {
-            // There are very few local number lengths so cache and re-use them to avoid loads of identical int arrays.
-            var localNumberLengthsCache = new Dictionary<string, int[]>();
-
-            // each line in uk_area_codes.txt is pipe separated and contains the following values in the specified order:
-            // AREA_CODE is a mandatory string
-            // GEOGRAPHIC_AREA is optional string which will be represented as an empty string (we switch that to null)
-            // LOCAL_NUMBER_LENGTHS is a mandatory comma separated list of integers
-            return ResourceUtility.ReadLines("uk_area_codes.txt")
-                .Select(x => x.Split('|'))
-                .Select(x =>
-                {
-                    if (!localNumberLengthsCache.TryGetValue(x[2], out var localNumberLengths))
-                    {
-                        localNumberLengths = x[2].Split(',').Select(x => int.Parse(x, CultureInfo.InvariantCulture)).ToArray();
-                        localNumberLengthsCache.Add(x[2], localNumberLengths);
-                    }
-
-                    return new AreaCodeInfo(x[0], x[1].Length > 0 ? x[1] : null, localNumberLengths);
-                })
-                .ToDictionary(x => x.AreaCode, x => x);
-        }
-
-        private static PhoneNumber ParseGeographicPhoneNumber(string nsnValue, CountryInfo countryInfo)
+        private PhoneNumber ParseGeographicPhoneNumber(string nsnValue, CountryInfo countryInfo)
         {
             // Most UK area codes are 4 digits.
             var areaCodeLength = 4;
@@ -82,9 +89,9 @@ namespace PhoneNumbers.Parsers
             }
             else
             {
-                for (var i = 0; i < s_areaCodesWith5Digits.Length; i++)
+                for (var i = 0; i < _areaCodesWith5Digits.Length; i++)
                 {
-                    if (nsnValue.StartsWith(s_areaCodesWith5Digits[i], StringComparison.Ordinal))
+                    if (nsnValue.StartsWith(_areaCodesWith5Digits[i], StringComparison.Ordinal))
                     {
                         areaCodeLength = 5;
                         break;
@@ -94,7 +101,7 @@ namespace PhoneNumbers.Parsers
 
             var areaCode = nsnValue.Substring(0, areaCodeLength);
 
-            if (!s_areaCodes.TryGetValue(areaCode, out var areaCodeInfo))
+            if (!_areaCodes.TryGetValue(areaCode, out var areaCodeInfo))
             {
                 throw new ArgumentException($"The area code {areaCode} is invalid.");
             }
@@ -106,11 +113,11 @@ namespace PhoneNumbers.Parsers
             return new GeographicPhoneNumber(countryInfo, areaCode, localNumber, areaCodeInfo.GeographicArea!);
         }
 
-        private static PhoneNumber ParseMobilePhoneNumber(string nsnValue, CountryInfo countryInfo)
+        private PhoneNumber ParseMobilePhoneNumber(string nsnValue, CountryInfo countryInfo)
         {
             var areaCode = nsnValue.Substring(0, 4);
 
-            if (!s_areaCodes.TryGetValue(areaCode, out var areaCodeInfo))
+            if (!_areaCodes.TryGetValue(areaCode, out var areaCodeInfo))
             {
                 // 70XX are personal numbers but aren't be in the phone area codes list at the moment so fake one.
                 if (areaCode[1] == '0')
@@ -139,12 +146,12 @@ namespace PhoneNumbers.Parsers
             return new MobilePhoneNumber(countryInfo, areaCode, localNumber, isDataOnly, isPager, isVirtual);
         }
 
-        private static PhoneNumber ParseNonGeographicPhoneNumber(string nsnValue, CountryInfo countryInfo)
+        private PhoneNumber ParseNonGeographicPhoneNumber(string nsnValue, CountryInfo countryInfo)
         {
             // All Non geographic phone numbers have a 3 digit area code (3XX or 8XX).
             var areaCode = nsnValue.Substring(0, 3);
 
-            if (!s_areaCodes.TryGetValue(areaCode, out var areaCodeInfo))
+            if (!_areaCodes.TryGetValue(areaCode, out var areaCodeInfo))
             {
                 throw new ArgumentException($"The area code {areaCode} is invalid.");
             }
