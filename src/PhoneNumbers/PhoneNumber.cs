@@ -22,12 +22,12 @@ namespace PhoneNumbers
             (Country, AreaCode, LocalNumber) = (countryInfo, areaCode, localNumber);
 
         /// <summary>
-        /// Gets the <see cref="CountryInfo"/> for the phone number.
+        /// Gets the area code of the phone number.
         /// </summary>
         public string AreaCode { get; }
 
         /// <summary>
-        /// Gets the area code of the phone number.
+        /// Gets the <see cref="CountryInfo"/> for the phone number.
         /// </summary>
         public CountryInfo Country { get; }
 
