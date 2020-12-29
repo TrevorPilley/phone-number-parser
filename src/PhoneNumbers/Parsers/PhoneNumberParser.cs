@@ -29,7 +29,7 @@ namespace PhoneNumbers.Parsers
             if (!Country.IsNumber(value))
             {
                 return ParseResult.Failure(
-                    $"The value must be a {Country.Iso3116Code} phone number starting {Country.TrunkPrefix} or {Country.CallingCode}.");
+                    $"The value must be a {Country.Iso3116Code} phone number starting {Country.CallingCode}{(Country.TrunkPrefix != null ? " or " + Country.TrunkPrefix : "")}.");
             }
 
             var nsnValue = Country.ReadNationalSignificantNumber(value);
@@ -49,6 +49,7 @@ namespace PhoneNumbers.Parsers
         /// <param name="nsnValue">A string containing the national significant number.</param>
         /// <returns>A <see cref="PhoneNumber"/> instance representing the specified string.</returns>
         /// <remarks>By the time this method is called, nsnValue will have been validated against the <see cref="CountryInfo"/>.NsnLengths and contain digits only.</remarks>
-        protected abstract ParseResult ParseNationalSignificantNumber(string nsnValue);
+        protected virtual ParseResult ParseNationalSignificantNumber(string nsnValue) =>
+            ParseResult.Failure($"A {Country.Iso3116Code} phone number cannot have a national significant number starting {nsnValue?[0]}.");
     }
 }

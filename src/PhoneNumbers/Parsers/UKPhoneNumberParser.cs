@@ -29,7 +29,7 @@ namespace PhoneNumbers.Parsers
         /// <summary>
         /// Creates an instance of the <see cref="UKPhoneNumberParser"/> class.
         /// </summary>
-        /// <returns>The created <see cref="UKPhoneNumberParser"/>.</returns>
+        /// <returns>The created <see cref="PhoneNumberParser"/>.</returns>
         public static PhoneNumberParser Create()
         {
             // There are very few local number lengths so cache and re-use them to avoid loads of identical int arrays.
@@ -58,25 +58,14 @@ namespace PhoneNumbers.Parsers
 
         /// <inheritdoc/>
         /// <remarks>By the time this method is called, nsnValue will have been validated against the <see cref="CountryInfo"/>.NsnLengths and contain digits only.</remarks>
-        protected override ParseResult ParseNationalSignificantNumber(string nsnValue)
-        {
-            switch (nsnValue[0])
+        protected override ParseResult ParseNationalSignificantNumber(string nsnValue) =>
+            (nsnValue[0]) switch
             {
-                case '1':
-                case '2':
-                    return ParseGeographicPhoneNumber(nsnValue);
-
-                case '3':
-                case '8':
-                    return ParseNonGeographicPhoneNumber(nsnValue);
-
-                case '7':
-                    return ParseMobilePhoneNumber(nsnValue);
-
-                default:
-                    return ParseResult.Failure($"A GB phone number cannot have a national significant number starting {nsnValue[0]}.");
-            }
-        }
+                '1' or '2' => ParseGeographicPhoneNumber(nsnValue),
+                '3' or '8' => ParseNonGeographicPhoneNumber(nsnValue),
+                '7' => ParseMobilePhoneNumber(nsnValue),
+                _ => base.ParseNationalSignificantNumber(nsnValue),
+            };
 
         private ParseResult ParseGeographicPhoneNumber(string nsnValue)
         {

@@ -15,7 +15,7 @@ namespace PhoneNumbers
         /// <param name="localNumber">The local number of the phone number.</param>
         internal NonGeographicPhoneNumber(
             CountryInfo countryInfo,
-            string areaCode,
+            string? areaCode,
             string localNumber)
             : base(countryInfo, areaCode, localNumber)
         {
@@ -32,9 +32,9 @@ namespace PhoneNumbers
         /// <inheritdoc/>
         public static bool operator ==(NonGeographicPhoneNumber? phoneNumber1, NonGeographicPhoneNumber? phoneNumber2)
         {
-            if (ReferenceEquals(phoneNumber1, null))
+            if (phoneNumber1 is null)
             {
-                return ReferenceEquals(phoneNumber2, null);
+                return phoneNumber2 is null;
             }
 
             return phoneNumber1.Equals(phoneNumber2);
@@ -47,7 +47,7 @@ namespace PhoneNumbers
         /// <inheritdoc/>
         public bool Equals(NonGeographicPhoneNumber? other)
         {
-            if (ReferenceEquals(other, null))
+            if (other is null)
             {
                 return false;
             }
@@ -57,7 +57,7 @@ namespace PhoneNumbers
                 return true;
             }
 
-            return AreaCode.Equals(other.AreaCode, StringComparison.Ordinal) &&
+            return (AreaCode == null && other.AreaCode == null || AreaCode!.Equals(other.AreaCode, StringComparison.Ordinal)) &&
                 Country.Equals(other.Country) &&
                 LocalNumber.Equals(other.LocalNumber, StringComparison.Ordinal) &&
                 PhoneNumberKind.Equals(other.PhoneNumberKind);

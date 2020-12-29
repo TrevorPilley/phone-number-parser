@@ -18,13 +18,13 @@ namespace PhoneNumbers
         /// <param name="countryInfo">The <see cref="CountryInfo"/> for the phone number.</param>
         /// <param name="areaCode">The area code of the phone number.</param>
         /// <param name="localNumber">The local number of the phone number.</param>
-        protected PhoneNumber(CountryInfo countryInfo, string areaCode, string localNumber) =>
+        protected PhoneNumber(CountryInfo countryInfo, string? areaCode, string localNumber) =>
             (Country, AreaCode, LocalNumber) = (countryInfo, areaCode, localNumber);
 
         /// <summary>
         /// Gets the area code of the phone number.
         /// </summary>
-        public string AreaCode { get; }
+        public string? AreaCode { get; }
 
         /// <summary>
         /// Gets the <see cref="CountryInfo"/> for the phone number.

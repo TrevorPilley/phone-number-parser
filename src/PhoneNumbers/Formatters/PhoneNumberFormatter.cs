@@ -10,6 +10,18 @@ namespace PhoneNumbers.Formatters
         internal const string DefaultFormat = "I";
 
         /// <summary>
+        /// Initialises a new instance of the <see cref="PhoneNumberFormatter"/> class.
+        /// </summary>
+        protected PhoneNumberFormatter()
+        {
+        }
+
+        /// <summary>
+        /// Gets the default <see cref="PhoneNumberFormatter"/>.
+        /// </summary>
+        internal static PhoneNumberFormatter Default { get; } = new PhoneNumberFormatter();
+
+        /// <summary>
         /// Formats the <see cref="PhoneNumber"/> using the specified format.
         /// </summary>
         /// <param name="phoneNumber">The phone number to format.</param>

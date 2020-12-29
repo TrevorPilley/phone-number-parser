@@ -67,7 +67,7 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Returns_Failure_If_CallingCode_Invalid()
         {
             var result = _parser.Parse("+1111111111");
-            Assert.Equal($"The value must be a GB phone number starting {CountryInfo.UK.TrunkPrefix} or {CountryInfo.UK.CallingCode}.", result.ParseError);
+            Assert.Equal($"The value must be a {CountryInfo.UK.Iso3116Code} phone number starting {CountryInfo.UK.CallingCode} or {CountryInfo.UK.TrunkPrefix}.", result.ParseError);
         }
 
         [Theory]
@@ -85,7 +85,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("02011")]
         [InlineData("020111")]
         [InlineData("0201111")]
-        [InlineData("020111111")] // 8
+        [InlineData("020111111")]    // 8
         [InlineData("020111111111")] // 11
         public void Parse_Returns_Failure_If_Nsn_Incorrect_Length(string value)
         {
@@ -93,18 +93,31 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.Equal("The national significant number of the phone number must be 7 or 9 or 10 digits in length.", result.ParseError);
         }
 
-        [Fact]
-        public void Parse_Returns_Failure_If_ServiceType_Invalid()
+        [Theory]
+        [InlineData("0411111111")]
+        [InlineData("0511111111")]
+        [InlineData("0611111111")]
+        [InlineData("0911111111")]
+        public void Parse_Returns_Failure_If_ServiceType_Invalid(string value)
         {
-            var result = _parser.Parse("0411111111");
-            Assert.Equal($"A GB phone number cannot have a national significant number starting 4.", result.ParseError);
+            var result = _parser.Parse(value);
+            Assert.Equal($"A {CountryInfo.UK.Iso3116Code} phone number cannot have a national significant number starting {value[1]}.", result.ParseError);
         }
 
-        [Fact]
-        public void Parse_Returns_Failure_If_TrunkPrefix_Invalid()
+        [Theory]
+        [InlineData("1411111111")]
+        [InlineData("2411111111")]
+        [InlineData("3411111111")]
+        [InlineData("4411111111")]
+        [InlineData("5411111111")]
+        [InlineData("6411111111")]
+        [InlineData("7411111111")]
+        [InlineData("8411111111")]
+        [InlineData("9411111111")]
+        public void Parse_Returns_Failure_If_TrunkPrefix_Invalid(string value)
         {
-            var result = _parser.Parse("1111111111");
-            Assert.Equal($"The value must be a GB phone number starting {CountryInfo.UK.TrunkPrefix} or {CountryInfo.UK.CallingCode}.", result.ParseError);
+            var result = _parser.Parse(value);
+            Assert.Equal($"The value must be a {CountryInfo.UK.Iso3116Code} phone number starting {CountryInfo.UK.CallingCode} or {CountryInfo.UK.TrunkPrefix}.", result.ParseError);
         }
     }
 }

@@ -17,14 +17,14 @@ namespace PhoneNumbers
         /// <param name="iso3116Code">The ISO 3166 Aplha-2 code for the country.</param>
         /// <param name="callingCode">The country calling code.</param>
         /// <param name="internationalCallPrefix">The international call prefix.</param>
-        /// <param name="trunkPrefix">The trunk prefix.</param>
+        /// <param name="trunkPrefix">The trunk prefix (if applicable).</param>
         /// <param name="formatter">The <see cref="PhoneNumberFormatter"/>.</param>
         /// <param name="nsnLengths">The permitted lengths for the national significant number.</param>
         private CountryInfo(
             string iso3116Code,
             string callingCode,
             string internationalCallPrefix,
-            string trunkPrefix,
+            string? trunkPrefix,
             PhoneNumberFormatter formatter,
             int[] nsnLengths) =>
             (Iso3116Code, CallingCode, Formatter, InternationalCallPrefix, TrunkPrefix, NsnLengths) =
@@ -52,9 +52,9 @@ namespace PhoneNumbers
         public string Iso3116Code { get; }
 
         /// <summary>
-        /// Gets the trunk prefix.
+        /// Gets the trunk prefix (if applicable).
         /// </summary>
-        public string TrunkPrefix { get; }
+        public string? TrunkPrefix { get; }
 
         /// <summary>
         /// Gets the <see cref="PhoneNumberFormatter"/> for the country.
@@ -76,12 +76,12 @@ namespace PhoneNumbers
                 return false;
             }
 
-            if (value.StartsWith(TrunkPrefix, StringComparison.Ordinal))
+            if (value[0] == '+')
             {
-                return true;
+                return value.StartsWith(CallingCode, StringComparison.Ordinal);
             }
 
-            if (value.StartsWith(CallingCode, StringComparison.Ordinal))
+            if (TrunkPrefix != null && value.StartsWith(TrunkPrefix, StringComparison.Ordinal))
             {
                 return true;
             }
@@ -97,7 +97,7 @@ namespace PhoneNumbers
                 }
             }
 
-            for (var i = 0; i < TrunkPrefix.Length; i++)
+            for (var i = 0; i < TrunkPrefix?.Length; i++)
             {
                 if (value[firstDigit++] != TrunkPrefix[i])
                 {
@@ -121,9 +121,16 @@ namespace PhoneNumbers
                 throw new ArgumentException("The value must not be blank", nameof(value));
             }
 
-            var startPos = IsInternationalNumber(value)
-                ? CallingCode.Length
-                : value.IndexOf(TrunkPrefix, StringComparison.Ordinal) + 1;
+            var startPos = 0;
+
+            if (IsInternationalNumber(value))
+            {
+                startPos = CallingCode.Length;
+            }
+            else if (TrunkPrefix != null)
+            {
+                startPos = value.IndexOf(TrunkPrefix, StringComparison.Ordinal) + 1;
+            }
 
             var digits = 0;
 
@@ -131,7 +138,7 @@ namespace PhoneNumbers
             {
                 var charVal = value[i];
 
-                if (IsDigit(charVal) && !(digits == 0 && TrunkPrefix[0] == charVal))
+                if (IsDigit(charVal) && !(digits == 0 && TrunkPrefix?[0] == charVal))
                 {
                     digits++;
                 }
@@ -149,7 +156,7 @@ namespace PhoneNumbers
             {
                 var charVal = value[i];
 
-                if (IsDigit(charVal) && !(charPos == 0 && TrunkPrefix[0] == charVal))
+                if (IsDigit(charVal) && !(charPos == 0 && TrunkPrefix?[0] == charVal))
                 {
                     chars[charPos++] = charVal;
                 }

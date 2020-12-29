@@ -18,7 +18,7 @@ namespace PhoneNumbers
         /// <param name="isVirtual"></param>
         internal MobilePhoneNumber(
             CountryInfo countryInfo,
-            string areaCode,
+            string? areaCode,
             string localNumber,
             bool isDataOnly,
             bool isPager,
@@ -57,9 +57,9 @@ namespace PhoneNumbers
         /// <inheritdoc/>
         public static bool operator ==(MobilePhoneNumber? phoneNumber1, MobilePhoneNumber? phoneNumber2)
         {
-            if (ReferenceEquals(phoneNumber1, null))
+            if (phoneNumber1 is null)
             {
-                return ReferenceEquals(phoneNumber2, null);
+                return phoneNumber2 is null;
             }
 
             return phoneNumber1.Equals(phoneNumber2);
@@ -72,7 +72,7 @@ namespace PhoneNumbers
         /// <inheritdoc/>
         public bool Equals(MobilePhoneNumber? other)
         {
-            if (ReferenceEquals(other, null))
+            if (other is null)
             {
                 return false;
             }
@@ -82,7 +82,7 @@ namespace PhoneNumbers
                 return true;
             }
 
-            return AreaCode.Equals(other.AreaCode, StringComparison.Ordinal) &&
+            return (AreaCode == null && other.AreaCode == null || AreaCode!.Equals(other.AreaCode, StringComparison.Ordinal)) &&
                 Country.Equals(other.Country) &&
                 LocalNumber.Equals(other.LocalNumber, StringComparison.Ordinal) &&
                 PhoneNumberKind.Equals(other.PhoneNumberKind) &&
