@@ -21,23 +21,27 @@ namespace PhoneNumbers.Tests
         }
 
         [Theory]
-        [InlineData("+35312222222")]
-        [InlineData(" ")]
         [InlineData(default(string))]
+        [InlineData("")]
+        [InlineData(" ")]
+        [InlineData("+35312222222")]
         public void UK_IsInternationalNumber_False(string value) =>
             Assert.False(CountryInfo.UK.IsInternationalNumber(value));
 
         [Theory]
         [InlineData("+441132224444")]
+        [InlineData("+44(0)1132224444")]
         [InlineData("+44 (0) 113 222 4444")]
         public void UK_IsInternationalNumber_True(string value) =>
             Assert.True(CountryInfo.UK.IsInternationalNumber(value));
 
         [Theory]
         [InlineData("+441132224444")]
+        [InlineData("+44(0)1132224444")]
         [InlineData("+44 (0) 113 222 4444")]
         [InlineData("(0113) 222 4444")]
         [InlineData("01132224444")]
+        [InlineData("0113-222-4444")]
         public void UK_ReadNationalSignificantNumber(string value) =>
             Assert.Equal("1132224444", CountryInfo.UK.ReadNationalSignificantNumber(value));
 
