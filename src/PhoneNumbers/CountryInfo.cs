@@ -118,7 +118,7 @@ namespace PhoneNumbers
         {
             if (string.IsNullOrWhiteSpace(value))
             {
-                throw new ArgumentException("The value must not be blank", nameof(value));
+                return value;
             }
 
             var startPos = 0;
@@ -169,6 +169,7 @@ namespace PhoneNumbers
         private static bool IsDigit(char charVal) =>
             charVal >= '0' && charVal <= '9';
 
+        [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
         private string GetDebuggerDisplay() =>
             $"{Iso3116Code} {CallingCode}";
     }

@@ -64,6 +64,7 @@ namespace PhoneNumbers
         }
 
         /// <inheritdoc/>
+        [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
         public override int GetHashCode() =>
             HashCode.Combine(AreaCode, Country, LocalNumber, PhoneNumberKind, PhoneNumberKind);
     }

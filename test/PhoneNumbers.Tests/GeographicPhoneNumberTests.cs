@@ -46,10 +46,23 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
-        public void Equality_Same_Values()
+        public void Equality_Same_Values_With_AreaCode()
         {
             var phoneNumber1 = new GeographicPhoneNumber(CountryInfo.UK, "12345", "667788", "N/A");
             var phoneNumber2 = new GeographicPhoneNumber(CountryInfo.UK, "12345", "667788", "N/A");
+
+            Assert.Equal(phoneNumber1, phoneNumber2);
+            Assert.True(phoneNumber1.Equals(phoneNumber2));
+            Assert.True(phoneNumber1.Equals((object)phoneNumber2));
+            Assert.True(phoneNumber1 == phoneNumber2);
+            Assert.False(phoneNumber1 != phoneNumber2);
+        }
+
+        [Fact]
+        public void Equality_Same_Values_Without_AreaCode()
+        {
+            var phoneNumber1 = new GeographicPhoneNumber(CountryInfo.UK, null, "667788", "N/A");
+            var phoneNumber2 = new GeographicPhoneNumber(CountryInfo.UK, null, "667788", "N/A");
 
             Assert.Equal(phoneNumber1, phoneNumber2);
             Assert.True(phoneNumber1.Equals(phoneNumber2));

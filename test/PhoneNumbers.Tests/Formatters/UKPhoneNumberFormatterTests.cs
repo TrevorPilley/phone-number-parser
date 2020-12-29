@@ -12,6 +12,8 @@ namespace PhoneNumbers.Tests.Formatters
     /// </remarks>
     public class UKPhoneNumberFormatterTests
     {
+        private readonly PhoneNumberFormatter _formatter = new UKPhoneNumberFormatter();
+
         [Theory]
         [InlineData("01132224444", "0113 222 4444")] // 11X
         [InlineData("01216754806", "0121 675 4806")] // 1X1
@@ -21,7 +23,7 @@ namespace PhoneNumbers.Tests.Formatters
         [InlineData("07106112233", "07106 112233")]  // 7XXX
         [InlineData("0800121121", "0800 121 121")] // 8XX
         public void Format_Display(string value, string expected) =>
-            Assert.Equal(expected, new UKPhoneNumberFormatter().Format(PhoneNumber.Parse(value, "GB"), "D"));
+            Assert.Equal(expected, _formatter.Format(PhoneNumber.Parse(value, "GB"), "D"));
 
         [Theory]
         [InlineData("01132224444", "+441132224444")] // 11X
@@ -32,7 +34,7 @@ namespace PhoneNumbers.Tests.Formatters
         [InlineData("07106112233", "+447106112233")] // 7XXX
         [InlineData("0800121121", "+44800121121")] // 8XX
         public void Format_International(string value, string expected) =>
-            Assert.Equal(expected, new UKPhoneNumberFormatter().Format(PhoneNumber.Parse(value, "GB"), "I"));
+            Assert.Equal(expected, _formatter.Format(PhoneNumber.Parse(value, "GB"), "I"));
 
         [Theory]
         [InlineData("01132224444", "01132224444")] // 11X
@@ -43,10 +45,10 @@ namespace PhoneNumbers.Tests.Formatters
         [InlineData("07106112233", "07106112233")] // 7XXX
         [InlineData("0800121121", "0800121121")] // 8XX
         public void Format_National(string value, string expected) =>
-            Assert.Equal(expected, new UKPhoneNumberFormatter().Format(PhoneNumber.Parse(value, "GB"), "N"));
+            Assert.Equal(expected, _formatter.Format(PhoneNumber.Parse(value, "GB"), "N"));
 
         [Fact]
         public void Format_Throws_Exception_For_Invalid_Format() =>
-            Assert.Throws<FormatException>(() => new UKPhoneNumberFormatter().Format(PhoneNumber.Parse("+441132224444"), "C"));
+            Assert.Throws<FormatException>(() => _formatter.Format(PhoneNumber.Parse("+441132224444"), "C"));
     }
 }

@@ -55,5 +55,12 @@ namespace PhoneNumbers.Tests
         [InlineData("01132224444")]
         public void UK_ReadNationalSignificantNumber(string value) =>
             Assert.Equal("1132224444", CountryInfo.UK.ReadNationalSignificantNumber(value));
+
+        [Theory]
+        [InlineData(default(string))]
+        [InlineData("")]
+        [InlineData(" ")]
+        public void UK_ReadNationalSignificantNumber_Not_A_Valid_Value(string value) =>
+            Assert.Equal(value, CountryInfo.UK.ReadNationalSignificantNumber(value));
     }
 }

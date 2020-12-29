@@ -13,24 +13,30 @@ namespace PhoneNumbers.Tests.Formatters
     /// </remarks>
     public class PhoneNumberFormatterTests
     {
+        private readonly PhoneNumberFormatter _formatter = PhoneNumberFormatter.Default;
+
+        [Fact]
+        public void Default()
+        {
+            Assert.NotNull(PhoneNumberFormatter.Default);
+            Assert.Same(PhoneNumberFormatter.Default, PhoneNumberFormatter.Default);
+        }
+
         [Fact]
         public void Format_Display() =>
-            Assert.Equal("+44 12345 667788", GetFormatter().Format(GetPhoneNumber(), "D"));
+            Assert.Equal("+44 12345 667788", _formatter.Format(GetPhoneNumber(), "D"));
 
         [Fact]
         public void Format_International() =>
-            Assert.Equal("+4412345667788", GetFormatter().Format(GetPhoneNumber(), "I"));
+            Assert.Equal("+4412345667788", _formatter.Format(GetPhoneNumber(), "I"));
 
         [Fact]
         public void Format_National() =>
-            Assert.Equal("012345667788", GetFormatter().Format(GetPhoneNumber(), "N"));
+            Assert.Equal("012345667788", _formatter.Format(GetPhoneNumber(), "N"));
 
         [Fact]
         public void Format_Throws_Exception_For_Invalid_Format() =>
-            Assert.Throws<FormatException>(() => GetFormatter().Format(GetPhoneNumber(), "C"));
-
-        private static PhoneNumberFormatter GetFormatter() =>
-            new Mock<PhoneNumberFormatter> { CallBase = true }.Object;
+            Assert.Throws<FormatException>(() => _formatter.Format(GetPhoneNumber(), "C"));
 
         private static PhoneNumber GetPhoneNumber() =>
             new GeographicPhoneNumber(CountryInfo.UK, "12345", "667788", "N/A");
