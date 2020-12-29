@@ -3,9 +3,9 @@ using System;
 namespace PhoneNumbers.Formatters
 {
     /// <summary>
-    /// The base class for a class which formats a <see cref="PhoneNumber"/>.
+    /// The default formatter for a <see cref="PhoneNumber"/>.
     /// </summary>
-    internal abstract class PhoneNumberFormatter
+    internal class PhoneNumberFormatter
     {
         internal const string DefaultFormat = "I";
 
