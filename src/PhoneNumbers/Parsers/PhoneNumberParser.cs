@@ -13,7 +13,7 @@ namespace PhoneNumbers.Parsers
         /// <param name="value">A string containing a phone number.</param>
         /// <param name="countryInfo">The <see cref="CountryInfo"/> of the country for the phone number.</param>
         /// <returns>A <see cref="PhoneNumber"/> instance representing the specified string.</returns>
-        internal PhoneNumber Parse(string value, CountryInfo countryInfo)
+        internal ParseResult Parse(string value, CountryInfo countryInfo)
         {
             if (countryInfo is null)
             {
@@ -22,14 +22,16 @@ namespace PhoneNumbers.Parsers
 
             if (!countryInfo.IsNumber(value))
             {
-                throw new ArgumentException($"The value must be a {countryInfo.CountryCode} phone number starting {countryInfo.TrunkPrefix} or {countryInfo.CallingCode}.");
+                return ParseResult.Failure(
+                    $"The value must be a {countryInfo.CountryCode} phone number starting {countryInfo.TrunkPrefix} or {countryInfo.CallingCode}.");
             }
 
             var nsnValue = countryInfo.ReadNationalSignificantNumber(value);
 
             if (!countryInfo.NsnLengths.Contains(nsnValue.Length))
             {
-                throw new ArgumentException($"The national significant number of the phone number must be {string.Join(",", countryInfo.NsnLengths)} in length.");
+                return ParseResult.Failure(
+                    $"The national significant number of the phone number must be {string.Join(" or ", countryInfo.NsnLengths)} digits in length.");
             }
 
             return ParseNationalSignificantNumber(nsnValue, countryInfo);
@@ -42,6 +44,6 @@ namespace PhoneNumbers.Parsers
         /// <param name="countryInfo"></param>
         /// <returns>A <see cref="PhoneNumber"/> instance representing the specified string.</returns>
         /// <remarks>By the time this method is called, nsnValue will have been validated against the <see cref="CountryInfo"/>.NsnLengths and contain digits only.</remarks>
-        protected abstract PhoneNumber ParseNationalSignificantNumber(string nsnValue, CountryInfo countryInfo);
+        protected abstract ParseResult ParseNationalSignificantNumber(string nsnValue, CountryInfo countryInfo);
     }
 }

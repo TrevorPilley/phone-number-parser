@@ -15,15 +15,15 @@ namespace PhoneNumbers.Tests.Formatters
     {
         [Fact]
         public void Parse_Throws_Exception_For_Empty_Value() =>
-            Assert.Throws<ArgumentException>(() => GetParser().Parse(" ", CountryInfo.UK));
+            Assert.Throws<ParseException>(() => GetParser().Parse(" ", CountryInfo.UK).ThrowIfFailure());
 
         [Fact]
         public void Parse_Throws_Exception_For_Null_CountryInfo() =>
-            Assert.Throws<ArgumentNullException>(() => GetParser().Parse("012345667788", null));
+            Assert.Throws<ArgumentNullException>(() => GetParser().Parse("012345667788", null).ThrowIfFailure());
 
         [Fact]
         public void Parse_Throws_Exception_For_Null_Value() =>
-            Assert.Throws<ArgumentException>(() => GetParser().Parse(null, CountryInfo.UK));
+            Assert.Throws<ParseException>(() => GetParser().Parse(null, CountryInfo.UK).ThrowIfFailure());
 
         private static PhoneNumberParser GetParser() =>
             new Mock<PhoneNumberParser> { CallBase = true }.Object;

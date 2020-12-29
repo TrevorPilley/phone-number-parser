@@ -1,4 +1,3 @@
-using System;
 using System.Collections.ObjectModel;
 
 namespace PhoneNumbers.Parsers
@@ -13,13 +12,5 @@ namespace PhoneNumbers.Parsers
         internal string? GeographicArea { get; }
 
         internal ReadOnlyCollection<int> LocalNumberLengths { get; }
-
-        internal void AssertLocalNumberLength(string localNumber)
-        {
-            if (!LocalNumberLengths.Contains(localNumber.Length))
-            {
-                throw new ArgumentException($"The for the area code {AreaCode}, the local number must be {string.Join(",", LocalNumberLengths)} digits.");
-            }
-        }
     }
 }

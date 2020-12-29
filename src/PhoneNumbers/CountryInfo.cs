@@ -89,11 +89,11 @@ namespace PhoneNumbers
         /// </summary>
         /// <param name="countryCode">The ISO 3166 Aplha-2 code for the country.</param>
         /// <returns></returns>
-        internal static CountryInfo Find(string countryCode) =>
+        internal static CountryInfo? Find(string countryCode) =>
             countryCode switch
             {
                 "GB" => UK,
-                _ => throw new NotSupportedException(countryCode),
+                _ => default,
             };
 
         internal bool IsInternationalNumber(string value) =>

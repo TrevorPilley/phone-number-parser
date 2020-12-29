@@ -1,4 +1,3 @@
-using System;
 using PhoneNumbers.Parsers;
 using Xunit;
 
@@ -12,31 +11,31 @@ namespace PhoneNumbers.Tests.Parsers
         private readonly PhoneNumberParser _parser = UKPhoneNumberParser.Create();
 
         [Fact]
-        public void Parse_Throws_Exception_For_1XX_AreaCode_And_Local_Number_Not_7_Digits()
+        public void Parse_Returns_Failure_For_1XX_AreaCode_And_Local_Number_Not_7_Digits()
         {
-            var exception = Assert.Throws<ArgumentException>(() => _parser.Parse("0113111222", CountryInfo.UK));
-            Assert.Equal("The for the area code 113, the local number must be 7 digits.", exception.Message);
+            var result = _parser.Parse("0113111222", CountryInfo.UK);
+            Assert.Equal("The for the area code 113, the local number must be 7 digits in length.", result.ParseError);
         }
 
         [Fact]
-        public void Parse_Throws_Exception_For_2X_AreaCode_And_Local_Number_Not_8_Digits()
+        public void Parse_Returns_Failure_For_2X_AreaCode_And_Local_Number_Not_8_Digits()
         {
-            var exception = Assert.Throws<ArgumentException>(() => _parser.Parse("0201112222", CountryInfo.UK));
-            Assert.Equal("The for the area code 20, the local number must be 8 digits.", exception.Message);
+            var result = _parser.Parse("0201112222", CountryInfo.UK);
+            Assert.Equal("The for the area code 20, the local number must be 8 digits in length.", result.ParseError);
         }
 
         [Fact]
-        public void Parse_Throws_Exception_For_3XX_AreaCode_And_Local_Number_Not_7_Digits()
+        public void Parse_Returns_Failure_For_3XX_AreaCode_And_Local_Number_Not_7_Digits()
         {
-            var exception = Assert.Throws<ArgumentException>(() => _parser.Parse("0300111111", CountryInfo.UK));
-            Assert.Equal("The for the area code 300, the local number must be 7 digits.", exception.Message);
+            var result = _parser.Parse("0300111111", CountryInfo.UK);
+            Assert.Equal("The for the area code 300, the local number must be 7 digits in length.", result.ParseError);
         }
 
         [Fact]
-        public void Parse_Throws_Exception_For_7XXX_AreaCode_And_Local_Number_Not_6_Digits()
+        public void Parse_Returns_Failure_For_7XXX_AreaCode_And_Local_Number_Not_6_Digits()
         {
-            var exception = Assert.Throws<ArgumentException>(() => _parser.Parse("0700012345", CountryInfo.UK));
-            Assert.Equal("The for the area code 7000, the local number must be 6 digits.", exception.Message);
+            var result = _parser.Parse("0700012345", CountryInfo.UK);
+            Assert.Equal("The for the area code 7000, the local number must be 6 digits in length.", result.ParseError);
         }
 
         [Theory]
@@ -58,25 +57,25 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("03800000000", "380")]
         [InlineData("03900000000", "390")]
         [InlineData("07200000000", "7200")]
-        public void Parse_Throws_Exception_If_AreaCode_Invalid(string value, string areaCode)
+        public void Parse_Returns_Failure_If_AreaCode_Invalid(string value, string areaCode)
         {
-            var exception = Assert.Throws<ArgumentException>(() => _parser.Parse(value, CountryInfo.UK));
-            Assert.Equal($"The area code {areaCode} is invalid.", exception.Message);
+            var result = _parser.Parse(value, CountryInfo.UK);
+            Assert.Equal($"The area code {areaCode} is invalid.", result.ParseError);
         }
 
         [Fact]
-        public void Parse_Throws_Exception_If_CallingCode_Invalid()
+        public void Parse_Returns_Failure_If_CallingCode_Invalid()
         {
-            var exception = Assert.Throws<ArgumentException>(() => _parser.Parse("+1111111111", CountryInfo.UK));
-            Assert.Equal($"The value must be a GB phone number starting {CountryInfo.UK.TrunkPrefix} or {CountryInfo.UK.CallingCode}.", exception.Message);
+            var result = _parser.Parse("+1111111111", CountryInfo.UK);
+            Assert.Equal($"The value must be a GB phone number starting {CountryInfo.UK.TrunkPrefix} or {CountryInfo.UK.CallingCode}.", result.ParseError);
         }
 
         [Theory]
         [InlineData("07101111111")]
-        public void Parse_Throws_Exception_If_LocalNumber_Invalid_For_AreaCode(string value)
+        public void Parse_Returns_Failure_If_LocalNumber_Invalid_For_AreaCode(string value)
         {
-            var exception = Assert.Throws<ArgumentException>(() => _parser.Parse(value, CountryInfo.UK));
-            Assert.Equal($"The area code {value.Substring(1, 4)} is invalid.", exception.Message);
+            var result = _parser.Parse(value, CountryInfo.UK);
+            Assert.Equal($"The area code {value.Substring(1, 4)} is invalid.", result.ParseError);
         }
 
         [Theory]
@@ -88,23 +87,24 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0201111")]
         [InlineData("020111111")] // 8
         [InlineData("020111111111")] // 11
-        public void Parse_Throws_Exception_If_Nsn_Incorrect_Length(string value)
+        public void Parse_Returns_Failure_If_Nsn_Incorrect_Length(string value)
         {
-            var exception = Assert.Throws<ArgumentException>(() => _parser.Parse(value, CountryInfo.UK));
-            Assert.Equal("The national significant number of the phone number must be 7,9,10 in length.", exception.Message);
+            var result = _parser.Parse(value, CountryInfo.UK);
+            Assert.Equal("The national significant number of the phone number must be 7 or 9 or 10 digits in length.", result.ParseError);
         }
 
         [Fact]
-        public void Parse_Throws_Exception_If_ServiceType_Invalid()
+        public void Parse_Returns_Failure_If_ServiceType_Invalid()
         {
-            var exception = Assert.Throws<NotSupportedException>(() => _parser.Parse("0411111111", CountryInfo.UK));
+            var result = _parser.Parse("0411111111", CountryInfo.UK);
+            Assert.Equal($"A GB phone number cannot have a national significant number starting 4.", result.ParseError);
         }
 
         [Fact]
-        public void Parse_Throws_Exception_If_TrunkPrefix_Invalid()
+        public void Parse_Returns_Failure_If_TrunkPrefix_Invalid()
         {
-            var exception = Assert.Throws<ArgumentException>(() => _parser.Parse("1111111111", CountryInfo.UK));
-            Assert.Equal($"The value must be a GB phone number starting {CountryInfo.UK.TrunkPrefix} or {CountryInfo.UK.CallingCode}.", exception.Message);
+            var result = _parser.Parse("1111111111", CountryInfo.UK);
+            Assert.Equal($"The value must be a GB phone number starting {CountryInfo.UK.TrunkPrefix} or {CountryInfo.UK.CallingCode}.", result.ParseError);
         }
     }
 }

@@ -51,12 +51,15 @@ namespace PhoneNumbers
         {
             var countryInfo = CountryInfo.AllSupported().SingleOrDefault(x => x.IsInternationalNumber(value));
 
-            if (countryInfo != null)
+            if (countryInfo == null)
             {
-                return countryInfo.Parser.Parse(value, countryInfo);
+                throw new ParseException("Parse(value) only supports a value starting with a supported calling code, otherwise Parse(value, countryCode) must be used.");
             }
 
-            throw new ArgumentException("Parse(value) only supports a value starting with a supported calling code, otherwise Parse(value, countryCode) must be used.", nameof(value));
+            var result = countryInfo.Parser.Parse(value, countryInfo);
+            result.ThrowIfFailure();
+
+            return result.PhoneNumber!;
         }
 
         /// <summary>
@@ -69,7 +72,66 @@ namespace PhoneNumbers
         {
             var countryInfo = CountryInfo.Find(countryCode);
 
-            return countryInfo.Parser.Parse(value, countryInfo);
+            if (countryInfo == null)
+            {
+                throw new ParseException($"{countryCode} is not currently supported.");
+            }
+
+            var result = countryInfo.Parser.Parse(value, countryInfo);
+            result.ThrowIfFailure();
+
+            return result.PhoneNumber!;
+        }
+
+        /// <summary>
+        /// Converts the string representation of a phone number to its <see cref="PhoneNumber"/> equivalent. A return value indicates whether the conversion succeeded.
+        /// </summary>
+        /// <param name="value">A string containing a phone number.</param>
+        /// <param name="phoneNumber">The <see cref="PhoneNumber"/> equivalent if the conversion succeeds, otherwise null.</param>
+        /// <returns><c>true</c> if value was converted successfully; otherwise, <c>false</c>.</returns>
+        public static bool TryParse(string value, out PhoneNumber? phoneNumber)
+        {
+            var countryInfo = CountryInfo.AllSupported().SingleOrDefault(x => x.IsInternationalNumber(value));
+
+            if (countryInfo != null)
+            {
+                var result = countryInfo.Parser.Parse(value, countryInfo);
+
+                if (result.PhoneNumber != null)
+                {
+                    phoneNumber = result.PhoneNumber;
+                    return true;
+                }
+            }
+
+            phoneNumber = default;
+            return false;
+        }
+
+        /// <summary>
+        /// Converts the string representation of a phone number to its <see cref="PhoneNumber"/> equivalent. A return value indicates whether the conversion succeeded.
+        /// </summary>
+        /// <param name="value">A string containing a phone number.</param>
+        /// <param name="countryCode">The ISO 3166 Aplha-2 country code of the country for the phone number.</param>
+        /// <param name="phoneNumber">The <see cref="PhoneNumber"/> equivalent if the conversion succeeds, otherwise null.</param>
+        /// <returns><c>true</c> if value was converted successfully; otherwise, <c>false</c>.</returns>
+        public static bool TryParse(string value, string countryCode, out PhoneNumber? phoneNumber)
+        {
+            var countryInfo = CountryInfo.Find(countryCode);
+
+            if (countryInfo != null)
+            {
+                var result = countryInfo.Parser.Parse(value, countryInfo);
+
+                if (result.PhoneNumber != null)
+                {
+                    phoneNumber = result.PhoneNumber;
+                    return true;
+                }
+            }
+
+            phoneNumber = default;
+            return false;
         }
 
         /// <inheritdoc/>
