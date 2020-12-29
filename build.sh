@@ -4,9 +4,9 @@ rm -r test/PhoneNumbers.Tests/TestResults/
 
 dotnet tool update --global dotnet-reportgenerator-globaltool
 
-dotnet clean
-dotnet build
-dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=./TestResults/
+dotnet clean --verbosity minimal
+dotnet build --verbosity minimal
+dotnet test --no-restore --verbosity minimal /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=./TestResults/
 
 cd test/PhoneNumbers.Tests
 reportgenerator "-reports:./TestResults/coverage.cobertura.xml" "-targetdir:./TestResults/Coverage" -reporttypes:HTML
