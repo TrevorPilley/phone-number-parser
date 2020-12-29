@@ -57,10 +57,9 @@ Currently supports parsing the following:
 
 ### United Kingdom
 
-_The UK support includes Guernsey, Jersey and Isle of Man which although separate countries share UK phone numbers and also use the +44 calling code._
-
 - Phone numbers in the UK are administered by Ofcom, this library uses the rules within the published telephone numbering plan.
 - 01, 02, 03, 07 and 08 numbers are supported.
 - 01 and 02 numbers are geographically assigned so the geographic area is included.
+- Includes Guernsey, Jersey and Isle of Man which although separate countries share UK phone numbers and also use the +44 calling code.
 
 _note the ISO code for the United Kingdom is 'GB' rather than 'UK'._
