@@ -1,9 +1,7 @@
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using PhoneNumbers.Formatters;
-using PhoneNumbers.Parsers;
 
 namespace PhoneNumbers
 {
@@ -16,29 +14,27 @@ namespace PhoneNumbers
         /// <summary>
         /// Initialises a new instance of the <see cref="CountryInfo"/> class.
         /// </summary>
-        /// <param name="countryCode">The ISO 3166 Aplha-2 code for the country.</param>
+        /// <param name="iso3116Code">The ISO 3166 Aplha-2 code for the country.</param>
         /// <param name="callingCode">The country calling code.</param>
         /// <param name="internationalCallPrefix">The international call prefix.</param>
         /// <param name="trunkPrefix">The trunk prefix.</param>
         /// <param name="formatter">The <see cref="PhoneNumberFormatter"/>.</param>
-        /// <param name="parser">The <see cref="PhoneNumberParser"/>.</param>
         /// <param name="nsnLengths">The permitted lengths for the national significant number.</param>
         private CountryInfo(
-            string countryCode,
+            string iso3116Code,
             string callingCode,
             string internationalCallPrefix,
             string trunkPrefix,
             PhoneNumberFormatter formatter,
-            PhoneNumberParser parser,
             int[] nsnLengths) =>
-            (CountryCode, CallingCode, Formatter, InternationalCallPrefix, Parser, TrunkPrefix, NsnLengths) =
-            (countryCode, callingCode, formatter, internationalCallPrefix, parser, trunkPrefix, new ReadOnlyCollection<int>(nsnLengths));
+            (Iso3116Code, CallingCode, Formatter, InternationalCallPrefix, TrunkPrefix, NsnLengths) =
+            (iso3116Code, callingCode, formatter, internationalCallPrefix, trunkPrefix, new ReadOnlyCollection<int>(nsnLengths));
 
         /// <summary>
         /// Gets the <see cref="CountryInfo"/> for the United Kingdom.
         /// </summary>
         /// <remarks>Covers England, Scotland, Wales and Northern Ireland.</remarks>
-        public static CountryInfo UK { get; } = new CountryInfo("GB", "+44", "00", "0", new UKPhoneNumberFormatter(), UKPhoneNumberParser.Create(), new[] { 7, 9, 10 });
+        public static CountryInfo UK { get; } = new CountryInfo("GB", "+44", "00", "0", new UKPhoneNumberFormatter(), new[] { 7, 9, 10 });
 
         /// <summary>
         /// Gets the country calling code.
@@ -46,14 +42,14 @@ namespace PhoneNumbers
         public string CallingCode { get; }
 
         /// <summary>
-        /// Gets the ISO 3166 Aplha-2 code for the country.
-        /// </summary>
-        public string CountryCode { get; }
-
-        /// <summary>
         /// Gets the international call prefix.
         /// </summary>
         public string InternationalCallPrefix { get; }
+
+        /// <summary>
+        /// Gets the ISO 3166 Aplha-2 code for the country.
+        /// </summary>
+        public string Iso3116Code { get; }
 
         /// <summary>
         /// Gets the trunk prefix.
@@ -69,32 +65,6 @@ namespace PhoneNumbers
         /// Gets the permitted lenghts of the national significant number.
         /// </summary>
         internal ReadOnlyCollection<int> NsnLengths { get; }
-
-        /// <summary>
-        /// Gets the <see cref="PhoneNumberParser"/> for the country.
-        /// </summary>
-        internal PhoneNumberParser Parser { get; }
-
-        /// <summary>
-        /// Gets all supported <see cref="CountryInfo"/>s as an enumerable.
-        /// </summary>
-        /// <returns>All supported <see cref="CountryInfo"/>s as an enumerable.</returns>
-        internal static IEnumerable<CountryInfo> AllSupported()
-        {
-            yield return UK;
-        }
-
-        /// <summary>
-        /// Finds the <see cref="CountryInfo"/> based upon the ISO 3166 Aplha-2 code for the country.
-        /// </summary>
-        /// <param name="countryCode">The ISO 3166 Aplha-2 code for the country.</param>
-        /// <returns></returns>
-        internal static CountryInfo? Find(string countryCode) =>
-            countryCode switch
-            {
-                "GB" => UK,
-                _ => default,
-            };
 
         internal bool IsInternationalNumber(string value) =>
             value?.StartsWith(CallingCode, StringComparison.Ordinal) == true;
@@ -191,6 +161,6 @@ namespace PhoneNumbers
             charVal >= '0' && charVal <= '9';
 
         private string GetDebuggerDisplay() =>
-            $"{CountryCode} {CallingCode}";
+            $"{Iso3116Code} {CallingCode}";
     }
 }

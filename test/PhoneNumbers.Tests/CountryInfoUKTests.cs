@@ -1,28 +1,22 @@
 using PhoneNumbers.Formatters;
-using PhoneNumbers.Parsers;
 using Xunit;
 
 namespace PhoneNumbers.Tests
 {
-    public partial class CountryInfoTests
+    public class CountryInfoUKTests
     {
-        [Fact]
-        public void AllSupported_Contains_UK() =>
-            Assert.Contains(CountryInfo.UK, CountryInfo.AllSupported());
-
         [Fact]
         public void UK()
         {
             Assert.Same(CountryInfo.UK, CountryInfo.UK);
-            Assert.Same(CountryInfo.UK, CountryInfo.Find("GB"));
 
             var countryInfo = CountryInfo.UK;
 
             Assert.Equal("+44", countryInfo.CallingCode);
             Assert.IsType<UKPhoneNumberFormatter>(countryInfo.Formatter);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
+            Assert.Equal("GB", countryInfo.Iso3116Code);
             Assert.Equal(new[] { 7, 9, 10 }, countryInfo.NsnLengths);
-            Assert.IsType<UKPhoneNumberParser>(countryInfo.Parser);
             Assert.Equal("0", countryInfo.TrunkPrefix);
         }
 

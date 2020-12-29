@@ -5,45 +5,50 @@ namespace PhoneNumbers.Parsers
     /// <summary>
     /// The base class for a class which parses a string containing a phone number into a <see cref="PhoneNumber"/> instance.
     /// </summary>
-    internal abstract class PhoneNumberParser
+    public abstract class PhoneNumberParser
     {
+        /// <summary>
+        /// Initialises a new instance of the <see cref="PhoneNumberParser"/> class.
+        /// </summary>
+        /// <param name="countryInfo">The <see cref="CountryInfo"/> of the country for the parser.</param>
+        protected PhoneNumberParser(CountryInfo countryInfo) =>
+            Country = countryInfo ?? throw new ArgumentNullException(nameof(countryInfo));
+
+        /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for the parser.
+        /// </summary>
+        public CountryInfo Country { get; }
+
         /// <summary>
         /// Parses the phone number represented in the specified string into a <see cref="PhoneNumber"/> instance.
         /// </summary>
         /// <param name="value">A string containing a phone number.</param>
-        /// <param name="countryInfo">The <see cref="CountryInfo"/> of the country for the phone number.</param>
         /// <returns>A <see cref="PhoneNumber"/> instance representing the specified string.</returns>
-        internal ParseResult Parse(string value, CountryInfo countryInfo)
+        public ParseResult Parse(string value)
         {
-            if (countryInfo is null)
-            {
-                throw new ArgumentNullException(nameof(countryInfo));
-            }
-
-            if (!countryInfo.IsNumber(value))
+            if (!Country.IsNumber(value))
             {
                 return ParseResult.Failure(
-                    $"The value must be a {countryInfo.CountryCode} phone number starting {countryInfo.TrunkPrefix} or {countryInfo.CallingCode}.");
+                    $"The value must be a {Country.Iso3116Code} phone number starting {Country.TrunkPrefix} or {Country.CallingCode}.");
             }
 
-            var nsnValue = countryInfo.ReadNationalSignificantNumber(value);
+            var nsnValue = Country.ReadNationalSignificantNumber(value);
 
-            if (!countryInfo.NsnLengths.Contains(nsnValue.Length))
+            if (!Country.NsnLengths.Contains(nsnValue.Length))
             {
                 return ParseResult.Failure(
-                    $"The national significant number of the phone number must be {string.Join(" or ", countryInfo.NsnLengths)} digits in length.");
+                    $"The national significant number of the phone number must be {string.Join(" or ", Country.NsnLengths)} digits in length.");
             }
 
-            return ParseNationalSignificantNumber(nsnValue, countryInfo);
+            return ParseNationalSignificantNumber(nsnValue);
         }
 
         /// <summary>
         /// Parses the phone number represented in the specified string into a <see cref="PhoneNumber"/> instance.
         /// </summary>
         /// <param name="nsnValue">A string containing the national significant number.</param>
-        /// <param name="countryInfo"></param>
         /// <returns>A <see cref="PhoneNumber"/> instance representing the specified string.</returns>
         /// <remarks>By the time this method is called, nsnValue will have been validated against the <see cref="CountryInfo"/>.NsnLengths and contain digits only.</remarks>
-        protected abstract ParseResult ParseNationalSignificantNumber(string nsnValue, CountryInfo countryInfo);
+        protected abstract ParseResult ParseNationalSignificantNumber(string nsnValue);
     }
 }

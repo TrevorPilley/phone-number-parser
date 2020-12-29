@@ -554,7 +554,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07999112233", "7999", "112233")]
         public void Parse_Known_MobilePhoneNumber(string value, string areaCode, string localNumber)
         {
-            var phoneNumber = _parser.Parse(value, CountryInfo.UK).PhoneNumber;
+            var phoneNumber = _parser.Parse(value).PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<MobilePhoneNumber>(phoneNumber);
@@ -573,7 +573,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07911812345", "7911", "812345")]
         public void Parse_Known_MobilePhoneNumber_DataOnly(string value, string areaCode, string localNumber)
         {
-            var phoneNumber = _parser.Parse(value, CountryInfo.UK).PhoneNumber;
+            var phoneNumber = _parser.Parse(value).PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<MobilePhoneNumber>(phoneNumber);
@@ -609,7 +609,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07699112233", "7699", "112233")]
         public void Parse_Known_MobilePhoneNumber_Pager(string value, string areaCode, string localNumber)
         {
-            var phoneNumber = _parser.Parse(value, CountryInfo.UK).PhoneNumber;
+            var phoneNumber = _parser.Parse(value).PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<MobilePhoneNumber>(phoneNumber);
@@ -627,7 +627,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07000112233", "7000", "112233")]
         public void Parse_Known_MobilePhoneNumber_Virtual(string value, string areaCode, string localNumber)
         {
-            var phoneNumber = _parser.Parse(value, CountryInfo.UK).PhoneNumber;
+            var phoneNumber = _parser.Parse(value).PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<MobilePhoneNumber>(phoneNumber);

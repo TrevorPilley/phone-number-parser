@@ -30,7 +30,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("08991212123", "899", "1212123")]
         public void Parse_Known_NonGeographicPhoneNumber(string value, string areaCode, string localNumber)
         {
-            var phoneNumber = _parser.Parse(value, CountryInfo.UK).PhoneNumber;
+            var phoneNumber = _parser.Parse(value).PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);

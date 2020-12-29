@@ -13,19 +13,24 @@ namespace PhoneNumbers.Parsers
     /// https://en.wikipedia.org/wiki/List_of_dialling_codes_in_the_United_Kingdom
     /// https://www.area-codes.org.uk/full-uk-area-code-list.php
     /// </remarks>
-    internal sealed class UKPhoneNumberParser : PhoneNumberParser
+    public sealed class UKPhoneNumberParser : PhoneNumberParser
     {
         private readonly IReadOnlyDictionary<string, AreaCodeInfo> _areaCodes;
 
         private readonly string[] _areaCodesWith5Digits;
 
         private UKPhoneNumberParser(IReadOnlyDictionary<string, AreaCodeInfo> areaCodes)
+            : base(CountryInfo.UK)
         {
             _areaCodes = areaCodes;
             _areaCodesWith5Digits = areaCodes.Keys.Where(x => x.Length == 5).ToArray();
         }
 
-        internal static PhoneNumberParser Create()
+        /// <summary>
+        /// Creates an instance of the <see cref="UKPhoneNumberParser"/> class.
+        /// </summary>
+        /// <returns>The created <see cref="UKPhoneNumberParser"/>.</returns>
+        public static PhoneNumberParser Create()
         {
             // There are very few local number lengths so cache and re-use them to avoid loads of identical int arrays.
             var localNumberLengthsCache = new Dictionary<string, int[]>();
@@ -53,27 +58,27 @@ namespace PhoneNumbers.Parsers
 
         /// <inheritdoc/>
         /// <remarks>By the time this method is called, nsnValue will have been validated against the <see cref="CountryInfo"/>.NsnLengths and contain digits only.</remarks>
-        protected override ParseResult ParseNationalSignificantNumber(string nsnValue, CountryInfo countryInfo)
+        protected override ParseResult ParseNationalSignificantNumber(string nsnValue)
         {
             switch (nsnValue[0])
             {
                 case '1':
                 case '2':
-                    return ParseGeographicPhoneNumber(nsnValue, countryInfo);
+                    return ParseGeographicPhoneNumber(nsnValue);
 
                 case '3':
                 case '8':
-                    return ParseNonGeographicPhoneNumber(nsnValue, countryInfo);
+                    return ParseNonGeographicPhoneNumber(nsnValue);
 
                 case '7':
-                    return ParseMobilePhoneNumber(nsnValue, countryInfo);
+                    return ParseMobilePhoneNumber(nsnValue);
 
                 default:
                     return ParseResult.Failure($"A GB phone number cannot have a national significant number starting {nsnValue[0]}.");
             }
         }
 
-        private ParseResult ParseGeographicPhoneNumber(string nsnValue, CountryInfo countryInfo)
+        private ParseResult ParseGeographicPhoneNumber(string nsnValue)
         {
             // Most UK area codes are 4 digits.
             var areaCodeLength = 4;
@@ -115,10 +120,10 @@ namespace PhoneNumbers.Parsers
             }
 
             return ParseResult.Success(
-                new GeographicPhoneNumber(countryInfo, areaCode, localNumber, areaCodeInfo.GeographicArea!));
+                new GeographicPhoneNumber(Country, areaCode, localNumber, areaCodeInfo.GeographicArea!));
         }
 
-        private ParseResult ParseMobilePhoneNumber(string nsnValue, CountryInfo countryInfo)
+        private ParseResult ParseMobilePhoneNumber(string nsnValue)
         {
             var areaCode = nsnValue.Substring(0, 4);
 
@@ -153,10 +158,10 @@ namespace PhoneNumbers.Parsers
             var isVirtual = areaCode[1] == '0';
 
             return ParseResult.Success(
-                new MobilePhoneNumber(countryInfo, areaCode, localNumber, isDataOnly, isPager, isVirtual));
+                new MobilePhoneNumber(Country, areaCode, localNumber, isDataOnly, isPager, isVirtual));
         }
 
-        private ParseResult ParseNonGeographicPhoneNumber(string nsnValue, CountryInfo countryInfo)
+        private ParseResult ParseNonGeographicPhoneNumber(string nsnValue)
         {
             // All Non geographic phone numbers have a 3 digit area code (3XX or 8XX).
             var areaCode = nsnValue.Substring(0, 3);
@@ -175,7 +180,7 @@ namespace PhoneNumbers.Parsers
             }
 
             return ParseResult.Success(
-                new NonGeographicPhoneNumber(countryInfo, areaCode, localNumber));
+                new NonGeographicPhoneNumber(Country, areaCode, localNumber));
         }
     }
 }
