@@ -13,13 +13,19 @@ namespace PhoneNumbers
         /// <param name="countryInfo">The <see cref="CountryInfo"/> for the phone number.</param>
         /// <param name="areaCode">The area code of the phone number.</param>
         /// <param name="localNumber">The local number of the phone number.</param>
+        /// <param name="isFreephone">The number is a freephone (toll-free) number.</param>
         internal NonGeographicPhoneNumber(
             CountryInfo countryInfo,
             string? areaCode,
-            string localNumber)
-            : base(countryInfo, areaCode, localNumber)
-        {
-        }
+            string localNumber,
+            bool isFreephone)
+            : base(countryInfo, areaCode, localNumber) =>
+            IsFreephone = isFreephone;
+
+        /// <summary>
+        /// The number is a freephone (toll-free) number.
+        /// </summary>
+        public bool IsFreephone { get; }
 
         /// <inheritdoc/>
         public override PhoneNumberKind PhoneNumberKind =>
@@ -59,6 +65,7 @@ namespace PhoneNumbers
 
             return (AreaCode == null && other.AreaCode == null || AreaCode!.Equals(other.AreaCode, StringComparison.Ordinal)) &&
                 Country.Equals(other.Country) &&
+                IsFreephone.Equals(other.IsFreephone) &&
                 LocalNumber.Equals(other.LocalNumber, StringComparison.Ordinal) &&
                 PhoneNumberKind.Equals(other.PhoneNumberKind);
         }
@@ -66,6 +73,6 @@ namespace PhoneNumbers
         /// <inheritdoc/>
         [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
         public override int GetHashCode() =>
-            HashCode.Combine(AreaCode, Country, LocalNumber, PhoneNumberKind, PhoneNumberKind);
+            HashCode.Combine(AreaCode, Country, IsFreephone, LocalNumber, PhoneNumberKind);
     }
 }

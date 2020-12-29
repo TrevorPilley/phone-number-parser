@@ -13,9 +13,9 @@ namespace PhoneNumbers
         /// <param name="countryInfo">The <see cref="CountryInfo"/> for the phone number.</param>
         /// <param name="areaCode">The area code of the phone number.</param>
         /// <param name="localNumber">The local number of the phone number.</param>
-        /// <param name="isDataOnly"></param>
-        /// <param name="isPager"></param>
-        /// <param name="isVirtual"></param>
+        /// <param name="isDataOnly">The mobile number is likely for a data only plan (e.g. a 3G/LTE laptop or tablet).</param>
+        /// <param name="isPager">The mobile number is likely for a pager.</param>
+        /// <param name="isVirtual">The mobile number is likely a virtual number.</param>
         internal MobilePhoneNumber(
             CountryInfo countryInfo,
             string? areaCode,
@@ -23,12 +23,8 @@ namespace PhoneNumbers
             bool isDataOnly,
             bool isPager,
             bool isVirtual)
-            : base(countryInfo, areaCode, localNumber)
-        {
-            IsDataOnly = isDataOnly;
-            IsPager = isPager;
-            IsVirtual = isVirtual;
-        }
+            : base(countryInfo, areaCode, localNumber) =>
+            (IsDataOnly, IsPager, IsVirtual) = (isDataOnly, isPager, isVirtual);
 
         /// <summary>
         /// The mobile number is likely for a data only plan (e.g. a 3G/LTE laptop or tablet).
@@ -84,16 +80,16 @@ namespace PhoneNumbers
 
             return (AreaCode == null && other.AreaCode == null || AreaCode!.Equals(other.AreaCode, StringComparison.Ordinal)) &&
                 Country.Equals(other.Country) &&
-                LocalNumber.Equals(other.LocalNumber, StringComparison.Ordinal) &&
-                PhoneNumberKind.Equals(other.PhoneNumberKind) &&
                 IsDataOnly.Equals(other.IsDataOnly) &&
                 IsPager.Equals(other.IsPager) &&
-                IsVirtual.Equals(other.IsVirtual);
+                IsVirtual.Equals(other.IsVirtual) &&
+                LocalNumber.Equals(other.LocalNumber, StringComparison.Ordinal) &&
+                PhoneNumberKind.Equals(other.PhoneNumberKind);
         }
 
         /// <inheritdoc/>
         [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
         public override int GetHashCode() =>
-            HashCode.Combine(AreaCode, Country, LocalNumber, PhoneNumberKind, IsDataOnly, IsPager, IsVirtual, PhoneNumberKind);
+            HashCode.Combine(AreaCode, Country, IsDataOnly, IsPager, IsVirtual, LocalNumber, PhoneNumberKind);
     }
 }

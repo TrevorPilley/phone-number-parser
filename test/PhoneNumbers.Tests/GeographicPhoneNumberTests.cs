@@ -90,21 +90,24 @@ namespace PhoneNumbers.Tests
             Assert.True(phoneNumber1 != (object)phoneNumber2);
             Assert.True(phoneNumber2 != (object)phoneNumber1);
 
-            var phoneNumber3 = new GeographicPhoneNumber(CountryInfo.UK, "12345", "667789", "N/A");
+            // Change area code
+            var phoneNumber3 = new GeographicPhoneNumber(CountryInfo.UK, "12346", "667788", "N/A");
 
             Assert.NotEqual(phoneNumber1, phoneNumber3);
             Assert.False(phoneNumber1.Equals(phoneNumber3));
             Assert.False(phoneNumber1 == phoneNumber3);
             Assert.True(phoneNumber1 != phoneNumber3);
 
-            var phoneNumber4 = new GeographicPhoneNumber(CountryInfo.UK, "12346", "667789", "N/A");
+            // change local number
+            var phoneNumber4 = new GeographicPhoneNumber(CountryInfo.UK, "12345", "667789", "N/A");
 
             Assert.NotEqual(phoneNumber1, phoneNumber4);
             Assert.False(phoneNumber1.Equals(phoneNumber4));
             Assert.False(phoneNumber1 == phoneNumber4);
             Assert.True(phoneNumber1 != phoneNumber4);
 
-            var phoneNumber5 = new GeographicPhoneNumber(CountryInfo.UK, "12346", "667789", "N/B");
+            // change geographic area
+            var phoneNumber5 = new GeographicPhoneNumber(CountryInfo.UK, "12345", "667788", "N/B");
 
             Assert.NotEqual(phoneNumber1, phoneNumber5);
             Assert.False(phoneNumber1.Equals(phoneNumber5));

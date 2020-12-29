@@ -168,8 +168,10 @@ namespace PhoneNumbers.Parsers
                     $"The for the area code {areaCodeInfo.AreaCode}, the local number must be {string.Join(" or ", areaCodeInfo.LocalNumberLengths)} digits in length.");
             }
 
+            var isFreephone = areaCode == "800" || areaCode == "808";
+
             return ParseResult.Success(
-                new NonGeographicPhoneNumber(Country, areaCode, localNumber));
+                new NonGeographicPhoneNumber(Country, areaCode, localNumber, isFreephone));
         }
     }
 }

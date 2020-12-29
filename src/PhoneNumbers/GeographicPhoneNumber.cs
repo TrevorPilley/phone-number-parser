@@ -66,14 +66,14 @@ namespace PhoneNumbers
 
             return (AreaCode == null && other.AreaCode == null || AreaCode!.Equals(other.AreaCode, StringComparison.Ordinal)) &&
                 Country.Equals(other.Country) &&
-                LocalNumber.Equals(other.LocalNumber, StringComparison.Ordinal) &&
                 GeographicArea.Equals(other.GeographicArea, StringComparison.Ordinal) &&
+                LocalNumber.Equals(other.LocalNumber, StringComparison.Ordinal) &&
                 PhoneNumberKind.Equals(other.PhoneNumberKind);
         }
 
         /// <inheritdoc/>
         [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
         public override int GetHashCode() =>
-            HashCode.Combine(AreaCode, Country, LocalNumber, PhoneNumberKind, GeographicArea, PhoneNumberKind);
+            HashCode.Combine(AreaCode, Country, GeographicArea, LocalNumber, PhoneNumberKind);
     }
 }

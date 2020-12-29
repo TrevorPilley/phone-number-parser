@@ -19,8 +19,6 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("03701212123", "370", "1212123")]
         [InlineData("03711212123", "371", "1212123")]
         [InlineData("03721212123", "372", "1212123")]
-        [InlineData("0800121121", "800", "121121")]
-        [InlineData("08081212123", "808", "1212123")]
         [InlineData("08431212123", "843", "1212123")]
         [InlineData("08441212123", "844", "1212123")]
         [InlineData("08451212123", "845", "1212123")]
@@ -38,6 +36,24 @@ namespace PhoneNumbers.Tests.Parsers
             var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
             Assert.Equal(areaCode, nonGeographicPhoneNumber.AreaCode);
             Assert.Equal(CountryInfo.UK, nonGeographicPhoneNumber.Country);
+            Assert.False(nonGeographicPhoneNumber.IsFreephone);
+            Assert.Equal(localNumber, nonGeographicPhoneNumber.LocalNumber);
+        }
+
+        [Theory]
+        [InlineData("0800121121", "800", "121121")]
+        [InlineData("08081212123", "808", "1212123")]
+        public void Parse_Known_NonGeographicPhoneNumber_FreePhone(string value, string areaCode, string localNumber)
+        {
+            var phoneNumber = _parser.Parse(value).PhoneNumber;
+
+            Assert.NotNull(phoneNumber);
+            Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
+
+            var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
+            Assert.Equal(areaCode, nonGeographicPhoneNumber.AreaCode);
+            Assert.Equal(CountryInfo.UK, nonGeographicPhoneNumber.Country);
+            Assert.True(nonGeographicPhoneNumber.IsFreephone);
             Assert.Equal(localNumber, nonGeographicPhoneNumber.LocalNumber);
         }
     }
