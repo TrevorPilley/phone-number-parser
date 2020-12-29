@@ -129,7 +129,9 @@ namespace PhoneNumbers
 
             for (var i = startPos; i < value.Length; i++)
             {
-                if (IsDigit(value[i]))
+                var charVal = value[i];
+
+                if (IsDigit(charVal) && !(digits == 0 && TrunkPrefix[0] == charVal))
                 {
                     digits++;
                 }
@@ -147,7 +149,7 @@ namespace PhoneNumbers
             {
                 var charVal = value[i];
 
-                if (IsDigit(charVal))
+                if (IsDigit(charVal) && !(charPos == 0 && TrunkPrefix[0] == charVal))
                 {
                     chars[charPos++] = charVal;
                 }
