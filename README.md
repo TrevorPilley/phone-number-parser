@@ -2,9 +2,15 @@
 
 A library for parsing phone numbers.
 
-Install via nuget `dotnet add package PhoneNumbers` _not yet published_
+Install via nuget `dotnet add package PhoneNumbers` _(not yet published)_
 
-Parsing a phone number is achieved via the `PhoneNumber.Parse` method, there are 2 overloads:
+Add the namespace:
+
+```csharp
+using PhoneNumbers;
+```
+
+Parsing a phone number is achieved via the `PhoneNumber.Parse` method (or alternatively or `PhoneNumber.TryParse`), there are 2 overloads:
 
 ```csharp
 // If the phone number string is in international format (e.g. +XX):
@@ -20,7 +26,7 @@ PhoneNumber phoneNumber = PhoneNumber.Parse("01141234567", "GB");
 phoneNumber.AreaCode;                           // 114
 phoneNumber.Country;                            // the CountryInfo (see below)
 phoneNumber.LocalNumber                         // 1234567
-phoneNumber.PhoneNumberKind;                    // the PhoneNumberKind
+phoneNumber.PhoneNumberKind;                    // PhoneNumberKind.GeographicPhoneNumber
 
 // CountryInfo properties
 phoneNumber.Country.CallingCode;                // +44
@@ -28,13 +34,13 @@ phoneNumber.Country.CountryCode;                // GB
 phoneNumber.Country.InternationalCallPrefix;    // 00
 phoneNumber.Country.TrunkPrefix;                // 0
 
-// PhoneNumberKind - can be used to determine the type of PhoneNumber
+// PhoneNumberKind - can be used to determine the type of PhoneNumber to cast to
 GeographicPhoneNumber,
 MobilePhoneNumber,
 NonGeographicPhoneNumber,
 
 // GeographicPhoneNumber : PhoneNumber
-(GeographicPhoneNumber)phoneNumber;
+var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
 geographicPhoneNumber.GeographicArea;           // Sheffield
 ```
 
@@ -51,10 +57,10 @@ Currently supports parsing the following:
 
 ### United Kingdom
 
-_note the ISO code for the United Kingdom is GB rather than UK._
+_The UK support includes Guernsey, Jersey and Isle of Man which although separate countries share UK phone numbers and also use the +44 calling code._
 
+- Phone numbers in the UK are administered by Ofcom, this library uses the rules within the published telephone numbering plan.
 - 01, 02, 03, 07 and 08 numbers are supported.
 - 01 and 02 numbers are geographically assigned so the geographic area is included.
-- Phone numbers in the UK are administered by Ofcom, this library uses the rules within the published telephone numbering plan.
 
-_The UK support includes Guernsey, Jersey and Isle of Man which although separate countries share UK phone numbers and also use the +44 calling code._
+_note the ISO code for the United Kingdom is 'GB' rather than 'UK'._
