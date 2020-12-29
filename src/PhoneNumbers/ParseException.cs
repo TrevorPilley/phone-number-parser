@@ -7,6 +7,7 @@ namespace PhoneNumbers
     /// An exception thrown when there is an issue parsing a phone number.
     /// </summary>
     [Serializable]
+    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
     public class ParseException : Exception
     {
         /// <summary>
