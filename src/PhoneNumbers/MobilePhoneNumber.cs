@@ -51,6 +51,10 @@ namespace PhoneNumbers
             PhoneNumberKind.MobilePhoneNumber;
 
         /// <inheritdoc/>
+        public static bool operator !=(MobilePhoneNumber? phoneNumber1, MobilePhoneNumber? phoneNumber2) =>
+            !(phoneNumber1 == phoneNumber2);
+
+        /// <inheritdoc/>
         public static bool operator ==(MobilePhoneNumber? phoneNumber1, MobilePhoneNumber? phoneNumber2)
         {
             if (ReferenceEquals(phoneNumber1, null))
@@ -60,10 +64,6 @@ namespace PhoneNumbers
 
             return phoneNumber1.Equals(phoneNumber2);
         }
-
-        /// <inheritdoc/>
-        public static bool operator !=(MobilePhoneNumber? phoneNumber1, MobilePhoneNumber? phoneNumber2) =>
-            !(phoneNumber1 == phoneNumber2);
 
         /// <inheritdoc/>
         public override bool Equals(object? obj) =>

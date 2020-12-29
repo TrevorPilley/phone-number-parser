@@ -26,6 +26,10 @@ namespace PhoneNumbers
             PhoneNumberKind.NonGeographicPhoneNumber;
 
         /// <inheritdoc/>
+        public static bool operator !=(NonGeographicPhoneNumber? phoneNumber1, NonGeographicPhoneNumber? phoneNumber2) =>
+            !(phoneNumber1 == phoneNumber2);
+
+        /// <inheritdoc/>
         public static bool operator ==(NonGeographicPhoneNumber? phoneNumber1, NonGeographicPhoneNumber? phoneNumber2)
         {
             if (ReferenceEquals(phoneNumber1, null))
@@ -35,10 +39,6 @@ namespace PhoneNumbers
 
             return phoneNumber1.Equals(phoneNumber2);
         }
-
-        /// <inheritdoc/>
-        public static bool operator !=(NonGeographicPhoneNumber? phoneNumber1, NonGeographicPhoneNumber? phoneNumber2) =>
-            !(phoneNumber1 == phoneNumber2);
 
         /// <inheritdoc/>
         public override bool Equals(object? obj) =>
