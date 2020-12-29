@@ -26,18 +26,12 @@ namespace PhoneNumbers.Parsers
         /// <returns>A <see cref="PhoneNumber"/> instance representing the specified string.</returns>
         public ParseResult Parse(string value)
         {
-            if (!Country.IsNumber(value))
-            {
-                return ParseResult.Failure(
-                    $"The value must be a {Country.Iso3116Code} phone number starting {Country.CallingCode}{(Country.TrunkPrefix != null ? " or " + Country.TrunkPrefix : "")}.");
-            }
-
             var nsnValue = Country.ReadNationalSignificantNumber(value);
 
             if (!Country.NsnLengths.Contains(nsnValue.Length))
             {
                 return ParseResult.Failure(
-                    $"The national significant number of the phone number must be {string.Join(" or ", Country.NsnLengths)} digits in length.");
+                    $"The value must be a {Country.Iso3116Code} phone number starting {Country.CallingCode}{(Country.TrunkPrefix != null ? " or " + Country.TrunkPrefix : "")} and the national significant number of the phone number must be {string.Join(" or ", Country.NsnLengths)} digits in length.");
             }
 
             return ParseNationalSignificantNumber(nsnValue);

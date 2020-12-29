@@ -11,6 +11,8 @@ namespace PhoneNumbers
     [DebuggerDisplay("{" + nameof(GetDebuggerDisplay) + "(),nq}")]
     public sealed class CountryInfo
     {
+        private static readonly char[] s_digits1To9 = new[] { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+
         /// <summary>
         /// Initialises a new instance of the <see cref="CountryInfo"/> class.
         /// </summary>
@@ -69,45 +71,6 @@ namespace PhoneNumbers
         internal bool IsInternationalNumber(string value) =>
             value?.StartsWith(CallingCode, StringComparison.Ordinal) == true;
 
-        internal bool IsNumber(string value)
-        {
-            if (string.IsNullOrWhiteSpace(value))
-            {
-                return false;
-            }
-
-            if (value[0] == '+')
-            {
-                return value.StartsWith(CallingCode, StringComparison.Ordinal);
-            }
-
-            if (TrunkPrefix != null && value.StartsWith(TrunkPrefix, StringComparison.Ordinal))
-            {
-                return true;
-            }
-
-            var firstDigit = 0;
-
-            for (var i = 0; i < value.Length; i++)
-            {
-                if (IsDigit(value[i]))
-                {
-                    firstDigit = i;
-                    break;
-                }
-            }
-
-            for (var i = 0; i < TrunkPrefix?.Length; i++)
-            {
-                if (value[firstDigit++] != TrunkPrefix[i])
-                {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
         /// <summary>
         /// Reads the national significant number (NSN) from the specified phone number value.
         /// </summary>
@@ -118,18 +81,28 @@ namespace PhoneNumbers
         {
             if (string.IsNullOrWhiteSpace(value))
             {
-                return value;
+                return string.Empty;
             }
 
             var startPos = 0;
 
-            if (IsInternationalNumber(value))
+            if (value[0] == '+')
             {
+                if (!IsInternationalNumber(value))
+                {
+                    return string.Empty;
+                }
+
                 startPos = CallingCode.Length;
             }
             else if (TrunkPrefix != null)
             {
                 startPos = value.IndexOf(TrunkPrefix, StringComparison.Ordinal) + 1;
+
+                if (startPos == 0 || startPos > value.IndexOfAny(s_digits1To9))
+                {
+                    return string.Empty;
+                }
             }
 
             var digits = 0;

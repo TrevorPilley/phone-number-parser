@@ -67,7 +67,7 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Returns_Failure_If_CallingCode_Invalid()
         {
             var result = _parser.Parse("+1111111111");
-            Assert.Equal($"The value must be a {CountryInfo.UK.Iso3116Code} phone number starting {CountryInfo.UK.CallingCode} or {CountryInfo.UK.TrunkPrefix}.", result.ParseError);
+            Assert.Equal($"The value must be a GB phone number starting +44 or 0 and the national significant number of the phone number must be {string.Join(" or ", CountryInfo.UK.NsnLengths)} digits in length.", result.ParseError);
         }
 
         [Theory]
@@ -90,7 +90,7 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Returns_Failure_If_Nsn_Incorrect_Length(string value)
         {
             var result = _parser.Parse(value);
-            Assert.Equal("The national significant number of the phone number must be 7 or 9 or 10 digits in length.", result.ParseError);
+            Assert.Equal($"The value must be a GB phone number starting +44 or 0 and the national significant number of the phone number must be {string.Join(" or ", CountryInfo.UK.NsnLengths)} digits in length.", result.ParseError);
         }
 
         [Theory]
@@ -101,7 +101,7 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Returns_Failure_If_ServiceType_Invalid(string value)
         {
             var result = _parser.Parse(value);
-            Assert.Equal($"A {CountryInfo.UK.Iso3116Code} phone number cannot have a national significant number starting {value[1]}.", result.ParseError);
+            Assert.Equal($"A GB phone number cannot have a national significant number starting {value[1]}.", result.ParseError);
         }
 
         [Theory]
@@ -117,7 +117,7 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Returns_Failure_If_TrunkPrefix_Invalid(string value)
         {
             var result = _parser.Parse(value);
-            Assert.Equal($"The value must be a {CountryInfo.UK.Iso3116Code} phone number starting {CountryInfo.UK.CallingCode} or {CountryInfo.UK.TrunkPrefix}.", result.ParseError);
+            Assert.Equal($"The value must be a GB phone number starting +44 or 0 and the national significant number of the phone number must be {string.Join(" or ", CountryInfo.UK.NsnLengths)} digits in length.", result.ParseError);
         }
     }
 }
