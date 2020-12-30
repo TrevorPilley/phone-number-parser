@@ -1,16 +1,22 @@
-using System.Collections.ObjectModel;
+using System.Collections.Generic;
 
 namespace PhoneNumbers.Parsers
 {
     internal sealed class AreaCodeInfo
     {
-        internal AreaCodeInfo(string areaCode, string? geographicArea, int[] localNumberLengths) =>
-            (AreaCode, GeographicArea, LocalNumberLengths) = (areaCode, geographicArea, new ReadOnlyCollection<int>(localNumberLengths));
+        internal AreaCodeInfo(
+            IReadOnlyList<NumberRange> areaCodeRanges,
+            string? geographicArea,
+            IReadOnlyList<NumberRange> localNumberRanges,
+            Hint hint) =>
+            (AreaCodeRanges, GeographicArea, Hint, LocalNumberRanges) = (areaCodeRanges, geographicArea, hint, localNumberRanges);
 
-        internal string AreaCode { get; }
+        internal IReadOnlyList<NumberRange> AreaCodeRanges { get; }
 
         internal string? GeographicArea { get; }
 
-        internal ReadOnlyCollection<int> LocalNumberLengths { get; }
+        internal Hint Hint { get; }
+
+        internal IReadOnlyList<NumberRange> LocalNumberRanges { get; }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using PhoneNumbers.Parsers;
 using Xunit;
 
@@ -14,28 +15,28 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Returns_Failure_For_1XX_AreaCode_And_Local_Number_Not_7_Digits()
         {
             var result = _parser.Parse("0113111222");
-            Assert.Equal("The for the area code 113, the local number must be 7 digits in length.", result.ParseError);
+            Assert.Equal($"The area code 113 and local number 111222 are not a valid combination.", result.ParseError);
         }
 
         [Fact]
         public void Parse_Returns_Failure_For_2X_AreaCode_And_Local_Number_Not_8_Digits()
         {
             var result = _parser.Parse("0201112222");
-            Assert.Equal("The for the area code 20, the local number must be 8 digits in length.", result.ParseError);
+            Assert.Equal($"The area code 20 and local number 1112222 are not a valid combination.", result.ParseError);
         }
 
         [Fact]
         public void Parse_Returns_Failure_For_3XX_AreaCode_And_Local_Number_Not_7_Digits()
         {
             var result = _parser.Parse("0300111111");
-            Assert.Equal("The for the area code 300, the local number must be 7 digits in length.", result.ParseError);
+            Assert.Equal($"The area code 300 and local number 111111 are not a valid combination.", result.ParseError);
         }
 
         [Fact]
         public void Parse_Returns_Failure_For_7XXX_AreaCode_And_Local_Number_Not_6_Digits()
         {
-            var result = _parser.Parse("0700012345");
-            Assert.Equal("The for the area code 7000, the local number must be 6 digits in length.", result.ParseError);
+            var result = _parser.Parse("0770012345");
+            Assert.Equal($"The area code 7700 and local number 12345 are not a valid combination.", result.ParseError);
         }
 
         [Theory]
@@ -60,7 +61,7 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Returns_Failure_If_AreaCode_Invalid(string value, string areaCode)
         {
             var result = _parser.Parse(value);
-            Assert.Equal($"The area code {areaCode} is invalid.", result.ParseError);
+            Assert.Equal($"The area code {areaCode} and local number {value.Substring(value.IndexOf(areaCode, StringComparison.Ordinal) + areaCode.Length)} are not a valid combination.", result.ParseError);
         }
 
         [Fact]
@@ -75,7 +76,7 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Returns_Failure_If_LocalNumber_Invalid_For_AreaCode(string value)
         {
             var result = _parser.Parse(value);
-            Assert.Equal($"The area code {value.Substring(1, 4)} is invalid.", result.ParseError);
+            Assert.Equal($"The area code {value.Substring(1, 4)} and local number {value.Substring(5)} are not a valid combination.", result.ParseError);
         }
 
         [Theory]

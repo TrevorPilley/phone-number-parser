@@ -16,7 +16,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("01412872000", "141", "2872000", "Glasgow")]
         [InlineData("01512333000", "151", "2333000", "Liverpool")]
         [InlineData("01612343235", "161", "2343235", "Manchester")]
-        [InlineData("01914277000", "191", "4277000", "Tyneside / Durham / Sunderland")]
+        [InlineData("01914277000", "191", "4277000", "Newcastle / Sunderland / Durham")]
         [InlineData("01339454545", "1339", "454545", "Aboyne / Ballater")]
         [InlineData("01339755997", "13397", "55997", "Ballater")]
         [InlineData("01339822334", "13398", "22334", "Aboyne")]
@@ -24,9 +24,11 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("01387380357", "13873", "80357", "Langholm")]
         [InlineData("01733747474", "1733", "747474", "Peterborough")]
         [InlineData("02076416000", "20", "76416000", "London")]
-        [InlineData("02380833000", "23", "80833000", "Southampton / Portsmouth")]
+        [InlineData("02380833000", "23", "80833000", "Southampton / Portsmouth")] // 23 8x Southampton
+        [InlineData("02392822251", "23", "92822251", "Southampton / Portsmouth")] // 23 9x Portsmouth
         [InlineData("02476832222", "24", "76832222", "Coventry")]
-        [InlineData("02890320202", "28", "90320202", "Northern Ireland")] // Belfast
+        [InlineData("02892509509", "28", "92509509", "Northern Ireland")] // 28 92x Lisburn
+        [InlineData("02890320202", "28", "90320202", "Northern Ireland")] // 28 90x Belfast
         [InlineData("02920872087", "29", "20872087", "Cardiff")]
         public void Parse_Known_GeographicPhoneNumber(string value, string areaCode, string localNumber, string geographicArea)
         {

@@ -15,15 +15,32 @@ namespace PhoneNumbers.Parsers
     /// </remarks>
     public sealed class UKPhoneNumberParser : PhoneNumberParser
     {
-        private readonly IReadOnlyDictionary<string, AreaCodeInfo> _areaCodes;
+        private readonly IReadOnlyList<AreaCodeInfo> _areaCodeInfos;
 
-        private readonly string[] _areaCodesWith5Digits;
+        private readonly IList<string> _areaCodesWith5Digits = new[]
+        {
+            "13397", // Ballater
+            "13398", // Aboyne
+            "13873", // Langholm
+            "15242", // Hornby
+            "15394", // Hawkshead
+            "15395", // Grange-Over-Sands
+            "15396", // Sedbergh
+            "16973", // Wigton
+            "16974", // Raughton Head
+            "16977", // Brampton
+            "17683", // Appleby
+            "17684", // Pooley Bridge
+            "17687", // Keswick
+            "19467", // Gosforth
+            "19755", // Alford
+            "19756", // Strathdon
+        };
 
-        private UKPhoneNumberParser(IReadOnlyDictionary<string, AreaCodeInfo> areaCodes)
+        private UKPhoneNumberParser(IReadOnlyList<AreaCodeInfo> areaCodeInfos)
             : base(CountryInfo.UK)
         {
-            _areaCodes = areaCodes;
-            _areaCodesWith5Digits = areaCodes.Keys.Where(x => x.Length == 5).ToArray();
+            _areaCodeInfos = areaCodeInfos;
         }
 
         /// <summary>
@@ -32,26 +49,7 @@ namespace PhoneNumbers.Parsers
         /// <returns>The created <see cref="PhoneNumberParser"/>.</returns>
         public static PhoneNumberParser Create()
         {
-            // There are very few local number lengths so cache and re-use them to avoid loads of identical int arrays.
-            var localNumberLengthsCache = new Dictionary<string, int[]>();
-
-            // each line in uk_area_codes.txt is pipe separated and contains the following values in the specified order:
-            // AREA_CODE is a mandatory string
-            // GEOGRAPHIC_AREA is optional string which will be represented as an empty string (we switch that to null)
-            // LOCAL_NUMBER_LENGTHS is a mandatory comma separated list of integers
-            var areaCodes = ResourceUtility.ReadLines("uk_area_codes.txt")
-                .Select(x => x.Split('|'))
-                .Select(x =>
-                {
-                    if (!localNumberLengthsCache.TryGetValue(x[2], out var localNumberLengths))
-                    {
-                        localNumberLengths = x[2].Split(',').Select(x => int.Parse(x, CultureInfo.InvariantCulture)).ToArray();
-                        localNumberLengthsCache.Add(x[2], localNumberLengths);
-                    }
-
-                    return new AreaCodeInfo(x[0], x[1].Length > 0 ? x[1] : null, localNumberLengths);
-                })
-                .ToDictionary(x => x.AreaCode, x => x);
+            var areaCodes = ResourceUtility.ReadAreaCodes("uk_area_codes.txt").ToList();
 
             return new UKPhoneNumberParser(areaCodes);
         }
@@ -83,7 +81,7 @@ namespace PhoneNumbers.Parsers
             }
             else
             {
-                for (var i = 0; i < _areaCodesWith5Digits.Length; i++)
+                for (var i = 0; i < _areaCodesWith5Digits.Count; i++)
                 {
                     if (nsnValue.StartsWith(_areaCodesWith5Digits[i], StringComparison.Ordinal))
                     {
@@ -94,18 +92,16 @@ namespace PhoneNumbers.Parsers
             }
 
             var areaCode = nsnValue.Substring(0, areaCodeLength);
-
-            if (!_areaCodes.TryGetValue(areaCode, out var areaCodeInfo))
-            {
-                return ParseResult.Failure($"The area code {areaCode} is invalid.");
-            }
-
             var localNumber = nsnValue.Substring(areaCode.Length);
 
-            if (!areaCodeInfo.LocalNumberLengths.Contains(localNumber.Length))
+            var areaCodeInfo = _areaCodeInfos
+                .SingleOrDefault(x =>
+                    x.AreaCodeRanges.Any(x => x.Contains(areaCode)) &&
+                    x.LocalNumberRanges.Any(x => x.Contains(localNumber)));
+
+            if (areaCodeInfo == null)
             {
-                return ParseResult.Failure(
-                    $"The for the area code {areaCodeInfo.AreaCode}, the local number must be {string.Join(" or ", areaCodeInfo.LocalNumberLengths)} digits in length.");
+                return ParseResult.Failure($"The area code {areaCode} and local number {localNumber} are not a valid combination.");
             }
 
             return ParseResult.Success(
@@ -115,36 +111,21 @@ namespace PhoneNumbers.Parsers
         private ParseResult ParseMobilePhoneNumber(string nsnValue)
         {
             var areaCode = nsnValue.Substring(0, 4);
-
-            if (!_areaCodes.TryGetValue(areaCode, out var areaCodeInfo))
-            {
-                // 70XX are personal numbers but aren't be in the phone area codes list at the moment so fake one.
-                if (areaCode[1] == '0')
-                {
-                    areaCodeInfo = new AreaCodeInfo(areaCode, null, new[] { 6 });
-                }
-                else
-                {
-                    return ParseResult.Failure($"The area code {areaCode} is invalid.");
-                }
-            }
-
             var localNumber = nsnValue.Substring(areaCode.Length);
 
-            if (!areaCodeInfo.LocalNumberLengths.Contains(localNumber.Length))
+            var areaCodeInfo = _areaCodeInfos
+                .SingleOrDefault(x =>
+                    x.AreaCodeRanges.Any(x => x.Contains(areaCode)) &&
+                    x.LocalNumberRanges.Any(x => x.Contains(localNumber)));
+
+            if (areaCodeInfo == null)
             {
-                return ParseResult.Failure(
-                    $"The for the area code {areaCodeInfo.AreaCode}, the local number must be {string.Join(" or ", areaCodeInfo.LocalNumberLengths)} digits in length.");
+                return ParseResult.Failure($"The area code {areaCode} and local number {localNumber} are not a valid combination.");
             }
 
-            // UK Wifi (data only plans) start 7911 2xx or 8xx
-            var isDataOnly = areaCode == "7911" && (localNumber[0] == '2' || localNumber[0] == '8');
-
-            // UK pagers start 76 (except 7624 which is used by mobile phones in Isle of Man)
-            var isPager = areaCode[1] == '6' && areaCode != "7624";
-
-            // UK virtual (personal numbers) start 70
-            var isVirtual = areaCode[1] == '0';
+            var isDataOnly = areaCodeInfo.Hint == Hint.Data;
+            var isPager = areaCodeInfo.Hint == Hint.Pager;
+            var isVirtual = areaCodeInfo.Hint == Hint.Virtual;
 
             return ParseResult.Success(
                 new MobilePhoneNumber(Country, areaCode, localNumber, isDataOnly, isPager, isVirtual));
@@ -154,21 +135,19 @@ namespace PhoneNumbers.Parsers
         {
             // All Non geographic phone numbers have a 3 digit area code (3XX or 8XX).
             var areaCode = nsnValue.Substring(0, 3);
-
-            if (!_areaCodes.TryGetValue(areaCode, out var areaCodeInfo))
-            {
-                return ParseResult.Failure($"The area code {areaCode} is invalid.");
-            }
-
             var localNumber = nsnValue.Substring(areaCode.Length);
 
-            if (!areaCodeInfo.LocalNumberLengths.Contains(localNumber.Length))
+            var areaCodeInfo = _areaCodeInfos
+                .SingleOrDefault(x =>
+                    x.AreaCodeRanges.Any(x => x.Contains(areaCode)) &&
+                    x.LocalNumberRanges.Any(x => x.Contains(localNumber)));
+
+            if (areaCodeInfo == null)
             {
-                return ParseResult.Failure(
-                    $"The for the area code {areaCodeInfo.AreaCode}, the local number must be {string.Join(" or ", areaCodeInfo.LocalNumberLengths)} digits in length.");
+                return ParseResult.Failure($"The area code {areaCode} and local number {localNumber} are not a valid combination.");
             }
 
-            var isFreephone = areaCode == "800" || areaCode == "808";
+            var isFreephone = areaCodeInfo.Hint == Hint.Freephone;
 
             return ParseResult.Success(
                 new NonGeographicPhoneNumber(Country, areaCode, localNumber, isFreephone));
