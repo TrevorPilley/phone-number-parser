@@ -140,7 +140,7 @@ namespace PhoneNumbers
 
         /// <remarks>Char.IsDigit returns true for more than 0-9 so use a more restricted version.</remarks>
         private static bool IsDigit(char charVal) =>
-            charVal >= '0' && charVal <= '9';
+            charVal is >= '0' and <= '9';
 
         [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
         private string GetDebuggerDisplay() =>
