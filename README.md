@@ -14,18 +14,18 @@ Parsing a phone number is achieved via the `PhoneNumber.Parse` method (or altern
 
 ```csharp
 // If the phone number string is in international format (e.g. +XX):
-PhoneNumber phoneNumber = PhoneNumber.Parse("+441141234567");
+PhoneNumber phoneNumber = PhoneNumber.Parse("+441142726444");
 
 // If the phone number string is not in international format:
 // Specify the ISO 3166 Aplha-2 code for the country as the second parameter.
-PhoneNumber phoneNumber = PhoneNumber.Parse("01141234567", "GB");
+PhoneNumber phoneNumber = PhoneNumber.Parse("01142726444", "GB");
 ```
 
 ```csharp
 // PhoneNumber properties:
 phoneNumber.AreaCode;                           // 114
 phoneNumber.Country;                            // the CountryInfo (see below)
-phoneNumber.LocalNumber                         // 1234567
+phoneNumber.LocalNumber                         // 2726444
 phoneNumber.PhoneNumberKind;                    // PhoneNumberKind.GeographicPhoneNumber
 
 // CountryInfo properties
@@ -45,10 +45,10 @@ geographicPhoneNumber.GeographicArea;           // Sheffield
 ```
 
 ```csharp
-phoneNumber.ToString();                         // +441141234567 (defaults to I format)
-phoneNumber.ToString("D");                      // 0114 123 4567 (format for display)
-phoneNumber.ToString("I");                      // +441141234567 (format for international caller)
-phoneNumber.ToString("N");                      // 01141234567   (format for national caller)
+phoneNumber.ToString();                         // +441142726444 (defaults to I format)
+phoneNumber.ToString("D");                      // 0114 272 6444 (format for display)
+phoneNumber.ToString("I");                      // +441142726444 (format for international caller)
+phoneNumber.ToString("N");                      // 01142726444   (format for national caller)
 ```
 
 ## Country support

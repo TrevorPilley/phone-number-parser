@@ -7,11 +7,11 @@ namespace PhoneNumbers.Tests
     {
         [Fact]
         public void Parse_Ignores_Parenthesis() =>
-            Assert.NotNull(PhoneNumber.Parse("(0114) 123 4567", "GB"));
+            Assert.NotNull(PhoneNumber.Parse("(0114) 272 6444", "GB"));
 
         [Fact]
         public void Parse_Ignores_Spaces() =>
-            Assert.NotNull(PhoneNumber.Parse("0114 123 4567", "GB"));
+            Assert.NotNull(PhoneNumber.Parse("0114 272 6444", "GB"));
 
         [Fact]
         public void Parse_Throws_If_CountryCode_Not_Supported() =>
@@ -19,7 +19,7 @@ namespace PhoneNumbers.Tests
 
         [Fact]
         public void Parse_Throws_If_Value_Does_Not_Start_With_Plus() =>
-            Assert.Throws<ParseException>(() => PhoneNumber.Parse("441141234567"));
+            Assert.Throws<ParseException>(() => PhoneNumber.Parse("441142726444"));
 
         [Fact]
         public void Parse_Throws_If_Value_Empty() =>
@@ -31,12 +31,12 @@ namespace PhoneNumbers.Tests
 
         [Fact]
         public void Parse_UK_CallingCode() =>
-            Assert.NotNull(PhoneNumber.Parse("+441141234567"));
+            Assert.NotNull(PhoneNumber.Parse("+441142726444"));
 
         [Fact]
         public void ToString_Returns_Default_Formatted_PhoneNumber()
         {
-            var phoneNumber = PhoneNumber.Parse("+441141234567");
+            var phoneNumber = PhoneNumber.Parse("+441142726444");
 
             Assert.Equal(
                 phoneNumber.Country.Formatter.Format(phoneNumber, PhoneNumberFormatter.DefaultFormat),
@@ -53,7 +53,7 @@ namespace PhoneNumbers.Tests
         [Fact]
         public void TryParse_False_If_Value_Does_Not_Start_With_Plus()
         {
-            Assert.False(PhoneNumber.TryParse("441141234567", out var phoneNumber));
+            Assert.False(PhoneNumber.TryParse("441142726444", out var phoneNumber));
             Assert.Null(phoneNumber);
         }
 
@@ -74,21 +74,21 @@ namespace PhoneNumbers.Tests
         [Fact]
         public void TryParse_Ignores_Parenthesis()
         {
-            Assert.True(PhoneNumber.TryParse("(0114) 123 4567", "GB", out var phoneNumber));
+            Assert.True(PhoneNumber.TryParse("(0114) 272 6444", "GB", out var phoneNumber));
             Assert.NotNull(phoneNumber);
         }
 
         [Fact]
         public void TryParse_Ignores_Spaces()
         {
-            Assert.True(PhoneNumber.TryParse("0114 123 4567", "GB", out var phoneNumber));
+            Assert.True(PhoneNumber.TryParse("0114 272 6444", "GB", out var phoneNumber));
             Assert.NotNull(phoneNumber);
         }
 
         [Fact]
         public void TryParse_UK_CallingCode()
         {
-            Assert.True(PhoneNumber.TryParse("+441141234567", out var phoneNumber));
+            Assert.True(PhoneNumber.TryParse("+441142726444", out var phoneNumber));
             Assert.NotNull(phoneNumber);
         }
     }
