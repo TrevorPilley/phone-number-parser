@@ -19,12 +19,6 @@ namespace PhoneNumbers.Formatters
                 return $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.AreaCode} {phoneNumber.LocalNumber.Substring(0, 3)} {phoneNumber.LocalNumber.Substring(3)}";
             }
 
-            // Geographic and Mobiles can both have a 4 digit area code, however the preference is to only split the local number for geographical
-            if (phoneNumber.AreaCode!.Length == 4 && phoneNumber.PhoneNumberKind == PhoneNumberKind.GeographicPhoneNumber)
-            {
-                return $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.AreaCode} {phoneNumber.LocalNumber.Substring(0, 3)} {phoneNumber.LocalNumber.Substring(3)}";
-            }
-
             return $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.AreaCode} {phoneNumber.LocalNumber}";
         }
     }
