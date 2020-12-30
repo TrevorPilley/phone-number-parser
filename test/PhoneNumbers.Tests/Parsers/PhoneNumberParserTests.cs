@@ -2,7 +2,7 @@ using Moq;
 using PhoneNumbers.Parsers;
 using Xunit;
 
-namespace PhoneNumbers.Tests.Formatters
+namespace PhoneNumbers.Tests.Parsers
 {
     /// <summary>
     /// Contains unit tests for the <see cref="PhoneNumberParser"/> class.
