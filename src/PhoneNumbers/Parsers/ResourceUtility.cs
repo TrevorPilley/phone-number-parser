@@ -22,9 +22,9 @@ namespace PhoneNumbers.Parsers
             {
                 '\0' => Hint.None,
                 'D' => Hint.Data,
-                'V' => Hint.Virtual,
-                'P' => Hint.Pager,
                 'F' => Hint.Freephone,
+                'P' => Hint.Pager,
+                'V' => Hint.Virtual,
                 _ => throw new NotSupportedException(value.ToString()),
             };
 
