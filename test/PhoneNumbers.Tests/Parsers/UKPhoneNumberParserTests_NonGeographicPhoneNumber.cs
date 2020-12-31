@@ -5,27 +5,27 @@ namespace PhoneNumbers.Tests.Parsers
     public partial class UKPhoneNumberParserTests
     {
         [Theory]
-        [InlineData("03001212123", "300", "1212123")]
-        [InlineData("03021212123", "302", "1212123")]
-        [InlineData("03031212123", "303", "1212123")]
-        [InlineData("03061212123", "306", "1212123")]
-        [InlineData("03301212123", "330", "1212123")]
-        [InlineData("03311212123", "331", "1212123")]
-        [InlineData("03321212123", "332", "1212123")]
-        [InlineData("03331212123", "333", "1212123")]
-        [InlineData("03431212123", "343", "1212123")]
-        [InlineData("03441212123", "344", "1212123")]
-        [InlineData("03451212123", "345", "1212123")]
-        [InlineData("03701212123", "370", "1212123")]
-        [InlineData("03711212123", "371", "1212123")]
-        [InlineData("03721212123", "372", "1212123")]
-        [InlineData("08431212123", "843", "1212123")]
-        [InlineData("08441212123", "844", "1212123")]
-        [InlineData("08451212123", "845", "1212123")]
-        [InlineData("08701212123", "870", "1212123")]
-        [InlineData("08711212123", "871", "1212123")]
-        [InlineData("08721212123", "872", "1212123")]
-        [InlineData("08991212123", "899", "1212123")]
+        [InlineData("03007999999", "300", "7999999")]
+        [InlineData("03027999999", "302", "7999999")]
+        [InlineData("03037999999", "303", "7999999")]
+        [InlineData("03067999999", "306", "7999999")]
+        [InlineData("03307999999", "330", "7999999")]
+        [InlineData("03317999999", "331", "7999999")]
+        [InlineData("03327999999", "332", "7999999")]
+        [InlineData("03337999999", "333", "7999999")]
+        [InlineData("03437999999", "343", "7999999")]
+        [InlineData("03447999999", "344", "7999999")]
+        [InlineData("03457999999", "345", "7999999")]
+        [InlineData("03707999999", "370", "7999999")]
+        [InlineData("03717999999", "371", "7999999")]
+        [InlineData("03727999999", "372", "7999999")]
+        [InlineData("08439999999", "843", "9999999")]
+        [InlineData("08449999999", "844", "9999999")]
+        [InlineData("08459999999", "845", "9999999")]
+        [InlineData("08709999999", "870", "9999999")]
+        [InlineData("08719999999", "871", "9999999")]
+        [InlineData("08729999999", "872", "9999999")]
+        [InlineData("08999999999", "899", "9999999")]
         public void Parse_Known_NonGeographicPhoneNumber(string value, string areaCode, string localNumber)
         {
             var phoneNumber = _parser.Parse(value).PhoneNumber;
@@ -41,8 +41,8 @@ namespace PhoneNumbers.Tests.Parsers
         }
 
         [Theory]
-        [InlineData("0800121121", "800", "121121")]
-        [InlineData("08081212123", "808", "1212123")]
+        [InlineData("0800999999", "800", "999999")]
+        [InlineData("08089999999", "808", "9999999")]
         public void Parse_Known_NonGeographicPhoneNumber_FreePhone(string value, string areaCode, string localNumber)
         {
             var phoneNumber = _parser.Parse(value).PhoneNumber;
