@@ -105,6 +105,15 @@ namespace PhoneNumbers
                 }
             }
 
+            return ReadNsnStringFrom(startPos, value);
+        }
+
+        /// <remarks>Char.IsDigit returns true for more than 0-9 so use a more restricted version.</remarks>
+        private static bool IsDigit(char charVal) =>
+            charVal is >= '0' and <= '9';
+
+        private int CountDigitsAfter(int startPos, string value)
+        {
             var digits = 0;
 
             for (var i = startPos; i < value.Length; i++)
@@ -116,6 +125,17 @@ namespace PhoneNumbers
                     digits++;
                 }
             }
+
+            return digits;
+        }
+
+        [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+        private string GetDebuggerDisplay() =>
+            $"{Iso3116Code} {CallingCode}";
+
+        private string ReadNsnStringFrom(int startPos, string value)
+        {
+            var digits = CountDigitsAfter(startPos, value);
 
             if (startPos + digits == value.Length)
             {
@@ -137,13 +157,5 @@ namespace PhoneNumbers
 
             return new string(chars);
         }
-
-        /// <remarks>Char.IsDigit returns true for more than 0-9 so use a more restricted version.</remarks>
-        private static bool IsDigit(char charVal) =>
-            charVal is >= '0' and <= '9';
-
-        [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-        private string GetDebuggerDisplay() =>
-            $"{Iso3116Code} {CallingCode}";
     }
 }
