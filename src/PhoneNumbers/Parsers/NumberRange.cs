@@ -9,18 +9,28 @@ namespace PhoneNumbers.Parsers
     {
         private static readonly ConcurrentDictionary<string, NumberRange> s_numberRangeCache = new();
 
-        private readonly bool _singleNumber;
+        private readonly bool _isSingleNumber;
 
-        // expects to to be numerically bigger than from (e.g. from '100' to '999') but both values must be the same length
         private NumberRange(string from, string to)
         {
+            if (string.IsNullOrWhiteSpace(from))
+            {
+                throw new ArgumentException($"'{nameof(from)}' cannot be null or whitespace", nameof(from));
+            }
+
+            if (string.IsNullOrWhiteSpace(to))
+            {
+                throw new ArgumentException($"'{nameof(to)}' cannot be null or whitespace", nameof(to));
+            }
+
+            // expects to to be numerically bigger than from (e.g. from '100' to '999') but both values must be the same length
             if (from.Length != to.Length)
             {
-                throw new ArgumentOutOfRangeException(nameof(to), "From and To must be the same length");
+                throw new ArgumentOutOfRangeException(nameof(to), $"The values From ({from}) and To ({to}) must be the same length");
             }
 
             (From, To) = (from, to);
-            _singleNumber = From.Equals(To, StringComparison.Ordinal);
+            _isSingleNumber = From.Equals(To, StringComparison.Ordinal);
         }
 
         internal string From { get; }
@@ -38,7 +48,7 @@ namespace PhoneNumbers.Parsers
 
         internal bool Contains(string value)
         {
-            if (_singleNumber)
+            if (_isSingleNumber)
             {
                 return value.Equals(From, StringComparison.Ordinal);
             }
@@ -51,14 +61,15 @@ namespace PhoneNumbers.Parsers
 
             for (var i = 0; i < value.Length; i++)
             {
-                var val = value[i];
+                var valDigit = value[i];
+                var fromDigit = From[i];
 
-                if (val < From[i])
+                if (valDigit < fromDigit)
                 {
                     return false;
                 }
 
-                if (val > From[i])
+                if (valDigit > fromDigit)
                 {
                     break;
                 }
@@ -66,14 +77,15 @@ namespace PhoneNumbers.Parsers
 
             for (var i = 0; i < value.Length; i++)
             {
-                var val = value[i];
+                var valDigit = value[i];
+                var toDigit = To[i];
 
-                if (val > To[i])
+                if (valDigit > toDigit)
                 {
                     return false;
                 }
 
-                if (val < To[i])
+                if (valDigit < toDigit)
                 {
                     break;
                 }
@@ -84,6 +96,6 @@ namespace PhoneNumbers.Parsers
 
         [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
         private string GetDebuggerDisplay() =>
-            _singleNumber ? From : $"{From}-{To}";
+            _isSingleNumber ? From : $"{From}-{To}";
     }
 }
