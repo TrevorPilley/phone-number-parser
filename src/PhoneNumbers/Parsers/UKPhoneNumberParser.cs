@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 
 namespace PhoneNumbers.Parsers
@@ -15,32 +14,20 @@ namespace PhoneNumbers.Parsers
     /// </remarks>
     public sealed class UKPhoneNumberParser : PhoneNumberParser
     {
-        private readonly IReadOnlyList<AreaCodeInfo> _areaCodeInfos;
+        private readonly IReadOnlyList<AreaCodeInfo> _areaCodesWith5Digits;
+        private readonly IReadOnlyList<AreaCodeInfo> _geographicAreaCodeInfos;
+        private readonly IReadOnlyList<AreaCodeInfo> _mobileAreaCodInfos;
+        private readonly IReadOnlyList<AreaCodeInfo> _nonGeographicAreaCodeInfos;
 
-        private readonly IList<string> _areaCodesWith5Digits = new[]
-        {
-            "13397", // Ballater
-            "13398", // Aboyne
-            "13873", // Langholm
-            "15242", // Hornby
-            "15394", // Hawkshead
-            "15395", // Grange-Over-Sands
-            "15396", // Sedbergh
-            "16973", // Wigton
-            "16974", // Raughton Head
-            "16977", // Brampton
-            "17683", // Appleby
-            "17684", // Pooley Bridge
-            "17687", // Keswick
-            "19467", // Gosforth
-            "19755", // Alford
-            "19756", // Strathdon
-        };
-
-        private UKPhoneNumberParser(IReadOnlyList<AreaCodeInfo> areaCodeInfos)
+        private UKPhoneNumberParser(
+            IReadOnlyList<AreaCodeInfo> geographicAreaCodes,
+            IReadOnlyList<AreaCodeInfo> nonGeographicAreaCodes,
+            IReadOnlyList<AreaCodeInfo> mobileAreaCodes)
             : base(CountryInfo.UK)
         {
-            _areaCodeInfos = areaCodeInfos;
+            (_geographicAreaCodeInfos, _nonGeographicAreaCodeInfos, _mobileAreaCodInfos) = (geographicAreaCodes, nonGeographicAreaCodes, mobileAreaCodes);
+
+            _areaCodesWith5Digits = _geographicAreaCodeInfos.Where(x => x.AreaCodeRanges.Any(x => x.From.Length == 5)).ToList();
         }
 
         /// <summary>
@@ -49,9 +36,34 @@ namespace PhoneNumbers.Parsers
         /// <returns>The created <see cref="PhoneNumberParser"/>.</returns>
         public static PhoneNumberParser Create()
         {
-            var areaCodes = ResourceUtility.ReadAreaCodes("uk_area_codes.txt").ToList();
+            var geographicAreaCodes = new List<AreaCodeInfo>();
+            var nonGeographicAreaCodes = new List<AreaCodeInfo>();
+            var mobileAreaCodes = new List<AreaCodeInfo>();
 
-            return new UKPhoneNumberParser(areaCodes);
+            foreach (var areaCodeInfo in ResourceUtility.ReadAreaCodes("uk_area_codes.txt"))
+            {
+                switch (areaCodeInfo.AreaCodeRanges[0].From[0])
+                {
+                    case '1':
+                    case '2':
+                        geographicAreaCodes.Add(areaCodeInfo);
+                        break;
+
+                    case '3':
+                    case '8':
+                        nonGeographicAreaCodes.Add(areaCodeInfo);
+                        break;
+
+                    case '7':
+                        mobileAreaCodes.Add(areaCodeInfo);
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+
+            return new UKPhoneNumberParser(geographicAreaCodes, nonGeographicAreaCodes, mobileAreaCodes);
         }
 
         /// <inheritdoc/>
@@ -81,20 +93,21 @@ namespace PhoneNumbers.Parsers
             }
             else
             {
-                for (var i = 0; i < _areaCodesWith5Digits.Count; i++)
+                // There are some 5 digit area codes which use a subset of numbers from the "parent" 4 digit area code:
+                // e.g. 1339 (Aboyne / Ballater) has 200000-719999 and 13397 (Ballater) has 20000-99899
+                // Since geographic area codes are for a single value only, so we can just check against From.
+                if (_areaCodesWith5Digits
+                    .Where(x => x.AreaCodeRanges.Any(x => nsnValue.StartsWith(x.From, StringComparison.Ordinal)))
+                    .Any(x => x.LocalNumberRanges.Any(x => x.Contains(nsnValue.Substring(5)))))
                 {
-                    if (nsnValue.StartsWith(_areaCodesWith5Digits[i], StringComparison.Ordinal))
-                    {
-                        areaCodeLength = 5;
-                        break;
-                    }
+                    areaCodeLength = 5;
                 }
             }
 
             var areaCode = nsnValue.Substring(0, areaCodeLength);
             var localNumber = nsnValue.Substring(areaCode.Length);
 
-            var areaCodeInfo = _areaCodeInfos
+            var areaCodeInfo = _geographicAreaCodeInfos
                 .SingleOrDefault(x =>
                     x.AreaCodeRanges.Any(x => x.Contains(areaCode)) &&
                     x.LocalNumberRanges.Any(x => x.Contains(localNumber)));
@@ -113,7 +126,7 @@ namespace PhoneNumbers.Parsers
             var areaCode = nsnValue.Substring(0, 4);
             var localNumber = nsnValue.Substring(areaCode.Length);
 
-            var areaCodeInfo = _areaCodeInfos
+            var areaCodeInfo = _mobileAreaCodInfos
                 .SingleOrDefault(x =>
                     x.AreaCodeRanges.Any(x => x.Contains(areaCode)) &&
                     x.LocalNumberRanges.Any(x => x.Contains(localNumber)));
@@ -137,7 +150,7 @@ namespace PhoneNumbers.Parsers
             var areaCode = nsnValue.Substring(0, 3);
             var localNumber = nsnValue.Substring(areaCode.Length);
 
-            var areaCodeInfo = _areaCodeInfos
+            var areaCodeInfo = _nonGeographicAreaCodeInfos
                 .SingleOrDefault(x =>
                     x.AreaCodeRanges.Any(x => x.Contains(areaCode)) &&
                     x.LocalNumberRanges.Any(x => x.Contains(localNumber)));
