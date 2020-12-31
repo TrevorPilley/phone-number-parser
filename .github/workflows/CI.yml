@@ -40,14 +40,6 @@ jobs:
     - name: dotnet test
       run: dotnet test --no-restore --verbosity normal
 
-    - name: dotnet pack (pre-release)
-      if: matrix.os == 'ubuntu-latest' && github.event_name == 'push' && github.ref == 'refs/heads/develop'
-      run: |
-        $date = Get-Date -Format "yyyyMMdd"
-        $projVersion = ([xml](Get-Content ${{ env.PROJECT_PATH }})) | Select-Xml -XPath "//Project/PropertyGroup[1]/Version"
-        dotnet pack --no-build --configuration ${{ env.PROJECT_CONFIGURATION }} -p:PackageVersion="$projVersion-preview$date.${{ github.run_id }}"
-      shell: pwsh
-
     - name: dotnet pack
       if: matrix.os == 'ubuntu-latest' && github.event_name == 'push' && github.ref == 'refs/heads/main'
       run: |
@@ -56,5 +48,5 @@ jobs:
       shell: pwsh
 
     - name: dotnet nuget push
-      if: matrix.os == 'ubuntu-latest' && github.event_name == 'push' && (github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/main')
+      if: matrix.os == 'ubuntu-latest' && github.event_name == 'push' && github.ref == 'refs/heads/main'
       run: dotnet nuget push '/home/runner/work/**/*.nupkg' --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ env.NUGET_SOURCE }}
