@@ -11,7 +11,7 @@ namespace PhoneNumbers
         /// <summary>
         /// Gets the default parse options.
         /// </summary>
-        public static ParseOptions Default { get; } = new ParseOptions();
+        public static ParseOptions Default { get; } = new();
 
         /// <summary>
         /// Gets the <see cref="PhoneNumberParser"/>s.
