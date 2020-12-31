@@ -1,18 +1,18 @@
 using System;
+using System.Collections.Concurrent;
+using System.Diagnostics;
 
 namespace PhoneNumbers.Parsers
 {
+    [DebuggerDisplay("{" + nameof(GetDebuggerDisplay) + "(),nq}")]
     internal sealed class NumberRange
     {
+        private static readonly ConcurrentDictionary<string, NumberRange> s_numberRangeCache = new();
+
         private readonly bool _singleNumber;
 
-        internal NumberRange(string value)
-            : this(value, value)
-        {
-        }
-
         // expects to to be numerically bigger than from (e.g. from '100' to '999') but both values must be the same length
-        internal NumberRange(string from, string to)
+        private NumberRange(string from, string to)
         {
             if (from.Length != to.Length)
             {
@@ -27,6 +27,15 @@ namespace PhoneNumbers.Parsers
 
         internal string To { get; }
 
+        internal static NumberRange Create(string value) =>
+            s_numberRangeCache.GetOrAdd(
+                value,
+                x =>
+                {
+                    var rangeParts = x.Split('-');
+                    return rangeParts.Length == 1 ? new NumberRange(rangeParts[0], rangeParts[0]) : new NumberRange(rangeParts[0], rangeParts[1]);
+                });
+
         internal bool Contains(string value)
         {
             if (_singleNumber)
@@ -40,7 +49,7 @@ namespace PhoneNumbers.Parsers
                 return false;
             }
 
-            for (int i = 0; i < value.Length; i++)
+            for (var i = 0; i < value.Length; i++)
             {
                 var val = value[i];
 
@@ -55,7 +64,7 @@ namespace PhoneNumbers.Parsers
                 }
             }
 
-            for (int i = 0; i < value.Length; i++)
+            for (var i = 0; i < value.Length; i++)
             {
                 var val = value[i];
 
@@ -72,5 +81,9 @@ namespace PhoneNumbers.Parsers
 
             return true;
         }
+
+        [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+        private string GetDebuggerDisplay() =>
+            _singleNumber ? From : $"{From}-{To}";
     }
 }

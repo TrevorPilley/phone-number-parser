@@ -28,25 +28,11 @@ namespace PhoneNumbers.Parsers
                 _ => throw new NotSupportedException(value.ToString()),
             };
 
-        private static IReadOnlyList<NumberRange> ParseNumberRanges(string value)
-        {
-            // There are very few number ranges so cache and re-use them to avoid loads of identical instances.
-            var numberRangeCache = new Dictionary<string, NumberRange>();
-
-            return value.Split(',')
-                .Select(x =>
-                {
-                    if (!numberRangeCache.TryGetValue(x, out var numberRange))
-                    {
-                        var rangeParts = x.Split('-');
-                        numberRange = rangeParts.Length == 1 ? new NumberRange(rangeParts[0]) : new NumberRange(rangeParts[0], rangeParts[1]);
-                        numberRangeCache.Add(x, numberRange);
-                    }
-
-                    return numberRange;
-                })
-                .ToList();
-        }
+        private static IReadOnlyList<NumberRange> ParseNumberRanges(string value) =>
+            value
+            .Split(',')
+            .Select(NumberRange.Create)
+            .ToList();
 
         private static IEnumerable<string> ReadLines(string name)
         {
