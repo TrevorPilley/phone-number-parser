@@ -3,7 +3,7 @@ namespace PhoneNumbers
     /// <summary>
     /// A class which represents the result of a phone number parse attempt.
     /// </summary>
-    public sealed class ParseResult
+    internal sealed class ParseResult
     {
         /// <summary>
         /// Gets the error which resulted caused the parse attempt to fail.

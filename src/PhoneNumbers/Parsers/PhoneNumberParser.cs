@@ -5,7 +5,7 @@ namespace PhoneNumbers.Parsers
     /// <summary>
     /// The base class for a class which parses a string containing a phone number into a <see cref="PhoneNumber"/> instance.
     /// </summary>
-    public abstract class PhoneNumberParser
+    internal abstract class PhoneNumberParser
     {
         /// <summary>
         /// Initialises a new instance of the <see cref="PhoneNumberParser"/> class.
