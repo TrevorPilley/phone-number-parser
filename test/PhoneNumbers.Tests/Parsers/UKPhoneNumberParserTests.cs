@@ -7,7 +7,7 @@ namespace PhoneNumbers.Tests.Parsers
     /// <summary>
     /// Contains unit tests for the <see cref="UKPhoneNumberParser"/> class.
     /// </summary>
-    public partial class UKPhoneNumberParserTests
+    public class UKPhoneNumberParserTests
     {
         private readonly PhoneNumberParser _parser = UKPhoneNumberParser.Create();
 
