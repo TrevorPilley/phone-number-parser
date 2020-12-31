@@ -1,6 +1,8 @@
 # PhoneNumbers
 
-A library for parsing phone numbers.
+A library for parsing phone numbers supporting .NET 5.0, .NET Standard 2.1 and .NET Standard 2.0 with [nullable reference type](https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references) annotations.
+
+![GitHub last commit](https://img.shields.io/github/last-commit/TrevorPilley/PhoneNumbers/main) ![Build Status](https://github.com/TrevorPilley/PhoneNumbers/workflows/CI/badge.svg?branch=main) ![CodeQL](https://github.com/TrevorPilley/PhoneNumbers/workflows/CodeQL/badge.svg) ![GitHub Release Date](https://img.shields.io/github/release-date/TrevorPilley/PhoneNumbers) ![Nuget](https://img.shields.io/nuget/dt/PhoneNumberParser) ![Nuget](https://img.shields.io/nuget/v/PhoneNumberParser)
 
 Install via nuget `dotnet add package PhoneNumberParser`
 
