@@ -2,7 +2,7 @@
 
 A library for parsing phone numbers.
 
-Install via nuget `dotnet add package PhoneNumbers`
+Install via nuget `dotnet add package PhoneNumberParser`
 
 Add the namespace:
 
