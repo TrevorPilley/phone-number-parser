@@ -123,6 +123,7 @@ namespace PhoneNumbers.Parsers
 
         private ParseResult ParseMobilePhoneNumber(string nsnValue)
         {
+            // All mobile phone numbers have a 4 digit area code (7XXX).
             var areaCode = nsnValue.Substring(0, 4);
             var localNumber = nsnValue.Substring(areaCode.Length);
 
