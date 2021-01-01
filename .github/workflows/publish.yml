@@ -1,13 +1,9 @@
-name: CI
+name: Publish
 
 on:
   push:
-    paths-ignore:
-      - '.editorconfig'
-      - 'README.md'
-      - 'build.ps1'
-      - 'build.sh'
-  pull_request:
+    tags:
+      - '*.*.*'
 
 env:
   # Stop wasting time caching packages
@@ -17,15 +13,15 @@ env:
   # Do not extract XML documentation files from nuget packages
   NUGET_XMLDOC_MODE: skip
   NETCORE_VERSION: '5.0.101'
+  NUGET_SOURCE: 'https://api.nuget.org/v3/index.json'
   PROJECT_CONFIGURATION: Release
+  PROJECT_PATH: ./src/PhoneNumbers/PhoneNumbers.csproj
 
 jobs:
   build:
     name: Build
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ ubuntu-latest, windows-latest, macos-latest ]
+    runs-on: ubuntu-latest
+    
     steps:
     - uses: actions/checkout@v2
 
@@ -42,3 +38,12 @@ jobs:
 
     - name: dotnet test
       run: dotnet test --no-restore --verbosity normal
+
+    - name: dotnet pack
+      run: |
+        $projVersion = ([xml](Get-Content ${{ env.PROJECT_PATH }})) | Select-Xml -XPath "//Project/PropertyGroup[1]/Version"
+        dotnet pack --no-build --configuration ${{ env.PROJECT_CONFIGURATION }} -p:PackageVersion="$projVersion"
+      shell: pwsh
+
+    - name: dotnet nuget push
+      run: dotnet nuget push '/home/runner/work/**/*.nupkg' --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ env.NUGET_SOURCE }}
