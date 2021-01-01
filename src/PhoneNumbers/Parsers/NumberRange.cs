@@ -64,9 +64,7 @@ namespace PhoneNumbers.Parsers
                 return false;
             }
 
-            var intValue = int.Parse(value, CultureInfo.InvariantCulture);
-
-            return intValue >= _fromIntValue && intValue <= _toIntValue;
+            return int.Parse(value, CultureInfo.InvariantCulture) is >= _fromIntValue and <= _toIntValue;
         }
 
         [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
