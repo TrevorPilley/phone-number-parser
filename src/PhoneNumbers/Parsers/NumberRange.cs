@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Concurrent;
 using System.Diagnostics;
+using System.Globalization;
 
 namespace PhoneNumbers.Parsers
 {
@@ -9,7 +10,9 @@ namespace PhoneNumbers.Parsers
     {
         private static readonly ConcurrentDictionary<string, NumberRange> s_numberRangeCache = new();
 
+        private readonly int _fromIntValue;
         private readonly bool _isSingleNumber;
+        private readonly int _toIntValue;
 
         private NumberRange(string from, string to)
         {
@@ -31,6 +34,8 @@ namespace PhoneNumbers.Parsers
 
             (From, To) = (from, to);
             _isSingleNumber = From.Equals(To, StringComparison.Ordinal);
+            _fromIntValue = int.Parse(From, CultureInfo.InvariantCulture);
+            _toIntValue = int.Parse(To, CultureInfo.InvariantCulture);
         }
 
         internal string From { get; }
@@ -59,39 +64,9 @@ namespace PhoneNumbers.Parsers
                 return false;
             }
 
-            for (var i = 0; i < value.Length; i++)
-            {
-                var valDigit = value[i];
-                var fromDigit = From[i];
+            var intValue = int.Parse(value, CultureInfo.InvariantCulture);
 
-                if (valDigit < fromDigit)
-                {
-                    return false;
-                }
-
-                if (valDigit > fromDigit)
-                {
-                    break;
-                }
-            }
-
-            for (var i = 0; i < value.Length; i++)
-            {
-                var valDigit = value[i];
-                var toDigit = To[i];
-
-                if (valDigit > toDigit)
-                {
-                    return false;
-                }
-
-                if (valDigit < toDigit)
-                {
-                    break;
-                }
-            }
-
-            return true;
+            return intValue >= _fromIntValue && intValue <= _toIntValue;
         }
 
         [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
