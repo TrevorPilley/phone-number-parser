@@ -2,6 +2,11 @@ name: CI
 
 on:
   push:
+    paths-ignore:
+      - '.editorconfig'
+      - 'README.md'
+      - 'build.ps1'
+      - 'build.sh'
   pull_request:
 
 env:
