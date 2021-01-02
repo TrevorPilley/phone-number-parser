@@ -3,7 +3,7 @@ using Xunit;
 
 namespace PhoneNumbers.Tests.Parsers
 {
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("PhoneNumbers.Utils.TestCaseGen", "2020.12.31")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("PhoneNumbers.Utils.TestCaseGen", "2021.01.02")]
     public class UKPhoneNumberParserTests_GeographicPhoneNumberPhoneNumberParserTests
     {
         private readonly PhoneNumberParser _parser = UKPhoneNumberParser.Create();
@@ -31,7 +31,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("01189989999", "118", "9989999", "Reading")]
         [InlineData("01200200000", "1200", "200000", "Clitheroe")]
         [InlineData("01200998999", "1200", "998999", "Clitheroe")]
-        [InlineData("01202200000", "1202", "200000", "Bournemouth")]
+        [InlineData("01202000000", "1202", "000000", "Bournemouth")]
         [InlineData("01202998999", "1202", "998999", "Bournemouth")]
         [InlineData("0120461000", "1204", "61000", "Bolton")]
         [InlineData("0120464999", "1204", "64999", "Bolton")]
@@ -53,7 +53,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("01217999999", "121", "7999999", "Birmingham")]
         [InlineData("01223200000", "1223", "200000", "Cambridge")]
         [InlineData("01223998999", "1223", "998999", "Cambridge")]
-        [InlineData("01224200000", "1224", "200000", "Aberdeen")]
+        [InlineData("01224000000", "1224", "000000", "Aberdeen")]
         [InlineData("01224998999", "1224", "998999", "Aberdeen")]
         [InlineData("01225200000", "1225", "200000", "Bath")]
         [InlineData("01225998999", "1225", "998999", "Bath")]
@@ -135,9 +135,9 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("01270998999", "1270", "998999", "Crewe")]
         [InlineData("01271200000", "1271", "200000", "Barnstaple")]
         [InlineData("01271998999", "1271", "998999", "Barnstaple")]
-        [InlineData("01273200000", "1273", "200000", "Brighton")]
+        [InlineData("01273000000", "1273", "000000", "Brighton")]
         [InlineData("01273998999", "1273", "998999", "Brighton")]
-        [InlineData("01274200000", "1274", "200000", "Bradford")]
+        [InlineData("01274000000", "1274", "000000", "Bradford")]
         [InlineData("01274998999", "1274", "998999", "Bradford")]
         [InlineData("01275200000", "1275", "200000", "Clevedon")]
         [InlineData("01275998999", "1275", "998999", "Clevedon")]
@@ -759,7 +759,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("01609998999", "1609", "998999", "Northallerton")]
         [InlineData("01612000000", "161", "2000000", "Manchester")]
         [InlineData("01614999999", "161", "4999999", "Manchester")]
-        [InlineData("01616200000", "161", "6200000", "Manchester")]
+        [InlineData("01616000000", "161", "6000000", "Manchester")]
         [InlineData("01619989999", "161", "9989999", "Manchester")]
         [InlineData("01620200000", "1620", "200000", "North Berwick")]
         [InlineData("01620998999", "1620", "998999", "North Berwick")]
@@ -803,7 +803,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("01639998999", "1639", "998999", "Neath")]
         [InlineData("01641200000", "1641", "200000", "Strathy")]
         [InlineData("01641998999", "1641", "998999", "Strathy")]
-        [InlineData("01642200000", "1642", "200000", "Middlesbrough")]
+        [InlineData("01642000000", "1642", "000000", "Middlesbrough")]
         [InlineData("01642998999", "1642", "998999", "Middlesbrough")]
         [InlineData("01643200000", "1643", "200000", "Minehead")]
         [InlineData("01643998999", "1643", "998999", "Minehead")]
@@ -1263,7 +1263,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0190529999", "1905", "29999", "Worcester")]
         [InlineData("01905200000", "1905", "200000", "Worcester")]
         [InlineData("01905998999", "1905", "998999", "Worcester")]
-        [InlineData("01908200000", "1908", "200000", "Milton Keynes")]
+        [InlineData("01908000000", "1908", "000000", "Milton Keynes")]
         [InlineData("01908998999", "1908", "998999", "Milton Keynes")]
         [InlineData("01909200000", "1909", "200000", "Worksop")]
         [InlineData("01909998999", "1909", "998999", "Worksop")]
