@@ -1,4 +1,4 @@
-namespace PhoneNumbers
+namespace PhoneNumbers.Parsers
 {
     /// <summary>
     /// A class which represents the result of a phone number parse attempt.
