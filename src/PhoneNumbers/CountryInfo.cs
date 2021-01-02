@@ -16,57 +16,53 @@ namespace PhoneNumbers
         /// <summary>
         /// Initialises a new instance of the <see cref="CountryInfo"/> class.
         /// </summary>
-        /// <param name="iso3116Code">The ISO 3166 Aplha-2 code for the country.</param>
-        /// <param name="callingCode">The country calling code.</param>
-        /// <param name="internationalCallPrefix">The international call prefix.</param>
-        /// <param name="trunkPrefix">The trunk prefix (if applicable).</param>
-        /// <param name="formatter">The <see cref="PhoneNumberFormatter"/>.</param>
-        /// <param name="nsnLengths">The permitted lengths for the national significant number.</param>
-        private CountryInfo(
-            string iso3116Code,
-            string callingCode,
-            string internationalCallPrefix,
-            string? trunkPrefix,
-            PhoneNumberFormatter formatter,
-            int[] nsnLengths) =>
-            (Iso3116Code, CallingCode, Formatter, InternationalCallPrefix, TrunkPrefix, NsnLengths) =
-            (iso3116Code, callingCode, formatter, internationalCallPrefix, trunkPrefix, new ReadOnlyCollection<int>(nsnLengths));
+        private CountryInfo()
+        {
+        }
 
         /// <summary>
         /// Gets the <see cref="CountryInfo"/> for the United Kingdom.
         /// </summary>
         /// <remarks>Covers England, Scotland, Wales and Northern Ireland.</remarks>
-        public static CountryInfo UK { get; } = new CountryInfo("GB", "+44", "00", "0", new UKPhoneNumberFormatter(), new[] { 7, 9, 10 });
+        public static CountryInfo UK { get; } = new CountryInfo
+        {
+            CallingCode = "+44",
+            Formatter = new UKPhoneNumberFormatter(),
+            InternationalCallPrefix = "00",
+            Iso3116Code = "GB",
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 9, 10 }),
+            TrunkPrefix = "0",
+        };
 
         /// <summary>
         /// Gets the country calling code.
         /// </summary>
-        public string CallingCode { get; }
+        public string CallingCode { get; init; } = null!;
 
         /// <summary>
         /// Gets the international call prefix.
         /// </summary>
-        public string InternationalCallPrefix { get; }
+        public string InternationalCallPrefix { get; init; } = null!;
 
         /// <summary>
         /// Gets the ISO 3166 Aplha-2 code for the country.
         /// </summary>
-        public string Iso3116Code { get; }
+        public string Iso3116Code { get; init; } = null!;
 
         /// <summary>
         /// Gets the trunk prefix (if applicable).
         /// </summary>
-        public string? TrunkPrefix { get; }
+        public string? TrunkPrefix { get; init; }
 
         /// <summary>
         /// Gets the <see cref="PhoneNumberFormatter"/> for the country.
         /// </summary>
-        internal PhoneNumberFormatter Formatter { get; }
+        internal PhoneNumberFormatter Formatter { get; init; } = PhoneNumberFormatter.Default;
 
         /// <summary>
         /// Gets the permitted lenghts of the national significant number.
         /// </summary>
-        internal ReadOnlyCollection<int> NsnLengths { get; }
+        internal ReadOnlyCollection<int> NsnLengths { get; init; } = new ReadOnlyCollection<int>(Array.Empty<int>());
 
         internal bool IsInternationalNumber(string value) =>
             value?.StartsWith(CallingCode, StringComparison.Ordinal) == true;

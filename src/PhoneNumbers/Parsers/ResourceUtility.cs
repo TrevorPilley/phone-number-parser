@@ -11,11 +11,13 @@ namespace PhoneNumbers.Parsers
         internal static IEnumerable<AreaCodeInfo> ReadAreaCodes(string name) =>
             ReadLines(name)
             .Select(x => x.Split('|'))
-            .Select(x => new AreaCodeInfo(
-                ParseNumberRanges(x[0]),
-                x[1].Length > 0 ? x[1] : null,
-                ParseNumberRanges(x[2]),
-                ParseHint(x[3].Length > 0 ? x[3][0] : '\0')));
+            .Select(x => new AreaCodeInfo
+            {
+                AreaCodeRanges = ParseNumberRanges(x[0]),
+                GeographicArea = x[1].Length > 0 ? x[1] : null,
+                Hint = ParseHint(x[3].Length > 0 ? x[3][0] : '\0'),
+                LocalNumberRanges = ParseNumberRanges(x[2]),
+            });
 
         private static Hint ParseHint(char value) =>
             (value) switch
