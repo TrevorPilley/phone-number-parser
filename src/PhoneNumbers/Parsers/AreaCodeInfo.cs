@@ -4,19 +4,16 @@ namespace PhoneNumbers.Parsers
 {
     internal sealed class AreaCodeInfo
     {
-        internal AreaCodeInfo(
-            IReadOnlyList<NumberRange> areaCodeRanges,
-            string? geographicArea,
-            IReadOnlyList<NumberRange> localNumberRanges,
-            Hint hint) =>
-            (AreaCodeRanges, GeographicArea, Hint, LocalNumberRanges) = (areaCodeRanges, geographicArea, hint, localNumberRanges);
+        internal AreaCodeInfo()
+        {
+        }
 
-        internal IReadOnlyList<NumberRange> AreaCodeRanges { get; }
+        internal IReadOnlyList<NumberRange> AreaCodeRanges { get; init; } = null!;
 
-        internal string? GeographicArea { get; }
+        internal string? GeographicArea { get; init; } = null!;
 
-        internal Hint Hint { get; }
+        internal Hint Hint { get; init; }
 
-        internal IReadOnlyList<NumberRange> LocalNumberRanges { get; }
+        internal IReadOnlyList<NumberRange> LocalNumberRanges { get; init; } = null!;
     }
 }
