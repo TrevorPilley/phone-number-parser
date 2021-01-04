@@ -12,14 +12,14 @@ namespace PhoneNumbers.Parsers
     /// https://en.wikipedia.org/wiki/List_of_dialling_codes_in_the_United_Kingdom
     /// https://www.area-codes.org.uk/full-uk-area-code-list.php
     /// </remarks>
-    internal sealed class UKPhoneNumberParser : PhoneNumberParser
+    internal sealed class GBPhoneNumberParser : PhoneNumberParser
     {
         private readonly IReadOnlyList<AreaCodeInfo> _areaCodesWith5Digits;
         private readonly IReadOnlyList<AreaCodeInfo> _geographicAreaCodeInfos;
         private readonly IReadOnlyList<AreaCodeInfo> _mobileAreaCodInfos;
         private readonly IReadOnlyList<AreaCodeInfo> _nonGeographicAreaCodeInfos;
 
-        private UKPhoneNumberParser(
+        private GBPhoneNumberParser(
             IReadOnlyList<AreaCodeInfo> geographicAreaCodes,
             IReadOnlyList<AreaCodeInfo> nonGeographicAreaCodes,
             IReadOnlyList<AreaCodeInfo> mobileAreaCodes)
@@ -31,7 +31,7 @@ namespace PhoneNumbers.Parsers
         }
 
         /// <summary>
-        /// Creates an instance of the <see cref="UKPhoneNumberParser"/> class.
+        /// Creates an instance of the <see cref="GBPhoneNumberParser"/> class.
         /// </summary>
         /// <returns>The created <see cref="PhoneNumberParser"/>.</returns>
         internal static PhoneNumberParser Create()
@@ -63,7 +63,7 @@ namespace PhoneNumbers.Parsers
                 }
             }
 
-            return new UKPhoneNumberParser(geographicAreaCodes, nonGeographicAreaCodes, mobileAreaCodes);
+            return new GBPhoneNumberParser(geographicAreaCodes, nonGeographicAreaCodes, mobileAreaCodes);
         }
 
         /// <inheritdoc/>

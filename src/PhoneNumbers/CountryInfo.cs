@@ -27,7 +27,7 @@ namespace PhoneNumbers
         public static CountryInfo UK { get; } = new CountryInfo
         {
             CallingCode = "+44",
-            Formatter = new UKPhoneNumberFormatter(),
+            Formatter = new GBPhoneNumberFormatter(),
             InternationalCallPrefix = "00",
             Iso3116Code = "GB",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 9, 10 }),

@@ -3,7 +3,7 @@ using Xunit;
 
 namespace PhoneNumbers.Tests
 {
-    public class CountryInfoUKTests
+    public class CountryInfo_UK_Tests
     {
         [Fact]
         public void UK()
@@ -13,7 +13,7 @@ namespace PhoneNumbers.Tests
             var countryInfo = CountryInfo.UK;
 
             Assert.Equal("+44", countryInfo.CallingCode);
-            Assert.IsType<UKPhoneNumberFormatter>(countryInfo.Formatter);
+            Assert.IsType<GBPhoneNumberFormatter>(countryInfo.Formatter);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("GB", countryInfo.Iso3116Code);
             Assert.Equal(new[] { 7, 9, 10 }, countryInfo.NsnLengths);
