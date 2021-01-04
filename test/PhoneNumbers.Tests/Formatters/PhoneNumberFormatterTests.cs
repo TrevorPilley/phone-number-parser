@@ -37,6 +37,10 @@ namespace PhoneNumbers.Tests.Formatters
         public void Format_Throws_Exception_For_Invalid_Format() =>
             Assert.Throws<FormatException>(() => _formatter.Format(GetPhoneNumber(), "C"));
 
+        [Fact]
+        public void Format_Throws_Exception_For_Null_PhoneNumber() =>
+            Assert.Throws<ArgumentNullException>(() => _formatter.Format(null, "I"));
+
         private static PhoneNumber GetPhoneNumber() =>
             new GeographicPhoneNumber(CountryInfo.UK, "12345", "667788", "N/A");
     }
