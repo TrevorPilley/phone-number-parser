@@ -1,4 +1,5 @@
-using PhoneNumbers.Parsers;
+using System.Linq;
+using System.Reflection;
 using Xunit;
 
 namespace PhoneNumbers.Tests
@@ -10,8 +11,14 @@ namespace PhoneNumbers.Tests
         {
             Assert.NotNull(ParseOptions.Default);
 
-            Assert.Single(ParseOptions.Default.Parsers);
-            Assert.Contains(ParseOptions.Default.Parsers, x => x.GetType() == typeof(UKPhoneNumberParser));
+            var countryInfos = typeof(CountryInfo)
+                .GetProperties(BindingFlags.Public | BindingFlags.Static)
+                .Where(x => x.PropertyType == typeof(CountryInfo))
+                .Select(x => x.GetValue(null))
+                .Cast<CountryInfo>()
+                .ToList();
+
+            Assert.Equal(countryInfos, ParseOptions.Default.Countries);
         }
     }
 }

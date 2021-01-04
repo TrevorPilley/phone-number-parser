@@ -4,9 +4,9 @@ using Xunit;
 namespace PhoneNumbers.Tests.Parsers
 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("PhoneNumbers.Utils.TestCaseGen", "2020.12.31")]
-    public class UKPhoneNumberParserTests_NonGeographicPhoneNumberPhoneNumberParserTests
+    public class GBPhoneNumberParserTests_NonGeographicPhoneNumberPhoneNumberParserTests
     {
-        private readonly PhoneNumberParser _parser = UKPhoneNumberParser.Create();
+        private readonly PhoneNumberParser _parser = GBPhoneNumberParser.Create();
 
         [Theory]
         [InlineData("03000000000", "300", "0000000")]

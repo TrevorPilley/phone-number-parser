@@ -104,13 +104,14 @@ namespace PhoneNumbers
                 throw new ArgumentNullException(nameof(options));
             }
 
-            var parser = options.Parsers.SingleOrDefault(x => x.Country.IsInternationalNumber(value));
+            var country = options.Countries.SingleOrDefault(x => x.IsInternationalNumber(value));
 
-            if (parser == null)
+            if (country == null)
             {
                 throw new ParseException("Parse(value) only supports a value starting with a supported calling code, otherwise Parse(value, countryCode) must be used.");
             }
 
+            var parser = options.GetParser(country);
             var result = parser.Parse(value);
             result.ThrowIfFailure();
 
@@ -131,13 +132,14 @@ namespace PhoneNumbers
                 throw new ArgumentNullException(nameof(options));
             }
 
-            var parser = options.Parsers.SingleOrDefault(x => x.Country.Iso3116Code == countryCode);
+            var country = options.Countries.SingleOrDefault(x => x.Iso3116Code == countryCode);
 
-            if (parser == null)
+            if (country == null)
             {
                 throw new ParseException($"{countryCode} is not currently supported.");
             }
 
+            var parser = options.GetParser(country);
             var result = parser.Parse(value);
             result.ThrowIfFailure();
 
@@ -153,10 +155,11 @@ namespace PhoneNumbers
         /// <returns><c>true</c> if value was converted successfully; otherwise, <c>false</c>.</returns>
         internal static bool TryParse(string value, ParseOptions options, out PhoneNumber? phoneNumber)
         {
-            var parser = options?.Parsers.SingleOrDefault(x => x.Country.IsInternationalNumber(value));
+            var country = options?.Countries.SingleOrDefault(x => x.IsInternationalNumber(value));
 
-            if (parser != null)
+            if (country != null)
             {
+                var parser = options!.GetParser(country);
                 var result = parser.Parse(value);
 
                 if (result.PhoneNumber != null)
@@ -180,10 +183,11 @@ namespace PhoneNumbers
         /// <returns><c>true</c> if value was converted successfully; otherwise, <c>false</c>.</returns>
         internal static bool TryParse(string value, string countryCode, ParseOptions options, out PhoneNumber? phoneNumber)
         {
-            var parser = options?.Parsers.SingleOrDefault(x => x.Country.Iso3116Code == countryCode);
+            var country = options?.Countries.SingleOrDefault(x => x.Iso3116Code == countryCode);
 
-            if (parser != null)
+            if (country != null)
             {
+                var parser = options!.GetParser(country);
                 var result = parser.Parse(value);
 
                 if (result.PhoneNumber != null)

@@ -7,9 +7,6 @@ namespace PhoneNumbers.Tests.Parsers
     /// <summary>
     /// Contains unit tests for the <see cref="PhoneNumberParser"/> class.
     /// </summary>
-    /// <remarks>
-    /// All tests use unused calling codes and fake numbers.
-    /// </remarks>
     public class PhoneNumberParserTests
     {
         [Fact]

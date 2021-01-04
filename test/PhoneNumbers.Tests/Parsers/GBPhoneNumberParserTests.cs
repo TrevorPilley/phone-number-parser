@@ -5,11 +5,11 @@ using Xunit;
 namespace PhoneNumbers.Tests.Parsers
 {
     /// <summary>
-    /// Contains unit tests for the <see cref="UKPhoneNumberParser"/> class.
+    /// Contains unit tests for the <see cref="GBPhoneNumberParser"/> class.
     /// </summary>
-    public class UKPhoneNumberParserTests
+    public class GBPhoneNumberParserTests
     {
-        private readonly PhoneNumberParser _parser = UKPhoneNumberParser.Create();
+        private readonly PhoneNumberParser _parser = GBPhoneNumberParser.Create();
 
         [Fact]
         public void Parse_Returns_Failure_For_1XX_AreaCode_And_Local_Number_Not_7_Digits()

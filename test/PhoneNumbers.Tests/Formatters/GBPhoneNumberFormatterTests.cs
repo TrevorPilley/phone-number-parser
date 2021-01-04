@@ -5,14 +5,11 @@ using Xunit;
 namespace PhoneNumbers.Tests.Formatters
 {
     /// <summary>
-    /// Contains unit tests for the <see cref="UKPhoneNumberFormatter"/> class.
+    /// Contains unit tests for the <see cref="GBPhoneNumberFormatter"/> class.
     /// </summary>
-    /// <remarks>
-    /// All valid number tests use the local council number for the area code.
-    /// </remarks>
-    public class UKPhoneNumberFormatterTests
+    public class GBPhoneNumberFormatterTests
     {
-        private readonly PhoneNumberFormatter _formatter = new UKPhoneNumberFormatter();
+        private readonly PhoneNumberFormatter _formatter = new GBPhoneNumberFormatter();
 
         [Theory]
         [InlineData("01132224444", "0113 222 4444")] // 11X
