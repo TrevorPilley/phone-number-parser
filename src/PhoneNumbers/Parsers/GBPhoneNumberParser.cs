@@ -40,7 +40,7 @@ namespace PhoneNumbers.Parsers
             var nonGeographicAreaCodes = new List<AreaCodeInfo>();
             var mobileAreaCodes = new List<AreaCodeInfo>();
 
-            foreach (var areaCodeInfo in ResourceUtility.ReadAreaCodes("uk_area_codes.txt"))
+            foreach (var areaCodeInfo in ResourceUtility.ReadAreaCodes("GB_area_codes.txt"))
             {
                 switch (areaCodeInfo.AreaCodeRanges[0].From[0])
                 {
