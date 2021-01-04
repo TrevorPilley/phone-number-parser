@@ -3,7 +3,7 @@ using Xunit;
 
 namespace PhoneNumbers.Tests.Parsers
 {
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("PhoneNumbers.Utils.TestCaseGen", "2020.12.31")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("PhoneNumbers.Utils.TestCaseGen", "2021.01.04")]
     public class GBPhoneNumberParserTests_NonGeographicPhoneNumberPhoneNumberParserTests
     {
         private readonly PhoneNumberParser _parser = GBPhoneNumberParser.Create();
@@ -37,6 +37,21 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("03717999999", "371", "7999999")]
         [InlineData("03720000000", "372", "0000000")]
         [InlineData("03727999999", "372", "7999999")]
+        public void Parse_Known_NonGeographicPhoneNumber_3XX_AreaCode(string value, string areaCode, string localNumber)
+        {
+            var phoneNumber = _parser.Parse(value).PhoneNumber;
+
+            Assert.NotNull(phoneNumber);
+            Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
+
+            var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
+            Assert.Equal(areaCode, nonGeographicPhoneNumber.AreaCode);
+            Assert.Equal(CountryInfo.UK, nonGeographicPhoneNumber.Country);
+            Assert.False(nonGeographicPhoneNumber.IsFreephone);
+            Assert.Equal(localNumber, nonGeographicPhoneNumber.LocalNumber);
+        }
+
+        [Theory]
         [InlineData("08430000000", "843", "0000000")]
         [InlineData("08439999999", "843", "9999999")]
         [InlineData("08440000000", "844", "0000000")]
@@ -51,7 +66,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("08729999999", "872", "9999999")]
         [InlineData("08990000000", "899", "0000000")]
         [InlineData("08999999999", "899", "9999999")]
-        public void Parse_Known_NonGeographicPhoneNumber(string value, string areaCode, string localNumber)
+        public void Parse_Known_NonGeographicPhoneNumber_8XX_AreaCode(string value, string areaCode, string localNumber)
         {
             var phoneNumber = _parser.Parse(value).PhoneNumber;
 

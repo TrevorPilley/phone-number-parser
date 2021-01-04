@@ -3,7 +3,7 @@ using Xunit;
 
 namespace PhoneNumbers.Tests.Parsers
 {
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("PhoneNumbers.Utils.TestCaseGen", "2020.12.31")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("PhoneNumbers.Utils.TestCaseGen", "2021.01.04")]
     public class GBPhoneNumberParserTests_MobilePhoneNumberPhoneNumberParserTests
     {
         private readonly PhoneNumberParser _parser = GBPhoneNumberParser.Create();
@@ -13,6 +13,23 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07106999999", "7106", "999999")]
         [InlineData("07107000000", "7107", "000000")]
         [InlineData("07107999999", "7107", "999999")]
+        public void Parse_Known_MobilePhoneNumber_71XX_AreaCode(string value, string areaCode, string localNumber)
+        {
+            var phoneNumber = _parser.Parse(value).PhoneNumber;
+
+            Assert.NotNull(phoneNumber);
+            Assert.IsType<MobilePhoneNumber>(phoneNumber);
+
+            var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
+            Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
+            Assert.Equal(CountryInfo.UK, mobilePhoneNumber.Country);
+            Assert.False(mobilePhoneNumber.IsDataOnly);
+            Assert.False(mobilePhoneNumber.IsPager);
+            Assert.False(mobilePhoneNumber.IsVirtual);
+            Assert.Equal(localNumber, mobilePhoneNumber.LocalNumber);
+        }
+
+        [Theory]
         [InlineData("07300000000", "7300", "000000")]
         [InlineData("07300999999", "7300", "999999")]
         [InlineData("07301000000", "7301", "000000")]
@@ -49,6 +66,8 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07354999999", "7354", "999999")]
         [InlineData("07355000000", "7355", "000000")]
         [InlineData("07355999999", "7355", "999999")]
+        [InlineData("07359000000", "7359", "000000")]
+        [InlineData("07359399999", "7359", "399999")]
         [InlineData("07360000000", "7360", "000000")]
         [InlineData("07360999999", "7360", "999999")]
         [InlineData("07361000000", "7361", "000000")]
@@ -57,6 +76,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07362999999", "7362", "999999")]
         [InlineData("07363000000", "7363", "000000")]
         [InlineData("07363999999", "7363", "999999")]
+        [InlineData("07364000000", "7364", "000000")]
+        [InlineData("07364099999", "7364", "099999")]
+        [InlineData("07364400000", "7364", "400000")]
+        [InlineData("07364499999", "7364", "499999")]
         [InlineData("07365000000", "7365", "000000")]
         [InlineData("07365999999", "7365", "999999")]
         [InlineData("07366000000", "7366", "000000")]
@@ -65,6 +88,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07367999999", "7367", "999999")]
         [InlineData("07368000000", "7368", "000000")]
         [InlineData("07368999999", "7368", "999999")]
+        [InlineData("07369200000", "7369", "200000")]
+        [InlineData("07369299999", "7369", "299999")]
+        [InlineData("07369900000", "7369", "900000")]
+        [InlineData("07369999999", "7369", "999999")]
         [InlineData("07375000000", "7375", "000000")]
         [InlineData("07375999999", "7375", "999999")]
         [InlineData("07376000000", "7376", "000000")]
@@ -93,6 +120,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07387999999", "7387", "999999")]
         [InlineData("07388000000", "7388", "000000")]
         [InlineData("07388999999", "7388", "999999")]
+        [InlineData("07389000000", "7389", "000000")]
+        [InlineData("07389199999", "7389", "199999")]
+        [InlineData("07389600000", "7389", "600000")]
+        [InlineData("07389899999", "7389", "899999")]
         [InlineData("07390000000", "7390", "000000")]
         [InlineData("07390999999", "7390", "999999")]
         [InlineData("07391000000", "7391", "000000")]
@@ -113,6 +144,23 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07398999999", "7398", "999999")]
         [InlineData("07399000000", "7399", "000000")]
         [InlineData("07399999999", "7399", "999999")]
+        public void Parse_Known_MobilePhoneNumber_73XX_AreaCode(string value, string areaCode, string localNumber)
+        {
+            var phoneNumber = _parser.Parse(value).PhoneNumber;
+
+            Assert.NotNull(phoneNumber);
+            Assert.IsType<MobilePhoneNumber>(phoneNumber);
+
+            var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
+            Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
+            Assert.Equal(CountryInfo.UK, mobilePhoneNumber.Country);
+            Assert.False(mobilePhoneNumber.IsDataOnly);
+            Assert.False(mobilePhoneNumber.IsPager);
+            Assert.False(mobilePhoneNumber.IsVirtual);
+            Assert.Equal(localNumber, mobilePhoneNumber.LocalNumber);
+        }
+
+        [Theory]
         [InlineData("07400000000", "7400", "000000")]
         [InlineData("07400999999", "7400", "999999")]
         [InlineData("07401000000", "7401", "000000")]
@@ -125,6 +173,8 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07404999999", "7404", "999999")]
         [InlineData("07405000000", "7405", "000000")]
         [InlineData("07405999999", "7405", "999999")]
+        [InlineData("07406500000", "7406", "500000")]
+        [InlineData("07406999999", "7406", "999999")]
         [InlineData("07407000000", "7407", "000000")]
         [InlineData("07407999999", "7407", "999999")]
         [InlineData("07408000000", "7408", "000000")]
@@ -145,6 +195,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07415999999", "7415", "999999")]
         [InlineData("07416000000", "7416", "000000")]
         [InlineData("07416999999", "7416", "999999")]
+        [InlineData("07417200000", "7417", "200000")]
+        [InlineData("07417599999", "7417", "599999")]
+        [InlineData("07417800000", "7417", "800000")]
+        [InlineData("07417999999", "7417", "999999")]
         [InlineData("07418000000", "7418", "000000")]
         [InlineData("07418999999", "7418", "999999")]
         [InlineData("07419000000", "7419", "000000")]
@@ -189,6 +243,14 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07438999999", "7438", "999999")]
         [InlineData("07439000000", "7439", "000000")]
         [InlineData("07439999999", "7439", "999999")]
+        [InlineData("07440000000", "7440", "000000")]
+        [InlineData("07440799999", "7440", "799999")]
+        [InlineData("07440900000", "7440", "900000")]
+        [InlineData("07440999999", "7440", "999999")]
+        [InlineData("07441000000", "7441", "000000")]
+        [InlineData("07441199999", "7441", "199999")]
+        [InlineData("07441300000", "7441", "300000")]
+        [InlineData("07441999999", "7441", "999999")]
         [InlineData("07442000000", "7442", "000000")]
         [InlineData("07442999999", "7442", "999999")]
         [InlineData("07443000000", "7443", "000000")]
@@ -207,6 +269,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07449999999", "7449", "999999")]
         [InlineData("07450000000", "7450", "000000")]
         [InlineData("07450999999", "7450", "999999")]
+        [InlineData("07451000000", "7451", "000000")]
+        [InlineData("07451499999", "7451", "499999")]
+        [InlineData("07451600000", "7451", "600000")]
+        [InlineData("07451999999", "7451", "999999")]
         [InlineData("07452000000", "7452", "000000")]
         [InlineData("07452999999", "7452", "999999")]
         [InlineData("07453000000", "7453", "000000")]
@@ -217,6 +283,8 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07455999999", "7455", "999999")]
         [InlineData("07456000000", "7456", "000000")]
         [InlineData("07456999999", "7456", "999999")]
+        [InlineData("07457000000", "7457", "000000")]
+        [InlineData("07457799999", "7457", "799999")]
         [InlineData("07458000000", "7458", "000000")]
         [InlineData("07458999999", "7458", "999999")]
         [InlineData("07459000000", "7459", "000000")]
@@ -301,6 +369,23 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07498999999", "7498", "999999")]
         [InlineData("07499000000", "7499", "000000")]
         [InlineData("07499999999", "7499", "999999")]
+        public void Parse_Known_MobilePhoneNumber_74XX_AreaCode(string value, string areaCode, string localNumber)
+        {
+            var phoneNumber = _parser.Parse(value).PhoneNumber;
+
+            Assert.NotNull(phoneNumber);
+            Assert.IsType<MobilePhoneNumber>(phoneNumber);
+
+            var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
+            Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
+            Assert.Equal(CountryInfo.UK, mobilePhoneNumber.Country);
+            Assert.False(mobilePhoneNumber.IsDataOnly);
+            Assert.False(mobilePhoneNumber.IsPager);
+            Assert.False(mobilePhoneNumber.IsVirtual);
+            Assert.Equal(localNumber, mobilePhoneNumber.LocalNumber);
+        }
+
+        [Theory]
         [InlineData("07500000000", "7500", "000000")]
         [InlineData("07500999999", "7500", "999999")]
         [InlineData("07501000000", "7501", "000000")]
@@ -341,6 +426,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07518999999", "7518", "999999")]
         [InlineData("07519000000", "7519", "000000")]
         [InlineData("07519999999", "7519", "999999")]
+        [InlineData("07520000000", "7520", "000000")]
+        [InlineData("07520299999", "7520", "299999")]
+        [InlineData("07520400000", "7520", "400000")]
+        [InlineData("07520799999", "7520", "799999")]
         [InlineData("07521000000", "7521", "000000")]
         [InlineData("07521999999", "7521", "999999")]
         [InlineData("07522000000", "7522", "000000")]
@@ -361,6 +450,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07530999999", "7530", "999999")]
         [InlineData("07531000000", "7531", "000000")]
         [InlineData("07531999999", "7531", "999999")]
+        [InlineData("07532000000", "7532", "000000")]
+        [InlineData("07532499999", "7532", "499999")]
+        [InlineData("07532600000", "7532", "600000")]
+        [InlineData("07532999999", "7532", "999999")]
         [InlineData("07533000000", "7533", "000000")]
         [InlineData("07533999999", "7533", "999999")]
         [InlineData("07534000000", "7534", "000000")]
@@ -369,6 +462,12 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07535999999", "7535", "999999")]
         [InlineData("07536000000", "7536", "000000")]
         [InlineData("07536999999", "7536", "999999")]
+        [InlineData("07537000000", "7537", "000000")]
+        [InlineData("07537199999", "7537", "199999")]
+        [InlineData("07537300000", "7537", "300000")]
+        [InlineData("07537499999", "7537", "499999")]
+        [InlineData("07537600000", "7537", "600000")]
+        [InlineData("07537999999", "7537", "999999")]
         [InlineData("07538000000", "7538", "000000")]
         [InlineData("07538999999", "7538", "999999")]
         [InlineData("07539000000", "7539", "000000")]
@@ -409,6 +508,14 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07556999999", "7556", "999999")]
         [InlineData("07557000000", "7557", "000000")]
         [InlineData("07557999999", "7557", "999999")]
+        [InlineData("07558000000", "7558", "000000")]
+        [InlineData("07558099999", "7558", "099999")]
+        [InlineData("07558800000", "7558", "800000")]
+        [InlineData("07558899999", "7558", "899999")]
+        [InlineData("07559000000", "7559", "000000")]
+        [InlineData("07559099999", "7559", "099999")]
+        [InlineData("07559200000", "7559", "200000")]
+        [InlineData("07559999999", "7559", "999999")]
         [InlineData("07560000000", "7560", "000000")]
         [InlineData("07560999999", "7560", "999999")]
         [InlineData("07561000000", "7561", "000000")]
@@ -465,6 +572,8 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07587999999", "7587", "999999")]
         [InlineData("07588000000", "7588", "000000")]
         [InlineData("07588999999", "7588", "999999")]
+        [InlineData("07589100000", "7589", "100000")]
+        [InlineData("07589899999", "7589", "899999")]
         [InlineData("07590000000", "7590", "000000")]
         [InlineData("07590999999", "7590", "999999")]
         [InlineData("07591000000", "7591", "000000")]
@@ -485,6 +594,54 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07598999999", "7598", "999999")]
         [InlineData("07599000000", "7599", "000000")]
         [InlineData("07599999999", "7599", "999999")]
+        public void Parse_Known_MobilePhoneNumber_75XX_AreaCode(string value, string areaCode, string localNumber)
+        {
+            var phoneNumber = _parser.Parse(value).PhoneNumber;
+
+            Assert.NotNull(phoneNumber);
+            Assert.IsType<MobilePhoneNumber>(phoneNumber);
+
+            var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
+            Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
+            Assert.Equal(CountryInfo.UK, mobilePhoneNumber.Country);
+            Assert.False(mobilePhoneNumber.IsDataOnly);
+            Assert.False(mobilePhoneNumber.IsPager);
+            Assert.False(mobilePhoneNumber.IsVirtual);
+            Assert.Equal(localNumber, mobilePhoneNumber.LocalNumber);
+        }
+
+        [Theory]
+        [InlineData("07624000000", "7624", "000000")]
+        [InlineData("07624499999", "7624", "499999")]
+        [InlineData("07624500000", "7624", "500000")]
+        [InlineData("07624509999", "7624", "509999")]
+        [InlineData("07624560000", "7624", "560000")]
+        [InlineData("07624569999", "7624", "569999")]
+        [InlineData("07624600000", "7624", "600000")]
+        [InlineData("07624999999", "7624", "999999")]
+        public void Parse_Known_MobilePhoneNumber_76XX_AreaCode(string value, string areaCode, string localNumber)
+        {
+            var phoneNumber = _parser.Parse(value).PhoneNumber;
+
+            Assert.NotNull(phoneNumber);
+            Assert.IsType<MobilePhoneNumber>(phoneNumber);
+
+            var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
+            Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
+            Assert.Equal(CountryInfo.UK, mobilePhoneNumber.Country);
+            Assert.False(mobilePhoneNumber.IsDataOnly);
+            Assert.False(mobilePhoneNumber.IsPager);
+            Assert.False(mobilePhoneNumber.IsVirtual);
+            Assert.Equal(localNumber, mobilePhoneNumber.LocalNumber);
+        }
+
+        [Theory]
+        [InlineData("07700000000", "7700", "000000")]
+        [InlineData("07700199999", "7700", "199999")]
+        [InlineData("07700300000", "7700", "300000")]
+        [InlineData("07700399999", "7700", "399999")]
+        [InlineData("07700700000", "7700", "700000")]
+        [InlineData("07700999999", "7700", "999999")]
         [InlineData("07701000000", "7701", "000000")]
         [InlineData("07701999999", "7701", "999999")]
         [InlineData("07702000000", "7702", "000000")]
@@ -683,6 +840,23 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07798999999", "7798", "999999")]
         [InlineData("07799000000", "7799", "000000")]
         [InlineData("07799999999", "7799", "999999")]
+        public void Parse_Known_MobilePhoneNumber_77XX_AreaCode(string value, string areaCode, string localNumber)
+        {
+            var phoneNumber = _parser.Parse(value).PhoneNumber;
+
+            Assert.NotNull(phoneNumber);
+            Assert.IsType<MobilePhoneNumber>(phoneNumber);
+
+            var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
+            Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
+            Assert.Equal(CountryInfo.UK, mobilePhoneNumber.Country);
+            Assert.False(mobilePhoneNumber.IsDataOnly);
+            Assert.False(mobilePhoneNumber.IsPager);
+            Assert.False(mobilePhoneNumber.IsVirtual);
+            Assert.Equal(localNumber, mobilePhoneNumber.LocalNumber);
+        }
+
+        [Theory]
         [InlineData("07800000000", "7800", "000000")]
         [InlineData("07800999999", "7800", "999999")]
         [InlineData("07801000000", "7801", "000000")]
@@ -727,6 +901,12 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07820999999", "7820", "999999")]
         [InlineData("07821000000", "7821", "000000")]
         [InlineData("07821999999", "7821", "999999")]
+        [InlineData("07822000000", "7822", "000000")]
+        [InlineData("07822199999", "7822", "199999")]
+        [InlineData("07822400000", "7822", "400000")]
+        [InlineData("07822699999", "7822", "699999")]
+        [InlineData("07822800000", "7822", "800000")]
+        [InlineData("07822999999", "7822", "999999")]
         [InlineData("07823000000", "7823", "000000")]
         [InlineData("07823999999", "7823", "999999")]
         [InlineData("07824000000", "7824", "000000")]
@@ -759,6 +939,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07837999999", "7837", "999999")]
         [InlineData("07838000000", "7838", "000000")]
         [InlineData("07838999999", "7838", "999999")]
+        [InlineData("07839100000", "7839", "100000")]
+        [InlineData("07839299999", "7839", "299999")]
+        [InlineData("07839700000", "7839", "700000")]
+        [InlineData("07839899999", "7839", "899999")]
         [InlineData("07840000000", "7840", "000000")]
         [InlineData("07840999999", "7840", "999999")]
         [InlineData("07841000000", "7841", "000000")]
@@ -827,6 +1011,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07872999999", "7872", "999999")]
         [InlineData("07873000000", "7873", "000000")]
         [InlineData("07873999999", "7873", "999999")]
+        [InlineData("07874000000", "7874", "000000")]
+        [InlineData("07874499999", "7874", "499999")]
+        [InlineData("07874600000", "7874", "600000")]
+        [InlineData("07874999999", "7874", "999999")]
         [InlineData("07875000000", "7875", "000000")]
         [InlineData("07875999999", "7875", "999999")]
         [InlineData("07876000000", "7876", "000000")]
@@ -861,6 +1049,14 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07890999999", "7890", "999999")]
         [InlineData("07891000000", "7891", "000000")]
         [InlineData("07891999999", "7891", "999999")]
+        [InlineData("07892000000", "7892", "000000")]
+        [InlineData("07892199999", "7892", "199999")]
+        [InlineData("07892300000", "7892", "300000")]
+        [InlineData("07892999999", "7892", "999999")]
+        [InlineData("07893000000", "7893", "000000")]
+        [InlineData("07893299999", "7893", "299999")]
+        [InlineData("07893400000", "7893", "400000")]
+        [InlineData("07893999999", "7893", "999999")]
         [InlineData("07894000000", "7894", "000000")]
         [InlineData("07894999999", "7894", "999999")]
         [InlineData("07895000000", "7895", "000000")]
@@ -873,6 +1069,23 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07898999999", "7898", "999999")]
         [InlineData("07899000000", "7899", "000000")]
         [InlineData("07899999999", "7899", "999999")]
+        public void Parse_Known_MobilePhoneNumber_78XX_AreaCode(string value, string areaCode, string localNumber)
+        {
+            var phoneNumber = _parser.Parse(value).PhoneNumber;
+
+            Assert.NotNull(phoneNumber);
+            Assert.IsType<MobilePhoneNumber>(phoneNumber);
+
+            var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
+            Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
+            Assert.Equal(CountryInfo.UK, mobilePhoneNumber.Country);
+            Assert.False(mobilePhoneNumber.IsDataOnly);
+            Assert.False(mobilePhoneNumber.IsPager);
+            Assert.False(mobilePhoneNumber.IsVirtual);
+            Assert.Equal(localNumber, mobilePhoneNumber.LocalNumber);
+        }
+
+        [Theory]
         [InlineData("07900000000", "7900", "000000")]
         [InlineData("07900999999", "7900", "999999")]
         [InlineData("07901000000", "7901", "000000")]
@@ -895,6 +1108,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07909999999", "7909", "999999")]
         [InlineData("07910000000", "7910", "000000")]
         [InlineData("07910999999", "7910", "999999")]
+        [InlineData("07911000000", "7911", "000000")]
+        [InlineData("07911199999", "7911", "199999")]
+        [InlineData("07911700000", "7911", "700000")]
+        [InlineData("07911799999", "7911", "799999")]
         [InlineData("07912000000", "7912", "000000")]
         [InlineData("07912999999", "7912", "999999")]
         [InlineData("07913000000", "7913", "000000")]
@@ -1027,6 +1244,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07976999999", "7976", "999999")]
         [InlineData("07977000000", "7977", "000000")]
         [InlineData("07977999999", "7977", "999999")]
+        [InlineData("07978100000", "7978", "100000")]
+        [InlineData("07978399999", "7978", "399999")]
+        [InlineData("07978500000", "7978", "500000")]
+        [InlineData("07978999999", "7978", "999999")]
         [InlineData("07979000000", "7979", "000000")]
         [InlineData("07979999999", "7979", "999999")]
         [InlineData("07980000000", "7980", "000000")]
@@ -1053,109 +1274,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07990999999", "7990", "999999")]
         [InlineData("07999000000", "7999", "000000")]
         [InlineData("07999999999", "7999", "999999")]
-        [InlineData("07359000000", "7359", "000000")]
-        [InlineData("07359399999", "7359", "399999")]
-        [InlineData("07364000000", "7364", "000000")]
-        [InlineData("07364099999", "7364", "099999")]
-        [InlineData("07364400000", "7364", "400000")]
-        [InlineData("07364499999", "7364", "499999")]
-        [InlineData("07369200000", "7369", "200000")]
-        [InlineData("07369299999", "7369", "299999")]
-        [InlineData("07369900000", "7369", "900000")]
-        [InlineData("07369999999", "7369", "999999")]
-        [InlineData("07389000000", "7389", "000000")]
-        [InlineData("07389199999", "7389", "199999")]
-        [InlineData("07389600000", "7389", "600000")]
-        [InlineData("07389899999", "7389", "899999")]
-        [InlineData("07406500000", "7406", "500000")]
-        [InlineData("07406999999", "7406", "999999")]
-        [InlineData("07417200000", "7417", "200000")]
-        [InlineData("07417599999", "7417", "599999")]
-        [InlineData("07417800000", "7417", "800000")]
-        [InlineData("07417999999", "7417", "999999")]
-        [InlineData("07440000000", "7440", "000000")]
-        [InlineData("07440799999", "7440", "799999")]
-        [InlineData("07440900000", "7440", "900000")]
-        [InlineData("07440999999", "7440", "999999")]
-        [InlineData("07441000000", "7441", "000000")]
-        [InlineData("07441199999", "7441", "199999")]
-        [InlineData("07441300000", "7441", "300000")]
-        [InlineData("07441999999", "7441", "999999")]
-        [InlineData("07451000000", "7451", "000000")]
-        [InlineData("07451499999", "7451", "499999")]
-        [InlineData("07451600000", "7451", "600000")]
-        [InlineData("07451999999", "7451", "999999")]
-        [InlineData("07457000000", "7457", "000000")]
-        [InlineData("07457799999", "7457", "799999")]
-        [InlineData("07520000000", "7520", "000000")]
-        [InlineData("07520299999", "7520", "299999")]
-        [InlineData("07520400000", "7520", "400000")]
-        [InlineData("07520799999", "7520", "799999")]
-        [InlineData("07532000000", "7532", "000000")]
-        [InlineData("07532499999", "7532", "499999")]
-        [InlineData("07532600000", "7532", "600000")]
-        [InlineData("07532999999", "7532", "999999")]
-        [InlineData("07537000000", "7537", "000000")]
-        [InlineData("07537199999", "7537", "199999")]
-        [InlineData("07537300000", "7537", "300000")]
-        [InlineData("07537499999", "7537", "499999")]
-        [InlineData("07537600000", "7537", "600000")]
-        [InlineData("07537999999", "7537", "999999")]
-        [InlineData("07558000000", "7558", "000000")]
-        [InlineData("07558099999", "7558", "099999")]
-        [InlineData("07558800000", "7558", "800000")]
-        [InlineData("07558899999", "7558", "899999")]
-        [InlineData("07559000000", "7559", "000000")]
-        [InlineData("07559099999", "7559", "099999")]
-        [InlineData("07559200000", "7559", "200000")]
-        [InlineData("07559999999", "7559", "999999")]
-        [InlineData("07589100000", "7589", "100000")]
-        [InlineData("07589899999", "7589", "899999")]
-        [InlineData("07624000000", "7624", "000000")]
-        [InlineData("07624499999", "7624", "499999")]
-        [InlineData("07624500000", "7624", "500000")]
-        [InlineData("07624509999", "7624", "509999")]
-        [InlineData("07624560000", "7624", "560000")]
-        [InlineData("07624569999", "7624", "569999")]
-        [InlineData("07624600000", "7624", "600000")]
-        [InlineData("07624999999", "7624", "999999")]
-        [InlineData("07700000000", "7700", "000000")]
-        [InlineData("07700199999", "7700", "199999")]
-        [InlineData("07700300000", "7700", "300000")]
-        [InlineData("07700399999", "7700", "399999")]
-        [InlineData("07700700000", "7700", "700000")]
-        [InlineData("07700999999", "7700", "999999")]
-        [InlineData("07822000000", "7822", "000000")]
-        [InlineData("07822199999", "7822", "199999")]
-        [InlineData("07822400000", "7822", "400000")]
-        [InlineData("07822699999", "7822", "699999")]
-        [InlineData("07822800000", "7822", "800000")]
-        [InlineData("07822999999", "7822", "999999")]
-        [InlineData("07839100000", "7839", "100000")]
-        [InlineData("07839299999", "7839", "299999")]
-        [InlineData("07839700000", "7839", "700000")]
-        [InlineData("07839899999", "7839", "899999")]
-        [InlineData("07874000000", "7874", "000000")]
-        [InlineData("07874499999", "7874", "499999")]
-        [InlineData("07874600000", "7874", "600000")]
-        [InlineData("07874999999", "7874", "999999")]
-        [InlineData("07892000000", "7892", "000000")]
-        [InlineData("07892199999", "7892", "199999")]
-        [InlineData("07892300000", "7892", "300000")]
-        [InlineData("07892999999", "7892", "999999")]
-        [InlineData("07893000000", "7893", "000000")]
-        [InlineData("07893299999", "7893", "299999")]
-        [InlineData("07893400000", "7893", "400000")]
-        [InlineData("07893999999", "7893", "999999")]
-        [InlineData("07911000000", "7911", "000000")]
-        [InlineData("07911199999", "7911", "199999")]
-        [InlineData("07911700000", "7911", "700000")]
-        [InlineData("07911799999", "7911", "799999")]
-        [InlineData("07978100000", "7978", "100000")]
-        [InlineData("07978399999", "7978", "399999")]
-        [InlineData("07978500000", "7978", "500000")]
-        [InlineData("07978999999", "7978", "999999")]
-        public void Parse_Known_MobilePhoneNumber(string value, string areaCode, string localNumber)
+        public void Parse_Known_MobilePhoneNumber_79XX_AreaCode(string value, string areaCode, string localNumber)
         {
             var phoneNumber = _parser.Parse(value).PhoneNumber;
 
