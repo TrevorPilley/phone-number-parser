@@ -27,6 +27,7 @@ namespace PhoneNumbers
         /// <remarks>Covers England, Scotland, Wales and Northern Ireland.</remarks>
         public static CountryInfo UK { get; } = new CountryInfo
         {
+            AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2 }),
             CallingCode = "+44",
             Formatter = new GBPhoneNumberFormatter(),
             Iso3116Code = "GB",
@@ -59,6 +60,11 @@ namespace PhoneNumbers
         /// Gets the trunk prefix (if applicable).
         /// </summary>
         public string? TrunkPrefix { get; init; }
+
+        /// <summary>
+        /// Gets the possible lenghts of the area code.
+        /// </summary>
+        internal ReadOnlyCollection<int> AreaCodeLengths { get; init; } = new ReadOnlyCollection<int>(Array.Empty<int>());
 
         /// <summary>
         /// Gets the <see cref="PhoneNumberFormatter"/> for the country.
