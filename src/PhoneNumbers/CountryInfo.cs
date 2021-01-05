@@ -68,6 +68,18 @@ namespace PhoneNumbers
         };
 
         /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for the Hong Kong.
+        /// </summary>
+        public static CountryInfo HK { get; } = new CountryInfo
+        {
+            CallingCode = "+852",
+            Formatter = new HKPhoneNumberFormatter(),
+            InternationalCallPrefix = "001",
+            Iso3166Code = "HK",
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 8 }),
+        };
+
+        /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Ireland.
         /// </summary>
         [Obsolete("This property has been replaced, please use by 'CountryInfo.Ireland' instead it will be removed in a future version.")]
