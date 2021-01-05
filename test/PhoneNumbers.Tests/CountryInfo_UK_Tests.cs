@@ -14,6 +14,7 @@ namespace PhoneNumbers.Tests
 
             Assert.Equal("+44", countryInfo.CallingCode);
             Assert.IsType<GBPhoneNumberFormatter>(countryInfo.Formatter);
+            Assert.True(countryInfo.HasAreaCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("GB", countryInfo.Iso3116Code);
             Assert.Equal(new[] { 7, 9, 10 }, countryInfo.NsnLengths);
