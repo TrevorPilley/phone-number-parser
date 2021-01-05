@@ -14,20 +14,14 @@ namespace PhoneNumbers.Parsers
     /// </remarks>
     internal sealed class GBPhoneNumberParser : PhoneNumberParser
     {
+        private readonly IReadOnlyList<AreaCodeInfo> _areaCodeInfos;
         private readonly IReadOnlyList<AreaCodeInfo> _areaCodesWith5Digits;
-        private readonly IReadOnlyList<AreaCodeInfo> _geographicAreaCodeInfos;
-        private readonly IReadOnlyList<AreaCodeInfo> _mobileAreaCodInfos;
-        private readonly IReadOnlyList<AreaCodeInfo> _nonGeographicAreaCodeInfos;
 
-        private GBPhoneNumberParser(
-            IReadOnlyList<AreaCodeInfo> geographicAreaCodes,
-            IReadOnlyList<AreaCodeInfo> nonGeographicAreaCodes,
-            IReadOnlyList<AreaCodeInfo> mobileAreaCodes)
+        private GBPhoneNumberParser(IReadOnlyList<AreaCodeInfo> areaCodeInfos)
             : base(CountryInfo.UK)
         {
-            (_geographicAreaCodeInfos, _nonGeographicAreaCodeInfos, _mobileAreaCodInfos) = (geographicAreaCodes, nonGeographicAreaCodes, mobileAreaCodes);
-
-            _areaCodesWith5Digits = _geographicAreaCodeInfos.Where(x => x.AreaCodeRanges.Any(x => x.From.Length == 5)).ToList();
+            _areaCodeInfos = areaCodeInfos;
+            _areaCodesWith5Digits = _areaCodeInfos.Where(x => x.AreaCodeRanges.Any(x => x.From.Length == 5)).ToList();
         }
 
         /// <summary>
@@ -36,34 +30,12 @@ namespace PhoneNumbers.Parsers
         /// <returns>The created <see cref="PhoneNumberParser"/>.</returns>
         internal static PhoneNumberParser Create()
         {
-            var geographicAreaCodes = new List<AreaCodeInfo>();
-            var nonGeographicAreaCodes = new List<AreaCodeInfo>();
-            var mobileAreaCodes = new List<AreaCodeInfo>();
+            var areaCodeInfos = ResourceUtility
+                .ReadAreaCodes("GB_area_codes.txt")
+                .ToList()
+                .AsReadOnly();
 
-            foreach (var areaCodeInfo in ResourceUtility.ReadAreaCodes("GB_area_codes.txt"))
-            {
-                switch (areaCodeInfo.AreaCodeRanges[0].From[0])
-                {
-                    case '1':
-                    case '2':
-                        geographicAreaCodes.Add(areaCodeInfo);
-                        break;
-
-                    case '3':
-                    case '8':
-                        nonGeographicAreaCodes.Add(areaCodeInfo);
-                        break;
-
-                    case '7':
-                        mobileAreaCodes.Add(areaCodeInfo);
-                        break;
-
-                    default:
-                        break;
-                }
-            }
-
-            return new GBPhoneNumberParser(geographicAreaCodes, nonGeographicAreaCodes, mobileAreaCodes);
+            return new GBPhoneNumberParser(areaCodeInfos);
         }
 
         /// <inheritdoc/>
@@ -107,7 +79,7 @@ namespace PhoneNumbers.Parsers
             var areaCode = nsnValue.Substring(0, areaCodeLength);
             var localNumber = nsnValue.Substring(areaCode.Length);
 
-            var areaCodeInfo = _geographicAreaCodeInfos
+            var areaCodeInfo = _areaCodeInfos
                 .SingleOrDefault(x =>
                     x.AreaCodeRanges.Any(x => x.Contains(areaCode)) &&
                     x.LocalNumberRanges.Any(x => x.Contains(localNumber)));
@@ -127,7 +99,7 @@ namespace PhoneNumbers.Parsers
             var areaCode = nsnValue.Substring(0, 4);
             var localNumber = nsnValue.Substring(areaCode.Length);
 
-            var areaCodeInfo = _mobileAreaCodInfos
+            var areaCodeInfo = _areaCodeInfos
                 .SingleOrDefault(x =>
                     x.AreaCodeRanges.Any(x => x.Contains(areaCode)) &&
                     x.LocalNumberRanges.Any(x => x.Contains(localNumber)));
@@ -151,7 +123,7 @@ namespace PhoneNumbers.Parsers
             var areaCode = nsnValue.Substring(0, 3);
             var localNumber = nsnValue.Substring(areaCode.Length);
 
-            var areaCodeInfo = _nonGeographicAreaCodeInfos
+            var areaCodeInfo = _areaCodeInfos
                 .SingleOrDefault(x =>
                     x.AreaCodeRanges.Any(x => x.Contains(areaCode)) &&
                     x.LocalNumberRanges.Any(x => x.Contains(localNumber)));

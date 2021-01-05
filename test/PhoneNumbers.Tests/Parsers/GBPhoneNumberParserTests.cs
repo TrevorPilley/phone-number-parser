@@ -102,7 +102,7 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Returns_Failure_If_ServiceType_Invalid(string value)
         {
             var result = _parser.Parse(value);
-            Assert.Equal($"A GB phone number cannot have a national significant number starting {value[1]}.", result.ParseError);
+            Assert.Equal($"{value.Substring(1)} is not a valid GB phone number.", result.ParseError);
         }
 
         [Theory]
