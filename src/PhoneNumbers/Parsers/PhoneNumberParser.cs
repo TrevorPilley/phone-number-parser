@@ -17,7 +17,7 @@ namespace PhoneNumbers.Parsers
         /// <summary>
         /// Gets the <see cref="CountryInfo"/> for the parser.
         /// </summary>
-        public CountryInfo Country { get; }
+        protected CountryInfo Country { get; }
 
         /// <summary>
         /// Parses the phone number represented in the specified string into a <see cref="PhoneNumber"/> instance.
