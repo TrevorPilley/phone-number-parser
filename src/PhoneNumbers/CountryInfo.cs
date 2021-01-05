@@ -16,7 +16,8 @@ namespace PhoneNumbers
         /// <summary>
         /// Initialises a new instance of the <see cref="CountryInfo"/> class.
         /// </summary>
-        private CountryInfo()
+        /// <remarks>The constructor is internal for unit tests only.</remarks>
+        internal CountryInfo()
         {
         }
 

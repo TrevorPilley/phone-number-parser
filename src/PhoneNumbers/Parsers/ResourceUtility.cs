@@ -19,6 +19,16 @@ namespace PhoneNumbers.Parsers
                 LocalNumberRanges = ParseNumberRanges(x[2]),
             });
 
+        internal static IEnumerable<LocalNumberInfo> ReadLocalNumbers(string name) =>
+             ReadLines(name)
+             .Select(x => x.Split('|'))
+             .Select(x => new LocalNumberInfo
+             {
+                 Hint = ParseHint(x[2].Length > 0 ? x[2][0] : '\0'),
+                 Kind = ParseKind(x[1][0]),
+                 LocalNumberRanges = ParseNumberRanges(x[0]),
+             });
+
         private static Hint ParseHint(char value) =>
             (value) switch
             {
@@ -29,6 +39,14 @@ namespace PhoneNumbers.Parsers
                 'V' => Hint.Virtual,
                 _ => throw new NotSupportedException(value.ToString()),
             };
+        private static PhoneNumberKind ParseKind(char value) =>
+             (value) switch
+             {
+                 'G' => PhoneNumberKind.GeographicPhoneNumber,
+                 'M' => PhoneNumberKind.MobilePhoneNumber,
+                 'N' => PhoneNumberKind.NonGeographicPhoneNumber,
+                 _ => throw new NotSupportedException(value.ToString()),
+             };
 
         private static IReadOnlyList<NumberRange> ParseNumberRanges(string value) =>
             value
