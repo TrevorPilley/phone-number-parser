@@ -44,6 +44,6 @@ namespace PhoneNumbers.Parsers
         /// <returns>A <see cref="PhoneNumber"/> instance representing the specified string.</returns>
         /// <remarks>By the time this method is called, nsnValue will have been validated against the <see cref="CountryInfo"/>.NsnLengths and contain digits only.</remarks>
         protected virtual ParseResult ParseNationalSignificantNumber(string nsnValue) =>
-            ParseResult.Failure($"A {Country.Iso3116Code} phone number cannot have a national significant number starting {nsnValue?[0]}.");
+            ParseResult.Failure($"{nsnValue} is not a valid {Country.Iso3116Code} phone number.");
     }
 }
