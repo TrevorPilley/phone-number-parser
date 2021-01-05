@@ -102,10 +102,13 @@ United Kingdom | +44          | GB            | Yes        | Yes    | Yes       
 
 ### Hong Kong
 
-- 2, 3, 5, 6, 7 and 9 numbers are supported.
+- 2, 3, 5, 6, 7, 8 and 9 numbers are supported.
 - Hong Kong no longer uses area codes so "land line" numbers are always non-geographic.
 - The `IsDataOnly`, `IsPager` and `IsVirtual` properties are not currently set for Hong Kong mobile numbers.
 - Hong Kong does not use a trunk prefix.
+- Sets the `IsVirtual` property as appropriate for mobile phone numbers.
+- The `IsDataOnly` and `IsPager` properties are not currently set for Hong Kong mobile numbers.
+- Sets the `IsFreephone` property for non-geographical phone numbers which are freephone numbers (e.g. 800 through 809).
 
 ### Ireland
 
