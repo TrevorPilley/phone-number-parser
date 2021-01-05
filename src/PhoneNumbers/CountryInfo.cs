@@ -28,7 +28,6 @@ namespace PhoneNumbers
         {
             CallingCode = "+44",
             Formatter = new GBPhoneNumberFormatter(),
-            InternationalCallPrefix = "00",
             Iso3116Code = "GB",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 9, 10 }),
             TrunkPrefix = "0",
@@ -47,7 +46,8 @@ namespace PhoneNumbers
         /// <summary>
         /// Gets the international call prefix.
         /// </summary>
-        public string InternationalCallPrefix { get; init; } = null!;
+        /// <remarks>Default to the ITU recommended '00'.</remarks>
+        public string InternationalCallPrefix { get; init; } = "00";
 
         /// <summary>
         /// Gets the ISO 3166 Aplha-2 code for the country.
