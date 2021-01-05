@@ -12,7 +12,15 @@ namespace PhoneNumbers.Tests.Parsers
 
         [Theory]
         [InlineData("51000000")]
+        [InlineData("57999999")]
+        [InlineData("59000000")]
+        [InlineData("59999999")]
+        [InlineData("60100000")]
+        [InlineData("69999999")]
+        [InlineData("70100000")]
         [InlineData("79999999")]
+        [InlineData("84000000")]
+        [InlineData("89999999")]
         [InlineData("90100000")]
         [InlineData("98999999")]
         public void Parse_Known_MobilePhoneNumber(string value)
@@ -52,6 +60,10 @@ namespace PhoneNumbers.Tests.Parsers
 
         [Theory]
         [InlineData("20100000")]
+        [InlineData("20199999")]
+        [InlineData("20200000")]
+        [InlineData("20209999")]
+        [InlineData("20210000")]
         [InlineData("20699999")]
         [InlineData("21000000")]
         [InlineData("29999999")]
@@ -59,6 +71,8 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("31999999")]
         [InlineData("34000000")]
         [InlineData("39999999")]
+        [InlineData("58000000")]
+        [InlineData("58999999")]
         public void Parse_Known_NonGeographicPhoneNumber(string value)
         {
             var phoneNumber = _parser.Parse(value).PhoneNumber;
@@ -74,8 +88,8 @@ namespace PhoneNumbers.Tests.Parsers
         }
 
         [Theory]
-        [InlineData("80000000")]
-        [InlineData("80099999")]
+        [InlineData("800000000")]
+        [InlineData("809999999")]
         public void Parse_Known_NonGeographicPhoneNumber_FreePhone(string value)
         {
             var phoneNumber = _parser.Parse(value).PhoneNumber;
@@ -94,7 +108,7 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Returns_Failure_If_CallingCode_Invalid()
         {
             var result = _parser.Parse("+1111111111");
-            Assert.Equal($"The value must be a HK phone number starting +852 and the national significant number of the phone number must be 8 digits in length.", result.ParseError);
+            Assert.Equal($"The value must be a HK phone number starting +852 and the national significant number of the phone number must be 8 or 9 digits in length.", result.ParseError);
         }
 
         [Theory]
@@ -119,12 +133,11 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("20111")]
         [InlineData("201111")]
         [InlineData("2011111")]
-        [InlineData("201111111")]  // 9
         [InlineData("2011111111")] // 10
         public void Parse_Returns_Failure_If_Nsn_Incorrect_Length(string value)
         {
             var result = _parser.Parse(value);
-            Assert.Equal($"The value must be a HK phone number starting +852 and the national significant number of the phone number must be 8 digits in length.", result.ParseError);
+            Assert.Equal($"The value must be a HK phone number starting +852 and the national significant number of the phone number must be 8 or 9 digits in length.", result.ParseError);
         }
     }
 }

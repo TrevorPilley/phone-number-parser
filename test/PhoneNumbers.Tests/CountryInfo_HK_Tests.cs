@@ -18,7 +18,7 @@ namespace PhoneNumbers.Tests
             Assert.False(countryInfo.HasAreaCodes);
             Assert.Equal("001", countryInfo.InternationalCallPrefix);
             Assert.Equal("HK", countryInfo.Iso3116Code);
-            Assert.Equal(new[] { 8 }, countryInfo.NsnLengths);
+            Assert.Equal(new[] { 8, 9 }, countryInfo.NsnLengths);
             Assert.Null(countryInfo.TrunkPrefix);
         }
 

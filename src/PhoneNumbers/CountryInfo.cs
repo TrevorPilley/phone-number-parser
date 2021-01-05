@@ -76,7 +76,7 @@ namespace PhoneNumbers
             Formatter = new HKPhoneNumberFormatter(),
             InternationalCallPrefix = "001",
             Iso3166Code = "HK",
-            NsnLengths = new ReadOnlyCollection<int>(new[] { 8 }),
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9 }),
         };
 
         /// <summary>
