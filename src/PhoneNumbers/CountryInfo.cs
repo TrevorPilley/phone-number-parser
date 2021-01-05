@@ -40,6 +40,11 @@ namespace PhoneNumbers
         public string CallingCode { get; init; } = null!;
 
         /// <summary>
+        /// Gets a value indicating whether the country has area codes.
+        /// </summary>
+        public bool HasAreaCodes { get; init; } = true;
+
+        /// <summary>
         /// Gets the international call prefix.
         /// </summary>
         public string InternationalCallPrefix { get; init; } = null!;
