@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace PhoneNumbers.Parsers
 {
-    internal sealed class LocalNumberInfo
+    internal class LocalNumberInfo
     {
         internal Hint Hint { get; init; }
 

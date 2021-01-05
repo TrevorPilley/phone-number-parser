@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -16,7 +17,7 @@ namespace PhoneNumbers.Parsers
         /// <remarks>The constructor is internal for unit tests only.</remarks>
         internal LocalOnlyPhoneNumberParser(CountryInfo countryInfo, IReadOnlyList<LocalNumberInfo> localNumberInfos)
             : base(countryInfo) =>
-            _localNumberInfos = localNumberInfos;
+            _localNumberInfos = localNumberInfos ?? throw new ArgumentNullException(nameof(localNumberInfos));
 
         /// <summary>
         /// Creates an instance of the <see cref="LocalOnlyPhoneNumberParser"/> class.

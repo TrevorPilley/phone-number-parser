@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Concurrent;
 using System.Reflection;
 
@@ -23,12 +22,12 @@ namespace PhoneNumbers.Parsers
                         return parser;
                     }
 
-                    if (!countryInfo.HasAreaCodes)
+                    if (countryInfo.HasAreaCodes)
                     {
-                        return LocalOnlyPhoneNumberParser.Create(countryInfo);
+                        return AreaCodePhoneNumberParser.Create(countryInfo);
                     }
 
-                    throw new NotSupportedException(x.Iso3116Code);
+                    return LocalOnlyPhoneNumberParser.Create(countryInfo);
                 });
     }
 }

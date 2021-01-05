@@ -8,26 +8,31 @@ namespace PhoneNumbers.Parsers
 {
     internal static class ResourceUtility
     {
+        // The file format is as follows (spaces for readability, not present in the file):
+        // Kind | Area Code Ranges | Geographic Area | Local Number Ranges | Hint
         internal static IEnumerable<AreaCodeInfo> ReadAreaCodes(string name) =>
             ReadLines(name)
             .Select(x => x.Split('|'))
             .Select(x => new AreaCodeInfo
             {
-                AreaCodeRanges = ParseNumberRanges(x[0]),
-                GeographicArea = x[1].Length > 0 ? x[1] : null,
-                Hint = ParseHint(x[3].Length > 0 ? x[3][0] : '\0'),
-                LocalNumberRanges = ParseNumberRanges(x[2]),
+                AreaCodeRanges = ParseNumberRanges(x[1]),
+                GeographicArea = x[2].Length > 0 ? x[2] : null,
+                Hint = ParseHint(x[4].Length > 0 ? x[4][0] : '\0'),
+                Kind = ParseKind(x[0][0]),
+                LocalNumberRanges = ParseNumberRanges(x[3]),
             });
 
+        // The file format is as follows (spaces for readability, not present in the file):
+        // Kind | Local Number Ranges | Hint
         internal static IEnumerable<LocalNumberInfo> ReadLocalNumbers(string name) =>
-             ReadLines(name)
-             .Select(x => x.Split('|'))
-             .Select(x => new LocalNumberInfo
-             {
-                 Hint = ParseHint(x[2].Length > 0 ? x[2][0] : '\0'),
-                 Kind = ParseKind(x[1][0]),
-                 LocalNumberRanges = ParseNumberRanges(x[0]),
-             });
+            ReadLines(name)
+            .Select(x => x.Split('|'))
+            .Select(x => new LocalNumberInfo
+            {
+                Hint = ParseHint(x[2].Length > 0 ? x[2][0] : '\0'),
+                Kind = ParseKind(x[0][0]),
+                LocalNumberRanges = ParseNumberRanges(x[1]),
+            });
 
         private static Hint ParseHint(char value) =>
             (value) switch

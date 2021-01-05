@@ -15,53 +15,53 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Returns_Failure_For_1XX_AreaCode_And_Local_Number_Not_7_Digits()
         {
             var result = _parser.Parse("0113111222");
-            Assert.Equal($"The area code 113 and local number 111222 are not a valid combination.", result.ParseError);
+            Assert.Equal("The national significant number 113111222 is not valid for a GB phone number.", result.ParseError);
         }
 
         [Fact]
         public void Parse_Returns_Failure_For_2X_AreaCode_And_Local_Number_Not_8_Digits()
         {
             var result = _parser.Parse("0201112222");
-            Assert.Equal($"The area code 20 and local number 1112222 are not a valid combination.", result.ParseError);
+            Assert.Equal("The national significant number 201112222 is not valid for a GB phone number.", result.ParseError);
         }
 
         [Fact]
         public void Parse_Returns_Failure_For_3XX_AreaCode_And_Local_Number_Not_7_Digits()
         {
             var result = _parser.Parse("0300111111");
-            Assert.Equal($"The area code 300 and local number 111111 are not a valid combination.", result.ParseError);
+            Assert.Equal("The national significant number 300111111 is not valid for a GB phone number.", result.ParseError);
         }
 
         [Fact]
         public void Parse_Returns_Failure_For_7XXX_AreaCode_And_Local_Number_Not_6_Digits()
         {
             var result = _parser.Parse("0770012345");
-            Assert.Equal($"The area code 7700 and local number 12345 are not a valid combination.", result.ParseError);
+            Assert.Equal("The national significant number 770012345 is not valid for a GB phone number.", result.ParseError);
         }
 
         [Theory]
-        [InlineData("01100000000", "110")]
-        [InlineData("01110000000", "111")]
-        [InlineData("01120000000", "112")]
-        [InlineData("01190000000", "119")]
-        [InlineData("01710000000", "171")]
-        [InlineData("01810000000", "181")]
-        [InlineData("02100000000", "21")]
-        [InlineData("02200000000", "22")]
-        [InlineData("02500000000", "25")]
-        [InlineData("02600000000", "26")]
-        [InlineData("02700000000", "27")]
-        [InlineData("03100000000", "310")]
-        [InlineData("03200000000", "320")]
-        [InlineData("03500000000", "350")]
-        [InlineData("03600000000", "360")]
-        [InlineData("03800000000", "380")]
-        [InlineData("03900000000", "390")]
-        [InlineData("07200000000", "7200")]
-        public void Parse_Returns_Failure_If_AreaCode_Invalid(string value, string areaCode)
+        [InlineData("01100000000")]
+        [InlineData("01110000000")]
+        [InlineData("01120000000")]
+        [InlineData("01190000000")]
+        [InlineData("01710000000")]
+        [InlineData("01810000000")]
+        [InlineData("02100000000")]
+        [InlineData("02200000000")]
+        [InlineData("02500000000")]
+        [InlineData("02600000000")]
+        [InlineData("02700000000")]
+        [InlineData("03100000000")]
+        [InlineData("03200000000")]
+        [InlineData("03500000000")]
+        [InlineData("03600000000")]
+        [InlineData("03800000000")]
+        [InlineData("03900000000")]
+        [InlineData("07200000000")]
+        public void Parse_Returns_Failure_If_AreaCode_Invalid(string value)
         {
             var result = _parser.Parse(value);
-            Assert.Equal($"The area code {areaCode} and local number {value.Substring(value.IndexOf(areaCode, StringComparison.Ordinal) + areaCode.Length)} are not a valid combination.", result.ParseError);
+            Assert.Equal($"The national significant number {value.Substring(1)} is not valid for a GB phone number.", result.ParseError);
         }
 
         [Fact]
@@ -76,7 +76,7 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Returns_Failure_If_LocalNumber_Invalid_For_AreaCode(string value)
         {
             var result = _parser.Parse(value);
-            Assert.Equal($"The area code {value.Substring(1, 4)} and local number {value.Substring(5)} are not a valid combination.", result.ParseError);
+            Assert.Equal($"The national significant number {value.Substring(1)} is not valid for a GB phone number.", result.ParseError);
         }
 
         [Theory]
@@ -102,7 +102,7 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Returns_Failure_If_ServiceType_Invalid(string value)
         {
             var result = _parser.Parse(value);
-            Assert.Equal($"{value.Substring(1)} is not a valid GB phone number.", result.ParseError);
+            Assert.Equal($"The national significant number {value.Substring(1)} is not valid for a GB phone number.", result.ParseError);
         }
 
         [Theory]
