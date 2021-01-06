@@ -12,15 +12,13 @@ namespace PhoneNumbers.Parsers
     /// https://en.wikipedia.org/wiki/List_of_dialling_codes_in_the_United_Kingdom
     /// https://www.area-codes.org.uk/full-uk-area-code-list.php
     /// </remarks>
-    internal sealed class GBPhoneNumberParser : AreaCodePhoneNumberParser
+    internal sealed class GBPhoneNumberParser : DefaultPhoneNumberParser
     {
-        private readonly IReadOnlyList<AreaCodeInfo> _areaCodesWith5Digits;
+        private readonly IReadOnlyList<CountryNumber> _areaCodesWith5Digits;
 
-        private GBPhoneNumberParser(IReadOnlyList<AreaCodeInfo> areaCodeInfos)
-            : base(CountryInfo.UK, areaCodeInfos)
-        {
-            _areaCodesWith5Digits = areaCodeInfos.Where(x => x.AreaCodeRanges.Any(x => x.From.Length == 5)).ToList();
-        }
+        private GBPhoneNumberParser(IReadOnlyList<CountryNumber> countryNumbers)
+            : base(CountryInfo.UK, countryNumbers) =>
+            _areaCodesWith5Digits = countryNumbers.Where(x => x.AreaCodeRanges!.Any(x => x.From.Length == 5)).ToList();
 
         /// <summary>
         /// Creates an instance of the <see cref="GBPhoneNumberParser"/> class.
@@ -28,17 +26,17 @@ namespace PhoneNumbers.Parsers
         /// <returns>The created <see cref="PhoneNumberParser"/>.</returns>
         internal static PhoneNumberParser Create()
         {
-            var areaCodeInfos = ResourceUtility
-                .ReadAreaCodes("GB_area_codes.txt")
+            var countryNumbers = ResourceUtility
+                .ReadCountryNumbers("GB_numbers.txt")
                 .ToList()
                 .AsReadOnly();
 
-            return new GBPhoneNumberParser(areaCodeInfos);
+            return new GBPhoneNumberParser(countryNumbers);
         }
 
         /// <inheritdoc/>
         /// <remarks>By the time this method is called, nsnValue will have been validated against the <see cref="CountryInfo"/>.NsnLengths and contain digits only.</remarks>
-        protected override (string? AreaCode, string? LocalNumber, AreaCodeInfo? AreaCodeInfo) ParseAreaAndNumber(string nsnValue)
+        protected override (string? AreaCode, string? LocalNumber, CountryNumber? CountryNumber) ParseAreaAndNumber(string nsnValue)
         {
             // Most UK geographic and all mobile area codes are 4 digits.
             var areaCodeLength = 4;
@@ -59,9 +57,9 @@ namespace PhoneNumbers.Parsers
                 areaCodeLength = 3;
             }
             else if (nsnValue[0] == '1' &&
-                _areaCodesWith5Digits
-                .Where(x => x.AreaCodeRanges.Any(x => nsnValue.StartsWith(x.From, StringComparison.Ordinal)))
-                .Any(x => x.LocalNumberRanges.Any(x => x.Contains(nsnValue.Substring(5)))))
+                     _areaCodesWith5Digits
+                         .Where(x => x.AreaCodeRanges!.Any(x => nsnValue.StartsWith(x.From, StringComparison.Ordinal)))
+                         .Any(x => x.LocalNumberRanges.Any(x => x.Contains(nsnValue.Substring(5)))))
             {
                 // There are some 5 digit area codes which use a subset of numbers from the "parent" 4 digit area code:
                 // e.g. 1339 (Aboyne / Ballater) has 200000-719999 and 13397 (Ballater) has 20000-99899
@@ -72,12 +70,12 @@ namespace PhoneNumbers.Parsers
             var areaCode = nsnValue.Substring(0, areaCodeLength);
             var localNumber = nsnValue.Substring(areaCode.Length);
 
-            var areaCodeInfo = AreaCodeInfos
+            var countryNumber = CountryNumbers
                 .SingleOrDefault(x =>
-                    x.AreaCodeRanges.Any(x => x.Contains(areaCode)) &&
+                    x.AreaCodeRanges!.Any(x => x.Contains(areaCode)) &&
                     x.LocalNumberRanges.Any(x => x.Contains(localNumber)));
 
-            return (areaCode, localNumber, areaCodeInfo);
+            return (areaCode, localNumber, countryNumber);
         }
     }
 }

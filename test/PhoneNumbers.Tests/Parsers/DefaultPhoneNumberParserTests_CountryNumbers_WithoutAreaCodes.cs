@@ -4,61 +4,59 @@ using Xunit;
 namespace PhoneNumbers.Tests.Parsers
 {
     /// <summary>
-    /// Contains unit tests for the <see cref="LocalOnlyPhoneNumberParser"/> class.
+    /// Contains unit tests for the <see cref="DefaultPhoneNumberParser"/> class without <see cref="CountryNumber"/>s using area codes.
     /// </summary>
-    public class LocalOnlyPhoneNumberParserTests
+    public class DefaultPhoneNumberParserTests_CountryNumbers_WithoutAreaCodes
     {
         private readonly CountryInfo _countryInfo = TestHelper.CreateCountryInfo(false, new int[0], new[] { 5 });
         private readonly PhoneNumberParser _parser;
 
-        public LocalOnlyPhoneNumberParserTests()
-        {
-            _parser = new LocalOnlyPhoneNumberParser(
+        public DefaultPhoneNumberParserTests_CountryNumbers_WithoutAreaCodes() =>
+            _parser = new DefaultPhoneNumberParser(
                 _countryInfo,
                 new[]
                 {
-                    new LocalNumberInfo
+                    new CountryNumber
                     {
-                        LocalNumberRanges = new [] { NumberRange.Create("10000-10999") },
+                        LocalNumberRanges = new[] { NumberRange.Create("10000-10999") },
                         Kind = PhoneNumberKind.MobilePhoneNumber,
                         Hint = Hint.None,
                     },
-                    new LocalNumberInfo
+                    new CountryNumber
                     {
-                        LocalNumberRanges = new [] { NumberRange.Create("11000-11999") },
+                        LocalNumberRanges = new[] { NumberRange.Create("11000-11999") },
                         Kind = PhoneNumberKind.MobilePhoneNumber,
                         Hint = Hint.Data,
                     },
-                    new LocalNumberInfo
+                    new CountryNumber
                     {
-                        LocalNumberRanges = new [] { NumberRange.Create("12000-12999") },
+                        LocalNumberRanges = new[] { NumberRange.Create("12000-12999") },
                         Kind = PhoneNumberKind.MobilePhoneNumber,
                         Hint = Hint.Pager,
                     },
-                    new LocalNumberInfo
+                    new CountryNumber
                     {
-                        LocalNumberRanges = new [] { NumberRange.Create("13000-13999") },
+                        LocalNumberRanges = new[] { NumberRange.Create("13000-13999") },
                         Kind = PhoneNumberKind.MobilePhoneNumber,
                         Hint = Hint.Virtual,
                     },
-                    new LocalNumberInfo
+                    new CountryNumber
                     {
-                        LocalNumberRanges = new [] { NumberRange.Create("20000-20999") },
+                        LocalNumberRanges = new[] { NumberRange.Create("20000-20999") },
                         Kind = PhoneNumberKind.NonGeographicPhoneNumber,
                         Hint = Hint.None,
                     },
-                    new LocalNumberInfo
+                    new CountryNumber
                     {
-                        LocalNumberRanges = new [] { NumberRange.Create("28000-28999") },
+                        LocalNumberRanges = new[] { NumberRange.Create("28000-28999") },
                         Kind = PhoneNumberKind.NonGeographicPhoneNumber,
                         Hint = Hint.Freephone,
                     },
                 });
-        }
 
         [Fact]
         public void Parse_Invalid_Number() =>
-            Assert.Equal("05500 is not a valid ZZ phone number.", _parser.Parse("05500").ParseError);
+            Assert.Equal("The national significant number 05500 is not valid for a ZZ phone number.", _parser.Parse("05500").ParseError);
 
         [Fact]
         public void Parse_MobilePhoneNumber()

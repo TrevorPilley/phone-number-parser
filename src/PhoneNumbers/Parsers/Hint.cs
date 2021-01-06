@@ -2,7 +2,7 @@ namespace PhoneNumbers.Parsers
 {
     internal enum Hint
     {
-        None,
+        None = 0,
         Data,
         Virtual,
         Pager,

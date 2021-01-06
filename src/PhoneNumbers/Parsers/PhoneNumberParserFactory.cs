@@ -22,12 +22,7 @@ namespace PhoneNumbers.Parsers
                         return parser;
                     }
 
-                    if (countryInfo.HasAreaCodes)
-                    {
-                        return AreaCodePhoneNumberParser.Create(countryInfo);
-                    }
-
-                    return LocalOnlyPhoneNumberParser.Create(countryInfo);
+                    return DefaultPhoneNumberParser.Create(countryInfo);
                 });
     }
 }
