@@ -1,3 +1,4 @@
+using System;
 using PhoneNumbers.Parsers;
 using Xunit;
 
@@ -8,7 +9,7 @@ namespace PhoneNumbers.Tests.Parsers
     /// </summary>
     public class DefaultPhoneNumberParserTests_CountryNumbers_WithoutAreaCodes
     {
-        private readonly CountryInfo _countryInfo = TestHelper.CreateCountryInfo(false, new int[0], new[] { 5 });
+        private readonly CountryInfo _countryInfo = TestHelper.CreateCountryInfo(Array.Empty<int>(), new[] { 5 });
         private readonly PhoneNumberParser _parser;
 
         public DefaultPhoneNumberParserTests_CountryNumbers_WithoutAreaCodes() =>
