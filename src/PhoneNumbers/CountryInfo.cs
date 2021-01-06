@@ -70,7 +70,7 @@ namespace PhoneNumbers
         /// <summary>
         /// Gets the <see cref="CountryInfo"/> for the Hong Kong.
         /// </summary>
-        public static CountryInfo HK { get; } = new CountryInfo
+        public static CountryInfo HK { get; } = new()
         {
             CallingCode = "+852",
             Formatter = new HKPhoneNumberFormatter(),
