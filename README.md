@@ -66,6 +66,10 @@ phoneNumber.ToString("N");                      // 01142726444   (format for nat
 
 The library currently supports parsing the following countries:
 
+Country | ISO 3116 Code | Geographic | Mobile | Non-Geographic
+--- | --- | --- | --- | ---
+United Kingdom | UK | Yes | Yes | Yes
+
 ### United Kingdom
 
 - 01, 02, 03, 07 and 08 numbers are supported.
