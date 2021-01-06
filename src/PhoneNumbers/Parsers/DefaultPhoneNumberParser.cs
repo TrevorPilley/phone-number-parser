@@ -93,8 +93,7 @@ namespace PhoneNumbers.Parsers
                 {
                     case PhoneNumberKind.GeographicPhoneNumber:
                         return ParseResult.Success(
-                            new GeographicPhoneNumber(Country, x.AreaCode!, x.LocalNumber!,
-                                x.CountryNumber.GeographicArea!));
+                            new GeographicPhoneNumber(Country, x.AreaCode!, x.LocalNumber!, x.CountryNumber.GeographicArea!));
 
                     case PhoneNumberKind.MobilePhoneNumber:
                         var isDataOnly = x.CountryNumber.Hint == Hint.Data;
