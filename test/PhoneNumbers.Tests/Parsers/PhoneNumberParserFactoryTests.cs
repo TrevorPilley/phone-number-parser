@@ -11,7 +11,7 @@ namespace PhoneNumbers.Tests.Parsers
         private readonly PhoneNumberParserFactory _factory = new();
 
         [Fact]
-        public void GetParser_Returns_GBPhoneNumberParser_For_CountryInfo_UK() =>
+        public void GetParser_For_CountryInfo_UK_Returns_GBPhoneNumberParser() =>
             Assert.IsType<GBPhoneNumberParser>(_factory.GetParser(CountryInfo.UK));
 
         [Fact]
