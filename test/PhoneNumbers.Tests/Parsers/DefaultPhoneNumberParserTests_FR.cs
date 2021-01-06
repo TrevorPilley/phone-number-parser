@@ -51,7 +51,7 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.False(mobilePhoneNumber.IsDataOnly);
             Assert.False(mobilePhoneNumber.IsPager);
             Assert.False(mobilePhoneNumber.IsVirtual);
-            Assert.Equal(value, mobilePhoneNumber.LocalNumber);
+            Assert.Equal(value.Substring(1), mobilePhoneNumber.LocalNumber);
         }
 
         [Theory]
@@ -70,7 +70,7 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.Null(nonGeographicPhoneNumber.AreaCode);
             Assert.Equal(CountryInfo.FR, nonGeographicPhoneNumber.Country);
             Assert.False(nonGeographicPhoneNumber.IsFreephone);
-            Assert.Equal(value, nonGeographicPhoneNumber.LocalNumber);
+            Assert.Equal(value.Substring(1), nonGeographicPhoneNumber.LocalNumber);
         }
 
         [Theory]
@@ -87,7 +87,7 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.Null(nonGeographicPhoneNumber.AreaCode);
             Assert.Equal(CountryInfo.FR, nonGeographicPhoneNumber.Country);
             Assert.True(nonGeographicPhoneNumber.IsFreephone);
-            Assert.Equal(value, nonGeographicPhoneNumber.LocalNumber);
+            Assert.Equal(value.Substring(1), nonGeographicPhoneNumber.LocalNumber);
         }
 
         [Fact]
