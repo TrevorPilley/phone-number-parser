@@ -48,7 +48,9 @@ namespace PhoneNumbers.Parsers
                 x =>
                 {
                     var rangeParts = x.Split('-');
-                    return rangeParts.Length == 1 ? new NumberRange(rangeParts[0], rangeParts[0]) : new NumberRange(rangeParts[0], rangeParts[1]);
+                    return rangeParts.Length == 1
+                        ? new NumberRange(rangeParts[0], rangeParts[0])
+                        : new NumberRange(rangeParts[0], rangeParts[1]);
                 });
 
         internal bool Contains(string value)
