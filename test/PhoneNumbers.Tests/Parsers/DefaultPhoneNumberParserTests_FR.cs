@@ -89,5 +89,36 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.True(nonGeographicPhoneNumber.IsFreephone);
             Assert.Equal(value, nonGeographicPhoneNumber.LocalNumber);
         }
+
+        [Fact]
+        public void Parse_Returns_Failure_If_CallingCode_Invalid()
+        {
+            var result = _parser.Parse("+1111111111");
+            Assert.Equal($"The value must be a FR phone number starting +33 or 0 and the national significant number of the phone number must be 9 digits in length.", result.ParseError);
+        }
+
+        [Theory]
+        [InlineData("00111111111")]
+        public void Parse_Returns_Failure_If_LocalNumber_Invalid(string value)
+        {
+            var result = _parser.Parse(value);
+            Assert.Equal($"The national significant number {value} is not valid for a FR phone number.", result.ParseError);
+        }
+
+        [Theory]
+        [InlineData("02")]
+        [InlineData("020")]
+        [InlineData("0201")]
+        [InlineData("02011")]
+        [InlineData("020111")]
+        [InlineData("0201111")]
+        [InlineData("02011111")]
+        [InlineData("020111111")] // 8
+        [InlineData("02011111111")] // 10
+        public void Parse_Returns_Failure_If_Nsn_Incorrect_Length(string value)
+        {
+            var result = _parser.Parse(value);
+            Assert.Equal($"The value must be a FR phone number starting +33 or 0 and the national significant number of the phone number must be 9 digits in length.", result.ParseError);
+        }
     }
 }
