@@ -15,7 +15,7 @@ namespace PhoneNumbers.Parsers
                 .Select(x => x.Split('|'))
                 .Select(x => new CountryNumber
                 {
-                    AreaCodeRanges = ParseNumberRanges(x[1]),
+                    AreaCodeRanges = x[1].Length > 0 ? ParseNumberRanges(x[1]) : null,
                     GeographicArea = x[2].Length > 0 ? x[2] : null,
                     Hint = ParseHint(x[4].Length > 0 ? x[4][0] : '\0'),
                     Kind = ParseKind(x[0][0]),
