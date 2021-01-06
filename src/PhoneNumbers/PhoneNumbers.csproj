@@ -62,10 +62,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="DataFiles\GB_area_codes.txt" />
+    <None Remove="DataFiles\GB_numbers.txt"/>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="DataFiles\GB_area_codes.txt" />
+    <EmbeddedResource Include="DataFiles\GB_numbers.txt"/>
   </ItemGroup>
 </Project>

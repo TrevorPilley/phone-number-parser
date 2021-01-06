@@ -4,71 +4,77 @@ using Xunit;
 namespace PhoneNumbers.Tests.Parsers
 {
     /// <summary>
-    /// Contains unit tests for the <see cref="AreaCodePhoneNumberParser"/> class.
+    /// Contains unit tests for the <see cref="DefaultPhoneNumberParser"/> class with <see cref="CountryNumber"/>s using area codes.
     /// </summary>
-    public class AreaCodePhoneNumberParserTests
+    public class DefaultPhoneNumberParserTests_CountryNumbers_WithAreaCodes
     {
-        private readonly CountryInfo _countryInfo = TestHelper.CreateCountryInfo(true, new[] { 2 }, new[] { 7 });
+        private readonly CountryInfo _countryInfo = TestHelper.CreateCountryInfo(true, new[] { 3, 2 }, new[] { 7 });
         private readonly PhoneNumberParser _parser;
 
-        public AreaCodePhoneNumberParserTests()
-        {
-            _parser = new AreaCodePhoneNumberParser(
+        public DefaultPhoneNumberParserTests_CountryNumbers_WithAreaCodes() =>
+            _parser = new DefaultPhoneNumberParser(
                 _countryInfo,
                 new[]
                 {
-                    new AreaCodeInfo
+                    new CountryNumber
                     {
                         AreaCodeRanges = new[] { NumberRange.Create("40") },
                         GeographicArea = "Springfield",
-                        LocalNumberRanges = new [] { NumberRange.Create("10000-10999") },
+                        LocalNumberRanges = new[] { NumberRange.Create("10000-20999"), NumberRange.Create("40000-90999") },
                         Kind = PhoneNumberKind.GeographicPhoneNumber,
                         Hint = Hint.None,
                     },
-                    new AreaCodeInfo
+                    new CountryNumber
+                    {
+                        AreaCodeRanges = new[] { NumberRange.Create("403") },
+                        GeographicArea = "Springfield B",
+                        LocalNumberRanges = new[] { NumberRange.Create("1000-2099") },
+                        Kind = PhoneNumberKind.GeographicPhoneNumber,
+                        Hint = Hint.None,
+                    },
+                    new CountryNumber
                     {
                         AreaCodeRanges = new[] { NumberRange.Create("70") },
-                        LocalNumberRanges = new [] { NumberRange.Create("10000-10999") },
+                        LocalNumberRanges = new[] { NumberRange.Create("10000-10999") },
                         Kind = PhoneNumberKind.MobilePhoneNumber,
                         Hint = Hint.None,
                     },
-                    new AreaCodeInfo
+                    new CountryNumber
                     {
                         AreaCodeRanges = new[] { NumberRange.Create("70") },
-                        LocalNumberRanges = new [] { NumberRange.Create("11000-11999") },
+                        LocalNumberRanges = new[] { NumberRange.Create("11000-11999") },
                         Kind = PhoneNumberKind.MobilePhoneNumber,
                         Hint = Hint.Data,
                     },
-                    new AreaCodeInfo
+                    new CountryNumber
                     {
                         AreaCodeRanges = new[] { NumberRange.Create("71") },
-                        LocalNumberRanges = new [] { NumberRange.Create("12000-12999") },
+                        LocalNumberRanges = new[] { NumberRange.Create("12000-12999") },
                         Kind = PhoneNumberKind.MobilePhoneNumber,
                         Hint = Hint.Pager,
                     },
-                    new AreaCodeInfo
+                    new CountryNumber
                     {
                         AreaCodeRanges = new[] { NumberRange.Create("72") },
-                        LocalNumberRanges = new [] { NumberRange.Create("13000-13999") },
+                        LocalNumberRanges = new[] { NumberRange.Create("13000-13999") },
                         Kind = PhoneNumberKind.MobilePhoneNumber,
                         Hint = Hint.Virtual,
                     },
-                    new AreaCodeInfo
+                    new CountryNumber
                     {
                         AreaCodeRanges = new[] { NumberRange.Create("50") },
-                        LocalNumberRanges = new [] { NumberRange.Create("20000-20999") },
+                        LocalNumberRanges = new[] { NumberRange.Create("20000-20999") },
                         Kind = PhoneNumberKind.NonGeographicPhoneNumber,
                         Hint = Hint.None,
                     },
-                    new AreaCodeInfo
+                    new CountryNumber
                     {
                         AreaCodeRanges = new[] { NumberRange.Create("60") },
-                        LocalNumberRanges = new [] { NumberRange.Create("28000-28999") },
+                        LocalNumberRanges = new[] { NumberRange.Create("28000-28999") },
                         Kind = PhoneNumberKind.NonGeographicPhoneNumber,
                         Hint = Hint.Freephone,
                     },
                 });
-        }
 
         [Fact]
         public void Parse_Invalid_Number() =>
@@ -86,6 +92,21 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.Equal(_countryInfo, geographicPhoneNumber.Country);
             Assert.Equal("Springfield", geographicPhoneNumber.GeographicArea);
             Assert.Equal("10000", geographicPhoneNumber.LocalNumber);
+            Assert.Equal(PhoneNumberKind.GeographicPhoneNumber, geographicPhoneNumber.PhoneNumberKind);
+        }
+
+        [Fact]
+        public void Parse_GeographicPhoneNumber_In_Sub_AreaCode()
+        {
+            var phoneNumber = _parser.Parse("4031000").PhoneNumber;
+            Assert.NotNull(phoneNumber);
+            Assert.IsType<GeographicPhoneNumber>(phoneNumber);
+
+            var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
+            Assert.Equal("403", geographicPhoneNumber.AreaCode);
+            Assert.Equal(_countryInfo, geographicPhoneNumber.Country);
+            Assert.Equal("Springfield B", geographicPhoneNumber.GeographicArea);
+            Assert.Equal("1000", geographicPhoneNumber.LocalNumber);
             Assert.Equal(PhoneNumberKind.GeographicPhoneNumber, geographicPhoneNumber.PhoneNumberKind);
         }
 

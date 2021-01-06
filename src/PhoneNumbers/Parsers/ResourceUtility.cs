@@ -10,32 +10,20 @@ namespace PhoneNumbers.Parsers
     {
         // The file format is as follows (spaces for readability, not present in the file):
         // Kind | Area Code Ranges | Geographic Area | Local Number Ranges | Hint
-        internal static IEnumerable<AreaCodeInfo> ReadAreaCodes(string name) =>
+        internal static IEnumerable<CountryNumber> ReadCountryNumbers(string name) =>
             ReadLines(name)
-            .Select(x => x.Split('|'))
-            .Select(x => new AreaCodeInfo
-            {
-                AreaCodeRanges = ParseNumberRanges(x[1]),
-                GeographicArea = x[2].Length > 0 ? x[2] : null,
-                Hint = ParseHint(x[4].Length > 0 ? x[4][0] : '\0'),
-                Kind = ParseKind(x[0][0]),
-                LocalNumberRanges = ParseNumberRanges(x[3]),
-            });
-
-        // The file format is as follows (spaces for readability, not present in the file):
-        // Kind | Local Number Ranges | Hint
-        internal static IEnumerable<LocalNumberInfo> ReadLocalNumbers(string name) =>
-            ReadLines(name)
-            .Select(x => x.Split('|'))
-            .Select(x => new LocalNumberInfo
-            {
-                Hint = ParseHint(x[2].Length > 0 ? x[2][0] : '\0'),
-                Kind = ParseKind(x[0][0]),
-                LocalNumberRanges = ParseNumberRanges(x[1]),
-            });
+                .Select(x => x.Split('|'))
+                .Select(x => new CountryNumber
+                {
+                    AreaCodeRanges = ParseNumberRanges(x[1]),
+                    GeographicArea = x[2].Length > 0 ? x[2] : null,
+                    Hint = ParseHint(x[4].Length > 0 ? x[4][0] : '\0'),
+                    Kind = ParseKind(x[0][0]),
+                    LocalNumberRanges = ParseNumberRanges(x[3]),
+                });
 
         private static Hint ParseHint(char value) =>
-            (value) switch
+            value switch
             {
                 '\0' => Hint.None,
                 'D' => Hint.Data,
@@ -44,25 +32,27 @@ namespace PhoneNumbers.Parsers
                 'V' => Hint.Virtual,
                 _ => throw new NotSupportedException(value.ToString()),
             };
+
         private static PhoneNumberKind ParseKind(char value) =>
-             (value) switch
-             {
-                 'G' => PhoneNumberKind.GeographicPhoneNumber,
-                 'M' => PhoneNumberKind.MobilePhoneNumber,
-                 'N' => PhoneNumberKind.NonGeographicPhoneNumber,
-                 _ => throw new NotSupportedException(value.ToString()),
-             };
+            value switch
+            {
+                'G' => PhoneNumberKind.GeographicPhoneNumber,
+                'M' => PhoneNumberKind.MobilePhoneNumber,
+                'N' => PhoneNumberKind.NonGeographicPhoneNumber,
+                _ => throw new NotSupportedException(value.ToString()),
+            };
 
         private static IReadOnlyList<NumberRange> ParseNumberRanges(string value) =>
             value
-            .Split(',')
-            .Select(NumberRange.Create)
-            .ToList();
+                .Split(',')
+                .Select(NumberRange.Create)
+                .ToList();
 
         private static IEnumerable<string> ReadLines(string name)
         {
             var assembly = Assembly.GetExecutingAssembly();
-            var resourceName = assembly.GetManifestResourceNames().Single(x => x.EndsWith(name, StringComparison.Ordinal));
+            var resourceName = assembly.GetManifestResourceNames()
+                .Single(x => x.EndsWith(name, StringComparison.Ordinal));
 
             using var stream = assembly.GetManifestResourceStream(resourceName)!;
             using var reader = new StreamReader(stream);
