@@ -4,7 +4,7 @@ using Xunit;
 namespace PhoneNumbers.Tests.Parsers
 {
     /// <summary>
-    /// Contains unit tests for the <see cref="HKPhoneNumberParser"/> class.
+    /// Contains unit tests for the <see cref="DefaultPhoneNumberParser"/> class for HK phone numbers.
     /// </summary>
     public class DefaultPhoneNumberParserTests_HK
     {
