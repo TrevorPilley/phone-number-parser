@@ -85,7 +85,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
             Assert.Null(nonGeographicPhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.HK, nonGeographicPhoneNumber.Country);
+            Assert.Equal(CountryInfo.FR, nonGeographicPhoneNumber.Country);
             Assert.True(nonGeographicPhoneNumber.IsFreephone);
             Assert.Equal(value, nonGeographicPhoneNumber.LocalNumber);
         }
