@@ -9,7 +9,7 @@ namespace PhoneNumbers.Tests.Formatters
     /// </summary>
     public class FRPhoneNumberFormatterTests
     {
-        private readonly PhoneNumberFormatter _formatter = PhoneNumberFormatter.Default;
+        private readonly PhoneNumberFormatter _formatter = new FRPhoneNumberFormatter();
 
         [Theory]
         [InlineData("0122334455", "01 22 33 44 55")]
