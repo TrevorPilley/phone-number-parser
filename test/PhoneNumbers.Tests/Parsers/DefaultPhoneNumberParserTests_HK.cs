@@ -6,9 +6,9 @@ namespace PhoneNumbers.Tests.Parsers
     /// <summary>
     /// Contains unit tests for the <see cref="HKPhoneNumberParser"/> class.
     /// </summary>
-    public class LocalOnlyPhoneNumberParserTests_HK
+    public class DefaultPhoneNumberParserTests_HK
     {
-        private readonly PhoneNumberParser _parser = LocalOnlyPhoneNumberParser.Create(CountryInfo.HK);
+        private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.HK);
 
         [Theory]
         [InlineData("51000000")]
@@ -123,7 +123,7 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Returns_Failure_If_LocalNumber_Invalid(string value)
         {
             var result = _parser.Parse(value);
-            Assert.Equal($"{value} is not a valid HK phone number.", result.ParseError);
+            Assert.Equal($"The national significant number {value} is not valid for a HK phone number.", result.ParseError);
         }
 
         [Theory]
