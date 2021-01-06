@@ -19,7 +19,7 @@ namespace PhoneNumbers.Formatters
         /// <summary>
         /// Gets the default <see cref="PhoneNumberFormatter"/>.
         /// </summary>
-        internal static PhoneNumberFormatter Default { get; } = new PhoneNumberFormatter();
+        internal static PhoneNumberFormatter Default { get; } = new();
 
         /// <summary>
         /// Formats the <see cref="PhoneNumber"/> using the specified format.

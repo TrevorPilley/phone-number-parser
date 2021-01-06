@@ -11,7 +11,7 @@ namespace PhoneNumbers
     [DebuggerDisplay("{" + nameof(GetDebuggerDisplay) + "(),nq}")]
     public sealed class CountryInfo
     {
-        private static readonly char[] s_digits1To9 = new[] { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+        private static readonly char[] s_digits1To9 = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
 
         /// <summary>
         /// Initialises a new instance of the <see cref="CountryInfo"/> class.
@@ -25,7 +25,7 @@ namespace PhoneNumbers
         /// Gets the <see cref="CountryInfo"/> for the United Kingdom.
         /// </summary>
         /// <remarks>Covers England, Scotland, Wales and Northern Ireland.</remarks>
-        public static CountryInfo UK { get; } = new CountryInfo
+        public static CountryInfo UK { get; } = new()
         {
             AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2 }),
             CallingCode = "+44",
@@ -64,7 +64,7 @@ namespace PhoneNumbers
         /// <summary>
         /// Gets the possible lenghts of the area code.
         /// </summary>
-        internal ReadOnlyCollection<int> AreaCodeLengths { get; init; } = new ReadOnlyCollection<int>(Array.Empty<int>());
+        internal ReadOnlyCollection<int> AreaCodeLengths { get; init; } = new(Array.Empty<int>());
 
         /// <summary>
         /// Gets the <see cref="PhoneNumberFormatter"/> for the country.
@@ -74,7 +74,7 @@ namespace PhoneNumbers
         /// <summary>
         /// Gets the permitted lenghts of the national significant number.
         /// </summary>
-        internal ReadOnlyCollection<int> NsnLengths { get; init; } = new ReadOnlyCollection<int>(Array.Empty<int>());
+        internal ReadOnlyCollection<int> NsnLengths { get; init; } = new(Array.Empty<int>());
 
         internal bool IsInternationalNumber(string value) =>
             value?.StartsWith(CallingCode, StringComparison.Ordinal) == true;
