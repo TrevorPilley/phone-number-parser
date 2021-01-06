@@ -10,6 +10,7 @@ namespace PhoneNumbers.Tests
         public void Default()
         {
             Assert.NotNull(ParseOptions.Default);
+            Assert.Same(ParseOptions.Default, ParseOptions.Default);
 
             var countryInfos = typeof(CountryInfo)
                 .GetProperties(BindingFlags.Public | BindingFlags.Static)
@@ -18,6 +19,7 @@ namespace PhoneNumbers.Tests
                 .Cast<CountryInfo>()
                 .ToList();
 
+            Assert.True(countryInfos.Count > 0);
             Assert.Equal(countryInfos, ParseOptions.Default.Countries);
         }
     }
