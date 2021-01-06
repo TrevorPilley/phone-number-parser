@@ -43,7 +43,7 @@ namespace PhoneNumbers
         /// <summary>
         /// Gets a value indicating whether the country has area codes.
         /// </summary>
-        public bool HasAreaCodes { get; init; } = true;
+        public bool HasAreaCodes => AreaCodeLengths.Count > 0;
 
         /// <summary>
         /// Gets the international call prefix.
