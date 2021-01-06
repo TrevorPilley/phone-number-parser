@@ -27,6 +27,7 @@ namespace PhoneNumbers
         public static CountryInfo FR { get; } = new()
         {
             CallingCode = "+33",
+            Formatter = new FRPhoneNumberFormatter(),
             HasAreaCodes = false,
             Iso3116Code = "FR",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
