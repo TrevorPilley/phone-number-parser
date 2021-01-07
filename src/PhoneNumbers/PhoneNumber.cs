@@ -111,8 +111,7 @@ namespace PhoneNumbers
                 throw new ParseException("Parse(value) only supports a value starting with a supported calling code, otherwise Parse(value, countryCode) must be used.");
             }
 
-            var parser = options.GetParser(country);
-            var result = parser.Parse(value);
+            var result = options.Factory.GetParser(country).Parse(value);
             result.ThrowIfFailure();
 
             return result.PhoneNumber!;
@@ -139,8 +138,7 @@ namespace PhoneNumbers
                 throw new ParseException($"The country code {countryCode} is not currently supported.");
             }
 
-            var parser = options.GetParser(country);
-            var result = parser.Parse(value);
+            var result = options.Factory.GetParser(country).Parse(value);
             result.ThrowIfFailure();
 
             return result.PhoneNumber!;
@@ -159,14 +157,10 @@ namespace PhoneNumbers
 
             if (country != null)
             {
-                var parser = options!.GetParser(country);
-                var result = parser.Parse(value);
+                var result = options!.Factory.GetParser(country).Parse(value);
 
-                if (result.PhoneNumber != null)
-                {
-                    phoneNumber = result.PhoneNumber;
-                    return true;
-                }
+                phoneNumber = result.PhoneNumber;
+                return result.PhoneNumber != null;
             }
 
             phoneNumber = default;
@@ -187,14 +181,10 @@ namespace PhoneNumbers
 
             if (country != null)
             {
-                var parser = options!.GetParser(country);
-                var result = parser.Parse(value);
+                var result = options!.Factory.GetParser(country).Parse(value);
 
-                if (result.PhoneNumber != null)
-                {
-                    phoneNumber = result.PhoneNumber;
-                    return true;
-                }
+                phoneNumber = result.PhoneNumber;
+                return result.PhoneNumber != null;
             }
 
             phoneNumber = default;

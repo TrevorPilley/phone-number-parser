@@ -87,39 +87,36 @@ namespace PhoneNumbers.Parsers
         {
             var areaAndNumber = ParseAreaAndNumber(nsnValue);
 
-            if (areaAndNumber.CountryNumber != null)
+            return (areaAndNumber.CountryNumber?.Kind) switch
             {
-                switch (areaAndNumber.CountryNumber.Kind)
-                {
-                    case PhoneNumberKind.GeographicPhoneNumber:
-                        return ParseResult.Success(
-                            new GeographicPhoneNumber(
-                                Country,
-                                areaAndNumber.AreaCode!,
-                                areaAndNumber.LocalNumber!,
-                                areaAndNumber.CountryNumber.GeographicArea!));
+                PhoneNumberKind.GeographicPhoneNumber =>
+                    ParseResult.Success(
+                        new GeographicPhoneNumber(
+                            Country,
+                            areaAndNumber.AreaCode!,
+                            areaAndNumber.LocalNumber!,
+                            areaAndNumber.CountryNumber.GeographicArea!)),
 
-                    case PhoneNumberKind.MobilePhoneNumber:
-                        return ParseResult.Success(
-                            new MobilePhoneNumber(
-                                Country,
-                                areaAndNumber.AreaCode,
-                                areaAndNumber.LocalNumber!,
-                                isDataOnly: areaAndNumber.CountryNumber.Hint == Hint.Data,
-                                isPager: areaAndNumber.CountryNumber.Hint == Hint.Pager,
-                                isVirtual: areaAndNumber.CountryNumber.Hint == Hint.Virtual));
+                PhoneNumberKind.MobilePhoneNumber =>
+                    ParseResult.Success(
+                        new MobilePhoneNumber(
+                            Country,
+                            areaAndNumber.AreaCode,
+                            areaAndNumber.LocalNumber!,
+                            isDataOnly: areaAndNumber.CountryNumber.Hint == Hint.Data,
+                            isPager: areaAndNumber.CountryNumber.Hint == Hint.Pager,
+                            isVirtual: areaAndNumber.CountryNumber.Hint == Hint.Virtual)),
 
-                    case PhoneNumberKind.NonGeographicPhoneNumber:
-                        return ParseResult.Success(
-                            new NonGeographicPhoneNumber(
-                                Country,
-                                areaAndNumber.AreaCode,
-                                areaAndNumber.LocalNumber!,
-                                isFreephone: areaAndNumber.CountryNumber.Hint == Hint.Freephone));
-                }
-            }
+                PhoneNumberKind.NonGeographicPhoneNumber =>
+                    ParseResult.Success(
+                        new NonGeographicPhoneNumber(
+                            Country,
+                            areaAndNumber.AreaCode,
+                            areaAndNumber.LocalNumber!,
+                            isFreephone: areaAndNumber.CountryNumber.Hint == Hint.Freephone)),
 
-            return base.ParseNationalSignificantNumber(nsnValue);
+                _ => base.ParseNationalSignificantNumber(nsnValue),
+            };
         }
     }
 }
