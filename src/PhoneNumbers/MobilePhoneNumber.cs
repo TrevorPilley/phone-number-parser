@@ -29,17 +29,19 @@ namespace PhoneNumbers
         /// <summary>
         /// The mobile number is likely for a data only plan (e.g. a 3G/LTE laptop or tablet).
         /// </summary>
+        /// <remarks>This is an indication only based upon the data available for each country.</remarks>
         public bool IsDataOnly { get; }
 
         /// <summary>
         /// The mobile number is likely for a pager.
         /// </summary>
+        /// <remarks>This is an indication only based upon the data available for each country.</remarks>
         public bool IsPager { get; }
 
         /// <summary>
         /// The mobile number is likely a virtual number.
         /// </summary>
-        /// <remarks>See https://en.wikipedia.org/wiki/Virtual_number for further details.</remarks>
+        /// <remarks>This is an indication only based upon the data available for each country (see https://en.wikipedia.org/wiki/Virtual_number for further details).</remarks>
         public bool IsVirtual { get; }
 
         /// <inheritdoc/>

@@ -25,6 +25,7 @@ namespace PhoneNumbers
         /// <summary>
         /// The number is a freephone (toll-free) number.
         /// </summary>
+        /// <remarks>This is an indication only based upon the data available for each country.</remarks>
         public bool IsFreephone { get; }
 
         /// <inheritdoc/>
