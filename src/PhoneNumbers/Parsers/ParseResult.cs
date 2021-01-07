@@ -21,7 +21,7 @@ namespace PhoneNumbers.Parsers
         /// <param name="parseError">The error which resulted caused the parse attempt to fail.</param>
         /// <returns>A <see cref="ParseResult"/> for the parse error.</returns>
         internal static ParseResult Failure(string parseError) =>
-            new() {ParseError = parseError};
+            new() { ParseError = parseError };
 
         /// <summary>
         /// Creates a <see cref="ParseResult"/> which succeded.
@@ -29,7 +29,7 @@ namespace PhoneNumbers.Parsers
         /// <param name="phoneNumber">The <see cref="PhoneNumber"/> which was successfully parsed.</param>
         /// <returns>A <see cref="ParseResult"/> for the parse success.</returns>
         internal static ParseResult Success(PhoneNumber phoneNumber) =>
-            new() {PhoneNumber = phoneNumber};
+            new() { PhoneNumber = phoneNumber };
 
         /// <summary>
         /// Throws a <see cref="ParseException"/> with the parse error if the parse operation failed.
