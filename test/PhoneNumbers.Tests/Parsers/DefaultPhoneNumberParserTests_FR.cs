@@ -36,9 +36,9 @@ namespace PhoneNumbers.Tests.Parsers
         }
 
         [Theory]
-        [InlineData("0600000000")]
-        [InlineData("0799999999")]
-        public void Parse_Known_MobilePhoneNumber(string value)
+        [InlineData("0600000000", "600000000")]
+        [InlineData("0799999999", "799999999")]
+        public void Parse_Known_MobilePhoneNumber(string value, string localNumber)
         {
             var phoneNumber = _parser.Parse(value).PhoneNumber;
 
@@ -51,15 +51,15 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.False(mobilePhoneNumber.IsDataOnly);
             Assert.False(mobilePhoneNumber.IsPager);
             Assert.False(mobilePhoneNumber.IsVirtual);
-            Assert.Equal(value.Substring(1), mobilePhoneNumber.LocalNumber);
+            Assert.Equal(localNumber, mobilePhoneNumber.LocalNumber);
         }
 
         [Theory]
-        [InlineData("0810000000")]
-        [InlineData("0899999999")]
-        [InlineData("0900000000")]
-        [InlineData("0999999999")]
-        public void Parse_Known_NonGeographicPhoneNumber(string value)
+        [InlineData("0810000000", "810000000")]
+        [InlineData("0899999999", "899999999")]
+        [InlineData("0900000000", "900000000")]
+        [InlineData("0999999999", "999999999")]
+        public void Parse_Known_NonGeographicPhoneNumber(string value, string localNumber)
         {
             var phoneNumber = _parser.Parse(value).PhoneNumber;
 
@@ -70,13 +70,13 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.Null(nonGeographicPhoneNumber.AreaCode);
             Assert.Equal(CountryInfo.FR, nonGeographicPhoneNumber.Country);
             Assert.False(nonGeographicPhoneNumber.IsFreephone);
-            Assert.Equal(value.Substring(1), nonGeographicPhoneNumber.LocalNumber);
+            Assert.Equal(localNumber, nonGeographicPhoneNumber.LocalNumber);
         }
 
         [Theory]
-        [InlineData("0800000000")]
-        [InlineData("0800999999")]
-        public void Parse_Known_NonGeographicPhoneNumber_FreePhone(string value)
+        [InlineData("0800000000", "800000000")]
+        [InlineData("0800999999", "800999999")]
+        public void Parse_Known_NonGeographicPhoneNumber_FreePhone(string value, string localNumber)
         {
             var phoneNumber = _parser.Parse(value).PhoneNumber;
 
@@ -87,7 +87,7 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.Null(nonGeographicPhoneNumber.AreaCode);
             Assert.Equal(CountryInfo.FR, nonGeographicPhoneNumber.Country);
             Assert.True(nonGeographicPhoneNumber.IsFreephone);
-            Assert.Equal(value.Substring(1), nonGeographicPhoneNumber.LocalNumber);
+            Assert.Equal(localNumber, nonGeographicPhoneNumber.LocalNumber);
         }
 
         [Fact]
