@@ -15,8 +15,11 @@ namespace PhoneNumbers.Tests
             Assert.NotNull(PhoneNumber.Parse("0114 272 6444", "GB"));
 
         [Fact]
-        public void Parse_Value_CountryCode_Throws_If_CountryCode_Not_Supported() =>
-            Assert.Throws<ParseException>(() => PhoneNumber.Parse("0123456789", "ZZ"));
+        public void Parse_Value_CountryCode_Throws_If_CountryCode_Not_Supported()
+        {
+            var exception = Assert.Throws<ParseException>(() => PhoneNumber.Parse("0123456789", "ZZ"));
+            Assert.Equal("The country code ZZ is not currently supported.", exception.Message);
+        }
 
         [Fact]
         public void Parse_Value_CountryCode_Throws_If_ParseOptions_Null() =>
