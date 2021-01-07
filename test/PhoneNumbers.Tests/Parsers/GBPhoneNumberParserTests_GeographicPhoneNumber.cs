@@ -3,7 +3,6 @@ using Xunit;
 
 namespace PhoneNumbers.Tests.Parsers
 {
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("PhoneNumbers.Utils.TestCaseGen", "2021.01.04")]
     public class GBPhoneNumberParserTests_GeographicPhoneNumberPhoneNumberParserTests
     {
         private readonly PhoneNumberParser _parser = GBPhoneNumberParser.Create();
