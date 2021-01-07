@@ -77,10 +77,6 @@ namespace PhoneNumbers.Tests.Parsers
                 });
 
         [Fact]
-        public void Parse_Invalid_Number() =>
-            Assert.Equal("The national significant number 9005500 is not valid for a ZZ phone number.", _parser.Parse("9005500").ParseError);
-
-        [Fact]
         public void Parse_GeographicPhoneNumber()
         {
             var phoneNumber = _parser.Parse("4010000").PhoneNumber;
@@ -109,6 +105,10 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.Equal("1000", geographicPhoneNumber.LocalNumber);
             Assert.Equal(PhoneNumberKind.GeographicPhoneNumber, geographicPhoneNumber.PhoneNumberKind);
         }
+
+        [Fact]
+        public void Parse_Invalid_Number() =>
+            Assert.Equal("The national significant number 9005500 is not valid for a ZZ phone number.", _parser.Parse("9005500").ParseError);
 
         [Fact]
         public void Parse_MobilePhoneNumber()

@@ -11,12 +11,12 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.Same(NumberRange.Create("000500-100500"), NumberRange.Create("000500-100500"));
 
         [Fact]
-        public void Create_Throws_If_From_Blank() =>
-            Assert.Throws<ArgumentException>(() => NumberRange.Create("-0"));
-
-        [Fact]
         public void Create_Throws_If_From_And_To_Different_Lengths() =>
             Assert.Throws<ArgumentOutOfRangeException>(() => NumberRange.Create("0-11"));
+
+        [Fact]
+        public void Create_Throws_If_From_Blank() =>
+            Assert.Throws<ArgumentException>(() => NumberRange.Create("-0"));
 
         [Fact]
         public void Create_Throws_If_To_Blank() =>
