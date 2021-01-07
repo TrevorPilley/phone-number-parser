@@ -10,25 +10,25 @@ namespace PhoneNumbers
     /// </summary>
     internal sealed class ParseOptions
     {
-        private readonly PhoneNumberParserFactory _factory = new();
-
         /// <summary>
         /// Gets the default parse options.
         /// </summary>
         internal static ParseOptions Default { get; } = new();
 
         /// <summary>
-        /// Gets the list of supported <see cref="CountryInfo"/>s.
+        /// Gets the supported <see cref="CountryInfo"/>s.
         /// </summary>
         /// <remarks>By default, this will contain all <see cref="CountryInfo"/> static properties.</remarks>
-        internal IList<CountryInfo> Countries { get; } = typeof(CountryInfo)
+        internal ICollection<CountryInfo> Countries { get; } = typeof(CountryInfo)
             .GetProperties(BindingFlags.Public | BindingFlags.Static)
             .Where(x => x.PropertyType == typeof(CountryInfo))
             .Select(x => x.GetValue(null))
             .Cast<CountryInfo>()
             .ToList();
 
-        internal PhoneNumberParser GetParser(CountryInfo countryInfo) =>
-            _factory.GetParser(countryInfo);
+        /// <summary>
+        /// Gets the <see cref="PhoneNumberParserFactory"/>.
+        /// </summary>
+        internal PhoneNumberParserFactory Factory { get; } = new();
     }
 }
