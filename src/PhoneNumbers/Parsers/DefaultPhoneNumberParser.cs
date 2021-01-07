@@ -85,29 +85,37 @@ namespace PhoneNumbers.Parsers
         /// <remarks>By the time this method is called, nsnValue will have been validated against the <see cref="CountryInfo"/>.NsnLengths and contain digits only.</remarks>
         protected override ParseResult ParseNationalSignificantNumber(string nsnValue)
         {
-            var x = ParseAreaAndNumber(nsnValue);
+            var areaAndNumber = ParseAreaAndNumber(nsnValue);
 
-            if (x.CountryNumber != null)
+            if (areaAndNumber.CountryNumber != null)
             {
-                switch (x.CountryNumber.Kind)
+                switch (areaAndNumber.CountryNumber.Kind)
                 {
                     case PhoneNumberKind.GeographicPhoneNumber:
                         return ParseResult.Success(
-                            new GeographicPhoneNumber(Country, x.AreaCode!, x.LocalNumber!, x.CountryNumber.GeographicArea!));
+                            new GeographicPhoneNumber(
+                                Country,
+                                areaAndNumber.AreaCode!,
+                                areaAndNumber.LocalNumber!,
+                                areaAndNumber.CountryNumber.GeographicArea!));
 
                     case PhoneNumberKind.MobilePhoneNumber:
-                        var isDataOnly = x.CountryNumber.Hint == Hint.Data;
-                        var isPager = x.CountryNumber.Hint == Hint.Pager;
-                        var isVirtual = x.CountryNumber.Hint == Hint.Virtual;
-
                         return ParseResult.Success(
-                            new MobilePhoneNumber(Country, x.AreaCode, x.LocalNumber!, isDataOnly, isPager, isVirtual));
+                            new MobilePhoneNumber(
+                                Country,
+                                areaAndNumber.AreaCode,
+                                areaAndNumber.LocalNumber!,
+                                isDataOnly: areaAndNumber.CountryNumber.Hint == Hint.Data,
+                                isPager: areaAndNumber.CountryNumber.Hint == Hint.Pager,
+                                isVirtual: areaAndNumber.CountryNumber.Hint == Hint.Virtual));
 
                     case PhoneNumberKind.NonGeographicPhoneNumber:
-                        var isFreephone = x.CountryNumber.Hint == Hint.Freephone;
-
                         return ParseResult.Success(
-                            new NonGeographicPhoneNumber(Country, x.AreaCode, x.LocalNumber!, isFreephone));
+                            new NonGeographicPhoneNumber(
+                                Country,
+                                areaAndNumber.AreaCode,
+                                areaAndNumber.LocalNumber!,
+                                isFreephone: areaAndNumber.CountryNumber.Hint == Hint.Freephone));
                 }
             }
 
