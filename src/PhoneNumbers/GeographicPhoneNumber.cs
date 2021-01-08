@@ -26,6 +26,7 @@ namespace PhoneNumbers
         /// Gets the name of the geographic area the phone number the area code is allocated to.
         /// Depending on the country, this could be an individual city or larger region such as a county.
         /// </summary>
+        /// <remarks>This is an indication based upon the data available for each country.</remarks>
         public string GeographicArea { get; }
 
         /// <inheritdoc/>
