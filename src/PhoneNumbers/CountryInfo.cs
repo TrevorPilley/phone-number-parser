@@ -26,7 +26,7 @@ namespace PhoneNumbers
         /// </summary>
         public static CountryInfo IE { get; } = new()
         {
-            AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 2, 1 }),
+            AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
             CallingCode = "+353",
             Iso3166Code = "IE",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8, 9 }),
