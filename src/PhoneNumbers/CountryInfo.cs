@@ -28,7 +28,7 @@ namespace PhoneNumbers
         {
             CallingCode = "+33",
             Formatter = new FRPhoneNumberFormatter(),
-            Iso3116Code = "FR",
+            Iso3166Code = "FR",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
         };
 

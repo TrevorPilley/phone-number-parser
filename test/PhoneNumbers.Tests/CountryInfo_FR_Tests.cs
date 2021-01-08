@@ -17,7 +17,7 @@ namespace PhoneNumbers.Tests
             Assert.IsType<FRPhoneNumberFormatter>(countryInfo.Formatter);
             Assert.False(countryInfo.HasAreaCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
-            Assert.Equal("FR", countryInfo.Iso3116Code);
+            Assert.Equal("FR", countryInfo.Iso3166Code);
             Assert.Equal(new[] { 9 }, countryInfo.NsnLengths);
             Assert.Equal("0", countryInfo.TrunkPrefix);
         }
