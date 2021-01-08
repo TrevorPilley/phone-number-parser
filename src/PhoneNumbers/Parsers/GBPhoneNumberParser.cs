@@ -38,11 +38,15 @@ namespace PhoneNumbers.Parsers
         /// <remarks>By the time this method is called, nsnValue will have been validated against the <see cref="CountryInfo"/>.NsnLengths and contain digits only.</remarks>
         protected override (string? AreaCode, string? LocalNumber, CountryNumber? CountryNumber) ParseAreaAndNumber(string nsnValue)
         {
-            // Most UK geographic and all mobile area codes are 4 digits.
-            var areaCodeLength = 4;
+            var areaCodeLength = 0;
+            PhoneNumberKind phoneNumberKind = default;
 
             if (nsnValue[0] == '1')
             {
+                // Most 1X UK area codes are 4 digits geographically assigned.
+                areaCodeLength = 4;
+                phoneNumberKind = PhoneNumberKind.GeographicPhoneNumber;
+
                 if (nsnValue[1] == '1' || nsnValue[2] == '1')
                 {
                     // Except 11X and 1X1 area codes, which are are 3 digits.
@@ -60,20 +64,28 @@ namespace PhoneNumbers.Parsers
             }
             else if (nsnValue[0] == '2')
             {
-                // Except 2X area codes, which are 2 digits.
+                // 2X area codes, are 2 digits and geographically assigned.
                 areaCodeLength = 2;
+                phoneNumberKind = PhoneNumberKind.GeographicPhoneNumber;
             }
             else if (nsnValue[0] == '3' || nsnValue[0] == '8')
             {
-                // Except 3XX and 8XX area codes, which are 3 digits.
+                // 3XX and 8XX area codes are 3 digits and non-geographic numbers.
                 areaCodeLength = 3;
+                phoneNumberKind = PhoneNumberKind.NonGeographicPhoneNumber;
+            }
+            else if (nsnValue[0] == '7')
+            {
+                // All UK mobile area codes are 4 digits.
+                areaCodeLength = 4;
+                phoneNumberKind = PhoneNumberKind.MobilePhoneNumber;
             }
 
             var areaCode = nsnValue.Substring(0, areaCodeLength);
             var localNumber = nsnValue.Substring(areaCode.Length);
 
             var countryNumber = CountryNumbers
-                .SingleOrDefault(x =>
+                .SingleOrDefault(x => x.Kind == phoneNumberKind &&
                     x.AreaCodeRanges!.Any(x => x.Contains(areaCode)) &&
                     x.LocalNumberRanges.Any(x => x.Contains(localNumber)));
 
