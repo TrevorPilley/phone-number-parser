@@ -30,14 +30,15 @@ namespace PhoneNumbers
             AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2 }),
             CallingCode = "+44",
             Formatter = new GBPhoneNumberFormatter(),
-            Iso3116Code = "GB",
+            Iso3166Code = "GB",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 9, 10 }),
             TrunkPrefix = "0",
         };
 
         /// <summary>
-        /// Gets the country calling code.
+        /// Gets the calling code for the country (e.g. '+XX').
         /// </summary>
+        /// <remarks>See https://en.wikipedia.org/wiki/List_of_country_calling_codes.</remarks>
         public string CallingCode { get; init; } = null!;
 
         /// <summary>
@@ -48,16 +49,23 @@ namespace PhoneNumbers
         /// <summary>
         /// Gets the international call prefix.
         /// </summary>
-        /// <remarks>Default to the ITU recommended '00'.</remarks>
+        /// <remarks>Default to the ITU recommended '00', see https://en.wikipedia.org/wiki/List_of_international_call_prefixes.</remarks>
         public string InternationalCallPrefix { get; init; } = "00";
 
         /// <summary>
         /// Gets the ISO 3166 Aplha-2 code for the country.
         /// </summary>
-        public string Iso3116Code { get; init; } = null!;
+        [Obsolete("This property was incorrectly named, please use Iso3166Code instead it will be removed in a future version.")]
+        public string Iso3116Code => Iso3166Code;
 
         /// <summary>
-        /// Gets the trunk prefix (if applicable).
+        /// Gets the ISO 3166 Aplha-2 code for the country.
+        /// </summary>
+        /// <remarks>See https://www.iso.org/iso-3166-country-codes.html</remarks>
+        public string Iso3166Code { get; init; } = null!;
+
+        /// <summary>
+        /// Gets the trunk prefix used by the country, if applicable.
         /// </summary>
         public string? TrunkPrefix { get; init; }
 
@@ -139,7 +147,7 @@ namespace PhoneNumbers
 
         [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
         private string GetDebuggerDisplay() =>
-            $"{Iso3116Code} {CallingCode}";
+            $"{Iso3166Code} {CallingCode}";
 
         private string ReadNsnStringFrom(int startPos, string value)
         {

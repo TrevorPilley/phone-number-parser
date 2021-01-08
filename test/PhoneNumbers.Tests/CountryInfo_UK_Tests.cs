@@ -17,7 +17,7 @@ namespace PhoneNumbers.Tests
             Assert.IsType<GBPhoneNumberFormatter>(countryInfo.Formatter);
             Assert.True(countryInfo.HasAreaCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
-            Assert.Equal("GB", countryInfo.Iso3116Code);
+            Assert.Equal("GB", countryInfo.Iso3166Code);
             Assert.Equal(new[] { 7, 9, 10 }, countryInfo.NsnLengths);
             Assert.Equal("0", countryInfo.TrunkPrefix);
         }
@@ -34,6 +34,7 @@ namespace PhoneNumbers.Tests
         [InlineData("+441132224444")]
         [InlineData("+44(0)1132224444")]
         [InlineData("+44 (0) 113 222 4444")]
+        [InlineData("+44 (0) 113-222-4444")]
         public void UK_IsInternationalNumber_True(string value) =>
             Assert.True(CountryInfo.UK.IsInternationalNumber(value));
 

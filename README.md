@@ -28,7 +28,7 @@ PhoneNumber phoneNumber = PhoneNumber.Parse("01142726444", "GB");
 phoneNumber.AreaCode;                           // 114
 phoneNumber.Country.CallingCode;                // +44
 phoneNumber.Country.InternationalCallPrefix;    // 00
-phoneNumber.Country.Iso3116Code;                // GB
+phoneNumber.Country.Iso3166Code;                // GB
 phoneNumber.Country.TrunkPrefix;                // 0
 phoneNumber.LocalNumber                         // 2726444
 phoneNumber.PhoneNumberKind;                    // PhoneNumberKind.GeographicPhoneNumber
