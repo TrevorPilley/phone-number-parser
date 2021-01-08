@@ -9,7 +9,7 @@ namespace PhoneNumbers.Tests
             {
                 AreaCodeLengths = new ReadOnlyCollection<int>(areaCodeLengths),
                 CallingCode = "+422", // +422 isn't a used calling code.
-                Iso3116Code = "ZZ", // ZZ isn't a used ISO 3116 code.
+                Iso3166Code = "ZZ", // ZZ isn't a used ISO 3116 code.
                 NsnLengths = new ReadOnlyCollection<int>(nsnLengths),
             };
     }

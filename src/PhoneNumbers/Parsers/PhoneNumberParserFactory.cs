@@ -14,7 +14,7 @@ namespace PhoneNumbers.Parsers
                 {
                     var createMethod = typeof(PhoneNumberParser)
                         .Assembly
-                        .GetType($"PhoneNumbers.Parsers.{x.Iso3116Code}PhoneNumberParser")?
+                        .GetType($"PhoneNumbers.Parsers.{x.Iso3166Code}PhoneNumberParser")?
                         .GetMethod("Create", BindingFlags.NonPublic | BindingFlags.Static);
 
                     if (createMethod?.Invoke(null, null) is PhoneNumberParser parser)
