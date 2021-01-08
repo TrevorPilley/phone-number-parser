@@ -11,16 +11,20 @@ namespace PhoneNumbers.Tests.Parsers
         private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.FR);
 
         [Theory]
-        [InlineData("0100000000", "100000000", "Île-de-France")]
+        [InlineData("0110000000", "110000000", "Île-de-France")]
         [InlineData("0199999999", "199999999", "Île-de-France")]
-        [InlineData("0200000000", "200000000", "Northwest France")]
+        [InlineData("0210000000", "210000000", "Northwest France")]
+        [InlineData("0261999999", "261999999", "Northwest France")]
+        [InlineData("0264000000", "264000000", "Northwest France")]
+        [InlineData("0268999999", "268999999", "Northwest France")]
+        [InlineData("0270000000", "270000000", "Northwest France")]
         [InlineData("0299999999", "299999999", "Northwest France")]
-        [InlineData("0300000000", "300000000", "Northeast France")]
+        [InlineData("0310000000", "310000000", "Northeast France")]
         [InlineData("0399999999", "399999999", "Northeast France")]
-        [InlineData("0400000000", "400000000", "Southeast France")]
+        [InlineData("0410000000", "410000000", "Southeast France")]
         [InlineData("0499999999", "499999999", "Southeast France")]
-        [InlineData("0500000000", "500000000", "Southwest France")]
-        [InlineData("0599999999", "599999999", "Southwest France")]
+        [InlineData("0516000000", "516000000", "Southwest France")]
+        [InlineData("0589999999", "589999999", "Southwest France")]
         public void Parse_Known_GeographicPhoneNumber(string value, string localNumber, string geographicArea)
         {
             var phoneNumber = _parser.Parse(value).PhoneNumber;
@@ -36,8 +40,18 @@ namespace PhoneNumbers.Tests.Parsers
         }
 
         [Theory]
-        [InlineData("0600000000", "600000000")]
-        [InlineData("0799999999", "799999999")]
+        [InlineData("0601000000", "601000000")]
+        [InlineData("0638999999", "638999999")]
+        [InlineData("0640000000", "640000000")]
+        [InlineData("0652999999", "652999999")]
+        [InlineData("0656000000", "656000000")]
+        [InlineData("0689999999", "689999999")]
+        [InlineData("0695000000", "695000000")]
+        [InlineData("0695999999", "695999999")]
+        [InlineData("0700000000", "700000000")]
+        [InlineData("0700499999", "700499999")]
+        [InlineData("0730000000", "730000000")]
+        [InlineData("0789999999", "789999999")]
         public void Parse_Known_MobilePhoneNumber(string value, string localNumber)
         {
             var phoneNumber = _parser.Parse(value).PhoneNumber;
@@ -55,10 +69,12 @@ namespace PhoneNumbers.Tests.Parsers
         }
 
         [Theory]
-        [InlineData("0810000000", "810000000")]
+        [InlineData("0806000000", "806000000")]
         [InlineData("0899999999", "899999999")]
-        [InlineData("0900000000", "900000000")]
-        [InlineData("0999999999", "999999999")]
+        [InlineData("0950000000", "950000000")]
+        [InlineData("0975999999", "975999999")]
+        [InlineData("0977000000", "977000000")]
+        [InlineData("0998999999", "998999999")]
         public void Parse_Known_NonGeographicPhoneNumber(string value, string localNumber)
         {
             var phoneNumber = _parser.Parse(value).PhoneNumber;
@@ -75,7 +91,7 @@ namespace PhoneNumbers.Tests.Parsers
 
         [Theory]
         [InlineData("0800000000", "800000000")]
-        [InlineData("0800999999", "800999999")]
+        [InlineData("0805999999", "805999999")]
         public void Parse_Known_NonGeographicPhoneNumber_FreePhone(string value, string localNumber)
         {
             var phoneNumber = _parser.Parse(value).PhoneNumber;

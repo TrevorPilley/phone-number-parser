@@ -13,19 +13,19 @@ namespace PhoneNumbers.Tests.Formatters
 
         [Theory]
         [InlineData("0122334455", "01 22 33 44 55")]
-        [InlineData("0722334455", "07 22 33 44 55")]
+        [InlineData("0730334455", "07 30 33 44 55")]
         public void Format_Display(string value, string expected) =>
             Assert.Equal(expected, _formatter.Format(PhoneNumber.Parse(value, "FR"), "D"));
 
         [Theory]
         [InlineData("0122334455", "+33122334455")]
-        [InlineData("0722334455", "+33722334455")]
+        [InlineData("0730334455", "+33730334455")]
         public void Format_International(string value, string expected) =>
             Assert.Equal(expected, _formatter.Format(PhoneNumber.Parse(value, "FR"), "I"));
 
         [Theory]
         [InlineData("0122334455", "0122334455")]
-        [InlineData("0722334455", "0722334455")]
+        [InlineData("0730334455", "0730334455")]
         public void Format_National(string value, string expected) =>
             Assert.Equal(expected, _formatter.Format(PhoneNumber.Parse(value, "FR"), "N"));
 
