@@ -28,7 +28,7 @@ namespace PhoneNumbers
         {
             AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 2, 1 }),
             CallingCode = "+353",
-            Iso3116Code = "IE",
+            Iso3166Code = "IE",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8, 9 }),
             TrunkPrefix = "0",
         };
