@@ -22,6 +22,18 @@ namespace PhoneNumbers
         }
 
         /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for the Ireland.
+        /// </summary>
+        public static CountryInfo IE { get; } = new()
+        {
+            AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 2, 1 }),
+            CallingCode = "+353",
+            Iso3116Code = "IE",
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8, 9 }),
+            TrunkPrefix = "0",
+        };
+
+        /// <summary>
         /// Gets the <see cref="CountryInfo"/> for the United Kingdom.
         /// </summary>
         /// <remarks>Covers England, Scotland, Wales and Northern Ireland.</remarks>
