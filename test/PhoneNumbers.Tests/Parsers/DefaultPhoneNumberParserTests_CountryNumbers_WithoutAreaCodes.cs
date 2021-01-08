@@ -53,7 +53,29 @@ namespace PhoneNumbers.Tests.Parsers
                         Kind = PhoneNumberKind.NonGeographicPhoneNumber,
                         Hint = Hint.Freephone,
                     },
+                    new CountryNumber
+                    {
+                        GeographicArea = "Springfield",
+                        LocalNumberRanges = new[] { NumberRange.Create("30000-30999") },
+                        Kind = PhoneNumberKind.GeographicPhoneNumber,
+                        Hint = Hint.None,
+                    },
                 });
+
+        [Fact]
+        public void Parse_GeographicPhoneNumber()
+        {
+            var phoneNumber = _parser.Parse("30000").PhoneNumber;
+            Assert.NotNull(phoneNumber);
+            Assert.IsType<GeographicPhoneNumber>(phoneNumber);
+
+            var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
+            Assert.Null(geographicPhoneNumber.AreaCode);
+            Assert.Equal(_countryInfo, geographicPhoneNumber.Country);
+            Assert.Equal("Springfield", geographicPhoneNumber.GeographicArea);
+            Assert.Equal("30000", geographicPhoneNumber.LocalNumber);
+            Assert.Equal(PhoneNumberKind.GeographicPhoneNumber, geographicPhoneNumber.PhoneNumberKind);
+        }
 
         [Fact]
         public void Parse_Invalid_Number() =>
