@@ -8,18 +8,18 @@ namespace PhoneNumbers
     /// <summary>
     /// A class containing the options for parsing phone numbers.
     /// </summary>
-    internal sealed class ParseOptions
+    public sealed class ParseOptions
     {
         /// <summary>
         /// Gets the default parse options.
         /// </summary>
-        internal static ParseOptions Default { get; } = new();
+        public static ParseOptions Default { get; } = new();
 
         /// <summary>
         /// Gets the supported <see cref="CountryInfo"/>s.
         /// </summary>
         /// <remarks>By default, this will contain all <see cref="CountryInfo"/> static properties.</remarks>
-        internal ICollection<CountryInfo> Countries { get; } = typeof(CountryInfo)
+        public ICollection<CountryInfo> Countries { get; } = typeof(CountryInfo)
             .GetProperties(BindingFlags.Public | BindingFlags.Static)
             .Where(x => x.PropertyType == typeof(CountryInfo))
             .Select(x => x.GetValue(null))
