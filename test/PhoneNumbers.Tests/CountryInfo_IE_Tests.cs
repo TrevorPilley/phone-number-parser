@@ -15,7 +15,7 @@ namespace PhoneNumbers.Tests
             Assert.Equal(new[] { 2, 1 }, countryInfo.AreaCodeLengths);
             Assert.Equal("+353", countryInfo.CallingCode);
             Assert.IsType<PhoneNumberFormatter>(countryInfo.Formatter);
-            Assert.False(countryInfo.HasAreaCodes);
+            Assert.True(countryInfo.HasAreaCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("IE", countryInfo.Iso3166Code);
             Assert.Equal(new[] { 7, 8, 9 }, countryInfo.NsnLengths);
