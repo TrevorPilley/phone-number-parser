@@ -12,7 +12,7 @@ namespace PhoneNumbers.Tests
 
             var countryInfo = CountryInfo.IE;
 
-            Assert.Equal(new[] { 2, 1 }, countryInfo.AreaCodeLengths);
+            Assert.Equal(new[] { 3, 2, 1 }, countryInfo.AreaCodeLengths);
             Assert.Equal("+353", countryInfo.CallingCode);
             Assert.IsType<PhoneNumberFormatter>(countryInfo.Formatter);
             Assert.True(countryInfo.HasAreaCodes);
