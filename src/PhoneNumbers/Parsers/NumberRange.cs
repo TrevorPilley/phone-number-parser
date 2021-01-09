@@ -26,16 +26,20 @@ namespace PhoneNumbers.Parsers
                 throw new ArgumentException($"'{nameof(to)}' cannot be null or whitespace", nameof(to));
             }
 
-            // expects to to be numerically bigger than from (e.g. from '100' to '999') but both values must be the same length
-            if (from.Length != to.Length)
+            if (to.Length < from.Length)
             {
-                throw new ArgumentOutOfRangeException(nameof(to), $"The values From ({from}) and To ({to}) must be the same length");
+                throw new ArgumentOutOfRangeException(nameof(to), $"The value To ({to}) must be greater than or equal to the value From ({from})");
             }
 
             (From, To) = (from, to);
             _isSingleNumber = From.Equals(To, StringComparison.Ordinal);
             _fromIntValue = int.Parse(From, CultureInfo.InvariantCulture);
             _toIntValue = int.Parse(To, CultureInfo.InvariantCulture);
+
+            if (_toIntValue < _fromIntValue)
+            {
+                throw new ArgumentOutOfRangeException(nameof(to), $"The value To ({to}) must be greater than or equal to the value From ({from})");
+            }
         }
 
         internal string From { get; }

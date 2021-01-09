@@ -11,23 +11,33 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.Same(NumberRange.Create("000500-100500"), NumberRange.Create("000500-100500"));
 
         [Fact]
-        public void Create_Throws_If_From_And_To_Different_Lengths() =>
-            Assert.Throws<ArgumentOutOfRangeException>(() => NumberRange.Create("0-11"));
-
-        [Fact]
         public void Create_Throws_If_From_Blank() =>
             Assert.Throws<ArgumentException>(() => NumberRange.Create("-0"));
+
+        [Theory]
+        [InlineData("000-11")]
+        [InlineData("100-11")]
+        public void Create_Throws_If_To_Less_Than_From(string value) =>
+            Assert.Throws<ArgumentOutOfRangeException>(() => NumberRange.Create(value));
 
         [Fact]
         public void Create_Throws_If_To_Blank() =>
             Assert.Throws<ArgumentException>(() => NumberRange.Create("0-"));
 
         [Fact]
-        public void Create_With_Range()
+        public void Create_With_Range_Fixed_Size()
         {
             var numberRange = NumberRange.Create("000500-100500");
             Assert.Equal("000500", numberRange.From);
             Assert.Equal("100500", numberRange.To);
+        }
+
+        [Fact]
+        public void Create_With_Range_Span()
+        {
+            var numberRange = NumberRange.Create("000500-10050080");
+            Assert.Equal("000500", numberRange.From);
+            Assert.Equal("10050080", numberRange.To);
         }
 
         [Fact]
@@ -39,13 +49,14 @@ namespace PhoneNumbers.Tests.Parsers
         }
 
         [Theory]
+        [InlineData("500")]
         [InlineData("00000")]
         [InlineData("000000")]
         [InlineData("000499")]
         [InlineData("100501")]
         [InlineData("999999")]
         [InlineData("1000000")]
-        public void Range_Contains_False(string value) =>
+        public void Range_Fixed_Size_Contains_False(string value) =>
             Assert.False(NumberRange.Create("000500-100500").Contains(value));
 
         [Theory]
@@ -53,17 +64,36 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("000501")]
         [InlineData("100499")]
         [InlineData("100500")]
-        public void Range_Contains_True(string value) =>
+        public void Range_Fixed_Size_Contains_True(string value) =>
             Assert.True(NumberRange.Create("000500-100500").Contains(value));
+
+        [Theory]
+        [InlineData("500")]
+        [InlineData("00000")]
+        [InlineData("000000")]
+        [InlineData("000499")]
+        [InlineData("10050081")]
+        [InlineData("99999999")]
+        [InlineData("100000000")]
+        public void Range_Span_Contains_False(string value) =>
+            Assert.False(NumberRange.Create("000500-10050080").Contains(value));
+
+        [Theory]
+        [InlineData("000500")]
+        [InlineData("000501")]
+        [InlineData("10050079")]
+        [InlineData("10050080")]
+        public void Range_Span_Contains_True(string value) =>
+            Assert.True(NumberRange.Create("000500-10050080").Contains(value));
 
         [Theory]
         [InlineData("000499")]
         [InlineData("000501")]
-        public void Single_Value_Contains_False(string value) =>
+        public void Range_Single_Value_Contains_False(string value) =>
             Assert.False(NumberRange.Create("000500").Contains(value));
 
         [Fact]
-        public void Single_Value_Contains_True() =>
+        public void Range_Single_Value_Contains_True() =>
             Assert.True(NumberRange.Create("000500").Contains("000500"));
     }
 }
