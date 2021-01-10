@@ -19,8 +19,15 @@ namespace PhoneNumbers
             string areaCode,
             string localNumber,
             string geographicArea)
-            : base(countryInfo, areaCode, localNumber) =>
+            : base(countryInfo, areaCode, localNumber)
+        {
+            if (string.IsNullOrWhiteSpace(geographicArea))
+            {
+                throw new ArgumentException($"'{nameof(geographicArea)}' cannot be null or whitespace.", nameof(geographicArea));
+            }
+
             GeographicArea = geographicArea;
+        }
 
         /// <summary>
         /// Gets the name of the geographic area the phone number the area code is allocated to.

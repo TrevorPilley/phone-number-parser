@@ -1,3 +1,4 @@
+using System;
 using Xunit;
 
 namespace PhoneNumbers.Tests
@@ -18,6 +19,22 @@ namespace PhoneNumbers.Tests
             Assert.Equal("112233", phoneNumber.LocalNumber);
             Assert.Equal(PhoneNumberKind.MobilePhoneNumber, phoneNumber.PhoneNumberKind);
         }
+
+        [Fact]
+        public void Constructor_Throws_If_CountryInfo_Null() =>
+            Assert.Throws<ArgumentNullException>(() => new MobilePhoneNumber(null, "12345", "667788", true, true, true));
+
+        [Fact]
+        public void Constructor_Throws_If_LocalNumber_Empty() =>
+            Assert.Throws<ArgumentException>(() => new MobilePhoneNumber(CountryInfo.UK, "12345", "", true, true, true));
+
+        [Fact]
+        public void Constructor_Throws_If_LocalNumber_Null() =>
+            Assert.Throws<ArgumentException>(() => new MobilePhoneNumber(CountryInfo.UK, "12345", null, true, true, true));
+
+        [Fact]
+        public void Constructor_Throws_If_LocalNumber_Whitespace() =>
+            Assert.Throws<ArgumentException>(() => new MobilePhoneNumber(CountryInfo.UK, "12345", " ", true, true, true));
 
         [Fact]
         public void Equality_Both_Null()

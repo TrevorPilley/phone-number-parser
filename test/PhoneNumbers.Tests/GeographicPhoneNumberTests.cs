@@ -1,3 +1,4 @@
+using System;
 using Xunit;
 
 namespace PhoneNumbers.Tests
@@ -16,6 +17,34 @@ namespace PhoneNumbers.Tests
             Assert.Equal("667788", phoneNumber.LocalNumber);
             Assert.Equal(PhoneNumberKind.GeographicPhoneNumber, phoneNumber.PhoneNumberKind);
         }
+
+        [Fact]
+        public void Constructor_Throws_If_CountryInfo_Null() =>
+            Assert.Throws<ArgumentNullException>(() => new GeographicPhoneNumber(null, "12345", "667788", "N/A"));
+
+        [Fact]
+        public void Constructor_Throws_If_GeographicArea_Empty() =>
+            Assert.Throws<ArgumentException>(() => new GeographicPhoneNumber(CountryInfo.UK, "12345", "667788", ""));
+
+        [Fact]
+        public void Constructor_Throws_If_GeographicArea_Null() =>
+            Assert.Throws<ArgumentException>(() => new GeographicPhoneNumber(CountryInfo.UK, "12345", "667788", null));
+
+        [Fact]
+        public void Constructor_Throws_If_GeographicArea_Whitespace() =>
+            Assert.Throws<ArgumentException>(() => new GeographicPhoneNumber(CountryInfo.UK, "12345", "667788", " "));
+
+        [Fact]
+        public void Constructor_Throws_If_LocalNumber_Empty() =>
+            Assert.Throws<ArgumentException>(() => new GeographicPhoneNumber(CountryInfo.UK, "12345", "", "N/A"));
+
+        [Fact]
+        public void Constructor_Throws_If_LocalNumber_Null() =>
+            Assert.Throws<ArgumentException>(() => new GeographicPhoneNumber(CountryInfo.UK, "12345", null, "N/A"));
+
+        [Fact]
+        public void Constructor_Throws_If_LocalNumber_Whitespace() =>
+            Assert.Throws<ArgumentException>(() => new GeographicPhoneNumber(CountryInfo.UK, "12345", " ", "N/A"));
 
         [Fact]
         public void Equality_Both_Null()
