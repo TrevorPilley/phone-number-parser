@@ -68,7 +68,16 @@ The library currently supports parsing the following countries:
 
 Country | ISO 3116 Code | Geographic | Mobile | Non-Geographic
 --- | --- | --- | --- | ---
+Ireland | IE | Yes | Yes * | Yes
 United Kingdom | UK | Yes | Yes | Yes
+
+### Ireland
+
+- 01, 02, 04, 05, 06, 07, 08 and 09 numbers are supported.
+- 01, 02, 04, 05, 06, 07 (except 0700) and 09 numbers are geographically assigned so the geographic area is included.
+- Sets the `IsPager` and `IsVirtual` properties as appropriate for mobile phone numbers.
+- The `IsDataOnly` property is not currently set for Ireland mobile numbers.
+- Sets the `IsFreephone` property for non-geographical phone numbers which are freephone numbers (e.g. 0800).
 
 ### United Kingdom
 
