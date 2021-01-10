@@ -28,6 +28,7 @@ namespace PhoneNumbers
         {
             AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
             CallingCode = "+353",
+            Formatter = new IEPhoneNumberFormatter(),
             Iso3166Code = "IE",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8, 9 }),
             TrunkPrefix = "0",
