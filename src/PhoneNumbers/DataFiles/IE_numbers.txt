@@ -36,6 +36,7 @@ G|66|Tralee, Dingle, Killorglin, Cahirciveen|2000000-9989999|
 G|67|Nenagh|20000-99899|
 G|68|Listowel|20000-99899|
 G|69|Newcastle West|20000-99899|
+M|700||000000-999999|V
 G|71|Sligo, Manorhamilton, Carrick-on- Shannon|2000000-9989999|
 G|74|Letterkenny, Donegal, Dungloe, Buncrana|2000000-9989999|
 N|800||000000-999999|F
