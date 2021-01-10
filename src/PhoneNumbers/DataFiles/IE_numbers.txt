@@ -1,5 +1,5 @@
 G|1|Dublin|2000000-9989999|
-G|21|Cork, Coachford and Kinsale|20000-99899|
+G|21|Cork, Coachford and Kinsale|2000000-9989999|
 G|22|Mallow|20000-99899|
 G|23|Bandon|20000-99899,2000000-9989999|
 G|24|Youghal|20000-99899|
