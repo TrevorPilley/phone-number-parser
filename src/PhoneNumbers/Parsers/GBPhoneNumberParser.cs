@@ -85,7 +85,7 @@ namespace PhoneNumbers.Parsers
             var localNumber = nsnValue.Substring(areaCode.Length);
 
             var countryNumber = CountryNumbers
-                .SingleOrDefault(x => x.Kind == phoneNumberKind &&
+                .FirstOrDefault(x => x.Kind == phoneNumberKind &&
                     x.AreaCodeRanges!.Any(x => x.Contains(areaCode)) &&
                     x.LocalNumberRanges.Any(x => x.Contains(localNumber)));
 
