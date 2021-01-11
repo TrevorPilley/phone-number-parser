@@ -1,16 +1,20 @@
 # Contributing
 
+Contributions are welcome, however, please file an issue first and let's have a discussion before you open a pull request.
+
+## Building the project
+
+The project multi targets .NET Standard 2.0, 2.1 and .NET 5.0 so make sure you have the SDK's installed.
+
+Firstly clone or fork the repository.
+
+There is a `build.ps1` to build, test, view code coverage and create a nuget package on Windows and a `build.sh` for those on macOS (and hopefully linux).
+
 ## Rasising a bug
 
-Please raise bugs for any you might find, one day I'll get an issue template sorted but if you could at least provide details so I can reproduce it that will help improve the chances of it being fixed.
+Please raise bugs for any you might find, at some point I'll get an issue template sorted but if you could at least provide details so I can reproduce it that will help improve the chances of it being fixed.
 
 Before raising a bug, please check whether the issue still exists in the latest version and whether there is an existing issue already raised to avoid a duplicate.
-
-## Pull requests
-
-Pull requests are welcome but will be rejected unless they are to fix a bug or implement a feature and you've let me know in the issue that is what you plan to do.
-
-Any PRs that don't have an existing associated issue will be rejected so if there's a thing you want to do, add an issue and start the discussion before hand so I can offer suggestions and understand whether it's appropriate for the library.
 
 ## Adding a new country
 
