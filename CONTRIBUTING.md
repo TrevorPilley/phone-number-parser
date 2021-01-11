@@ -1,6 +1,20 @@
 # Contributing
 
+## Rasising a bug
+
+Please raise bugs for any you might find, one day I'll get an issue template sorted but if you could at least provide details so I can reproduce it that will help improve the chances of it being fixed.
+
+## Pull requests
+
+Pull requests are welcome but will be rejected unless they are to fix a bug or implement a feature and you've let me know in the issue that is what you plan to do.
+
+Any PRs that don't have an existing associated issue will be rejected so if there's a thing you want to do, add an issue and start the discussion before hand so I can offer suggestions and understand whether it's appropriate for the library.
+
 ## Adding a new country
+
+If you are adding a new country, please do the following.
+
+All features should be implemented in an isolated feature branch and pull requested against `main`, you will need to rebase before the PR will be accepted and the commits will be squashed into a single `Adds country X` commit to keep the repository history clean.
 
 ### Add the CountryInfo
 
