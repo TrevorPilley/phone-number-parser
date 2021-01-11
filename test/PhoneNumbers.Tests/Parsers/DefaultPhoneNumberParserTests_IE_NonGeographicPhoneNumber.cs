@@ -4,7 +4,7 @@ using Xunit;
 namespace PhoneNumbers.Tests.Parsers
 {
     /// <summary>
-    /// Contains unit tests for the <see cref="DefaultPhoneNumberParser"/> class for IE <see cref="NonGeographicPhoneNumber"/>s.
+    /// Contains unit tests for the <see cref="DefaultPhoneNumberParser"/> class for IE PhoneNumbers.
     /// </summary>
     public class DefaultPhoneNumberParserTests_IE_NonGeographicPhoneNumber
     {
@@ -13,7 +13,7 @@ namespace PhoneNumbers.Tests.Parsers
         [Theory]
         [InlineData("0800000000", "800", "000000")]
         [InlineData("0800999999", "800", "999999")]
-        public void Parse_Known_NonGeographicPhoneNumber_FreePhone(string value, string areaCode, string localNumber)
+        public void Parse_Known_NonGeographicPhoneNumber_Freephone(string value, string areaCode, string localNumber)
         {
             var phoneNumber = _parser.Parse(value).PhoneNumber;
 
