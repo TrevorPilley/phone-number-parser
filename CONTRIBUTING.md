@@ -51,3 +51,4 @@ The structre of the file must follow:
 ### Add a formatter
 
 1. If necessary, add a `{Iso3166Code}PhoneNumberFormatter` overriding the base methods as appropriate with unit tests.
+2. Set as the formatter for the country info `Formatter = new {Iso3166Code}PhoneNumberFormatter(),` and update the tests.
