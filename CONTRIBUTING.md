@@ -4,6 +4,8 @@
 
 Please raise bugs for any you might find, one day I'll get an issue template sorted but if you could at least provide details so I can reproduce it that will help improve the chances of it being fixed.
 
+Before raising a bug, please check whether the issue still exists in the latest version and whether there is an existing issue already raised to avoid a duplicate.
+
 ## Pull requests
 
 Pull requests are welcome but will be rejected unless they are to fix a bug or implement a feature and you've let me know in the issue that is what you plan to do.
