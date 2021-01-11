@@ -12,7 +12,9 @@ Add the namespace:
 using PhoneNumbers;
 ```
 
-Parsing a phone number is achieved via the `PhoneNumber.Parse` method (or alternatively or `PhoneNumber.TryParse`), there are 2 overloads:
+Parsing a phone number is achieved via the `PhoneNumber.Parse` method (or alternatively or `PhoneNumber.TryParse`). Any spaces, hyphens or other formatting in the input string is ignored.
+
+There are 2 overloads:
 
 ```csharp
 // If the phone number string is in international format (e.g. +XX):
@@ -22,6 +24,8 @@ PhoneNumber phoneNumber = PhoneNumber.Parse("+441142726444");
 // Specify the ISO 3166 Aplha-2 code for the country as the second parameter.
 PhoneNumber phoneNumber = PhoneNumber.Parse("01142726444", "GB");
 ```
+
+The resulting `PhoneNumber` has the following properties:
 
 ```csharp
 // PhoneNumber properties:
@@ -64,7 +68,7 @@ phoneNumber.ToString("N");                      // 01142726444   (format for nat
 
 ## Country support
 
-The library currently supports parsing the following countries:
+The library currently supports parsing phone numbers for the following countries and although best endeavours are made to adhere to published telephone numbering plans, depending on the accessibility of data there may be descepencies. If you happen to find any, please raise a bug.
 
 Country | ISO 3116 Code | Geographic | Mobile | Non-Geographic
 --- | --- | --- | --- | ---
@@ -81,11 +85,10 @@ United Kingdom | UK | Yes | Yes | Yes
 
 ### United Kingdom
 
+_note the ISO code for the United Kingdom is 'GB' rather than 'UK'._
+
 - 01, 02, 03, 07 and 08 numbers are supported.
 - 01 and 02 numbers are geographically assigned so the geographic area is included.
 - Sets the `IsDataOnly`, `IsPager` or `IsVirtual` properties as appropriate for mobile phone numbers.
 - Sets the `IsFreephone` property for non-geographical phone numbers which are freephone numbers (e.g. 0800 and 0808).
-- Best endeavours are made to adhere to allocated number ranges within geographic areas or mobile ranges however the range permitted within the library may exceed those allocated within the published Ofcom telephone numbering plan.
 - The UK parsing also includes Guernsey, Jersey and Isle of Man which although separate countries share UK phone numbers and also use the +44 calling code.
-
-_note the ISO code for the United Kingdom is 'GB' rather than 'UK'._
