@@ -84,7 +84,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0800999999", "800", "999999")]
         [InlineData("08080000000", "808", "0000000")]
         [InlineData("08089999999", "808", "9999999")]
-        public void Parse_Known_NonGeographicPhoneNumber_FreePhone(string value, string areaCode, string localNumber)
+        public void Parse_Known_NonGeographicPhoneNumber_Freephone(string value, string areaCode, string localNumber)
         {
             var phoneNumber = _parser.Parse(value).PhoneNumber;
 
