@@ -12,9 +12,9 @@ Any PRs that don't have an existing associated issue will be rejected so if ther
 
 ## Adding a new country
 
-If you are adding a new country, please do the following.
-
 All features should be implemented in an isolated feature branch and pull requested against `main`, you will need to rebase before the PR will be accepted and the commits will be squashed into a single `Adds country X` commit to keep the repository history clean.
+
+If you are adding a new country, please do the following.
 
 ### Add the CountryInfo
 
