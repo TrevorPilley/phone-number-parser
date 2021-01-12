@@ -77,7 +77,8 @@ The library currently supports parsing phone numbers for the following countries
 Country | Calling Code | ISO 3166 Code | Geographic | Mobile | Non-Geographic
 --- | --- | --- | --- | --- | ---
 Ireland | +353 | IE | Yes | Yes * | Yes
-United Kingdom | +44 | GB | Yes | Yes | Yes
+Italy | +39 | IT | tbc | tbc | tbc
+United Kingdom | +44 | UK | Yes | Yes | Yes
 
 ### Ireland
 
@@ -86,6 +87,10 @@ United Kingdom | +44 | GB | Yes | Yes | Yes
 - Sets the `IsPager` and `IsVirtual` properties as appropriate for mobile phone numbers.
 - The `IsDataOnly` property is not currently set for Ireland mobile numbers.
 - Sets the `IsFreephone` property for non-geographical phone numbers which are freephone numbers (e.g. 0800).
+
+### Italy
+
+-
 
 ### United Kingdom
 
