@@ -77,7 +77,7 @@ The library currently supports parsing phone numbers for the following countries
 Country | Calling Code | ISO 3166 Code | Geographic | Mobile | Non-Geographic
 --- | --- | --- | --- | --- | ---
 Ireland | +353 | IE | Yes | Yes * | Yes
-United Kingdom | +44 | UK | Yes | Yes | Yes
+United Kingdom | +44 | GB | Yes | Yes | Yes
 
 ### Ireland
 
