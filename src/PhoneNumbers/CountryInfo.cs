@@ -30,6 +30,7 @@ namespace PhoneNumbers
             Formatter = new FRPhoneNumberFormatter(),
             Iso3166Code = "FR",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
+            TrunkPrefix = "0",
         };
 
         /// <summary>
