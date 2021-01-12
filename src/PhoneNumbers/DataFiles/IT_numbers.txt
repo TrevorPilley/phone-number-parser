@@ -1,1 +1,43 @@
-
+G|010|Genoa|
+G|011|Turin|
+G|0122|Turin (Susa Valley)|
+G|0123|Turin (Lanzo Valleys)|
+G|0124|Turin (Rivarolo Canavese and Orco Valley)|
+G|0125|Turin (Ivrea)|
+G|0131|Province of Alessandria|
+G|0141|Province of Asti|
+G|015|Province of Biella|
+G|0161|Province of Vercelli|
+G|0163|Province of Vercelli (Valsesia)|
+G|0165|Aosta Valley (Aosta and Courmayeur)|
+G|0166|Aosta Valley (Cervinia)|
+G|0171|Province of Cuneo|
+G|0183|Province of Imperia|
+G|0184|Province of Imperia (Sanremo)|
+G|0185|Metropolitan City of Genoa|
+G|0187|Province of La Spezia and Cinque Terre
+G|019|Province of Savona|
+G|02|Milan|
+G|030|City of Brescia, Franciacorta, valle Trompia and southern Province|
+G|031|Province of Como|
+G|0321|Province of Novara|
+G|0322|Province of Novara (Borgomanero)|
+G|0324|Province of Verbano-Cusio-Ossola|
+G|0331|Province of Varese (Busto Arsizio)|
+G|0332|Province of Varese|
+G|0341|Province of Lecco|
+G|0342|Province of Sondrio|
+G|0343|Province of Sondrio (Chiavenna)|
+G|0344|Province of Como|
+G|0345|Province of Bergamo|
+G|035|City of Bergamo|
+G|0362|Province of Monza|
+G|0363|Provinces of Bergamo and Cremona|
+G|0364|Province of Brescia (Valle Camonica and Breno)|
+G|0365|Province of Brescia (Lake Garda and Valle Sabbia)|
+G|0371|City and Province of Lodi|
+G|0372,0373|Province of Cremona
+G|0375|Province of Cremona|
+G|0376|Province of Mantua|
+G|0382|Province of Pavia|
+G|039|Province of Monza and Brianza|
