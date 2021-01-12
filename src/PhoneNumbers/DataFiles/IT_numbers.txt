@@ -145,6 +145,10 @@ G|0734|Fermo|
 G|0735|San Benedetto del Tronto|
 G|0736|Ascoli Piceno|
 G|0737|Camerino|
+G|0742|Foligno|
+G|0742|Spoleto|
+G|0743|Terni|
+G|0746|Rieti|
 G|075|Perugia|
 G|0761|Viterbo|
 G|0765|Rieti (Poggio Mirteto)|
