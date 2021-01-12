@@ -95,4 +95,4 @@ _note the ISO code for the United Kingdom is 'GB' rather than 'UK'._
 - 01 and 02 numbers are geographically assigned so the geographic area is included.
 - Sets the `IsDataOnly`, `IsPager` or `IsVirtual` properties as appropriate for mobile phone numbers.
 - Sets the `IsFreephone` property for non-geographical phone numbers which are freephone numbers (e.g. 0800 and 0808).
-- The UK parsing also includes Guernsey, Jersey and Isle of Man which although separate countries share UK phone numbers and also use the +44 calling code.
+- The UK parsing also includes Guernsey, Jersey and the Isle of Man which although separate countries share UK phone numbers and also use the +44 calling code.
