@@ -4,7 +4,7 @@ Contributions are welcome, however, please file an issue first and let's have a 
 
 ## Building the project
 
-The project multi targets .NET Standard 2.0, 2.1 and .NET 5.0 so make sure you have the SDK's installed.
+The project multi targets .NET Standard 2.0, 2.1 and .NET 5.0 so make sure you have the relevant SDK's installed.
 
 Firstly clone or fork the repository.
 
