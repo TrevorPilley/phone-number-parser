@@ -74,7 +74,7 @@ phoneNumber.ToString("N");                      // 01142726444   (format for nat
 
 The library currently supports parsing phone numbers for the following countries and although best endeavours are made to adhere to published telephone numbering plans, depending on the accessibility of data there may be descepencies. If you happen to find any, please raise a bug.
 
-Country | Calling Code | ISO 3116 Code | Geographic | Mobile | Non-Geographic
+Country | Calling Code | ISO 3166 Code | Geographic | Mobile | Non-Geographic
 --- | --- | --- | --- | --- | ---
 Ireland | +353 | IE | Yes | Yes * | Yes
 United Kingdom | +44 | UK | Yes | Yes | Yes
