@@ -12,52 +12,74 @@ G|0143|Novi Ligure|
 G|0144|Acqui Terme|
 G|015|Biella|
 G|0161|Vercelli|
-G|0163|Vercelli (Valsesia)|
-G|0165|Aosta Valley (Aosta and Courmayeur)|
-G|0166|Aosta Valley (Cervinia)|
+G|0163|Borgosesia|
+G|0165|Aosta|
+G|0166|St. Vincent|
 G|0171|Cuneo|
+G|0172|Savigliano|
+G|0173|Alba|
+G|0174|Mondovì|
+G|0175|Saluzzo|
+G|0182|Albenga|
 G|0183|Imperia|
-G|0184|Imperia (Sanremo)|
-G|0185|Metropolitan Genoa|
-G|0187|La Spezia and Cinque Terre
+G|0184|San remo|
+G|0185|Rapallo|
+G|0187|La Spezia|
 G|019|Savona|
 G|02|Milan|
-G|030|Brescia, Franciacorta, valle Trompia and southern Province|
+G|030|Brescia|
 G|031|Como|
 G|0321|Novara|
-G|0322|Novara (Borgomanero)|
-G|0324|Verbano-Cusio-Ossola|
-G|0331|Varese (Busto Arsizio)|
+G|0322|Arona|
+G|0323|Baveno|
+G|0324|Domodossola|
+G|0331|Busto Arsizio|
 G|0332|Varese|
 G|0341|Lecco|
 G|0342|Sondrio|
-G|0343|Sondrio (Chiavenna)|
-G|0344|Como|
-G|0345|Bergamo|
+G|0343|Chiavenna|
+G|0344|Menaggio|
+G|0345|San Pellegrino Terme|
+G|0346|Clusone|
 G|035|Bergamo|
-G|0362|Monza|
-G|0363|Provinces of Bergamo and Cremona|
-G|0364|Brescia (Valle Camonica and Breno)|
-G|0365|Brescia (Lake Garda and Valle Sabbia)|
-G|0371|City and Lodi|
-G|0372,0373|Cremona
-G|0375|Cremona|
-G|0376|Mantua|
+G|0362|Seregno|
+G|0363|Treviglio|
+G|0364|Breno|
+G|0365|Salò|
+G|0371|Lodi|
+G|0372|Cremona|
+G|0373|Crema|
+G|0374|Soresina|
+G|0375|Casalmaggiore|
+G|0376|Mantova|
+G|0377|Codogno|
+G|0381|Vigevano|
 G|0382|Pavia|
-G|039|Monza and Brianza|
+G|0383|Voghera|
+G|0384|Mortara|
+G|0385|Stradella|
+G|0386|Ostiglia|
+G|039|Monza|
 G|040|Trieste|
-G|041|Venice|
-G|0421|Venice (San Donà di Piave)|
+G|041|Venezia|
+G|0421|San Donà di Piave|
 G|0422|Treviso|
-G|0423|Treviso (Montebelluna)|
-G|0424|Vicenza (Bassano del Grappa)|
-G|0425|Rovigo (Rovigo)|
-G|0426|Rovigo (Adria)|
-G|0429|Padua (Euganean Hills)|
-G|0431|Udine (Cervignano del Friuli)|
+G|0423|Montebelluna|
+G|0424|Bassano del Grappa|
+G|0425|Rovigo|
+G|0426|Adria|
+G|0427|Spilimbergo|
+G|0428|Tarvisio|
+G|0429|Este|
+G|0431|Cervignano del Friuli|
 G|0432|Udine|
+G|0433|Tolmezzo|
 G|0434|Pordenone|
-G|0438|Treviso (Conegliano, Vittorio Veneto and Pieve di Soligo)|
+G|0435|Pieve di Cadore|
+G|0436|Cortina d'Ampezzo|
+G|0437|Belluno|
+G|0438|Conegliano|
+G|0439|Feltre|
 G|0444|Vicenza|
 G|0445|Vicenza (Schio)|
 G|045|Verona|
