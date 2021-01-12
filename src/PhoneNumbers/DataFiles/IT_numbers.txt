@@ -125,25 +125,26 @@ G|0573|Pistoia|
 G|0574|Prato|
 G|0575|Arezzo|
 G|0577|Siena|
-G|0578|Southern Siena|
+G|0578|Chianciano Terme|
 G|0583|Lucca|
-G|0584|Viareggio and Versilia|
-G|0585|Massa and Carrara|
+G|0584|Viareggio|
+G|0585|Massa|
 G|0586|Livorno|
 G|0587|Pontedera|
 G|0588|Volterra|
 G|059|Modena|
-G|06|Rome (including Vatican City)|
+G|06|Roma|
 G|070|Cagliari|
 G|071|Ancona|
-G|0721|Pesaro and Urbino|
-G|0731|Ancona (Jesi)|
-G|0732|Ancona (Fabriano)|
+G|0721|Pesaro|
+G|0722|Urbino|
+G|0731|Jesi|
+G|0732|Fabriano|
 G|0733|Macerata|
 G|0734|Fermo|
-G|0735|Ascoli Piceno (San Benedetto del Tronto)|
+G|0735|San Benedetto del Tronto|
 G|0736|Ascoli Piceno|
-G|0737|Macerata (Camerino)|
+G|0737|Camerino|
 G|075|Perugia|
 G|0761|Viterbo|
 G|0765|Rieti (Poggio Mirteto)|
