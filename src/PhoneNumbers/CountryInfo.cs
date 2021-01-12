@@ -36,6 +36,17 @@ namespace PhoneNumbers
         };
 
         /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Italy.
+        /// </summary>
+        public static CountryInfo IT { get; } = new()
+        {
+            AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2 }),
+            CallingCode = "+39",
+            Iso3166Code = "IT",
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8, 9, 10, 11 }),
+        };
+
+        /// <summary>
         /// Gets the <see cref="CountryInfo"/> for the United Kingdom.
         /// </summary>
         /// <remarks>Covers England, Scotland, Wales and Northern Ireland, plus at a telephone level Guernsey, Jersey and the Isle of Man.</remarks>
