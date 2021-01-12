@@ -1,232 +1,234 @@
-G|010|Genova|
-G|011|Turin|
-G|0121|Pinerolo|
-G|0122|Susa|
-G|0123|Lanzo Torinese|
-G|0124|Rivarolo Canavese|
-G|0125|Ivrea|
-G|0131|Alessandria|
-G|0141|Asti|
-G|0142|Casale Monferrato|
-G|0143|Novi Ligure|
-G|0144|Acqui Terme|
-G|015|Biella|
-G|0161|Vercelli|
-G|0163|Borgosesia|
-G|0165|Aosta|
-G|0166|St. Vincent|
-G|0171|Cuneo|
-G|0172|Savigliano|
-G|0173|Alba|
-G|0174|Mondovì|
-G|0175|Saluzzo|
-G|0182|Albenga|
-G|0183|Imperia|
-G|0184|San remo|
-G|0185|Rapallo|
-G|0187|La Spezia|
-G|019|Savona|
-G|02|Milan|
-G|030|Brescia|
-G|031|Como|
-G|0321|Novara|
-G|0322|Arona|
-G|0323|Baveno|
-G|0324|Domodossola|
-G|0331|Busto Arsizio|
-G|0332|Varese|
-G|0341|Lecco|
-G|0342|Sondrio|
-G|0343|Chiavenna|
-G|0344|Menaggio|
-G|0345|San Pellegrino Terme|
-G|0346|Clusone|
-G|035|Bergamo|
-G|0362|Seregno|
-G|0363|Treviglio|
-G|0364|Breno|
-G|0365|Salò|
-G|0371|Lodi|
-G|0372|Cremona|
-G|0373|Crema|
-G|0374|Soresina|
-G|0375|Casalmaggiore|
-G|0376|Mantova|
-G|0377|Codogno|
-G|0381|Vigevano|
-G|0382|Pavia|
-G|0383|Voghera|
-G|0384|Mortara|
-G|0385|Stradella|
-G|0386|Ostiglia|
-G|039|Monza|
-G|040|Trieste|
-G|041|Venezia|
-G|0421|San Donà di Piave|
-G|0422|Treviso|
-G|0423|Montebelluna|
-G|0424|Bassano del Grappa|
-G|0425|Rovigo|
-G|0426|Adria|
-G|0427|Spilimbergo|
-G|0428|Tarvisio|
-G|0429|Este|
-G|0431|Cervignano del Friuli|
-G|0432|Udine|
-G|0433|Tolmezzo|
-G|0434|Pordenone|
-G|0435|Pieve di Cadore|
-G|0436|Cortina d'Ampezzo|
-G|0437|Belluno|
-G|0438|Conegliano|
-G|0439|Feltre|
-G|0442|Legnago|
-G|0444|Vicenza|
-G|0445|Schio|
-G|045|Verona|
-G|0461|Trento|
-G|0462|Cavalese|
-G|0463|Cles|
-G|0464|Rovereto|
-G|0465|Tione di Trento|
-G|0471|Bolzano|
-G|0472|Bressanone|
-G|0473|Bressanone|
-G|0474|Brunico|
-G|0481|Gorizia|
-G|049|Padova|
-G|050|Pisa|
-G|051|Bologna|
-G|0521|Parma|
-G|0522|Reggio Emilia|
-G|0523|Piacenza|
-G|0524|Fidenza|
-G|0525|Fornovo di Taro|
-G|0532|Ferrara|
-G|0533|Comacchio|
-G|0534|Porretta Terme|
-G|0535|Mirandola|
-G|0536|Sassuolo|
-G|0541|Rimini|
-G|0542|Imola|
-G|0543|Forlì|
-G|0544|Ravenna|
-G|0545|Lugo|
-G|0546|Faenza|
-G|0547|Cesena|
-G|0549|Republic di San Marino|
-G|055|Firenze|
-G|0564|Grosseto|
-G|0565|Piombino|
-G|0566|Follonica|
-G|0571|Empoli|
-G|0572|Montecatini Terme|
-G|0573|Pistoia|
-G|0574|Prato|
-G|0575|Arezzo|
-G|0577|Siena|
-G|0578|Chianciano Terme|
-G|0583|Lucca|
-G|0584|Viareggio|
-G|0585|Massa|
-G|0586|Livorno|
-G|0587|Pontedera|
-G|0588|Volterra|
-G|059|Modena|
-G|06|Roma|
-G|070|Cagliari|
-G|071|Ancona|
-G|0721|Pesaro|
-G|0722|Urbino|
-G|0731|Jesi|
-G|0732|Fabriano|
-G|0733|Macerata|
-G|0734|Fermo|
-G|0735|San Benedetto del Tronto|
-G|0736|Ascoli Piceno|
-G|0737|Camerino|
-G|0742|Foligno|
-G|0742|Spoleto|
-G|0743|Terni|
-G|0746|Rieti|
-G|075|Perugia|
-G|0761|Viterbo|
-G|0763|Orvieto|
-G|0765|Poggio Mirteto|
-G|0766|Civitavecchia|
-G|0771|Formia|
-G|0773|Latina|
-G|0774|Tivoli|
-G|0775|Frosinone|
-G|0776|Cassino|
-G|0781|Iglesias|
-G|0782|Lanusei|
-G|0783|Oristano|
-G|0784|Nuoro|
-G|0785|Macomer|
-G|0789|Olbia)
-G|079|Sassari|
-G|080|Bari|
-G|081|Naples|
-G|0823|Caserta|
-G|0824|Benevento|
-G|0825|Avellino|
-G|0827|San Angelo dei Lombardi|
-G|0828|Battipaglia|
-G|0831|Brindisi|
-G|0832|Lecce|
-G|0833|Gallipoli|
-G|0835|Matera|
-G|0836|Maglie|
-G|085|Pescara|
-G|0861|Teramo|
-G|0862|L'Aquila|
-G|0863|Avezzano|
-G|0863|Sulmona|
-G|0865|Isernia|
-G|0871|Chieti|
-G|0872|Lanciano|
-G|0873|Vasto|
-G|0874|Campobasso|
-G|0874|Termoli|
-G|0881|Foggia|
-G|0882|San Severo|
-G|0883|Andria|
-G|0884|Manfredonia|
-G|0884|Cerignola|
-G|089|Salerno|
-G|090|Messina|
-G|091|Palermo|
-G|0921|Cefalù|
-G|0922|Agrigento|
-G|0923|Trapani|
-G|0924|Alcamo|
-G|0925|Sciacca|
-G|0931|Siracusa|
-G|0932|Ragusa|
-G|0933|Caltagirone|
-G|0934|Caltanissetta|
-G|0935|Enna|
-G|0941|Patti|
-G|0942|Taormina|
-G|095|Catania|
-G|0961|Catanzaro|
-G|0962|Crotone|
-G|0963|Vibo Valentia|
-G|0964|Locri|
-G|0965|Reggio Calabria|
-G|0966|Palmi|
-G|0967|Soverato|
-G|0968|Lamezia Terme|
-G|0971|Potenza|
-G|0972|Melfi|
-G|0973|Lagonegro|
-G|0974|Vallo della Lucania|
-G|0975|Sala Consilina|
-G|0976|Muro Lucano|
-G|0981|Castrovillari|
-G|0982|Paola|
-G|0983|Rossano|
-G|0984|Cosenza|
-G|0985|Scalea|
-G|099|Taranto|
+G|010|Genova||
+G|011|Turin||
+G|0121|Pinerolo||
+G|0122|Susa||
+G|0123|Lanzo Torinese||
+G|0124|Rivarolo Canavese||
+G|0125|Ivrea||
+G|0131|Alessandria||
+G|0141|Asti||
+G|0142|Casale Monferrato||
+G|0143|Novi Ligure||
+G|0144|Acqui Terme||
+G|015|Biella||
+G|0161|Vercelli||
+G|0163|Borgosesia||
+G|0165|Aosta||
+G|0166|St. Vincent||
+G|0171|Cuneo||
+G|0172|Savigliano||
+G|0173|Alba||
+G|0174|Mondovì||
+G|0175|Saluzzo||
+G|0182|Albenga||
+G|0183|Imperia||
+G|0184|San remo||
+G|0185|Rapallo||
+G|0187|La Spezia||
+G|019|Savona||
+G|02|Milan||
+G|030|Brescia||
+G|031|Como||
+G|0321|Novara||
+G|0322|Arona||
+G|0323|Baveno||
+G|0324|Domodossola||
+G|0331|Busto Arsizio||
+G|0332|Varese||
+G|0341|Lecco||
+G|0342|Sondrio||
+G|0343|Chiavenna||
+G|0344|Menaggio||
+G|0345|San Pellegrino Terme||
+G|0346|Clusone||
+G|035|Bergamo||
+G|0362|Seregno||
+G|0363|Treviglio||
+G|0364|Breno||
+G|0365|Salò||
+G|0371|Lodi||
+G|0372|Cremona||
+G|0373|Crema||
+G|0374|Soresina||
+G|0375|Casalmaggiore||
+G|0376|Mantova||
+G|0377|Codogno||
+G|0381|Vigevano||
+G|0382|Pavia||
+G|0383|Voghera||
+G|0384|Mortara||
+G|0385|Stradella||
+G|0386|Ostiglia||
+G|039|Monza||
+G|040|Trieste||
+G|041|Venezia||
+G|0421|San Donà di Piave||
+G|0422|Treviso||
+G|0423|Montebelluna||
+G|0424|Bassano del Grappa||
+G|0425|Rovigo||
+G|0426|Adria||
+G|0427|Spilimbergo||
+G|0428|Tarvisio||
+G|0429|Este||
+G|0431|Cervignano del Friuli||
+G|0432|Udine||
+G|0433|Tolmezzo||
+G|0434|Pordenone||
+G|0435|Pieve di Cadore||
+G|0436|Cortina d'Ampezzo||
+G|0437|Belluno||
+G|0438|Conegliano||
+G|0439|Feltre||
+G|0442|Legnago||
+G|0444|Vicenza||
+G|0445|Schio||
+G|045|Verona||
+G|0461|Trento||
+G|0462|Cavalese||
+G|0463|Cles||
+G|0464|Rovereto||
+G|0465|Tione di Trento||
+G|0471|Bolzano||
+G|0472|Bressanone||
+G|0473|Bressanone||
+G|0474|Brunico||
+G|0481|Gorizia||
+G|049|Padova||
+G|050|Pisa||
+G|051|Bologna||
+G|0521|Parma||
+G|0522|Reggio Emilia||
+G|0523|Piacenza||
+G|0524|Fidenza||
+G|0525|Fornovo di Taro||
+G|0532|Ferrara||
+G|0533|Comacchio||
+G|0534|Porretta Terme||
+G|0535|Mirandola||
+G|0536|Sassuolo||
+G|0541|Rimini||
+G|0542|Imola||
+G|0543|Forlì||
+G|0544|Ravenna||
+G|0545|Lugo||
+G|0546|Faenza||
+G|0547|Cesena||
+G|0549|Republic di San Marino||
+G|055|Firenze||
+G|0564|Grosseto||
+G|0565|Piombino||
+G|0566|Follonica||
+G|0571|Empoli||
+G|0572|Montecatini Terme||
+G|0573|Pistoia||
+G|0574|Prato||
+G|0575|Arezzo||
+G|0577|Siena||
+G|0578|Chianciano Terme||
+G|0583|Lucca||
+G|0584|Viareggio||
+G|0585|Massa||
+G|0586|Livorno||
+G|0587|Pontedera||
+G|0588|Volterra||
+G|059|Modena||
+G|06|Roma||
+G|070|Cagliari||
+G|071|Ancona||
+G|0721|Pesaro||
+G|0722|Urbino||
+G|0731|Jesi||
+G|0732|Fabriano||
+G|0733|Macerata||
+G|0734|Fermo||
+G|0735|San Benedetto del Tronto||
+G|0736|Ascoli Piceno||
+G|0737|Camerino||
+G|0742|Foligno||
+G|0742|Spoleto||
+G|0743|Terni||
+G|0746|Rieti||
+G|075|Perugia||
+G|0761|Viterbo||
+G|0763|Orvieto||
+G|0765|Poggio Mirteto||
+G|0766|Civitavecchia||
+G|0771|Formia||
+G|0773|Latina||
+G|0774|Tivoli||
+G|0775|Frosinone||
+G|0776|Cassino||
+G|0781|Iglesias||
+G|0782|Lanusei||
+G|0783|Oristano||
+G|0784|Nuoro||
+G|0785|Macomer||
+G|0789|Olbia)|
+G|079|Sassari||
+G|080|Bari||
+G|081|Naples||
+G|0823|Caserta||
+G|0824|Benevento||
+G|0825|Avellino||
+G|0827|San Angelo dei Lombardi||
+G|0828|Battipaglia||
+G|0831|Brindisi||
+G|0832|Lecce||
+G|0833|Gallipoli||
+G|0835|Matera||
+G|0836|Maglie||
+G|085|Pescara||
+G|0861|Teramo||
+G|0862|L'Aquila||
+G|0863|Avezzano||
+G|0863|Sulmona||
+G|0865|Isernia||
+G|0871|Chieti||
+G|0872|Lanciano||
+G|0873|Vasto||
+G|0874|Campobasso||
+G|0874|Termoli||
+G|0881|Foggia||
+G|0882|San Severo||
+G|0883|Andria||
+G|0884|Manfredonia||
+G|0884|Cerignola||
+G|089|Salerno||
+G|090|Messina||
+G|091|Palermo||
+G|0921|Cefalù||
+G|0922|Agrigento||
+G|0923|Trapani||
+G|0924|Alcamo||
+G|0925|Sciacca||
+G|0931|Siracusa||
+G|0932|Ragusa||
+G|0933|Caltagirone||
+G|0934|Caltanissetta||
+G|0935|Enna||
+G|0941|Patti||
+G|0942|Taormina||
+G|095|Catania||
+G|0961|Catanzaro||
+G|0962|Crotone||
+G|0963|Vibo Valentia||
+G|0964|Locri||
+G|0965|Reggio Calabria||
+G|0966|Palmi||
+G|0967|Soverato||
+G|0968|Lamezia Terme||
+G|0971|Potenza||
+G|0972|Melfi||
+G|0973|Lagonegro||
+G|0974|Vallo della Lucania||
+G|0975|Sala Consilina||
+G|0976|Muro Lucano||
+G|0981|Castrovillari||
+G|0982|Paola||
+G|0983|Rossano||
+G|0984|Cosenza||
+G|0985|Scalea||
+G|099|Taranto||
+M|31||00000000-99999999|
+M|32-39||0000000-9999999,00000000-99999999|
