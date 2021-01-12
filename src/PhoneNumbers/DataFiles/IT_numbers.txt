@@ -1,43 +1,158 @@
-G|010|Genoa|
+G|010|Genova|
 G|011|Turin|
-G|0122|Turin (Susa Valley)|
-G|0123|Turin (Lanzo Valleys)|
-G|0124|Turin (Rivarolo Canavese and Orco Valley)|
-G|0125|Turin (Ivrea)|
-G|0131|Province of Alessandria|
-G|0141|Province of Asti|
-G|015|Province of Biella|
-G|0161|Province of Vercelli|
-G|0163|Province of Vercelli (Valsesia)|
+G|0121|Pinerolo|
+G|0122|Susa|
+G|0123|Lanzo Torinese|
+G|0124|Rivarolo Canavese|
+G|0125|Ivrea|
+G|0131|Alessandria|
+G|0141|Asti|
+G|015|Biella|
+G|0161|Vercelli|
+G|0163|Vercelli (Valsesia)|
 G|0165|Aosta Valley (Aosta and Courmayeur)|
 G|0166|Aosta Valley (Cervinia)|
-G|0171|Province of Cuneo|
-G|0183|Province of Imperia|
-G|0184|Province of Imperia (Sanremo)|
-G|0185|Metropolitan City of Genoa|
-G|0187|Province of La Spezia and Cinque Terre
-G|019|Province of Savona|
+G|0171|Cuneo|
+G|0183|Imperia|
+G|0184|Imperia (Sanremo)|
+G|0185|Metropolitan Genoa|
+G|0187|La Spezia and Cinque Terre
+G|019|Savona|
 G|02|Milan|
-G|030|City of Brescia, Franciacorta, valle Trompia and southern Province|
-G|031|Province of Como|
-G|0321|Province of Novara|
-G|0322|Province of Novara (Borgomanero)|
-G|0324|Province of Verbano-Cusio-Ossola|
-G|0331|Province of Varese (Busto Arsizio)|
-G|0332|Province of Varese|
-G|0341|Province of Lecco|
-G|0342|Province of Sondrio|
-G|0343|Province of Sondrio (Chiavenna)|
-G|0344|Province of Como|
-G|0345|Province of Bergamo|
-G|035|City of Bergamo|
-G|0362|Province of Monza|
+G|030|Brescia, Franciacorta, valle Trompia and southern Province|
+G|031|Como|
+G|0321|Novara|
+G|0322|Novara (Borgomanero)|
+G|0324|Verbano-Cusio-Ossola|
+G|0331|Varese (Busto Arsizio)|
+G|0332|Varese|
+G|0341|Lecco|
+G|0342|Sondrio|
+G|0343|Sondrio (Chiavenna)|
+G|0344|Como|
+G|0345|Bergamo|
+G|035|Bergamo|
+G|0362|Monza|
 G|0363|Provinces of Bergamo and Cremona|
-G|0364|Province of Brescia (Valle Camonica and Breno)|
-G|0365|Province of Brescia (Lake Garda and Valle Sabbia)|
-G|0371|City and Province of Lodi|
-G|0372,0373|Province of Cremona
-G|0375|Province of Cremona|
-G|0376|Province of Mantua|
-G|0382|Province of Pavia|
-G|039|Province of Monza and Brianza|
+G|0364|Brescia (Valle Camonica and Breno)|
+G|0365|Brescia (Lake Garda and Valle Sabbia)|
+G|0371|City and Lodi|
+G|0372,0373|Cremona
+G|0375|Cremona|
+G|0376|Mantua|
+G|0382|Pavia|
+G|039|Monza and Brianza|
+G|040|Trieste|
+G|041|Venice|
+G|0421|Venice (San Donà di Piave)|
+G|0422|Treviso|
+G|0423|Treviso (Montebelluna)|
+G|0424|Vicenza (Bassano del Grappa)|
+G|0425|Rovigo (Rovigo)|
+G|0426|Rovigo (Adria)|
+G|0429|Padua (Euganean Hills)|
+G|0431|Udine (Cervignano del Friuli)|
+G|0432|Udine|
+G|0434|Pordenone|
+G|0438|Treviso (Conegliano, Vittorio Veneto and Pieve di Soligo)|
+G|0444|Vicenza|
+G|0445|Vicenza (Schio)|
+G|045|Verona|
+G|0461|Trento|
+G|0471|Bolzano|
+G|0481|Gorizia|
+G|049|Padua|
+G|050|Pisa|
+G|051|Bologna|
+G|0521|Parma|
+G|0522|Reggio Emilia|
+G|0523|Piacenza|
+G|0532|Ferrara|
+G|0535|Mirandola|
+G|0536|Sassuolo, Formigine, Fiorano Modenese, Maranello and Prigniano sulla Secchia|
+G|0541|Rimini|
+G|0543|Forlì-Cesena (Forlì area)|
+G|0544|Ravenna|
+G|0545|Ravenna|
+G|0547|Forlì-Cesena (Cesena area)|
+G|0549|Republic of San Marino|
+G|055|Florence|
+G|0564|Grosseto|
+G|0565|Sout Livorno and Isola d'Elba|
+G|0566|District of Follonica and northern Grosseto|
+G|0571|District of Empoli|
+G|0572|District of Montecatini Terme|
+G|0573|Pistoia|
+G|0574|Prato|
+G|0575|Arezzo|
+G|0577|Siena|
+G|0578|Southern Siena|
+G|0583|Lucca|
+G|0584|Viareggio and Versilia|
+G|0585|Massa and Carrara|
+G|0586|Livorno|
+G|0587|Pontedera|
+G|0588|Volterra|
+G|059|Modena|
+G|06|Rome (including Vatican City)|
+G|070|Cagliari|
+G|071|Ancona|
+G|0721|Pesaro and Urbino|
+G|0731|Ancona (Jesi)|
+G|0732|Ancona (Fabriano)|
+G|0733|Macerata|
+G|0734|Fermo|
+G|0735|Ascoli Piceno (San Benedetto del Tronto)|
+G|0736|Ascoli Piceno|
+G|0737|Macerata (Camerino)|
+G|075|Perugia|
+G|0761|Viterbo|
+G|0765|Rieti (Poggio Mirteto)|
+G|0771|Latina – areas of (Formia and Fondi)|
+G|0773|Latina|
+G|0774|Rome (Tivoli)|
+G|0775|Frosinone|
+G|0776|Frosinone (Cassino)|
+G|0782|Nuoro (Ogliastra)|
+G|0783|Oristano|
+G|0784|Nuoro|
+G|0789|Sassari - areas of (Olbia and Costa Smeralda)
+G|079|Sassari|
+G|080|Bari|
+G|081|Naples|
+G|0823|Caserta|
+G|0824|Benevento|
+G|0825|Avellino|
+G|0832|Lecce|
+G|085|Pescara|
+G|0861|Teramo|
+G|0862|L'Aquila|
+G|0865|Isernia|
+G|0874|Campobasso|
+G|0881|Foggia|
+G|0882|Foggia - areas of (Apricena, San Giovanni Rotondo and Tremiti isles)|
+G|0883|Barletta-Andria-Trani|
+G|0884|Foggia - areas of (Rodi Garganico, Vieste and Manfredonia)|
+G|0835|Matera|
+G|089|Salerno|
+G|090|Messina|
+G|091|Palermo|
+G|0921|Palermo|
+G|0931|Siracusa|
+G|0932|Ragusa|
+G|0933|Caltanissetta|
+G|0923|Trapani|
+G|0922|Agrigento|
+G|0925|Agrigento|
+G|0934|Provinces of Caltanissetta and Enna|
+G|0941|Novara di Sicilia|
+G|0942|Messina (Taormina)|
+G|095|Catania|
+G|0961|Catanzaro|
+G|0962|Crotone|
+G|0963|Vibo Valentia|
+G|0965|Reggio Calabria|
+G|0974|Salerno|
+G|0975|Potenza|
+G|0984|Cosenza (Cosenza)|
+G|099|Taranto|
