@@ -151,52 +151,82 @@ G|0743|Terni|
 G|0746|Rieti|
 G|075|Perugia|
 G|0761|Viterbo|
-G|0765|Rieti (Poggio Mirteto)|
-G|0771|Latina – areas of (Formia and Fondi)|
+G|0763|Orvieto|
+G|0765|Poggio Mirteto|
+G|0766|Civitavecchia|
+G|0771|Formia|
 G|0773|Latina|
-G|0774|Rome (Tivoli)|
+G|0774|Tivoli|
 G|0775|Frosinone|
-G|0776|Frosinone (Cassino)|
-G|0782|Nuoro (Ogliastra)|
+G|0776|Cassino|
+G|0781|Iglesias|
+G|0782|Lanusei|
 G|0783|Oristano|
 G|0784|Nuoro|
-G|0789|Sassari - areas of (Olbia and Costa Smeralda)
+G|0785|Macomer|
+G|0789|Olbia)
 G|079|Sassari|
 G|080|Bari|
 G|081|Naples|
 G|0823|Caserta|
 G|0824|Benevento|
 G|0825|Avellino|
+G|0827|San Angelo dei Lombardi|
+G|0828|Battipaglia|
+G|0831|Brindisi|
 G|0832|Lecce|
+G|0833|Gallipoli|
+G|0835|Matera|
+G|0836|Maglie|
 G|085|Pescara|
 G|0861|Teramo|
 G|0862|L'Aquila|
+G|0863|Avezzano|
+G|0863|Sulmona|
 G|0865|Isernia|
+G|0871|Chieti|
+G|0872|Lanciano|
+G|0873|Vasto|
 G|0874|Campobasso|
+G|0874|Termoli|
 G|0881|Foggia|
-G|0882|Foggia - areas of (Apricena, San Giovanni Rotondo and Tremiti isles)|
-G|0883|Barletta-Andria-Trani|
-G|0884|Foggia - areas of (Rodi Garganico, Vieste and Manfredonia)|
-G|0835|Matera|
+G|0882|San Severo|
+G|0883|Andria|
+G|0884|Manfredonia|
+G|0884|Cerignola|
 G|089|Salerno|
 G|090|Messina|
 G|091|Palermo|
-G|0921|Palermo|
+G|0921|Cefalù|
+G|0922|Agrigento|
+G|0923|Trapani|
+G|0924|Alcamo|
+G|0925|Sciacca|
 G|0931|Siracusa|
 G|0932|Ragusa|
-G|0933|Caltanissetta|
-G|0923|Trapani|
-G|0922|Agrigento|
-G|0925|Agrigento|
-G|0934|Provinces of Caltanissetta and Enna|
-G|0941|Novara di Sicilia|
-G|0942|Messina (Taormina)|
+G|0933|Caltagirone|
+G|0934|Caltanissetta|
+G|0935|Enna|
+G|0941|Patti|
+G|0942|Taormina|
 G|095|Catania|
 G|0961|Catanzaro|
 G|0962|Crotone|
 G|0963|Vibo Valentia|
+G|0964|Locri|
 G|0965|Reggio Calabria|
-G|0974|Salerno|
-G|0975|Potenza|
-G|0984|Cosenza (Cosenza)|
+G|0966|Palmi|
+G|0967|Soverato|
+G|0968|Lamezia Terme|
+G|0971|Potenza|
+G|0972|Melfi|
+G|0973|Lagonegro|
+G|0974|Vallo della Lucania|
+G|0975|Sala Consilina|
+G|0976|Muro Lucano|
+G|0981|Castrovillari|
+G|0982|Paola|
+G|0983|Rossano|
+G|0984|Cosenza|
+G|0985|Scalea|
 G|099|Taranto|
