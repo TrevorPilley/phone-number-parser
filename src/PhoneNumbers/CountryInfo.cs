@@ -22,8 +22,9 @@ namespace PhoneNumbers
         }
 
         /// <summary>
-        /// Gets the <see cref="CountryInfo"/> for the Ireland.
+        /// Gets the <see cref="CountryInfo"/> for Ireland.
         /// </summary>
+        /// <remarks>Covers the Republic of Ireland, Northern Ireland is part of the United Kingdom.</remarks>
         public static CountryInfo IE { get; } = new()
         {
             AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
@@ -37,7 +38,7 @@ namespace PhoneNumbers
         /// <summary>
         /// Gets the <see cref="CountryInfo"/> for the United Kingdom.
         /// </summary>
-        /// <remarks>Covers England, Scotland, Wales and Northern Ireland.</remarks>
+        /// <remarks>Covers England, Scotland, Wales and Northern Ireland, plus at a telephone level Guernsey, Jersey and the Isle of Man.</remarks>
         public static CountryInfo UK { get; } = new()
         {
             AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2 }),
