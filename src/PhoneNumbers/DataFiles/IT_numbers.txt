@@ -7,6 +7,9 @@ G|0124|Rivarolo Canavese|
 G|0125|Ivrea|
 G|0131|Alessandria|
 G|0141|Asti|
+G|0142|Casale Monferrato|
+G|0143|Novi Ligure|
+G|0144|Acqui Terme|
 G|015|Biella|
 G|0161|Vercelli|
 G|0163|Vercelli (Valsesia)|
