@@ -80,33 +80,47 @@ G|0436|Cortina d'Ampezzo|
 G|0437|Belluno|
 G|0438|Conegliano|
 G|0439|Feltre|
+G|0442|Legnago|
 G|0444|Vicenza|
-G|0445|Vicenza (Schio)|
+G|0445|Schio|
 G|045|Verona|
 G|0461|Trento|
+G|0462|Cavalese|
+G|0463|Cles|
+G|0464|Rovereto|
+G|0465|Tione di Trento|
 G|0471|Bolzano|
+G|0472|Bressanone|
+G|0473|Bressanone|
+G|0474|Brunico|
 G|0481|Gorizia|
-G|049|Padua|
+G|049|Padova|
 G|050|Pisa|
 G|051|Bologna|
 G|0521|Parma|
 G|0522|Reggio Emilia|
 G|0523|Piacenza|
+G|0524|Fidenza|
+G|0525|Fornovo di Taro|
 G|0532|Ferrara|
+G|0533|Comacchio|
+G|0534|Porretta Terme|
 G|0535|Mirandola|
-G|0536|Sassuolo, Formigine, Fiorano Modenese, Maranello and Prigniano sulla Secchia|
+G|0536|Sassuolo|
 G|0541|Rimini|
-G|0543|Forlì-Cesena (Forlì area)|
+G|0542|Imola|
+G|0543|Forlì|
 G|0544|Ravenna|
-G|0545|Ravenna|
-G|0547|Forlì-Cesena (Cesena area)|
-G|0549|Republic of San Marino|
-G|055|Florence|
+G|0545|Lugo|
+G|0546|Faenza|
+G|0547|Cesena|
+G|0549|Republic di San Marino|
+G|055|Firenze|
 G|0564|Grosseto|
-G|0565|Sout Livorno and Isola d'Elba|
-G|0566|District of Follonica and northern Grosseto|
-G|0571|District of Empoli|
-G|0572|District of Montecatini Terme|
+G|0565|Piombino|
+G|0566|Follonica|
+G|0571|Empoli|
+G|0572|Montecatini Terme|
 G|0573|Pistoia|
 G|0574|Prato|
 G|0575|Arezzo|
