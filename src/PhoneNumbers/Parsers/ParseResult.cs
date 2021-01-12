@@ -8,12 +8,12 @@ namespace PhoneNumbers.Parsers
         /// <summary>
         /// Gets the error which resulted caused the parse attempt to fail.
         /// </summary>
-        public string? ParseError { get; private set; }
+        internal string? ParseError { get; private set; }
 
         /// <summary>
         /// Gets the <see cref="PhoneNumber"/> which was successfully parsed.
         /// </summary>
-        public PhoneNumber? PhoneNumber { get; private set; }
+        internal PhoneNumber? PhoneNumber { get; private set; }
 
         /// <summary>
         /// Creates a <see cref="ParseResult"/> which failed.

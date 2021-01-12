@@ -52,9 +52,13 @@ namespace PhoneNumbers.Parsers
                 x =>
                 {
                     var rangeParts = x.Split('-');
-                    return rangeParts.Length == 1
-                        ? new NumberRange(rangeParts[0], rangeParts[0])
-                        : new NumberRange(rangeParts[0], rangeParts[1]);
+
+                    return rangeParts.Length switch
+                    {
+                        1 => new NumberRange(rangeParts[0], rangeParts[0]),
+                        2 => new NumberRange(rangeParts[0], rangeParts[1]),
+                        _ => throw new InvalidOperationException("A number range must be expressed as either X or X-X."),
+                    };
                 });
 
         internal bool Contains(string value)

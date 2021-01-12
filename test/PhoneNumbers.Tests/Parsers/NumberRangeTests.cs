@@ -14,15 +14,15 @@ namespace PhoneNumbers.Tests.Parsers
         public void Create_Throws_If_From_Blank() =>
             Assert.Throws<ArgumentException>(() => NumberRange.Create("-0"));
 
+        [Fact]
+        public void Create_Throws_If_To_Blank() =>
+            Assert.Throws<ArgumentException>(() => NumberRange.Create("0-"));
+
         [Theory]
         [InlineData("000-11")]
         [InlineData("100-11")]
         public void Create_Throws_If_To_Less_Than_From(string value) =>
             Assert.Throws<ArgumentOutOfRangeException>(() => NumberRange.Create(value));
-
-        [Fact]
-        public void Create_Throws_If_To_Blank() =>
-            Assert.Throws<ArgumentException>(() => NumberRange.Create("0-"));
 
         [Fact]
         public void Create_With_Range_Fixed_Size()
@@ -68,6 +68,16 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.True(NumberRange.Create("000500-100500").Contains(value));
 
         [Theory]
+        [InlineData("000499")]
+        [InlineData("000501")]
+        public void Range_Single_Value_Contains_False(string value) =>
+            Assert.False(NumberRange.Create("000500").Contains(value));
+
+        [Fact]
+        public void Range_Single_Value_Contains_True() =>
+            Assert.True(NumberRange.Create("000500").Contains("000500"));
+
+        [Theory]
         [InlineData("500")]
         [InlineData("00000")]
         [InlineData("000000")]
@@ -85,15 +95,5 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("10050080")]
         public void Range_Span_Contains_True(string value) =>
             Assert.True(NumberRange.Create("000500-10050080").Contains(value));
-
-        [Theory]
-        [InlineData("000499")]
-        [InlineData("000501")]
-        public void Range_Single_Value_Contains_False(string value) =>
-            Assert.False(NumberRange.Create("000500").Contains(value));
-
-        [Fact]
-        public void Range_Single_Value_Contains_True() =>
-            Assert.True(NumberRange.Create("000500").Contains("000500"));
     }
 }
