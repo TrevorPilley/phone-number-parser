@@ -31,6 +31,16 @@ namespace PhoneNumbers.Tests
             Assert.False(CountryInfo.IE.IsInternationalNumber(value));
 
         [Theory]
+        [InlineData("+35312000000")]
+        [InlineData("+353(0)12000000")]
+        [InlineData("+353 (0) 1 200 0000")]
+        [InlineData("(01) 200 0000")]
+        [InlineData("012000000")]
+        [InlineData("01-200-0000")]
+        public void IE_ReadNationalSignificantNumber(string value) =>
+            Assert.Equal("12000000", CountryInfo.IE.ReadNationalSignificantNumber(value));
+
+        [Theory]
         [InlineData(default(string))]
         [InlineData("")]
         [InlineData(" ")]
