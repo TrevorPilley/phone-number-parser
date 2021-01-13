@@ -31,6 +31,14 @@ namespace PhoneNumbers.Tests
             Assert.False(CountryInfo.IT.IsInternationalNumber(value));
 
         [Theory]
+        [InlineData("+390642200001")]
+        [InlineData("+39 06 4220 0001")]
+        [InlineData("0642200001")]
+        [InlineData("06-4220-0001")]
+        public void IT_ReadNationalSignificantNumber(string value) =>
+            Assert.Equal("0642200001", CountryInfo.IT.ReadNationalSignificantNumber(value));
+
+        [Theory]
         [InlineData(default(string))]
         [InlineData("")]
         [InlineData(" ")]
