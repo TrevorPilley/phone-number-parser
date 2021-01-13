@@ -4,7 +4,7 @@ using Xunit;
 namespace PhoneNumbers.Tests.Parsers
 {
     /// <summary>
-    /// Contains unit tests for the <see cref="DefaultPhoneNumberParser"/> class for IE PhoneNumbers.
+    /// Contains unit tests for the <see cref="DefaultPhoneNumberParser"/> class for IE <see cref="PhoneNumber"/>s.
     /// </summary>
     public class DefaultPhoneNumberParserTests_IE_GeographicNumber
     {

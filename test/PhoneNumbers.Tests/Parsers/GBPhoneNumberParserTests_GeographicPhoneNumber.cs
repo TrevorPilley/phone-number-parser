@@ -3,6 +3,9 @@ using Xunit;
 
 namespace PhoneNumbers.Tests.Parsers
 {
+    /// <summary>
+    /// Contains unit tests for the <see cref="GBPhoneNumberParser"/> class for GB <see cref="PhoneNumber"/>s.
+    /// </summary>
     public class GBPhoneNumberParserTests_GeographicPhoneNumber
     {
         private readonly PhoneNumberParser _parser = GBPhoneNumberParser.Create();
