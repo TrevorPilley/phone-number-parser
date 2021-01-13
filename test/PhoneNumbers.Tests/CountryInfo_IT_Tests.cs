@@ -14,7 +14,7 @@ namespace PhoneNumbers.Tests
 
             Assert.Equal(new[] { 4, 3, 2 }, countryInfo.AreaCodeLengths);
             Assert.Equal("+39", countryInfo.CallingCode);
-            Assert.IsType<PhoneNumberFormatter>(countryInfo.Formatter);
+            Assert.IsType<ITPhoneNumberFormatter>(countryInfo.Formatter);
             Assert.True(countryInfo.HasAreaCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("IT", countryInfo.Iso3166Code);
