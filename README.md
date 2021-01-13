@@ -90,7 +90,10 @@ United Kingdom | +44 | UK | Yes | Yes | Yes
 
 ### Italy
 
--
+- 0, 3 and 8 numbers are supported
+- 0 numbers are geographically assigned so the geographic area is included.
+- The `IsDataOnly`,`IsPager` and `IsVirtual` properties are not currently set for Italy mobile numbers.
+- Sets the `IsFreephone` property for non-geographical phone numbers which are freephone numbers (e.g. 800 and 803).
 
 ### United Kingdom
 
