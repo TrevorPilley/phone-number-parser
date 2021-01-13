@@ -25,16 +25,16 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
 
             var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
-            Assert.Equal(areaCode, nonGeographicPhoneNumber.AreaCode);
+            Assert.Null(nonGeographicPhoneNumber.AreaCode);
             Assert.Equal(CountryInfo.FR, nonGeographicPhoneNumber.Country);
             Assert.False(nonGeographicPhoneNumber.IsFreephone);
             Assert.Equal(localNumber, nonGeographicPhoneNumber.LocalNumber);
         }
 
         [Theory]
-        [InlineData("0800000000", "", "800000000")]
-        [InlineData("0805999999", "", "805999999")]
-        public void Parse_Known_NonGeographicPhoneNumber_Freephone(string value, string areaCode, string localNumber)
+        [InlineData("0800000000", "800000000")]
+        [InlineData("0805999999", "805999999")]
+        public void Parse_Known_NonGeographicPhoneNumber_Freephone(string value, string localNumber)
         {
             var phoneNumber = _parser.Parse(value).PhoneNumber;
 
@@ -42,7 +42,7 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
 
             var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
-            Assert.Equal(areaCode, nonGeographicPhoneNumber.AreaCode);
+            Assert.Null(nonGeographicPhoneNumber.AreaCode);
             Assert.Equal(CountryInfo.FR, nonGeographicPhoneNumber.Country);
             Assert.True(nonGeographicPhoneNumber.IsFreephone);
             Assert.Equal(localNumber, nonGeographicPhoneNumber.LocalNumber);
