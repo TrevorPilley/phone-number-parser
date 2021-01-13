@@ -42,6 +42,7 @@ namespace PhoneNumbers
         {
             AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2 }),
             CallingCode = "+39",
+            Formatter = new ITPhoneNumberFormatter(),
             Iso3166Code = "IT",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8, 9, 10, 11 }),
         };
