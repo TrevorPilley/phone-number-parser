@@ -17,7 +17,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0975999999", "975999999")]
         [InlineData("0977000000", "977000000")]
         [InlineData("0998999999", "998999999")]
-        public void Parse_Known_NonGeographicPhoneNumber(string value, string areaCode, string localNumber)
+        public void Parse_Known_NonGeographicPhoneNumber(string value, string localNumber)
         {
             var phoneNumber = _parser.Parse(value).PhoneNumber;
 
