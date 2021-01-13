@@ -52,6 +52,7 @@ namespace PhoneNumbers.Tests
         [InlineData("")]
         [InlineData(" ")]
         [InlineData("+35312222222")]
+        [InlineData(@"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@£$%^&*()_+-={}[]:;""\\'|?/>.<,±`~ėęēêèéëūùûüúìįíîïīõøōœòôöóāãåæâàáäšßśłżžźčçćŵñń'¡¿…")]
         public void FR_ReadNationalSignificantNumber_Not_A_Valid_Value(string value) =>
             Assert.Equal(string.Empty, CountryInfo.FR.ReadNationalSignificantNumber(value));
     }
