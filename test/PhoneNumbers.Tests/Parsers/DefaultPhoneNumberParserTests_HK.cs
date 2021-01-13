@@ -4,105 +4,11 @@ using Xunit;
 namespace PhoneNumbers.Tests.Parsers
 {
     /// <summary>
-    /// Contains unit tests for the <see cref="DefaultPhoneNumberParser"/> class for HK phone numbers.
+    /// Contains unit tests for the <see cref="DefaultPhoneNumberParser"/> class for HK <see cref="PhoneNumber"/>s.
     /// </summary>
     public class DefaultPhoneNumberParserTests_HK
     {
         private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.HK);
-
-        [Theory]
-        [InlineData("51000000")]
-        [InlineData("57999999")]
-        [InlineData("59000000")]
-        [InlineData("59999999")]
-        [InlineData("60100000")]
-        [InlineData("69999999")]
-        [InlineData("70100000")]
-        [InlineData("79999999")]
-        [InlineData("84000000")]
-        [InlineData("89999999")]
-        [InlineData("90100000")]
-        [InlineData("98999999")]
-        public void Parse_Known_MobilePhoneNumber(string value)
-        {
-            var phoneNumber = _parser.Parse(value).PhoneNumber;
-
-            Assert.NotNull(phoneNumber);
-            Assert.IsType<MobilePhoneNumber>(phoneNumber);
-
-            var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
-            Assert.Null(mobilePhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.HK, mobilePhoneNumber.Country);
-            Assert.False(mobilePhoneNumber.IsDataOnly);
-            Assert.False(mobilePhoneNumber.IsPager);
-            Assert.False(mobilePhoneNumber.IsVirtual);
-            Assert.Equal(value, mobilePhoneNumber.LocalNumber);
-        }
-
-        [Theory]
-        [InlineData("81000000")]
-        [InlineData("83999999")]
-        public void Parse_Known_MobilePhoneNumber_Virtual(string value)
-        {
-            var phoneNumber = _parser.Parse(value).PhoneNumber;
-
-            Assert.NotNull(phoneNumber);
-            Assert.IsType<MobilePhoneNumber>(phoneNumber);
-
-            var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
-            Assert.Null(mobilePhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.HK, mobilePhoneNumber.Country);
-            Assert.False(mobilePhoneNumber.IsDataOnly);
-            Assert.False(mobilePhoneNumber.IsPager);
-            Assert.True(mobilePhoneNumber.IsVirtual);
-            Assert.Equal(value, mobilePhoneNumber.LocalNumber);
-        }
-
-        [Theory]
-        [InlineData("20100000")]
-        [InlineData("20199999")]
-        [InlineData("20200000")]
-        [InlineData("20209999")]
-        [InlineData("20210000")]
-        [InlineData("20699999")]
-        [InlineData("21000000")]
-        [InlineData("29999999")]
-        [InlineData("31000000")]
-        [InlineData("31999999")]
-        [InlineData("34000000")]
-        [InlineData("39999999")]
-        [InlineData("58000000")]
-        [InlineData("58999999")]
-        public void Parse_Known_NonGeographicPhoneNumber(string value)
-        {
-            var phoneNumber = _parser.Parse(value).PhoneNumber;
-
-            Assert.NotNull(phoneNumber);
-            Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
-
-            var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
-            Assert.Null(nonGeographicPhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.HK, nonGeographicPhoneNumber.Country);
-            Assert.False(nonGeographicPhoneNumber.IsFreephone);
-            Assert.Equal(value, nonGeographicPhoneNumber.LocalNumber);
-        }
-
-        [Theory]
-        [InlineData("800000000")]
-        [InlineData("809999999")]
-        public void Parse_Known_NonGeographicPhoneNumber_FreePhone(string value)
-        {
-            var phoneNumber = _parser.Parse(value).PhoneNumber;
-
-            Assert.NotNull(phoneNumber);
-            Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
-
-            var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
-            Assert.Null(nonGeographicPhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.HK, nonGeographicPhoneNumber.Country);
-            Assert.True(nonGeographicPhoneNumber.IsFreephone);
-            Assert.Equal(value, nonGeographicPhoneNumber.LocalNumber);
-        }
 
         [Fact]
         public void Parse_Returns_Failure_If_CallingCode_Invalid()
