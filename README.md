@@ -78,7 +78,7 @@ Country | Calling Code | ISO 3166 Code | Geographic | Mobile | Non-Geographic
 --- | --- | --- | --- | --- | ---
 Ireland | +353 | IE | Yes | Yes * | Yes
 Italy | +39 | IT | Yes | Yes * | Yes
-United Kingdom | +44 | UK | Yes | Yes | Yes
+United Kingdom | +44 | GB | Yes | Yes | Yes
 
 ### Ireland
 
