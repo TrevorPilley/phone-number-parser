@@ -19,8 +19,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0689999999", "689999999")]
         [InlineData("0695000000", "695000000")]
         [InlineData("0695999999", "695999999")]
-        [InlineData("0700000000", "700000000")]
-        [InlineData("0700499999", "700499999")]
+        [InlineData("0698000000", "698000000")]
+        [InlineData("0699999999", "699999999")]
+        [InlineData("07000000000000", "7000000000000")]
+        [InlineData("07004999999999", "7004999999999")]
         [InlineData("0730000000", "730000000")]
         [InlineData("0789999999", "789999999")]
         public void Parse_Known_MobilePhoneNumber(string value, string localNumber)
