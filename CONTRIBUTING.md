@@ -18,7 +18,7 @@ Before raising a bug, please check whether the issue still exists in the latest 
 
 ## Adding a new country
 
-All features should be implemented in an isolated feature branch and pull requested against `main`, you will need to rebase before the PR will be accepted and the commits will be squashed into a single `Adds country X` commit to keep the repository history clean.
+All features should be implemented in an isolated feature branch and pull requested against `main`, you will need to rebase before the PR will be accepted and the commits will be squashed into a single `Adds country X` commit in `main` to keep the repository history clean.
 
 If you are adding a new country, please do the following.
 
