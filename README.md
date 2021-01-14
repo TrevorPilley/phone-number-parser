@@ -117,6 +117,12 @@ _note the ISO code for the United Kingdom is 'GB' rather than 'UK'._
 
 These were used as the references for the phone number data for each country.
 
+### France
+
+- https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200004A0002PDFE.pdf
+- https://fr.wikipedia.org/wiki/Liste_des_indicatifs_téléphoniques_en_France
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_France
+
 ### Ireland
 
 - https://www.comreg.ie/industry/licensing/numbering/area-code-maps-2/
