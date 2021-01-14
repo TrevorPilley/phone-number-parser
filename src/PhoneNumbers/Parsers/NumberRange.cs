@@ -10,9 +10,9 @@ namespace PhoneNumbers.Parsers
     {
         private static readonly ConcurrentDictionary<string, NumberRange> s_numberRangeCache = new();
 
-        private readonly int _fromIntValue;
+        private readonly long _fromIntValue;
         private readonly bool _isSingleNumber;
-        private readonly int _toIntValue;
+        private readonly long _toIntValue;
 
         private NumberRange(string from, string to)
         {
@@ -33,8 +33,8 @@ namespace PhoneNumbers.Parsers
 
             (From, To) = (from, to);
             _isSingleNumber = From.Equals(To, StringComparison.Ordinal);
-            _fromIntValue = int.Parse(From, CultureInfo.InvariantCulture);
-            _toIntValue = int.Parse(To, CultureInfo.InvariantCulture);
+            _fromIntValue = long.Parse(From, CultureInfo.InvariantCulture);
+            _toIntValue = long.Parse(To, CultureInfo.InvariantCulture);
 
             if (_toIntValue < _fromIntValue)
             {
@@ -74,7 +74,7 @@ namespace PhoneNumbers.Parsers
                 return false;
             }
 
-            var intValue = int.Parse(value, CultureInfo.InvariantCulture);
+            var intValue = long.Parse(value, CultureInfo.InvariantCulture);
 
             return intValue >= _fromIntValue && intValue <= _toIntValue;
         }
