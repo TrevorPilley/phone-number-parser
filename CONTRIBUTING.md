@@ -50,7 +50,7 @@ The structre of the file must follow:
 
 #### Kind
 
-Can be one of:
+Must be one of:
 
 - `G` _for geographically assigned number_
 - `M` _for mobile number_
@@ -71,7 +71,7 @@ Is the name of the area a geographically assinged number is allocated to and pre
 
 #### Hint
 
-Can be one of:
+Optional but can be one of:
 
 - `D` _data only (such as a 4G tablet)_
 - `F` _a Freephone number_
