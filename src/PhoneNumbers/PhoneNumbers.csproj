@@ -64,10 +64,12 @@
   <ItemGroup>
     <None Remove="DataFiles\GB_numbers.txt"/>
     <None Remove="DataFiles\IE_numbers.txt"/>
+    <None Remove="DataFiles\IT_numbers.txt"/>
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="DataFiles\GB_numbers.txt"/>
     <EmbeddedResource Include="DataFiles\IE_numbers.txt"/>
+    <EmbeddedResource Include="DataFiles\IT_numbers.txt"/>
   </ItemGroup>
 </Project>

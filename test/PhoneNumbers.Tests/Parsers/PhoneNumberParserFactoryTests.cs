@@ -15,6 +15,10 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.IE));
 
         [Fact]
+        public void GetParser_For_CountryInfo_IT_Returns_DefaultPhoneNumberParser() =>
+            Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.IT));
+
+        [Fact]
         public void GetParser_For_CountryInfo_UK_Returns_GBPhoneNumberParser() =>
             Assert.IsType<GBPhoneNumberParser>(_factory.GetParser(CountryInfo.UK));
 
