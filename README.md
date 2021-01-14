@@ -84,7 +84,7 @@ United Kingdom | +44 | GB | Yes | Yes | Yes
 ### France
 
 - 01, 02, 03, 04, 05, 06, 07, 08 and 09 numbers are supported.
-- 01, 02, 03, 04 are 05 numbers are geographically assigned so the geographic area is included.
+- 01, 02, 03, 04 are 05 numbers are geographically assigned so the geographic area is included, although currently this is only within the top level geographic zones (01 Île-de-France, 02 Nord-Ouest, 03 Nord-Est, 04 Sud-Est and 05 Sud-Ouest).
 - The `IsDataOnly`, `IsPager` and `IsVirtual` properties are not currently set for France mobile numbers.
 - Sets the `IsFreephone` property for non-geographical phone numbers which are freephone numbers (e.g. 0800-0805 numbers).
 
