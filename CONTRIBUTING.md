@@ -1,0 +1,90 @@
+# Contributing
+
+Contributions are welcome, however, please file an issue first and let's have a discussion before you open a pull request.
+
+## Building the project
+
+The project multi targets .NET Standard 2.0, 2.1 and .NET 5.0 so you will need to have the relevant SDK's installed in order to build the solution locally.
+
+Firstly clone or fork the repository.
+
+There is a `build.ps1` to build, test, view code coverage and create a nuget package on Windows and a `build.sh` for those on macOS (not currently tested on linux or Windows Subsystem for Linux but it may still work).
+
+## Rasising a bug
+
+Please raise bugs for any you might find, at some point I'll get an issue template sorted but if you could at least provide details so I can reproduce it that will help improve the chances of it being fixed.
+
+Before raising a bug, please check whether the issue still exists in the latest version and whether there is an existing issue already raised to avoid a duplicate.
+
+## Adding a new country
+
+All features should be implemented in an isolated feature branch and pull requested against `main`, you will need to rebase before the PR will be accepted and the commits will be squashed into a single `Adds country X` commit in `main` to keep the repository history clean.
+
+If you are adding a new country, please do the following.
+
+### Add the CountryInfo
+
+1. Add a new static `CountryInfo` property with the country code as the name, for example:
+
+```csharp
+public static CountryInfo ZZ { get; } = new()
+{
+    CallingCode = "+NN",
+    Iso3166Code = "ZZ",
+    NsnLengths = new ReadOnlyCollection<int>(new[] { N }),
+};
+```
+
+2. If the country uses area codes, set the `AreaCodeLengths` property as appropriate and declare in descending order.
+3. If the country doesn't use the ITU default `InternationalCallPrefix` of `00`, set the property appropriately.
+4. If the country uses trunk prefixes, set the `TrunkPrefix` appropriately.
+5. Add a new `CountryInfo_ZZ_Tests` class with the appropriate tests (see an existing implementation).
+
+### Add the data file
+
+1. Add a `{Iso3166Code}_numbers.txt` in `/src/PhoneNumbers/DataFiles/` and set as an embedded resource within the project file.
+
+The structre of the file must follow:
+
+`Kind|AreaCodeRanges|GeographicalArea|LocalNumberRanges|Hint`
+
+#### Kind
+
+Must be one of:
+
+- `G` _for geographically assigned number_
+- `M` _for mobile number_
+- `N` _for non-geographically assigned number_
+
+#### Area code ranges
+
+Can be expressed as either:
+
+- `NNNN` _a single number (typically for geographically assigned numbers)_
+- `NNNN-NNNN` _a range of numbers (e.g. 800-804) where the same kind, local number ranges and hint apply)_
+
+Or a combination thereof (e.g. `NNNN,NNNN-NNNN,NNNN-NNNN`).
+
+#### Geographical area
+
+Is the name of the area a geographically assinged number is allocated to and preferably in the language of the data file rather than English (e.g. `Firenze` rather than `Florence` in Italy).
+
+#### Hint
+
+Optional but can be one of:
+
+- `D` _data only (such as a 4G tablet)_
+- `F` _a Freephone number_
+- `P` _a Pager_
+- `V` _a Virtual number (e.g. personal number)_
+
+### Add a parser
+
+1. If the `DefaultPhoneNumberParser` can parse the file, add tests for the country using the `DefaultPhoneNumberParser` as appropriate - typically the min and max permitted local number(s) are tested within each area code/number kind.
+2. If country requires more complex logic to determine the area code, or the performance of the `DefaultPhoneNumberParser` is not acceptable then add a custom parser `{Iso3166Code}PhoneNumberParser` (see the GB one as an example) and add test cases based upon the data file.
+3. Add a unit test for in `PhoneNumberParserFactoryTests` to assert the expected parser is returned for the `{Iso3166Code}`.
+
+### Add a formatter
+
+1. If necessary, add a `{Iso3166Code}PhoneNumberFormatter` overriding the base methods as appropriate with unit tests.
+2. Set as the formatter for the country info `Formatter = new {Iso3166Code}PhoneNumberFormatter(),` and update the tests.
