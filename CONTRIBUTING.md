@@ -36,7 +36,7 @@ public static CountryInfo ZZ { get; } = new()
 ```
 
 2. If the country uses area codes, set the `AreaCodeLengths` property as appropriate and declare in descending order.
-3. If the country doens't use the ITU default `InternationalCallPrefix` of `00`, set the property appropriately.
+3. If the country doesn't use the ITU default `InternationalCallPrefix` of `00`, set the property appropriately.
 4. If the country uses trunk prefixes, set the `TrunkPrefix` appropriately.
 5. Add a new `CountryInfo_ZZ_Tests` class with the appropriate tests (see an existing implementation).
 
@@ -47,6 +47,36 @@ public static CountryInfo ZZ { get; } = new()
 The structre of the file must follow:
 
 `Kind|AreaCodeRanges|GeographicalArea|LocalNumberRanges|Hint`
+
+#### Kind
+
+Can be one of:
+
+- `G` _for geographically assigned number_
+- `M` _for mobile number_
+- `N` _for non-geographically assigned number_
+
+#### Area code ranges
+
+Can be expressed as either:
+
+- `NNNN` _a single number (typically for geographically assigned numbers)_
+- `NNNN-NNNN` _a range of numbers (e.g. 800-804) where the same kind, local number ranges and hint apply)_
+
+Or a combination thereof (e.g. `NNNN,NNNN-NNNN,NNNN-NNNN`).
+
+#### Geographical area
+
+Is the name of the area a geographically assinged number is allocated to and preferably in the language of the data file rather than English (e.g. `Firenze` rather than `Florence` in Italy).
+
+#### Hint
+
+Can be one of:
+
+- `D` _data only (such as a 4G tablet)_
+- `F` _a Freephone number_
+- `P` _a Pager_
+- `V` _a Virtual number (e.g. personal number)_
 
 ### Add a parser
 
