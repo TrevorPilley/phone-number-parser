@@ -8,7 +8,7 @@ The project multi targets .NET Standard 2.0, 2.1 and .NET 5.0 so you will need t
 
 Firstly clone or fork the repository.
 
-There is a `build.ps1` to build, test, view code coverage and create a nuget package on Windows and a `build.sh` for those on macOS (not tested on linux and Windows Subsystem for Linux).
+There is a `build.ps1` to build, test, view code coverage and create a nuget package on Windows and a `build.sh` for those on macOS (not currently tested on linux or Windows Subsystem for Linux but it may still work).
 
 ## Rasising a bug
 
