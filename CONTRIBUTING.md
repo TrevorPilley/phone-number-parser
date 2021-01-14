@@ -4,11 +4,11 @@ Contributions are welcome, however, please file an issue first and let's have a 
 
 ## Building the project
 
-The project multi targets .NET Standard 2.0, 2.1 and .NET 5.0 so make sure you have the relevant SDK's installed.
+The project multi targets .NET Standard 2.0, 2.1 and .NET 5.0 so you will need to have the relevant SDK's installed in order to build the solution locally.
 
 Firstly clone or fork the repository.
 
-There is a `build.ps1` to build, test, view code coverage and create a nuget package on Windows and a `build.sh` for those on macOS (and hopefully also works for linux).
+There is a `build.ps1` to build, test, view code coverage and create a nuget package on Windows and a `build.sh` for those on macOS (not tested on linux and Windows Subsystem for Linux).
 
 ## Rasising a bug
 
@@ -50,7 +50,7 @@ The structre of the file must follow:
 
 ### Add a parser
 
-1. If the `DefaultPhoneNumberParser` can parse the file, add tests for the country using the `DefaultPhoneNumberParser` as appropriate.
+1. If the `DefaultPhoneNumberParser` can parse the file, add tests for the country using the `DefaultPhoneNumberParser` as appropriate - typically the min and max permitted local number(s) are tested within each area code/number kind.
 2. If country requires more complex logic to determine the area code, or the performance of the `DefaultPhoneNumberParser` is not acceptable then add a custom parser `{Iso3166Code}PhoneNumberParser` (see the GB one as an example) and add test cases based upon the data file.
 3. Add a unit test for in `PhoneNumberParserFactoryTests` to assert the expected parser is returned for the `{Iso3166Code}`.
 
