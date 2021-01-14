@@ -41,6 +41,14 @@ namespace PhoneNumbers.Tests.Parsers
         }
 
         [Fact]
+        public void Create_With_Range_Span_Large_Numbers()
+        {
+            var numberRange = NumberRange.Create("7000000000000-7004999999999");
+            Assert.Equal("7000000000000", numberRange.From);
+            Assert.Equal("7004999999999", numberRange.To);
+        }
+
+        [Fact]
         public void Create_With_Single_Value()
         {
             var numberRange = NumberRange.Create("000500");
