@@ -38,6 +38,7 @@ namespace PhoneNumbers
         /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Italy.
         /// </summary>
+        /// <remarks>Covers Italy (includes the islands of Sardinia and Sicily), and Vatican City.</remarks>
         public static CountryInfo IT { get; } = new()
         {
             AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2 }),
