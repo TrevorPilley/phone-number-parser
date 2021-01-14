@@ -8,6 +8,8 @@ on:
       - 'README.md'
       - 'build.ps1'
       - 'build.sh'
+    tags-ignore:
+      - '*.*.*'
   pull_request:
 
 env:
