@@ -104,3 +104,27 @@ _note the ISO code for the United Kingdom is 'GB' rather than 'UK'._
 - Sets the `IsDataOnly`, `IsPager` or `IsVirtual` properties as appropriate for mobile phone numbers.
 - Sets the `IsFreephone` property for non-geographical phone numbers which are freephone numbers (e.g. 0800 and 0808).
 - The UK parsing also includes Guernsey, Jersey and the Isle of Man, which although separate countries, all use the +44 calling code and share UK phone number ranges and area codes.
+
+## References for number data
+
+These were used as the references for the phone number data for each country.
+
+### Ireland
+
+- https://www.comreg.ie/industry/licensing/numbering/area-code-maps-2/
+- https://www.comreg.ie/csv/downloads/ComReg0804.pdf
+- https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000680001PDFE.pdf
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_the_Republic_of_Ireland
+
+### Italy
+
+- https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200006B0001PDFE.pdf
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Italy
+
+### United Kingdom
+
+- https://www.area-codes.org.uk/
+- https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000DD0001PDFE.pdf
+- http://static.ofcom.org.uk/static/numbering/index.htm
+- https://www.ofcom.org.uk/__data/assets/pdf_file/0013/102613/national-numbering-plan.pdf
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_the_United_Kingdom
