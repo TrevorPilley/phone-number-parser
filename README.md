@@ -2,7 +2,7 @@
 
 A library for parsing phone numbers targetting .NET 5.0, .NET Standard 2.1 and .NET Standard 2.0 with [nullable reference type](https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references) annotations.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/TrevorPilley/PhoneNumbers/blob/main/LICENSE) ![GitHub last commit](https://img.shields.io/github/last-commit/TrevorPilley/PhoneNumbers/main) ![Build Status](https://github.com/TrevorPilley/PhoneNumbers/workflows/CI/badge.svg?branch=main) ![CodeQL](https://github.com/TrevorPilley/PhoneNumbers/workflows/CodeQL/badge.svg) [![NuGet](https://img.shields.io/nuget/v/PhoneNumberParser.svg)](https://www.nuget.org/packages/PhoneNumberParser/) ![GitHub Release Date](https://img.shields.io/github/release-date/TrevorPilley/PhoneNumbers) [![NuGet](https://img.shields.io/nuget/dt/PhoneNumberParser.svg)](https://www.nuget.org/packages/PhoneNumberParser/) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/TrevorPilley/PhoneNumbers/blob/main/LICENSE) ![GitHub last commit](https://img.shields.io/github/last-commit/TrevorPilley/PhoneNumbers/main) ![Build Status](https://github.com/TrevorPilley/PhoneNumbers/workflows/CI/badge.svg?branch=main) ![CodeQL](https://github.com/TrevorPilley/PhoneNumbers/workflows/CodeQL/badge.svg) [![NuGet](https://img.shields.io/nuget/v/PhoneNumberParser.svg)](https://www.nuget.org/packages/PhoneNumberParser/) ![GitHub Release Date](https://img.shields.io/github/release-date/TrevorPilley/PhoneNumbers) [![NuGet](https://img.shields.io/nuget/dt/PhoneNumberParser.svg)](https://www.nuget.org/packages/PhoneNumberParser/)
 
 Install via nuget
 
@@ -79,6 +79,7 @@ Country        | Calling Code | ISO 3166 Code | Geographic | Mobile | Mobile<br/
 France         | +33          | FR            | Yes        | Yes    |                        |                    |                      | Yes            | Yes
 Ireland        | +353         | IE            | Yes        | Yes    |                        | Yes                | Yes                  | Yes            | Yes
 Italy          | +39          | IT            | Yes        | Yes    |                        |                    |                      | Yes            | Yes
+Spain          | +34          | ES            |            |        |                        |                    |                      |                |
 United Kingdom | +44          | GB            | Yes        | Yes    | Yes                    | Yes                | Yes                  | Yes            | Yes
 
 ### France
@@ -102,6 +103,10 @@ United Kingdom | +44          | GB            | Yes        | Yes    | Yes       
 - 0 numbers are geographically assigned so the geographic area is included.
 - The `IsDataOnly`, `IsPager` and `IsVirtual` properties are not currently set for Italy mobile numbers.
 - Sets the `IsFreephone` property for non-geographical phone numbers which are freephone numbers (e.g. 800 and 803).
+
+### Spain
+
+-
 
 ### United Kingdom
 
@@ -134,6 +139,10 @@ These were used as the references for the phone number data for each country.
 
 - https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200006B0001PDFE.pdf
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Italy
+
+### Spain
+
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Spain
 
 ### United Kingdom
 
