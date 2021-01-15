@@ -76,9 +76,17 @@ The library currently supports parsing phone numbers for the following countries
 
 Country | Calling Code | ISO 3166 Code | Geographic | Mobile | Non-Geographic
 --- | --- | --- | --- | --- | ---
+France | +33 | FR | Yes | Yes * | Yes
 Ireland | +353 | IE | Yes | Yes * | Yes
 Italy | +39 | IT | Yes | Yes * | Yes
 United Kingdom | +44 | GB | Yes | Yes | Yes
+
+### France
+
+- 01, 02, 03, 04, 05, 06, 07, 08 and 09 numbers are supported.
+- 01, 02, 03, 04 are 05 numbers are geographically assigned so the geographic area is included, although currently this is only within the top level geographic zones (01 Île-de-France, 02 Nord-Ouest, 03 Nord-Est, 04 Sud-Est and 05 Sud-Ouest).
+- The `IsDataOnly`, `IsPager` and `IsVirtual` properties are not currently set for France mobile numbers.
+- Sets the `IsFreephone` property for non-geographical phone numbers which are freephone numbers (e.g. 0800-0805 numbers).
 
 ### Ireland
 
@@ -108,6 +116,12 @@ _note the ISO code for the United Kingdom is 'GB' rather than 'UK'._
 ## References for number data
 
 These were used as the references for the phone number data for each country.
+
+### France
+
+- https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200004A0002PDFE.pdf
+- https://fr.wikipedia.org/wiki/Liste_des_indicatifs_téléphoniques_en_France
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_France
 
 ### Ireland
 

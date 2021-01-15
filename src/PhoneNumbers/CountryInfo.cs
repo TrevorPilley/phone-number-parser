@@ -22,6 +22,18 @@ namespace PhoneNumbers
         }
 
         /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for the France.
+        /// </summary>
+        public static CountryInfo FR { get; } = new()
+        {
+            CallingCode = "+33",
+            Formatter = new FRPhoneNumberFormatter(),
+            Iso3166Code = "FR",
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
+            TrunkPrefix = "0",
+        };
+
+        /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Ireland.
         /// </summary>
         /// <remarks>Covers the Republic of Ireland, Northern Ireland is part of the United Kingdom.</remarks>
