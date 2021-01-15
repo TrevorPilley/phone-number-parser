@@ -22,7 +22,7 @@ namespace PhoneNumbers
         }
 
         /// <summary>
-        /// Gets the <see cref="CountryInfo"/> for the France.
+        /// Gets the <see cref="CountryInfo"/> for France.
         /// </summary>
         public static CountryInfo FR { get; } = new()
         {
