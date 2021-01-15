@@ -17,7 +17,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07107999999", "7107", "999999")]
         public void Parse_Known_MobilePhoneNumber_71XX_AreaCode(string value, string areaCode, string localNumber)
         {
-            var phoneNumber = _parser.Parse(value).PhoneNumber;
+            var parseResult = _parser.Parse(value);
+            parseResult.ThrowIfFailure();
+
+            var phoneNumber = parseResult.PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<MobilePhoneNumber>(phoneNumber);
@@ -148,7 +151,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07399999999", "7399", "999999")]
         public void Parse_Known_MobilePhoneNumber_73XX_AreaCode(string value, string areaCode, string localNumber)
         {
-            var phoneNumber = _parser.Parse(value).PhoneNumber;
+            var parseResult = _parser.Parse(value);
+            parseResult.ThrowIfFailure();
+
+            var phoneNumber = parseResult.PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<MobilePhoneNumber>(phoneNumber);
@@ -373,7 +379,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07499999999", "7499", "999999")]
         public void Parse_Known_MobilePhoneNumber_74XX_AreaCode(string value, string areaCode, string localNumber)
         {
-            var phoneNumber = _parser.Parse(value).PhoneNumber;
+            var parseResult = _parser.Parse(value);
+            parseResult.ThrowIfFailure();
+
+            var phoneNumber = parseResult.PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<MobilePhoneNumber>(phoneNumber);
@@ -598,7 +607,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07599999999", "7599", "999999")]
         public void Parse_Known_MobilePhoneNumber_75XX_AreaCode(string value, string areaCode, string localNumber)
         {
-            var phoneNumber = _parser.Parse(value).PhoneNumber;
+            var parseResult = _parser.Parse(value);
+            parseResult.ThrowIfFailure();
+
+            var phoneNumber = parseResult.PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<MobilePhoneNumber>(phoneNumber);
@@ -623,7 +635,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07624999999", "7624", "999999")]
         public void Parse_Known_MobilePhoneNumber_76XX_AreaCode(string value, string areaCode, string localNumber)
         {
-            var phoneNumber = _parser.Parse(value).PhoneNumber;
+            var parseResult = _parser.Parse(value);
+            parseResult.ThrowIfFailure();
+
+            var phoneNumber = parseResult.PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<MobilePhoneNumber>(phoneNumber);
@@ -844,7 +859,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07799999999", "7799", "999999")]
         public void Parse_Known_MobilePhoneNumber_77XX_AreaCode(string value, string areaCode, string localNumber)
         {
-            var phoneNumber = _parser.Parse(value).PhoneNumber;
+            var parseResult = _parser.Parse(value);
+            parseResult.ThrowIfFailure();
+
+            var phoneNumber = parseResult.PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<MobilePhoneNumber>(phoneNumber);
@@ -1073,7 +1091,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07899999999", "7899", "999999")]
         public void Parse_Known_MobilePhoneNumber_78XX_AreaCode(string value, string areaCode, string localNumber)
         {
-            var phoneNumber = _parser.Parse(value).PhoneNumber;
+            var parseResult = _parser.Parse(value);
+            parseResult.ThrowIfFailure();
+
+            var phoneNumber = parseResult.PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<MobilePhoneNumber>(phoneNumber);
@@ -1278,7 +1299,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07999999999", "7999", "999999")]
         public void Parse_Known_MobilePhoneNumber_79XX_AreaCode(string value, string areaCode, string localNumber)
         {
-            var phoneNumber = _parser.Parse(value).PhoneNumber;
+            var parseResult = _parser.Parse(value);
+            parseResult.ThrowIfFailure();
+
+            var phoneNumber = parseResult.PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<MobilePhoneNumber>(phoneNumber);
@@ -1299,7 +1323,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07911899999", "7911", "899999")]
         public void Parse_Known_MobilePhoneNumber_DataOnly(string value, string areaCode, string localNumber)
         {
-            var phoneNumber = _parser.Parse(value).PhoneNumber;
+            var parseResult = _parser.Parse(value);
+            parseResult.ThrowIfFailure();
+
+            var phoneNumber = parseResult.PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<MobilePhoneNumber>(phoneNumber);
@@ -1376,7 +1403,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07699999999", "7699", "999999")]
         public void Parse_Known_MobilePhoneNumber_Pager(string value, string areaCode, string localNumber)
         {
-            var phoneNumber = _parser.Parse(value).PhoneNumber;
+            var parseResult = _parser.Parse(value);
+            parseResult.ThrowIfFailure();
+
+            var phoneNumber = parseResult.PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<MobilePhoneNumber>(phoneNumber);
@@ -1593,7 +1623,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07099999999", "7099", "999999")]
         public void Parse_Known_MobilePhoneNumber_Virtual(string value, string areaCode, string localNumber)
         {
-            var phoneNumber = _parser.Parse(value).PhoneNumber;
+            var parseResult = _parser.Parse(value);
+            parseResult.ThrowIfFailure();
+
+            var phoneNumber = parseResult.PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<MobilePhoneNumber>(phoneNumber);

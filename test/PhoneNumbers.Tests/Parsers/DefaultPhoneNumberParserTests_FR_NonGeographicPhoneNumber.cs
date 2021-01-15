@@ -19,7 +19,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0998999999", "998999999")]
         public void Parse_Known_NonGeographicPhoneNumber(string value, string localNumber)
         {
-            var phoneNumber = _parser.Parse(value).PhoneNumber;
+            var parseResult = _parser.Parse(value);
+            parseResult.ThrowIfFailure();
+
+            var phoneNumber = parseResult.PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
@@ -36,7 +39,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0805999999", "805999999")]
         public void Parse_Known_NonGeographicPhoneNumber_Freephone(string value, string localNumber)
         {
-            var phoneNumber = _parser.Parse(value).PhoneNumber;
+            var parseResult = _parser.Parse(value);
+            parseResult.ThrowIfFailure();
+
+            var phoneNumber = parseResult.PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);

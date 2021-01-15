@@ -25,7 +25,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0789999999", "789999999")]
         public void Parse_Known_MobilePhoneNumber(string value, string localNumber)
         {
-            var phoneNumber = _parser.Parse(value).PhoneNumber;
+            var parseResult = _parser.Parse(value);
+            parseResult.ThrowIfFailure();
+
+            var phoneNumber = parseResult.PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<MobilePhoneNumber>(phoneNumber);
