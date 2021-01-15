@@ -22,5 +22,17 @@ namespace PhoneNumbers.Tests
             Assert.True(countryInfos.Count > 0);
             Assert.Equal(countryInfos, ParseOptions.Default.Countries);
         }
+
+        [Fact]
+        public void Remove_Country()
+        {
+            var parseOptions = new ParseOptions();
+
+            Assert.Contains(CountryInfo.UK, parseOptions.Countries);
+
+            parseOptions.Countries.Remove(CountryInfo.UK);
+
+            Assert.DoesNotContain(CountryInfo.UK, parseOptions.Countries);
+        }
     }
 }
