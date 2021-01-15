@@ -74,12 +74,12 @@ phoneNumber.ToString("N");                      // 01142726444   (format for nat
 
 The library currently supports parsing phone numbers for the following countries and although best endeavours are made to adhere to published telephone numbering plans, depending on the accessibility of data there may be descepencies. If you happen to find any, please raise a bug.
 
-Country | Calling Code | ISO 3166 Code | Geographic | Mobile | Non-Geographic
---- | --- | --- | --- | --- | ---
-France | +33 | FR | Yes | Yes * | Yes
-Ireland | +353 | IE | Yes | Yes * | Yes
-Italy | +39 | IT | Yes | Yes * | Yes
-United Kingdom | +44 | GB | Yes | Yes | Yes
+Country        | Calling Code | ISO 3166 Code | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone)
+---            | ---          | ---           | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:
+France         | +33          | FR            | Yes        | Yes    |                        |                    |                      | Yes            | Yes
+Ireland        | +353         | IE            | Yes        | Yes    |                        | Yes                | Yes                  | Yes            | Yes
+Italy          | +39          | IT            | Yes        | Yes    |                        |                    |                      | Yes            | Yes
+United Kingdom | +44          | GB            | Yes        | Yes    | Yes                    | Yes                | Yes                  | Yes            | Yes
 
 ### France
 
