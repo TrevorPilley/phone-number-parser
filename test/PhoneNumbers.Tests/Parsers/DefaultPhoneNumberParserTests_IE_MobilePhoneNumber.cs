@@ -27,7 +27,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0899999999", "89", "9999999")]
         public void Parse_Known_MobilePhoneNumber(string value, string areaCode, string localNumber)
         {
-            var phoneNumber = _parser.Parse(value).PhoneNumber;
+            var parseResult = _parser.Parse(value);
+            parseResult.ThrowIfFailure();
+
+            var phoneNumber = parseResult.PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<MobilePhoneNumber>(phoneNumber);
@@ -46,7 +49,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0822999999", "822", "999999")]
         public void Parse_Known_MobilePhoneNumber_Pager(string value, string areaCode, string localNumber)
         {
-            var phoneNumber = _parser.Parse(value).PhoneNumber;
+            var parseResult = _parser.Parse(value);
+            parseResult.ThrowIfFailure();
+
+            var phoneNumber = parseResult.PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<MobilePhoneNumber>(phoneNumber);
@@ -65,7 +71,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0700999999", "700", "999999")]
         public void Parse_Known_MobilePhoneNumber_Virtual(string value, string areaCode, string localNumber)
         {
-            var phoneNumber = _parser.Parse(value).PhoneNumber;
+            var parseResult = _parser.Parse(value);
+            parseResult.ThrowIfFailure();
+
+            var phoneNumber = parseResult.PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<MobilePhoneNumber>(phoneNumber);

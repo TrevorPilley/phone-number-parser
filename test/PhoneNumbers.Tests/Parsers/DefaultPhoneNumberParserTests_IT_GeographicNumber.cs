@@ -17,7 +17,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0699999999", "06", "99999999", "Roma")]
         public void Parse_Known_GeographicPhoneNumber_0X_AreaCode(string value, string areaCode, string localNumber, string geographicArea)
         {
-            var phoneNumber = _parser.Parse(value).PhoneNumber;
+            var parseResult = _parser.Parse(value);
+            parseResult.ThrowIfFailure();
+
+            var phoneNumber = parseResult.PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<GeographicPhoneNumber>(phoneNumber);
@@ -88,7 +91,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0999999999", "099", "9999999", "Taranto")]
         public void Parse_Known_GeographicPhoneNumber_0XX_AreaCode(string value, string areaCode, string localNumber, string geographicArea)
         {
-            var phoneNumber = _parser.Parse(value).PhoneNumber;
+            var parseResult = _parser.Parse(value);
+            parseResult.ThrowIfFailure();
+
+            var phoneNumber = parseResult.PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<GeographicPhoneNumber>(phoneNumber);
@@ -507,7 +513,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0985999999", "0985", "999999", "Scalea")]
         public void Parse_Known_GeographicPhoneNumber_0XXX_AreaCode(string value, string areaCode, string localNumber, string geographicArea)
         {
-            var phoneNumber = _parser.Parse(value).PhoneNumber;
+            var parseResult = _parser.Parse(value);
+            parseResult.ThrowIfFailure();
+
+            var phoneNumber = parseResult.PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<GeographicPhoneNumber>(phoneNumber);

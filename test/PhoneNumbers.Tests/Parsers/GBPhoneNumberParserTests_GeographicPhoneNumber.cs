@@ -47,7 +47,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("01919989999", "191", "9989999", "Newcastle / Sunderland / Durham")]
         public void Parse_Known_GeographicPhoneNumber_1XX_AreaCode(string value, string areaCode, string localNumber, string geographicArea)
         {
-            var phoneNumber = _parser.Parse(value).PhoneNumber;
+            var parseResult = _parser.Parse(value);
+            parseResult.ThrowIfFailure();
+
+            var phoneNumber = parseResult.PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<GeographicPhoneNumber>(phoneNumber);
@@ -1406,7 +1409,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("01997998999", "1997", "998999", "Strathpeffer")]
         public void Parse_Known_GeographicPhoneNumber_1XXX_AreaCode(string value, string areaCode, string localNumber, string geographicArea)
         {
-            var phoneNumber = _parser.Parse(value).PhoneNumber;
+            var parseResult = _parser.Parse(value);
+            parseResult.ThrowIfFailure();
+
+            var phoneNumber = parseResult.PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<GeographicPhoneNumber>(phoneNumber);
@@ -1455,7 +1461,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("01975699899", "19756", "99899", "Strathdon")]
         public void Parse_Known_GeographicPhoneNumber_1XXXX_AreaCode(string value, string areaCode, string localNumber, string geographicArea)
         {
-            var phoneNumber = _parser.Parse(value).PhoneNumber;
+            var parseResult = _parser.Parse(value);
+            parseResult.ThrowIfFailure();
+
+            var phoneNumber = parseResult.PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<GeographicPhoneNumber>(phoneNumber);
@@ -1510,7 +1519,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("02929999999", "29", "29999999", "Cardiff")]
         public void Parse_Known_GeographicPhoneNumber_2X_AreaCode(string value, string areaCode, string localNumber, string geographicArea)
         {
-            var phoneNumber = _parser.Parse(value).PhoneNumber;
+            var parseResult = _parser.Parse(value);
+            parseResult.ThrowIfFailure();
+
+            var phoneNumber = parseResult.PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<GeographicPhoneNumber>(phoneNumber);

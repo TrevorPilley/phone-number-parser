@@ -15,7 +15,10 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0800999999", "800", "999999")]
         public void Parse_Known_NonGeographicPhoneNumber_Freephone(string value, string areaCode, string localNumber)
         {
-            var phoneNumber = _parser.Parse(value).PhoneNumber;
+            var parseResult = _parser.Parse(value);
+            parseResult.ThrowIfFailure();
+
+            var phoneNumber = parseResult.PhoneNumber;
 
             Assert.NotNull(phoneNumber);
             Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
