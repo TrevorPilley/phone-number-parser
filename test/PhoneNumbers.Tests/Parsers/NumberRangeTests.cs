@@ -19,9 +19,19 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.Throws<ArgumentException>(() => NumberRange.Create("0-"));
 
         [Theory]
+        [InlineData("900-100-900")]
+        public void Create_Throws_If_More_Than_2_Parts(string value) =>
+            Assert.Throws<InvalidOperationException>(() => NumberRange.Create(value));
+
+        [Theory]
         [InlineData("000-11")]
         [InlineData("100-11")]
         public void Create_Throws_If_To_Less_Than_From(string value) =>
+            Assert.Throws<ArgumentOutOfRangeException>(() => NumberRange.Create(value));
+
+        [Theory]
+        [InlineData("900-100")]
+        public void Create_Throws_If_To_Numerically_Less_Than_From(string value) =>
             Assert.Throws<ArgumentOutOfRangeException>(() => NumberRange.Create(value));
 
         [Fact]
