@@ -10,7 +10,7 @@
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\..\PhoneNumbers.snk</AssemblyOriginatorKeyFile>
     <PackageId>PhoneNumberParser</PackageId>
-    <Version>1.2.0</Version>
+    <Version>1.3.0</Version>
     <Authors>Trevor Pilley and Project Contributors</Authors>
     <Copyright>Copyright 2020 Project Contributors</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
