@@ -44,7 +44,7 @@ public static CountryInfo ZZ { get; } = new()
 
 1. Add a `{Iso3166Code}_numbers.txt` in `/src/PhoneNumbers/DataFiles/` and set as an embedded resource within the project file.
 
-The structre of the file must follow:
+The structre of the file is pipe `|` delimted and the "columns" are as follows:
 
 `Kind|AreaCodeRanges|GeographicalArea|LocalNumberRanges|Hint`
 
@@ -52,9 +52,9 @@ The structre of the file must follow:
 
 Must be one of:
 
-- `G` _for geographically assigned number_
-- `M` _for mobile number_
-- `N` _for non-geographically assigned number_
+- `G` _for a geographically assigned number_
+- `M` _for a mobile number_
+- `N` _for a non-geographically assigned number_
 
 #### Area code ranges
 
@@ -67,7 +67,7 @@ Or a combination thereof (e.g. `NNNN,NNNN-NNNN,NNNN-NNNN`).
 
 #### Geographical area
 
-Is the name of the area a geographically assinged number is allocated to and preferably in the language of the data file rather than English (e.g. `Firenze` rather than `Florence` in Italy).
+The name of the area a geographically assinged number is allocated to, preferably in the language of the data file rather than English (e.g. `Firenze` rather than `Florence` in Italy).
 
 #### Hint
 
