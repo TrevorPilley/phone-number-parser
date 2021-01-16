@@ -142,6 +142,7 @@ These were used as the references for the phone number data for each country.
 
 ### Spain
 
+- https://numeracionyoperadores.cnmc.es/numeracion
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Spain
 
 ### United Kingdom
