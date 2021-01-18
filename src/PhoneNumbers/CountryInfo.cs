@@ -28,6 +28,7 @@ namespace PhoneNumbers
         {
             AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
             CallingCode = "+34",
+            Formatter = new ESPhoneNumberFormatter(),
             Iso3166Code = "ES",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
         };
