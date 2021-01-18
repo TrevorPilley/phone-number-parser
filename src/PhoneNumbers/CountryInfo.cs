@@ -94,6 +94,7 @@ namespace PhoneNumbers
         /// <summary>
         /// Gets the ISO 3166 Aplha-2 code for the country.
         /// </summary>
+        [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
         [Obsolete("This property was incorrectly named, please use Iso3166Code instead it will be removed in a future version.")]
         public string Iso3116Code => Iso3166Code;
 
