@@ -79,7 +79,7 @@ Country        | Calling Code | ISO 3166 Code | Geographic | Mobile | Mobile<br/
 France         | +33          | FR            | Yes        | Yes    |                        |                    |                      | Yes            | Yes
 Ireland        | +353         | IE            | Yes        | Yes    |                        | Yes                | Yes                  | Yes            | Yes
 Italy          | +39          | IT            | Yes        | Yes    |                        |                    |                      | Yes            | Yes
-Spain          | +34          | ES            |            |        |                        |                    |                      |                |
+Spain          | +34          | ES            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes
 United Kingdom | +44          | GB            | Yes        | Yes    | Yes                    | Yes                | Yes                  | Yes            | Yes
 
 ### France
