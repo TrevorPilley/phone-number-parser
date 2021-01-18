@@ -8,7 +8,10 @@ namespace PhoneNumbers.Tests.Parsers
     /// </summary>
     public class DefaultPhoneNumberParserTests_CountryNumbers_WithAreaCodes
     {
-        private readonly CountryInfo _countryInfo = TestHelper.CreateCountryInfo(new[] { 3, 2 }, new[] { 7 });
+        private readonly CountryInfo _countryInfo = TestHelper.CreateCountryInfo(
+            areaCodeLengths: new[] { 3, 2 },
+            nsnLengths: new[] { 7 });
+
         private readonly PhoneNumberParser _parser;
 
         public DefaultPhoneNumberParserTests_CountryNumbers_WithAreaCodes() =>
