@@ -43,8 +43,6 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("905999999", "905", "999999")]
         [InlineData("907000000", "907", "000000")]
         [InlineData("907999999", "907", "999999")]
-        [InlineData("908000000", "908", "000000")]
-        [InlineData("908999999", "908", "999999")]
         [InlineData("909000000", "909", "000000")]
         [InlineData("909999999", "909", "999999")]
         public void Parse_Known_NonGeographicPhoneNumber_9XX_AreaCode(string value, string areaCode, string localNumber)
