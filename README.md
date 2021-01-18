@@ -106,7 +106,11 @@ United Kingdom | +44          | GB            | Yes        | Yes    | Yes       
 
 ### Spain
 
--
+- 6, 7, 8 and 9 numbers are supported.
+- 8 and 9 numbers are geographically assigned so the geographic area is included.
+- Sets the `IsVirtual` property as appropraite for mobile phone numbers.
+- The `IsDataOnly` and `IsPager` properties are not currently set for Spain mobile numbers.
+- Sets the `IsFreephone` property for non-geographical phone numbers which are freephone numbers (e.g. 800 and 900).
 
 ### United Kingdom
 
@@ -142,6 +146,7 @@ These were used as the references for the phone number data for each country.
 
 ### Spain
 
+- https://avancedigital.mineco.gob.es/es-ES/Servicios/Numeracion/Documents/Descripcion_PNN.pdf
 - https://numeracionyoperadores.cnmc.es/numeracion
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Spain
 
