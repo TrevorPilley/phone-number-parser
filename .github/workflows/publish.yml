@@ -32,11 +32,11 @@ jobs:
       with:
         dotnet-version: ${{ env.NETCORE_VERSION }}
 
-    - name: update project to version ${GITHUB_REF#refs/*/}
+    - name: update project to version ${{ GITHUB_REF#refs/*/ }}
       run: |
         $xml = [xml](Get-Content '${{ env.PROJECT_PATH }}')
         $xml.SelectNodes("//Project/PropertyGroup[1]/Version") | % {
-          $_."#text" = $_."#text".Replace("1.0.0", ${GITHUB_REF#refs/*/})
+          $_."#text" = $_."#text".Replace("1.0.0", "${{ GITHUB_REF#refs/*/ }}")
         }
 
         $xml.Save('${{ env.PROJECT_PATH }}')
