@@ -14,14 +14,14 @@ namespace PhoneNumbers.Tests.Parsers
         public void Create_Throws_If_From_Blank() =>
             Assert.Throws<ArgumentException>(() => NumberRange.Create("-0"));
 
-        [Fact]
-        public void Create_Throws_If_To_Blank() =>
-            Assert.Throws<ArgumentException>(() => NumberRange.Create("0-"));
-
         [Theory]
         [InlineData("900-100-900")]
         public void Create_Throws_If_More_Than_2_Parts(string value) =>
             Assert.Throws<InvalidOperationException>(() => NumberRange.Create(value));
+
+        [Fact]
+        public void Create_Throws_If_To_Blank() =>
+            Assert.Throws<ArgumentException>(() => NumberRange.Create("0-"));
 
         [Theory]
         [InlineData("000-11")]
