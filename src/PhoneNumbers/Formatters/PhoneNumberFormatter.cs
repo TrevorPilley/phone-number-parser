@@ -49,8 +49,25 @@ namespace PhoneNumbers.Formatters
         /// </summary>
         /// <param name="phoneNumber">The phone number to format.</param>
         /// <returns>The string representation of the phone number.</returns>
-        protected virtual string FormatDisplay(PhoneNumber phoneNumber) =>
-            $"{phoneNumber.Country.CallingCode} {phoneNumber.AreaCode} {phoneNumber.LocalNumber}";
+        protected virtual string FormatDisplay(PhoneNumber phoneNumber)
+        {
+            if (phoneNumber.Country.TrunkPrefix is not null && phoneNumber.AreaCode is not null)
+            {
+                return $"{phoneNumber.Country.CallingCode} ({phoneNumber.Country.TrunkPrefix}) {phoneNumber.AreaCode} {phoneNumber.LocalNumber}";
+            }
+
+            if (phoneNumber.Country.TrunkPrefix is not null && phoneNumber.AreaCode is null)
+            {
+                return $"{phoneNumber.Country.CallingCode} ({phoneNumber.Country.TrunkPrefix}) {phoneNumber.LocalNumber}";
+            }
+
+            if (phoneNumber.Country.TrunkPrefix is null && phoneNumber.AreaCode is not null)
+            {
+                return $"{phoneNumber.Country.CallingCode} {phoneNumber.AreaCode} {phoneNumber.LocalNumber}";
+            }
+
+            return $"{phoneNumber.Country.CallingCode} {phoneNumber.LocalNumber}";
+        }
 
         /// <summary>
         /// Gets the string representation of the phone number for an international caller to use.
