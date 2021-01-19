@@ -16,15 +16,20 @@ namespace PhoneNumbers.Parsers
         /// <summary>
         /// Initialises a new instance of the <see cref="DefaultPhoneNumberParser"/> class.
         /// </summary>
+        /// <param name="countryInfo">The <see cref="CountryInfo"/> of the country for the parser.</param>
+        /// <param name="countryNumbers">The <see cref="CountryNumber"/>s for the country.</param>
         /// <remarks>The constructor is internal for unit tests only.</remarks>
         internal DefaultPhoneNumberParser(CountryInfo countryInfo, IReadOnlyList<CountryNumber> countryNumbers)
             : base(countryInfo)
             => CountryNumbers = countryNumbers ?? throw new ArgumentNullException(nameof(countryNumbers));
 
+        /// <summary>
+        /// Gets the <see cref="CountryNumber"/>s for the country.
+        /// </summary>
         protected IReadOnlyList<CountryNumber> CountryNumbers { get; }
 
         /// <summary>
-        ///     Creates an instance of the <see cref="DefaultPhoneNumberParser"/> class.
+        /// Creates an instance of the <see cref="DefaultPhoneNumberParser"/> class.
         /// </summary>
         /// <returns>The created <see cref="PhoneNumberParser"/>.</returns>
         internal static PhoneNumberParser Create(CountryInfo countryInfo)
