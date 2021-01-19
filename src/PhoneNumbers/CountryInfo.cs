@@ -22,6 +22,18 @@ namespace PhoneNumbers
         }
 
         /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Spain.
+        /// </summary>
+        public static CountryInfo ES { get; } = new()
+        {
+            AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
+            CallingCode = "+34",
+            Formatter = new ESPhoneNumberFormatter(),
+            Iso3166Code = "ES",
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
+        };
+
+        /// <summary>
         /// Gets the <see cref="CountryInfo"/> for France.
         /// </summary>
         public static CountryInfo FR { get; } = new()
