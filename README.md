@@ -108,7 +108,7 @@ United Kingdom | +44          | GB            | Yes        | Yes    | Yes       
 
 - 6, 7, 8 and 9 numbers are supported.
 - 8 and 9 numbers are geographically assigned so the geographic area is included.
-- Sets the `IsVirtual` property as appropraite for mobile phone numbers.
+- Sets the `IsVirtual` property as appropriate for mobile phone numbers.
 - The `IsDataOnly` and `IsPager` properties are not currently set for Spain mobile numbers.
 - Sets the `IsFreephone` property for non-geographical phone numbers which are freephone numbers (e.g. 800 and 900).
 
