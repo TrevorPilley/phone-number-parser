@@ -23,7 +23,7 @@ jobs:
   build:
     name: Publish
     runs-on: ubuntu-latest
-    
+
     steps:
     - uses: actions/checkout@v2
 
@@ -31,6 +31,16 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: ${{ env.NETCORE_VERSION }}
+
+    - name: update project to version ${GITHUB_REF#refs/*/}
+      run: |
+        $xml = [xml](Get-Content ${{ env.PROJECT_PATH }})
+        $xml.SelectNodes("//Project/PropertyGroup[1]/Version") | % {
+          $_."#text" = $_."#text".Replace("1.0.0", ${GITHUB_REF#refs/*/})
+        }
+
+        $xml.Save(${{ env.PROJECT_PATH }})
+      shell: pwsh
 
     - name: dotnet restore
       run: dotnet restore
