@@ -23,7 +23,7 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-    
+
     steps:
     - uses: actions/checkout@v2
 
@@ -39,7 +39,7 @@ jobs:
       run: dotnet build --configuration ${{ env.PROJECT_CONFIGURATION }} --no-restore
 
     - name: dotnet test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test --no-restore --verbosity minimal
 
     - name: dotnet pack
       run: dotnet pack --no-build --configuration ${{ env.PROJECT_CONFIGURATION }}
