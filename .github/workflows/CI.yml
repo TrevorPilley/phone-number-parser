@@ -19,7 +19,7 @@ env:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
   # Do not extract XML documentation files from nuget packages
   NUGET_XMLDOC_MODE: skip
-  NETCORE_VERSION: '5.0.101'
+  NETCORE_VERSION: '5.0.x'
   PROJECT_CONFIGURATION: Release
 
 jobs:

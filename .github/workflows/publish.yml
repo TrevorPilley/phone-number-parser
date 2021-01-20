@@ -14,7 +14,7 @@ env:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
   # Do not extract XML documentation files from nuget packages
   NUGET_XMLDOC_MODE: skip
-  NETCORE_VERSION: '5.0.101'
+  NETCORE_VERSION: '5.0.x'
   NUGET_SOURCE: 'https://api.nuget.org/v3/index.json'
   PROJECT_CONFIGURATION: Release
   PROJECT_PATH: ./src/PhoneNumbers/PhoneNumbers.csproj
