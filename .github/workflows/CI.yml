@@ -23,7 +23,6 @@ env:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
   # Do not extract XML documentation files from nuget packages
   NUGET_XMLDOC_MODE: skip
-  NETCORE_VERSION: '5.0.x'
   PROJECT_CONFIGURATION: Release
 
 jobs:
@@ -39,7 +38,7 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: ${{ env.NETCORE_VERSION }}
+        dotnet-version: 5.0.x
 
     - name: dotnet restore
       run: dotnet restore
