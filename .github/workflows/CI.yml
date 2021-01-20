@@ -2,12 +2,16 @@ name: CI
 
 on:
   push:
+    branches:
+      - '**'
     paths-ignore:
       - '.editorconfig'
       - 'CONTRIBUTING.md'
       - 'README.md'
       - 'build.ps1'
       - 'build.sh'
+    tags-ignore:
+      - '*.*.*'
   pull_request:
 
 env:
@@ -19,7 +23,6 @@ env:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
   # Do not extract XML documentation files from nuget packages
   NUGET_XMLDOC_MODE: skip
-  NETCORE_VERSION: '5.0.101'
   PROJECT_CONFIGURATION: Release
 
 jobs:
@@ -32,10 +35,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Setup .NET Core ${{ env.NETCORE_VERSION }}
+    - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: ${{ env.NETCORE_VERSION }}
+        dotnet-version: 5.0.x
 
     - name: dotnet restore
       run: dotnet restore
