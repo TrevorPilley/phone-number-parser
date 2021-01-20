@@ -68,7 +68,7 @@ namespace PhoneNumbers
         };
 
         /// <summary>
-        /// Gets the <see cref="CountryInfo"/> for the Hong Kong.
+        /// Gets the <see cref="CountryInfo"/> for Hong Kong.
         /// </summary>
         public static CountryInfo HK { get; } = new()
         {
@@ -76,6 +76,7 @@ namespace PhoneNumbers
             Formatter = new HKPhoneNumberFormatter(),
             InternationalCallPrefix = "001",
             Iso3166Code = "HK",
+            Name = "Hong Kong",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9 }),
         };
 
