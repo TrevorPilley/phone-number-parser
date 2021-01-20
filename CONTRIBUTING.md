@@ -38,7 +38,7 @@ public static CountryInfo ZZ { get; } = new()
 2. If the country uses area codes, set the `AreaCodeLengths` property as appropriate and declare in descending order.
 3. If the country doesn't use the ITU default `InternationalCallPrefix` of `00`, set the property appropriately.
 4. If the country uses trunk prefixes, set the `TrunkPrefix` appropriately.
-5. Add a new `CountryInfo_ZZ_Tests` class with the appropriate tests (see an existing implementation).
+5. Add a new `CountryInfo_ZZ` test asserting the property values (see an existing implementation).
 
 ### Add the data file
 
