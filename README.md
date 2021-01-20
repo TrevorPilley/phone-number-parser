@@ -79,7 +79,7 @@ Country        | Calling Code | ISO 3166 Code | Geographic | Mobile | Mobile<br/
 ---            | ---          | ---           | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:
 France         | +33          | FR            | Yes        | Yes    |                        |                    |                      | Yes            | Yes
 Guernsey       | +44          | GG            | Yes        | Yes    |                        |                    |                      |                |
-Hong Kong      | +852         | HK            |            | Yes    |                        |                    |                      | Yes            |
+Hong Kong      | +852         | HK            |            | Yes    |                        |                    | Yes                  | Yes            | Yes
 Ireland        | +353         | IE            | Yes        | Yes    |                        | Yes                | Yes                  | Yes            | Yes
 Isle of Man    | +44          | IM            | Yes        | Yes    |                        |                    |                      |                |
 Italy          | +39          | IT            | Yes        | Yes    |                        |                    |                      | Yes            | Yes
@@ -104,7 +104,8 @@ United Kingdom | +44          | GB            | Yes        | Yes    | Yes       
 
 - 2, 3, 5, 6, 7, 8 and 9 numbers are supported.
 - Hong Kong no longer uses area codes so "land line" numbers are always non-geographic.
-- The `IsDataOnly`, `IsPager` and `IsVirtual` properties are not currently set for Hong Kong mobile numbers.
+- Sets the `IsVirtual` property as appropriate for mobile phone numbers.
+- The `IsDataOnly` and `IsPager` properties are not currently set for Hong Kong mobile numbers.
 - Hong Kong does not use a trunk prefix.
 - Sets the `IsVirtual` property as appropriate for mobile phone numbers.
 - The `IsDataOnly` and `IsPager` properties are not currently set for Hong Kong mobile numbers.
