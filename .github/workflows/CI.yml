@@ -2,12 +2,16 @@ name: CI
 
 on:
   push:
+    branches:
+      - '**'
     paths-ignore:
       - '.editorconfig'
       - 'CONTRIBUTING.md'
       - 'README.md'
       - 'build.ps1'
       - 'build.sh'
+    tags-ignore:
+      - '*.*.*'
   pull_request:
 
 env:
