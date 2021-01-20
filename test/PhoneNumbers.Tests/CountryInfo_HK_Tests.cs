@@ -33,12 +33,14 @@ namespace PhoneNumbers.Tests
         [Theory]
         [InlineData("+85212345678")]
         [InlineData("+852 1234 5678")]
+        [InlineData("+852-1234-5678")]
         public void HK_IsInternationalNumber_True(string value) =>
             Assert.True(CountryInfo.HK.IsInternationalNumber(value));
 
         [Theory]
         [InlineData("+85229013000")]
         [InlineData("+852 2901 3000")]
+        [InlineData("+852-2901-3000")]
         [InlineData("29013000")]
         [InlineData("2901 3000")]
         [InlineData("2901-3000")]
