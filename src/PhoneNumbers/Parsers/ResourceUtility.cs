@@ -61,7 +61,10 @@ namespace PhoneNumbers.Parsers
 
             while ((line = reader.ReadLine()) != null)
             {
-                yield return line;
+                if (line[0] != '#')
+                {
+                    yield return line;
+                }
             }
         }
     }
