@@ -56,6 +56,7 @@ namespace PhoneNumbers.Tests
             Assert.False(countryInfo.HasAreaCodes);
             Assert.Equal("001", countryInfo.InternationalCallPrefix);
             Assert.Equal("HK", countryInfo.Iso3166Code);
+            Assert.Equal("Hong Kong", countryInfo.Name);
             Assert.Equal(new[] { 8, 9 }, countryInfo.NsnLengths);
             Assert.Null(countryInfo.TrunkPrefix);
         }
