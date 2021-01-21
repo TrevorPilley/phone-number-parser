@@ -18,6 +18,7 @@ namespace PhoneNumbers.Tests
             Assert.True(countryInfo.HasAreaCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("ES", countryInfo.Iso3166Code);
+            Assert.Equal("Spain", countryInfo.Name);
             Assert.Equal(new[] { 9 }, countryInfo.NsnLengths);
             Assert.Null(countryInfo.TrunkPrefix);
         }
@@ -35,6 +36,7 @@ namespace PhoneNumbers.Tests
             Assert.False(countryInfo.HasAreaCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("FR", countryInfo.Iso3166Code);
+            Assert.Equal("France", countryInfo.Name);
             Assert.Equal(new[] { 9 }, countryInfo.NsnLengths);
             Assert.Equal("0", countryInfo.TrunkPrefix);
         }
@@ -52,6 +54,7 @@ namespace PhoneNumbers.Tests
             Assert.True(countryInfo.HasAreaCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("IE", countryInfo.Iso3166Code);
+            Assert.Equal("Ireland", countryInfo.Name);
             Assert.Equal(new[] { 7, 8, 9 }, countryInfo.NsnLengths);
             Assert.Equal("0", countryInfo.TrunkPrefix);
         }
@@ -69,6 +72,7 @@ namespace PhoneNumbers.Tests
             Assert.True(countryInfo.HasAreaCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("IT", countryInfo.Iso3166Code);
+            Assert.Equal("Italy", countryInfo.Name);
             Assert.Equal(new[] { 6, 7, 8, 9, 10, 11 }, countryInfo.NsnLengths);
             Assert.Null(countryInfo.TrunkPrefix);
         }
@@ -86,6 +90,7 @@ namespace PhoneNumbers.Tests
             Assert.True(countryInfo.HasAreaCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("GB", countryInfo.Iso3166Code);
+            Assert.Equal("United Kingdom", countryInfo.Name);
             Assert.Equal(new[] { 7, 9, 10 }, countryInfo.NsnLengths);
             Assert.Equal("0", countryInfo.TrunkPrefix);
         }
@@ -146,6 +151,7 @@ namespace PhoneNumbers.Tests
             Assert.False(countryInfo.HasAreaCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Null(countryInfo.Iso3166Code);
+            Assert.Null(countryInfo.Name);
             Assert.Empty(countryInfo.NsnLengths);
             Assert.Null(countryInfo.TrunkPrefix);
         }
