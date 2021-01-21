@@ -17,6 +17,7 @@ namespace PhoneNumbers.Tests
                 .Where(x => x.PropertyType == typeof(CountryInfo))
                 .Select(x => x.GetValue(null))
                 .Cast<CountryInfo>()
+                .OrderBy(x => x.SharesCallingCode)
                 .ToList();
 
             Assert.True(countryInfos.Count > 0);

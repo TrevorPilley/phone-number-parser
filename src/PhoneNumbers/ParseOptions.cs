@@ -24,6 +24,7 @@ namespace PhoneNumbers
             .Where(x => x.PropertyType == typeof(CountryInfo))
             .Select(x => x.GetValue(null))
             .Cast<CountryInfo>()
+            .OrderBy(x => x.SharesCallingCode)
             .ToList();
 
         /// <summary>

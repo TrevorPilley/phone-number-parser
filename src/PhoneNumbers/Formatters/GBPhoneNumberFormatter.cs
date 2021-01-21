@@ -6,6 +6,12 @@ namespace PhoneNumbers.Formatters
     /// <remarks>See https://www.area-codes.org.uk/formatting.php for the rules this class implements.</remarks>
     internal sealed class GBPhoneNumberFormatter : PhoneNumberFormatter
     {
+        private GBPhoneNumberFormatter()
+        {
+        }
+
+        internal static PhoneNumberFormatter Instance { get; } = new GBPhoneNumberFormatter();
+
         /// <inheritdoc/>
         protected override string FormatDisplay(PhoneNumber phoneNumber)
         {
