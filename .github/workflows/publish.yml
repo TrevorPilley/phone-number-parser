@@ -39,7 +39,7 @@ jobs:
       run: |
         $xml = [xml](Get-Content '${{ env.PROJECT_PATH }}')
         $xml.SelectNodes("//Project/PropertyGroup[1]/Version") | % {
-          $_."#text" = $_."#text".Replace("1.0.0", "${{ $RELEASE_VERSION }}")
+          $_."#text" = $_."#text".Replace("1.0.0", "${{ env.RELEASE_VERSION }}")
         }
 
         $xml.Save('${{ env.PROJECT_PATH }}')
