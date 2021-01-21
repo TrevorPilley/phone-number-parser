@@ -32,10 +32,10 @@ jobs:
       with:
         dotnet-version: 5.0.x
 
-    - name: Set RELEASE_VERSION from tag
+    - name: Set release version from tag name
       run: echo "RELEASE_VERSION=$(echo ${GITHUB_REF:10})" >> $GITHUB_ENV
 
-    - name: update project version
+    - name: update project version value to release version
       run: |
         $xml = [xml](Get-Content '${{ env.PROJECT_PATH }}')
         $xml.SelectNodes("//Project/PropertyGroup[1]/Version") | % {
