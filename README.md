@@ -78,8 +78,11 @@ The library currently supports parsing phone numbers for the following countries
 Country        | Calling Code | ISO 3166 Code | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone)
 ---            | ---          | ---           | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:
 France         | +33          | FR            | Yes        | Yes    |                        |                    |                      | Yes            | Yes
+Guernsey       | +44          | GG            | Yes        | Yes    |                        |                    |                      |                |
 Ireland        | +353         | IE            | Yes        | Yes    |                        | Yes                | Yes                  | Yes            | Yes
+Isle of Man    | +44          | IM            | Yes        | Yes    |                        |                    |                      |                |
 Italy          | +39          | IT            | Yes        | Yes    |                        |                    |                      | Yes            | Yes
+Jersey         | +44          | JE            | Yes        | Yes    |                        |                    |                      |                |
 Spain          | +34          | ES            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes
 United Kingdom | +44          | GB            | Yes        | Yes    | Yes                    | Yes                | Yes                  | Yes            | Yes
 
@@ -90,6 +93,12 @@ United Kingdom | +44          | GB            | Yes        | Yes    | Yes       
 - The `IsDataOnly`, `IsPager` and `IsVirtual` properties are not currently set for France mobile numbers.
 - Sets the `IsFreephone` property for non-geographical phone numbers which are freephone numbers (e.g. 0800-0805 numbers).
 
+### Guernsey
+
+- 01 and 07 numbers are supported.
+- 01 numbers are geographically assigned so the geographic area is included.
+- The `IsDataOnly`, `IsPager` and `IsVirtual` properties are not currently set for Guernsey mobile numbers.
+
 ### Ireland
 
 - 01, 02, 04, 05, 06, 07, 08 and 09 numbers are supported.
@@ -98,12 +107,24 @@ United Kingdom | +44          | GB            | Yes        | Yes    | Yes       
 - The `IsDataOnly` property is not currently set for Ireland mobile numbers.
 - Sets the `IsFreephone` property for non-geographical phone numbers which are freephone numbers (e.g. 0800).
 
+### Isle of Man
+
+- 01 and 07 numbers are supported.
+- 01 numbers are geographically assigned so the geographic area is included.
+- The `IsDataOnly`, `IsPager` and `IsVirtual` properties are not currently set for Isle of Man mobile numbers.
+
 ### Italy
 
 - 0, 3 and 8 numbers are supported
 - 0 numbers are geographically assigned so the geographic area is included.
 - The `IsDataOnly`, `IsPager` and `IsVirtual` properties are not currently set for Italy mobile numbers.
 - Sets the `IsFreephone` property for non-geographical phone numbers which are freephone numbers (e.g. 800 and 803).
+
+### Jersey
+
+- 01 and 07 numbers are supported.
+- 01 numbers are geographically assigned so the geographic area is included.
+- The `IsDataOnly`, `IsPager` and `IsVirtual` properties are not currently set for Jersey mobile numbers.
 
 ### Spain
 
@@ -121,7 +142,6 @@ _note the ISO code for the United Kingdom is 'GB' rather than 'UK'._
 - 01 and 02 numbers are geographically assigned so the geographic area is included.
 - Sets the `IsDataOnly`, `IsPager` or `IsVirtual` properties as appropriate for mobile phone numbers.
 - Sets the `IsFreephone` property for non-geographical phone numbers which are freephone numbers (e.g. 0800 and 0808).
-- The UK parsing also includes Guernsey, Jersey and the Isle of Man, which although separate countries, all use the +44 calling code and share UK phone number ranges and area codes.
 
 ## References for number data
 
@@ -151,7 +171,7 @@ These were used as the references for the phone number data for each country.
 - https://numeracionyoperadores.cnmc.es/numeracion
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Spain
 
-### United Kingdom
+### United Kingdom, Guernsey, Jersey, Isle of Man
 
 - https://www.area-codes.org.uk/
 - https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000DD0001PDFE.pdf

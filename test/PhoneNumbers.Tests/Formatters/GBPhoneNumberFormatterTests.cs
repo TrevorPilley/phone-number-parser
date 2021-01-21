@@ -9,7 +9,7 @@ namespace PhoneNumbers.Tests.Formatters
     /// </summary>
     public class GBPhoneNumberFormatterTests
     {
-        private readonly PhoneNumberFormatter _formatter = new GBPhoneNumberFormatter();
+        private readonly PhoneNumberFormatter _formatter = GBPhoneNumberFormatter.Instance;
 
         [Theory]
         [InlineData("01132224444", "0113 222 4444")] // 11X

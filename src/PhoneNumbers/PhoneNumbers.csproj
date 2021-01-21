@@ -65,15 +65,21 @@
     <None Remove="DataFiles\ES_numbers.txt"/>
     <None Remove="DataFiles\FR_numbers.txt"/>
     <None Remove="DataFiles\GB_numbers.txt"/>
+    <None Remove="DataFiles\GG_numbers.txt"/>
     <None Remove="DataFiles\IE_numbers.txt"/>
+    <None Remove="DataFiles\IM_numbers.txt"/>
     <None Remove="DataFiles\IT_numbers.txt"/>
+    <None Remove="DataFiles\JE_numbers.txt"/>
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="DataFiles\ES_numbers.txt"/>
     <EmbeddedResource Include="DataFiles\FR_numbers.txt"/>
     <EmbeddedResource Include="DataFiles\GB_numbers.txt"/>
+    <EmbeddedResource Include="DataFiles\GG_numbers.txt"/>
     <EmbeddedResource Include="DataFiles\IE_numbers.txt"/>
+    <EmbeddedResource Include="DataFiles\IM_numbers.txt"/>
     <EmbeddedResource Include="DataFiles\IT_numbers.txt"/>
+    <EmbeddedResource Include="DataFiles\JE_numbers.txt"/>
   </ItemGroup>
 </Project>

@@ -48,6 +48,21 @@ namespace PhoneNumbers
         };
 
         /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Guernsey.
+        /// </summary>
+        public static CountryInfo GG { get; } = new()
+        {
+            AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 4 }),
+            CallingCode = "+44",
+            Formatter = GBPhoneNumberFormatter.Instance,
+            Iso3166Code = "GG",
+            Name = "Guernsey",
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
+            SharesCallingCode = true,
+            TrunkPrefix = "0",
+        };
+
+        /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Ireland.
         /// </summary>
         /// <remarks>Covers the Republic of Ireland, Northern Ireland is part of the United Kingdom.</remarks>
@@ -59,6 +74,21 @@ namespace PhoneNumbers
             Iso3166Code = "IE",
             Name = "Ireland",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8, 9 }),
+            TrunkPrefix = "0",
+        };
+
+        /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Isle of Man.
+        /// </summary>
+        public static CountryInfo IM { get; } = new()
+        {
+            AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 4 }),
+            CallingCode = "+44",
+            Formatter = GBPhoneNumberFormatter.Instance,
+            Iso3166Code = "IM",
+            Name = "Isle of Man",
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
+            SharesCallingCode = true,
             TrunkPrefix = "0",
         };
 
@@ -77,14 +107,29 @@ namespace PhoneNumbers
         };
 
         /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Jersey.
+        /// </summary>
+        public static CountryInfo JE { get; } = new()
+        {
+            AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 4 }),
+            CallingCode = "+44",
+            Formatter = GBPhoneNumberFormatter.Instance,
+            Iso3166Code = "JE",
+            Name = "Jersey",
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
+            SharesCallingCode = true,
+            TrunkPrefix = "0",
+        };
+
+        /// <summary>
         /// Gets the <see cref="CountryInfo"/> for the United Kingdom.
         /// </summary>
-        /// <remarks>Covers England, Scotland, Wales and Northern Ireland, plus at a telephone level Guernsey, Jersey and the Isle of Man.</remarks>
+        /// <remarks>Covers England, Scotland, Wales and Northern Ireland.</remarks>
         public static CountryInfo UK { get; } = new()
         {
             AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2 }),
             CallingCode = "+44",
-            Formatter = new GBPhoneNumberFormatter(),
+            Formatter = GBPhoneNumberFormatter.Instance,
             Iso3166Code = "GB",
             Name = "United Kingdom",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 9, 10 }),
@@ -145,6 +190,11 @@ namespace PhoneNumbers
         /// Gets the permitted lenghts of the national significant number.
         /// </summary>
         internal ReadOnlyCollection<int> NsnLengths { get; init; } = new(Array.Empty<int>());
+
+        /// <summary>
+        /// Gets a value indicating whether the calling code is shared with another country.
+        /// </summary>
+        internal bool SharesCallingCode { get; init; }
 
         internal bool IsInternationalNumber(string value) =>
             value?.StartsWith(CallingCode, StringComparison.Ordinal) == true;

@@ -75,17 +75,17 @@ namespace PhoneNumbers
                 throw new ArgumentNullException(nameof(options));
             }
 
-            var country = options.Countries.SingleOrDefault(x => x.IsInternationalNumber(value));
-
-            if (country == null)
+            foreach (var country in options.Countries.Where(x => x.IsInternationalNumber(value)))
             {
-                throw new ParseException("Parse(value) only supports a value starting with a supported calling code, otherwise Parse(value, countryCode) must be used.");
+                var result = options!.Factory.GetParser(country).Parse(value);
+
+                if (result.PhoneNumber != null)
+                {
+                    return result.PhoneNumber!;
+                }
             }
 
-            var result = options.Factory.GetParser(country).Parse(value);
-            result.ThrowIfFailure();
-
-            return result.PhoneNumber!;
+            throw new ParseException("Parse(value) only supports a value starting with a supported calling code, otherwise Parse(value, countryCode) must be used.");
         }
 
         /// <summary>
@@ -142,14 +142,16 @@ namespace PhoneNumbers
         /// <returns><c>true</c> if value was converted successfully; otherwise, <c>false</c>.</returns>
         public static bool TryParse(string value, ParseOptions options, out PhoneNumber? phoneNumber)
         {
-            var country = options?.Countries.SingleOrDefault(x => x.IsInternationalNumber(value));
-
-            if (country != null)
+            foreach (var country in options?.Countries.Where(x => x.IsInternationalNumber(value)) ?? Enumerable.Empty<CountryInfo>())
             {
                 var result = options!.Factory.GetParser(country).Parse(value);
 
                 phoneNumber = result.PhoneNumber;
-                return result.PhoneNumber != null;
+
+                if (result.PhoneNumber != null)
+                {
+                    return true;
+                }
             }
 
             phoneNumber = default;

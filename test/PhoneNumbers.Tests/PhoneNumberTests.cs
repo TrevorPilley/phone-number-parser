@@ -58,6 +58,14 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
+        public void Parse_Value_With_GG_CallingCode()
+        {
+            var phoneNumber = PhoneNumber.Parse("+441481717000");
+            Assert.NotNull(phoneNumber);
+            Assert.Equal(CountryInfo.GG, phoneNumber.Country);
+        }
+
+        [Fact]
         public void Parse_Value_With_IE_CallingCode()
         {
             var phoneNumber = PhoneNumber.Parse("+35340226969");
@@ -66,11 +74,27 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
+        public void Parse_Value_With_IM_CallingCode()
+        {
+            var phoneNumber = PhoneNumber.Parse("+441624696300");
+            Assert.NotNull(phoneNumber);
+            Assert.Equal(CountryInfo.IM, phoneNumber.Country);
+        }
+
+        [Fact]
         public void Parse_Value_With_IT_CallingCode()
         {
             var phoneNumber = PhoneNumber.Parse("+393492525255");
             Assert.NotNull(phoneNumber);
             Assert.Equal(CountryInfo.IT, phoneNumber.Country);
+        }
+
+        [Fact]
+        public void Parse_Value_With_JE_CallingCode()
+        {
+            var phoneNumber = PhoneNumber.Parse("+441534716800");
+            Assert.NotNull(phoneNumber);
+            Assert.Equal(CountryInfo.JE, phoneNumber.Country);
         }
 
         [Fact]
@@ -92,13 +116,6 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
-        public void TryParse_UK_CallingCode_Invalid_Value()
-        {
-            Assert.False(PhoneNumber.TryParse("+441110000000", out var phoneNumber));
-            Assert.Null(phoneNumber);
-        }
-
-        [Fact]
         public void TryParse_ES_CallingCode_Valid_Value()
         {
             Assert.True(PhoneNumber.TryParse("+34810030000", out var phoneNumber));
@@ -115,6 +132,14 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
+        public void TryParse_GG_CallingCode_Valid_Value()
+        {
+            Assert.True(PhoneNumber.TryParse("+441481717000", out var phoneNumber));
+            Assert.NotNull(phoneNumber);
+            Assert.Equal(CountryInfo.GG, phoneNumber.Country);
+        }
+
+        [Fact]
         public void TryParse_IE_CallingCode_Valid_Value()
         {
             Assert.True(PhoneNumber.TryParse("+35340226969", out var phoneNumber));
@@ -123,11 +148,34 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
+        public void TryParse_IM_CallingCode_Valid_Value()
+        {
+            Assert.True(PhoneNumber.TryParse("+441624696300", out var phoneNumber));
+            Assert.NotNull(phoneNumber);
+            Assert.Equal(CountryInfo.IM, phoneNumber.Country);
+        }
+
+        [Fact]
         public void TryParse_IT_CallingCode_Valid_Value()
         {
             Assert.True(PhoneNumber.TryParse("+393492525255", out var phoneNumber));
             Assert.NotNull(phoneNumber);
             Assert.Equal(CountryInfo.IT, phoneNumber.Country);
+        }
+
+        [Fact]
+        public void TryParse_JE_CallingCode_Valid_Value()
+        {
+            Assert.True(PhoneNumber.TryParse("+441534716800", out var phoneNumber));
+            Assert.NotNull(phoneNumber);
+            Assert.Equal(CountryInfo.JE, phoneNumber.Country);
+        }
+
+        [Fact]
+        public void TryParse_UK_CallingCode_Invalid_Value()
+        {
+            Assert.False(PhoneNumber.TryParse("+441110000000", out var phoneNumber));
+            Assert.Null(phoneNumber);
         }
 
         [Fact]
