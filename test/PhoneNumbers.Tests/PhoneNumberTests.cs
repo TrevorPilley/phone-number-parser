@@ -58,6 +58,14 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
+        public void Parse_Value_With_HongKong_CallingCode()
+        {
+            var phoneNumber = PhoneNumber.Parse("+85251015522");
+            Assert.NotNull(phoneNumber);
+            Assert.Equal(CountryInfo.HK, phoneNumber.Country);
+        }
+
+        [Fact]
         public void Parse_Value_With_Ireland_CallingCode()
         {
             var phoneNumber = PhoneNumber.Parse("+35340226969");
@@ -129,6 +137,14 @@ namespace PhoneNumbers.Tests
             Assert.True(PhoneNumber.TryParse("+441481717000", out var phoneNumber));
             Assert.NotNull(phoneNumber);
             Assert.Equal(CountryInfo.Guernsey, phoneNumber.Country);
+        }
+
+        [Fact]
+        public void TryParse_HongKong_CallingCode_Valid_Value()
+        {
+            Assert.True(PhoneNumber.TryParse("+85251015522", out var phoneNumber));
+            Assert.NotNull(phoneNumber);
+            Assert.Equal(CountryInfo.HK, phoneNumber.Country);
         }
 
         [Fact]
