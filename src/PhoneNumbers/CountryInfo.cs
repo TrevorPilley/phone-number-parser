@@ -30,6 +30,7 @@ namespace PhoneNumbers
             CallingCode = "+34",
             Formatter = new ESPhoneNumberFormatter(),
             Iso3166Code = "ES",
+            Name = "Spain",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
         };
 
@@ -41,6 +42,7 @@ namespace PhoneNumbers
             CallingCode = "+33",
             Formatter = new FRPhoneNumberFormatter(),
             Iso3166Code = "FR",
+            Name = "France",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
             TrunkPrefix = "0",
         };
@@ -55,6 +57,7 @@ namespace PhoneNumbers
             CallingCode = "+353",
             Formatter = new IEPhoneNumberFormatter(),
             Iso3166Code = "IE",
+            Name = "Ireland",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8, 9 }),
             TrunkPrefix = "0",
         };
@@ -69,6 +72,7 @@ namespace PhoneNumbers
             CallingCode = "+39",
             Formatter = new ITPhoneNumberFormatter(),
             Iso3166Code = "IT",
+            Name = "Italy",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8, 9, 10, 11 }),
         };
 
@@ -82,6 +86,7 @@ namespace PhoneNumbers
             CallingCode = "+44",
             Formatter = new GBPhoneNumberFormatter(),
             Iso3166Code = "GB",
+            Name = "United Kingdom",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 9, 10 }),
             TrunkPrefix = "0",
         };
@@ -115,6 +120,11 @@ namespace PhoneNumbers
         /// </summary>
         /// <remarks>See https://www.iso.org/iso-3166-country-codes.html</remarks>
         public string Iso3166Code { get; init; } = null!;
+
+        /// <summary>
+        /// Gets the name of the country.
+        /// </summary>
+        public string Name { get; init; } = null!;
 
         /// <summary>
         /// Gets the trunk prefix used by the country, if applicable.
