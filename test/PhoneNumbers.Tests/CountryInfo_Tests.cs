@@ -176,6 +176,25 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
+        public void CountryInfo_SanMarino()
+        {
+            Assert.Same(CountryInfo.SanMarino, CountryInfo.SanMarino);
+
+            var countryInfo = CountryInfo.SanMarino;
+
+            Assert.Empty(countryInfo.AreaCodeLengths);
+            Assert.Equal("+378", countryInfo.CallingCode);
+            Assert.IsType<PhoneNumberFormatter>(countryInfo.Formatter);
+            Assert.False(countryInfo.HasAreaCodes);
+            Assert.Equal("00", countryInfo.InternationalCallPrefix);
+            Assert.Equal("SM", countryInfo.Iso3166Code);
+            Assert.False(countryInfo.SharesCallingCode);
+            Assert.Equal("San Marino", countryInfo.Name);
+            Assert.Equal(new[] { 6, 7, 8, 9, 10 }, countryInfo.NsnLengths);
+            Assert.Null(countryInfo.TrunkPrefix);
+        }
+
+        [Fact]
         public void CountryInfo_Singapore()
         {
             Assert.Same(CountryInfo.Singapore, CountryInfo.Singapore);
