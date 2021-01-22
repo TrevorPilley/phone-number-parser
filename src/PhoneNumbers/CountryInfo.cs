@@ -163,6 +163,18 @@ namespace PhoneNumbers
             TrunkPrefix = "0",
         };
 
+       /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Singapore.
+        /// </summary>
+        public static CountryInfo SG { get; } = new()
+        {
+            CallingCode = "+65",
+            InternationalCallPrefix = "001",
+            Iso3166Code = "SG",
+            Name = "Singapore",
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 8 }),
+        };
+
         /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Spain.
         /// </summary>
