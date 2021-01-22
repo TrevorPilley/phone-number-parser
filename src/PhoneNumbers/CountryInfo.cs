@@ -176,6 +176,17 @@ namespace PhoneNumbers
         };
 
         /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Monaco.
+        /// </summary>
+        public static CountryInfo MC { get; } = new()
+        {
+            CallingCode = "+377",
+            Iso3166Code = "MC",
+            Name = "Monaco",
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9 }),
+        };
+
+        /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Singapore.
         /// </summary>
         public static CountryInfo Singapore { get; } = new()
