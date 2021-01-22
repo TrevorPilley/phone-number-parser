@@ -157,6 +157,25 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
+        public void CountryInfo_Monaco()
+        {
+            Assert.Same(CountryInfo.MC, CountryInfo.MC);
+
+            var countryInfo = CountryInfo.MC;
+
+            Assert.Empty(countryInfo.AreaCodeLengths);
+            Assert.Equal("+377", countryInfo.CallingCode);
+            Assert.IsType<PhoneNumberFormatter>(countryInfo.Formatter);
+            Assert.False(countryInfo.HasAreaCodes);
+            Assert.Equal("00", countryInfo.InternationalCallPrefix);
+            Assert.Equal("MC", countryInfo.Iso3166Code);
+            Assert.False(countryInfo.SharesCallingCode);
+            Assert.Equal("Monaco", countryInfo.Name);
+            Assert.Equal(new[] { 8, 9 }, countryInfo.NsnLengths);
+            Assert.Null(countryInfo.TrunkPrefix);
+        }
+
+        [Fact]
         public void CountryInfo_Singapore()
         {
             Assert.Same(CountryInfo.Singapore, CountryInfo.Singapore);
