@@ -107,8 +107,6 @@ United Kingdom | +44          | GB            | Yes        | Yes    | Yes       
 - Sets the `IsVirtual` property as appropriate for mobile phone numbers.
 - The `IsDataOnly` and `IsPager` properties are not currently set for Hong Kong mobile numbers.
 - Hong Kong does not use a trunk prefix.
-- Sets the `IsVirtual` property as appropriate for mobile phone numbers.
-- The `IsDataOnly` and `IsPager` properties are not currently set for Hong Kong mobile numbers.
 - Sets the `IsFreephone` property for non-geographical phone numbers which are freephone numbers (e.g. 800 through 809).
 
 ### Ireland
