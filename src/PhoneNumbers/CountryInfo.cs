@@ -164,6 +164,18 @@ namespace PhoneNumbers
         };
 
         /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Macau.
+        /// </summary>
+        public static CountryInfo MO { get; } = new()
+        {
+            CallingCode = "+853",
+            Formatter = new MOPhoneNumberFormatter(),
+            Iso3166Code = "MO",
+            Name = "Macau",
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 8 }),
+        };
+
+        /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Singapore.
         /// </summary>
         public static CountryInfo Singapore { get; } = new()
