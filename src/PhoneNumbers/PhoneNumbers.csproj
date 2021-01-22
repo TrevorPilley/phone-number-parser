@@ -74,6 +74,7 @@
     <None Remove="DataFiles\MC.txt"/>
     <None Remove="DataFiles\MO.txt"/>
     <None Remove="DataFiles\SG.txt"/>
+    <None Remove="DataFiles\SM.txt"/>
   </ItemGroup>
 
   <ItemGroup>
@@ -89,5 +90,6 @@
     <EmbeddedResource Include="DataFiles\MC.txt"/>
     <EmbeddedResource Include="DataFiles\MO.txt"/>
     <EmbeddedResource Include="DataFiles\SG.txt"/>
+    <EmbeddedResource Include="DataFiles\SM.txt"/>
   </ItemGroup>
 </Project>
