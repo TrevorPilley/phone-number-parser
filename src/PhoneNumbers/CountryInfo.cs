@@ -169,6 +169,7 @@ namespace PhoneNumbers
         public static CountryInfo SG { get; } = new()
         {
             CallingCode = "+65",
+            Formatter = new SGPhoneNumberFormatter(),
             InternationalCallPrefix = "001",
             Iso3166Code = "SG",
             Name = "Singapore",
