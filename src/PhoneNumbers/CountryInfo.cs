@@ -163,7 +163,7 @@ namespace PhoneNumbers
             TrunkPrefix = "0",
         };
 
-       /// <summary>
+        /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Singapore.
         /// </summary>
         public static CountryInfo SG { get; } = new()
