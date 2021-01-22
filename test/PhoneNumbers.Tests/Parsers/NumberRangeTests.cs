@@ -109,6 +109,7 @@ namespace PhoneNumbers.Tests.Parsers
         [Theory]
         [InlineData("000500")]
         [InlineData("000501")]
+        [InlineData("2000501")]
         [InlineData("10050079")]
         [InlineData("10050080")]
         public void Range_Span_Contains_True(string value) =>
