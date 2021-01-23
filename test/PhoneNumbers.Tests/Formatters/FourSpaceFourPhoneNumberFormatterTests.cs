@@ -13,7 +13,10 @@ namespace PhoneNumbers.Tests.Formatters
         [Theory]
         [InlineData("29013000", "2901 3000")]
         [InlineData("51015522", "5101 5522")]
-        public void Format_Display(string value, string expected) =>
-            Assert.Equal(expected, _formatter.Format(PhoneNumber.Parse(value, "HK"), "D"));
+        public void Format_Display(string localNumber, string expected) =>
+            Assert.Equal(expected, _formatter.Format(GetPhoneNumber(null, null, localNumber), "D"));
+
+        private static PhoneNumber GetPhoneNumber(string trunkPrefix, string areaCode, string localNumber) =>
+            new NonGeographicPhoneNumber(TestHelper.CreateCountryInfo(trunkPrefix: trunkPrefix), areaCode, localNumber, false);
     }
 }
