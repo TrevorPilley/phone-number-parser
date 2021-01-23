@@ -178,7 +178,7 @@ namespace PhoneNumbers
         /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Monaco.
         /// </summary>
-        public static CountryInfo MC { get; } = new()
+        public static CountryInfo Monaco { get; } = new()
         {
             CallingCode = "+377",
             Iso3166Code = "MC",

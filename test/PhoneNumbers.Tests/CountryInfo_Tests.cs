@@ -159,9 +159,9 @@ namespace PhoneNumbers.Tests
         [Fact]
         public void CountryInfo_Monaco()
         {
-            Assert.Same(CountryInfo.MC, CountryInfo.MC);
+            Assert.Same(CountryInfo.Monaco, CountryInfo.Monaco);
 
-            var countryInfo = CountryInfo.MC;
+            var countryInfo = CountryInfo.Monaco;
 
             Assert.Empty(countryInfo.AreaCodeLengths);
             Assert.Equal("+377", countryInfo.CallingCode);
