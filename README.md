@@ -108,20 +108,20 @@ ParseOptions.Default.Countries.Remove(CountryInfo.X);
 
 The library currently supports parsing phone numbers for the following countries and although best endeavours are made to adhere to published telephone numbering plans, depending on the accessibility of data there may be descepencies. If you happen to find any, please raise a bug.
 
-Country        | Calling Code | ISO 3166 Code | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone)
----            | ---          | ---           | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:
-France         | +33          | FR            | Yes        | Yes    |                        |                    |                      | Yes            | Yes
-Guernsey       | +44          | GG            | Yes        | Yes    |                        |                    |                      |                |
-Hong Kong      | +852         | HK            |            | Yes    |                        |                    | Yes                  | Yes            | Yes
-Ireland        | +353         | IE            | Yes        | Yes    |                        | Yes                | Yes                  | Yes            | Yes
-Isle of Man    | +44          | IM            | Yes        | Yes    |                        |                    |                      |                |
-Italy          | +39          | IT            | Yes        | Yes    |                        |                    |                      | Yes            | Yes
-Jersey         | +44          | JE            | Yes        | Yes    |                        |                    |                      |                |
-Macau          | +853         | MO            |            | Yes    |                        |                    |                      | Yes            |
-Monaco         | +377         | MC            |            | Yes    |                        |                    |                      | Yes            |
-Singapore      | +65          | SG            |            | Yes    |                        |                    |                      | Yes            |
-Spain          | +34          | ES            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes
-United Kingdom | +44          | GB            | Yes        | Yes    | Yes                    | Yes                | Yes                  | Yes            | Yes
+Country        | ISO 3166 Code | Calling Code | Trunk Code | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone)
+---            | ---           | ---          | ---        | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:
+France         | FR            | +33          | 0          | Yes        | Yes    |                        |                    |                      | Yes            | Yes
+Guernsey       | GG            | +44          | 0          | Yes        | Yes    |                        |                    |                      |                |
+Hong Kong      | HK            | +852         |            |            | Yes    |                        |                    | Yes                  | Yes            | Yes
+Ireland        | IE            | +353         | 0          | Yes        | Yes    |                        | Yes                | Yes                  | Yes            | Yes
+Isle of Man    | IM            | +44          | 0          | Yes        | Yes    |                        |                    |                      |                |
+Italy          | IT            | +39          |            | Yes        | Yes    |                        |                    |                      | Yes            | Yes
+Jersey         | JE            | +44          | 0          | Yes        | Yes    |                        |                    |                      |                |
+Macau          | MO            | +853         |            |            | Yes    |                        |                    |                      | Yes            |
+Monaco         | MC            | +377         |            |            | Yes    |                        |                    |                      | Yes            |
+Singapore      | SG            | +65          |            |            | Yes    |                        |                    |                      | Yes            |
+Spain          | ES            | +34          |            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes
+United Kingdom | GB            | +44          | 0          | Yes        | Yes    | Yes                    | Yes                | Yes                  | Yes            | Yes
 
 ### France
 
