@@ -8,7 +8,7 @@ namespace PhoneNumbers.Tests.Parsers
     /// </summary>
     public class DefaultPhoneNumberParserTests_ES_NonGeographicPhoneNumber
     {
-        private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.ES);
+        private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.Spain);
 
         [Theory]
         [InlineData("803000000", "803", "000000")]
@@ -29,7 +29,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
             Assert.Equal(areaCode, nonGeographicPhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.ES, nonGeographicPhoneNumber.Country);
+            Assert.Equal(CountryInfo.Spain, nonGeographicPhoneNumber.Country);
             Assert.False(nonGeographicPhoneNumber.IsFreephone);
             Assert.Equal(localNumber, nonGeographicPhoneNumber.LocalNumber);
         }
@@ -57,7 +57,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
             Assert.Equal(areaCode, nonGeographicPhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.ES, nonGeographicPhoneNumber.Country);
+            Assert.Equal(CountryInfo.Spain, nonGeographicPhoneNumber.Country);
             Assert.False(nonGeographicPhoneNumber.IsFreephone);
             Assert.Equal(localNumber, nonGeographicPhoneNumber.LocalNumber);
         }
@@ -79,7 +79,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
             Assert.Equal(areaCode, nonGeographicPhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.ES, nonGeographicPhoneNumber.Country);
+            Assert.Equal(CountryInfo.Spain, nonGeographicPhoneNumber.Country);
             Assert.True(nonGeographicPhoneNumber.IsFreephone);
             Assert.Equal(localNumber, nonGeographicPhoneNumber.LocalNumber);
         }

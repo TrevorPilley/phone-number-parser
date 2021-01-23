@@ -67,7 +67,7 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Returns_Failure_If_CallingCode_Invalid()
         {
             var result = _parser.Parse("+1111111111");
-            Assert.Equal($"The value must be a GB phone number starting +44 or 0 and the national significant number of the phone number must be {string.Join(" or ", CountryInfo.UK.NsnLengths)} digits in length.", result.ParseError);
+            Assert.Equal($"The value must be a GB phone number starting +44 or 0 and the national significant number of the phone number must be {string.Join(" or ", CountryInfo.UnitedKingdom.NsnLengths)} digits in length.", result.ParseError);
         }
 
         [Theory]
@@ -90,7 +90,7 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Returns_Failure_If_Nsn_Incorrect_Length(string value)
         {
             var result = _parser.Parse(value);
-            Assert.Equal($"The value must be a GB phone number starting +44 or 0 and the national significant number of the phone number must be {string.Join(" or ", CountryInfo.UK.NsnLengths)} digits in length.", result.ParseError);
+            Assert.Equal($"The value must be a GB phone number starting +44 or 0 and the national significant number of the phone number must be {string.Join(" or ", CountryInfo.UnitedKingdom.NsnLengths)} digits in length.", result.ParseError);
         }
 
         [Theory]
@@ -117,7 +117,7 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Returns_Failure_If_TrunkPrefix_Invalid(string value)
         {
             var result = _parser.Parse(value);
-            Assert.Equal($"The value must be a GB phone number starting +44 or 0 and the national significant number of the phone number must be {string.Join(" or ", CountryInfo.UK.NsnLengths)} digits in length.", result.ParseError);
+            Assert.Equal($"The value must be a GB phone number starting +44 or 0 and the national significant number of the phone number must be {string.Join(" or ", CountryInfo.UnitedKingdom.NsnLengths)} digits in length.", result.ParseError);
         }
     }
 }

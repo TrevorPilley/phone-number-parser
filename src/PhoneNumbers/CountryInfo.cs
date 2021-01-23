@@ -24,20 +24,19 @@ namespace PhoneNumbers
         /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Spain.
         /// </summary>
-        public static CountryInfo ES { get; } = new()
-        {
-            AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
-            CallingCode = "+34",
-            Formatter = new ESPhoneNumberFormatter(),
-            Iso3166Code = "ES",
-            Name = "Spain",
-            NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
-        };
+        [Obsolete("This property has been replaced, please use by 'CountryInfo.Spain' instead it will be removed in a future version.")]
+        public static CountryInfo ES => Spain;
 
         /// <summary>
         /// Gets the <see cref="CountryInfo"/> for France.
         /// </summary>
-        public static CountryInfo FR { get; } = new()
+        [Obsolete("This property has been replaced, please use by 'CountryInfo.France' instead it will be removed in a future version.")]
+        public static CountryInfo FR => France;
+
+        /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for France.
+        /// </summary>
+        public static CountryInfo France { get; } = new()
         {
             CallingCode = "+33",
             Formatter = new FRPhoneNumberFormatter(),
@@ -50,7 +49,13 @@ namespace PhoneNumbers
         /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Guernsey.
         /// </summary>
-        public static CountryInfo GG { get; } = new()
+        [Obsolete("This property has been replaced, please use by 'CountryInfo.Guernsey' instead it will be removed in a future version.")]
+        public static CountryInfo GG => Guernsey;
+
+        /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Guernsey.
+        /// </summary>
+        public static CountryInfo Guernsey { get; } = new()
         {
             AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 4 }),
             CallingCode = "+44",
@@ -65,8 +70,14 @@ namespace PhoneNumbers
         /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Ireland.
         /// </summary>
+        [Obsolete("This property has been replaced, please use by 'CountryInfo.Ireland' instead it will be removed in a future version.")]
+        public static CountryInfo IE => Ireland;
+
+        /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Ireland.
+        /// </summary>
         /// <remarks>Covers the Republic of Ireland, Northern Ireland is part of the United Kingdom.</remarks>
-        public static CountryInfo IE { get; } = new()
+        public static CountryInfo Ireland { get; } = new()
         {
             AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
             CallingCode = "+353",
@@ -78,9 +89,15 @@ namespace PhoneNumbers
         };
 
         /// <summary>
-        /// Gets the <see cref="CountryInfo"/> for Isle of Man.
+        /// Gets the <see cref="CountryInfo"/> for the Isle of Man.
         /// </summary>
-        public static CountryInfo IM { get; } = new()
+        [Obsolete("This property has been replaced, please use by 'CountryInfo.IsleOfMan' instead it will be removed in a future version.")]
+        public static CountryInfo IM => IsleOfMan;
+
+        /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for the Isle of Man.
+        /// </summary>
+        public static CountryInfo IsleOfMan { get; } = new()
         {
             AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 4 }),
             CallingCode = "+44",
@@ -95,8 +112,14 @@ namespace PhoneNumbers
         /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Italy.
         /// </summary>
+        [Obsolete("This property has been replaced, please use by 'CountryInfo.Italy' instead it will be removed in a future version.")]
+        public static CountryInfo IT => Italy;
+
+        /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Italy.
+        /// </summary>
         /// <remarks>Covers Italy (includes the islands of Sardinia and Sicily), and Vatican City.</remarks>
-        public static CountryInfo IT { get; } = new()
+        public static CountryInfo Italy { get; } = new()
         {
             AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2 }),
             CallingCode = "+39",
@@ -109,7 +132,13 @@ namespace PhoneNumbers
         /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Jersey.
         /// </summary>
-        public static CountryInfo JE { get; } = new()
+        [Obsolete("This property has been replaced, please use by 'CountryInfo.Jersey' instead it will be removed in a future version.")]
+        public static CountryInfo JE => Jersey;
+
+        /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Jersey.
+        /// </summary>
+        public static CountryInfo Jersey { get; } = new()
         {
             AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 4 }),
             CallingCode = "+44",
@@ -122,10 +151,29 @@ namespace PhoneNumbers
         };
 
         /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Spain.
+        /// </summary>
+        public static CountryInfo Spain { get; } = new()
+        {
+            AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
+            CallingCode = "+34",
+            Formatter = new ESPhoneNumberFormatter(),
+            Iso3166Code = "ES",
+            Name = "Spain",
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
+        };
+
+        /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for the United Kingdom.
+        /// </summary>
+        [Obsolete("This property has been replaced, please use by 'CountryInfo.UnitedKingdom' instead it will be removed in a future version.")]
+        public static CountryInfo UK => UnitedKingdom;
+
+        /// <summary>
         /// Gets the <see cref="CountryInfo"/> for the United Kingdom.
         /// </summary>
         /// <remarks>Covers England, Scotland, Wales and Northern Ireland.</remarks>
-        public static CountryInfo UK { get; } = new()
+        public static CountryInfo UnitedKingdom { get; } = new()
         {
             AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2 }),
             CallingCode = "+44",

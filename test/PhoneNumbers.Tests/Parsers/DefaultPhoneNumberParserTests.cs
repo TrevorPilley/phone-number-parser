@@ -12,7 +12,7 @@ namespace PhoneNumbers.Tests.Parsers
     {
         [Fact]
         public void Constructor_Throws_For_Null_CountryNumbers() =>
-            Assert.Throws<ArgumentNullException>(() => new DefaultPhoneNumberParser(CountryInfo.UK, null));
+            Assert.Throws<ArgumentNullException>(() => new DefaultPhoneNumberParser(CountryInfo.UnitedKingdom, null));
 
         [Fact]
         public void Parse_Fails_For_Unsupported_NSN_Length_With_TrunkPrefix()

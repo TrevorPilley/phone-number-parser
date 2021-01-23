@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using System.Reflection;
 using Xunit;
@@ -14,7 +15,7 @@ namespace PhoneNumbers.Tests
 
             var countryInfos = typeof(CountryInfo)
                 .GetProperties(BindingFlags.Public | BindingFlags.Static)
-                .Where(x => x.PropertyType == typeof(CountryInfo))
+                .Where(x => x.PropertyType == typeof(CountryInfo) && x.GetCustomAttribute<ObsoleteAttribute>() == null)
                 .Select(x => x.GetValue(null))
                 .Cast<CountryInfo>()
                 .OrderBy(x => x.SharesCallingCode)
@@ -29,11 +30,11 @@ namespace PhoneNumbers.Tests
         {
             var parseOptions = new ParseOptions();
 
-            Assert.Contains(CountryInfo.UK, parseOptions.Countries);
+            Assert.Contains(CountryInfo.UnitedKingdom, parseOptions.Countries);
 
-            parseOptions.Countries.Remove(CountryInfo.UK);
+            parseOptions.Countries.Remove(CountryInfo.UnitedKingdom);
 
-            Assert.DoesNotContain(CountryInfo.UK, parseOptions.Countries);
+            Assert.DoesNotContain(CountryInfo.UnitedKingdom, parseOptions.Countries);
         }
     }
 }

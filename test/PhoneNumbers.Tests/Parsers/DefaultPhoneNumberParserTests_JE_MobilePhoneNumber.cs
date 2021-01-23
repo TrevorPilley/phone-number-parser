@@ -8,7 +8,7 @@ namespace PhoneNumbers.Tests.Parsers
     /// </summary>
     public class DefaultPhoneNumberParserTests_JE_MobilePhoneNumber
     {
-        private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.JE);
+        private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.Jersey);
 
         [Theory]
         [InlineData("07509000000", "7509", "000000")]
@@ -35,7 +35,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
             Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.JE, mobilePhoneNumber.Country);
+            Assert.Equal(CountryInfo.Jersey, mobilePhoneNumber.Country);
             Assert.False(mobilePhoneNumber.IsDataOnly);
             Assert.False(mobilePhoneNumber.IsPager);
             Assert.False(mobilePhoneNumber.IsVirtual);

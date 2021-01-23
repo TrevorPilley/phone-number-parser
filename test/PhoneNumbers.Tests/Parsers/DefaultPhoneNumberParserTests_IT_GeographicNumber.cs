@@ -8,7 +8,7 @@ namespace PhoneNumbers.Tests.Parsers
     /// </summary>
     public class DefaultPhoneNumberParserTests_IT_GeographicNumber
     {
-        private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.IT);
+        private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.Italy);
 
         [Theory]
         [InlineData("020000", "02", "0000", "Milan")]
@@ -27,7 +27,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
             Assert.Equal(areaCode, geographicPhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.IT, geographicPhoneNumber.Country);
+            Assert.Equal(CountryInfo.Italy, geographicPhoneNumber.Country);
             Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
             Assert.Equal(localNumber, geographicPhoneNumber.LocalNumber);
         }
@@ -101,7 +101,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
             Assert.Equal(areaCode, geographicPhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.IT, geographicPhoneNumber.Country);
+            Assert.Equal(CountryInfo.Italy, geographicPhoneNumber.Country);
             Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
             Assert.Equal(localNumber, geographicPhoneNumber.LocalNumber);
         }
@@ -523,7 +523,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
             Assert.Equal(areaCode, geographicPhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.IT, geographicPhoneNumber.Country);
+            Assert.Equal(CountryInfo.Italy, geographicPhoneNumber.Country);
             Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
             Assert.Equal(localNumber, geographicPhoneNumber.LocalNumber);
         }

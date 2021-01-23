@@ -8,7 +8,7 @@ namespace PhoneNumbers.Tests.Parsers
     /// </summary>
     public class DefaultPhoneNumberParserTests_JE_GeographicNumber
     {
-        private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.JE);
+        private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.Jersey);
 
         [Theory]
         [InlineData("01534200000", "1534", "200000", "Jersey")]
@@ -25,7 +25,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
             Assert.Equal(areaCode, geographicPhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.JE, geographicPhoneNumber.Country);
+            Assert.Equal(CountryInfo.Jersey, geographicPhoneNumber.Country);
             Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
             Assert.Equal(localNumber, geographicPhoneNumber.LocalNumber);
         }

@@ -8,7 +8,7 @@ namespace PhoneNumbers.Tests.Parsers
     /// </summary>
     public class DefaultPhoneNumberParserTests_IE_MobilePhoneNumber
     {
-        private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.IE);
+        private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.Ireland);
 
         [Theory]
         [InlineData("0830000000", "83", "0000000")]
@@ -37,7 +37,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
             Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.IE, mobilePhoneNumber.Country);
+            Assert.Equal(CountryInfo.Ireland, mobilePhoneNumber.Country);
             Assert.False(mobilePhoneNumber.IsDataOnly);
             Assert.False(mobilePhoneNumber.IsPager);
             Assert.False(mobilePhoneNumber.IsVirtual);
@@ -59,7 +59,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
             Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.IE, mobilePhoneNumber.Country);
+            Assert.Equal(CountryInfo.Ireland, mobilePhoneNumber.Country);
             Assert.False(mobilePhoneNumber.IsDataOnly);
             Assert.True(mobilePhoneNumber.IsPager);
             Assert.False(mobilePhoneNumber.IsVirtual);
@@ -81,7 +81,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
             Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.IE, mobilePhoneNumber.Country);
+            Assert.Equal(CountryInfo.Ireland, mobilePhoneNumber.Country);
             Assert.False(mobilePhoneNumber.IsDataOnly);
             Assert.False(mobilePhoneNumber.IsPager);
             Assert.True(mobilePhoneNumber.IsVirtual);

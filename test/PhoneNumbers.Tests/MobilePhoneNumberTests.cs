@@ -8,7 +8,7 @@ namespace PhoneNumbers.Tests
         [Fact]
         public void Constructor_Sets_Properties()
         {
-            var countryInfo = CountryInfo.UK;
+            var countryInfo = CountryInfo.UnitedKingdom;
             var phoneNumber = new MobilePhoneNumber(countryInfo, "7654", "112233", true, true, true);
 
             Assert.Equal("7654", phoneNumber.AreaCode);
@@ -26,15 +26,15 @@ namespace PhoneNumbers.Tests
 
         [Fact]
         public void Constructor_Throws_If_LocalNumber_Empty() =>
-            Assert.Throws<ArgumentException>(() => new MobilePhoneNumber(CountryInfo.UK, "12345", "", true, true, true));
+            Assert.Throws<ArgumentException>(() => new MobilePhoneNumber(CountryInfo.UnitedKingdom, "12345", "", true, true, true));
 
         [Fact]
         public void Constructor_Throws_If_LocalNumber_Null() =>
-            Assert.Throws<ArgumentException>(() => new MobilePhoneNumber(CountryInfo.UK, "12345", null, true, true, true));
+            Assert.Throws<ArgumentException>(() => new MobilePhoneNumber(CountryInfo.UnitedKingdom, "12345", null, true, true, true));
 
         [Fact]
         public void Constructor_Throws_If_LocalNumber_Whitespace() =>
-            Assert.Throws<ArgumentException>(() => new MobilePhoneNumber(CountryInfo.UK, "12345", " ", true, true, true));
+            Assert.Throws<ArgumentException>(() => new MobilePhoneNumber(CountryInfo.UnitedKingdom, "12345", " ", true, true, true));
 
         [Fact]
         public void Equality_Both_Null()
@@ -52,7 +52,7 @@ namespace PhoneNumbers.Tests
         [Fact]
         public void Equality_Same_Instance()
         {
-            var phoneNumber1 = new MobilePhoneNumber(CountryInfo.UK, "7654", "112233", true, true, true);
+            var phoneNumber1 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, "7654", "112233", true, true, true);
             var phoneNumber2 = phoneNumber1;
 
             Assert.Equal(phoneNumber1, phoneNumber2);
@@ -67,8 +67,8 @@ namespace PhoneNumbers.Tests
         [Fact]
         public void Equality_Same_Values_With_AreaCode()
         {
-            var phoneNumber1 = new MobilePhoneNumber(CountryInfo.UK, "7654", "112233", true, true, true);
-            var phoneNumber2 = new MobilePhoneNumber(CountryInfo.UK, "7654", "112233", true, true, true);
+            var phoneNumber1 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, "7654", "112233", true, true, true);
+            var phoneNumber2 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, "7654", "112233", true, true, true);
 
             Assert.Equal(phoneNumber1, phoneNumber2);
             Assert.True(phoneNumber1.Equals(phoneNumber2));
@@ -80,8 +80,8 @@ namespace PhoneNumbers.Tests
         [Fact]
         public void Equality_Same_Values_Without_AreaCode()
         {
-            var phoneNumber1 = new MobilePhoneNumber(CountryInfo.UK, null, "112233", true, true, true);
-            var phoneNumber2 = new MobilePhoneNumber(CountryInfo.UK, null, "112233", true, true, true);
+            var phoneNumber1 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, null, "112233", true, true, true);
+            var phoneNumber2 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, null, "112233", true, true, true);
 
             Assert.Equal(phoneNumber1, phoneNumber2);
             Assert.True(phoneNumber1.Equals(phoneNumber2));
@@ -93,7 +93,7 @@ namespace PhoneNumbers.Tests
         [Fact]
         public void Inequality()
         {
-            var phoneNumber1 = new MobilePhoneNumber(CountryInfo.UK, "7654", "112233", true, true, true);
+            var phoneNumber1 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, "7654", "112233", true, true, true);
             var phoneNumber2 = default(MobilePhoneNumber);
 
             Assert.NotEqual(phoneNumber1, phoneNumber2);
@@ -110,7 +110,7 @@ namespace PhoneNumbers.Tests
             Assert.True(phoneNumber2 != (object)phoneNumber1);
 
             // Change area code
-            var phoneNumber3 = new MobilePhoneNumber(CountryInfo.UK, "7655", "112233", true, true, true);
+            var phoneNumber3 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, "7655", "112233", true, true, true);
 
             Assert.NotEqual(phoneNumber1, phoneNumber3);
             Assert.False(phoneNumber1.Equals(phoneNumber3));
@@ -118,7 +118,7 @@ namespace PhoneNumbers.Tests
             Assert.True(phoneNumber1 != phoneNumber3);
 
             // change local number
-            var phoneNumber4 = new MobilePhoneNumber(CountryInfo.UK, "7654", "112234", true, true, true);
+            var phoneNumber4 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, "7654", "112234", true, true, true);
 
             Assert.NotEqual(phoneNumber1, phoneNumber4);
             Assert.False(phoneNumber1.Equals(phoneNumber4));
@@ -126,7 +126,7 @@ namespace PhoneNumbers.Tests
             Assert.True(phoneNumber1 != phoneNumber4);
 
             // change is data only
-            var phoneNumber5 = new MobilePhoneNumber(CountryInfo.UK, "7654", "112233", false, true, true);
+            var phoneNumber5 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, "7654", "112233", false, true, true);
 
             Assert.NotEqual(phoneNumber1, phoneNumber5);
             Assert.False(phoneNumber1.Equals(phoneNumber5));
@@ -134,7 +134,7 @@ namespace PhoneNumbers.Tests
             Assert.True(phoneNumber1 != phoneNumber5);
 
             // change is pager
-            var phoneNumber6 = new MobilePhoneNumber(CountryInfo.UK, "7654", "112233", true, false, true);
+            var phoneNumber6 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, "7654", "112233", true, false, true);
 
             Assert.NotEqual(phoneNumber1, phoneNumber6);
             Assert.False(phoneNumber1.Equals(phoneNumber6));
@@ -142,7 +142,7 @@ namespace PhoneNumbers.Tests
             Assert.True(phoneNumber1 != phoneNumber6);
 
             // change is virtual
-            var phoneNumber7 = new MobilePhoneNumber(CountryInfo.UK, "7654", "112233", true, true, false);
+            var phoneNumber7 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, "7654", "112233", true, true, false);
 
             Assert.NotEqual(phoneNumber1, phoneNumber7);
             Assert.False(phoneNumber1.Equals(phoneNumber7));

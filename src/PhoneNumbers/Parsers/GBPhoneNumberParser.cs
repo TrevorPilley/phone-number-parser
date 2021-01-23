@@ -17,7 +17,7 @@ namespace PhoneNumbers.Parsers
         private readonly IReadOnlyList<CountryNumber> _areaCodesWith5Digits;
 
         private GBPhoneNumberParser(IReadOnlyList<CountryNumber> countryNumbers)
-            : base(CountryInfo.UK, countryNumbers) =>
+            : base(CountryInfo.UnitedKingdom, countryNumbers) =>
             _areaCodesWith5Digits = countryNumbers.Where(x => x.AreaCodeRanges!.Any(x => x.From.Length == 5)).ToList();
 
         /// <summary>

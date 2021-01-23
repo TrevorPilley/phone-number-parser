@@ -57,7 +57,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
             Assert.Equal(areaCode, geographicPhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.UK, geographicPhoneNumber.Country);
+            Assert.Equal(CountryInfo.UnitedKingdom, geographicPhoneNumber.Country);
             Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
             Assert.Equal(localNumber, geographicPhoneNumber.LocalNumber);
         }
@@ -1413,7 +1413,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
             Assert.Equal(areaCode, geographicPhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.UK, geographicPhoneNumber.Country);
+            Assert.Equal(CountryInfo.UnitedKingdom, geographicPhoneNumber.Country);
             Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
             Assert.Equal(localNumber, geographicPhoneNumber.LocalNumber);
         }
@@ -1465,7 +1465,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
             Assert.Equal(areaCode, geographicPhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.UK, geographicPhoneNumber.Country);
+            Assert.Equal(CountryInfo.UnitedKingdom, geographicPhoneNumber.Country);
             Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
             Assert.Equal(localNumber, geographicPhoneNumber.LocalNumber);
         }
@@ -1569,7 +1569,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
             Assert.Equal(areaCode, geographicPhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.UK, geographicPhoneNumber.Country);
+            Assert.Equal(CountryInfo.UnitedKingdom, geographicPhoneNumber.Country);
             Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
             Assert.Equal(localNumber, geographicPhoneNumber.LocalNumber);
         }

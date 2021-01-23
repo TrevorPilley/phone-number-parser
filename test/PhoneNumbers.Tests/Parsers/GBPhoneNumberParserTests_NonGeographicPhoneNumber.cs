@@ -43,7 +43,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
             Assert.Equal(areaCode, nonGeographicPhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.UK, nonGeographicPhoneNumber.Country);
+            Assert.Equal(CountryInfo.UnitedKingdom, nonGeographicPhoneNumber.Country);
             Assert.False(nonGeographicPhoneNumber.IsFreephone);
             Assert.Equal(localNumber, nonGeographicPhoneNumber.LocalNumber);
         }
@@ -71,7 +71,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
             Assert.Equal(areaCode, nonGeographicPhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.UK, nonGeographicPhoneNumber.Country);
+            Assert.Equal(CountryInfo.UnitedKingdom, nonGeographicPhoneNumber.Country);
             Assert.False(nonGeographicPhoneNumber.IsFreephone);
             Assert.Equal(localNumber, nonGeographicPhoneNumber.LocalNumber);
         }
@@ -93,7 +93,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
             Assert.Equal(areaCode, nonGeographicPhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.UK, nonGeographicPhoneNumber.Country);
+            Assert.Equal(CountryInfo.UnitedKingdom, nonGeographicPhoneNumber.Country);
             Assert.True(nonGeographicPhoneNumber.IsFreephone);
             Assert.Equal(localNumber, nonGeographicPhoneNumber.LocalNumber);
         }

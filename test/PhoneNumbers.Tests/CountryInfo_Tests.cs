@@ -6,30 +6,11 @@ namespace PhoneNumbers.Tests
     public class CountryInfo_Tests
     {
         [Fact]
-        public void CountryInfo_ES()
+        public void CountryInfo_France()
         {
-            Assert.Same(CountryInfo.ES, CountryInfo.ES);
+            Assert.Same(CountryInfo.France, CountryInfo.France);
 
-            var countryInfo = CountryInfo.ES;
-
-            Assert.Equal(new[] { 3, 2 }, countryInfo.AreaCodeLengths);
-            Assert.Equal("+34", countryInfo.CallingCode);
-            Assert.IsType<ESPhoneNumberFormatter>(countryInfo.Formatter);
-            Assert.True(countryInfo.HasAreaCodes);
-            Assert.Equal("00", countryInfo.InternationalCallPrefix);
-            Assert.Equal("ES", countryInfo.Iso3166Code);
-            Assert.False(countryInfo.SharesCallingCode);
-            Assert.Equal("Spain", countryInfo.Name);
-            Assert.Equal(new[] { 9 }, countryInfo.NsnLengths);
-            Assert.Null(countryInfo.TrunkPrefix);
-        }
-
-        [Fact]
-        public void CountryInfo_FR()
-        {
-            Assert.Same(CountryInfo.FR, CountryInfo.FR);
-
-            var countryInfo = CountryInfo.FR;
+            var countryInfo = CountryInfo.France;
 
             Assert.Empty(countryInfo.AreaCodeLengths);
             Assert.Equal("+33", countryInfo.CallingCode);
@@ -44,11 +25,11 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
-        public void CountryInfo_GG()
+        public void CountryInfo_Guernsey()
         {
-            Assert.Same(CountryInfo.GG, CountryInfo.GG);
+            Assert.Same(CountryInfo.Guernsey, CountryInfo.Guernsey);
 
-            var countryInfo = CountryInfo.GG;
+            var countryInfo = CountryInfo.Guernsey;
 
             Assert.Equal(new[] { 4 }, countryInfo.AreaCodeLengths);
             Assert.Equal("+44", countryInfo.CallingCode);
@@ -63,11 +44,11 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
-        public void CountryInfo_IE()
+        public void CountryInfo_Ireland()
         {
-            Assert.Same(CountryInfo.IE, CountryInfo.IE);
+            Assert.Same(CountryInfo.Ireland, CountryInfo.Ireland);
 
-            var countryInfo = CountryInfo.IE;
+            var countryInfo = CountryInfo.Ireland;
 
             Assert.Equal(new[] { 3, 2, 1 }, countryInfo.AreaCodeLengths);
             Assert.Equal("+353", countryInfo.CallingCode);
@@ -82,11 +63,11 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
-        public void CountryInfo_IM()
+        public void CountryInfo_IsleOfMan()
         {
-            Assert.Same(CountryInfo.IM, CountryInfo.IM);
+            Assert.Same(CountryInfo.IsleOfMan, CountryInfo.IsleOfMan);
 
-            var countryInfo = CountryInfo.IM;
+            var countryInfo = CountryInfo.IsleOfMan;
 
             Assert.Equal(new[] { 4 }, countryInfo.AreaCodeLengths);
             Assert.Equal("+44", countryInfo.CallingCode);
@@ -101,11 +82,11 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
-        public void CountryInfo_IT()
+        public void CountryInfo_Italy()
         {
-            Assert.Same(CountryInfo.IT, CountryInfo.IT);
+            Assert.Same(CountryInfo.Italy, CountryInfo.Italy);
 
-            var countryInfo = CountryInfo.IT;
+            var countryInfo = CountryInfo.Italy;
 
             Assert.Equal(new[] { 4, 3, 2 }, countryInfo.AreaCodeLengths);
             Assert.Equal("+39", countryInfo.CallingCode);
@@ -120,11 +101,11 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
-        public void CountryInfo_JE()
+        public void CountryInfo_Jersey()
         {
-            Assert.Same(CountryInfo.JE, CountryInfo.JE);
+            Assert.Same(CountryInfo.Jersey, CountryInfo.Jersey);
 
-            var countryInfo = CountryInfo.JE;
+            var countryInfo = CountryInfo.Jersey;
 
             Assert.Equal(new[] { 4 }, countryInfo.AreaCodeLengths);
             Assert.Equal("+44", countryInfo.CallingCode);
@@ -139,11 +120,30 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
-        public void CountryInfo_UK()
+        public void CountryInfo_Spain()
         {
-            Assert.Same(CountryInfo.UK, CountryInfo.UK);
+            Assert.Same(CountryInfo.Spain, CountryInfo.Spain);
 
-            var countryInfo = CountryInfo.UK;
+            var countryInfo = CountryInfo.Spain;
+
+            Assert.Equal(new[] { 3, 2 }, countryInfo.AreaCodeLengths);
+            Assert.Equal("+34", countryInfo.CallingCode);
+            Assert.IsType<ESPhoneNumberFormatter>(countryInfo.Formatter);
+            Assert.True(countryInfo.HasAreaCodes);
+            Assert.Equal("00", countryInfo.InternationalCallPrefix);
+            Assert.Equal("ES", countryInfo.Iso3166Code);
+            Assert.False(countryInfo.SharesCallingCode);
+            Assert.Equal("Spain", countryInfo.Name);
+            Assert.Equal(new[] { 9 }, countryInfo.NsnLengths);
+            Assert.Null(countryInfo.TrunkPrefix);
+        }
+
+        [Fact]
+        public void CountryInfo_UnitedKingdom()
+        {
+            Assert.Same(CountryInfo.UnitedKingdom, CountryInfo.UnitedKingdom);
+
+            var countryInfo = CountryInfo.UnitedKingdom;
 
             Assert.Equal(new[] { 5, 4, 3, 2 }, countryInfo.AreaCodeLengths);
             Assert.Equal("+44", countryInfo.CallingCode);
