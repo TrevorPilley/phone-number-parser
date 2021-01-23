@@ -73,7 +73,7 @@ namespace PhoneNumbers
         public static CountryInfo HongKong { get; } = new()
         {
             CallingCode = "+852",
-            Formatter = new HKPhoneNumberFormatter(),
+            Formatter = FourSpaceFourPhoneNumberFormatter.Instance,
             InternationalCallPrefix = "001",
             Iso3166Code = "HK",
             Name = "Hong Kong",
@@ -169,7 +169,7 @@ namespace PhoneNumbers
         public static CountryInfo Macau { get; } = new()
         {
             CallingCode = "+853",
-            Formatter = new MOPhoneNumberFormatter(),
+            Formatter = FourSpaceFourPhoneNumberFormatter.Instance,
             Iso3166Code = "MO",
             Name = "Macau",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 8 }),
@@ -181,7 +181,7 @@ namespace PhoneNumbers
         public static CountryInfo Singapore { get; } = new()
         {
             CallingCode = "+65",
-            Formatter = new SGPhoneNumberFormatter(),
+            Formatter = FourSpaceFourPhoneNumberFormatter.Instance,
             InternationalCallPrefix = "001",
             Iso3166Code = "SG",
             Name = "Singapore",
