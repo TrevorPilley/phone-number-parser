@@ -138,6 +138,25 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
+        public void CountryInfo_Singapore()
+        {
+            Assert.Same(CountryInfo.Singapore, CountryInfo.Singapore);
+
+            var countryInfo = CountryInfo.Singapore;
+
+            Assert.Empty(countryInfo.AreaCodeLengths);
+            Assert.Equal("+65", countryInfo.CallingCode);
+            Assert.IsType<SGPhoneNumberFormatter>(countryInfo.Formatter);
+            Assert.False(countryInfo.HasAreaCodes);
+            Assert.Equal("001", countryInfo.InternationalCallPrefix);
+            Assert.Equal("SG", countryInfo.Iso3166Code);
+            Assert.False(countryInfo.SharesCallingCode);
+            Assert.Equal("Singapore", countryInfo.Name);
+            Assert.Equal(new[] { 8 }, countryInfo.NsnLengths);
+            Assert.Null(countryInfo.TrunkPrefix);
+        }
+
+        [Fact]
         public void CountryInfo_Spain()
         {
             Assert.Same(CountryInfo.Spain, CountryInfo.Spain);
