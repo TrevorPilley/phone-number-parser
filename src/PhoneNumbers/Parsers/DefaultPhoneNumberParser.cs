@@ -35,7 +35,7 @@ namespace PhoneNumbers.Parsers
         internal static PhoneNumberParser Create(CountryInfo countryInfo)
         {
             var countryNumbers = ResourceUtility
-                .ReadCountryNumbers($"{countryInfo.Iso3166Code}_numbers.txt")
+                .ReadCountryNumbers($"{countryInfo.Iso3166Code}.txt")
                 .ToList()
                 .AsReadOnly();
 

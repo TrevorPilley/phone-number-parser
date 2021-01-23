@@ -27,7 +27,7 @@ namespace PhoneNumbers.Parsers
         internal static PhoneNumberParser Create()
         {
             var countryNumbers = ResourceUtility
-                .ReadCountryNumbers("GB_numbers.txt")
+                .ReadCountryNumbers("GB.txt")
                 .ToList()
                 .AsReadOnly();
 

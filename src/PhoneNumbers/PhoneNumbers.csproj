@@ -62,24 +62,24 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="DataFiles\ES_numbers.txt"/>
-    <None Remove="DataFiles\FR_numbers.txt"/>
-    <None Remove="DataFiles\GB_numbers.txt"/>
-    <None Remove="DataFiles\GG_numbers.txt"/>
-    <None Remove="DataFiles\IE_numbers.txt"/>
-    <None Remove="DataFiles\IM_numbers.txt"/>
-    <None Remove="DataFiles\IT_numbers.txt"/>
-    <None Remove="DataFiles\JE_numbers.txt"/>
+    <None Remove="DataFiles\ES.txt"/>
+    <None Remove="DataFiles\FR.txt"/>
+    <None Remove="DataFiles\GB.txt"/>
+    <None Remove="DataFiles\GG.txt"/>
+    <None Remove="DataFiles\IE.txt"/>
+    <None Remove="DataFiles\IM.txt"/>
+    <None Remove="DataFiles\IT.txt"/>
+    <None Remove="DataFiles\JE.txt"/>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="DataFiles\ES_numbers.txt"/>
-    <EmbeddedResource Include="DataFiles\FR_numbers.txt"/>
-    <EmbeddedResource Include="DataFiles\GB_numbers.txt"/>
-    <EmbeddedResource Include="DataFiles\GG_numbers.txt"/>
-    <EmbeddedResource Include="DataFiles\IE_numbers.txt"/>
-    <EmbeddedResource Include="DataFiles\IM_numbers.txt"/>
-    <EmbeddedResource Include="DataFiles\IT_numbers.txt"/>
-    <EmbeddedResource Include="DataFiles\JE_numbers.txt"/>
+    <EmbeddedResource Include="DataFiles\ES.txt"/>
+    <EmbeddedResource Include="DataFiles\FR.txt"/>
+    <EmbeddedResource Include="DataFiles\GB.txt"/>
+    <EmbeddedResource Include="DataFiles\GG.txt"/>
+    <EmbeddedResource Include="DataFiles\IE.txt"/>
+    <EmbeddedResource Include="DataFiles\IM.txt"/>
+    <EmbeddedResource Include="DataFiles\IT.txt"/>
+    <EmbeddedResource Include="DataFiles\JE.txt"/>
   </ItemGroup>
 </Project>
