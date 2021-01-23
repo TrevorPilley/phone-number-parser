@@ -165,7 +165,7 @@ namespace PhoneNumbers.Tests
 
             Assert.Empty(countryInfo.AreaCodeLengths);
             Assert.Equal("+377", countryInfo.CallingCode);
-            Assert.IsType<PhoneNumberFormatter>(countryInfo.Formatter);
+            Assert.IsType<MCPhoneNumberFormatter>(countryInfo.Formatter);
             Assert.False(countryInfo.HasAreaCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("MC", countryInfo.Iso3166Code);
