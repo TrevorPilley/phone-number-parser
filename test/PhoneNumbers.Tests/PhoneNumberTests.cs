@@ -62,7 +62,7 @@ namespace PhoneNumbers.Tests
         {
             var phoneNumber = PhoneNumber.Parse("+85251015522");
             Assert.NotNull(phoneNumber);
-            Assert.Equal(CountryInfo.HK, phoneNumber.Country);
+            Assert.Equal(CountryInfo.HongKong, phoneNumber.Country);
         }
 
         [Fact]
@@ -144,7 +144,7 @@ namespace PhoneNumbers.Tests
         {
             Assert.True(PhoneNumber.TryParse("+85251015522", out var phoneNumber));
             Assert.NotNull(phoneNumber);
-            Assert.Equal(CountryInfo.HK, phoneNumber.Country);
+            Assert.Equal(CountryInfo.HongKong, phoneNumber.Country);
         }
 
         [Fact]

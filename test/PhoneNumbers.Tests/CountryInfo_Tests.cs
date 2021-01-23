@@ -46,9 +46,9 @@ namespace PhoneNumbers.Tests
         [Fact]
         public void CountryInfo_HongKong()
         {
-            Assert.Same(CountryInfo.HK, CountryInfo.HK);
+            Assert.Same(CountryInfo.HongKong, CountryInfo.HongKong);
 
-            var countryInfo = CountryInfo.HK;
+            var countryInfo = CountryInfo.HongKong;
 
             Assert.Empty(countryInfo.AreaCodeLengths);
             Assert.Equal("+852", countryInfo.CallingCode);

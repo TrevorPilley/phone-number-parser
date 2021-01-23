@@ -8,7 +8,7 @@ namespace PhoneNumbers.Tests.Parsers
     /// </summary>
     public class DefaultPhoneNumberParserTests_HK_NonGeographicPhoneNumber
     {
-        private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.HK);
+        private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.HongKong);
 
         [Theory]
         [InlineData("20100000", "20100000")]
@@ -37,7 +37,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
             Assert.Null(nonGeographicPhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.HK, nonGeographicPhoneNumber.Country);
+            Assert.Equal(CountryInfo.HongKong, nonGeographicPhoneNumber.Country);
             Assert.False(nonGeographicPhoneNumber.IsFreephone);
             Assert.Equal(localNumber, nonGeographicPhoneNumber.LocalNumber);
         }
@@ -57,7 +57,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
             Assert.Null(nonGeographicPhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.HK, nonGeographicPhoneNumber.Country);
+            Assert.Equal(CountryInfo.HongKong, nonGeographicPhoneNumber.Country);
             Assert.True(nonGeographicPhoneNumber.IsFreephone);
             Assert.Equal(localNumber, nonGeographicPhoneNumber.LocalNumber);
         }

@@ -8,7 +8,7 @@ namespace PhoneNumbers.Tests.Parsers
     /// </summary>
     public class DefaultPhoneNumberParserTests_HK_MobilePhoneNumber
     {
-        private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.HK);
+        private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.HongKong);
 
         [Theory]
         [InlineData("51000000", "51000000")]
@@ -35,7 +35,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
             Assert.Null(mobilePhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.HK, mobilePhoneNumber.Country);
+            Assert.Equal(CountryInfo.HongKong, mobilePhoneNumber.Country);
             Assert.False(mobilePhoneNumber.IsDataOnly);
             Assert.False(mobilePhoneNumber.IsPager);
             Assert.False(mobilePhoneNumber.IsVirtual);
@@ -57,7 +57,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
             Assert.Null(mobilePhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.HK, mobilePhoneNumber.Country);
+            Assert.Equal(CountryInfo.HongKong, mobilePhoneNumber.Country);
             Assert.False(mobilePhoneNumber.IsDataOnly);
             Assert.False(mobilePhoneNumber.IsPager);
             Assert.True(mobilePhoneNumber.IsVirtual);
