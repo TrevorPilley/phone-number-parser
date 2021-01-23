@@ -138,11 +138,11 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
-        public void CountryInfo_MO()
+        public void CountryInfo_Macau()
         {
-            Assert.Same(CountryInfo.MO, CountryInfo.MO);
+            Assert.Same(CountryInfo.Macau, CountryInfo.Macau);
 
-            var countryInfo = CountryInfo.MO;
+            var countryInfo = CountryInfo.Macau;
 
             Assert.Empty(countryInfo.AreaCodeLengths);
             Assert.Equal("+853", countryInfo.CallingCode);

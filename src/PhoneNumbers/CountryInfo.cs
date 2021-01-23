@@ -166,7 +166,7 @@ namespace PhoneNumbers
         /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Macau.
         /// </summary>
-        public static CountryInfo MO { get; } = new()
+        public static CountryInfo Macau { get; } = new()
         {
             CallingCode = "+853",
             Formatter = new MOPhoneNumberFormatter(),
