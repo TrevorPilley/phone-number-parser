@@ -119,6 +119,7 @@ Italy          | IT            | +39          |            | Yes        | Yes   
 Jersey         | JE            | +44          | 0          | Yes        | Yes    |                        |                    |                      |                |
 Macau          | MO            | +853         |            |            | Yes    |                        |                    |                      | Yes            |
 Monaco         | MC            | +377         |            |            | Yes    |                        |                    |                      | Yes            |
+San Marino     | SM            | +378         |            | Yes        |        |                        |                    |                      | Yes            |
 Singapore      | SG            | +65          |            |            | Yes    |                        |                    |                      | Yes            |
 Spain          | ES            | +34          |            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes
 United Kingdom | GB            | +44          | 0          | Yes        | Yes    | Yes                    | Yes                | Yes                  | Yes            | Yes
@@ -184,6 +185,13 @@ United Kingdom | GB            | +44          | 0          | Yes        | Yes   
 - 3, 4, 6, 8 and 9 numbers are supported.
 - The `IsDataOnly`, `IsPager` and `IsVirtual` properties are not currently set for Monaco mobile numbers.
 
+### San Marino
+
+- 0, 5, 6 and 7 numbers are supported
+- San Marino does not use area codes so "land line" numbers are always non-geographic.
+- The `IsDataOnly`, `IsPager` and `IsVirtual` properties are not currently set for San Marino mobile numbers.
+- San Marino does not use a trunk prefix.
+
 ### Singapore
 
 - 3, 6, 8 and 9 numbers are supported
@@ -243,6 +251,10 @@ These were used as the references for the phone number data for each country.
 ### Monaco
 
 - https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200008D0008PDFE.pdf
+
+### San Marino
+
+- https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000B50001PDFE.pdf
 
 ### Singapore
 
