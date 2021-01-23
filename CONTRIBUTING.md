@@ -42,7 +42,7 @@ public static CountryInfo ZZ { get; } = new()
 
 ### Add the data file
 
-1. Add a `{Iso3166Code}_numbers.txt` in `/src/PhoneNumbers/DataFiles/` and set as an embedded resource within the project file.
+1. Add a `{Iso3166Code}.txt` in `/src/PhoneNumbers/DataFiles/` and set as an embedded resource within the project file.
 
 The structre of the file is pipe `|` delimted and the "columns" are as follows:
 
