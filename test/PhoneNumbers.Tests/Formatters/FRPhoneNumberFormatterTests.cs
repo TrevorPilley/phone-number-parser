@@ -1,4 +1,3 @@
-using System;
 using PhoneNumbers.Formatters;
 using Xunit;
 
@@ -16,21 +15,5 @@ namespace PhoneNumbers.Tests.Formatters
         [InlineData("0730334455", "07 30 33 44 55")]
         public void Format_Display(string value, string expected) =>
             Assert.Equal(expected, _formatter.Format(PhoneNumber.Parse(value, "FR"), "D"));
-
-        [Theory]
-        [InlineData("0122334455", "+33122334455")]
-        [InlineData("0730334455", "+33730334455")]
-        public void Format_International(string value, string expected) =>
-            Assert.Equal(expected, _formatter.Format(PhoneNumber.Parse(value, "FR"), "I"));
-
-        [Theory]
-        [InlineData("0122334455", "0122334455")]
-        [InlineData("0730334455", "0730334455")]
-        public void Format_National(string value, string expected) =>
-            Assert.Equal(expected, _formatter.Format(PhoneNumber.Parse(value, "FR"), "N"));
-
-        [Fact]
-        public void Format_Throws_Exception_For_Invalid_Format() =>
-            Assert.Throws<FormatException>(() => _formatter.Format(PhoneNumber.Parse("+33122334455"), "C"));
     }
 }
