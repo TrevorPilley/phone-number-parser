@@ -58,6 +58,14 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
+        public void Parse_Value_With_HongKong_CallingCode()
+        {
+            var phoneNumber = PhoneNumber.Parse("+85251015522");
+            Assert.NotNull(phoneNumber);
+            Assert.Equal(CountryInfo.HongKong, phoneNumber.Country);
+        }
+
+        [Fact]
         public void Parse_Value_With_Ireland_CallingCode()
         {
             var phoneNumber = PhoneNumber.Parse("+35340226969");
@@ -87,6 +95,22 @@ namespace PhoneNumbers.Tests
             var phoneNumber = PhoneNumber.Parse("+441534716800");
             Assert.NotNull(phoneNumber);
             Assert.Equal(CountryInfo.Jersey, phoneNumber.Country);
+        }
+
+        [Fact]
+        public void Parse_Value_With_Macau_CallingCode()
+        {
+            var phoneNumber = PhoneNumber.Parse("+85328000000");
+            Assert.NotNull(phoneNumber);
+            Assert.Equal(CountryInfo.Macau, phoneNumber.Country);
+        }
+
+        [Fact]
+        public void Parse_Value_With_Singapore_CallingCode()
+        {
+            var phoneNumber = PhoneNumber.Parse("+6530000000");
+            Assert.NotNull(phoneNumber);
+            Assert.Equal(CountryInfo.Singapore, phoneNumber.Country);
         }
 
         [Fact]
@@ -132,6 +156,14 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
+        public void TryParse_HongKong_CallingCode_Valid_Value()
+        {
+            Assert.True(PhoneNumber.TryParse("+85251015522", out var phoneNumber));
+            Assert.NotNull(phoneNumber);
+            Assert.Equal(CountryInfo.HongKong, phoneNumber.Country);
+        }
+
+        [Fact]
         public void TryParse_Ireland_CallingCode_Valid_Value()
         {
             Assert.True(PhoneNumber.TryParse("+35340226969", out var phoneNumber));
@@ -161,6 +193,22 @@ namespace PhoneNumbers.Tests
             Assert.True(PhoneNumber.TryParse("+441534716800", out var phoneNumber));
             Assert.NotNull(phoneNumber);
             Assert.Equal(CountryInfo.Jersey, phoneNumber.Country);
+        }
+
+        [Fact]
+        public void TryParse_Macau_CallingCode_Valid_Value()
+        {
+            Assert.True(PhoneNumber.TryParse("+85328000000", out var phoneNumber));
+            Assert.NotNull(phoneNumber);
+            Assert.Equal(CountryInfo.Macau, phoneNumber.Country);
+        }
+
+        [Fact]
+        public void TryParse_Singapore_CallingCode_Valid_Value()
+        {
+            Assert.True(PhoneNumber.TryParse("+6530000000", out var phoneNumber));
+            Assert.NotNull(phoneNumber);
+            Assert.Equal(CountryInfo.Singapore, phoneNumber.Country);
         }
 
         [Fact]

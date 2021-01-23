@@ -112,10 +112,13 @@ Country        | Calling Code | ISO 3166 Code | Geographic | Mobile | Mobile<br/
 ---            | ---          | ---           | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:
 France         | +33          | FR            | Yes        | Yes    |                        |                    |                      | Yes            | Yes
 Guernsey       | +44          | GG            | Yes        | Yes    |                        |                    |                      |                |
+Hong Kong      | +852         | HK            |            | Yes    |                        |                    | Yes                  | Yes            | Yes
 Ireland        | +353         | IE            | Yes        | Yes    |                        | Yes                | Yes                  | Yes            | Yes
 Isle of Man    | +44          | IM            | Yes        | Yes    |                        |                    |                      |                |
 Italy          | +39          | IT            | Yes        | Yes    |                        |                    |                      | Yes            | Yes
 Jersey         | +44          | JE            | Yes        | Yes    |                        |                    |                      |                |
+Macau          | +853         | MO            |            | Yes    |                        |                    |                      | Yes            |
+Singapore      | +65          | SG            |            | Yes    |                        |                    |                      | Yes            |
 Spain          | +34          | ES            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes
 United Kingdom | +44          | GB            | Yes        | Yes    | Yes                    | Yes                | Yes                  | Yes            | Yes
 
@@ -131,6 +134,15 @@ United Kingdom | +44          | GB            | Yes        | Yes    | Yes       
 - 01 and 07 numbers are supported.
 - 01 numbers are geographically assigned so the geographic area is included.
 - The `IsDataOnly`, `IsPager` and `IsVirtual` properties are not currently set for Guernsey mobile numbers.
+
+### Hong Kong
+
+- 2, 3, 5, 6, 7, 8 and 9 numbers are supported.
+- Hong Kong no longer uses area codes so "land line" numbers are always non-geographic.
+- Sets the `IsVirtual` property as appropriate for mobile phone numbers.
+- The `IsDataOnly` and `IsPager` properties are not currently set for Hong Kong mobile numbers.
+- Hong Kong does not use a trunk prefix.
+- Sets the `IsFreephone` property for non-geographical phone numbers which are freephone numbers (e.g. 800 through 809).
 
 ### Ireland
 
@@ -159,6 +171,20 @@ United Kingdom | +44          | GB            | Yes        | Yes    | Yes       
 - 01 numbers are geographically assigned so the geographic area is included.
 - The `IsDataOnly`, `IsPager` and `IsVirtual` properties are not currently set for Jersey mobile numbers.
 
+### Macau
+
+- 28, 6 and 8 numbers are supported
+- Macau does not use area codes so "land line" numbers are always non-geographic.
+- The `IsDataOnly`, `IsPager` and `IsVirtual` properties are not currently set for Macau mobile numbers.
+- Macau does not use a trunk prefix.
+
+### Singapore
+
+- 3, 6, 8 and 9 numbers are supported
+- Singapore does not use area codes so "land line" numbers are always non-geographic.
+- The `IsDataOnly`, `IsPager` and `IsVirtual` properties are not currently set for Singapore mobile numbers.
+- Singapore does not use a trunk prefix.
+
 ### Spain
 
 - 6, 7, 8 and 9 numbers are supported.
@@ -186,6 +212,12 @@ These were used as the references for the phone number data for each country.
 - https://fr.wikipedia.org/wiki/Liste_des_indicatifs_téléphoniques_en_France
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_France
 
+### Hong Kong
+
+- https://www.ofca.gov.hk/filemanager/ofca/tc/content_311/no_plan.pdf
+- https://www.ofca.gov.hk/mobile/en/consumer_focus/education_corner/guide/advice_lfs/ipts/
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Hong_Kong
+
 ### Ireland
 
 - https://www.comreg.ie/industry/licensing/numbering/area-code-maps-2/
@@ -197,6 +229,15 @@ These were used as the references for the phone number data for each country.
 
 - https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200006B0001PDFE.pdf
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Italy
+
+### Macau
+
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Macau
+
+### Singapore
+
+- https://www.imda.gov.sg/-/media/Imda/Files/Regulation-Licensing-and-Consultations/Frameworks-and-Policies/Numbering/National-Numbering-Plan-and-Allocation-Process/IMDA-National-Numbering-Plan-12-Aug-2019.pdf?la=en
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Singapore
 
 ### Spain
 

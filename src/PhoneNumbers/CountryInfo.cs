@@ -68,6 +68,19 @@ namespace PhoneNumbers
         };
 
         /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Hong Kong.
+        /// </summary>
+        public static CountryInfo HongKong { get; } = new()
+        {
+            CallingCode = "+852",
+            Formatter = new HKPhoneNumberFormatter(),
+            InternationalCallPrefix = "001",
+            Iso3166Code = "HK",
+            Name = "Hong Kong",
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9 }),
+        };
+
+        /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Ireland.
         /// </summary>
         [Obsolete("This property has been replaced, please use by 'CountryInfo.Ireland' instead it will be removed in a future version.")]
@@ -148,6 +161,31 @@ namespace PhoneNumbers
             NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
             SharesCallingCode = true,
             TrunkPrefix = "0",
+        };
+
+        /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Macau.
+        /// </summary>
+        public static CountryInfo Macau { get; } = new()
+        {
+            CallingCode = "+853",
+            Formatter = new MOPhoneNumberFormatter(),
+            Iso3166Code = "MO",
+            Name = "Macau",
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 8 }),
+        };
+
+        /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Singapore.
+        /// </summary>
+        public static CountryInfo Singapore { get; } = new()
+        {
+            CallingCode = "+65",
+            Formatter = new SGPhoneNumberFormatter(),
+            InternationalCallPrefix = "001",
+            Iso3166Code = "SG",
+            Name = "Singapore",
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 8 }),
         };
 
         /// <summary>

@@ -66,10 +66,13 @@
     <None Remove="DataFiles\FR.txt"/>
     <None Remove="DataFiles\GB.txt"/>
     <None Remove="DataFiles\GG.txt"/>
+    <None Remove="DataFiles\HK.txt"/>
     <None Remove="DataFiles\IE.txt"/>
     <None Remove="DataFiles\IM.txt"/>
     <None Remove="DataFiles\IT.txt"/>
     <None Remove="DataFiles\JE.txt"/>
+    <None Remove="DataFiles\MO.txt"/>
+    <None Remove="DataFiles\SG.txt"/>
   </ItemGroup>
 
   <ItemGroup>
@@ -77,9 +80,12 @@
     <EmbeddedResource Include="DataFiles\FR.txt"/>
     <EmbeddedResource Include="DataFiles\GB.txt"/>
     <EmbeddedResource Include="DataFiles\GG.txt"/>
+    <EmbeddedResource Include="DataFiles\HK.txt"/>
     <EmbeddedResource Include="DataFiles\IE.txt"/>
     <EmbeddedResource Include="DataFiles\IM.txt"/>
     <EmbeddedResource Include="DataFiles\IT.txt"/>
     <EmbeddedResource Include="DataFiles\JE.txt"/>
+    <EmbeddedResource Include="DataFiles\MO.txt"/>
+    <EmbeddedResource Include="DataFiles\SG.txt"/>
   </ItemGroup>
 </Project>
