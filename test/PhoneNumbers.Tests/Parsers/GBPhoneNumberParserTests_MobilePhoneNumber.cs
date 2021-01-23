@@ -27,7 +27,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
             Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.UK, mobilePhoneNumber.Country);
+            Assert.Equal(CountryInfo.UnitedKingdom, mobilePhoneNumber.Country);
             Assert.False(mobilePhoneNumber.IsDataOnly);
             Assert.False(mobilePhoneNumber.IsPager);
             Assert.False(mobilePhoneNumber.IsVirtual);
@@ -49,7 +49,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
             Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.UK, mobilePhoneNumber.Country);
+            Assert.Equal(CountryInfo.UnitedKingdom, mobilePhoneNumber.Country);
             Assert.False(mobilePhoneNumber.IsDataOnly);
             Assert.False(mobilePhoneNumber.IsPager);
             Assert.False(mobilePhoneNumber.IsVirtual);
@@ -91,7 +91,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
             Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.UK, mobilePhoneNumber.Country);
+            Assert.Equal(CountryInfo.UnitedKingdom, mobilePhoneNumber.Country);
             Assert.False(mobilePhoneNumber.IsDataOnly);
             Assert.False(mobilePhoneNumber.IsPager);
             Assert.False(mobilePhoneNumber.IsVirtual);
@@ -113,7 +113,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
             Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.UK, mobilePhoneNumber.Country);
+            Assert.Equal(CountryInfo.UnitedKingdom, mobilePhoneNumber.Country);
             Assert.False(mobilePhoneNumber.IsDataOnly);
             Assert.False(mobilePhoneNumber.IsPager);
             Assert.False(mobilePhoneNumber.IsVirtual);
@@ -147,7 +147,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
             Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.UK, mobilePhoneNumber.Country);
+            Assert.Equal(CountryInfo.UnitedKingdom, mobilePhoneNumber.Country);
             Assert.False(mobilePhoneNumber.IsDataOnly);
             Assert.False(mobilePhoneNumber.IsPager);
             Assert.False(mobilePhoneNumber.IsVirtual);
@@ -175,7 +175,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
             Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.UK, mobilePhoneNumber.Country);
+            Assert.Equal(CountryInfo.UnitedKingdom, mobilePhoneNumber.Country);
             Assert.False(mobilePhoneNumber.IsDataOnly);
             Assert.False(mobilePhoneNumber.IsPager);
             Assert.False(mobilePhoneNumber.IsVirtual);
@@ -209,7 +209,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
             Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.UK, mobilePhoneNumber.Country);
+            Assert.Equal(CountryInfo.UnitedKingdom, mobilePhoneNumber.Country);
             Assert.False(mobilePhoneNumber.IsDataOnly);
             Assert.False(mobilePhoneNumber.IsPager);
             Assert.False(mobilePhoneNumber.IsVirtual);
@@ -233,7 +233,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
             Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.UK, mobilePhoneNumber.Country);
+            Assert.Equal(CountryInfo.UnitedKingdom, mobilePhoneNumber.Country);
             Assert.True(mobilePhoneNumber.IsDataOnly);
             Assert.False(mobilePhoneNumber.IsPager);
             Assert.False(mobilePhoneNumber.IsVirtual);
@@ -261,7 +261,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
             Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.UK, mobilePhoneNumber.Country);
+            Assert.Equal(CountryInfo.UnitedKingdom, mobilePhoneNumber.Country);
             Assert.False(mobilePhoneNumber.IsDataOnly);
             Assert.True(mobilePhoneNumber.IsPager);
             Assert.False(mobilePhoneNumber.IsVirtual);
@@ -285,7 +285,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
             Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.UK, mobilePhoneNumber.Country);
+            Assert.Equal(CountryInfo.UnitedKingdom, mobilePhoneNumber.Country);
             Assert.False(mobilePhoneNumber.IsDataOnly);
             Assert.False(mobilePhoneNumber.IsPager);
             Assert.True(mobilePhoneNumber.IsVirtual);

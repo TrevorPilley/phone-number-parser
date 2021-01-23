@@ -8,7 +8,7 @@ namespace PhoneNumbers.Tests.Parsers
     /// </summary>
     public class DefaultPhoneNumberParserTests_IM_GeographicNumber
     {
-        private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.IM);
+        private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.IsleOfMan);
 
         [Theory]
         [InlineData("01624200000", "1624", "200000", "Isle of Man")]
@@ -25,7 +25,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
             Assert.Equal(areaCode, geographicPhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.IM, geographicPhoneNumber.Country);
+            Assert.Equal(CountryInfo.IsleOfMan, geographicPhoneNumber.Country);
             Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
             Assert.Equal(localNumber, geographicPhoneNumber.LocalNumber);
         }

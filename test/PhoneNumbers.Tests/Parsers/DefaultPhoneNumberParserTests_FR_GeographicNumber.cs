@@ -8,7 +8,7 @@ namespace PhoneNumbers.Tests.Parsers
     /// </summary>
     public class DefaultPhoneNumberParserTests_FR_GeographicNumber
     {
-        private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.FR);
+        private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.France);
 
         [Theory]
         [InlineData("0110000000", "110000000", "Île-de-France")]
@@ -37,7 +37,7 @@ namespace PhoneNumbers.Tests.Parsers
 
             var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
             Assert.Null(geographicPhoneNumber.AreaCode);
-            Assert.Equal(CountryInfo.FR, geographicPhoneNumber.Country);
+            Assert.Equal(CountryInfo.France, geographicPhoneNumber.Country);
             Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
             Assert.Equal(localNumber, geographicPhoneNumber.LocalNumber);
         }

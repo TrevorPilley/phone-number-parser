@@ -27,6 +27,6 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.Throws<ParseException>(() => GetParser().Parse(null).ThrowIfFailure());
 
         private static PhoneNumberParser GetParser() =>
-            new Mock<PhoneNumberParser>(CountryInfo.UK) { CallBase = true }.Object;
+            new Mock<PhoneNumberParser>(CountryInfo.UnitedKingdom) { CallBase = true }.Object;
     }
 }
