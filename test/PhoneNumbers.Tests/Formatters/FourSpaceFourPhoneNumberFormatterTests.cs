@@ -5,11 +5,11 @@ using Xunit;
 namespace PhoneNumbers.Tests.Formatters
 {
     /// <summary>
-    /// Contains unit tests for the <see cref="HKPhoneNumberFormatterTests"/> class.
+    /// Contains unit tests for the <see cref="FourSpaceFourPhoneNumberFormatter"/> class.
     /// </summary>
-    public class HKPhoneNumberFormatterTests
+    public class FourSpaceFourPhoneNumberFormatterTests
     {
-        private readonly PhoneNumberFormatter _formatter = new HKPhoneNumberFormatter();
+        private readonly PhoneNumberFormatter _formatter = FourSpaceFourPhoneNumberFormatter.Instance;
 
         [Theory]
         [InlineData("29013000", "2901 3000")]

@@ -52,7 +52,7 @@ namespace PhoneNumbers.Tests
 
             Assert.Empty(countryInfo.AreaCodeLengths);
             Assert.Equal("+852", countryInfo.CallingCode);
-            Assert.IsType<HKPhoneNumberFormatter>(countryInfo.Formatter);
+            Assert.Same(FourSpaceFourPhoneNumberFormatter.Instance, countryInfo.Formatter);
             Assert.False(countryInfo.HasAreaCodes);
             Assert.Equal("001", countryInfo.InternationalCallPrefix);
             Assert.Equal("HK", countryInfo.Iso3166Code);
@@ -146,7 +146,7 @@ namespace PhoneNumbers.Tests
 
             Assert.Empty(countryInfo.AreaCodeLengths);
             Assert.Equal("+853", countryInfo.CallingCode);
-            Assert.IsType<MOPhoneNumberFormatter>(countryInfo.Formatter);
+            Assert.Same(FourSpaceFourPhoneNumberFormatter.Instance, countryInfo.Formatter);
             Assert.False(countryInfo.HasAreaCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("MO", countryInfo.Iso3166Code);
@@ -165,7 +165,7 @@ namespace PhoneNumbers.Tests
 
             Assert.Empty(countryInfo.AreaCodeLengths);
             Assert.Equal("+65", countryInfo.CallingCode);
-            Assert.IsType<SGPhoneNumberFormatter>(countryInfo.Formatter);
+            Assert.Same(FourSpaceFourPhoneNumberFormatter.Instance, countryInfo.Formatter);
             Assert.False(countryInfo.HasAreaCodes);
             Assert.Equal("001", countryInfo.InternationalCallPrefix);
             Assert.Equal("SG", countryInfo.Iso3166Code);
