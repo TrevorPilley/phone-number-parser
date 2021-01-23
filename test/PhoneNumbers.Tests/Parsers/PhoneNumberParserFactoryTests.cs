@@ -28,7 +28,7 @@ namespace PhoneNumbers.Tests.Parsers
 
         [Fact]
         public void GetParser_For_CountryInfo_Singapore_Returns_DefaultPhoneNumberParser() =>
-            Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.SG));
+            Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Singapore));
 
         [Fact]
         public void GetParser_For_CountryInfo_Spain_Returns_DefaultPhoneNumberParser() =>

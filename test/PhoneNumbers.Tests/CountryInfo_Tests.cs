@@ -140,9 +140,9 @@ namespace PhoneNumbers.Tests
         [Fact]
         public void CountryInfo_Singapore()
         {
-            Assert.Same(CountryInfo.SG, CountryInfo.SG);
+            Assert.Same(CountryInfo.Singapore, CountryInfo.Singapore);
 
-            var countryInfo = CountryInfo.SG;
+            var countryInfo = CountryInfo.Singapore;
 
             Assert.Empty(countryInfo.AreaCodeLengths);
             Assert.Equal("+65", countryInfo.CallingCode);

@@ -102,7 +102,7 @@ namespace PhoneNumbers.Tests
         {
             var phoneNumber = PhoneNumber.Parse("+6530000000");
             Assert.NotNull(phoneNumber);
-            Assert.Equal(CountryInfo.SG, phoneNumber.Country);
+            Assert.Equal(CountryInfo.Singapore, phoneNumber.Country);
         }
 
         [Fact]
@@ -192,7 +192,7 @@ namespace PhoneNumbers.Tests
         {
             Assert.True(PhoneNumber.TryParse("+6530000000", out var phoneNumber));
             Assert.NotNull(phoneNumber);
-            Assert.Equal(CountryInfo.SG, phoneNumber.Country);
+            Assert.Equal(CountryInfo.Singapore, phoneNumber.Country);
         }
 
         [Fact]

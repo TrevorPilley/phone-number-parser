@@ -166,7 +166,7 @@ namespace PhoneNumbers
         /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Singapore.
         /// </summary>
-        public static CountryInfo SG { get; } = new()
+        public static CountryInfo Singapore { get; } = new()
         {
             CallingCode = "+65",
             Formatter = new SGPhoneNumberFormatter(),
