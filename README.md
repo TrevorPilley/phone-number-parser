@@ -77,19 +77,15 @@ phoneNumber.ToString("N");                      // 01142726444   (format for nat
 
 ### ParseOptions
 
-The `ParseOptions` class can be used to control parsing, there are 2 options.
+The `ParseOptions` class can be used to control parsing, the defaults can be configured via.
 
 ```csharp
-// Configure the defaults via:
 ParseOptions.Default
 ```
 
-```csharp
-// Create a new ParseOptions instance
-var parseOptions = new ParseOptions();
-```
+At present, the only options available are which countries are parsed.
 
-At present, the only options available are which countries are parsed. By default all supported countries can be parsed.
+By default all countries supported by the library can be parsed and any future supported ones will be included.
 
 #### Opt-in
 
