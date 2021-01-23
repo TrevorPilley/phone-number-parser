@@ -25,9 +25,5 @@ namespace PhoneNumbers.Tests.Formatters
         [InlineData("98988800", "98988800")]
         public void Format_National(string value, string expected) =>
             Assert.Equal(expected, _formatter.Format(PhoneNumber.Parse(value, "MC"), "N"));
-
-        [Fact]
-        public void Format_Throws_Exception_For_Invalid_Format() =>
-            Assert.Throws<FormatException>(() => _formatter.Format(PhoneNumber.Parse("+37798988800"), "C"));
     }
 }
