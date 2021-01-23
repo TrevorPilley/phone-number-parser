@@ -84,6 +84,7 @@ Ireland        | +353         | IE            | Yes        | Yes    |           
 Isle of Man    | +44          | IM            | Yes        | Yes    |                        |                    |                      |                |
 Italy          | +39          | IT            | Yes        | Yes    |                        |                    |                      | Yes            | Yes
 Jersey         | +44          | JE            | Yes        | Yes    |                        |                    |                      |                |
+Macau          | +853         | MO            |            | Yes    |                        |                    |                      | Yes            |
 Singapore      | +65          | SG            |            | Yes    |                        |                    |                      | Yes            |
 Spain          | +34          | ES            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes
 United Kingdom | +44          | GB            | Yes        | Yes    | Yes                    | Yes                | Yes                  | Yes            | Yes
@@ -137,6 +138,13 @@ United Kingdom | +44          | GB            | Yes        | Yes    | Yes       
 - 01 numbers are geographically assigned so the geographic area is included.
 - The `IsDataOnly`, `IsPager` and `IsVirtual` properties are not currently set for Jersey mobile numbers.
 
+### Macau
+
+- 28, 6 and 8 numbers are supported
+- Macau does not use area codes so "land line" numbers are always non-geographic.
+- The `IsDataOnly`, `IsPager` and `IsVirtual` properties are not currently set for Macau mobile numbers.
+- Macau does not use a trunk prefix.
+
 ### Singapore
 
 - 3, 6, 8 and 9 numbers are supported
@@ -188,6 +196,10 @@ These were used as the references for the phone number data for each country.
 
 - https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200006B0001PDFE.pdf
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Italy
+
+### Macau
+
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Macau
 
 ### Singapore
 

@@ -138,6 +138,25 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
+        public void CountryInfo_Macau()
+        {
+            Assert.Same(CountryInfo.Macau, CountryInfo.Macau);
+
+            var countryInfo = CountryInfo.Macau;
+
+            Assert.Empty(countryInfo.AreaCodeLengths);
+            Assert.Equal("+853", countryInfo.CallingCode);
+            Assert.IsType<MOPhoneNumberFormatter>(countryInfo.Formatter);
+            Assert.False(countryInfo.HasAreaCodes);
+            Assert.Equal("00", countryInfo.InternationalCallPrefix);
+            Assert.Equal("MO", countryInfo.Iso3166Code);
+            Assert.False(countryInfo.SharesCallingCode);
+            Assert.Equal("Macau", countryInfo.Name);
+            Assert.Equal(new[] { 8 }, countryInfo.NsnLengths);
+            Assert.Null(countryInfo.TrunkPrefix);
+        }
+
+        [Fact]
         public void CountryInfo_Singapore()
         {
             Assert.Same(CountryInfo.Singapore, CountryInfo.Singapore);
