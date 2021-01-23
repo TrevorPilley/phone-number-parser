@@ -4,6 +4,8 @@ A library for parsing phone numbers targetting .NET 5.0, .NET Standard 2.1 and .
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/TrevorPilley/PhoneNumbers/blob/main/LICENSE) ![GitHub last commit](https://img.shields.io/github/last-commit/TrevorPilley/PhoneNumbers/main) ![Build Status](https://github.com/TrevorPilley/PhoneNumbers/workflows/CI/badge.svg?branch=main) ![CodeQL](https://github.com/TrevorPilley/PhoneNumbers/workflows/CodeQL/badge.svg) [![NuGet](https://img.shields.io/nuget/v/PhoneNumberParser.svg)](https://www.nuget.org/packages/PhoneNumberParser/) ![GitHub Release Date](https://img.shields.io/github/release-date/TrevorPilley/PhoneNumbers) [![NuGet](https://img.shields.io/nuget/dt/PhoneNumberParser.svg)](https://www.nuget.org/packages/PhoneNumberParser/)
 
+## Install
+
 Install via nuget
 
 ```bash
@@ -15,6 +17,8 @@ Add the namespace:
 ```csharp
 using PhoneNumbers;
 ```
+
+## Parsing
 
 Parsing a phone number is achieved via the `PhoneNumber.Parse` method (or alternatively or `PhoneNumber.TryParse`). Any spaces, hyphens or other formatting in the input string is ignored.
 
@@ -69,6 +73,39 @@ phoneNumber.ToString();                         // +441142726444 (defaults to I 
 phoneNumber.ToString("D");                      // 0114 272 6444 (format for display)
 phoneNumber.ToString("I");                      // +441142726444 (format for international caller)
 phoneNumber.ToString("N");                      // 01142726444   (format for national caller)
+```
+
+### ParseOptions
+
+The `ParseOptions` class can be used to control parsing, there are 2 options.
+
+```csharp
+// Configure the defaults via:
+ParseOptions.Default
+```
+
+```csharp
+// Create a new ParseOptions instance
+var parseOptions = new ParseOptions();
+```
+
+At present, the only options available are which countries are parsed. By default all supported countries can be parsed.
+
+#### Opt-in
+
+To opt in to specific countries and ignore any new ones added in future versions of the library:
+
+```csharp
+ParseOptions.Default.Countries.Clear():
+ParseOptions.Default.Countries.Add(CountryInfo.X);
+```
+
+#### Opt-out
+
+To out out of specific countries but still use any new ones added in future versions of the library:
+
+```csharp
+ParseOptions.Default.Countries.Remove(CountryInfo.X);
 ```
 
 ## Country support
