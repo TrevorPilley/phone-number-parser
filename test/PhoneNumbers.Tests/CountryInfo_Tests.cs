@@ -14,7 +14,7 @@ namespace PhoneNumbers.Tests
 
             Assert.Empty(countryInfo.AreaCodeLengths);
             Assert.Equal("+33", countryInfo.CallingCode);
-            Assert.IsType<FRPhoneNumberFormatter>(countryInfo.Formatter);
+            Assert.Same(PairedDigitPhoneNumberFormatter.Instance, countryInfo.Formatter);
             Assert.False(countryInfo.HasAreaCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("FR", countryInfo.Iso3166Code);
@@ -165,7 +165,7 @@ namespace PhoneNumbers.Tests
 
             Assert.Empty(countryInfo.AreaCodeLengths);
             Assert.Equal("+377", countryInfo.CallingCode);
-            Assert.IsType<MCPhoneNumberFormatter>(countryInfo.Formatter);
+            Assert.Same(PairedDigitPhoneNumberFormatter.Instance, countryInfo.Formatter);
             Assert.False(countryInfo.HasAreaCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("MC", countryInfo.Iso3166Code);

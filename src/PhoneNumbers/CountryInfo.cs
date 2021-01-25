@@ -40,7 +40,7 @@ namespace PhoneNumbers
         public static CountryInfo France { get; } = new()
         {
             CallingCode = "+33",
-            Formatter = new FRPhoneNumberFormatter(),
+            Formatter = PairedDigitPhoneNumberFormatter.Instance,
             Iso3166Code = "FR",
             Name = "France",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
@@ -182,7 +182,7 @@ namespace PhoneNumbers
         public static CountryInfo Monaco { get; } = new()
         {
             CallingCode = "+377",
-            Formatter = new MCPhoneNumberFormatter(),
+            Formatter = PairedDigitPhoneNumberFormatter.Instance,
             Iso3166Code = "MC",
             Name = "Monaco",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9 }),
