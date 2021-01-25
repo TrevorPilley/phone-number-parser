@@ -12,6 +12,7 @@ namespace PhoneNumbers
     public sealed class CountryInfo
     {
         private static readonly char[] s_digits1To9 = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+        private const char s_plusSign = '+';
 
         /// <summary>
         /// Initialises a new instance of the <see cref="CountryInfo"/> class.
@@ -312,7 +313,7 @@ namespace PhoneNumbers
 
             var startPos = 0;
 
-            if (value[0] == '+')
+            if (value[0] == s_plusSign)
             {
                 if (!IsInternationalNumber(value))
                 {
