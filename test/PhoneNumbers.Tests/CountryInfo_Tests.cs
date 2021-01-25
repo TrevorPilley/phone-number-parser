@@ -108,7 +108,7 @@ namespace PhoneNumbers.Tests
 
             Assert.Equal(new[] { 4, 3, 2 }, countryInfo.AreaCodeLengths);
             Assert.Equal("+39", countryInfo.CallingCode);
-            Assert.IsType<ITPhoneNumberFormatter>(countryInfo.Formatter);
+            Assert.Same(ITPhoneNumberFormatter.Instance, countryInfo.Formatter);
             Assert.True(countryInfo.HasAreaCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("IT", countryInfo.Iso3166Code);
@@ -184,7 +184,7 @@ namespace PhoneNumbers.Tests
 
             Assert.Empty(countryInfo.AreaCodeLengths);
             Assert.Equal("+378", countryInfo.CallingCode);
-            Assert.IsType<PhoneNumberFormatter>(countryInfo.Formatter);
+            Assert.Same(ITPhoneNumberFormatter.Instance, countryInfo.Formatter);
             Assert.False(countryInfo.HasAreaCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("SM", countryInfo.Iso3166Code);
