@@ -114,6 +114,14 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
+        public void Parse_Value_With_SanMarino_CallingCode()
+        {
+            var phoneNumber = PhoneNumber.Parse("+37866661212");
+            Assert.NotNull(phoneNumber);
+            Assert.Equal(CountryInfo.SanMarino, phoneNumber.Country);
+        }
+
+        [Fact]
         public void Parse_Value_With_Singapore_CallingCode()
         {
             var phoneNumber = PhoneNumber.Parse("+6530000000");
@@ -217,6 +225,14 @@ namespace PhoneNumbers.Tests
             Assert.True(PhoneNumber.TryParse("+37798988800", out var phoneNumber));
             Assert.NotNull(phoneNumber);
             Assert.Equal(CountryInfo.Monaco, phoneNumber.Country);
+        }
+
+        [Fact]
+        public void TryParse_SanMarino_CallingCode_Valid_Value()
+        {
+            Assert.True(PhoneNumber.TryParse("+37866661212", out var phoneNumber));
+            Assert.NotNull(phoneNumber);
+            Assert.Equal(CountryInfo.SanMarino, phoneNumber.Country);
         }
 
         [Fact]

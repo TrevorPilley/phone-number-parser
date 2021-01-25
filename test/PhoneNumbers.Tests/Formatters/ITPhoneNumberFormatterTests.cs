@@ -8,7 +8,7 @@ namespace PhoneNumbers.Tests.Formatters
     /// </summary>
     public class ITPhoneNumberFormatterTests
     {
-        private readonly PhoneNumberFormatter _formatter = new ITPhoneNumberFormatter();
+        private readonly PhoneNumberFormatter _formatter = ITPhoneNumberFormatter.Instance;
 
         [Theory]
         [InlineData("0642200001", "06 4220 0001")]

@@ -108,7 +108,7 @@ namespace PhoneNumbers.Tests
 
             Assert.Equal(new[] { 4, 3, 2 }, countryInfo.AreaCodeLengths);
             Assert.Equal("+39", countryInfo.CallingCode);
-            Assert.IsType<ITPhoneNumberFormatter>(countryInfo.Formatter);
+            Assert.Same(ITPhoneNumberFormatter.Instance, countryInfo.Formatter);
             Assert.True(countryInfo.HasAreaCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("IT", countryInfo.Iso3166Code);
@@ -172,6 +172,25 @@ namespace PhoneNumbers.Tests
             Assert.False(countryInfo.SharesCallingCode);
             Assert.Equal("Monaco", countryInfo.Name);
             Assert.Equal(new[] { 8, 9 }, countryInfo.NsnLengths);
+            Assert.Null(countryInfo.TrunkPrefix);
+        }
+
+        [Fact]
+        public void CountryInfo_SanMarino()
+        {
+            Assert.Same(CountryInfo.SanMarino, CountryInfo.SanMarino);
+
+            var countryInfo = CountryInfo.SanMarino;
+
+            Assert.Empty(countryInfo.AreaCodeLengths);
+            Assert.Equal("+378", countryInfo.CallingCode);
+            Assert.Same(ITPhoneNumberFormatter.Instance, countryInfo.Formatter);
+            Assert.False(countryInfo.HasAreaCodes);
+            Assert.Equal("00", countryInfo.InternationalCallPrefix);
+            Assert.Equal("SM", countryInfo.Iso3166Code);
+            Assert.False(countryInfo.SharesCallingCode);
+            Assert.Equal("San Marino", countryInfo.Name);
+            Assert.Equal(new[] { 6, 7, 8, 9, 10 }, countryInfo.NsnLengths);
             Assert.Null(countryInfo.TrunkPrefix);
         }
 

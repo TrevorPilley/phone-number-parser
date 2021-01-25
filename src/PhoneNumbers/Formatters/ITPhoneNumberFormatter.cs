@@ -5,6 +5,12 @@ namespace PhoneNumbers.Formatters
     /// </summary>
     internal sealed class ITPhoneNumberFormatter : PhoneNumberFormatter
     {
+        private ITPhoneNumberFormatter()
+        {
+        }
+
+        internal static PhoneNumberFormatter Instance { get; } = new ITPhoneNumberFormatter();
+
         /// <inheritdoc/>
         protected override string FormatDisplay(PhoneNumber phoneNumber)
         {
