@@ -51,17 +51,17 @@ namespace PhoneNumbers.Formatters
         /// <returns>The string representation of the phone number.</returns>
         protected virtual string FormatDisplay(PhoneNumber phoneNumber)
         {
-            if (phoneNumber.Country.TrunkPrefix is not null && phoneNumber.AreaCode is not null)
+            if (phoneNumber.Country.TrunkPrefix is not null)
             {
+                if (phoneNumber.AreaCode is null)
+                {
+                    return $"{phoneNumber.Country.CallingCode} ({phoneNumber.Country.TrunkPrefix}) {phoneNumber.LocalNumber}";
+                }
+
                 return $"{phoneNumber.Country.CallingCode} ({phoneNumber.Country.TrunkPrefix}) {phoneNumber.AreaCode} {phoneNumber.LocalNumber}";
             }
 
-            if (phoneNumber.Country.TrunkPrefix is not null && phoneNumber.AreaCode is null)
-            {
-                return $"{phoneNumber.Country.CallingCode} ({phoneNumber.Country.TrunkPrefix}) {phoneNumber.LocalNumber}";
-            }
-
-            if (phoneNumber.Country.TrunkPrefix is null && phoneNumber.AreaCode is not null)
+            if (phoneNumber.AreaCode is not null)
             {
                 return $"{phoneNumber.Country.CallingCode} {phoneNumber.AreaCode} {phoneNumber.LocalNumber}";
             }
