@@ -137,7 +137,7 @@ namespace PhoneNumbers
         {
             AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2 }),
             CallingCode = "+39",
-            Formatter = new ITPhoneNumberFormatter(),
+            Formatter = ITPhoneNumberFormatter.Instance,
             Iso3166Code = "IT",
             Name = "Italy",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8, 9, 10, 11 }),
@@ -194,6 +194,7 @@ namespace PhoneNumbers
         public static CountryInfo SanMarino { get; } = new()
         {
             CallingCode = "+378",
+            Formatter = ITPhoneNumberFormatter.Instance,
             Iso3166Code = "SM",
             Name = "San Marino",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8, 9, 10 }),
