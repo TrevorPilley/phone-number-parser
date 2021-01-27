@@ -242,7 +242,7 @@ namespace PhoneNumbers.Tests
 
             Assert.Equal(new[] { 3, 2 }, countryInfo.AreaCodeLengths);
             Assert.Equal("+41", countryInfo.CallingCode);
-            Assert.Same(PhoneNumberFormatter.Instance, countryInfo.Formatter);
+            Assert.Same(PhoneNumberFormatter.Default, countryInfo.Formatter);
             Assert.True(countryInfo.HasAreaCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("CH", countryInfo.Iso3166Code);
