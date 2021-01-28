@@ -208,6 +208,14 @@ United Kingdom | GB            | +44          | 0          | Yes        | Yes   
 - The `IsDataOnly` and `IsPager` properties are not currently set for Spain mobile numbers.
 - Sets the `IsFreephone` property for non-geographical phone numbers which are freephone numbers (e.g. 800 and 900).
 
+### Switzerland
+
+- 02, 03, 04, 05, 06, 07, 08 and 09 numbers are supported.
+- 02, 03, 04, 05, 06, 071, 081 and 091 numbers are geographically assigned so the geographic area is included.
+- Sets the `IsPager` and `IsVirtual` properties as appropriate for mobile phone numbers.
+- The `IsDataOnly` property is not currently set for Switzerland mobile numbers.
+- Sets the `IsFreephone` property for non-geographical phone numbers which are freephone numbers (e.g. 0800).
+
 ### United Kingdom
 
 _note the ISO code for the United Kingdom is 'GB' rather than 'UK'._
@@ -267,6 +275,12 @@ These were used as the references for the phone number data for each country.
 - https://avancedigital.mineco.gob.es/es-ES/Servicios/Numeracion/Documents/Descripcion_PNN.pdf
 - https://numeracionyoperadores.cnmc.es/numeracion
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Spain
+
+### Switzerland
+
+- https://areaphonecodes.com/switzerland
+- https://www.ums.ch/links-and-info/info-switzerland/area-codes
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Switzerland
 
 ### United Kingdom, Guernsey, Jersey, Isle of Man
 
