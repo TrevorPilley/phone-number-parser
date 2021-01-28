@@ -10,10 +10,10 @@ namespace PhoneNumbers.Formatters
         {
             if (phoneNumber.AreaCode.Length = 3)
             {
-                return $"{phoneNumber.AreaCode} {phoneNumber.LocalNumber.Substring(0, 3)} {phoneNumber.LocalNumber.Substring(3)}";
+                return $"{phoneNumber.TrunkPrefix}{phoneNumber.AreaCode} {phoneNumber.LocalNumber.Substring(0, 3)} {phoneNumber.LocalNumber.Substring(3)}";
             }
 
-            return $"{phoneNumber.AreaCode}{phoneNumber.LocalNumber.Substring(0, 1)} {phoneNumber.LocalNumber.Substring(1, 3) {phoneNumber.LocalNumber.Substring(4)}";
+            return $"{phoneNumber.TrunkPrefix}{phoneNumber.AreaCode}{phoneNumber.LocalNumber.Substring(0, 1)} {phoneNumber.LocalNumber.Substring(1, 3) {phoneNumber.LocalNumber.Substring(4)}";
         }
     }
 }
