@@ -8,7 +8,7 @@ namespace PhoneNumbers.Formatters
         /// <inheritdoc/>
         protected override string FormatDisplay(PhoneNumber phoneNumber)
         {
-            if (phoneNumber.AreaCode.Length = 3)
+            if (phoneNumber.AreaCode.Length == 3)
             {
                 return $"{phoneNumber.CountryInfo.TrunkPrefix}{phoneNumber.AreaCode} {phoneNumber.LocalNumber.Substring(0, 3)} {phoneNumber.LocalNumber.Substring(3)}";
             }
