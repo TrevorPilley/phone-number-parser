@@ -8,12 +8,12 @@ namespace PhoneNumbers.Formatters
         /// <inheritdoc/>
         protected override string FormatDisplay(PhoneNumber phoneNumber)
         {
-            if (phoneNumber.AreaCode.Length == 3)
+            if (phoneNumber.AreaCode!.Length == 3)
             {
                 return $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.AreaCode} {phoneNumber.LocalNumber.Substring(0, 3)} {phoneNumber.LocalNumber.Substring(3)}";
             }
 
-            return $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.AreaCode}{phoneNumber.LocalNumber.Substring(0, 1)} {phoneNumber.LocalNumber.Substring(1, 3)} {phoneNumber.LocalNumber.Substring(4)}";
+            return $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.AreaCode} {phoneNumber.LocalNumber.Substring(0, 3)} {phoneNumber.LocalNumber.Substring(3, 2)} {phoneNumber.LocalNumber.Substring(5)}";
         }
     }
 }

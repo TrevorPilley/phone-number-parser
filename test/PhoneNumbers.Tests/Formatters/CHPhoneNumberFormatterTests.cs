@@ -12,6 +12,7 @@ namespace PhoneNumbers.Tests.Formatters
 
         [Theory]
         [InlineData("0327654321", "032 765 43 21")]
+        [InlineData("0878000000", "0878 000 000")]
         public void Format_Display(string value, string expected) =>
             Assert.Equal(expected, _formatter.Format(PhoneNumber.Parse(value, "CH"), "D"));
     }
