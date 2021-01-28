@@ -233,6 +233,7 @@ namespace PhoneNumbers
         {
             AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
             CallingCode = "+41",
+            Formatter = new CHPhoneNumberFormatter(),
             Iso3166Code = "CH",
             Name = "Switzerland",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
