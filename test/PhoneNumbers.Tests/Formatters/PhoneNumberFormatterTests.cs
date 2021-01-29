@@ -22,20 +22,24 @@ namespace PhoneNumbers.Tests.Formatters
         }
 
         [Fact]
-        public void Format_Display_With_TrunkPrefix_With_AreaCode() =>
+        public void Format_Display_With_TrunkPrefix_With_NationalDiallingCode() =>
             Assert.Equal("+422 (0) 12345 667788", _formatter.Format(GetPhoneNumber("0", "12345", "667788"), "D"));
 
         [Fact]
-        public void Format_Display_With_TrunkPrefix_Without_AreaCode() =>
+        public void Format_Display_With_TrunkPrefix_Without_NationalDiallingCode() =>
             Assert.Equal("+422 (0) 667788", _formatter.Format(GetPhoneNumber("0", null, "667788"), "D"));
 
         [Fact]
-        public void Format_Display_Without_TrunkPrefix_With_AreaCode() =>
+        public void Format_Display_Without_TrunkPrefix_With_NationalDiallingCode() =>
             Assert.Equal("+422 12345 667788", _formatter.Format(GetPhoneNumber(null, "12345", "667788"), "D"));
 
         [Fact]
-        public void Format_Display_Without_TrunkPrefix_Without_AreaCode() =>
+        public void Format_Display_Without_TrunkPrefix_Without_NationalDiallingCode() =>
             Assert.Equal("+422 667788", _formatter.Format(GetPhoneNumber(null, null, "667788"), "D"));
+
+        [Fact]
+        public void Format_E164() =>
+            Assert.Equal("+42212345667788", _formatter.Format(GetPhoneNumber("0", "12345", "667788"), "E"));
 
         [Fact]
         public void Format_International() =>

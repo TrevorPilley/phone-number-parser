@@ -69,10 +69,10 @@ nonGeographicPhoneNumber.IsFreephone;           // true/false
 The phone number can be formatted in 3 ways, the default format output can be round tripped via `PhoneNumber.Parse()` to make serialization or database persistence straightforward.
 
 ```csharp
-phoneNumber.ToString();                         // +441142726444 (defaults to I format)
-phoneNumber.ToString("D");                      // 0114 272 6444 (format for display)
-phoneNumber.ToString("I");                      // +441142726444 (format for international caller)
-phoneNumber.ToString("N");                      // 01142726444   (format for national caller)
+phoneNumber.ToString();                         // +441142726444         (defaults to E format)
+phoneNumber.ToString("D");                      // +44 (0) 114 272 6444  (format for display)
+phoneNumber.ToString("E");                      // +441142726444         (format for E.164 format)
+phoneNumber.ToString("N");                      // 01142726444           (format for national caller)
 ```
 
 ### ParseOptions

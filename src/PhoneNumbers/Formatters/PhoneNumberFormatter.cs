@@ -7,7 +7,7 @@ namespace PhoneNumbers.Formatters
     /// </summary>
     internal class PhoneNumberFormatter
     {
-        internal const string DefaultFormat = "I";
+        internal const string DefaultFormat = "E";
 
         /// <summary>
         /// Initialises a new instance of the <see cref="PhoneNumberFormatter"/> class.
@@ -38,7 +38,7 @@ namespace PhoneNumbers.Formatters
             return format switch
             {
                 "D" => FormatDisplay(phoneNumber),
-                "I" => FormatInternational(phoneNumber),
+                DefaultFormat or "I" => FormatE164(phoneNumber),
                 "N" => FormatNational(phoneNumber),
                 _ => throw new FormatException($"{format} is not a supported format"),
             };
@@ -70,11 +70,11 @@ namespace PhoneNumbers.Formatters
         }
 
         /// <summary>
-        /// Gets the string representation of the phone number for an international caller to use.
+        /// Gets the string representation of the phone number in E.164 format.
         /// </summary>
         /// <param name="phoneNumber">The phone number to format.</param>
         /// <returns>The string representation of the phone number.</returns>
-        protected virtual string FormatInternational(PhoneNumber phoneNumber) =>
+        protected virtual string FormatE164(PhoneNumber phoneNumber) =>
             $"{phoneNumber.Country.CallingCode}{phoneNumber.NationalDiallingCode}{phoneNumber.SubscriberNumber}";
 
         /// <summary>
