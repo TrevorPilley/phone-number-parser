@@ -8,11 +8,6 @@ namespace PhoneNumbers.Parsers
     internal sealed class CountryNumber
     {
         /// <summary>
-        /// Gets the <see cref="NumberRange"/>s of the area code.
-        /// </summary>
-        internal IReadOnlyList<NumberRange>? AreaCodeRanges { get; init; }
-
-        /// <summary>
         /// Gets the name of the geographic area.
         /// </summary>
         internal string? GeographicArea { get; init; }
@@ -28,8 +23,13 @@ namespace PhoneNumbers.Parsers
         internal PhoneNumberKind Kind { get; init; }
 
         /// <summary>
-        /// Gets the <see cref="NumberRange"/>s of the local numbers.
+        /// Gets the <see cref="NumberRange"/>s of the national dialling codes.
         /// </summary>
-        internal IReadOnlyList<NumberRange> LocalNumberRanges { get; init; } = null!;
+        internal IReadOnlyList<NumberRange>? NationalDiallingCodeRanges { get; init; }
+
+        /// <summary>
+        /// Gets the <see cref="NumberRange"/>s of the subscriber numbers.
+        /// </summary>
+        internal IReadOnlyList<NumberRange> SubscriberNumberRanges { get; init; } = null!;
     }
 }

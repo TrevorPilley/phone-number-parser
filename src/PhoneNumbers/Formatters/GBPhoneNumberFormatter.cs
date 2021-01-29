@@ -15,17 +15,17 @@ namespace PhoneNumbers.Formatters
         /// <inheritdoc/>
         protected override string FormatDisplay(PhoneNumber phoneNumber)
         {
-            if (phoneNumber.AreaCode!.Length == 2)
+            if (phoneNumber.NationalDiallingCode!.Length == 2)
             {
-                return $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.AreaCode} {phoneNumber.LocalNumber.Substring(0, 4)} {phoneNumber.LocalNumber.Substring(4)}";
+                return $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.NationalDiallingCode} {phoneNumber.SubscriberNumber.Substring(0, 4)} {phoneNumber.SubscriberNumber.Substring(4)}";
             }
 
-            if (phoneNumber.AreaCode!.Length == 3)
+            if (phoneNumber.NationalDiallingCode!.Length == 3)
             {
-                return $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.AreaCode} {phoneNumber.LocalNumber.Substring(0, 3)} {phoneNumber.LocalNumber.Substring(3)}";
+                return $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.NationalDiallingCode} {phoneNumber.SubscriberNumber.Substring(0, 3)} {phoneNumber.SubscriberNumber.Substring(3)}";
             }
 
-            return $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.AreaCode} {phoneNumber.LocalNumber}";
+            return $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.NationalDiallingCode} {phoneNumber.SubscriberNumber}";
         }
     }
 }

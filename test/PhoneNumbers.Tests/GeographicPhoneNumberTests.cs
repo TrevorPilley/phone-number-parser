@@ -11,11 +11,11 @@ namespace PhoneNumbers.Tests
             var countryInfo = CountryInfo.UnitedKingdom;
             var phoneNumber = new GeographicPhoneNumber(countryInfo, "12345", "667788", "N/A");
 
-            Assert.Equal("12345", phoneNumber.AreaCode);
             Assert.Equal(countryInfo, phoneNumber.Country);
             Assert.Equal("N/A", phoneNumber.GeographicArea);
-            Assert.Equal("667788", phoneNumber.LocalNumber);
             Assert.Equal(PhoneNumberKind.GeographicPhoneNumber, phoneNumber.PhoneNumberKind);
+            Assert.Equal("12345", phoneNumber.NationalDiallingCode);
+            Assert.Equal("667788", phoneNumber.SubscriberNumber);
         }
 
         [Fact]
@@ -35,15 +35,15 @@ namespace PhoneNumbers.Tests
             Assert.Throws<ArgumentException>(() => new GeographicPhoneNumber(CountryInfo.UnitedKingdom, "12345", "667788", " "));
 
         [Fact]
-        public void Constructor_Throws_If_LocalNumber_Empty() =>
+        public void Constructor_Throws_If_SubscriberNumber_Empty() =>
             Assert.Throws<ArgumentException>(() => new GeographicPhoneNumber(CountryInfo.UnitedKingdom, "12345", "", "N/A"));
 
         [Fact]
-        public void Constructor_Throws_If_LocalNumber_Null() =>
+        public void Constructor_Throws_If_SubscriberNumber_Null() =>
             Assert.Throws<ArgumentException>(() => new GeographicPhoneNumber(CountryInfo.UnitedKingdom, "12345", null, "N/A"));
 
         [Fact]
-        public void Constructor_Throws_If_LocalNumber_Whitespace() =>
+        public void Constructor_Throws_If_SubscriberNumber_Whitespace() =>
             Assert.Throws<ArgumentException>(() => new GeographicPhoneNumber(CountryInfo.UnitedKingdom, "12345", " ", "N/A"));
 
         [Fact]
@@ -75,7 +75,7 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
-        public void Equality_Same_Values_With_AreaCode()
+        public void Equality_Same_Values_With_NationalDiallingCode()
         {
             var phoneNumber1 = new GeographicPhoneNumber(CountryInfo.UnitedKingdom, "12345", "667788", "N/A");
             var phoneNumber2 = new GeographicPhoneNumber(CountryInfo.UnitedKingdom, "12345", "667788", "N/A");
@@ -88,7 +88,7 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
-        public void Equality_Same_Values_Without_AreaCode()
+        public void Equality_Same_Values_Without_NationalDiallingCode()
         {
             var phoneNumber1 = new GeographicPhoneNumber(CountryInfo.UnitedKingdom, null, "667788", "N/A");
             var phoneNumber2 = new GeographicPhoneNumber(CountryInfo.UnitedKingdom, null, "667788", "N/A");

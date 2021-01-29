@@ -11,13 +11,13 @@ namespace PhoneNumbers.Tests
             var countryInfo = CountryInfo.UnitedKingdom;
             var phoneNumber = new MobilePhoneNumber(countryInfo, "7654", "112233", true, true, true);
 
-            Assert.Equal("7654", phoneNumber.AreaCode);
             Assert.Equal(countryInfo, phoneNumber.Country);
             Assert.True(phoneNumber.IsDataOnly);
             Assert.True(phoneNumber.IsPager);
             Assert.True(phoneNumber.IsVirtual);
-            Assert.Equal("112233", phoneNumber.LocalNumber);
             Assert.Equal(PhoneNumberKind.MobilePhoneNumber, phoneNumber.PhoneNumberKind);
+            Assert.Equal("7654", phoneNumber.NationalDiallingCode);
+            Assert.Equal("112233", phoneNumber.SubscriberNumber);
         }
 
         [Fact]
@@ -25,15 +25,15 @@ namespace PhoneNumbers.Tests
             Assert.Throws<ArgumentNullException>(() => new MobilePhoneNumber(null, "12345", "667788", true, true, true));
 
         [Fact]
-        public void Constructor_Throws_If_LocalNumber_Empty() =>
+        public void Constructor_Throws_If_SubscriberNumber_Empty() =>
             Assert.Throws<ArgumentException>(() => new MobilePhoneNumber(CountryInfo.UnitedKingdom, "12345", "", true, true, true));
 
         [Fact]
-        public void Constructor_Throws_If_LocalNumber_Null() =>
+        public void Constructor_Throws_If_SubscriberNumber_Null() =>
             Assert.Throws<ArgumentException>(() => new MobilePhoneNumber(CountryInfo.UnitedKingdom, "12345", null, true, true, true));
 
         [Fact]
-        public void Constructor_Throws_If_LocalNumber_Whitespace() =>
+        public void Constructor_Throws_If_SubscriberNumber_Whitespace() =>
             Assert.Throws<ArgumentException>(() => new MobilePhoneNumber(CountryInfo.UnitedKingdom, "12345", " ", true, true, true));
 
         [Fact]
@@ -65,7 +65,7 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
-        public void Equality_Same_Values_With_AreaCode()
+        public void Equality_Same_Values_With_NationalDiallingCode()
         {
             var phoneNumber1 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, "7654", "112233", true, true, true);
             var phoneNumber2 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, "7654", "112233", true, true, true);
@@ -78,7 +78,7 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
-        public void Equality_Same_Values_Without_AreaCode()
+        public void Equality_Same_Values_Without_NationalDiallingCode()
         {
             var phoneNumber1 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, null, "112233", true, true, true);
             var phoneNumber2 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, null, "112233", true, true, true);

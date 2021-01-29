@@ -1007,7 +1007,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("888053999", "888", "053999", "Ourense")]
         [InlineData("888088000", "888", "088000", "Ourense")]
         [InlineData("888088999", "888", "088999", "Ourense")]
-        public void Parse_Known_GeographicPhoneNumber_8XX_AreaCode(string value, string areaCode, string localNumber, string geographicArea)
+        public void Parse_Known_GeographicPhoneNumber_8XX_NationalDiallingCode(string value, string nationalDiallingCode, string subscriberNumber, string geographicArea)
         {
             var parseResult = _parser.Parse(value);
             parseResult.ThrowIfFailure();
@@ -1018,10 +1018,10 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<GeographicPhoneNumber>(phoneNumber);
 
             var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
-            Assert.Equal(areaCode, geographicPhoneNumber.AreaCode);
             Assert.Equal(CountryInfo.Spain, geographicPhoneNumber.Country);
             Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
-            Assert.Equal(localNumber, geographicPhoneNumber.LocalNumber);
+            Assert.Equal(nationalDiallingCode, geographicPhoneNumber.NationalDiallingCode);
+            Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
         }
 
         [Theory]
@@ -1603,7 +1603,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("988909999", "988", "909999", "Ourense")]
         [InlineData("988980000", "988", "980000", "Ourense")]
         [InlineData("988999999", "988", "999999", "Ourense")]
-        public void Parse_Known_GeographicPhoneNumber_9XX_AreaCode(string value, string areaCode, string localNumber, string geographicArea)
+        public void Parse_Known_GeographicPhoneNumber_9XX_NationalDiallingCode(string value, string nationalDiallingCode, string subscriberNumber, string geographicArea)
         {
             var parseResult = _parser.Parse(value);
             parseResult.ThrowIfFailure();
@@ -1614,10 +1614,10 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<GeographicPhoneNumber>(phoneNumber);
 
             var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
-            Assert.Equal(areaCode, geographicPhoneNumber.AreaCode);
             Assert.Equal(CountryInfo.Spain, geographicPhoneNumber.Country);
             Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
-            Assert.Equal(localNumber, geographicPhoneNumber.LocalNumber);
+            Assert.Equal(nationalDiallingCode, geographicPhoneNumber.NationalDiallingCode);
+            Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
         }
     }
 }

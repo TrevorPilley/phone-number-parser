@@ -16,27 +16,28 @@ namespace PhoneNumbers
         /// Initialises a new instance of the <see cref="PhoneNumber"/> class.
         /// </summary>
         /// <param name="countryInfo">The <see cref="CountryInfo"/> for the phone number.</param>
-        /// <param name="areaCode">The area code of the phone number.</param>
-        /// <param name="localNumber">The local number of the phone number.</param>
-        protected PhoneNumber(CountryInfo countryInfo, string? areaCode, string localNumber)
+        /// <param name="nationalDiallingCode">The national dialling code of the phone number.</param>
+        /// <param name="subscriberNumber">The subscriber number of the phone number.</param>
+        protected PhoneNumber(CountryInfo countryInfo, string? nationalDiallingCode, string subscriberNumber)
         {
             if (countryInfo is null)
             {
                 throw new ArgumentNullException(nameof(countryInfo));
             }
 
-            if (string.IsNullOrWhiteSpace(localNumber))
+            if (string.IsNullOrWhiteSpace(subscriberNumber))
             {
-                throw new ArgumentException($"'{nameof(localNumber)}' cannot be null or whitespace.", nameof(localNumber));
+                throw new ArgumentException($"'{nameof(subscriberNumber)}' cannot be null or whitespace.", nameof(subscriberNumber));
             }
 
-            (Country, AreaCode, LocalNumber) = (countryInfo, areaCode, localNumber);
+            (Country, NationalDiallingCode, SubscriberNumber) = (countryInfo, nationalDiallingCode, subscriberNumber);
         }
 
         /// <summary>
         /// Gets the area code of the phone number.
         /// </summary>
-        public string? AreaCode { get; }
+        [Obsolete("This property has been replaced, please use by 'NationalDiallingCode' instead it will be removed in a future version.")]
+        public string? AreaCode => NationalDiallingCode;
 
         /// <summary>
         /// Gets the <see cref="CountryInfo"/> for the phone number.
@@ -46,13 +47,26 @@ namespace PhoneNumbers
         /// <summary>
         /// Gets the local number of the phone number.
         /// </summary>
-        public string LocalNumber { get; }
+        [Obsolete("This property has been replaced, please use by 'SubscriberNumber' instead it will be removed in a future version.")]
+        public string LocalNumber => SubscriberNumber;
+
+        /// <summary>
+        /// Gets the national dialling code of the phone number.
+        /// </summary>
+        /// <remarks>May also be referred to as area code.</remarks>
+        public string? NationalDiallingCode { get; }
 
         /// <summary>
         /// Gets the <see cref="PhoneNumberKind"/>.
         /// </summary>
         /// <remarks>The instance can be cast to the appropriate type based upon this value.</remarks>
         public abstract PhoneNumberKind PhoneNumberKind { get; }
+
+        /// <summary>
+        /// Gets the subscriber number of the phone number.
+        /// </summary>
+        /// <remarks>May also be referred to as local number.</remarks>
+        public string SubscriberNumber { get; }
 
         /// <summary>
         /// Parses the specified phone number value into a <see cref="PhoneNumber"/> instance based upon the calling code.

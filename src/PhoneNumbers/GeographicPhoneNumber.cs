@@ -11,15 +11,15 @@ namespace PhoneNumbers
         /// Initialises a new instance of the <see cref="GeographicPhoneNumber"/> class.
         /// </summary>
         /// <param name="countryInfo">The <see cref="CountryInfo"/> for the phone number.</param>
-        /// <param name="areaCode">The area code of the phone number.</param>
-        /// <param name="localNumber">The local number of the phone number.</param>
+        /// <param name="nationalDiallingCode">The national dialling code of the phone number.</param>
+        /// <param name="subscriberNumber">The subscriber number of the phone number.</param>
         /// <param name="geographicArea">The name of the geographic area the phone number the area code is allocated to.</param>
         internal GeographicPhoneNumber(
             CountryInfo countryInfo,
-            string areaCode,
-            string localNumber,
+            string nationalDiallingCode,
+            string subscriberNumber,
             string geographicArea)
-            : base(countryInfo, areaCode, localNumber)
+            : base(countryInfo, nationalDiallingCode, subscriberNumber)
         {
             if (string.IsNullOrWhiteSpace(geographicArea))
             {
@@ -72,16 +72,16 @@ namespace PhoneNumbers
                 return true;
             }
 
-            return (AreaCode == null && other.AreaCode == null || AreaCode!.Equals(other.AreaCode, StringComparison.Ordinal)) &&
-                Country.Equals(other.Country) &&
+            return Country.Equals(other.Country) &&
                 GeographicArea.Equals(other.GeographicArea, StringComparison.Ordinal) &&
-                LocalNumber.Equals(other.LocalNumber, StringComparison.Ordinal) &&
-                PhoneNumberKind.Equals(other.PhoneNumberKind);
+                PhoneNumberKind.Equals(other.PhoneNumberKind) &&
+                (NationalDiallingCode == null && other.NationalDiallingCode == null || NationalDiallingCode!.Equals(other.NationalDiallingCode, StringComparison.Ordinal)) &&
+                SubscriberNumber.Equals(other.SubscriberNumber, StringComparison.Ordinal);
         }
 
         /// <inheritdoc/>
         [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
         public override int GetHashCode() =>
-            HashCode.Combine(AreaCode, Country, GeographicArea, LocalNumber, PhoneNumberKind);
+            HashCode.Combine(Country, GeographicArea, PhoneNumberKind, NationalDiallingCode, SubscriberNumber);
     }
 }

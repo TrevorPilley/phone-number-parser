@@ -11,31 +11,38 @@ namespace PhoneNumbers.Tests.Parsers
         private readonly PhoneNumberParser _parser = GBPhoneNumberParser.Create();
 
         [Fact]
-        public void Parse_Returns_Failure_For_1XX_AreaCode_And_Local_Number_Not_7_Digits()
+        public void Parse_Returns_Failure_For_1XX_NationalDiallingCode_And_SubscriberNumber_Not_7_Digits()
         {
             var result = _parser.Parse("0113111222");
             Assert.Equal("The national significant number 113111222 is not valid for a GB phone number.", result.ParseError);
         }
 
         [Fact]
-        public void Parse_Returns_Failure_For_2X_AreaCode_And_Local_Number_Not_8_Digits()
+        public void Parse_Returns_Failure_For_2X_NationalDiallingCode_And_SubscriberNumber_Not_8_Digits()
         {
             var result = _parser.Parse("0201112222");
             Assert.Equal("The national significant number 201112222 is not valid for a GB phone number.", result.ParseError);
         }
 
         [Fact]
-        public void Parse_Returns_Failure_For_3XX_AreaCode_And_Local_Number_Not_7_Digits()
+        public void Parse_Returns_Failure_For_3XX_NationalDiallingCode_And_SubscriberNumber_Not_7_Digits()
         {
             var result = _parser.Parse("0300111111");
             Assert.Equal("The national significant number 300111111 is not valid for a GB phone number.", result.ParseError);
         }
 
         [Fact]
-        public void Parse_Returns_Failure_For_7XXX_AreaCode_And_Local_Number_Not_6_Digits()
+        public void Parse_Returns_Failure_For_7XXX_NationalDiallingCode_And_SubscriberNumber_Not_6_Digits()
         {
             var result = _parser.Parse("0770012345");
             Assert.Equal("The national significant number 770012345 is not valid for a GB phone number.", result.ParseError);
+        }
+
+        [Fact]
+        public void Parse_Returns_Failure_If_CallingCode_Invalid()
+        {
+            var result = _parser.Parse("+1111111111");
+            Assert.Equal($"The value must be a GB phone number starting +44 or 0 and the national significant number of the phone number must be {string.Join(" or ", CountryInfo.UnitedKingdom.NsnLengths)} digits in length.", result.ParseError);
         }
 
         [Theory]
@@ -57,22 +64,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("03800000000")]
         [InlineData("03900000000")]
         [InlineData("07200000000")]
-        public void Parse_Returns_Failure_If_AreaCode_Invalid(string value)
-        {
-            var result = _parser.Parse(value);
-            Assert.Equal($"The national significant number {value.Substring(1)} is not valid for a GB phone number.", result.ParseError);
-        }
-
-        [Fact]
-        public void Parse_Returns_Failure_If_CallingCode_Invalid()
-        {
-            var result = _parser.Parse("+1111111111");
-            Assert.Equal($"The value must be a GB phone number starting +44 or 0 and the national significant number of the phone number must be {string.Join(" or ", CountryInfo.UnitedKingdom.NsnLengths)} digits in length.", result.ParseError);
-        }
-
-        [Theory]
-        [InlineData("07101111111")]
-        public void Parse_Returns_Failure_If_LocalNumber_Invalid_For_AreaCode(string value)
+        public void Parse_Returns_Failure_If_NationalDiallingCode_Invalid(string value)
         {
             var result = _parser.Parse(value);
             Assert.Equal($"The national significant number {value.Substring(1)} is not valid for a GB phone number.", result.ParseError);
@@ -99,6 +91,14 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0611111111")]
         [InlineData("0911111111")]
         public void Parse_Returns_Failure_If_ServiceType_Invalid(string value)
+        {
+            var result = _parser.Parse(value);
+            Assert.Equal($"The national significant number {value.Substring(1)} is not valid for a GB phone number.", result.ParseError);
+        }
+
+        [Theory]
+        [InlineData("07101111111")]
+        public void Parse_Returns_Failure_If_SubscriberNumber_Invalid_For_NationalDiallingCode(string value)
         {
             var result = _parser.Parse(value);
             Assert.Equal($"The national significant number {value.Substring(1)} is not valid for a GB phone number.", result.ParseError);

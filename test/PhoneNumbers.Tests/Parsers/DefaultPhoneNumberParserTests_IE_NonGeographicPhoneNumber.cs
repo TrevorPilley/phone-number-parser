@@ -13,7 +13,7 @@ namespace PhoneNumbers.Tests.Parsers
         [Theory]
         [InlineData("0800000000", "800", "000000")]
         [InlineData("0800999999", "800", "999999")]
-        public void Parse_Known_NonGeographicPhoneNumber_Freephone(string value, string areaCode, string localNumber)
+        public void Parse_Known_NonGeographicPhoneNumber_Freephone(string value, string nationalDiallingCode, string subscriberNumber)
         {
             var parseResult = _parser.Parse(value);
             parseResult.ThrowIfFailure();
@@ -24,10 +24,10 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
 
             var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
-            Assert.Equal(areaCode, nonGeographicPhoneNumber.AreaCode);
             Assert.Equal(CountryInfo.Ireland, nonGeographicPhoneNumber.Country);
             Assert.True(nonGeographicPhoneNumber.IsFreephone);
-            Assert.Equal(localNumber, nonGeographicPhoneNumber.LocalNumber);
+            Assert.Equal(nationalDiallingCode, nonGeographicPhoneNumber.NationalDiallingCode);
+            Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
         }
     }
 }

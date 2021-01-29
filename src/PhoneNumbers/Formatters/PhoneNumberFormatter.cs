@@ -53,20 +53,20 @@ namespace PhoneNumbers.Formatters
         {
             if (phoneNumber.Country.TrunkPrefix is not null)
             {
-                if (phoneNumber.AreaCode is null)
+                if (phoneNumber.NationalDiallingCode is null)
                 {
-                    return $"{phoneNumber.Country.CallingCode} ({phoneNumber.Country.TrunkPrefix}) {phoneNumber.LocalNumber}";
+                    return $"{phoneNumber.Country.CallingCode} ({phoneNumber.Country.TrunkPrefix}) {phoneNumber.SubscriberNumber}";
                 }
 
-                return $"{phoneNumber.Country.CallingCode} ({phoneNumber.Country.TrunkPrefix}) {phoneNumber.AreaCode} {phoneNumber.LocalNumber}";
+                return $"{phoneNumber.Country.CallingCode} ({phoneNumber.Country.TrunkPrefix}) {phoneNumber.NationalDiallingCode} {phoneNumber.SubscriberNumber}";
             }
 
-            if (phoneNumber.AreaCode is not null)
+            if (phoneNumber.NationalDiallingCode is not null)
             {
-                return $"{phoneNumber.Country.CallingCode} {phoneNumber.AreaCode} {phoneNumber.LocalNumber}";
+                return $"{phoneNumber.Country.CallingCode} {phoneNumber.NationalDiallingCode} {phoneNumber.SubscriberNumber}";
             }
 
-            return $"{phoneNumber.Country.CallingCode} {phoneNumber.LocalNumber}";
+            return $"{phoneNumber.Country.CallingCode} {phoneNumber.SubscriberNumber}";
         }
 
         /// <summary>
@@ -75,7 +75,7 @@ namespace PhoneNumbers.Formatters
         /// <param name="phoneNumber">The phone number to format.</param>
         /// <returns>The string representation of the phone number.</returns>
         protected virtual string FormatInternational(PhoneNumber phoneNumber) =>
-            $"{phoneNumber.Country.CallingCode}{phoneNumber.AreaCode}{phoneNumber.LocalNumber}";
+            $"{phoneNumber.Country.CallingCode}{phoneNumber.NationalDiallingCode}{phoneNumber.SubscriberNumber}";
 
         /// <summary>
         /// Gets the string representation of the phone number for national caller to use.
@@ -83,6 +83,6 @@ namespace PhoneNumbers.Formatters
         /// <param name="phoneNumber">The phone number to format.</param>
         /// <returns>The string representation of the phone number.</returns>
         protected virtual string FormatNational(PhoneNumber phoneNumber) =>
-            $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.AreaCode}{phoneNumber.LocalNumber}";
+            $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.NationalDiallingCode}{phoneNumber.SubscriberNumber}";
     }
 }

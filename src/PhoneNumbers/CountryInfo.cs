@@ -58,11 +58,11 @@ namespace PhoneNumbers
         /// </summary>
         public static CountryInfo Guernsey { get; } = new()
         {
-            AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 4 }),
             CallingCode = "+44",
             Formatter = GBPhoneNumberFormatter.Instance,
             Iso3166Code = "GG",
             Name = "Guernsey",
+            NdcLengths = new ReadOnlyCollection<int>(new[] { 4 }),
             NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
             SharesCallingCode = true,
             TrunkPrefix = "0",
@@ -93,11 +93,11 @@ namespace PhoneNumbers
         /// <remarks>Covers the Republic of Ireland, Northern Ireland is part of the United Kingdom.</remarks>
         public static CountryInfo Ireland { get; } = new()
         {
-            AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
             CallingCode = "+353",
             Formatter = new IEPhoneNumberFormatter(),
             Iso3166Code = "IE",
             Name = "Ireland",
+            NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
             NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8, 9 }),
             TrunkPrefix = "0",
         };
@@ -113,11 +113,11 @@ namespace PhoneNumbers
         /// </summary>
         public static CountryInfo IsleOfMan { get; } = new()
         {
-            AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 4 }),
             CallingCode = "+44",
             Formatter = GBPhoneNumberFormatter.Instance,
             Iso3166Code = "IM",
             Name = "Isle of Man",
+            NdcLengths = new ReadOnlyCollection<int>(new[] { 4 }),
             NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
             SharesCallingCode = true,
             TrunkPrefix = "0",
@@ -135,11 +135,11 @@ namespace PhoneNumbers
         /// <remarks>Covers Italy (includes the islands of Sardinia and Sicily), and Vatican City.</remarks>
         public static CountryInfo Italy { get; } = new()
         {
-            AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2 }),
             CallingCode = "+39",
             Formatter = ITPhoneNumberFormatter.Instance,
             Iso3166Code = "IT",
             Name = "Italy",
+            NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2 }),
             NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8, 9, 10, 11 }),
         };
 
@@ -154,11 +154,11 @@ namespace PhoneNumbers
         /// </summary>
         public static CountryInfo Jersey { get; } = new()
         {
-            AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 4 }),
             CallingCode = "+44",
             Formatter = GBPhoneNumberFormatter.Instance,
             Iso3166Code = "JE",
             Name = "Jersey",
+            NdcLengths = new ReadOnlyCollection<int>(new[] { 4 }),
             NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
             SharesCallingCode = true,
             TrunkPrefix = "0",
@@ -218,11 +218,11 @@ namespace PhoneNumbers
         /// </summary>
         public static CountryInfo Spain { get; } = new()
         {
-            AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
             CallingCode = "+34",
             Formatter = new ESPhoneNumberFormatter(),
             Iso3166Code = "ES",
             Name = "Spain",
+            NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
             NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
         };
 
@@ -252,11 +252,11 @@ namespace PhoneNumbers
         /// <remarks>Covers England, Scotland, Wales and Northern Ireland.</remarks>
         public static CountryInfo UnitedKingdom { get; } = new()
         {
-            AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2 }),
             CallingCode = "+44",
             Formatter = GBPhoneNumberFormatter.Instance,
             Iso3166Code = "GB",
             Name = "United Kingdom",
+            NdcLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2 }),
             NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 9, 10 }),
             TrunkPrefix = "0",
         };
@@ -270,7 +270,13 @@ namespace PhoneNumbers
         /// <summary>
         /// Gets a value indicating whether the country has area codes.
         /// </summary>
-        public bool HasAreaCodes => AreaCodeLengths.Count > 0;
+        [Obsolete("This property has been replaced, please use HasNationalDiallingCodes instead it will be removed in a future version.")]
+        public bool HasAreaCodes => HasNationalDiallingCodes;
+
+        /// <summary>
+        /// Gets a value indicating whether the country has national dialling codes.
+        /// </summary>
+        public bool HasNationalDiallingCodes => NdcLengths.Count > 0;
 
         /// <summary>
         /// Gets the international call prefix.
@@ -302,14 +308,14 @@ namespace PhoneNumbers
         public string? TrunkPrefix { get; init; }
 
         /// <summary>
-        /// Gets the possible lenghts of the area code.
-        /// </summary>
-        internal ReadOnlyCollection<int> AreaCodeLengths { get; init; } = new(Array.Empty<int>());
-
-        /// <summary>
         /// Gets the <see cref="PhoneNumberFormatter"/> for the country.
         /// </summary>
         internal PhoneNumberFormatter Formatter { get; init; } = PhoneNumberFormatter.Default;
+
+        /// <summary>
+        /// Gets the possible lenghts of the national dialling code.
+        /// </summary>
+        internal ReadOnlyCollection<int> NdcLengths { get; init; } = new(Array.Empty<int>());
 
         /// <summary>
         /// Gets the permitted lenghts of the national significant number.

@@ -25,7 +25,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("39999999", "39999999")]
         [InlineData("58000000", "58000000")]
         [InlineData("58999999", "58999999")]
-        public void Parse_Known_NonGeographicPhoneNumber(string value, string localNumber)
+        public void Parse_Known_NonGeographicPhoneNumber(string value, string subscriberNumber)
         {
             var parseResult = _parser.Parse(value);
             parseResult.ThrowIfFailure();
@@ -36,16 +36,16 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
 
             var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
-            Assert.Null(nonGeographicPhoneNumber.AreaCode);
             Assert.Equal(CountryInfo.HongKong, nonGeographicPhoneNumber.Country);
             Assert.False(nonGeographicPhoneNumber.IsFreephone);
-            Assert.Equal(localNumber, nonGeographicPhoneNumber.LocalNumber);
+            Assert.Null(nonGeographicPhoneNumber.NationalDiallingCode);
+            Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
         }
 
         [Theory]
         [InlineData("800000000", "800000000")]
         [InlineData("809999999", "809999999")]
-        public void Parse_Known_NonGeographicPhoneNumber_Freephone(string value, string localNumber)
+        public void Parse_Known_NonGeographicPhoneNumber_Freephone(string value, string subscriberNumber)
         {
             var parseResult = _parser.Parse(value);
             parseResult.ThrowIfFailure();
@@ -56,10 +56,10 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
 
             var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
-            Assert.Null(nonGeographicPhoneNumber.AreaCode);
             Assert.Equal(CountryInfo.HongKong, nonGeographicPhoneNumber.Country);
             Assert.True(nonGeographicPhoneNumber.IsFreephone);
-            Assert.Equal(localNumber, nonGeographicPhoneNumber.LocalNumber);
+            Assert.Null(nonGeographicPhoneNumber.NationalDiallingCode);
+            Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0499999999", "499999999", "Sud-Est")]
         [InlineData("0516000000", "516000000", "Sud-Ouest")]
         [InlineData("0589999999", "589999999", "Sud-Ouest")]
-        public void Parse_Known_GeographicPhoneNumber(string value, string localNumber, string geographicArea)
+        public void Parse_Known_GeographicPhoneNumber(string value, string subscriberNumber, string geographicArea)
         {
             var parseResult = _parser.Parse(value);
             parseResult.ThrowIfFailure();
@@ -36,10 +36,10 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<GeographicPhoneNumber>(phoneNumber);
 
             var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
-            Assert.Null(geographicPhoneNumber.AreaCode);
             Assert.Equal(CountryInfo.France, geographicPhoneNumber.Country);
             Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
-            Assert.Equal(localNumber, geographicPhoneNumber.LocalNumber);
+            Assert.Null(geographicPhoneNumber.NationalDiallingCode);
+            Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
         }
     }
 }

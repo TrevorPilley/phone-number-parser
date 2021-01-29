@@ -11,15 +11,15 @@ namespace PhoneNumbers
         /// Initialises a new instance of the <see cref="NonGeographicPhoneNumber"/> class.
         /// </summary>
         /// <param name="countryInfo">The <see cref="CountryInfo"/> for the phone number.</param>
-        /// <param name="areaCode">The area code of the phone number.</param>
-        /// <param name="localNumber">The local number of the phone number.</param>
+        /// <param name="nationalDiallingCode">The national dialling code of the phone number.</param>
+        /// <param name="subscriberNumber">The subscriber number of the phone number.</param>
         /// <param name="isFreephone">The number is a freephone (toll-free) number.</param>
         internal NonGeographicPhoneNumber(
             CountryInfo countryInfo,
-            string? areaCode,
-            string localNumber,
+            string? nationalDiallingCode,
+            string subscriberNumber,
             bool isFreephone)
-            : base(countryInfo, areaCode, localNumber) =>
+            : base(countryInfo, nationalDiallingCode, subscriberNumber) =>
             IsFreephone = isFreephone;
 
         /// <summary>
@@ -64,16 +64,16 @@ namespace PhoneNumbers
                 return true;
             }
 
-            return (AreaCode == null && other.AreaCode == null || AreaCode!.Equals(other.AreaCode, StringComparison.Ordinal)) &&
-                Country.Equals(other.Country) &&
+            return Country.Equals(other.Country) &&
                 IsFreephone.Equals(other.IsFreephone) &&
-                LocalNumber.Equals(other.LocalNumber, StringComparison.Ordinal) &&
-                PhoneNumberKind.Equals(other.PhoneNumberKind);
+                PhoneNumberKind.Equals(other.PhoneNumberKind) &&
+                (NationalDiallingCode == null && other.NationalDiallingCode == null || NationalDiallingCode!.Equals(other.NationalDiallingCode, StringComparison.Ordinal)) &&
+                SubscriberNumber.Equals(other.SubscriberNumber, StringComparison.Ordinal);
         }
 
         /// <inheritdoc/>
         [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
         public override int GetHashCode() =>
-            HashCode.Combine(AreaCode, Country, IsFreephone, LocalNumber, PhoneNumberKind);
+            HashCode.Combine(Country, IsFreephone, PhoneNumberKind, NationalDiallingCode, SubscriberNumber);
     }
 }

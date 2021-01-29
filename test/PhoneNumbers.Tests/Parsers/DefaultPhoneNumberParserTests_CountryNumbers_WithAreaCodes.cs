@@ -6,7 +6,7 @@ namespace PhoneNumbers.Tests.Parsers
     /// <summary>
     /// Contains unit tests for the <see cref="DefaultPhoneNumberParser"/> class with <see cref="CountryNumber"/>s using area codes.
     /// </summary>
-    public class DefaultPhoneNumberParserTests_CountryNumbers_WithAreaCodes
+    public class DefaultPhoneNumberParserTests_CountryNumbers_WithNationalDiallingCodes
     {
         private readonly CountryInfo _countryInfo = TestHelper.CreateCountryInfo(
             areaCodeLengths: new[] { 3, 2 },
@@ -14,66 +14,66 @@ namespace PhoneNumbers.Tests.Parsers
 
         private readonly PhoneNumberParser _parser;
 
-        public DefaultPhoneNumberParserTests_CountryNumbers_WithAreaCodes() =>
+        public DefaultPhoneNumberParserTests_CountryNumbers_WithNationalDiallingCodes() =>
             _parser = new DefaultPhoneNumberParser(
                 _countryInfo,
                 new[]
                 {
                     new CountryNumber
                     {
-                        AreaCodeRanges = new[] { NumberRange.Create("40") },
+                        NationalDiallingCodeRanges = new[] { NumberRange.Create("40") },
                         GeographicArea = "Springfield",
-                        LocalNumberRanges = new[] { NumberRange.Create("10000-20999"), NumberRange.Create("40000-90999") },
+                        SubscriberNumberRanges = new[] { NumberRange.Create("10000-20999"), NumberRange.Create("40000-90999") },
                         Kind = PhoneNumberKind.GeographicPhoneNumber,
                         Hint = Hint.None,
                     },
                     new CountryNumber
                     {
-                        AreaCodeRanges = new[] { NumberRange.Create("403") },
+                        NationalDiallingCodeRanges = new[] { NumberRange.Create("403") },
                         GeographicArea = "Springfield B",
-                        LocalNumberRanges = new[] { NumberRange.Create("1000-2099") },
+                        SubscriberNumberRanges = new[] { NumberRange.Create("1000-2099") },
                         Kind = PhoneNumberKind.GeographicPhoneNumber,
                         Hint = Hint.None,
                     },
                     new CountryNumber
                     {
-                        AreaCodeRanges = new[] { NumberRange.Create("70") },
-                        LocalNumberRanges = new[] { NumberRange.Create("10000-10999") },
+                        NationalDiallingCodeRanges = new[] { NumberRange.Create("70") },
+                        SubscriberNumberRanges = new[] { NumberRange.Create("10000-10999") },
                         Kind = PhoneNumberKind.MobilePhoneNumber,
                         Hint = Hint.None,
                     },
                     new CountryNumber
                     {
-                        AreaCodeRanges = new[] { NumberRange.Create("70") },
-                        LocalNumberRanges = new[] { NumberRange.Create("11000-11999") },
+                        NationalDiallingCodeRanges = new[] { NumberRange.Create("70") },
+                        SubscriberNumberRanges = new[] { NumberRange.Create("11000-11999") },
                         Kind = PhoneNumberKind.MobilePhoneNumber,
                         Hint = Hint.Data,
                     },
                     new CountryNumber
                     {
-                        AreaCodeRanges = new[] { NumberRange.Create("71") },
-                        LocalNumberRanges = new[] { NumberRange.Create("12000-12999") },
+                        NationalDiallingCodeRanges = new[] { NumberRange.Create("71") },
+                        SubscriberNumberRanges = new[] { NumberRange.Create("12000-12999") },
                         Kind = PhoneNumberKind.MobilePhoneNumber,
                         Hint = Hint.Pager,
                     },
                     new CountryNumber
                     {
-                        AreaCodeRanges = new[] { NumberRange.Create("72") },
-                        LocalNumberRanges = new[] { NumberRange.Create("13000-13999") },
+                        NationalDiallingCodeRanges = new[] { NumberRange.Create("72") },
+                        SubscriberNumberRanges = new[] { NumberRange.Create("13000-13999") },
                         Kind = PhoneNumberKind.MobilePhoneNumber,
                         Hint = Hint.Virtual,
                     },
                     new CountryNumber
                     {
-                        AreaCodeRanges = new[] { NumberRange.Create("50") },
-                        LocalNumberRanges = new[] { NumberRange.Create("20000-20999") },
+                        NationalDiallingCodeRanges = new[] { NumberRange.Create("50") },
+                        SubscriberNumberRanges = new[] { NumberRange.Create("20000-20999") },
                         Kind = PhoneNumberKind.NonGeographicPhoneNumber,
                         Hint = Hint.None,
                     },
                     new CountryNumber
                     {
-                        AreaCodeRanges = new[] { NumberRange.Create("60") },
-                        LocalNumberRanges = new[] { NumberRange.Create("28000-28999") },
+                        NationalDiallingCodeRanges = new[] { NumberRange.Create("60") },
+                        SubscriberNumberRanges = new[] { NumberRange.Create("28000-28999") },
                         Kind = PhoneNumberKind.NonGeographicPhoneNumber,
                         Hint = Hint.Freephone,
                     },
@@ -87,25 +87,25 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<GeographicPhoneNumber>(phoneNumber);
 
             var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
-            Assert.Equal("40", geographicPhoneNumber.AreaCode);
+            Assert.Equal("40", geographicPhoneNumber.NationalDiallingCode);
             Assert.Equal(_countryInfo, geographicPhoneNumber.Country);
             Assert.Equal("Springfield", geographicPhoneNumber.GeographicArea);
-            Assert.Equal("10000", geographicPhoneNumber.LocalNumber);
+            Assert.Equal("10000", geographicPhoneNumber.SubscriberNumber);
             Assert.Equal(PhoneNumberKind.GeographicPhoneNumber, geographicPhoneNumber.PhoneNumberKind);
         }
 
         [Fact]
-        public void Parse_GeographicPhoneNumber_In_Sub_AreaCode()
+        public void Parse_GeographicPhoneNumber_In_Sub_NationalDiallingCode()
         {
             var phoneNumber = _parser.Parse("4031000").PhoneNumber;
             Assert.NotNull(phoneNumber);
             Assert.IsType<GeographicPhoneNumber>(phoneNumber);
 
             var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
-            Assert.Equal("403", geographicPhoneNumber.AreaCode);
+            Assert.Equal("403", geographicPhoneNumber.NationalDiallingCode);
             Assert.Equal(_countryInfo, geographicPhoneNumber.Country);
             Assert.Equal("Springfield B", geographicPhoneNumber.GeographicArea);
-            Assert.Equal("1000", geographicPhoneNumber.LocalNumber);
+            Assert.Equal("1000", geographicPhoneNumber.SubscriberNumber);
             Assert.Equal(PhoneNumberKind.GeographicPhoneNumber, geographicPhoneNumber.PhoneNumberKind);
         }
 
@@ -121,12 +121,12 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<MobilePhoneNumber>(phoneNumber);
 
             var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
-            Assert.Equal("70", mobilePhoneNumber.AreaCode);
+            Assert.Equal("70", mobilePhoneNumber.NationalDiallingCode);
             Assert.Equal(_countryInfo, mobilePhoneNumber.Country);
             Assert.False(mobilePhoneNumber.IsDataOnly);
             Assert.False(mobilePhoneNumber.IsPager);
             Assert.False(mobilePhoneNumber.IsVirtual);
-            Assert.Equal("10000", mobilePhoneNumber.LocalNumber);
+            Assert.Equal("10000", mobilePhoneNumber.SubscriberNumber);
             Assert.Equal(PhoneNumberKind.MobilePhoneNumber, mobilePhoneNumber.PhoneNumberKind);
         }
 
@@ -138,12 +138,12 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<MobilePhoneNumber>(phoneNumber);
 
             var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
-            Assert.Equal("70", mobilePhoneNumber.AreaCode);
+            Assert.Equal("70", mobilePhoneNumber.NationalDiallingCode);
             Assert.Equal(_countryInfo, mobilePhoneNumber.Country);
             Assert.True(mobilePhoneNumber.IsDataOnly);
             Assert.False(mobilePhoneNumber.IsPager);
             Assert.False(mobilePhoneNumber.IsVirtual);
-            Assert.Equal("11000", mobilePhoneNumber.LocalNumber);
+            Assert.Equal("11000", mobilePhoneNumber.SubscriberNumber);
             Assert.Equal(PhoneNumberKind.MobilePhoneNumber, mobilePhoneNumber.PhoneNumberKind);
         }
 
@@ -155,12 +155,12 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<MobilePhoneNumber>(phoneNumber);
 
             var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
-            Assert.Equal("71", mobilePhoneNumber.AreaCode);
+            Assert.Equal("71", mobilePhoneNumber.NationalDiallingCode);
             Assert.Equal(_countryInfo, mobilePhoneNumber.Country);
             Assert.False(mobilePhoneNumber.IsDataOnly);
             Assert.True(mobilePhoneNumber.IsPager);
             Assert.False(mobilePhoneNumber.IsVirtual);
-            Assert.Equal("12000", mobilePhoneNumber.LocalNumber);
+            Assert.Equal("12000", mobilePhoneNumber.SubscriberNumber);
             Assert.Equal(PhoneNumberKind.MobilePhoneNumber, mobilePhoneNumber.PhoneNumberKind);
         }
 
@@ -172,12 +172,12 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<MobilePhoneNumber>(phoneNumber);
 
             var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
-            Assert.Equal("72", mobilePhoneNumber.AreaCode);
+            Assert.Equal("72", mobilePhoneNumber.NationalDiallingCode);
             Assert.Equal(_countryInfo, mobilePhoneNumber.Country);
             Assert.False(mobilePhoneNumber.IsDataOnly);
             Assert.False(mobilePhoneNumber.IsPager);
             Assert.True(mobilePhoneNumber.IsVirtual);
-            Assert.Equal("13000", mobilePhoneNumber.LocalNumber);
+            Assert.Equal("13000", mobilePhoneNumber.SubscriberNumber);
             Assert.Equal(PhoneNumberKind.MobilePhoneNumber, mobilePhoneNumber.PhoneNumberKind);
         }
 
@@ -189,10 +189,10 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
 
             var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
-            Assert.Equal("50", nonGeographicPhoneNumber.AreaCode);
+            Assert.Equal("50", nonGeographicPhoneNumber.NationalDiallingCode);
             Assert.Equal(_countryInfo, nonGeographicPhoneNumber.Country);
             Assert.False(nonGeographicPhoneNumber.IsFreephone);
-            Assert.Equal("20000", nonGeographicPhoneNumber.LocalNumber);
+            Assert.Equal("20000", nonGeographicPhoneNumber.SubscriberNumber);
             Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, nonGeographicPhoneNumber.PhoneNumberKind);
         }
 
@@ -204,10 +204,10 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
 
             var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
-            Assert.Equal("60", nonGeographicPhoneNumber.AreaCode);
+            Assert.Equal("60", nonGeographicPhoneNumber.NationalDiallingCode);
             Assert.Equal(_countryInfo, nonGeographicPhoneNumber.Country);
             Assert.True(nonGeographicPhoneNumber.IsFreephone);
-            Assert.Equal("28000", nonGeographicPhoneNumber.LocalNumber);
+            Assert.Equal("28000", nonGeographicPhoneNumber.SubscriberNumber);
             Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, nonGeographicPhoneNumber.PhoneNumberKind);
         }
     }
