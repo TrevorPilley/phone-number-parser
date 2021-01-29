@@ -23,7 +23,7 @@ namespace PhoneNumbers.Formatters
 
             static void Append(StringBuilder sb, ref int charsAdded, string? input)
             {
-                for (int i = 0; i < input?.Length; i++)
+                for (var i = 0; i < input?.Length; i++)
                 {
                     sb.Append(input[i]);
 
