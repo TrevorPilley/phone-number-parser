@@ -18,7 +18,7 @@ namespace PhoneNumbers.Parsers
 
         private GBPhoneNumberParser(IReadOnlyList<CountryNumber> countryNumbers)
             : base(CountryInfo.UnitedKingdom, countryNumbers) =>
-            _areaCodesWith5Digits = countryNumbers.Where(x => x.AreaCodeRanges!.Any(x => x.From.Length == 5)).ToList();
+            _areaCodesWith5Digits = countryNumbers.Where(x => x.NationalDiallingCodeRanges!.Any(x => x.From.Length == 5)).ToList();
 
         /// <summary>
         /// Creates an instance of the <see cref="GBPhoneNumberParser"/> class.
@@ -36,60 +36,60 @@ namespace PhoneNumbers.Parsers
 
         /// <inheritdoc/>
         /// <remarks>By the time this method is called, nsnValue will have been validated against the <see cref="CountryInfo"/>.NsnLengths and contain digits only.</remarks>
-        protected override (string? AreaCode, string? LocalNumber, CountryNumber? CountryNumber) ParseAreaAndNumber(string nsnValue)
+        protected override (string? NationalDiallingCode, string? SubscriberNumber, CountryNumber? CountryNumber) ParseAreaAndNumber(string nsnValue)
         {
-            var areaCodeLength = 0;
+            var ndcLength = 0;
             PhoneNumberKind phoneNumberKind = default;
 
             if (nsnValue[0] == '1')
             {
                 // Most 1X UK area codes are 4 digits geographically assigned.
-                areaCodeLength = 4;
+                ndcLength = 4;
                 phoneNumberKind = PhoneNumberKind.GeographicPhoneNumber;
 
                 if (nsnValue[1] == '1' || nsnValue[2] == '1')
                 {
                     // Except 11X and 1X1 area codes, which are are 3 digits.
-                    areaCodeLength = 3;
+                    ndcLength = 3;
                 }
                 else if (_areaCodesWith5Digits
-                            .Where(x => x.AreaCodeRanges!.Any(x => nsnValue.StartsWith(x.From, StringComparison.Ordinal)))
-                            .Any(x => x.LocalNumberRanges.Any(x => x.Contains(nsnValue.Substring(5)))))
+                            .Where(x => x.NationalDiallingCodeRanges!.Any(x => nsnValue.StartsWith(x.From, StringComparison.Ordinal)))
+                            .Any(x => x.SubscriberNumberRanges.Any(x => x.Contains(nsnValue.Substring(5)))))
                 {
                     // There are some 5 digit area codes which use a subset of numbers from the "parent" 4 digit area code:
                     // e.g. 1339 (Aboyne / Ballater) has 200000-719999 and 13397 (Ballater) has 20000-99899
                     // Since geographic area codes are for a single value only, so we can just check against From.
-                    areaCodeLength = 5;
+                    ndcLength = 5;
                 }
             }
             else if (nsnValue[0] == '2')
             {
                 // 2X area codes, are 2 digits and geographically assigned.
-                areaCodeLength = 2;
+                ndcLength = 2;
                 phoneNumberKind = PhoneNumberKind.GeographicPhoneNumber;
             }
             else if (nsnValue[0] == '3' || nsnValue[0] == '8')
             {
                 // 3XX and 8XX area codes are 3 digits and non-geographic numbers.
-                areaCodeLength = 3;
+                ndcLength = 3;
                 phoneNumberKind = PhoneNumberKind.NonGeographicPhoneNumber;
             }
             else if (nsnValue[0] == '7')
             {
                 // All UK mobile area codes are 4 digits.
-                areaCodeLength = 4;
+                ndcLength = 4;
                 phoneNumberKind = PhoneNumberKind.MobilePhoneNumber;
             }
 
-            var areaCode = nsnValue.Substring(0, areaCodeLength);
-            var localNumber = nsnValue.Substring(areaCode.Length);
+            var ndc = nsnValue.Substring(0, ndcLength);
+            var sn = nsnValue.Substring(ndc.Length);
 
             var countryNumber = CountryNumbers
                 .FirstOrDefault(x => x.Kind == phoneNumberKind &&
-                    x.AreaCodeRanges!.Any(x => x.Contains(areaCode)) &&
-                    x.LocalNumberRanges.Any(x => x.Contains(localNumber)));
+                    x.NationalDiallingCodeRanges!.Any(x => x.Contains(ndc)) &&
+                    x.SubscriberNumberRanges.Any(x => x.Contains(sn)));
 
-            return (areaCode, localNumber, countryNumber);
+            return (ndc, sn, countryNumber);
         }
     }
 }

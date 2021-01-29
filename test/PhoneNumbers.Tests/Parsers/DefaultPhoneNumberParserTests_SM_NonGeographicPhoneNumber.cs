@@ -41,7 +41,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("5999999999", "5999999999")]
         [InlineData("7000000000", "7000000000")]
         [InlineData("9999999999", "9999999999")]
-        public void Parse_Known_NonGeographicPhoneNumber(string value, string localNumber)
+        public void Parse_Known_NonGeographicPhoneNumber(string value, string subscriberNumber)
         {
             var parseResult = _parser.Parse(value);
             parseResult.ThrowIfFailure();
@@ -52,10 +52,10 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
 
             var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
-            Assert.Null(nonGeographicPhoneNumber.AreaCode);
             Assert.Equal(CountryInfo.SanMarino, nonGeographicPhoneNumber.Country);
             Assert.False(nonGeographicPhoneNumber.IsFreephone);
-            Assert.Equal(localNumber, nonGeographicPhoneNumber.LocalNumber);
+            Assert.Null(nonGeographicPhoneNumber.NationalDiallingCode);
+            Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
         }
     }
 }

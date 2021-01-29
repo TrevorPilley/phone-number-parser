@@ -7,6 +7,6 @@ namespace PhoneNumbers.Formatters
     {
         /// <inheritdoc/>
         protected override string FormatDisplay(PhoneNumber phoneNumber) =>
-            $"{phoneNumber.AreaCode} {phoneNumber.LocalNumber.Substring(0, 3)} {phoneNumber.LocalNumber.Substring(3)}";
+            $"{phoneNumber.NationalDiallingCode} {phoneNumber.SubscriberNumber.Substring(0, 3)} {phoneNumber.SubscriberNumber.Substring(3)}";
     }
 }

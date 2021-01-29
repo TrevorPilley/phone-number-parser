@@ -15,10 +15,10 @@ namespace PhoneNumbers.Tests
             int[] nsnLengths = default) =>
             new()
             {
-                AreaCodeLengths = new ReadOnlyCollection<int>(areaCodeLengths ?? Array.Empty<int>()),
                 CallingCode = "+422", // +422 isn't a used calling code.
                 Iso3166Code = "ZZ", // ZZ isn't a used ISO 3166 code.
                 Name = "Zulu",
+                NdcLengths = new ReadOnlyCollection<int>(areaCodeLengths ?? Array.Empty<int>()),
                 NsnLengths = new ReadOnlyCollection<int>(nsnLengths ?? Array.Empty<int>()),
                 TrunkPrefix = trunkPrefix,
             };

@@ -46,23 +46,23 @@ namespace PhoneNumbers.Parsers
         /// Parses the area code, local number and respective <see cref="CountryNumber"/>.
         /// </summary>
         /// <remarks>By the time this method is called, nsnValue will have been validated against the <see cref="CountryInfo"/>.NsnLengths and contain digits only.</remarks>
-        protected virtual (string? AreaCode, string? LocalNumber, CountryNumber? CountryNumber) ParseAreaAndNumber(string nsnValue)
+        protected virtual (string? NationalDiallingCode, string? SubscriberNumber, CountryNumber? CountryNumber) ParseAreaAndNumber(string nsnValue)
         {
-            string? areaCode = null;
-            string? localNumber = null;
+            string? ndc = null;
+            string? sn = null;
             CountryNumber? countryNumber = null;
 
-            if (Country.HasAreaCodes)
+            if (Country.HasNationalDiallingCodes)
             {
-                foreach (var len in Country.AreaCodeLengths)
+                foreach (var len in Country.NdcLengths)
                 {
-                    areaCode = nsnValue.Substring(0, len);
-                    localNumber = nsnValue.Substring(areaCode.Length);
+                    ndc = nsnValue.Substring(0, len);
+                    sn = nsnValue.Substring(ndc.Length);
 
                     countryNumber = CountryNumbers
                         .FirstOrDefault(x =>
-                            x.AreaCodeRanges!.Any(x => x.Contains(areaCode)) &&
-                            x.LocalNumberRanges.Any(x => x.Contains(localNumber)));
+                            x.NationalDiallingCodeRanges!.Any(x => x.Contains(ndc)) &&
+                            x.SubscriberNumberRanges.Any(x => x.Contains(sn)));
 
                     if (countryNumber != null)
                     {
@@ -72,15 +72,15 @@ namespace PhoneNumbers.Parsers
             }
             else
             {
-                localNumber = nsnValue;
+                sn = nsnValue;
 
                 countryNumber = CountryNumbers
-                    .FirstOrDefault(x => x.LocalNumberRanges.Any(x => x.Contains(nsnValue)));
+                    .FirstOrDefault(x => x.SubscriberNumberRanges.Any(x => x.Contains(nsnValue)));
             }
 
             if (countryNumber != null)
             {
-                return (areaCode, localNumber, countryNumber);
+                return (ndc, sn, countryNumber);
             }
 
             return (null, null, null);
@@ -98,16 +98,16 @@ namespace PhoneNumbers.Parsers
                     ParseResult.Success(
                         new GeographicPhoneNumber(
                             Country,
-                            areaAndNumber.AreaCode!,
-                            areaAndNumber.LocalNumber!,
+                            areaAndNumber.NationalDiallingCode!,
+                            areaAndNumber.SubscriberNumber!,
                             areaAndNumber.CountryNumber.GeographicArea!)),
 
                 PhoneNumberKind.MobilePhoneNumber =>
                     ParseResult.Success(
                         new MobilePhoneNumber(
                             Country,
-                            areaAndNumber.AreaCode,
-                            areaAndNumber.LocalNumber!,
+                            areaAndNumber.NationalDiallingCode,
+                            areaAndNumber.SubscriberNumber!,
                             isDataOnly: areaAndNumber.CountryNumber.Hint == Hint.Data,
                             isPager: areaAndNumber.CountryNumber.Hint == Hint.Pager,
                             isVirtual: areaAndNumber.CountryNumber.Hint == Hint.Virtual)),
@@ -116,8 +116,8 @@ namespace PhoneNumbers.Parsers
                     ParseResult.Success(
                         new NonGeographicPhoneNumber(
                             Country,
-                            areaAndNumber.AreaCode,
-                            areaAndNumber.LocalNumber!,
+                            areaAndNumber.NationalDiallingCode,
+                            areaAndNumber.SubscriberNumber!,
                             isFreephone: areaAndNumber.CountryNumber.Hint == Hint.Freephone)),
 
                 _ => base.ParseNationalSignificantNumber(nsnValue),

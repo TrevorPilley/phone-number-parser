@@ -37,13 +37,13 @@ The resulting `PhoneNumber` has the following properties:
 
 ```csharp
 // PhoneNumber properties:
-phoneNumber.AreaCode;                           // 114
 phoneNumber.Country.CallingCode;                // +44
 phoneNumber.Country.InternationalCallPrefix;    // 00
 phoneNumber.Country.Iso3166Code;                // GB
 phoneNumber.Country.Name;                       // United Kingdom
 phoneNumber.Country.TrunkPrefix;                // 0
-phoneNumber.LocalNumber                         // 2726444
+phoneNumber.NationalDiallingCode;               // 114
+phoneNumber.SubscriberNumber                    // 2726444
 phoneNumber.PhoneNumberKind;                    // PhoneNumberKind.GeographicPhoneNumber
 
 // PhoneNumberKind - can be used to determine the type of PhoneNumber to cast to

@@ -11,11 +11,11 @@ namespace PhoneNumbers.Tests
             var countryInfo = CountryInfo.UnitedKingdom;
             var phoneNumber = new NonGeographicPhoneNumber(countryInfo, "7654", "112233", true);
 
-            Assert.Equal("7654", phoneNumber.AreaCode);
             Assert.Equal(countryInfo, phoneNumber.Country);
             Assert.True(phoneNumber.IsFreephone);
-            Assert.Equal("112233", phoneNumber.LocalNumber);
             Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, phoneNumber.PhoneNumberKind);
+            Assert.Equal("7654", phoneNumber.NationalDiallingCode);
+            Assert.Equal("112233", phoneNumber.SubscriberNumber);
         }
 
         [Fact]
@@ -23,15 +23,15 @@ namespace PhoneNumbers.Tests
             Assert.Throws<ArgumentNullException>(() => new NonGeographicPhoneNumber(null, "12345", "667788", true));
 
         [Fact]
-        public void Constructor_Throws_If_LocalNumber_Empty() =>
+        public void Constructor_Throws_If_SubscriberNumber_Empty() =>
             Assert.Throws<ArgumentException>(() => new NonGeographicPhoneNumber(CountryInfo.UnitedKingdom, "12345", "", true));
 
         [Fact]
-        public void Constructor_Throws_If_LocalNumber_Null() =>
+        public void Constructor_Throws_If_SubscriberNumber_Null() =>
             Assert.Throws<ArgumentException>(() => new NonGeographicPhoneNumber(CountryInfo.UnitedKingdom, "12345", null, true));
 
         [Fact]
-        public void Constructor_Throws_If_LocalNumber_Whitespace() =>
+        public void Constructor_Throws_If_SubscriberNumber_Whitespace() =>
             Assert.Throws<ArgumentException>(() => new NonGeographicPhoneNumber(CountryInfo.UnitedKingdom, "12345", " ", true));
 
         [Fact]
@@ -63,7 +63,7 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
-        public void Equality_Same_Values_With_AreaCode()
+        public void Equality_Same_Values_With_NationalDiallingCode()
         {
             var phoneNumber1 = new NonGeographicPhoneNumber(CountryInfo.UnitedKingdom, "7654", "112233", true);
             var phoneNumber2 = new NonGeographicPhoneNumber(CountryInfo.UnitedKingdom, "7654", "112233", true);
@@ -76,7 +76,7 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
-        public void Equality_Same_Values_Without_AreaCode()
+        public void Equality_Same_Values_Without_NationalDiallingCode()
         {
             var phoneNumber1 = new NonGeographicPhoneNumber(CountryInfo.UnitedKingdom, null, "112233", true);
             var phoneNumber2 = new NonGeographicPhoneNumber(CountryInfo.UnitedKingdom, null, "112233", true);

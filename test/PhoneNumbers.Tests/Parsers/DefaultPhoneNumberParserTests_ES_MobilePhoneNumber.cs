@@ -19,7 +19,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("710999999", "710", "999999")]
         [InlineData("799000000", "799", "000000")]
         [InlineData("799999999", "799", "999999")]
-        public void Parse_Known_MobilePhoneNumber(string value, string areaCode, string localNumber)
+        public void Parse_Known_MobilePhoneNumber(string value, string nationalDiallingCode, string subscriberNumber)
         {
             var parseResult = _parser.Parse(value);
             parseResult.ThrowIfFailure();
@@ -30,18 +30,18 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<MobilePhoneNumber>(phoneNumber);
 
             var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
-            Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
             Assert.Equal(CountryInfo.Spain, mobilePhoneNumber.Country);
             Assert.False(mobilePhoneNumber.IsDataOnly);
             Assert.False(mobilePhoneNumber.IsPager);
             Assert.False(mobilePhoneNumber.IsVirtual);
-            Assert.Equal(localNumber, mobilePhoneNumber.LocalNumber);
+            Assert.Equal(nationalDiallingCode, mobilePhoneNumber.NationalDiallingCode);
+            Assert.Equal(subscriberNumber, mobilePhoneNumber.SubscriberNumber);
         }
 
         [Theory]
         [InlineData("700000000", "700", "000000")]
         [InlineData("700999999", "700", "999999")]
-        public void Parse_Known_MobilePhoneNumber_Virtual(string value, string areaCode, string localNumber)
+        public void Parse_Known_MobilePhoneNumber_Virtual(string value, string nationalDiallingCode, string subscriberNumber)
         {
             var parseResult = _parser.Parse(value);
             parseResult.ThrowIfFailure();
@@ -52,12 +52,12 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<MobilePhoneNumber>(phoneNumber);
 
             var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
-            Assert.Equal(areaCode, mobilePhoneNumber.AreaCode);
             Assert.Equal(CountryInfo.Spain, mobilePhoneNumber.Country);
             Assert.False(mobilePhoneNumber.IsDataOnly);
             Assert.False(mobilePhoneNumber.IsPager);
             Assert.True(mobilePhoneNumber.IsVirtual);
-            Assert.Equal(localNumber, mobilePhoneNumber.LocalNumber);
+            Assert.Equal(nationalDiallingCode, mobilePhoneNumber.NationalDiallingCode);
+            Assert.Equal(subscriberNumber, mobilePhoneNumber.SubscriberNumber);
         }
     }
 }

@@ -13,6 +13,6 @@ namespace PhoneNumbers.Formatters
 
         /// <inheritdoc/>
         protected override string FormatDisplay(PhoneNumber phoneNumber) =>
-            $"{phoneNumber.LocalNumber.Substring(0, 4)} {phoneNumber.LocalNumber.Substring(4)}";
+            $"{phoneNumber.SubscriberNumber.Substring(0, 4)} {phoneNumber.SubscriberNumber.Substring(4)}";
     }
 }
