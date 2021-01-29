@@ -11,22 +11,24 @@ namespace PhoneNumbers
         /// Initialises a new instance of the <see cref="NonGeographicPhoneNumber"/> class.
         /// </summary>
         /// <param name="countryInfo">The <see cref="CountryInfo"/> for the phone number.</param>
+        /// <param name="phoneNumberHint">The <see cref="PhoneNumberHint"/> for the phone number.</param>
         /// <param name="nationalDiallingCode">The national dialling code of the phone number.</param>
         /// <param name="subscriberNumber">The subscriber number of the phone number.</param>
-        /// <param name="isFreephone">The number is a freephone (toll-free) number.</param>
         internal NonGeographicPhoneNumber(
             CountryInfo countryInfo,
+            PhoneNumberHint phoneNumberHint,
             string? nationalDiallingCode,
-            string subscriberNumber,
-            bool isFreephone)
-            : base(countryInfo, nationalDiallingCode, subscriberNumber) =>
-            IsFreephone = isFreephone;
+            string subscriberNumber)
+            : base(countryInfo, phoneNumberHint, nationalDiallingCode, subscriberNumber)
+        {
+        }
 
         /// <summary>
         /// The number is a freephone (toll-free) number.
         /// </summary>
         /// <remarks>This is an indication only based upon the data available for each country.</remarks>
-        public bool IsFreephone { get; }
+        public bool IsFreephone =>
+            Hint == PhoneNumberHint.Freephone;
 
         /// <inheritdoc/>
         public override PhoneNumberKind PhoneNumberKind =>
@@ -64,8 +66,8 @@ namespace PhoneNumbers
                 return true;
             }
 
-            return Country.Equals(other.Country) &&
-                IsFreephone.Equals(other.IsFreephone) &&
+            return Hint.Equals(other.Hint) &&
+                Country.Equals(other.Country) &&
                 PhoneNumberKind.Equals(other.PhoneNumberKind) &&
                 (NationalDiallingCode == null && other.NationalDiallingCode == null || NationalDiallingCode!.Equals(other.NationalDiallingCode, StringComparison.Ordinal)) &&
                 SubscriberNumber.Equals(other.SubscriberNumber, StringComparison.Ordinal);
@@ -74,6 +76,6 @@ namespace PhoneNumbers
         /// <inheritdoc/>
         [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
         public override int GetHashCode() =>
-            HashCode.Combine(Country, IsFreephone, PhoneNumberKind, NationalDiallingCode, SubscriberNumber);
+            HashCode.Combine(Hint, Country, PhoneNumberKind, NationalDiallingCode, SubscriberNumber);
     }
 }

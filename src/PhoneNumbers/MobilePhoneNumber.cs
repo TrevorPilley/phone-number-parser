@@ -11,38 +11,38 @@ namespace PhoneNumbers
         /// Initialises a new instance of the <see cref="MobilePhoneNumber"/> class.
         /// </summary>
         /// <param name="countryInfo">The <see cref="CountryInfo"/> for the phone number.</param>
+        /// <param name="phoneNumberHint">The <see cref="PhoneNumberHint"/> for the phone number.</param>
         /// <param name="nationalDiallingCode">The national dialling code of the phone number.</param>
         /// <param name="subscriberNumber">The subscriber number of the phone number.</param>
-        /// <param name="isDataOnly">The mobile number is likely for a data only plan (e.g. a 3G/LTE laptop or tablet).</param>
-        /// <param name="isPager">The mobile number is likely for a pager.</param>
-        /// <param name="isVirtual">The mobile number is likely a virtual number.</param>
         internal MobilePhoneNumber(
             CountryInfo countryInfo,
+            PhoneNumberHint phoneNumberHint,
             string? nationalDiallingCode,
-            string subscriberNumber,
-            bool isDataOnly,
-            bool isPager,
-            bool isVirtual)
-            : base(countryInfo, nationalDiallingCode, subscriberNumber) =>
-            (IsDataOnly, IsPager, IsVirtual) = (isDataOnly, isPager, isVirtual);
+            string subscriberNumber)
+            : base(countryInfo, phoneNumberHint, nationalDiallingCode, subscriberNumber)
+        {
+        }
 
         /// <summary>
         /// The mobile number is likely for a data only plan (e.g. a 3G/LTE laptop or tablet).
         /// </summary>
         /// <remarks>This is an indication only based upon the data available for each country.</remarks>
-        public bool IsDataOnly { get; }
+        public bool IsDataOnly =>
+            Hint == PhoneNumberHint.Data;
 
         /// <summary>
         /// The mobile number is likely for a pager.
         /// </summary>
         /// <remarks>This is an indication only based upon the data available for each country.</remarks>
-        public bool IsPager { get; }
+        public bool IsPager =>
+            Hint == PhoneNumberHint.Pager;
 
         /// <summary>
         /// The mobile number is likely a virtual number.
         /// </summary>
         /// <remarks>This is an indication only based upon the data available for each country (see https://en.wikipedia.org/wiki/Virtual_number for further details).</remarks>
-        public bool IsVirtual { get; }
+        public bool IsVirtual =>
+            Hint == PhoneNumberHint.Virtual;
 
         /// <inheritdoc/>
         public override PhoneNumberKind PhoneNumberKind =>
@@ -80,10 +80,8 @@ namespace PhoneNumbers
                 return true;
             }
 
-            return Country.Equals(other.Country) &&
-                IsDataOnly.Equals(other.IsDataOnly) &&
-                IsPager.Equals(other.IsPager) &&
-                IsVirtual.Equals(other.IsVirtual) &&
+            return Hint.Equals(other.Hint) &&
+                Country.Equals(other.Country) &&
                 PhoneNumberKind.Equals(other.PhoneNumberKind) &&
                 (NationalDiallingCode == null && other.NationalDiallingCode == null || NationalDiallingCode!.Equals(other.NationalDiallingCode, StringComparison.Ordinal)) &&
                 SubscriberNumber.Equals(other.SubscriberNumber, StringComparison.Ordinal);
@@ -92,6 +90,6 @@ namespace PhoneNumbers
         /// <inheritdoc/>
         [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
         public override int GetHashCode() =>
-            HashCode.Combine(Country, IsDataOnly, IsPager, IsVirtual, PhoneNumberKind, NationalDiallingCode, SubscriberNumber);
+            HashCode.Combine(Hint, Country, PhoneNumberKind, NationalDiallingCode, SubscriberNumber);
     }
 }

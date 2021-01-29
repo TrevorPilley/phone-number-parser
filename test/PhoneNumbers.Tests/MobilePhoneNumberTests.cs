@@ -6,14 +6,44 @@ namespace PhoneNumbers.Tests
     public class MobilePhoneNumberTests
     {
         [Fact]
-        public void Constructor_Sets_Properties()
+        public void Constructor_Sets_Properties_Data()
         {
             var countryInfo = CountryInfo.UnitedKingdom;
-            var phoneNumber = new MobilePhoneNumber(countryInfo, "7654", "112233", true, true, true);
+            var phoneNumber = new MobilePhoneNumber(countryInfo, PhoneNumberHint.Data, "7654", "112233");
 
             Assert.Equal(countryInfo, phoneNumber.Country);
             Assert.True(phoneNumber.IsDataOnly);
+            Assert.False(phoneNumber.IsPager);
+            Assert.False(phoneNumber.IsVirtual);
+            Assert.Equal(PhoneNumberKind.MobilePhoneNumber, phoneNumber.PhoneNumberKind);
+            Assert.Equal("7654", phoneNumber.NationalDiallingCode);
+            Assert.Equal("112233", phoneNumber.SubscriberNumber);
+        }
+
+        [Fact]
+        public void Constructor_Sets_Properties_Pager()
+        {
+            var countryInfo = CountryInfo.UnitedKingdom;
+            var phoneNumber = new MobilePhoneNumber(countryInfo, PhoneNumberHint.Pager, "7654", "112233");
+
+            Assert.Equal(countryInfo, phoneNumber.Country);
+            Assert.False(phoneNumber.IsDataOnly);
             Assert.True(phoneNumber.IsPager);
+            Assert.False(phoneNumber.IsVirtual);
+            Assert.Equal(PhoneNumberKind.MobilePhoneNumber, phoneNumber.PhoneNumberKind);
+            Assert.Equal("7654", phoneNumber.NationalDiallingCode);
+            Assert.Equal("112233", phoneNumber.SubscriberNumber);
+        }
+
+        [Fact]
+        public void Constructor_Sets_Properties_Virtual()
+        {
+            var countryInfo = CountryInfo.UnitedKingdom;
+            var phoneNumber = new MobilePhoneNumber(countryInfo, PhoneNumberHint.Virtual, "7654", "112233");
+
+            Assert.Equal(countryInfo, phoneNumber.Country);
+            Assert.False(phoneNumber.IsDataOnly);
+            Assert.False(phoneNumber.IsPager);
             Assert.True(phoneNumber.IsVirtual);
             Assert.Equal(PhoneNumberKind.MobilePhoneNumber, phoneNumber.PhoneNumberKind);
             Assert.Equal("7654", phoneNumber.NationalDiallingCode);
@@ -22,19 +52,19 @@ namespace PhoneNumbers.Tests
 
         [Fact]
         public void Constructor_Throws_If_CountryInfo_Null() =>
-            Assert.Throws<ArgumentNullException>(() => new MobilePhoneNumber(null, "12345", "667788", true, true, true));
+            Assert.Throws<ArgumentNullException>(() => new MobilePhoneNumber(null, PhoneNumberHint.None, "12345", "667788"));
 
         [Fact]
         public void Constructor_Throws_If_SubscriberNumber_Empty() =>
-            Assert.Throws<ArgumentException>(() => new MobilePhoneNumber(CountryInfo.UnitedKingdom, "12345", "", true, true, true));
+            Assert.Throws<ArgumentException>(() => new MobilePhoneNumber(CountryInfo.UnitedKingdom, PhoneNumberHint.None, "12345", ""));
 
         [Fact]
         public void Constructor_Throws_If_SubscriberNumber_Null() =>
-            Assert.Throws<ArgumentException>(() => new MobilePhoneNumber(CountryInfo.UnitedKingdom, "12345", null, true, true, true));
+            Assert.Throws<ArgumentException>(() => new MobilePhoneNumber(CountryInfo.UnitedKingdom, PhoneNumberHint.None, "12345", null));
 
         [Fact]
         public void Constructor_Throws_If_SubscriberNumber_Whitespace() =>
-            Assert.Throws<ArgumentException>(() => new MobilePhoneNumber(CountryInfo.UnitedKingdom, "12345", " ", true, true, true));
+            Assert.Throws<ArgumentException>(() => new MobilePhoneNumber(CountryInfo.UnitedKingdom, PhoneNumberHint.None, "12345", " "));
 
         [Fact]
         public void Equality_Both_Null()
@@ -52,7 +82,7 @@ namespace PhoneNumbers.Tests
         [Fact]
         public void Equality_Same_Instance()
         {
-            var phoneNumber1 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, "7654", "112233", true, true, true);
+            var phoneNumber1 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, PhoneNumberHint.None, "7654", "112233");
             var phoneNumber2 = phoneNumber1;
 
             Assert.Equal(phoneNumber1, phoneNumber2);
@@ -67,8 +97,8 @@ namespace PhoneNumbers.Tests
         [Fact]
         public void Equality_Same_Values_With_NationalDiallingCode()
         {
-            var phoneNumber1 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, "7654", "112233", true, true, true);
-            var phoneNumber2 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, "7654", "112233", true, true, true);
+            var phoneNumber1 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, PhoneNumberHint.None, "7654", "112233");
+            var phoneNumber2 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, PhoneNumberHint.None, "7654", "112233");
 
             Assert.Equal(phoneNumber1, phoneNumber2);
             Assert.True(phoneNumber1.Equals(phoneNumber2));
@@ -80,8 +110,8 @@ namespace PhoneNumbers.Tests
         [Fact]
         public void Equality_Same_Values_Without_NationalDiallingCode()
         {
-            var phoneNumber1 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, null, "112233", true, true, true);
-            var phoneNumber2 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, null, "112233", true, true, true);
+            var phoneNumber1 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, PhoneNumberHint.None, null, "112233");
+            var phoneNumber2 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, PhoneNumberHint.None, null, "112233");
 
             Assert.Equal(phoneNumber1, phoneNumber2);
             Assert.True(phoneNumber1.Equals(phoneNumber2));
@@ -93,7 +123,7 @@ namespace PhoneNumbers.Tests
         [Fact]
         public void Inequality()
         {
-            var phoneNumber1 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, "7654", "112233", true, true, true);
+            var phoneNumber1 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, PhoneNumberHint.None, "7654", "112233");
             var phoneNumber2 = default(MobilePhoneNumber);
 
             Assert.NotEqual(phoneNumber1, phoneNumber2);
@@ -110,7 +140,7 @@ namespace PhoneNumbers.Tests
             Assert.True(phoneNumber2 != (object)phoneNumber1);
 
             // Change area code
-            var phoneNumber3 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, "7655", "112233", true, true, true);
+            var phoneNumber3 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, PhoneNumberHint.None, "7655", "112233");
 
             Assert.NotEqual(phoneNumber1, phoneNumber3);
             Assert.False(phoneNumber1.Equals(phoneNumber3));
@@ -118,36 +148,20 @@ namespace PhoneNumbers.Tests
             Assert.True(phoneNumber1 != phoneNumber3);
 
             // change local number
-            var phoneNumber4 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, "7654", "112234", true, true, true);
+            var phoneNumber4 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, PhoneNumberHint.None, "7654", "112234");
 
             Assert.NotEqual(phoneNumber1, phoneNumber4);
             Assert.False(phoneNumber1.Equals(phoneNumber4));
             Assert.False(phoneNumber1 == phoneNumber4);
             Assert.True(phoneNumber1 != phoneNumber4);
 
-            // change is data only
-            var phoneNumber5 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, "7654", "112233", false, true, true);
+            // change hint
+            var phoneNumber5 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, PhoneNumberHint.Data, "7654", "112233");
 
             Assert.NotEqual(phoneNumber1, phoneNumber5);
             Assert.False(phoneNumber1.Equals(phoneNumber5));
             Assert.False(phoneNumber1 == phoneNumber5);
             Assert.True(phoneNumber1 != phoneNumber5);
-
-            // change is pager
-            var phoneNumber6 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, "7654", "112233", true, false, true);
-
-            Assert.NotEqual(phoneNumber1, phoneNumber6);
-            Assert.False(phoneNumber1.Equals(phoneNumber6));
-            Assert.False(phoneNumber1 == phoneNumber6);
-            Assert.True(phoneNumber1 != phoneNumber6);
-
-            // change is virtual
-            var phoneNumber7 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, "7654", "112233", true, true, false);
-
-            Assert.NotEqual(phoneNumber1, phoneNumber7);
-            Assert.False(phoneNumber1.Equals(phoneNumber7));
-            Assert.False(phoneNumber1 == phoneNumber7);
-            Assert.True(phoneNumber1 != phoneNumber7);
         }
     }
 }

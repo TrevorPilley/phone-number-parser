@@ -21,44 +21,44 @@ namespace PhoneNumbers.Tests.Parsers
                     {
                         SubscriberNumberRanges = new[] { NumberRange.Create("10000-10999") },
                         Kind = PhoneNumberKind.MobilePhoneNumber,
-                        Hint = Hint.None,
+                        Hint = PhoneNumberHint.None,
                     },
                     new CountryNumber
                     {
                         SubscriberNumberRanges = new[] { NumberRange.Create("11000-11999") },
                         Kind = PhoneNumberKind.MobilePhoneNumber,
-                        Hint = Hint.Data,
+                        Hint = PhoneNumberHint.Data,
                     },
                     new CountryNumber
                     {
                         SubscriberNumberRanges = new[] { NumberRange.Create("12000-12999") },
                         Kind = PhoneNumberKind.MobilePhoneNumber,
-                        Hint = Hint.Pager,
+                        Hint = PhoneNumberHint.Pager,
                     },
                     new CountryNumber
                     {
                         SubscriberNumberRanges = new[] { NumberRange.Create("13000-13999") },
                         Kind = PhoneNumberKind.MobilePhoneNumber,
-                        Hint = Hint.Virtual,
+                        Hint = PhoneNumberHint.Virtual,
                     },
                     new CountryNumber
                     {
                         SubscriberNumberRanges = new[] { NumberRange.Create("20000-20999") },
                         Kind = PhoneNumberKind.NonGeographicPhoneNumber,
-                        Hint = Hint.None,
+                        Hint = PhoneNumberHint.None,
                     },
                     new CountryNumber
                     {
                         SubscriberNumberRanges = new[] { NumberRange.Create("28000-28999") },
                         Kind = PhoneNumberKind.NonGeographicPhoneNumber,
-                        Hint = Hint.Freephone,
+                        Hint = PhoneNumberHint.Freephone,
                     },
                     new CountryNumber
                     {
                         GeographicArea = "Springfield",
                         SubscriberNumberRanges = new[] { NumberRange.Create("30000-30999") },
                         Kind = PhoneNumberKind.GeographicPhoneNumber,
-                        Hint = Hint.None,
+                        Hint = PhoneNumberHint.None,
                     },
                 });
 

@@ -13,9 +13,9 @@ namespace PhoneNumbers.Parsers
         internal string? GeographicArea { get; init; }
 
         /// <summary>
-        /// Gets the <see cref="Hint"/>.
+        /// Gets the <see cref="PhoneNumberHint"/>.
         /// </summary>
-        internal Hint Hint { get; init; }
+        internal PhoneNumberHint Hint { get; init; }
 
         /// <summary>
         /// Gets the <see cref="PhoneNumberParser"/>.

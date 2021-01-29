@@ -98,6 +98,7 @@ namespace PhoneNumbers.Parsers
                     ParseResult.Success(
                         new GeographicPhoneNumber(
                             Country,
+                            areaAndNumber.CountryNumber.Hint,
                             areaAndNumber.NationalDiallingCode!,
                             areaAndNumber.SubscriberNumber!,
                             areaAndNumber.CountryNumber.GeographicArea!)),
@@ -106,19 +107,17 @@ namespace PhoneNumbers.Parsers
                     ParseResult.Success(
                         new MobilePhoneNumber(
                             Country,
+                            areaAndNumber.CountryNumber.Hint,
                             areaAndNumber.NationalDiallingCode,
-                            areaAndNumber.SubscriberNumber!,
-                            isDataOnly: areaAndNumber.CountryNumber.Hint == Hint.Data,
-                            isPager: areaAndNumber.CountryNumber.Hint == Hint.Pager,
-                            isVirtual: areaAndNumber.CountryNumber.Hint == Hint.Virtual)),
+                            areaAndNumber.SubscriberNumber!)),
 
                 PhoneNumberKind.NonGeographicPhoneNumber =>
                     ParseResult.Success(
                         new NonGeographicPhoneNumber(
                             Country,
+                            areaAndNumber.CountryNumber.Hint,
                             areaAndNumber.NationalDiallingCode,
-                            areaAndNumber.SubscriberNumber!,
-                            isFreephone: areaAndNumber.CountryNumber.Hint == Hint.Freephone)),
+                            areaAndNumber.SubscriberNumber!)),
 
                 _ => base.ParseNationalSignificantNumber(nsnValue),
             };

@@ -18,6 +18,6 @@ namespace PhoneNumbers.Tests.Formatters
             Assert.Equal(expected, _formatter.Format(GetPhoneNumber(trunkPrefix, areaCode, localNumber), "D"));
 
         private static PhoneNumber GetPhoneNumber(string trunkPrefix, string areaCode, string localNumber) =>
-            new NonGeographicPhoneNumber(TestHelper.CreateCountryInfo(trunkPrefix: trunkPrefix), areaCode, localNumber, false);
+            new NonGeographicPhoneNumber(TestHelper.CreateCountryInfo(trunkPrefix: trunkPrefix), PhoneNumberHint.None, areaCode, localNumber);
     }
 }
