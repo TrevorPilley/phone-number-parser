@@ -16,24 +16,24 @@ namespace PhoneNumbers.Parsers
                 .Select(x => new CountryNumber
                 {
                     GeographicArea = x[2].Length > 0 ? x[2] : null,
-                    Hint = ParseHint(x[4].Length > 0 ? x[4][0] : '\0'),
-                    Kind = ParseKind(x[0][0]),
+                    Hint = ParseNumberHint(x[4].Length > 0 ? x[4][0] : '\0'),
+                    Kind = ParseNumberKind(x[0][0]),
                     NationalDiallingCodeRanges = x[1].Length > 0 ? ParseNumberRanges(x[1]) : null,
                     SubscriberNumberRanges = ParseNumberRanges(x[3]),
                 });
 
-        private static Hint ParseHint(char value) =>
+        private static PhoneNumberHint ParseNumberHint(char value) =>
             value switch
             {
-                '\0' => Hint.None,
-                'D' => Hint.Data,
-                'F' => Hint.Freephone,
-                'P' => Hint.Pager,
-                'V' => Hint.Virtual,
+                '\0' => PhoneNumberHint.None,
+                'D' => PhoneNumberHint.Data,
+                'F' => PhoneNumberHint.Freephone,
+                'P' => PhoneNumberHint.Pager,
+                'V' => PhoneNumberHint.Virtual,
                 _ => throw new NotSupportedException(value.ToString()),
             };
 
-        private static PhoneNumberKind ParseKind(char value) =>
+        private static PhoneNumberKind ParseNumberKind(char value) =>
             value switch
             {
                 'G' => PhoneNumberKind.GeographicPhoneNumber,

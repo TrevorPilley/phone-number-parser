@@ -16,9 +16,14 @@ namespace PhoneNumbers
         /// Initialises a new instance of the <see cref="PhoneNumber"/> class.
         /// </summary>
         /// <param name="countryInfo">The <see cref="CountryInfo"/> for the phone number.</param>
+        /// <param name="phoneNumberHint">The <see cref="PhoneNumberHint"/> for the phone number.</param>
         /// <param name="nationalDiallingCode">The national dialling code of the phone number.</param>
         /// <param name="subscriberNumber">The subscriber number of the phone number.</param>
-        protected PhoneNumber(CountryInfo countryInfo, string? nationalDiallingCode, string subscriberNumber)
+        protected PhoneNumber(
+            CountryInfo countryInfo,
+            PhoneNumberHint phoneNumberHint,
+            string? nationalDiallingCode,
+            string subscriberNumber)
         {
             if (countryInfo is null)
             {
@@ -30,7 +35,7 @@ namespace PhoneNumbers
                 throw new ArgumentException($"'{nameof(subscriberNumber)}' cannot be null or whitespace.", nameof(subscriberNumber));
             }
 
-            (Country, NationalDiallingCode, SubscriberNumber) = (countryInfo, nationalDiallingCode, subscriberNumber);
+            (Country, Hint, NationalDiallingCode, SubscriberNumber) = (countryInfo, phoneNumberHint, nationalDiallingCode, subscriberNumber);
         }
 
         /// <summary>
@@ -67,6 +72,11 @@ namespace PhoneNumbers
         /// </summary>
         /// <remarks>May also be referred to as local number.</remarks>
         public string SubscriberNumber { get; }
+
+        /// <summary>
+        /// Gets the <see cref="PhoneNumberHint"/>.
+        /// </summary>
+        protected PhoneNumberHint Hint { get; }
 
         /// <summary>
         /// Parses the specified phone number value into a <see cref="PhoneNumber"/> instance based upon the calling code.

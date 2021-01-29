@@ -58,6 +58,6 @@ namespace PhoneNumbers.Tests.Formatters
             Assert.Throws<ArgumentNullException>(() => _formatter.Format(null, "I"));
 
         private static PhoneNumber GetPhoneNumber(string trunkPrefix, string areaCode, string localNumber) =>
-            new NonGeographicPhoneNumber(TestHelper.CreateCountryInfo(trunkPrefix: trunkPrefix), areaCode, localNumber, false);
+            new NonGeographicPhoneNumber(TestHelper.CreateCountryInfo(trunkPrefix: trunkPrefix), PhoneNumberHint.None, areaCode, localNumber);
     }
 }

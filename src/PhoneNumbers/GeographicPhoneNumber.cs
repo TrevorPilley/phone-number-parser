@@ -11,15 +11,17 @@ namespace PhoneNumbers
         /// Initialises a new instance of the <see cref="GeographicPhoneNumber"/> class.
         /// </summary>
         /// <param name="countryInfo">The <see cref="CountryInfo"/> for the phone number.</param>
+        /// <param name="phoneNumberHint">The <see cref="PhoneNumberHint"/> for the phone number.</param>
         /// <param name="nationalDiallingCode">The national dialling code of the phone number.</param>
         /// <param name="subscriberNumber">The subscriber number of the phone number.</param>
         /// <param name="geographicArea">The name of the geographic area the phone number the area code is allocated to.</param>
         internal GeographicPhoneNumber(
             CountryInfo countryInfo,
+            PhoneNumberHint phoneNumberHint,
             string nationalDiallingCode,
             string subscriberNumber,
             string geographicArea)
-            : base(countryInfo, nationalDiallingCode, subscriberNumber)
+            : base(countryInfo, phoneNumberHint, nationalDiallingCode, subscriberNumber)
         {
             if (string.IsNullOrWhiteSpace(geographicArea))
             {
@@ -72,7 +74,8 @@ namespace PhoneNumbers
                 return true;
             }
 
-            return Country.Equals(other.Country) &&
+            return Hint.Equals(other.Hint) &&
+                Country.Equals(other.Country) &&
                 GeographicArea.Equals(other.GeographicArea, StringComparison.Ordinal) &&
                 PhoneNumberKind.Equals(other.PhoneNumberKind) &&
                 (NationalDiallingCode == null && other.NationalDiallingCode == null || NationalDiallingCode!.Equals(other.NationalDiallingCode, StringComparison.Ordinal)) &&
@@ -82,6 +85,6 @@ namespace PhoneNumbers
         /// <inheritdoc/>
         [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
         public override int GetHashCode() =>
-            HashCode.Combine(Country, GeographicArea, PhoneNumberKind, NationalDiallingCode, SubscriberNumber);
+            HashCode.Combine(Hint, Country, GeographicArea, PhoneNumberKind, NationalDiallingCode, SubscriberNumber);
     }
 }
