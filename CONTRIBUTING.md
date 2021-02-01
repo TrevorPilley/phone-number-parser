@@ -36,7 +36,7 @@ public static CountryInfo CountryName { get; } = new()
 };
 ```
 
-2. If the country uses area codes, set the `AreaCodeLengths` property as appropriate and declare in descending order.
+2. If the country uses national dialling codes (aka. area codes), set the `NationalDiallingCodeLengths` property as appropriate and declare in descending order.
 3. If the country doesn't use the ITU default `InternationalCallPrefix` of `00`, set the property appropriately.
 4. If the country uses trunk prefixes, set the `TrunkPrefix` appropriately.
 5. Add a new `CountryInfo_CountryName` test asserting the property values (see an existing implementation).
@@ -47,7 +47,7 @@ public static CountryInfo CountryName { get; } = new()
 
 The structre of the file is pipe `|` delimted and the "columns" are as follows:
 
-`Kind|AreaCodeRanges|GeographicalArea|LocalNumberRanges|Hint`
+`Kind|NationalDiallingCodeRanges|GeographicalArea|SubscriberNumberRanges|Hint`
 
 #### Kind
 
@@ -57,18 +57,22 @@ Must be one of:
 - `M` _for a mobile number_
 - `N` _for a non-geographically assigned number_
 
-#### Area code ranges
+#### National dialling code ranges
 
 Can be expressed as either:
 
 - `NNNN` _a single number (typically for geographically assigned numbers)_
-- `NNNN-NNNN` _a range of numbers (e.g. 800-804) where the same kind, local number ranges and hint apply)_
+- `NNNN-NNNN` _a range of numbers (e.g. 800-804) where the same kind, subsriber number ranges and hint apply)_
 
 Or a combination thereof (e.g. `NNNN,NNNN-NNNN,NNNN-NNNN`).
 
 #### Geographical area
 
 The name of the area a geographically assinged number is allocated to, preferably in the language of the data file rather than English (e.g. `Firenze` rather than `Florence` in Italy).
+
+#### Subscriber number ranges
+
+Can be specifid in the same way as national dialling code ranges.
 
 #### Hint
 
@@ -79,10 +83,18 @@ Optional but can be one of:
 - `P` _a Pager_
 - `V` _a Virtual number (e.g. personal number)_
 
+#### Comments
+
+A single line comment can be added in a data file by starting the line with a `#`:
+
+```text
+# this is a comment
+```
+
 ### Add a parser
 
-1. If the `DefaultPhoneNumberParser` can parse the file, add tests for the country using the `DefaultPhoneNumberParser` as appropriate - typically the min and max permitted local number(s) are tested within each area code/number kind.
-2. If country requires more complex logic to determine the area code, or the performance of the `DefaultPhoneNumberParser` is not acceptable then add a custom parser `{Iso3166Code}PhoneNumberParser` (see the GB one as an example) and add test cases based upon the data file.
+1. If the `DefaultPhoneNumberParser` can parse the file, add tests for the country using the `DefaultPhoneNumberParser` as appropriate - typically the min and max permitted subscriber number(s) are tested within each national dialling code/number kind.
+2. If country requires more complex logic to determine the national dialling code, or the performance of the `DefaultPhoneNumberParser` is not acceptable then add a custom parser `{Iso3166Code}PhoneNumberParser` (see the GB one as an example) and add test cases based upon the data file.
 3. Add a unit test for in `PhoneNumberParserFactoryTests` to assert the expected parser is returned for the `{Iso3166Code}`.
 4. Add a unit test for `Parse` and `TryParse` methods in `PhoneNumberTests` for the `{Iso3166Code}` to check the country code is assigned.
 
