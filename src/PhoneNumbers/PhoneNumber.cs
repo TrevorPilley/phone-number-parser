@@ -56,10 +56,10 @@ namespace PhoneNumbers
         public string LocalNumber => SubscriberNumber;
 
         /// <summary>
-        /// Gets the national dialling code of the phone number.
+        /// Gets the national destination code of the phone number.
         /// </summary>
-        /// <remarks>May also be referred to as area code.</remarks>
-        public string? NationalDiallingCode { get; }
+        /// <remarks>May also be referred to as area code or mobile network code.</remarks>
+        public string? NationalDestinationCode { get; }
 
         /// <summary>
         /// Gets the <see cref="PhoneNumberKind"/>.
