@@ -278,8 +278,7 @@ These were used as the references for the phone number data for each country.
 
 ### Switzerland
 
-- https://areaphonecodes.com/switzerland
-- https://www.ums.ch/links-and-info/info-switzerland/area-codes
+- https://www.bakom.admin.ch/bakom/en/homepage/telecommunication/numbering-and-telephony/number-blocks-and-codes.html
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Switzerland
 
 ### United Kingdom, Guernsey, Jersey, Isle of Man
