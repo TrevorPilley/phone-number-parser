@@ -11,8 +11,8 @@ namespace PhoneNumbers
     [DebuggerDisplay("{" + nameof(GetDebuggerDisplay) + "(),nq}")]
     public sealed class CountryInfo
     {
-        private static readonly char[] s_digits1To9 = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
         private const char PlusSign = '+';
+        private static readonly char[] s_digits1To9 = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
 
         /// <summary>
         /// Initialises a new instance of the <see cref="CountryInfo"/> class.
@@ -88,6 +88,12 @@ namespace PhoneNumbers
         public static CountryInfo IE => Ireland;
 
         /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for the Isle of Man.
+        /// </summary>
+        [Obsolete("This property has been replaced, please use by 'CountryInfo.IsleOfMan' instead it will be removed in a future version.")]
+        public static CountryInfo IM => IsleOfMan;
+
+        /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Ireland.
         /// </summary>
         /// <remarks>Covers the Republic of Ireland, Northern Ireland is part of the United Kingdom.</remarks>
@@ -101,12 +107,6 @@ namespace PhoneNumbers
             NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8, 9 }),
             TrunkPrefix = "0",
         };
-
-        /// <summary>
-        /// Gets the <see cref="CountryInfo"/> for the Isle of Man.
-        /// </summary>
-        [Obsolete("This property has been replaced, please use by 'CountryInfo.IsleOfMan' instead it will be removed in a future version.")]
-        public static CountryInfo IM => IsleOfMan;
 
         /// <summary>
         /// Gets the <see cref="CountryInfo"/> for the Isle of Man.
