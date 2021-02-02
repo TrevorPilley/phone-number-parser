@@ -37,8 +37,8 @@ namespace PhoneNumbers.Tests.Parsers
         }
 
         [Theory]
-        [InlineData("0740000000", "74", "0000000")]
-        [InlineData("0749999999", "74", "9999999")]
+        [InlineData("0740220000", "74", "0220000")]
+        [InlineData("0748119999", "74", "8119999")]
         public void Parse_Known_MobilePhoneNumber_Pager(string value, string areaCode, string localNumber)
         {
             var parseResult = _parser.Parse(value);

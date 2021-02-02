@@ -11,16 +11,16 @@ namespace PhoneNumbers.Tests.Parsers
         private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.Switzerland);
 
         [Theory]
-        [InlineData("0210000000", "21", "0000000", "Lausanne")]
+        [InlineData("0212100000", "21", "2100000", "Lausanne")]
         [InlineData("0219999999", "21", "9999999", "Lausanne")]
-        [InlineData("0220000000", "22", "0000000", "Genève")]
+        [InlineData("0223000000", "22", "3000000", "Genève")]
         [InlineData("0229999999", "22", "9999999", "Genève")]
-        [InlineData("0240000000", "24", "0000000", "Yverdon / Aigle")]
-        [InlineData("0249999999", "24", "9999999", "Yverdon / Aigle")]
-        [InlineData("0260000000", "26", "0000000", "Fribourg")]
-        [InlineData("0269999999", "26", "9999999", "Fribourg")]
-        [InlineData("0270000000", "27", "0000000", "Sion")]
-        [InlineData("0279999999", "27", "9999999", "Sion")]
+        [InlineData("0244200000", "24", "4200000", "Yverdon / Aigle")]
+        [InlineData("0245889999", "24", "5889999", "Yverdon / Aigle")]
+        [InlineData("0263000000", "26", "3000000", "Fribourg")]
+        [InlineData("0269299999", "26", "9299999", "Fribourg")]
+        [InlineData("0272020000", "27", "2020000", "Valais")]
+        [InlineData("0279799999", "27", "9799999", "Valais")]
         public void Parse_Known_GeographicPhoneNumber_2X_AreaCode(string value, string areaCode, string localNumber, string geographicArea)
         {
             var parseResult = _parser.Parse(value);
@@ -39,14 +39,14 @@ namespace PhoneNumbers.Tests.Parsers
         }
 
         [Theory]
-        [InlineData("0310000000", "31", "0000000", "Bern")]
-        [InlineData("0319999999", "31", "9999999", "Bern")]
-        [InlineData("0320000000", "32", "0000000", "Beil")]
-        [InlineData("0329999999", "32", "9999999", "Beil")]
-        [InlineData("0330000000", "33", "0000000", "Thun")]
-        [InlineData("0339999999", "33", "9999999", "Thun")]
-        [InlineData("0340000000", "34", "0000000", "Nurgdorf")]
-        [InlineData("0349999999", "34", "9999999", "Nurgdorf")]
+        [InlineData("0313000000", "31", "3000000", "Bern")]
+        [InlineData("0319989999", "31", "9989999", "Bern")]
+        [InlineData("0323100000", "32", "3100000", "Biel/Bienne, Neuchâtel, Solothurn, Jura")]
+        [InlineData("0329699999", "32", "9699999", "Biel/Bienne, Neuchâtel, Solothurn, Jura")]
+        [InlineData("0332210000", "33", "2210000", "Bernese Oberland")]
+        [InlineData("0339829999", "33", "9829999", "Bernese Oberland")]
+        [InlineData("0344000000", "34", "4000000", "Bern-Emme")]
+        [InlineData("0345889999", "34", "5889999", "Bern-Emme")]
         public void Parse_Known_GeographicPhoneNumber_3X_AreaCode(string value, string areaCode, string localNumber, string geographicArea)
         {
             var parseResult = _parser.Parse(value);
@@ -65,11 +65,11 @@ namespace PhoneNumbers.Tests.Parsers
         }
 
         [Theory]
-        [InlineData("0410000000", "41", "0000000", "Luzern")]
-        [InlineData("0419999999", "41", "9999999", "Luzern")]
-        [InlineData("0430000000", "43", "0000000", "Zürich")]
+        [InlineData("0412000000", "41", "2000000", "Luzern, Zug")]
+        [InlineData("0419899999", "41", "9899999", "Luzern, Zug")]
+        [InlineData("0432000000", "43", "2000000", "Zürich")]
         [InlineData("0439999999", "43", "9999999", "Zürich")]
-        [InlineData("0440000000", "44", "0000000", "Zürich")]
+        [InlineData("0442000000", "44", "2000000", "Zürich")]
         [InlineData("0449999999", "44", "9999999", "Zürich")]
         public void Parse_Known_GeographicPhoneNumber_4X_AreaCode(string value, string areaCode, string localNumber, string geographicArea)
         {
@@ -89,12 +89,12 @@ namespace PhoneNumbers.Tests.Parsers
         }
 
         [Theory]
-        [InlineData("0520000000", "52", "0000000", "Winterthur")]
-        [InlineData("0529999999", "52", "9999999", "Winterthur")]
-        [InlineData("0550000000", "55", "0000000", "Rapperswil")]
-        [InlineData("0559999999", "55", "9999999", "Rapperswil")]
-        [InlineData("0560000000", "56", "0000000", "Baden")]
-        [InlineData("0569999999", "56", "9999999", "Baden")]
+        [InlineData("0522020000", "52", "2020000", "Winterthur, Schaffhausen")]
+        [InlineData("0527779999", "52", "7779999", "Winterthur, Schaffhausen")]
+        [InlineData("0552100000", "55", "2100000", "Rapperswil")]
+        [InlineData("0556549999", "55", "6549999", "Rapperswil")]
+        [InlineData("0562000000", "56", "2000000", "Baden, Zurzach")]
+        [InlineData("0566789999", "56", "6789999", "Baden, Zurzach")]
         public void Parse_Known_GeographicPhoneNumber_5X_AreaCode(string value, string areaCode, string localNumber, string geographicArea)
         {
             var parseResult = _parser.Parse(value);
@@ -113,10 +113,10 @@ namespace PhoneNumbers.Tests.Parsers
         }
 
         [Theory]
-        [InlineData("0610000000", "61", "0000000", "Basel")]
+        [InlineData("0612000000", "61", "2000000", "Basel")]
         [InlineData("0619999999", "61", "9999999", "Basel")]
-        [InlineData("0620000000", "62", "0000000", "Olten")]
-        [InlineData("0629999999", "62", "9999999", "Olten")]
+        [InlineData("0622000000", "62", "2000000", "Olten-Langenthal(Oberaargau)-Aargau-West")]
+        [InlineData("0629689999", "62", "9689999", "Olten-Langenthal(Oberaargau)-Aargau-West")]
         public void Parse_Known_GeographicPhoneNumber_6X_AreaCode(string value, string areaCode, string localNumber, string geographicArea)
         {
             var parseResult = _parser.Parse(value);
@@ -135,7 +135,7 @@ namespace PhoneNumbers.Tests.Parsers
         }
 
         [Theory]
-        [InlineData("0710000000", "71", "0000000", "St. Gallen")]
+        [InlineData("0712200000", "71", "2200000", "St. Gallen")]
         [InlineData("0719999999", "71", "9999999", "St. Gallen")]
         public void Parse_Known_GeographicPhoneNumber_7X_AreaCode(string value, string areaCode, string localNumber, string geographicArea)
         {
@@ -155,8 +155,8 @@ namespace PhoneNumbers.Tests.Parsers
         }
 
         [Theory]
-        [InlineData("0810000000", "81", "0000000", "Chur")]
-        [InlineData("0819999999", "81", "9999999", "Chur")]
+        [InlineData("0812500000", "81", "2500000", "Chur")]
+        [InlineData("0819499999", "81", "9499999", "Chur")]
         public void Parse_Known_GeographicPhoneNumber_8X_AreaCode(string value, string areaCode, string localNumber, string geographicArea)
         {
             var parseResult = _parser.Parse(value);
@@ -175,8 +175,8 @@ namespace PhoneNumbers.Tests.Parsers
         }
 
         [Theory]
-        [InlineData("0910000000", "91", "0000000", "Bellinzona")]
-        [InlineData("0919999999", "91", "9999999", "Bellinzona")]
+        [InlineData("0912000000", "91", "2000000", "Ticino, Moesa")]
+        [InlineData("0919999999", "91", "9999999", "Ticino, Moesa")]
         public void Parse_Known_GeographicPhoneNumber_9X_AreaCode(string value, string areaCode, string localNumber, string geographicArea)
         {
             var parseResult = _parser.Parse(value);

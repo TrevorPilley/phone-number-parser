@@ -11,8 +11,8 @@ namespace PhoneNumbers.Tests.Parsers
         private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.Switzerland);
 
         [Theory]
-        [InlineData("0510000000", "51", "0000000")]
-        [InlineData("0519999999", "51", "9999999")]
+        [InlineData("0512200000", "51", "2200000")]
+        [InlineData("0512869999", "51", "2869999")]
         [InlineData("0580000000", "58", "0000000")]
         [InlineData("0589999999", "58", "9999999")]
         public void Parse_Known_NonGeographicPhoneNumber_5X_AreaCode(string value, string areaCode, string localNumber)
