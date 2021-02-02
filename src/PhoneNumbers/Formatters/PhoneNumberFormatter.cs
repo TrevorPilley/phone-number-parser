@@ -74,7 +74,7 @@ namespace PhoneNumbers.Formatters
         /// </summary>
         /// <param name="phoneNumber">The phone number to format.</param>
         /// <returns>The string representation of the phone number.</returns>
-        private string FormatE164(PhoneNumber phoneNumber) =>
+        private static string FormatE164(PhoneNumber phoneNumber) =>
             $"{phoneNumber.Country.CallingCode}{phoneNumber.NationalDestinationCode}{phoneNumber.SubscriberNumber}";
 
         /// <summary>
@@ -82,7 +82,7 @@ namespace PhoneNumbers.Formatters
         /// </summary>
         /// <param name="phoneNumber">The phone number to format.</param>
         /// <returns>The string representation of the phone number.</returns>
-        private string FormatNational(PhoneNumber phoneNumber) =>
+        private static string FormatNational(PhoneNumber phoneNumber) =>
             $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.NationalDestinationCode}{phoneNumber.SubscriberNumber}";
     }
 }
