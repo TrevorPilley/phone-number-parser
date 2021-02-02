@@ -109,7 +109,7 @@ ParseOptions.Default.Countries.Remove(CountryInfo.X);
 
 The library currently supports parsing phone numbers for the following countries and although best endeavours are made to adhere to published telephone numbering plans, depending on the accessibility of data there may be descepencies. If you happen to find any, please raise a bug.
 
-Country        | ISO 3166 Code | Calling Code | Trunk Code | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone)
+Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone)
 ---            | ---           | ---          | ---        | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:
 France         | FR            | +33          | 0          | Yes        | Yes    |                        |                    |                      | Yes            | Yes
 Guernsey       | GG            | +44          | 0          | Yes        | Yes    |                        |                    |                      |                |
@@ -126,105 +126,10 @@ Spain          | ES            | +34          |            | Yes        | Yes   
 Switzerland    | CH            | +41          | 0          | Yes        | Yes    |                        |                    |                      | Yes            |
 United Kingdom | GB            | +44          | 0          | Yes        | Yes    | Yes                    | Yes                | Yes                  | Yes            | Yes
 
-### France
+### Notes
 
-- 01, 02, 03, 04, 05, 06, 07, 08 and 09 numbers are supported.
-- 01, 02, 03, 04 are 05 numbers are geographically assigned so the geographic area is included, although currently this is only within the top level geographic zones (01 Île-de-France, 02 Nord-Ouest, 03 Nord-Est, 04 Sud-Est and 05 Sud-Ouest).
-- The `IsDataOnly`, `IsPager` and `IsVirtual` properties are not currently set for France mobile numbers.
-- Sets the `IsFreephone` property for non-geographical phone numbers which are freephone numbers (e.g. 0800-0805 numbers).
-
-### Guernsey
-
-- 01 and 07 numbers are supported.
-- 01 numbers are geographically assigned so the geographic area is included.
-- The `IsDataOnly`, `IsPager` and `IsVirtual` properties are not currently set for Guernsey mobile numbers.
-
-### Hong Kong
-
-- 2, 3, 5, 6, 7, 8 and 9 numbers are supported.
-- Hong Kong no longer uses area codes so "land line" numbers are always non-geographic.
-- Sets the `IsVirtual` property as appropriate for mobile phone numbers.
-- The `IsDataOnly` and `IsPager` properties are not currently set for Hong Kong mobile numbers.
-- Hong Kong does not use a trunk prefix.
-- Sets the `IsFreephone` property for non-geographical phone numbers which are freephone numbers (e.g. 800 through 809).
-
-### Ireland
-
-- 01, 02, 04, 05, 06, 07, 08 and 09 numbers are supported.
-- 01, 02, 04, 05, 06, 07 (except 0700) and 09 numbers are geographically assigned so the geographic area is included.
-- Sets the `IsPager` and `IsVirtual` properties as appropriate for mobile phone numbers.
-- The `IsDataOnly` property is not currently set for Ireland mobile numbers.
-- Sets the `IsFreephone` property for non-geographical phone numbers which are freephone numbers (e.g. 0800).
-
-### Isle of Man
-
-- 01 and 07 numbers are supported.
-- 01 numbers are geographically assigned so the geographic area is included.
-- The `IsDataOnly`, `IsPager` and `IsVirtual` properties are not currently set for Isle of Man mobile numbers.
-
-### Italy
-
-- 0, 3 and 8 numbers are supported
-- 0 numbers are geographically assigned so the geographic area is included.
-- The `IsDataOnly`, `IsPager` and `IsVirtual` properties are not currently set for Italy mobile numbers.
-- Sets the `IsFreephone` property for non-geographical phone numbers which are freephone numbers (e.g. 800 and 803).
-
-### Jersey
-
-- 01 and 07 numbers are supported.
-- 01 numbers are geographically assigned so the geographic area is included.
-- The `IsDataOnly`, `IsPager` and `IsVirtual` properties are not currently set for Jersey mobile numbers.
-
-### Macau
-
-- 28, 6 and 8 numbers are supported
-- Macau does not use area codes so "land line" numbers are always non-geographic.
-- The `IsDataOnly`, `IsPager` and `IsVirtual` properties are not currently set for Macau mobile numbers.
-- Macau does not use a trunk prefix.
-
-### Monaco
-
-- 3, 4, 6, 8 and 9 numbers are supported.
-- The `IsDataOnly`, `IsPager` and `IsVirtual` properties are not currently set for Monaco mobile numbers.
-
-### San Marino
-
-- 0, 5, 6 and 7 numbers are supported
-- San Marino does not use area codes so "land line" numbers are always non-geographic.
-- The `IsDataOnly`, `IsPager` and `IsVirtual` properties are not currently set for San Marino mobile numbers.
-- San Marino does not use a trunk prefix.
-
-### Singapore
-
-- 3, 6, 8 and 9 numbers are supported
-- Singapore does not use area codes so "land line" numbers are always non-geographic.
-- The `IsDataOnly`, `IsPager` and `IsVirtual` properties are not currently set for Singapore mobile numbers.
-- Singapore does not use a trunk prefix.
-
-### Spain
-
-- 6, 7, 8 and 9 numbers are supported.
-- 8 and 9 numbers are geographically assigned so the geographic area is included.
-- Sets the `IsVirtual` property as appropriate for mobile phone numbers.
-- The `IsDataOnly` and `IsPager` properties are not currently set for Spain mobile numbers.
-- Sets the `IsFreephone` property for non-geographical phone numbers which are freephone numbers (e.g. 800 and 900).
-
-### Switzerland
-
-- 02, 03, 04, 05, 06, 07, 08 and 09 numbers are supported.
-- 02, 03, 04, 05, 06, 071, 081 and 091 numbers are geographically assigned so the geographic area is included.
-- Sets the `IsPager` and `IsVirtual` properties as appropriate for mobile phone numbers.
-- The `IsDataOnly` property is not currently set for Switzerland mobile numbers.
-- Sets the `IsFreephone` property for non-geographical phone numbers which are freephone numbers (e.g. 0800).
-
-### United Kingdom
-
-_note the ISO code for the United Kingdom is 'GB' rather than 'UK'._
-
-- 01, 02, 03, 07 and 08 numbers are supported.
-- 01 and 02 numbers are geographically assigned so the geographic area is included.
-- Sets the `IsDataOnly`, `IsPager` or `IsVirtual` properties as appropriate for mobile phone numbers.
-- Sets the `IsFreephone` property for non-geographical phone numbers which are freephone numbers (e.g. 0800 and 0808).
+- The ISO code for the United Kingdom is 'GB' rather than 'UK'.
+- Geographically assigned numbers in france are currently only within the top level geographic zones (01 Île-de-France, 02 Nord-Ouest, 03 Nord-Est, 04 Sud-Est and 05 Sud-Ouest).
 
 ## References for number data
 
