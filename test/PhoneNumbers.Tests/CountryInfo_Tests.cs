@@ -234,6 +234,25 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
+        public void CountryInfo_Switzerland()
+        {
+            Assert.Same(CountryInfo.Switzerland, CountryInfo.Switzerland);
+
+            var countryInfo = CountryInfo.Switzerland;
+
+            Assert.Equal(new[] { 3, 2 }, countryInfo.AreaCodeLengths);
+            Assert.Equal("+41", countryInfo.CallingCode);
+            Assert.IsType<CHPhoneNumberFormatter>(countryInfo.Formatter);
+            Assert.True(countryInfo.HasAreaCodes);
+            Assert.Equal("00", countryInfo.InternationalCallPrefix);
+            Assert.Equal("CH", countryInfo.Iso3166Code);
+            Assert.False(countryInfo.SharesCallingCode);
+            Assert.Equal("Switzerland", countryInfo.Name);
+            Assert.Equal(new[] { 9 }, countryInfo.NsnLengths);
+            Assert.Equal("0", countryInfo.TrunkPrefix);
+        }
+
+        [Fact]
         public void CountryInfo_UnitedKingdom()
         {
             Assert.Same(CountryInfo.UnitedKingdom, CountryInfo.UnitedKingdom);

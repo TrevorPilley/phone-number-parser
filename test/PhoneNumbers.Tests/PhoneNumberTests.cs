@@ -138,6 +138,14 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
+        public void Parse_Value_With_Switzerland_CallingCode()
+        {
+            var phoneNumber = PhoneNumber.Parse("+41327654321");
+            Assert.NotNull(phoneNumber);
+            Assert.Equal(CountryInfo.Switzerland, phoneNumber.Country);
+        }
+
+        [Fact]
         public void Parse_Value_With_UnitedKingdom_CallingCode()
         {
             var phoneNumber = PhoneNumber.Parse("+441142726444");
@@ -249,6 +257,14 @@ namespace PhoneNumbers.Tests
             Assert.True(PhoneNumber.TryParse("+34810030000", out var phoneNumber));
             Assert.NotNull(phoneNumber);
             Assert.Equal(CountryInfo.Spain, phoneNumber.Country);
+        }
+
+        [Fact]
+        public void TryParse_Switzerland_CallingCode_Valid_Value()
+        {
+            Assert.True(PhoneNumber.TryParse("+41327654321", out var phoneNumber));
+            Assert.NotNull(phoneNumber);
+            Assert.Equal(CountryInfo.Switzerland, phoneNumber.Country);
         }
 
         [Fact]

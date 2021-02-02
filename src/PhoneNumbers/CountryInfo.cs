@@ -227,6 +227,20 @@ namespace PhoneNumbers
         };
 
         /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Switzerland.
+        /// </summary>
+        public static CountryInfo Switzerland { get; } = new()
+        {
+            AreaCodeLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
+            CallingCode = "+41",
+            Formatter = new CHPhoneNumberFormatter(),
+            Iso3166Code = "CH",
+            Name = "Switzerland",
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
+            TrunkPrefix = "0",
+        };
+
+        /// <summary>
         /// Gets the <see cref="CountryInfo"/> for the United Kingdom.
         /// </summary>
         [Obsolete("This property has been replaced, please use by 'CountryInfo.UnitedKingdom' instead it will be removed in a future version.")]
