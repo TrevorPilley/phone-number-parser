@@ -10,10 +10,10 @@ namespace PhoneNumbers.Formatters
         {
             if (phoneNumber.SubscriberNumber.Length > 5)
             {
-                return $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.NationalDiallingCode} {phoneNumber.SubscriberNumber.Substring(0, 3)} {phoneNumber.SubscriberNumber.Substring(3)}";
+                return $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.NationalDestinationCode} {phoneNumber.SubscriberNumber.Substring(0, 3)} {phoneNumber.SubscriberNumber.Substring(3)}";
             }
 
-            return $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.NationalDiallingCode} {phoneNumber.SubscriberNumber}";
+            return $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.NationalDestinationCode} {phoneNumber.SubscriberNumber}";
         }
     }
 }

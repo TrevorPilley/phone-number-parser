@@ -14,7 +14,7 @@ namespace PhoneNumbers.Tests
             Assert.Equal(countryInfo, phoneNumber.Country);
             Assert.Equal("N/A", phoneNumber.GeographicArea);
             Assert.Equal(PhoneNumberKind.GeographicPhoneNumber, phoneNumber.PhoneNumberKind);
-            Assert.Equal("12345", phoneNumber.NationalDiallingCode);
+            Assert.Equal("12345", phoneNumber.NationalDestinationCode);
             Assert.Equal("667788", phoneNumber.SubscriberNumber);
         }
 

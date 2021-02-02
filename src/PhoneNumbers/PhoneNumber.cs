@@ -17,12 +17,12 @@ namespace PhoneNumbers
         /// </summary>
         /// <param name="countryInfo">The <see cref="CountryInfo"/> for the phone number.</param>
         /// <param name="phoneNumberHint">The <see cref="PhoneNumberHint"/> for the phone number.</param>
-        /// <param name="nationalDiallingCode">The national dialling code of the phone number.</param>
+        /// <param name="nationalDestinationCode">The national destination code of the phone number.</param>
         /// <param name="subscriberNumber">The subscriber number of the phone number.</param>
         protected PhoneNumber(
             CountryInfo countryInfo,
             PhoneNumberHint phoneNumberHint,
-            string? nationalDiallingCode,
+            string? nationalDestinationCode,
             string subscriberNumber)
         {
             if (countryInfo is null)
@@ -35,14 +35,14 @@ namespace PhoneNumbers
                 throw new ArgumentException($"'{nameof(subscriberNumber)}' cannot be null or whitespace.", nameof(subscriberNumber));
             }
 
-            (Country, Hint, NationalDiallingCode, SubscriberNumber) = (countryInfo, phoneNumberHint, nationalDiallingCode, subscriberNumber);
+            (Country, Hint, NationalDestinationCode, SubscriberNumber) = (countryInfo, phoneNumberHint, nationalDestinationCode, subscriberNumber);
         }
 
         /// <summary>
         /// Gets the area code of the phone number.
         /// </summary>
         [Obsolete("This property has been replaced, please use by 'NationalDiallingCode' instead it will be removed in a future version.")]
-        public string? AreaCode => NationalDiallingCode;
+        public string? AreaCode => NationalDestinationCode;
 
         /// <summary>
         /// Gets the <see cref="CountryInfo"/> for the phone number.

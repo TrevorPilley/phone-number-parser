@@ -13,7 +13,7 @@ namespace PhoneNumbers.Tests.Parsers
         [Theory]
         [InlineData("01481200000", "1481", "200000", "Guernsey")]
         [InlineData("01481998999", "1481", "998999", "Guernsey")]
-        public void Parse_Known_GeographicPhoneNumber_1XXX_NationalDiallingCode(string value, string nationalDiallingCode, string subscriberNumber, string geographicArea)
+        public void Parse_Known_GeographicPhoneNumber_1XXX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
         {
             var parseResult = _parser.Parse(value);
             parseResult.ThrowIfFailure();
@@ -26,7 +26,7 @@ namespace PhoneNumbers.Tests.Parsers
             var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
             Assert.Equal(CountryInfo.Guernsey, geographicPhoneNumber.Country);
             Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
-            Assert.Equal(nationalDiallingCode, geographicPhoneNumber.NationalDiallingCode);
+            Assert.Equal(NationalDestinationCode, geographicPhoneNumber.NationalDestinationCode);
             Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
         }
     }

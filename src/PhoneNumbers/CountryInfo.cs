@@ -270,13 +270,13 @@ namespace PhoneNumbers
         /// <summary>
         /// Gets a value indicating whether the country has area codes.
         /// </summary>
-        [Obsolete("This property has been replaced, please use HasNationalDiallingCodes instead it will be removed in a future version.")]
-        public bool HasAreaCodes => HasNationalDiallingCodes;
+        [Obsolete("This property has been replaced, please use NationalDestinationCodes instead it will be removed in a future version.")]
+        public bool HasAreaCodes => HasNationalDestinationCodes;
 
         /// <summary>
-        /// Gets a value indicating whether the country has national dialling codes.
+        /// Gets a value indicating whether the country has national destination codes.
         /// </summary>
-        public bool HasNationalDiallingCodes => NdcLengths.Count > 0;
+        public bool HasNationalDestinationCodes => NdcLengths.Count > 0;
 
         /// <summary>
         /// Gets the international call prefix.
@@ -313,7 +313,7 @@ namespace PhoneNumbers
         internal PhoneNumberFormatter Formatter { get; init; } = PhoneNumberFormatter.Default;
 
         /// <summary>
-        /// Gets the possible lenghts of the national dialling code.
+        /// Gets the possible lenghts of the national destination code.
         /// </summary>
         internal ReadOnlyCollection<int> NdcLengths { get; init; } = new(Array.Empty<int>());
 

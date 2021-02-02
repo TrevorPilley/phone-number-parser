@@ -38,7 +38,7 @@ namespace PhoneNumbers.Tests.Parsers
             var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
             Assert.Equal(CountryInfo.France, geographicPhoneNumber.Country);
             Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
-            Assert.Null(geographicPhoneNumber.NationalDiallingCode);
+            Assert.Null(geographicPhoneNumber.NationalDestinationCode);
             Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
         }
     }

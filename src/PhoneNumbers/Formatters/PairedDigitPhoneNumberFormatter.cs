@@ -37,7 +37,7 @@ namespace PhoneNumbers.Formatters
             }
 
             Append(stringBuilder, ref charsAdded, phoneNumber.Country.TrunkPrefix);
-            Append(stringBuilder, ref charsAdded, phoneNumber.NationalDiallingCode);
+            Append(stringBuilder, ref charsAdded, phoneNumber.NationalDestinationCode);
             Append(stringBuilder, ref charsAdded, phoneNumber.SubscriberNumber);
 
             if (stringBuilder[stringBuilder.Length - 1] == ' ')

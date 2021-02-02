@@ -12,14 +12,14 @@ namespace PhoneNumbers
         /// </summary>
         /// <param name="countryInfo">The <see cref="CountryInfo"/> for the phone number.</param>
         /// <param name="phoneNumberHint">The <see cref="PhoneNumberHint"/> for the phone number.</param>
-        /// <param name="nationalDiallingCode">The national dialling code of the phone number.</param>
+        /// <param name="nationalDestinationCode">The national destination code of the phone number.</param>
         /// <param name="subscriberNumber">The subscriber number of the phone number.</param>
         internal MobilePhoneNumber(
             CountryInfo countryInfo,
             PhoneNumberHint phoneNumberHint,
-            string? nationalDiallingCode,
+            string? nationalDestinationCode,
             string subscriberNumber)
-            : base(countryInfo, phoneNumberHint, nationalDiallingCode, subscriberNumber)
+            : base(countryInfo, phoneNumberHint, nationalDestinationCode, subscriberNumber)
         {
         }
 
@@ -83,13 +83,13 @@ namespace PhoneNumbers
             return Hint.Equals(other.Hint) &&
                 Country.Equals(other.Country) &&
                 PhoneNumberKind.Equals(other.PhoneNumberKind) &&
-                (NationalDiallingCode == null && other.NationalDiallingCode == null || NationalDiallingCode!.Equals(other.NationalDiallingCode, StringComparison.Ordinal)) &&
+                (NationalDestinationCode == null && other.NationalDestinationCode == null || NationalDestinationCode!.Equals(other.NationalDestinationCode, StringComparison.Ordinal)) &&
                 SubscriberNumber.Equals(other.SubscriberNumber, StringComparison.Ordinal);
         }
 
         /// <inheritdoc/>
         [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
         public override int GetHashCode() =>
-            HashCode.Combine(Hint, Country, PhoneNumberKind, NationalDiallingCode, SubscriberNumber);
+            HashCode.Combine(Hint, Country, PhoneNumberKind, NationalDestinationCode, SubscriberNumber);
     }
 }

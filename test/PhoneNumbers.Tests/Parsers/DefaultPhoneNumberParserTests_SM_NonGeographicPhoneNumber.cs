@@ -54,7 +54,7 @@ namespace PhoneNumbers.Tests.Parsers
             var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
             Assert.Equal(CountryInfo.SanMarino, nonGeographicPhoneNumber.Country);
             Assert.False(nonGeographicPhoneNumber.IsFreephone);
-            Assert.Null(nonGeographicPhoneNumber.NationalDiallingCode);
+            Assert.Null(nonGeographicPhoneNumber.NationalDestinationCode);
             Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
         }
     }

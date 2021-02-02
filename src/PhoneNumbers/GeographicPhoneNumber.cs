@@ -12,16 +12,16 @@ namespace PhoneNumbers
         /// </summary>
         /// <param name="countryInfo">The <see cref="CountryInfo"/> for the phone number.</param>
         /// <param name="phoneNumberHint">The <see cref="PhoneNumberHint"/> for the phone number.</param>
-        /// <param name="nationalDiallingCode">The national dialling code of the phone number.</param>
+        /// <param name="nationalDestinationCode">The national destination code of the phone number.</param>
         /// <param name="subscriberNumber">The subscriber number of the phone number.</param>
         /// <param name="geographicArea">The name of the geographic area the phone number the area code is allocated to.</param>
         internal GeographicPhoneNumber(
             CountryInfo countryInfo,
             PhoneNumberHint phoneNumberHint,
-            string nationalDiallingCode,
+            string nationalDestinationCode,
             string subscriberNumber,
             string geographicArea)
-            : base(countryInfo, phoneNumberHint, nationalDiallingCode, subscriberNumber)
+            : base(countryInfo, phoneNumberHint, nationalDestinationCode, subscriberNumber)
         {
             if (string.IsNullOrWhiteSpace(geographicArea))
             {
@@ -78,13 +78,13 @@ namespace PhoneNumbers
                 Country.Equals(other.Country) &&
                 GeographicArea.Equals(other.GeographicArea, StringComparison.Ordinal) &&
                 PhoneNumberKind.Equals(other.PhoneNumberKind) &&
-                (NationalDiallingCode == null && other.NationalDiallingCode == null || NationalDiallingCode!.Equals(other.NationalDiallingCode, StringComparison.Ordinal)) &&
+                (NationalDestinationCode == null && other.NationalDestinationCode == null || NationalDestinationCode!.Equals(other.NationalDestinationCode, StringComparison.Ordinal)) &&
                 SubscriberNumber.Equals(other.SubscriberNumber, StringComparison.Ordinal);
         }
 
         /// <inheritdoc/>
         [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
         public override int GetHashCode() =>
-            HashCode.Combine(Hint, Country, GeographicArea, PhoneNumberKind, NationalDiallingCode, SubscriberNumber);
+            HashCode.Combine(Hint, Country, GeographicArea, PhoneNumberKind, NationalDestinationCode, SubscriberNumber);
     }
 }
