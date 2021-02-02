@@ -36,7 +36,7 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.False(mobilePhoneNumber.IsDataOnly);
             Assert.False(mobilePhoneNumber.IsPager);
             Assert.False(mobilePhoneNumber.IsVirtual);
-            Assert.Null(mobilePhoneNumber.NationalDiallingCode);
+            Assert.Null(mobilePhoneNumber.NationalDestinationCode);
             Assert.Equal(subscriberNumber, mobilePhoneNumber.SubscriberNumber);
         }
     }

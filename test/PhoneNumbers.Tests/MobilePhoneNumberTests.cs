@@ -16,7 +16,7 @@ namespace PhoneNumbers.Tests
             Assert.False(phoneNumber.IsPager);
             Assert.False(phoneNumber.IsVirtual);
             Assert.Equal(PhoneNumberKind.MobilePhoneNumber, phoneNumber.PhoneNumberKind);
-            Assert.Equal("7654", phoneNumber.NationalDiallingCode);
+            Assert.Equal("7654", phoneNumber.NationalDestinationCode);
             Assert.Equal("112233", phoneNumber.SubscriberNumber);
         }
 
@@ -31,7 +31,7 @@ namespace PhoneNumbers.Tests
             Assert.True(phoneNumber.IsPager);
             Assert.False(phoneNumber.IsVirtual);
             Assert.Equal(PhoneNumberKind.MobilePhoneNumber, phoneNumber.PhoneNumberKind);
-            Assert.Equal("7654", phoneNumber.NationalDiallingCode);
+            Assert.Equal("7654", phoneNumber.NationalDestinationCode);
             Assert.Equal("112233", phoneNumber.SubscriberNumber);
         }
 
@@ -46,7 +46,7 @@ namespace PhoneNumbers.Tests
             Assert.False(phoneNumber.IsPager);
             Assert.True(phoneNumber.IsVirtual);
             Assert.Equal(PhoneNumberKind.MobilePhoneNumber, phoneNumber.PhoneNumberKind);
-            Assert.Equal("7654", phoneNumber.NationalDiallingCode);
+            Assert.Equal("7654", phoneNumber.NationalDestinationCode);
             Assert.Equal("112233", phoneNumber.SubscriberNumber);
         }
 

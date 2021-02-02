@@ -14,7 +14,7 @@ namespace PhoneNumbers.Tests
 
             Assert.Equal("+33", countryInfo.CallingCode);
             Assert.Same(PairedDigitPhoneNumberFormatter.Instance, countryInfo.Formatter);
-            Assert.False(countryInfo.HasNationalDiallingCodes);
+            Assert.False(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("FR", countryInfo.Iso3166Code);
             Assert.Equal("France", countryInfo.Name);
@@ -33,7 +33,7 @@ namespace PhoneNumbers.Tests
 
             Assert.Equal("+44", countryInfo.CallingCode);
             Assert.Same(GBPhoneNumberFormatter.Instance, countryInfo.Formatter);
-            Assert.True(countryInfo.HasNationalDiallingCodes);
+            Assert.True(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("GG", countryInfo.Iso3166Code);
             Assert.Equal("Guernsey", countryInfo.Name);
@@ -52,7 +52,7 @@ namespace PhoneNumbers.Tests
 
             Assert.Equal("+852", countryInfo.CallingCode);
             Assert.Same(FourSpaceFourPhoneNumberFormatter.Instance, countryInfo.Formatter);
-            Assert.False(countryInfo.HasNationalDiallingCodes);
+            Assert.False(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("001", countryInfo.InternationalCallPrefix);
             Assert.Equal("HK", countryInfo.Iso3166Code);
             Assert.Equal("Hong Kong", countryInfo.Name);
@@ -71,7 +71,7 @@ namespace PhoneNumbers.Tests
 
             Assert.Equal("+353", countryInfo.CallingCode);
             Assert.IsType<IEPhoneNumberFormatter>(countryInfo.Formatter);
-            Assert.True(countryInfo.HasNationalDiallingCodes);
+            Assert.True(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("IE", countryInfo.Iso3166Code);
             Assert.Equal("Ireland", countryInfo.Name);
@@ -90,7 +90,7 @@ namespace PhoneNumbers.Tests
 
             Assert.Equal("+44", countryInfo.CallingCode);
             Assert.Same(GBPhoneNumberFormatter.Instance, countryInfo.Formatter);
-            Assert.True(countryInfo.HasNationalDiallingCodes);
+            Assert.True(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("IM", countryInfo.Iso3166Code);
             Assert.Equal("Isle of Man", countryInfo.Name);
@@ -109,7 +109,7 @@ namespace PhoneNumbers.Tests
 
             Assert.Equal("+39", countryInfo.CallingCode);
             Assert.Same(ITPhoneNumberFormatter.Instance, countryInfo.Formatter);
-            Assert.True(countryInfo.HasNationalDiallingCodes);
+            Assert.True(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("IT", countryInfo.Iso3166Code);
             Assert.Equal("Italy", countryInfo.Name);
@@ -128,7 +128,7 @@ namespace PhoneNumbers.Tests
 
             Assert.Equal("+44", countryInfo.CallingCode);
             Assert.IsType<GBPhoneNumberFormatter>(countryInfo.Formatter);
-            Assert.True(countryInfo.HasNationalDiallingCodes);
+            Assert.True(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("JE", countryInfo.Iso3166Code);
             Assert.Equal("Jersey", countryInfo.Name);
@@ -147,7 +147,7 @@ namespace PhoneNumbers.Tests
 
             Assert.Equal("+853", countryInfo.CallingCode);
             Assert.Same(FourSpaceFourPhoneNumberFormatter.Instance, countryInfo.Formatter);
-            Assert.False(countryInfo.HasNationalDiallingCodes);
+            Assert.False(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("MO", countryInfo.Iso3166Code);
             Assert.Equal("Macau", countryInfo.Name);
@@ -166,7 +166,7 @@ namespace PhoneNumbers.Tests
 
             Assert.Equal("+377", countryInfo.CallingCode);
             Assert.Same(PairedDigitPhoneNumberFormatter.Instance, countryInfo.Formatter);
-            Assert.False(countryInfo.HasNationalDiallingCodes);
+            Assert.False(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("MC", countryInfo.Iso3166Code);
             Assert.Equal("Monaco", countryInfo.Name);
@@ -185,7 +185,7 @@ namespace PhoneNumbers.Tests
 
             Assert.Equal("+378", countryInfo.CallingCode);
             Assert.Same(ITPhoneNumberFormatter.Instance, countryInfo.Formatter);
-            Assert.False(countryInfo.HasNationalDiallingCodes);
+            Assert.False(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("SM", countryInfo.Iso3166Code);
             Assert.Equal("San Marino", countryInfo.Name);
@@ -204,7 +204,7 @@ namespace PhoneNumbers.Tests
 
             Assert.Equal("+65", countryInfo.CallingCode);
             Assert.Same(FourSpaceFourPhoneNumberFormatter.Instance, countryInfo.Formatter);
-            Assert.False(countryInfo.HasNationalDiallingCodes);
+            Assert.False(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("001", countryInfo.InternationalCallPrefix);
             Assert.Equal("SG", countryInfo.Iso3166Code);
             Assert.Equal("Singapore", countryInfo.Name);
@@ -223,7 +223,7 @@ namespace PhoneNumbers.Tests
 
             Assert.Equal("+34", countryInfo.CallingCode);
             Assert.IsType<ESPhoneNumberFormatter>(countryInfo.Formatter);
-            Assert.True(countryInfo.HasNationalDiallingCodes);
+            Assert.True(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("ES", countryInfo.Iso3166Code);
             Assert.Equal("Spain", countryInfo.Name);
@@ -261,7 +261,7 @@ namespace PhoneNumbers.Tests
 
             Assert.Equal("+44", countryInfo.CallingCode);
             Assert.Same(GBPhoneNumberFormatter.Instance, countryInfo.Formatter);
-            Assert.True(countryInfo.HasNationalDiallingCodes);
+            Assert.True(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("GB", countryInfo.Iso3166Code);
             Assert.Equal("United Kingdom", countryInfo.Name);
@@ -323,7 +323,7 @@ namespace PhoneNumbers.Tests
 
             Assert.Null(countryInfo.CallingCode);
             Assert.Same(PhoneNumberFormatter.Default, countryInfo.Formatter);
-            Assert.False(countryInfo.HasNationalDiallingCodes);
+            Assert.False(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Null(countryInfo.Iso3166Code);
             Assert.Null(countryInfo.Name);

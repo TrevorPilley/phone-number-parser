@@ -19,7 +19,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("710999999", "710", "999999")]
         [InlineData("799000000", "799", "000000")]
         [InlineData("799999999", "799", "999999")]
-        public void Parse_Known_MobilePhoneNumber(string value, string nationalDiallingCode, string subscriberNumber)
+        public void Parse_Known_MobilePhoneNumber(string value, string NationalDestinationCode, string subscriberNumber)
         {
             var parseResult = _parser.Parse(value);
             parseResult.ThrowIfFailure();
@@ -34,14 +34,14 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.False(mobilePhoneNumber.IsDataOnly);
             Assert.False(mobilePhoneNumber.IsPager);
             Assert.False(mobilePhoneNumber.IsVirtual);
-            Assert.Equal(nationalDiallingCode, mobilePhoneNumber.NationalDiallingCode);
+            Assert.Equal(NationalDestinationCode, mobilePhoneNumber.NationalDestinationCode);
             Assert.Equal(subscriberNumber, mobilePhoneNumber.SubscriberNumber);
         }
 
         [Theory]
         [InlineData("700000000", "700", "000000")]
         [InlineData("700999999", "700", "999999")]
-        public void Parse_Known_MobilePhoneNumber_Virtual(string value, string nationalDiallingCode, string subscriberNumber)
+        public void Parse_Known_MobilePhoneNumber_Virtual(string value, string NationalDestinationCode, string subscriberNumber)
         {
             var parseResult = _parser.Parse(value);
             parseResult.ThrowIfFailure();
@@ -56,7 +56,7 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.False(mobilePhoneNumber.IsDataOnly);
             Assert.False(mobilePhoneNumber.IsPager);
             Assert.True(mobilePhoneNumber.IsVirtual);
-            Assert.Equal(nationalDiallingCode, mobilePhoneNumber.NationalDiallingCode);
+            Assert.Equal(NationalDestinationCode, mobilePhoneNumber.NationalDestinationCode);
             Assert.Equal(subscriberNumber, mobilePhoneNumber.SubscriberNumber);
         }
     }

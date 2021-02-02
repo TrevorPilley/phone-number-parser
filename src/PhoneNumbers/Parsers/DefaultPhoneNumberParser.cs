@@ -52,7 +52,7 @@ namespace PhoneNumbers.Parsers
             string? sn = null;
             CountryNumber? countryNumber = null;
 
-            if (Country.HasNationalDiallingCodes)
+            if (Country.HasNationalDestinationCodes)
             {
                 foreach (var len in Country.NdcLengths)
                 {

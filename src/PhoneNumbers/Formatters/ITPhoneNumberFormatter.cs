@@ -14,22 +14,22 @@ namespace PhoneNumbers.Formatters
         /// <inheritdoc/>
         protected override string FormatDisplay(PhoneNumber phoneNumber)
         {
-            if (phoneNumber.NationalDiallingCode![0] == '0' && phoneNumber.NationalDiallingCode!.Length == 2)
+            if (phoneNumber.NationalDestinationCode![0] == '0' && phoneNumber.NationalDestinationCode!.Length == 2)
             {
-                return $"{phoneNumber.NationalDiallingCode} {phoneNumber.SubscriberNumber.Substring(0, 4)} {phoneNumber.SubscriberNumber.Substring(4)}";
+                return $"{phoneNumber.NationalDestinationCode} {phoneNumber.SubscriberNumber.Substring(0, 4)} {phoneNumber.SubscriberNumber.Substring(4)}";
             }
 
-            if (phoneNumber.NationalDiallingCode![0] == '0' && phoneNumber.NationalDiallingCode.Length == 3)
+            if (phoneNumber.NationalDestinationCode![0] == '0' && phoneNumber.NationalDestinationCode.Length == 3)
             {
-                return $"{phoneNumber.NationalDiallingCode} {phoneNumber.SubscriberNumber.Substring(0, 3)} {phoneNumber.SubscriberNumber.Substring(3)}";
+                return $"{phoneNumber.NationalDestinationCode} {phoneNumber.SubscriberNumber.Substring(0, 3)} {phoneNumber.SubscriberNumber.Substring(3)}";
             }
 
-            if (phoneNumber.NationalDiallingCode![0] == '3')
+            if (phoneNumber.NationalDestinationCode![0] == '3')
             {
-                return $"{phoneNumber.NationalDiallingCode}{phoneNumber.SubscriberNumber.Substring(0, 1)} {phoneNumber.SubscriberNumber.Substring(1)}";
+                return $"{phoneNumber.NationalDestinationCode}{phoneNumber.SubscriberNumber.Substring(0, 1)} {phoneNumber.SubscriberNumber.Substring(1)}";
             }
 
-            return $"{phoneNumber.NationalDiallingCode} {phoneNumber.SubscriberNumber}";
+            return $"{phoneNumber.NationalDestinationCode} {phoneNumber.SubscriberNumber}";
         }
     }
 }

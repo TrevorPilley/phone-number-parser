@@ -14,7 +14,7 @@ namespace PhoneNumbers.Tests
             Assert.Equal(countryInfo, phoneNumber.Country);
             Assert.True(phoneNumber.IsFreephone);
             Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, phoneNumber.PhoneNumberKind);
-            Assert.Equal("7654", phoneNumber.NationalDiallingCode);
+            Assert.Equal("7654", phoneNumber.NationalDestinationCode);
             Assert.Equal("112233", phoneNumber.SubscriberNumber);
         }
 

@@ -27,7 +27,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07624999999", "7624", "999999")]
         [InlineData("07924000000", "7924", "000000")]
         [InlineData("07924999999", "7924", "999999")]
-        public void Parse_Known_MobilePhoneNumber(string value, string nationalDiallingCode, string subscriberNumber)
+        public void Parse_Known_MobilePhoneNumber(string value, string NationalDestinationCode, string subscriberNumber)
         {
             var parseResult = _parser.Parse(value);
             parseResult.ThrowIfFailure();
@@ -42,7 +42,7 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.False(mobilePhoneNumber.IsDataOnly);
             Assert.False(mobilePhoneNumber.IsPager);
             Assert.False(mobilePhoneNumber.IsVirtual);
-            Assert.Equal(nationalDiallingCode, mobilePhoneNumber.NationalDiallingCode);
+            Assert.Equal(NationalDestinationCode, mobilePhoneNumber.NationalDestinationCode);
             Assert.Equal(subscriberNumber, mobilePhoneNumber.SubscriberNumber);
         }
     }
