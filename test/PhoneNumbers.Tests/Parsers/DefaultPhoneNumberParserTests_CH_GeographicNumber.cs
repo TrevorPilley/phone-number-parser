@@ -21,7 +21,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0269299999", "26", "9299999", "Fribourg")]
         [InlineData("0272020000", "27", "2020000", "Valais")]
         [InlineData("0279799999", "27", "9799999", "Valais")]
-        public void Parse_Known_GeographicPhoneNumber_2X_AreaCode(string value, string areaCode, string localNumber, string geographicArea)
+        public void Parse_Known_GeographicPhoneNumber_2X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
         {
             var parseResult = _parser.Parse(value);
             parseResult.ThrowIfFailure();
@@ -32,10 +32,10 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<GeographicPhoneNumber>(phoneNumber);
 
             var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
-            Assert.Equal(areaCode, geographicPhoneNumber.AreaCode);
             Assert.Equal(CountryInfo.Switzerland, geographicPhoneNumber.Country);
             Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
-            Assert.Equal(localNumber, geographicPhoneNumber.LocalNumber);
+            Assert.Equal(NationalDestinationCode, geographicPhoneNumber.NationalDestinationCode);
+            Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
         }
 
         [Theory]
@@ -47,7 +47,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0339829999", "33", "9829999", "Bernese Oberland")]
         [InlineData("0344000000", "34", "4000000", "Bern-Emme")]
         [InlineData("0345889999", "34", "5889999", "Bern-Emme")]
-        public void Parse_Known_GeographicPhoneNumber_3X_AreaCode(string value, string areaCode, string localNumber, string geographicArea)
+        public void Parse_Known_GeographicPhoneNumber_3X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
         {
             var parseResult = _parser.Parse(value);
             parseResult.ThrowIfFailure();
@@ -58,10 +58,10 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<GeographicPhoneNumber>(phoneNumber);
 
             var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
-            Assert.Equal(areaCode, geographicPhoneNumber.AreaCode);
             Assert.Equal(CountryInfo.Switzerland, geographicPhoneNumber.Country);
             Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
-            Assert.Equal(localNumber, geographicPhoneNumber.LocalNumber);
+            Assert.Equal(NationalDestinationCode, geographicPhoneNumber.NationalDestinationCode);
+            Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
         }
 
         [Theory]
@@ -71,7 +71,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0439999999", "43", "9999999", "Zürich")]
         [InlineData("0442000000", "44", "2000000", "Zürich")]
         [InlineData("0449999999", "44", "9999999", "Zürich")]
-        public void Parse_Known_GeographicPhoneNumber_4X_AreaCode(string value, string areaCode, string localNumber, string geographicArea)
+        public void Parse_Known_GeographicPhoneNumber_4X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
         {
             var parseResult = _parser.Parse(value);
             parseResult.ThrowIfFailure();
@@ -82,10 +82,10 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<GeographicPhoneNumber>(phoneNumber);
 
             var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
-            Assert.Equal(areaCode, geographicPhoneNumber.AreaCode);
             Assert.Equal(CountryInfo.Switzerland, geographicPhoneNumber.Country);
             Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
-            Assert.Equal(localNumber, geographicPhoneNumber.LocalNumber);
+            Assert.Equal(NationalDestinationCode, geographicPhoneNumber.NationalDestinationCode);
+            Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
         }
 
         [Theory]
@@ -95,7 +95,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0556549999", "55", "6549999", "Rapperswil")]
         [InlineData("0562000000", "56", "2000000", "Baden, Zurzach")]
         [InlineData("0566789999", "56", "6789999", "Baden, Zurzach")]
-        public void Parse_Known_GeographicPhoneNumber_5X_AreaCode(string value, string areaCode, string localNumber, string geographicArea)
+        public void Parse_Known_GeographicPhoneNumber_5X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
         {
             var parseResult = _parser.Parse(value);
             parseResult.ThrowIfFailure();
@@ -106,10 +106,10 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<GeographicPhoneNumber>(phoneNumber);
 
             var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
-            Assert.Equal(areaCode, geographicPhoneNumber.AreaCode);
             Assert.Equal(CountryInfo.Switzerland, geographicPhoneNumber.Country);
             Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
-            Assert.Equal(localNumber, geographicPhoneNumber.LocalNumber);
+            Assert.Equal(NationalDestinationCode, geographicPhoneNumber.NationalDestinationCode);
+            Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
         }
 
         [Theory]
@@ -117,7 +117,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0619999999", "61", "9999999", "Basel")]
         [InlineData("0622000000", "62", "2000000", "Olten-Langenthal(Oberaargau)-Aargau-West")]
         [InlineData("0629689999", "62", "9689999", "Olten-Langenthal(Oberaargau)-Aargau-West")]
-        public void Parse_Known_GeographicPhoneNumber_6X_AreaCode(string value, string areaCode, string localNumber, string geographicArea)
+        public void Parse_Known_GeographicPhoneNumber_6X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
         {
             var parseResult = _parser.Parse(value);
             parseResult.ThrowIfFailure();
@@ -128,16 +128,16 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<GeographicPhoneNumber>(phoneNumber);
 
             var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
-            Assert.Equal(areaCode, geographicPhoneNumber.AreaCode);
             Assert.Equal(CountryInfo.Switzerland, geographicPhoneNumber.Country);
             Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
-            Assert.Equal(localNumber, geographicPhoneNumber.LocalNumber);
+            Assert.Equal(NationalDestinationCode, geographicPhoneNumber.NationalDestinationCode);
+            Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
         }
 
         [Theory]
         [InlineData("0712200000", "71", "2200000", "St. Gallen")]
         [InlineData("0719999999", "71", "9999999", "St. Gallen")]
-        public void Parse_Known_GeographicPhoneNumber_7X_AreaCode(string value, string areaCode, string localNumber, string geographicArea)
+        public void Parse_Known_GeographicPhoneNumber_7X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
         {
             var parseResult = _parser.Parse(value);
             parseResult.ThrowIfFailure();
@@ -148,16 +148,16 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<GeographicPhoneNumber>(phoneNumber);
 
             var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
-            Assert.Equal(areaCode, geographicPhoneNumber.AreaCode);
             Assert.Equal(CountryInfo.Switzerland, geographicPhoneNumber.Country);
             Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
-            Assert.Equal(localNumber, geographicPhoneNumber.LocalNumber);
+            Assert.Equal(NationalDestinationCode, geographicPhoneNumber.NationalDestinationCode);
+            Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
         }
 
         [Theory]
         [InlineData("0812500000", "81", "2500000", "Chur")]
         [InlineData("0819499999", "81", "9499999", "Chur")]
-        public void Parse_Known_GeographicPhoneNumber_8X_AreaCode(string value, string areaCode, string localNumber, string geographicArea)
+        public void Parse_Known_GeographicPhoneNumber_8X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
         {
             var parseResult = _parser.Parse(value);
             parseResult.ThrowIfFailure();
@@ -168,16 +168,16 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<GeographicPhoneNumber>(phoneNumber);
 
             var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
-            Assert.Equal(areaCode, geographicPhoneNumber.AreaCode);
             Assert.Equal(CountryInfo.Switzerland, geographicPhoneNumber.Country);
             Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
-            Assert.Equal(localNumber, geographicPhoneNumber.LocalNumber);
+            Assert.Equal(NationalDestinationCode, geographicPhoneNumber.NationalDestinationCode);
+            Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
         }
 
         [Theory]
         [InlineData("0912000000", "91", "2000000", "Ticino, Moesa")]
         [InlineData("0919999999", "91", "9999999", "Ticino, Moesa")]
-        public void Parse_Known_GeographicPhoneNumber_9X_AreaCode(string value, string areaCode, string localNumber, string geographicArea)
+        public void Parse_Known_GeographicPhoneNumber_9X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
         {
             var parseResult = _parser.Parse(value);
             parseResult.ThrowIfFailure();
@@ -188,10 +188,10 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<GeographicPhoneNumber>(phoneNumber);
 
             var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
-            Assert.Equal(areaCode, geographicPhoneNumber.AreaCode);
             Assert.Equal(CountryInfo.Switzerland, geographicPhoneNumber.Country);
             Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
-            Assert.Equal(localNumber, geographicPhoneNumber.LocalNumber);
+            Assert.Equal(NationalDestinationCode, geographicPhoneNumber.NationalDestinationCode);
+            Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
         }
     }
 }
