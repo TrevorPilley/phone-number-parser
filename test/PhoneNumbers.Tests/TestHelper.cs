@@ -22,5 +22,8 @@ namespace PhoneNumbers.Tests
                 NsnLengths = new ReadOnlyCollection<int>(nsnLengths ?? Array.Empty<int>()),
                 TrunkPrefix = trunkPrefix,
             };
+
+        internal static PhoneNumber CreateNonGeographicPhoneNumber(string trunkPrefix, string ndc, string sn) =>
+            new NonGeographicPhoneNumber(CreateCountryInfo(trunkPrefix: trunkPrefix), PhoneNumberHint.None, $"{trunkPrefix}{ndc}{sn}", ndc, sn);
     }
 }

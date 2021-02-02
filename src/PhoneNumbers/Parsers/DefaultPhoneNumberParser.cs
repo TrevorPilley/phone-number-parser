@@ -99,6 +99,7 @@ namespace PhoneNumbers.Parsers
                         new GeographicPhoneNumber(
                             Country,
                             areaAndNumber.CountryNumber.Hint,
+                            nsnValue,
                             areaAndNumber.NationalDiallingCode!,
                             areaAndNumber.SubscriberNumber!,
                             areaAndNumber.CountryNumber.GeographicArea!)),
@@ -108,6 +109,7 @@ namespace PhoneNumbers.Parsers
                         new MobilePhoneNumber(
                             Country,
                             areaAndNumber.CountryNumber.Hint,
+                            nsnValue,
                             areaAndNumber.NationalDiallingCode,
                             areaAndNumber.SubscriberNumber!)),
 
@@ -116,6 +118,7 @@ namespace PhoneNumbers.Parsers
                         new NonGeographicPhoneNumber(
                             Country,
                             areaAndNumber.CountryNumber.Hint,
+                            nsnValue,
                             areaAndNumber.NationalDiallingCode,
                             areaAndNumber.SubscriberNumber!)),
 
