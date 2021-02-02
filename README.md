@@ -43,6 +43,7 @@ phoneNumber.Country.Iso3166Code;                // GB
 phoneNumber.Country.Name;                       // United Kingdom
 phoneNumber.Country.TrunkPrefix;                // 0
 phoneNumber.NationalDiallingCode;               // 114
+phoneNumber.NationalSignificantNumber           // 1142726444
 phoneNumber.SubscriberNumber                    // 2726444
 phoneNumber.PhoneNumberKind;                    // PhoneNumberKind.GeographicPhoneNumber
 
