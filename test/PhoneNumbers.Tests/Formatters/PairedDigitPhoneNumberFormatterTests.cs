@@ -15,9 +15,6 @@ namespace PhoneNumbers.Tests.Formatters
         [InlineData("0", null, "122334455", "01 22 33 44 55")]
         [InlineData("0", "122", "334455", "01 22 33 44 55")]
         public void Format_Display(string trunkPrefix, string areaCode, string localNumber, string expected) =>
-            Assert.Equal(expected, _formatter.Format(GetPhoneNumber(trunkPrefix, areaCode, localNumber), "D"));
-
-        private static PhoneNumber GetPhoneNumber(string trunkPrefix, string areaCode, string localNumber) =>
-            new NonGeographicPhoneNumber(TestHelper.CreateCountryInfo(trunkPrefix: trunkPrefix), PhoneNumberHint.None, areaCode, localNumber);
+            Assert.Equal(expected, _formatter.Format(TestHelper.CreateNonGeographicPhoneNumber(trunkPrefix, areaCode, localNumber), "D"));
     }
 }

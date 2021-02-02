@@ -17,11 +17,13 @@ namespace PhoneNumbers
         /// </summary>
         /// <param name="countryInfo">The <see cref="CountryInfo"/> for the phone number.</param>
         /// <param name="phoneNumberHint">The <see cref="PhoneNumberHint"/> for the phone number.</param>
+        /// <param name="nationalSignificantNumber">The national significant number of the phone number.</param>
         /// <param name="nationalDestinationCode">The national destination code of the phone number.</param>
         /// <param name="subscriberNumber">The subscriber number of the phone number.</param>
         protected PhoneNumber(
             CountryInfo countryInfo,
             PhoneNumberHint phoneNumberHint,
+            string nationalSignificantNumber,
             string? nationalDestinationCode,
             string subscriberNumber)
         {
@@ -30,12 +32,17 @@ namespace PhoneNumbers
                 throw new ArgumentNullException(nameof(countryInfo));
             }
 
+            if (string.IsNullOrWhiteSpace(nationalSignificantNumber))
+            {
+                throw new ArgumentException($"'{nameof(nationalSignificantNumber)}' cannot be null or whitespace.", nameof(nationalSignificantNumber));
+            }
+
             if (string.IsNullOrWhiteSpace(subscriberNumber))
             {
                 throw new ArgumentException($"'{nameof(subscriberNumber)}' cannot be null or whitespace.", nameof(subscriberNumber));
             }
 
-            (Country, Hint, NationalDestinationCode, SubscriberNumber) = (countryInfo, phoneNumberHint, nationalDestinationCode, subscriberNumber);
+            (Country, Hint, NationalSignificantNumber, NationalDestinationCode, SubscriberNumber) = (countryInfo, phoneNumberHint, nationalSignificantNumber, nationalDestinationCode, subscriberNumber);
         }
 
         /// <summary>
@@ -60,6 +67,12 @@ namespace PhoneNumbers
         /// </summary>
         /// <remarks>May also be referred to as area code or mobile network code.</remarks>
         public string? NationalDestinationCode { get; }
+
+        /// <summary>
+        /// Gets the national significant number of the phone number.
+        /// </summary>
+        /// <remarks>Typically this is the number excluding the country code or trunk prefix.</remarks>
+        public string NationalSignificantNumber { get; }
 
         /// <summary>
         /// Gets the <see cref="PhoneNumberKind"/>.

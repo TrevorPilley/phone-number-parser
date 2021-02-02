@@ -12,16 +12,18 @@ namespace PhoneNumbers
         /// </summary>
         /// <param name="countryInfo">The <see cref="CountryInfo"/> for the phone number.</param>
         /// <param name="phoneNumberHint">The <see cref="PhoneNumberHint"/> for the phone number.</param>
+        /// <param name="nationalSignificantNumber">The national significant number of the phone number.</param>
         /// <param name="nationalDestinationCode">The national destination code of the phone number.</param>
         /// <param name="subscriberNumber">The subscriber number of the phone number.</param>
         /// <param name="geographicArea">The name of the geographic area the phone number the area code is allocated to.</param>
         internal GeographicPhoneNumber(
             CountryInfo countryInfo,
             PhoneNumberHint phoneNumberHint,
+            string nationalSignificantNumber,
             string nationalDestinationCode,
             string subscriberNumber,
             string geographicArea)
-            : base(countryInfo, phoneNumberHint, nationalDestinationCode, subscriberNumber)
+            : base(countryInfo, phoneNumberHint, nationalSignificantNumber, nationalDestinationCode, subscriberNumber)
         {
             if (string.IsNullOrWhiteSpace(geographicArea))
             {
@@ -79,12 +81,13 @@ namespace PhoneNumbers
                 GeographicArea.Equals(other.GeographicArea, StringComparison.Ordinal) &&
                 PhoneNumberKind.Equals(other.PhoneNumberKind) &&
                 (NationalDestinationCode == null && other.NationalDestinationCode == null || NationalDestinationCode!.Equals(other.NationalDestinationCode, StringComparison.Ordinal)) &&
+                NationalSignificantNumber.Equals(other.NationalSignificantNumber, StringComparison.Ordinal) &&
                 SubscriberNumber.Equals(other.SubscriberNumber, StringComparison.Ordinal);
         }
 
         /// <inheritdoc/>
         [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
         public override int GetHashCode() =>
-            HashCode.Combine(Hint, Country, GeographicArea, PhoneNumberKind, NationalDestinationCode, SubscriberNumber);
+            HashCode.Combine(Hint, Country, GeographicArea, PhoneNumberKind, NationalSignificantNumber, NationalDestinationCode, SubscriberNumber);
     }
 }
