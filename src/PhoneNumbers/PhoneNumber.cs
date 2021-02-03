@@ -7,9 +7,6 @@ namespace PhoneNumbers
     /// <summary>
     /// The base class representing a <see cref="PhoneNumber"/>.
     /// </summary>
-    /// <remarks>
-    /// https://en.wikipedia.org/wiki/List_of_country_calling_codes
-    /// </remarks>
     public abstract class PhoneNumber
     {
         /// <summary>
@@ -179,15 +176,18 @@ namespace PhoneNumbers
         /// <returns><c>true</c> if value was converted successfully; otherwise, <c>false</c>.</returns>
         public static bool TryParse(string value, ParseOptions options, out PhoneNumber? phoneNumber)
         {
-            foreach (var country in options?.GetCountries(value) ?? Enumerable.Empty<CountryInfo>())
+            if (options is not null)
             {
-                var result = options!.Factory.GetParser(country).Parse(value);
-
-                phoneNumber = result.PhoneNumber;
-
-                if (result.PhoneNumber != null)
+                foreach (var country in options?.GetCountries(value))
                 {
-                    return true;
+                    var result = options!.Factory.GetParser(country).Parse(value);
+
+                    phoneNumber = result.PhoneNumber;
+
+                    if (result.PhoneNumber != null)
+                    {
+                        return true;
+                    }
                 }
             }
 
