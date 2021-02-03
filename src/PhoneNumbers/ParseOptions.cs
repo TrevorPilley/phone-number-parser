@@ -29,6 +29,12 @@ namespace PhoneNumbers
             .ToList();
 
         /// <summary>
+        /// Gets the supported <see cref="CountryInfo"/>s for which the specified value is potentially an international number.
+        /// </summary>
+        public IEnumerable<CountryInfo> GetCountries(string value) =>
+            Countries.Where(x => x.IsInternationalNumber(value));
+
+        /// <summary>
         /// Gets the supported <see cref="CountryInfo"/> with the specified ISO 3166 Aplha-2 code.
         /// </summary>
         public CountryInfo? GetCountry(string countryCode) =>
