@@ -326,13 +326,13 @@ namespace PhoneNumbers
         /// <summary>
         /// Gets the permitted lenghts of the national significant number.
         /// </summary>
-        private ReadOnlyCollection<int> NsnLengths { get; init; } = new(Array.Empty<int>());
+        internal ReadOnlyCollection<int> NsnLengths { get; init; } = new(Array.Empty<int>());
 
         internal bool IsInternationalNumber(string value) =>
             value?.StartsWith(CallingCode, StringComparison.Ordinal) == true;
         
-        internal bool IsValidNsnLength(int length) =>
-            NsnLengths.Contains(length);
+        internal bool IsValidNsnLength(string value) =>
+            NsnLengths.Contains(value?.Length);
 
         /// <summary>
         /// Reads the national significant number (NSN) from the specified phone number value.
