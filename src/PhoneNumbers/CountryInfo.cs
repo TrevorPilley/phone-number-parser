@@ -332,7 +332,7 @@ namespace PhoneNumbers
             value?.StartsWith(CallingCode, StringComparison.Ordinal) == true;
         
         internal bool IsValidNsnLength(int length) =>
-            NsnLengths.Contains(ength);
+            NsnLengths.Contains(length);
 
         /// <summary>
         /// Reads the national significant number (NSN) from the specified phone number value.
