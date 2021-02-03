@@ -148,7 +148,7 @@ namespace PhoneNumbers
                 throw new ArgumentNullException(nameof(options));
             }
 
-            var country = options.Countries.SingleOrDefault(x => x.Iso3166Code == countryCode);
+            var country = options.GetCountry(countryCode);
 
             if (country == null)
             {
@@ -215,7 +215,7 @@ namespace PhoneNumbers
         /// <returns><c>true</c> if value was converted successfully; otherwise, <c>false</c>.</returns>
         public static bool TryParse(string value, string countryCode, ParseOptions options, out PhoneNumber? phoneNumber)
         {
-            var country = options?.Countries.SingleOrDefault(x => x.Iso3166Code == countryCode);
+            var country = options?.GetCountry(countryCode);
 
             if (country != null)
             {
