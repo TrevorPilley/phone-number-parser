@@ -35,6 +35,19 @@ namespace PhoneNumbers
         public static CountryInfo FR => France;
 
         /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Belgium.
+        /// </summary>
+        public static CountryInfo Belgium { get; } = new()
+        {
+            CallingCode = "+32",
+            Iso3166Code = "BE",
+            Name = "Belgium",
+            NdcLengths = new ReadOnlyCollection<int>(new[] { 2, 1 }),
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9 }),
+            TrunkPrefix = "0",
+        };
+
+        /// <summary>
         /// Gets the <see cref="CountryInfo"/> for France.
         /// </summary>
         public static CountryInfo France { get; } = new()
