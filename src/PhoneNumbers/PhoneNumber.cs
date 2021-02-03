@@ -180,7 +180,7 @@ namespace PhoneNumbers
             {
                 foreach (var country in options.GetCountries(value))
                 {
-                    var result = options!.Factory.GetParser(country).Parse(value);
+                    var result = options.Factory.GetParser(country).Parse(value);
 
                     phoneNumber = result.PhoneNumber;
 
