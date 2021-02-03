@@ -138,6 +138,7 @@ These were used as the references for the phone number data for each country.
 
 ### Belgium
 
+- https://www.bipt.be/operators/publication/database-with-reserved-and-allocated-numbers
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Belgium
 
 ### France
