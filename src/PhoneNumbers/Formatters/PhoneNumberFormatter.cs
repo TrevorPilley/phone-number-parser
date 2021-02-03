@@ -82,7 +82,7 @@ namespace PhoneNumbers.Formatters
         /// </summary>
         /// <param name="phoneNumber">The phone number to format.</param>
         /// <returns>The string representation of the phone number.</returns>
-        private static string FormatNationa(PhoneNumber phoneNumber) =>
+        private static string FormatNational(PhoneNumber phoneNumber) =>
             $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.NationalSignificantNumber}";
     }
 }
