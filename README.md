@@ -177,6 +177,7 @@ These were used as the references for the phone number data for each country.
 
 ### Netherlands
 
+- https://www.government.nl/documents/annual-reports/2016/02/16/numbering-plan-telephony-and-isdn-services
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_the_Netherlands
 
 ### San Marino
