@@ -36,7 +36,7 @@ namespace PhoneNumbers.Parsers
 
         /// <inheritdoc/>
         /// <remarks>By the time this method is called, nsnValue will have been validated against the <see cref="CountryInfo"/>.NsnLengths and contain digits only.</remarks>
-        protected override (string? NationalDiallingCode, string? SubscriberNumber, CountryNumber? CountryNumber) ParseAreaAndNumber(string nsnValue)
+        protected override (string? NationalDiallingCode, string? SubscriberNumber, CountryNumber? CountryNumber) ParseNdcAndSn(string nsnValue)
         {
             var ndcLength = 0;
             PhoneNumberKind phoneNumberKind = default;

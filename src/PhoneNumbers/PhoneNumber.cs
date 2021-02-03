@@ -7,9 +7,6 @@ namespace PhoneNumbers
     /// <summary>
     /// The base class representing a <see cref="PhoneNumber"/>.
     /// </summary>
-    /// <remarks>
-    /// https://en.wikipedia.org/wiki/List_of_country_calling_codes
-    /// </remarks>
     public abstract class PhoneNumber
     {
         /// <summary>
@@ -112,7 +109,7 @@ namespace PhoneNumbers
                 throw new ArgumentNullException(nameof(options));
             }
 
-            foreach (var country in options.Countries.Where(x => x.IsInternationalNumber(value)))
+            foreach (var country in options.GetCountries(value))
             {
                 var result = options!.Factory.GetParser(country).Parse(value);
 
@@ -148,7 +145,7 @@ namespace PhoneNumbers
                 throw new ArgumentNullException(nameof(options));
             }
 
-            var country = options.Countries.SingleOrDefault(x => x.Iso3166Code == countryCode);
+            var country = options.GetCountry(countryCode);
 
             if (country == null)
             {
@@ -179,15 +176,18 @@ namespace PhoneNumbers
         /// <returns><c>true</c> if value was converted successfully; otherwise, <c>false</c>.</returns>
         public static bool TryParse(string value, ParseOptions options, out PhoneNumber? phoneNumber)
         {
-            foreach (var country in options?.Countries.Where(x => x.IsInternationalNumber(value)) ?? Enumerable.Empty<CountryInfo>())
+            if (options is not null)
             {
-                var result = options!.Factory.GetParser(country).Parse(value);
-
-                phoneNumber = result.PhoneNumber;
-
-                if (result.PhoneNumber != null)
+                foreach (var country in options.GetCountries(value))
                 {
-                    return true;
+                    var result = options.Factory.GetParser(country).Parse(value);
+
+                    phoneNumber = result.PhoneNumber;
+
+                    if (result.PhoneNumber != null)
+                    {
+                        return true;
+                    }
                 }
             }
 
@@ -215,7 +215,7 @@ namespace PhoneNumbers
         /// <returns><c>true</c> if value was converted successfully; otherwise, <c>false</c>.</returns>
         public static bool TryParse(string value, string countryCode, ParseOptions options, out PhoneNumber? phoneNumber)
         {
-            var country = options?.Countries.SingleOrDefault(x => x.Iso3166Code == countryCode);
+            var country = options?.GetCountry(countryCode);
 
             if (country != null)
             {

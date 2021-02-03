@@ -303,6 +303,12 @@ namespace PhoneNumbers
         public string Name { get; init; } = null!;
 
         /// <summary>
+        /// Gets a value indicating whether the calling code is shared with another country.
+        /// </summary>
+        /// <remarks>For example Guernsey, Jersey and the Isle of Man share the United Kingdom +44 calling code.</remarks>
+        public bool SharesCallingCode { get; init; }
+
+        /// <summary>
         /// Gets the trunk prefix used by the country, if applicable.
         /// </summary>
         public string? TrunkPrefix { get; init; }
@@ -322,13 +328,11 @@ namespace PhoneNumbers
         /// </summary>
         internal ReadOnlyCollection<int> NsnLengths { get; init; } = new(Array.Empty<int>());
 
-        /// <summary>
-        /// Gets a value indicating whether the calling code is shared with another country.
-        /// </summary>
-        internal bool SharesCallingCode { get; init; }
-
         internal bool IsInternationalNumber(string value) =>
             value?.StartsWith(CallingCode, StringComparison.Ordinal) == true;
+        
+        internal bool IsValidNsnLength(string value) =>
+            NsnLengths.Contains(value?.Length ?? 0);
 
         /// <summary>
         /// Reads the national significant number (NSN) from the specified phone number value.
