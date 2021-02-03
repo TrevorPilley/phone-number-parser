@@ -112,7 +112,7 @@ namespace PhoneNumbers
                 throw new ArgumentNullException(nameof(options));
             }
 
-            foreach (var country in options.Countries.Where(x => x.IsInternationalNumber(value)))
+            foreach (var country in options.GetCountries(value))
             {
                 var result = options!.Factory.GetParser(country).Parse(value);
 
@@ -179,7 +179,7 @@ namespace PhoneNumbers
         /// <returns><c>true</c> if value was converted successfully; otherwise, <c>false</c>.</returns>
         public static bool TryParse(string value, ParseOptions options, out PhoneNumber? phoneNumber)
         {
-            foreach (var country in options?.Countries.Where(x => x.IsInternationalNumber(value)) ?? Enumerable.Empty<CountryInfo>())
+            foreach (var country in options?.GetCountries(value) ?? Enumerable.Empty<CountryInfo>())
             {
                 var result = options!.Factory.GetParser(country).Parse(value);
 
