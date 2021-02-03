@@ -40,7 +40,7 @@ namespace PhoneNumbers
         public static CountryInfo France { get; } = new()
         {
             CallingCode = "+33",
-            Formatter = PairedDigitPhoneNumberFormatter.Instance,
+            Formatter = GroupedDigitPhoneNumberFormatter.Spaced2Digits,
             Iso3166Code = "FR",
             Name = "France",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
@@ -74,7 +74,7 @@ namespace PhoneNumbers
         public static CountryInfo HongKong { get; } = new()
         {
             CallingCode = "+852",
-            Formatter = FourSpaceFourPhoneNumberFormatter.Instance,
+            Formatter = GroupedDigitPhoneNumberFormatter.Spaced4Digits,
             InternationalCallPrefix = "001",
             Iso3166Code = "HK",
             Name = "Hong Kong",
@@ -170,7 +170,7 @@ namespace PhoneNumbers
         public static CountryInfo Macau { get; } = new()
         {
             CallingCode = "+853",
-            Formatter = FourSpaceFourPhoneNumberFormatter.Instance,
+            Formatter = GroupedDigitPhoneNumberFormatter.Spaced4Digits,
             Iso3166Code = "MO",
             Name = "Macau",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 8 }),
@@ -182,7 +182,7 @@ namespace PhoneNumbers
         public static CountryInfo Monaco { get; } = new()
         {
             CallingCode = "+377",
-            Formatter = PairedDigitPhoneNumberFormatter.Instance,
+            Formatter = GroupedDigitPhoneNumberFormatter.Spaced2Digits,
             Iso3166Code = "MC",
             Name = "Monaco",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9 }),
@@ -206,7 +206,7 @@ namespace PhoneNumbers
         public static CountryInfo Singapore { get; } = new()
         {
             CallingCode = "+65",
-            Formatter = FourSpaceFourPhoneNumberFormatter.Instance,
+            Formatter = GroupedDigitPhoneNumberFormatter.Spaced4Digits,
             InternationalCallPrefix = "001",
             Iso3166Code = "SG",
             Name = "Singapore",
@@ -219,7 +219,7 @@ namespace PhoneNumbers
         public static CountryInfo Spain { get; } = new()
         {
             CallingCode = "+34",
-            Formatter = new ESPhoneNumberFormatter(),
+            Formatter = GroupedDigitPhoneNumberFormatter.Spaced3Digits,
             Iso3166Code = "ES",
             Name = "Spain",
             NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
