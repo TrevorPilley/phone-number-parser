@@ -11,10 +11,19 @@ namespace PhoneNumbers.Formatters
         private readonly int _charsPerGroup;
         private readonly char _groupSeparator;
 
+        /// <summary>
+        /// Gets a <see cref="PhoneNumberFormatter"/> which outputs 'xx xx xx xx'.
+        /// </summary>
         internal static PhoneNumberFormatter Spaced2Digits { get; } = new GroupedDigitPhoneNumberFormatter(2, ' ');
 
+        /// <summary>
+        /// Gets a <see cref="PhoneNumberFormatter"/> which outputs 'xxx xxx xxx'.
+        /// </summary>
         internal static PhoneNumberFormatter Spaced3Digits { get; } = new GroupedDigitPhoneNumberFormatter(3, ' ');
 
+        /// <summary>
+        /// Gets a <see cref="PhoneNumberFormatter"/> which outputs 'xxxx xxxx'.
+        /// </summary>
         internal static PhoneNumberFormatter Spaced4Digits { get; } = new GroupedDigitPhoneNumberFormatter(4, ' ');
 
         private GroupedDigitPhoneNumberFormatter(int charsPerGroup, char groupSeparator) =>
