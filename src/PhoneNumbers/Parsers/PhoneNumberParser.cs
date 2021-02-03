@@ -28,7 +28,7 @@ namespace PhoneNumbers.Parsers
         {
             var nsnValue = Country.ReadNationalSignificantNumber(value);
 
-            if (!Country.NsnLengths.Contains(nsnValue.Length))
+            if (!Country.IsValidNsnLength(nsnValue.Length))
             {
                 return ParseResult.Failure(
                     $"The value must be a {Country.Iso3166Code} phone number starting {Country.CallingCode}{(Country.TrunkPrefix != null ? " or " + Country.TrunkPrefix : "")} and the national significant number of the phone number must be {string.Join(" or ", Country.NsnLengths)} digits in length.");
