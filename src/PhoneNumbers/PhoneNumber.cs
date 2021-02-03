@@ -178,7 +178,7 @@ namespace PhoneNumbers
         {
             if (options is not null)
             {
-                foreach (var country in options?.GetCountries(value))
+                foreach (var country in options.GetCountries(value))
                 {
                     var result = options!.Factory.GetParser(country).Parse(value);
 
