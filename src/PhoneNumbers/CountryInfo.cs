@@ -42,7 +42,7 @@ namespace PhoneNumbers
             CallingCode = "+32",
             Iso3166Code = "BE",
             Name = "Belgium",
-            NdcLengths = new ReadOnlyCollection<int>(new[] { 2, 1 }),
+            NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
             NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9 }),
             TrunkPrefix = "0",
         };
