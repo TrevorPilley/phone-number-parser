@@ -24,6 +24,6 @@ namespace PhoneNumbers.Tests
             };
 
         internal static PhoneNumber CreateNonGeographicPhoneNumber(string trunkPrefix, string ndc, string sn) =>
-            new NonGeographicPhoneNumber(CreateCountryInfo(trunkPrefix: trunkPrefix), PhoneNumberHint.None, $"{trunkPrefix}{ndc}{sn}", ndc, sn);
+            new NonGeographicPhoneNumber(CreateCountryInfo(trunkPrefix: trunkPrefix), PhoneNumberHint.None, $"{ndc}{sn}", ndc, sn);
     }
 }
