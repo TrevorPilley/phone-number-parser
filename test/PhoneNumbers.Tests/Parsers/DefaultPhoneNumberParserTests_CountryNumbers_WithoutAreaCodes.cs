@@ -79,7 +79,7 @@ namespace PhoneNumbers.Tests.Parsers
 
         [Fact]
         public void Parse_Invalid_Number() =>
-            Assert.Equal("The national significant number 05500 is not valid for a ZZ phone number.", _parser.Parse("05500").ParseError);
+            Assert.Equal("The national significant number 05500 is not valid for a Zulu phone number.", _parser.Parse("05500").ParseError);
 
         [Fact]
         public void Parse_MobilePhoneNumber()
