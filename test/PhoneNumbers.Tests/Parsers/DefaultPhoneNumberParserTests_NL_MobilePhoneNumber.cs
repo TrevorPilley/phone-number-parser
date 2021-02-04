@@ -13,8 +13,10 @@ namespace PhoneNumbers.Tests.Parsers
         [Theory]
         [InlineData("0610000000", "61", "0000000")]
         [InlineData("0619999999", "61", "9999999")]
+        [InlineData("0640000000", "64", "0000000")]
+        [InlineData("0649999999", "64", "9999999")]
         [InlineData("0650000000", "65", "0000000")]
-        [InlineData("0659999999", "65", "9999999")]
+        [InlineData("0655999999", "65", "5999999")]
         [InlineData("0680000000", "68", "0000000")]
         [InlineData("0689999999", "68", "9999999")]
         public void Parse_Known_MobilePhoneNumber(string value, string NationalDestinationCode, string subscriberNumber)

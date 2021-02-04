@@ -13,6 +13,10 @@ namespace PhoneNumbers.Tests.Parsers
         [Theory]
         [InlineData("0840000000", "84", "0000000")]
         [InlineData("0849999999", "84", "9999999")]
+        [InlineData("0850000000", "85", "0000000")]
+        [InlineData("0859999999", "85", "9999999")]
+        [InlineData("0870000000", "87", "0000000")]
+        [InlineData("0879999999", "87", "9999999")]
         [InlineData("0880000000", "88", "0000000")]
         [InlineData("0889999999", "88", "9999999")]
         public void Parse_Known_NonGeographicPhoneNumber_8X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
