@@ -31,13 +31,13 @@ namespace PhoneNumbers
         /// <summary>
         /// Gets the supported <see cref="CountryInfo"/> with the specified ISO 3166 Aplha-2 code.
         /// </summary>
-        public CountryInfo? GetCountryInfo(string countryCode) =>
+        internal CountryInfo? GetCountryInfo(string countryCode) =>
             Countries.SingleOrDefault(x => x.Iso3166Code == countryCode);
 
         /// <summary>
         /// Gets the supported <see cref="CountryInfo"/>s for which the specified value is potentially an international number.
         /// </summary>
-        public IEnumerable<CountryInfo> GetCountryInfos(string value) =>
+        internal IEnumerable<CountryInfo> GetCountryInfos(string value) =>
             Countries.Where(x => x.IsInternationalNumber(value));
 
         /// <summary>
