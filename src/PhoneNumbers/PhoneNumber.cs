@@ -109,9 +109,9 @@ namespace PhoneNumbers
                 throw new ArgumentNullException(nameof(options));
             }
 
-            foreach (var country in options.GetCountries(value))
+            foreach (var countryInfo in options.GetCountryInfos(value))
             {
-                var result = options!.Factory.GetParser(country).Parse(value);
+                var result = options!.Factory.GetParser(countryInfo).Parse(value);
 
                 if (result.PhoneNumber != null)
                 {
@@ -145,14 +145,14 @@ namespace PhoneNumbers
                 throw new ArgumentNullException(nameof(options));
             }
 
-            var country = options.GetCountry(countryCode);
+            var countryInfo = options.GetCountryInfo(countryCode);
 
-            if (country == null)
+            if (countryInfo == null)
             {
                 throw new ParseException($"The country code {countryCode} is not currently supported.");
             }
 
-            var result = options.Factory.GetParser(country).Parse(value);
+            var result = options.Factory.GetParser(countryInfo).Parse(value);
             result.ThrowIfFailure();
 
             return result.PhoneNumber!;
@@ -178,9 +178,9 @@ namespace PhoneNumbers
         {
             if (options is not null)
             {
-                foreach (var country in options.GetCountries(value))
+                foreach (var countryInfo in options.GetCountryInfos(value))
                 {
-                    var result = options.Factory.GetParser(country).Parse(value);
+                    var result = options.Factory.GetParser(countryInfo).Parse(value);
 
                     phoneNumber = result.PhoneNumber;
 
@@ -215,11 +215,11 @@ namespace PhoneNumbers
         /// <returns><c>true</c> if value was converted successfully; otherwise, <c>false</c>.</returns>
         public static bool TryParse(string value, string countryCode, ParseOptions options, out PhoneNumber? phoneNumber)
         {
-            var country = options?.GetCountry(countryCode);
+            var countryInfo = options?.GetCountryInfo(countryCode);
 
-            if (country != null)
+            if (countryInfo != null)
             {
-                var result = options!.Factory.GetParser(country).Parse(value);
+                var result = options!.Factory.GetParser(countryInfo).Parse(value);
 
                 phoneNumber = result.PhoneNumber;
                 return result.PhoneNumber != null;
