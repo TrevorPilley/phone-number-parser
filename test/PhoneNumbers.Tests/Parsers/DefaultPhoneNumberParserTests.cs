@@ -22,7 +22,7 @@ namespace PhoneNumbers.Tests.Parsers
             var parseResult = parser.Parse("8010");
 
             Assert.Equal(
-                $"The value must be a {countryInfo.Iso3166Code} phone number starting {countryInfo.CallingCode} or {countryInfo.TrunkPrefix} and the national significant number of the phone number must be 8 or 9 digits in length.",
+                $"The value must be a {countryInfo.Name} phone number starting {countryInfo.CallingCode} or {countryInfo.TrunkPrefix} and the national significant number of the phone number must be 8 or 9 digits in length.",
                 parseResult.ParseError);
         }
 
@@ -34,7 +34,7 @@ namespace PhoneNumbers.Tests.Parsers
             var parseResult = parser.Parse("8010");
 
             Assert.Equal(
-                $"The value must be a {countryInfo.Iso3166Code} phone number starting {countryInfo.CallingCode} and the national significant number of the phone number must be 8 or 9 digits in length.",
+                $"The value must be a {countryInfo.Name} phone number starting {countryInfo.CallingCode} and the national significant number of the phone number must be 8 or 9 digits in length.",
                 parseResult.ParseError);
         }
     }

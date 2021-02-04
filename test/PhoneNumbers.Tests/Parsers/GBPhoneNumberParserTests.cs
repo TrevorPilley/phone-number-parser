@@ -14,35 +14,35 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Returns_Failure_For_1XX_NationalDiallingCode_And_SubscriberNumber_Not_7_Digits()
         {
             var result = _parser.Parse("0113111222");
-            Assert.Equal("The national significant number 113111222 is not valid for a GB phone number.", result.ParseError);
+            Assert.Equal("The national significant number 113111222 is not valid for a United Kingdom phone number.", result.ParseError);
         }
 
         [Fact]
         public void Parse_Returns_Failure_For_2X_NationalDiallingCode_And_SubscriberNumber_Not_8_Digits()
         {
             var result = _parser.Parse("0201112222");
-            Assert.Equal("The national significant number 201112222 is not valid for a GB phone number.", result.ParseError);
+            Assert.Equal("The national significant number 201112222 is not valid for a United Kingdom phone number.", result.ParseError);
         }
 
         [Fact]
         public void Parse_Returns_Failure_For_3XX_NationalDiallingCode_And_SubscriberNumber_Not_7_Digits()
         {
             var result = _parser.Parse("0300111111");
-            Assert.Equal("The national significant number 300111111 is not valid for a GB phone number.", result.ParseError);
+            Assert.Equal("The national significant number 300111111 is not valid for a United Kingdom phone number.", result.ParseError);
         }
 
         [Fact]
         public void Parse_Returns_Failure_For_7XXX_NationalDiallingCode_And_SubscriberNumber_Not_6_Digits()
         {
             var result = _parser.Parse("0770012345");
-            Assert.Equal("The national significant number 770012345 is not valid for a GB phone number.", result.ParseError);
+            Assert.Equal("The national significant number 770012345 is not valid for a United Kingdom phone number.", result.ParseError);
         }
 
         [Fact]
         public void Parse_Returns_Failure_If_CallingCode_Invalid()
         {
             var result = _parser.Parse("+1111111111");
-            Assert.Equal($"The value must be a GB phone number starting +44 or 0 and the national significant number of the phone number must be {string.Join(" or ", CountryInfo.UnitedKingdom.NsnLengths)} digits in length.", result.ParseError);
+            Assert.Equal($"The value must be a United Kingdom phone number starting +44 or 0 and the national significant number of the phone number must be {string.Join(" or ", CountryInfo.UnitedKingdom.NsnLengths)} digits in length.", result.ParseError);
         }
 
         [Theory]
@@ -67,7 +67,7 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Returns_Failure_If_NationalDiallingCode_Invalid(string value)
         {
             var result = _parser.Parse(value);
-            Assert.Equal($"The national significant number {value.Substring(1)} is not valid for a GB phone number.", result.ParseError);
+            Assert.Equal($"The national significant number {value.Substring(1)} is not valid for a United Kingdom phone number.", result.ParseError);
         }
 
         [Theory]
@@ -82,7 +82,7 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Returns_Failure_If_Nsn_Incorrect_Length(string value)
         {
             var result = _parser.Parse(value);
-            Assert.Equal($"The value must be a GB phone number starting +44 or 0 and the national significant number of the phone number must be {string.Join(" or ", CountryInfo.UnitedKingdom.NsnLengths)} digits in length.", result.ParseError);
+            Assert.Equal($"The value must be a United Kingdom phone number starting +44 or 0 and the national significant number of the phone number must be {string.Join(" or ", CountryInfo.UnitedKingdom.NsnLengths)} digits in length.", result.ParseError);
         }
 
         [Theory]
@@ -93,7 +93,7 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Returns_Failure_If_ServiceType_Invalid(string value)
         {
             var result = _parser.Parse(value);
-            Assert.Equal($"The national significant number {value.Substring(1)} is not valid for a GB phone number.", result.ParseError);
+            Assert.Equal($"The national significant number {value.Substring(1)} is not valid for a United Kingdom phone number.", result.ParseError);
         }
 
         [Theory]
@@ -101,7 +101,7 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Returns_Failure_If_SubscriberNumber_Invalid_For_NationalDiallingCode(string value)
         {
             var result = _parser.Parse(value);
-            Assert.Equal($"The national significant number {value.Substring(1)} is not valid for a GB phone number.", result.ParseError);
+            Assert.Equal($"The national significant number {value.Substring(1)} is not valid for a United Kingdom phone number.", result.ParseError);
         }
 
         [Theory]
@@ -117,7 +117,7 @@ namespace PhoneNumbers.Tests.Parsers
         public void Parse_Returns_Failure_If_TrunkPrefix_Invalid(string value)
         {
             var result = _parser.Parse(value);
-            Assert.Equal($"The value must be a GB phone number starting +44 or 0 and the national significant number of the phone number must be {string.Join(" or ", CountryInfo.UnitedKingdom.NsnLengths)} digits in length.", result.ParseError);
+            Assert.Equal($"The value must be a United Kingdom phone number starting +44 or 0 and the national significant number of the phone number must be {string.Join(" or ", CountryInfo.UnitedKingdom.NsnLengths)} digits in length.", result.ParseError);
         }
     }
 }
