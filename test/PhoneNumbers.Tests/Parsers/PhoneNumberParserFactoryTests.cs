@@ -43,6 +43,10 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Netherlands));
 
         [Fact]
+        public void GetParser_For_CountryInfo_Portugal_Returns_GBPhoneNumberParser() =>
+            Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Portugal));
+
+        [Fact]
         public void GetParser_For_CountryInfo_SanMarino_Returns_GBPhoneNumberParser() =>
             Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.SanMarino));
 
