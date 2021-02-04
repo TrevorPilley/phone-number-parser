@@ -36,5 +36,33 @@ namespace PhoneNumbers.Tests
 
             Assert.DoesNotContain(CountryInfo.UnitedKingdom, parseOptions.Countries);
         }
+
+        [Fact]
+        public void GetCountryInfo_Does_Not_Exist() =>
+            Assert.Null(ParseOptions.Default.GetCountryInfo("ZZ"));
+
+        [Fact]
+        public void GetCountryInfo_Exists() =>
+            Assert.Same(CountryInfo.UnitedKingdom, ParseOptions.Default.GetCountryInfo("GB"));
+
+        [Fact]
+        public void GetCountryInfos_Does_Not_Exist() =>
+            Assert.Empty(ParseOptions.Default.GetCountryInfos("+422123456789"));
+
+        [Fact]
+        public void GetCountryInfos_Multiple_Results()
+        {
+            var countryInfos = ParseOptions.Default.GetCountryInfos("+441624696300");
+            Assert.Equal(4, countryInfos.Count());
+            Assert.All(countryInfos, x => Assert.Equal("+44", x.CallingCode));
+        }
+
+        [Fact]
+        public void GetCountryInfos_Single_Result()
+        {
+            var countryInfos = ParseOptions.Default.GetCountryInfos("+35340226969");
+            Assert.Single(countryInfos);
+            Assert.Same(CountryInfo.Ireland, countryInfos.Single());
+        }
     }
 }
