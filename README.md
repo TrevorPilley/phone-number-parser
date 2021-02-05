@@ -121,6 +121,7 @@ Italy          | IT            | +39          |              | Yes        | Yes 
 Jersey         | JE            | +44          | 0            | Yes        | Yes    |                        |                    |                      |                |
 Macau          | MO            | +853         |              |            | Yes    |                        |                    |                      | Yes            |
 Monaco         | MC            | +377         |              |            | Yes    |                        |                    |                      | Yes            |
+Netherlands    | NL            | +31          | 0            | Yes        | Yes    |                        | Yes                |                      | Yes            | Yes
 San Marino     | SM            | +378         |              | Yes        |        |                        |                    |                      | Yes            |
 Singapore      | SG            | +65          |              |            | Yes    |                        |                    |                      | Yes            |
 Spain          | ES            | +34          |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes
@@ -173,6 +174,11 @@ These were used as the references for the phone number data for each country.
 ### Monaco
 
 - https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200008D0008PDFE.pdf
+
+### Netherlands
+
+- https://www.government.nl/documents/annual-reports/2016/02/16/numbering-plan-telephony-and-isdn-services
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_the_Netherlands
 
 ### San Marino
 

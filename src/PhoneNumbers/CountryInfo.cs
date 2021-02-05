@@ -202,6 +202,19 @@ namespace PhoneNumbers
         };
 
         /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Netherlands.
+        /// </summary>
+        public static CountryInfo Netherlands { get; } = new()
+        {
+            CallingCode = "+31",
+            Iso3166Code = "NL",
+            Name = "Netherlands",
+            NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
+            TrunkPrefix = "0",
+        };
+
+        /// <summary>
         /// Gets the <see cref="CountryInfo"/> for San Marino.
         /// </summary>
         public static CountryInfo SanMarino { get; } = new()
