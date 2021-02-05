@@ -215,6 +215,18 @@ namespace PhoneNumbers
         };
 
         /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Portugal.
+        /// </summary>
+        public static CountryInfo Portugal { get; } = new()
+        {
+            CallingCode = "+351",
+            Iso3166Code = "PT",
+            Name = "Portugal",
+            NdcLengths = new ReadOnlyCollection<int>(new[] { 3 }),
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
+        };
+
+        /// <summary>
         /// Gets the <see cref="CountryInfo"/> for San Marino.
         /// </summary>
         public static CountryInfo SanMarino { get; } = new()
@@ -356,7 +368,7 @@ namespace PhoneNumbers
 
         internal bool IsInternationalNumber(string value) =>
             value?.StartsWith(CallingCode, StringComparison.Ordinal) == true;
-        
+
         internal bool IsValidNsnLength(string value) =>
             NsnLengths.Contains(value?.Length ?? 0);
 

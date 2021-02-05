@@ -215,6 +215,25 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
+        public void CountryInfo_Portugal()
+        {
+            Assert.Same(CountryInfo.Portugal, CountryInfo.Portugal);
+
+            var countryInfo = CountryInfo.Portugal;
+
+            Assert.Equal("+351", countryInfo.CallingCode);
+            Assert.Same(PhoneNumberFormatter.Default, countryInfo.Formatter);
+            Assert.True(countryInfo.HasNationalDestinationCodes);
+            Assert.Equal("00", countryInfo.InternationalCallPrefix);
+            Assert.Equal("PT", countryInfo.Iso3166Code);
+            Assert.Equal("Portugal", countryInfo.Name);
+            Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
+            Assert.Equal(new[] { 9 }, countryInfo.NsnLengths);
+            Assert.False(countryInfo.SharesCallingCode);
+            Assert.Null(countryInfo.TrunkPrefix);
+        }
+
+        [Fact]
         public void CountryInfo_SanMarino()
         {
             Assert.Same(CountryInfo.SanMarino, CountryInfo.SanMarino);
