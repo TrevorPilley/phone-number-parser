@@ -42,6 +42,14 @@ namespace PhoneNumbers.Tests
             Assert.Throws<ParseException>(() => PhoneNumber.Parse(null));
 
         [Fact]
+        public void Parse_Value_With_Belgium_CallingCode()
+        {
+            var phoneNumber = PhoneNumber.Parse("+3250444646");
+            Assert.NotNull(phoneNumber);
+            Assert.Equal(CountryInfo.Belgium, phoneNumber.Country);
+        }
+
+        [Fact]
         public void Parse_Value_With_France_CallingCode()
         {
             var phoneNumber = PhoneNumber.Parse("+33730334455");
@@ -161,6 +169,14 @@ namespace PhoneNumbers.Tests
             Assert.Equal(
                 phoneNumber.Country.Formatter.Format(phoneNumber, PhoneNumberFormatter.DefaultFormat),
                 phoneNumber.ToString());
+        }
+
+        [Fact]
+        public void TryParse_Belgium_CallingCode_Valid_Value()
+        {
+            Assert.True(PhoneNumber.TryParse("+3250444646", out var phoneNumber));
+            Assert.NotNull(phoneNumber);
+            Assert.Equal(CountryInfo.Belgium, phoneNumber.Country);
         }
 
         [Fact]

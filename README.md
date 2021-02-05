@@ -110,21 +110,22 @@ ParseOptions.Default.Countries.Remove(CountryInfo.X);
 The library currently supports parsing phone numbers for the following countries and although best endeavours are made to adhere to published telephone numbering plans, depending on the accessibility of data there may be descepencies. If you happen to find any, please raise a bug.
 
 Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone)
----            | ---           | ---          | ---        | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:
-France         | FR            | +33          | 0          | Yes        | Yes    |                        |                    |                      | Yes            | Yes
-Guernsey       | GG            | +44          | 0          | Yes        | Yes    |                        |                    |                      |                |
-Hong Kong      | HK            | +852         |            |            | Yes    |                        |                    | Yes                  | Yes            | Yes
-Ireland        | IE            | +353         | 0          | Yes        | Yes    |                        | Yes                | Yes                  | Yes            | Yes
-Isle of Man    | IM            | +44          | 0          | Yes        | Yes    |                        |                    |                      |                |
-Italy          | IT            | +39          |            | Yes        | Yes    |                        |                    |                      | Yes            | Yes
-Jersey         | JE            | +44          | 0          | Yes        | Yes    |                        |                    |                      |                |
-Macau          | MO            | +853         |            |            | Yes    |                        |                    |                      | Yes            |
-Monaco         | MC            | +377         |            |            | Yes    |                        |                    |                      | Yes            |
-San Marino     | SM            | +378         |            | Yes        |        |                        |                    |                      | Yes            |
-Singapore      | SG            | +65          |            |            | Yes    |                        |                    |                      | Yes            |
-Spain          | ES            | +34          |            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes
-Switzerland    | CH            | +41          | 0          | Yes        | Yes    |                        |                    |                      | Yes            |
-United Kingdom | GB            | +44          | 0          | Yes        | Yes    | Yes                    | Yes                | Yes                  | Yes            | Yes
+---            | ---           | ---          | ---          | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:
+Belgium        | BE            | +32          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes
+France         | FR            | +33          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes
+Guernsey       | GG            | +44          | 0            | Yes        | Yes    |                        |                    |                      |                |
+Hong Kong      | HK            | +852         |              |            | Yes    |                        |                    | Yes                  | Yes            | Yes
+Ireland        | IE            | +353         | 0            | Yes        | Yes    |                        | Yes                | Yes                  | Yes            | Yes
+Isle of Man    | IM            | +44          | 0            | Yes        | Yes    |                        |                    |                      |                |
+Italy          | IT            | +39          |              | Yes        | Yes    |                        |                    |                      | Yes            | Yes
+Jersey         | JE            | +44          | 0            | Yes        | Yes    |                        |                    |                      |                |
+Macau          | MO            | +853         |              |            | Yes    |                        |                    |                      | Yes            |
+Monaco         | MC            | +377         |              |            | Yes    |                        |                    |                      | Yes            |
+San Marino     | SM            | +378         |              | Yes        |        |                        |                    |                      | Yes            |
+Singapore      | SG            | +65          |              |            | Yes    |                        |                    |                      | Yes            |
+Spain          | ES            | +34          |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes
+Switzerland    | CH            | +41          | 0            | Yes        | Yes    |                        |                    |                      | Yes            |
+United Kingdom | GB            | +44          | 0            | Yes        | Yes    | Yes                    | Yes                | Yes                  | Yes            | Yes
 
 ### Notes
 
@@ -134,6 +135,12 @@ United Kingdom | GB            | +44          | 0          | Yes        | Yes   
 ## References for number data
 
 These were used as the references for the phone number data for each country.
+
+### Belgium
+
+- https://www.bipt.be/operators/publication/national-numbering-plan
+- https://www.bipt.be/operators/publication/database-with-reserved-and-allocated-numbers
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Belgium
 
 ### France
 

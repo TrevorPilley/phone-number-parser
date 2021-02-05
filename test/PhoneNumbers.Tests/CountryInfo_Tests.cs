@@ -6,6 +6,25 @@ namespace PhoneNumbers.Tests
     public class CountryInfo_Tests
     {
         [Fact]
+        public void CountryInfo_Belgium()
+        {
+            Assert.Same(CountryInfo.Belgium, CountryInfo.Belgium);
+
+            var countryInfo = CountryInfo.Belgium;
+
+            Assert.Equal("+32", countryInfo.CallingCode);
+            Assert.Same(PhoneNumberFormatter.Default, countryInfo.Formatter);
+            Assert.True(countryInfo.HasNationalDestinationCodes);
+            Assert.Equal("00", countryInfo.InternationalCallPrefix);
+            Assert.Equal("BE", countryInfo.Iso3166Code);
+            Assert.Equal("Belgium", countryInfo.Name);
+            Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
+            Assert.Equal(new[] { 8, 9 }, countryInfo.NsnLengths);
+            Assert.False(countryInfo.SharesCallingCode);
+            Assert.Equal("0", countryInfo.TrunkPrefix);
+        }
+
+        [Fact]
         public void CountryInfo_France()
         {
             Assert.Same(CountryInfo.France, CountryInfo.France);
