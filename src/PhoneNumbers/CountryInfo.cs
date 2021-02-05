@@ -23,18 +23,6 @@ namespace PhoneNumbers
         }
 
         /// <summary>
-        /// Gets the <see cref="CountryInfo"/> for Spain.
-        /// </summary>
-        [Obsolete("This property has been replaced, please use by 'CountryInfo.Spain' instead it will be removed in a future version.")]
-        public static CountryInfo ES => Spain;
-
-        /// <summary>
-        /// Gets the <see cref="CountryInfo"/> for France.
-        /// </summary>
-        [Obsolete("This property has been replaced, please use by 'CountryInfo.France' instead it will be removed in a future version.")]
-        public static CountryInfo FR => France;
-
-        /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Belgium.
         /// </summary>
         public static CountryInfo Belgium { get; } = new()
@@ -63,12 +51,6 @@ namespace PhoneNumbers
         /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Guernsey.
         /// </summary>
-        [Obsolete("This property has been replaced, please use by 'CountryInfo.Guernsey' instead it will be removed in a future version.")]
-        public static CountryInfo GG => Guernsey;
-
-        /// <summary>
-        /// Gets the <see cref="CountryInfo"/> for Guernsey.
-        /// </summary>
         public static CountryInfo Guernsey { get; } = new()
         {
             CallingCode = "+44",
@@ -93,18 +75,6 @@ namespace PhoneNumbers
             Name = "Hong Kong",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9 }),
         };
-
-        /// <summary>
-        /// Gets the <see cref="CountryInfo"/> for Ireland.
-        /// </summary>
-        [Obsolete("This property has been replaced, please use by 'CountryInfo.Ireland' instead it will be removed in a future version.")]
-        public static CountryInfo IE => Ireland;
-
-        /// <summary>
-        /// Gets the <see cref="CountryInfo"/> for the Isle of Man.
-        /// </summary>
-        [Obsolete("This property has been replaced, please use by 'CountryInfo.IsleOfMan' instead it will be removed in a future version.")]
-        public static CountryInfo IM => IsleOfMan;
 
         /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Ireland.
@@ -139,12 +109,6 @@ namespace PhoneNumbers
         /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Italy.
         /// </summary>
-        [Obsolete("This property has been replaced, please use by 'CountryInfo.Italy' instead it will be removed in a future version.")]
-        public static CountryInfo IT => Italy;
-
-        /// <summary>
-        /// Gets the <see cref="CountryInfo"/> for Italy.
-        /// </summary>
         /// <remarks>Covers Italy (includes the islands of Sardinia and Sicily), and Vatican City.</remarks>
         public static CountryInfo Italy { get; } = new()
         {
@@ -155,12 +119,6 @@ namespace PhoneNumbers
             NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2 }),
             NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8, 9, 10, 11 }),
         };
-
-        /// <summary>
-        /// Gets the <see cref="CountryInfo"/> for Jersey.
-        /// </summary>
-        [Obsolete("This property has been replaced, please use by 'CountryInfo.Jersey' instead it will be removed in a future version.")]
-        public static CountryInfo JE => Jersey;
 
         /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Jersey.
@@ -281,12 +239,6 @@ namespace PhoneNumbers
         /// <summary>
         /// Gets the <see cref="CountryInfo"/> for the United Kingdom.
         /// </summary>
-        [Obsolete("This property has been replaced, please use by 'CountryInfo.UnitedKingdom' instead it will be removed in a future version.")]
-        public static CountryInfo UK => UnitedKingdom;
-
-        /// <summary>
-        /// Gets the <see cref="CountryInfo"/> for the United Kingdom.
-        /// </summary>
         /// <remarks>Covers England, Scotland, Wales and Northern Ireland.</remarks>
         public static CountryInfo UnitedKingdom { get; } = new()
         {
@@ -306,12 +258,6 @@ namespace PhoneNumbers
         public string CallingCode { get; init; } = null!;
 
         /// <summary>
-        /// Gets a value indicating whether the country has area codes.
-        /// </summary>
-        [Obsolete("This property has been replaced, please use NationalDestinationCodes instead it will be removed in a future version.")]
-        public bool HasAreaCodes => HasNationalDestinationCodes;
-
-        /// <summary>
         /// Gets a value indicating whether the country has national destination codes.
         /// </summary>
         public bool HasNationalDestinationCodes => NdcLengths.Count > 0;
@@ -321,13 +267,6 @@ namespace PhoneNumbers
         /// </summary>
         /// <remarks>Default to the ITU recommended '00', see https://en.wikipedia.org/wiki/List_of_international_call_prefixes.</remarks>
         public string InternationalCallPrefix { get; init; } = "00";
-
-        /// <summary>
-        /// Gets the ISO 3166 Aplha-2 code for the country.
-        /// </summary>
-        [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-        [Obsolete("This property was incorrectly named, please use Iso3166Code instead it will be removed in a future version.")]
-        public string Iso3116Code => Iso3166Code;
 
         /// <summary>
         /// Gets the ISO 3166 Aplha-2 code for the country.

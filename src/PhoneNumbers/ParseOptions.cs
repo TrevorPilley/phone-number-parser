@@ -22,7 +22,7 @@ namespace PhoneNumbers
         /// <remarks>By default, this will contain all <see cref="CountryInfo"/> static properties.</remarks>
         public ICollection<CountryInfo> Countries { get; } = typeof(CountryInfo)
             .GetProperties(BindingFlags.Public | BindingFlags.Static)
-            .Where(x => x.PropertyType == typeof(CountryInfo) && x.GetCustomAttribute<ObsoleteAttribute>() == null)
+            .Where(x => x.PropertyType == typeof(CountryInfo))
             .Select(x => x.GetValue(null))
             .Cast<CountryInfo>()
             .OrderBy(x => x.SharesCallingCode)
