@@ -43,21 +43,9 @@ namespace PhoneNumbers
         }
 
         /// <summary>
-        /// Gets the area code of the phone number.
-        /// </summary>
-        [Obsolete("This property has been replaced, please use by 'NationalDiallingCode' instead it will be removed in a future version.")]
-        public string? AreaCode => NationalDestinationCode;
-
-        /// <summary>
         /// Gets the <see cref="CountryInfo"/> for the phone number.
         /// </summary>
         public CountryInfo Country { get; }
-
-        /// <summary>
-        /// Gets the local number of the phone number.
-        /// </summary>
-        [Obsolete("This property has been replaced, please use by 'SubscriberNumber' instead it will be removed in a future version.")]
-        public string LocalNumber => SubscriberNumber;
 
         /// <summary>
         /// Gets the national destination code of the phone number.
