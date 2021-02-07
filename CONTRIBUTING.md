@@ -96,7 +96,7 @@ A single line comment can be added in a data file by starting the line with a `#
 1. If the `DefaultPhoneNumberParser` can parse the file, add tests for the country using the `DefaultPhoneNumberParser` as appropriate - typically the min and max permitted subscriber number(s) are tested within each national dialling code/number kind.
 2. If country requires more complex logic to determine the national dialling code, or the performance of the `DefaultPhoneNumberParser` is not acceptable then add a custom parser `{Iso3166Code}PhoneNumberParser` (see the GB one as an example) and add test cases based upon the data file.
 3. Add a unit test for in `PhoneNumberParserFactoryTests` to assert the expected parser is returned for the `{Iso3166Code}`.
-4. Add a unit test for `Parse` and `TryParse` methods in `PhoneNumberTests` for the `{Iso3166Code}` to check the country code is assigned.
+4. Add a unit test for `Parse` and `TryParse` methods in `PhoneNumber_Parse_Tests.cs` and `PhoneNumber_TryParse_Tests.cs` for the `{Iso3166Code}` to check the country code is assigned.
 
 ### Add a formatter
 
