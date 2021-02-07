@@ -8,7 +8,7 @@ namespace PhoneNumbers.Tests.Parsers
     /// </summary>
     public class DefaultPhoneNumberParserTests_FR_GeographicNumber
     {
-        private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.France);
+        private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.France);
 
         [Theory]
         [InlineData("0110000000", "110000000", "Île-de-France")]
@@ -27,7 +27,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0589999999", "589999999", "Sud-Ouest")]
         public void Parse_Known_GeographicPhoneNumber(string value, string subscriberNumber, string geographicArea)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;

@@ -8,7 +8,7 @@ namespace PhoneNumbers.Tests.Parsers
     /// </summary>
     public class DefaultPhoneNumberParserTests_IT_NonGeographicPhoneNumber
     {
-        private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.Italy);
+        private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Italy);
 
         [Theory]
         [InlineData("840000000", "840", "000000")]
@@ -21,7 +21,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("848999999", "848", "999999")]
         public void Parse_Known_NonGeographicPhoneNumber_8XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
@@ -43,7 +43,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("803999", "803", "999")]
         public void Parse_Known_NonGeographicPhoneNumber_Freephone(string value, string NationalDestinationCode, string subscriberNumber)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;

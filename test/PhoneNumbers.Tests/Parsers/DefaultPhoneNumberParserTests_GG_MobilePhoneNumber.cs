@@ -8,7 +8,7 @@ namespace PhoneNumbers.Tests.Parsers
     /// </summary>
     public class DefaultPhoneNumberParserTests_GG_MobilePhoneNumber
     {
-        private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.Guernsey);
+        private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Guernsey);
 
         [Theory]
         [InlineData("07781000000", "7781", "000000")]
@@ -23,7 +23,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07911799999", "7911", "799999")]
         public void Parse_Known_MobilePhoneNumber(string value, string NationalDestinationCode, string subscriberNumber)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;

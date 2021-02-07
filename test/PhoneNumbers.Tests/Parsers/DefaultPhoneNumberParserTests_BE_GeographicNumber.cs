@@ -8,7 +8,7 @@ namespace PhoneNumbers.Tests.Parsers
     /// </summary>
     public class DefaultPhoneNumberParserTests_BE_GeographicNumber
     {
-        private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.Belgium);
+        private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Belgium);
 
         [Theory]
         [InlineData("010000000", "10", "000000", "Wavre")]
@@ -29,7 +29,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("019999999", "19", "999999", "Waremme")]
         public void Parse_Known_GeographicPhoneNumber_1X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
@@ -49,7 +49,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("028999999", "2", "8999999", "Brussels")]
         public void Parse_Known_GeographicPhoneNumber_2_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
@@ -69,7 +69,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("038999999", "3", "8999999", "Antwerp, Sint-Niklaas")]
         public void Parse_Known_GeographicPhoneNumber_3_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
@@ -89,7 +89,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("043999999", "4", "3999999", "Liège, Voeren")]
         public void Parse_Known_GeographicPhoneNumber_4_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
@@ -127,7 +127,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("059999999", "59", "999999", "Ostend, Bredene, Gistel")]
         public void Parse_Known_GeographicPhoneNumber_5X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
@@ -161,7 +161,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("069999999", "69", "999999", "Tournai")]
         public void Parse_Known_GeographicPhoneNumber_6X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
@@ -181,7 +181,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("071999999", "71", "999999", "Charleroi")]
         public void Parse_Known_GeographicPhoneNumber_7X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
@@ -217,7 +217,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("089999999", "89", "999999", "Genk")]
         public void Parse_Known_GeographicPhoneNumber_8X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
@@ -237,7 +237,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("094999999", "9", "4999999", "Ghent")]
         public void Parse_Known_GeographicPhoneNumber_9_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;

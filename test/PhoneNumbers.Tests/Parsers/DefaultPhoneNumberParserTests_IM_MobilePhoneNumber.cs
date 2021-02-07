@@ -8,7 +8,7 @@ namespace PhoneNumbers.Tests.Parsers
     /// </summary>
     public class DefaultPhoneNumberParserTests_IM_MobilePhoneNumber
     {
-        private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.IsleOfMan);
+        private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.IsleOfMan);
 
         [Theory]
         [InlineData("07418400000", "7418", "400000")]
@@ -29,7 +29,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07924999999", "7924", "999999")]
         public void Parse_Known_MobilePhoneNumber(string value, string NationalDestinationCode, string subscriberNumber)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;

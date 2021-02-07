@@ -8,7 +8,7 @@ namespace PhoneNumbers.Tests.Parsers
     /// </summary>
     public class DefaultPhoneNumberParserTests_PT_MobilePhoneNumber
     {
-        private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.Portugal);
+        private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Portugal);
 
         [Theory]
         [InlineData("900000000", "900", "000000")]
@@ -19,7 +19,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("906999999", "906", "999999")]
         public void Parse_Known_MobilePhoneNumber(string value, string NationalDestinationCode, string subscriberNumber)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
@@ -41,7 +41,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("884999999", "884", "999999")]
         public void Parse_Known_MobilePhoneNumber_Virtual(string value, string NationalDestinationCode, string subscriberNumber)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;

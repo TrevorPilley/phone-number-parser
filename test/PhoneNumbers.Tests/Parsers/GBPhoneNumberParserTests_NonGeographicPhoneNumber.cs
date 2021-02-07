@@ -8,7 +8,7 @@ namespace PhoneNumbers.Tests.Parsers
     /// </summary>
     public class GBPhoneNumberParserTests_NonGeographicPhoneNumber
     {
-        private readonly PhoneNumberParser _parser = GBPhoneNumberParser.Create();
+        private static readonly PhoneNumberParser s_parser = GBPhoneNumberParser.Create();
 
         [Theory]
         [InlineData("03000000000", "300", "0000000")]
@@ -33,7 +33,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("03729999999", "372", "9999999")]
         public void Parse_Known_NonGeographicPhoneNumber_3XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
@@ -61,7 +61,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("08999999999", "899", "9999999")]
         public void Parse_Known_NonGeographicPhoneNumber_8XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
@@ -83,7 +83,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("08089999999", "808", "9999999")]
         public void Parse_Known_NonGeographicPhoneNumber_Freephone(string value, string NationalDestinationCode, string subscriberNumber)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;

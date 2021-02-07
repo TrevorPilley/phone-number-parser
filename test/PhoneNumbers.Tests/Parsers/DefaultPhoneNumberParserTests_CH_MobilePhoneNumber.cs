@@ -8,7 +8,7 @@ namespace PhoneNumbers.Tests.Parsers
     /// </summary>
     public class DefaultPhoneNumberParserTests_CH_MobilePhoneNumber
     {
-        private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.Switzerland);
+        private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Switzerland);
 
         [Theory]
         [InlineData("0730000000", "73", "0000000")]
@@ -19,7 +19,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0799999999", "79", "9999999")]
         public void Parse_Known_MobilePhoneNumber(string value, string NationalDestinationCode, string subscriberNumber)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
@@ -41,7 +41,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0748119999", "74", "8119999")]
         public void Parse_Known_MobilePhoneNumber_Pager(string value, string NationalDestinationCode, string subscriberNumber)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
@@ -63,7 +63,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0878999999", "878", "999999")]
         public void Parse_Known_MobilePhoneNumber_Virtual(string value, string NationalDestinationCode, string subscriberNumber)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;

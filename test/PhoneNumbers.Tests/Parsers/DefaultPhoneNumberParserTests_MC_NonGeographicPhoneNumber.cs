@@ -8,7 +8,7 @@ namespace PhoneNumbers.Tests.Parsers
     /// </summary>
     public class DefaultPhoneNumberParserTests_MC_NonGeographicPhoneNumber
     {
-        private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.Monaco);
+        private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Monaco);
 
         [Theory]
         [InlineData("87000000", "87000000")]
@@ -17,7 +17,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("99999999", "99999999")]
         public void Parse_Known_NonGeographicPhoneNumber(string value, string subscriberNumber)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
