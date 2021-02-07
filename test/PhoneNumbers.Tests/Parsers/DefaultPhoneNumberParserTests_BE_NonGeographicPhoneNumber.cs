@@ -4,7 +4,7 @@ using Xunit;
 namespace PhoneNumbers.Tests.Parsers
 {
     /// <summary>
-    /// Contains unit tests for the <see cref="DefaultPhoneNumberParser"/> class for BE <see cref="PhoneNumber"/>s.
+    /// Contains unit tests for the <see cref="DefaultPhoneNumberParser"/> class for Belgium <see cref="PhoneNumber"/>s.
     /// </summary>
     public class DefaultPhoneNumberParserTests_BE_NonGeographicPhoneNumber
     {
