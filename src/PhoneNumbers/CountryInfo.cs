@@ -309,7 +309,7 @@ namespace PhoneNumbers
             value?.StartsWith(CallingCode, StringComparison.Ordinal) == true;
 
         internal bool IsValidNsnLength(string value) =>
-            NsnLengths.Contains(value?.Length ?? 0);
+            NsnLengths.Contains(value!.Length);
 
         /// <summary>
         /// Reads the national significant number (NSN) from the specified phone number value.
