@@ -97,8 +97,3 @@ A single line comment can be added in a data file by starting the line with a `#
 2. If country requires more complex logic to determine the national dialling code, or the performance of the `DefaultPhoneNumberParser` is not acceptable then add a custom parser `{Iso3166Code}PhoneNumberParser` (see the GB one as an example) and add test cases based upon the data file.
 3. Add a unit test for in `PhoneNumberParserFactoryTests` to assert the expected parser is returned for the `{Iso3166Code}`.
 4. Add a unit test for `Parse` and `TryParse` methods in `PhoneNumber_Parse_Tests.cs` and `PhoneNumber_TryParse_Tests.cs` for the `{Iso3166Code}` to check the country code is assigned.
-
-### Add a formatter
-
-1. If necessary, add a `{Iso3166Code}PhoneNumberFormatter` overriding the base methods as appropriate with unit tests.
-2. Set as the formatter for the country info `Formatter = new {Iso3166Code}PhoneNumberFormatter(),` and update the tests.
