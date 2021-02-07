@@ -1,3 +1,4 @@
+using System;
 using PhoneNumbers.Formatters;
 using Xunit;
 
@@ -56,7 +57,6 @@ namespace PhoneNumbers.Tests
             var countryInfo = new CountryInfo();
 
             Assert.Null(countryInfo.CallingCode);
-            Assert.Same(PhoneNumberFormatter.Default, countryInfo.Formatter);
             Assert.False(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Null(countryInfo.Iso3166Code);
