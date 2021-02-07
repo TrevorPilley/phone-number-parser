@@ -8,7 +8,7 @@ namespace PhoneNumbers.Tests.Parsers
     /// </summary>
     public class DefaultPhoneNumberParserTests_SG_MobilePhoneNumber
     {
-        private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.Singapore);
+        private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Singapore);
 
         [Theory]
         [InlineData("81000000", "81000000")]
@@ -17,7 +17,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("98999999", "98999999")]
         public void Parse_Known_MobilePhoneNumber(string value, string subscriberNumber)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;

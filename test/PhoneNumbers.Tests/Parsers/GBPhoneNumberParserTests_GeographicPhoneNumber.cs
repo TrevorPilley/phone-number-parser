@@ -8,7 +8,7 @@ namespace PhoneNumbers.Tests.Parsers
     /// </summary>
     public class GBPhoneNumberParserTests_GeographicPhoneNumber
     {
-        private readonly PhoneNumberParser _parser = GBPhoneNumberParser.Create();
+        private static readonly PhoneNumberParser s_parser = GBPhoneNumberParser.Create();
 
         [Theory]
         [InlineData("01132000000", "113", "2000000", "Leeds")]
@@ -47,7 +47,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("01919989999", "191", "9989999", "Newcastle / Sunderland / Durham")]
         public void Parse_Known_GeographicPhoneNumber_1XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
@@ -1403,7 +1403,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("01997998999", "1997", "998999", "Strathpeffer")]
         public void Parse_Known_GeographicPhoneNumber_1XXX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
@@ -1455,7 +1455,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("01975699899", "19756", "99899", "Strathdon")]
         public void Parse_Known_GeographicPhoneNumber_1XXXX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
@@ -1559,7 +1559,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("02929999999", "29", "29999999", "Cardiff")]
         public void Parse_Known_GeographicPhoneNumber_2X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;

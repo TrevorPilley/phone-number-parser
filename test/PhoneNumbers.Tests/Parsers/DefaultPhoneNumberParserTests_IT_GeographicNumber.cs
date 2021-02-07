@@ -8,7 +8,7 @@ namespace PhoneNumbers.Tests.Parsers
     /// </summary>
     public class DefaultPhoneNumberParserTests_IT_GeographicNumber
     {
-        private readonly PhoneNumberParser _parser = DefaultPhoneNumberParser.Create(CountryInfo.Italy);
+        private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Italy);
 
         [Theory]
         [InlineData("020000", "02", "0000", "Milan")]
@@ -17,7 +17,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0699999999", "06", "99999999", "Roma")]
         public void Parse_Known_GeographicPhoneNumber_0X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
@@ -91,7 +91,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0999999999", "099", "9999999", "Taranto")]
         public void Parse_Known_GeographicPhoneNumber_0XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
@@ -513,7 +513,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0985999999", "0985", "999999", "Scalea")]
         public void Parse_Known_GeographicPhoneNumber_0XXX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;

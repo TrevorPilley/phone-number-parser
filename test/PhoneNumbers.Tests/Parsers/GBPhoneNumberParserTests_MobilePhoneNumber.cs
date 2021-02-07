@@ -8,7 +8,7 @@ namespace PhoneNumbers.Tests.Parsers
     /// </summary>
     public class GBPhoneNumberParserTests_MobilePhoneNumber
     {
-        private readonly PhoneNumberParser _parser = GBPhoneNumberParser.Create();
+        private static readonly PhoneNumberParser s_parser = GBPhoneNumberParser.Create();
 
         [Theory]
         [InlineData("07106000000", "7106", "000000")]
@@ -17,7 +17,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07199999999", "7199", "999999")]
         public void Parse_Known_MobilePhoneNumber_71XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
@@ -39,7 +39,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07300999999", "7300", "999999")]
         public void Parse_Known_MobilePhoneNumber_73XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
@@ -81,7 +81,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07458999999", "7458", "999999")]
         public void Parse_Known_MobilePhoneNumber_74XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
@@ -103,7 +103,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07599999999", "7599", "999999")]
         public void Parse_Known_MobilePhoneNumber_75XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
@@ -137,7 +137,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07798999999", "7798", "999999")]
         public void Parse_Known_MobilePhoneNumber_77XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
@@ -165,7 +165,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07840999999", "7840", "999999")]
         public void Parse_Known_MobilePhoneNumber_78XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
@@ -199,7 +199,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07999999999", "7999", "999999")]
         public void Parse_Known_MobilePhoneNumber_79XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
@@ -223,7 +223,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07911899999", "7911", "899999")]
         public void Parse_Known_MobilePhoneNumber_DataOnly(string value, string NationalDestinationCode, string subscriberNumber)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
@@ -251,7 +251,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07699999999", "7699", "999999")]
         public void Parse_Known_MobilePhoneNumber_Pager(string value, string NationalDestinationCode, string subscriberNumber)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
@@ -275,7 +275,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("07099999999", "7099", "999999")]
         public void Parse_Known_MobilePhoneNumber_Virtual(string value, string NationalDestinationCode, string subscriberNumber)
         {
-            var parseResult = _parser.Parse(value);
+            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
