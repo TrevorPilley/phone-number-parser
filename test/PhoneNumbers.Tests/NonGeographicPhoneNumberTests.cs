@@ -6,13 +6,29 @@ namespace PhoneNumbers.Tests
     public class NonGeographicPhoneNumberTests
     {
         [Fact]
-        public void Constructor_Sets_Properties()
+        public void Constructor_Sets_Properties_Freephone()
         {
-            var countryInfo = CountryInfo.UnitedKingdom;
+            var countryInfo = TestHelper.CreateCountryInfo();
             var phoneNumber = new NonGeographicPhoneNumber(countryInfo, PhoneNumberHint.Freephone, "12345667788", "12345", "667788");
 
             Assert.Equal(countryInfo, phoneNumber.Country);
             Assert.True(phoneNumber.IsFreephone);
+            Assert.False(phoneNumber.IsPremiumRate);
+            Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, phoneNumber.PhoneNumberKind);
+            Assert.Equal("12345", phoneNumber.NationalDestinationCode);
+            Assert.Equal("12345667788", phoneNumber.NationalSignificantNumber);
+            Assert.Equal("667788", phoneNumber.SubscriberNumber);
+        }
+
+        [Fact]
+        public void Constructor_Sets_Properties_PremiumRate()
+        {
+            var countryInfo = TestHelper.CreateCountryInfo();
+            var phoneNumber = new NonGeographicPhoneNumber(countryInfo, PhoneNumberHint.PremiumRate, "12345667788", "12345", "667788");
+
+            Assert.Equal(countryInfo, phoneNumber.Country);
+            Assert.False(phoneNumber.IsFreephone);
+            Assert.True(phoneNumber.IsPremiumRate);
             Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, phoneNumber.PhoneNumberKind);
             Assert.Equal("12345", phoneNumber.NationalDestinationCode);
             Assert.Equal("12345667788", phoneNumber.NationalSignificantNumber);

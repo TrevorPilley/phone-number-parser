@@ -77,6 +77,13 @@ namespace PhoneNumbers.Tests.Parsers
                         Kind = PhoneNumberKind.NonGeographicPhoneNumber,
                         Hint = PhoneNumberHint.Freephone,
                     },
+                    new CountryNumber
+                    {
+                        NationalDiallingCodeRanges = new[] { NumberRange.Create("70") },
+                        SubscriberNumberRanges = new[] { NumberRange.Create("28000-28999") },
+                        Kind = PhoneNumberKind.NonGeographicPhoneNumber,
+                        Hint = PhoneNumberHint.PremiumRate,
+                    },
                 });
 
         [Fact]
@@ -192,6 +199,7 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.Equal("50", nonGeographicPhoneNumber.NationalDestinationCode);
             Assert.Equal(_countryInfo, nonGeographicPhoneNumber.Country);
             Assert.False(nonGeographicPhoneNumber.IsFreephone);
+            Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
             Assert.Equal("20000", nonGeographicPhoneNumber.SubscriberNumber);
             Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, nonGeographicPhoneNumber.PhoneNumberKind);
         }
@@ -207,6 +215,23 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.Equal("60", nonGeographicPhoneNumber.NationalDestinationCode);
             Assert.Equal(_countryInfo, nonGeographicPhoneNumber.Country);
             Assert.True(nonGeographicPhoneNumber.IsFreephone);
+            Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
+            Assert.Equal("28000", nonGeographicPhoneNumber.SubscriberNumber);
+            Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, nonGeographicPhoneNumber.PhoneNumberKind);
+        }
+
+        [Fact]
+        public void Parse_NonGeographicPhoneNumber_PremiumRate()
+        {
+            var phoneNumber = _parser.Parse("7028000").PhoneNumber;
+            Assert.NotNull(phoneNumber);
+            Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
+
+            var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
+            Assert.Equal("70", nonGeographicPhoneNumber.NationalDestinationCode);
+            Assert.Equal(_countryInfo, nonGeographicPhoneNumber.Country);
+            Assert.False(nonGeographicPhoneNumber.IsFreephone);
+            Assert.True(nonGeographicPhoneNumber.IsPremiumRate);
             Assert.Equal("28000", nonGeographicPhoneNumber.SubscriberNumber);
             Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, nonGeographicPhoneNumber.PhoneNumberKind);
         }

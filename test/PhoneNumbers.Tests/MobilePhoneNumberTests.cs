@@ -8,7 +8,7 @@ namespace PhoneNumbers.Tests
         [Fact]
         public void Constructor_Sets_Properties_Data()
         {
-            var countryInfo = CountryInfo.UnitedKingdom;
+            var countryInfo = TestHelper.CreateCountryInfo();
             var phoneNumber = new MobilePhoneNumber(countryInfo, PhoneNumberHint.Data, "7654112233", "7654", "112233");
 
             Assert.Equal(countryInfo, phoneNumber.Country);
@@ -24,7 +24,7 @@ namespace PhoneNumbers.Tests
         [Fact]
         public void Constructor_Sets_Properties_Pager()
         {
-            var countryInfo = CountryInfo.UnitedKingdom;
+            var countryInfo = TestHelper.CreateCountryInfo();
             var phoneNumber = new MobilePhoneNumber(countryInfo, PhoneNumberHint.Pager, "7654112233", "7654", "112233");
 
             Assert.Equal(countryInfo, phoneNumber.Country);
@@ -39,7 +39,7 @@ namespace PhoneNumbers.Tests
         [Fact]
         public void Constructor_Sets_Properties_Virtual()
         {
-            var countryInfo = CountryInfo.UnitedKingdom;
+            var countryInfo = TestHelper.CreateCountryInfo();
             var phoneNumber = new MobilePhoneNumber(countryInfo, PhoneNumberHint.Virtual, "7654112233", "7654", "112233");
 
             Assert.Equal(countryInfo, phoneNumber.Country);

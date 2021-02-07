@@ -29,5 +29,10 @@ namespace PhoneNumbers
         /// The number is a freephone (toll-free) number.
         /// </summary>
         Freephone,
+
+        /// <summary>
+        /// The number is a premium rate number.
+        /// </summary>
+        PremiumRate,
     }
 }
