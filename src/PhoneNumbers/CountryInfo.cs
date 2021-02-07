@@ -1,6 +1,8 @@
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Linq;
 using PhoneNumbers.Formatters;
 
 namespace PhoneNumbers
@@ -13,6 +15,7 @@ namespace PhoneNumbers
     {
         private const char PlusSign = '+';
         private static readonly char[] s_digits1To9 = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+        private readonly List<PhoneNumberFormatter> _formatters;
 
         /// <summary>
         /// Initialises a new instance of the <see cref="CountryInfo"/> class.
@@ -20,6 +23,11 @@ namespace PhoneNumbers
         /// <remarks>The constructor is internal for unit tests only.</remarks>
         internal CountryInfo()
         {
+            _formatters = new(new[]
+            {
+                E164PhoneNumberFormatter.Instance,
+                E123PhoneNumberFormatter.Instance,
+            });
         }
 
         /// <summary>
@@ -62,11 +70,6 @@ namespace PhoneNumbers
         public string? TrunkPrefix { get; init; }
 
         /// <summary>
-        /// Gets the <see cref="PhoneNumberFormatter"/> for the country.
-        /// </summary>
-        internal PhoneNumberFormatter Formatter { get; init; } = PhoneNumberFormatter.Default;
-
-        /// <summary>
         /// Gets the possible lenghts of the national destination code.
         /// </summary>
         internal ReadOnlyCollection<int> NdcLengths { get; init; } = new(Array.Empty<int>());
@@ -75,6 +78,9 @@ namespace PhoneNumbers
         /// Gets the permitted lenghts of the national significant number.
         /// </summary>
         internal ReadOnlyCollection<int> NsnLengths { get; init; } = new(Array.Empty<int>());
+
+        internal PhoneNumberFormatter GetFormatter(string format) =>
+            _formatters.SingleOrDefault(x => x.CanFormat(format)) ?? throw new FormatException($"{format} is not a supported format");
 
         internal bool IsInternationalNumber(string value) =>
             value?.StartsWith(CallingCode, StringComparison.Ordinal) == true;

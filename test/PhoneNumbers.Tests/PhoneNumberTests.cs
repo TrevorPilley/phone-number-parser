@@ -47,7 +47,7 @@ namespace PhoneNumbers.Tests
             var phoneNumber = PhoneNumber.Parse("+441142726444");
 
             Assert.Equal(
-                phoneNumber.Country.Formatter.Format(phoneNumber, PhoneNumberFormatter.DefaultFormat),
+                phoneNumber.Country.GetFormatter(PhoneNumberFormatter.DefaultFormat).Format(phoneNumber),
                 phoneNumber.ToString());
         }
 

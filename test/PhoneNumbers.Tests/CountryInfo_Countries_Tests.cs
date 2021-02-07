@@ -13,7 +13,6 @@ namespace PhoneNumbers.Tests
             var countryInfo = CountryInfo.Belgium;
 
             Assert.Equal("+32", countryInfo.CallingCode);
-            Assert.Same(PhoneNumberFormatter.Default, countryInfo.Formatter);
             Assert.True(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("BE", countryInfo.Iso3166Code);
@@ -32,7 +31,6 @@ namespace PhoneNumbers.Tests
             var countryInfo = CountryInfo.France;
 
             Assert.Equal("+33", countryInfo.CallingCode);
-            Assert.Same(GroupedDigitPhoneNumberFormatter.Spaced2Digits, countryInfo.Formatter);
             Assert.False(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("FR", countryInfo.Iso3166Code);
@@ -51,7 +49,6 @@ namespace PhoneNumbers.Tests
             var countryInfo = CountryInfo.Guernsey;
 
             Assert.Equal("+44", countryInfo.CallingCode);
-            Assert.Same(GBPhoneNumberFormatter.Instance, countryInfo.Formatter);
             Assert.True(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("GG", countryInfo.Iso3166Code);
@@ -70,7 +67,6 @@ namespace PhoneNumbers.Tests
             var countryInfo = CountryInfo.HongKong;
 
             Assert.Equal("+852", countryInfo.CallingCode);
-            Assert.Same(GroupedDigitPhoneNumberFormatter.Spaced4Digits, countryInfo.Formatter);
             Assert.False(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("001", countryInfo.InternationalCallPrefix);
             Assert.Equal("HK", countryInfo.Iso3166Code);
@@ -89,7 +85,6 @@ namespace PhoneNumbers.Tests
             var countryInfo = CountryInfo.Ireland;
 
             Assert.Equal("+353", countryInfo.CallingCode);
-            Assert.IsType<IEPhoneNumberFormatter>(countryInfo.Formatter);
             Assert.True(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("IE", countryInfo.Iso3166Code);
@@ -108,7 +103,6 @@ namespace PhoneNumbers.Tests
             var countryInfo = CountryInfo.IsleOfMan;
 
             Assert.Equal("+44", countryInfo.CallingCode);
-            Assert.Same(GBPhoneNumberFormatter.Instance, countryInfo.Formatter);
             Assert.True(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("IM", countryInfo.Iso3166Code);
@@ -127,7 +121,6 @@ namespace PhoneNumbers.Tests
             var countryInfo = CountryInfo.Italy;
 
             Assert.Equal("+39", countryInfo.CallingCode);
-            Assert.Same(ITPhoneNumberFormatter.Instance, countryInfo.Formatter);
             Assert.True(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("IT", countryInfo.Iso3166Code);
@@ -146,7 +139,6 @@ namespace PhoneNumbers.Tests
             var countryInfo = CountryInfo.Jersey;
 
             Assert.Equal("+44", countryInfo.CallingCode);
-            Assert.IsType<GBPhoneNumberFormatter>(countryInfo.Formatter);
             Assert.True(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("JE", countryInfo.Iso3166Code);
@@ -165,7 +157,6 @@ namespace PhoneNumbers.Tests
             var countryInfo = CountryInfo.Macau;
 
             Assert.Equal("+853", countryInfo.CallingCode);
-            Assert.Same(GroupedDigitPhoneNumberFormatter.Spaced4Digits, countryInfo.Formatter);
             Assert.False(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("MO", countryInfo.Iso3166Code);
@@ -184,7 +175,6 @@ namespace PhoneNumbers.Tests
             var countryInfo = CountryInfo.Monaco;
 
             Assert.Equal("+377", countryInfo.CallingCode);
-            Assert.Same(GroupedDigitPhoneNumberFormatter.Spaced2Digits, countryInfo.Formatter);
             Assert.False(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("MC", countryInfo.Iso3166Code);
@@ -203,7 +193,6 @@ namespace PhoneNumbers.Tests
             var countryInfo = CountryInfo.Netherlands;
 
             Assert.Equal("+31", countryInfo.CallingCode);
-            Assert.Same(PhoneNumberFormatter.Default, countryInfo.Formatter);
             Assert.True(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("NL", countryInfo.Iso3166Code);
@@ -222,7 +211,6 @@ namespace PhoneNumbers.Tests
             var countryInfo = CountryInfo.Portugal;
 
             Assert.Equal("+351", countryInfo.CallingCode);
-            Assert.Same(PhoneNumberFormatter.Default, countryInfo.Formatter);
             Assert.True(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("PT", countryInfo.Iso3166Code);
@@ -241,7 +229,6 @@ namespace PhoneNumbers.Tests
             var countryInfo = CountryInfo.SanMarino;
 
             Assert.Equal("+378", countryInfo.CallingCode);
-            Assert.Same(ITPhoneNumberFormatter.Instance, countryInfo.Formatter);
             Assert.False(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("SM", countryInfo.Iso3166Code);
@@ -260,7 +247,6 @@ namespace PhoneNumbers.Tests
             var countryInfo = CountryInfo.Singapore;
 
             Assert.Equal("+65", countryInfo.CallingCode);
-            Assert.Same(GroupedDigitPhoneNumberFormatter.Spaced4Digits, countryInfo.Formatter);
             Assert.False(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("001", countryInfo.InternationalCallPrefix);
             Assert.Equal("SG", countryInfo.Iso3166Code);
@@ -279,7 +265,6 @@ namespace PhoneNumbers.Tests
             var countryInfo = CountryInfo.Spain;
 
             Assert.Equal("+34", countryInfo.CallingCode);
-            Assert.Same(GroupedDigitPhoneNumberFormatter.Spaced3Digits, countryInfo.Formatter);
             Assert.True(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("ES", countryInfo.Iso3166Code);
@@ -298,7 +283,6 @@ namespace PhoneNumbers.Tests
             var countryInfo = CountryInfo.Switzerland;
 
             Assert.Equal("+41", countryInfo.CallingCode);
-            Assert.IsType<CHPhoneNumberFormatter>(countryInfo.Formatter);
             Assert.True(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("CH", countryInfo.Iso3166Code);
@@ -317,7 +301,6 @@ namespace PhoneNumbers.Tests
             var countryInfo = CountryInfo.UnitedKingdom;
 
             Assert.Equal("+44", countryInfo.CallingCode);
-            Assert.Same(GBPhoneNumberFormatter.Instance, countryInfo.Formatter);
             Assert.True(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("GB", countryInfo.Iso3166Code);
