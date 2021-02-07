@@ -1,5 +1,4 @@
 using System;
-using System.Linq;
 using PhoneNumbers.Formatters;
 
 namespace PhoneNumbers
@@ -228,6 +227,6 @@ namespace PhoneNumbers
         /// <exception cref="FormatException">Thrown if the format string is not valid.</exception>
         /// <returns>The string representation of the value of this instance as specified by the format.</returns>
         public string ToString(string format) =>
-            Country.Formatter.Format(this, format);
+            Country.GetFormatter(format).Format(this);
     }
 }

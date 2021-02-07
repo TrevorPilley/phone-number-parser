@@ -24,7 +24,6 @@ namespace PhoneNumbers
         public static CountryInfo France { get; } = new()
         {
             CallingCode = "+33",
-            Formatter = GroupedDigitPhoneNumberFormatter.Spaced2Digits,
             Iso3166Code = "FR",
             Name = "France",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
@@ -37,7 +36,6 @@ namespace PhoneNumbers
         public static CountryInfo Guernsey { get; } = new()
         {
             CallingCode = "+44",
-            Formatter = GBPhoneNumberFormatter.Instance,
             Iso3166Code = "GG",
             Name = "Guernsey",
             NdcLengths = new ReadOnlyCollection<int>(new[] { 4 }),
@@ -52,7 +50,6 @@ namespace PhoneNumbers
         public static CountryInfo HongKong { get; } = new()
         {
             CallingCode = "+852",
-            Formatter = GroupedDigitPhoneNumberFormatter.Spaced4Digits,
             InternationalCallPrefix = "001",
             Iso3166Code = "HK",
             Name = "Hong Kong",
@@ -66,7 +63,6 @@ namespace PhoneNumbers
         public static CountryInfo Ireland { get; } = new()
         {
             CallingCode = "+353",
-            Formatter = new IEPhoneNumberFormatter(),
             Iso3166Code = "IE",
             Name = "Ireland",
             NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
@@ -80,7 +76,6 @@ namespace PhoneNumbers
         public static CountryInfo IsleOfMan { get; } = new()
         {
             CallingCode = "+44",
-            Formatter = GBPhoneNumberFormatter.Instance,
             Iso3166Code = "IM",
             Name = "Isle of Man",
             NdcLengths = new ReadOnlyCollection<int>(new[] { 4 }),
@@ -96,7 +91,6 @@ namespace PhoneNumbers
         public static CountryInfo Italy { get; } = new()
         {
             CallingCode = "+39",
-            Formatter = ITPhoneNumberFormatter.Instance,
             Iso3166Code = "IT",
             Name = "Italy",
             NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2 }),
@@ -109,7 +103,6 @@ namespace PhoneNumbers
         public static CountryInfo Jersey { get; } = new()
         {
             CallingCode = "+44",
-            Formatter = GBPhoneNumberFormatter.Instance,
             Iso3166Code = "JE",
             Name = "Jersey",
             NdcLengths = new ReadOnlyCollection<int>(new[] { 4 }),
@@ -124,7 +117,6 @@ namespace PhoneNumbers
         public static CountryInfo Macau { get; } = new()
         {
             CallingCode = "+853",
-            Formatter = GroupedDigitPhoneNumberFormatter.Spaced4Digits,
             Iso3166Code = "MO",
             Name = "Macau",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 8 }),
@@ -136,7 +128,6 @@ namespace PhoneNumbers
         public static CountryInfo Monaco { get; } = new()
         {
             CallingCode = "+377",
-            Formatter = GroupedDigitPhoneNumberFormatter.Spaced2Digits,
             Iso3166Code = "MC",
             Name = "Monaco",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9 }),
@@ -173,7 +164,6 @@ namespace PhoneNumbers
         public static CountryInfo SanMarino { get; } = new()
         {
             CallingCode = "+378",
-            Formatter = ITPhoneNumberFormatter.Instance,
             Iso3166Code = "SM",
             Name = "San Marino",
             NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8, 9, 10 }),
@@ -185,7 +175,6 @@ namespace PhoneNumbers
         public static CountryInfo Singapore { get; } = new()
         {
             CallingCode = "+65",
-            Formatter = GroupedDigitPhoneNumberFormatter.Spaced4Digits,
             InternationalCallPrefix = "001",
             Iso3166Code = "SG",
             Name = "Singapore",
@@ -198,7 +187,6 @@ namespace PhoneNumbers
         public static CountryInfo Spain { get; } = new()
         {
             CallingCode = "+34",
-            Formatter = GroupedDigitPhoneNumberFormatter.Spaced3Digits,
             Iso3166Code = "ES",
             Name = "Spain",
             NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
@@ -211,7 +199,6 @@ namespace PhoneNumbers
         public static CountryInfo Switzerland { get; } = new()
         {
             CallingCode = "+41",
-            Formatter = new CHPhoneNumberFormatter(),
             Iso3166Code = "CH",
             Name = "Switzerland",
             NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
@@ -226,7 +213,6 @@ namespace PhoneNumbers
         public static CountryInfo UnitedKingdom { get; } = new()
         {
             CallingCode = "+44",
-            Formatter = GBPhoneNumberFormatter.Instance,
             Iso3166Code = "GB",
             Name = "United Kingdom",
             NdcLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2 }),
