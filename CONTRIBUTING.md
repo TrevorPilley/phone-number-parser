@@ -24,7 +24,7 @@ If you are adding a new country, please do the following.
 
 ### Add the CountryInfo
 
-1. Add a new static `CountryInfo` property with the country name as the name, for example:
+1. Add a new static `CountryInfo` property in the `CountryInfo_Countries.cs` file with the country name as the name, for example:
 
 ```csharp
 public static CountryInfo CountryName { get; } = new()
@@ -39,7 +39,7 @@ public static CountryInfo CountryName { get; } = new()
 2. If the country uses national dialling codes (aka. area codes), set the `NationalDiallingCodeLengths` property as appropriate and declare in descending order.
 3. If the country doesn't use the ITU default `InternationalCallPrefix` of `00`, set the property appropriately.
 4. If the country uses trunk prefixes, set the `TrunkPrefix` appropriately.
-5. Add a new `CountryInfo_CountryName` test asserting the property values (see an existing implementation).
+5. Add a new `CountryInfo_CountryName` test in the `CountryInfo_Countries_Tests.cs` file asserting the property values (see an existing implementation).
 
 ### Add the data file
 
