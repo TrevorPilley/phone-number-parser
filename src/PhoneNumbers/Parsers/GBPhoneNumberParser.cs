@@ -24,7 +24,7 @@ namespace PhoneNumbers.Parsers
         /// Creates an instance of the <see cref="GBPhoneNumberParser"/> class.
         /// </summary>
         /// <returns>The created <see cref="PhoneNumberParser"/>.</returns>
-        internal static PhoneNumberParser Create()
+        public static PhoneNumberParser Create()
         {
             var countryNumbers = ResourceUtility
                 .ReadCountryNumbers("GB.txt")
