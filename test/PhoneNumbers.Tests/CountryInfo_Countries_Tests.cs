@@ -252,7 +252,7 @@ namespace PhoneNumbers.Tests
             Assert.Equal("SG", countryInfo.Iso3166Code);
             Assert.Equal("Singapore", countryInfo.Name);
             Assert.Empty(countryInfo.NdcLengths);
-            Assert.Equal(new[] { 8 }, countryInfo.NsnLengths);
+            Assert.Equal(new[] { 8, 10, 11 }, countryInfo.NsnLengths);
             Assert.False(countryInfo.SharesCallingCode);
             Assert.Null(countryInfo.TrunkPrefix);
         }

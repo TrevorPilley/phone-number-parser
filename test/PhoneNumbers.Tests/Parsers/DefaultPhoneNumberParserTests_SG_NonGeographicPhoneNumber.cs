@@ -31,5 +31,27 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.Null(nonGeographicPhoneNumber.NationalDestinationCode);
             Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
         }
+
+        [Theory]
+        [InlineData("8000000000", "8000000000")]
+        [InlineData("8009999999", "8009999999")]
+        [InlineData("18000000000", "18000000000")]
+        [InlineData("18009999999", "18009999999")]
+        public void Parse_Known_NonGeographicPhoneNumber_Freephone(string value, string subscriberNumber)
+        {
+            var parseResult = s_parser.Parse(value);
+            parseResult.ThrowIfFailure();
+
+            var phoneNumber = parseResult.PhoneNumber;
+
+            Assert.NotNull(phoneNumber);
+            Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
+
+            var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
+            Assert.Equal(CountryInfo.Singapore, nonGeographicPhoneNumber.Country);
+            Assert.True(nonGeographicPhoneNumber.IsFreephone);
+            Assert.Null(nonGeographicPhoneNumber.NationalDestinationCode);
+            Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
+        }
     }
 }

@@ -178,7 +178,7 @@ namespace PhoneNumbers
             InternationalCallPrefix = "001",
             Iso3166Code = "SG",
             Name = "Singapore",
-            NsnLengths = new ReadOnlyCollection<int>(new[] { 8 }),
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 10, 11 }),
         };
 
         /// <summary>
