@@ -93,8 +93,8 @@ namespace PhoneNumbers
             CallingCode = "+39",
             Iso3166Code = "IT",
             Name = "Italy",
-            NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2 }),
-            NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8, 9, 10, 11 }),
+            NdcLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2 }),
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 5, 6, 7, 8, 9, 10, 11 }),
         };
 
         /// <summary>

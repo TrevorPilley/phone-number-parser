@@ -117,7 +117,7 @@ Guernsey       | GG            | +44          | 0            | Yes        | Yes 
 Hong Kong      | HK            | +852         |              |            | Yes    |                        |                    | Yes                  | Yes            | Yes                           |
 Ireland        | IE            | +353         | 0            | Yes        | Yes    |                        | Yes                | Yes                  | Yes            | Yes                           | Yes
 Isle of Man    | IM            | +44          | 0            | Yes        | Yes    |                        |                    |                      |                |                               |
-Italy          | IT            | +39          |              | Yes        | Yes    |                        |                    |                      | Yes            | Yes                           |
+Italy          | IT            | +39          |              | Yes        | Yes    |                        |                    |                      | Yes            | Yes                           | Yes
 Jersey         | JE            | +44          | 0            | Yes        | Yes    |                        |                    |                      |                |                               |
 Macau          | MO            | +853         |              |            | Yes    |                        |                    |                      | Yes            |                               |
 Monaco         | MC            | +377         |              |            | Yes    |                        |                    |                      | Yes            |                               |
