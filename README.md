@@ -124,7 +124,7 @@ Monaco         | MC            | +377         |              |            | Yes 
 Netherlands    | NL            | +31          | 0            | Yes        | Yes    |                        | Yes                |                      | Yes            | Yes                           |
 Portugal       | PT            | +351         |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                           | Yes
 San Marino     | SM            | +378         |              | Yes        |        |                        |                    |                      | Yes            |                               |
-Singapore      | SG            | +65          |              |            | Yes    |                        |                    |                      | Yes            | Yes                           |
+Singapore      | SG            | +65          |              |            | Yes    |                        |                    |                      | Yes            | Yes                           | Yes
 Spain          | ES            | +34          |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                           |
 Switzerland    | CH            | +41          | 0            | Yes        | Yes    |                        |                    |                      | Yes            |                               | Yes
 United Kingdom | GB            | +44          | 0            | Yes        | Yes    | Yes                    | Yes                | Yes                  | Yes            | Yes                           | Yes
