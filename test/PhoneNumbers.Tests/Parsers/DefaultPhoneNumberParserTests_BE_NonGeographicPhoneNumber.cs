@@ -11,8 +11,6 @@ namespace PhoneNumbers.Tests.Parsers
         private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Belgium);
 
         [Theory]
-        [InlineData("070000000", "70", "000000")]
-        [InlineData("070999999", "70", "999999")]
         [InlineData("078000000", "78", "000000")]
         [InlineData("078999999", "78", "999999")]
         public void Parse_Known_NonGeographicPhoneNumber_7X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
@@ -28,26 +26,7 @@ namespace PhoneNumbers.Tests.Parsers
             var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
             Assert.Equal(CountryInfo.Belgium, nonGeographicPhoneNumber.Country);
             Assert.False(nonGeographicPhoneNumber.IsFreephone);
-            Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
-            Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
-        }
-
-        [Theory]
-        [InlineData("090000000", "90", "000000")]
-        [InlineData("090099999", "90", "099999")]
-        public void Parse_Known_NonGeographicPhoneNumber_9X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
-        {
-            var parseResult = s_parser.Parse(value);
-            parseResult.ThrowIfFailure();
-
-            var phoneNumber = parseResult.PhoneNumber;
-
-            Assert.NotNull(phoneNumber);
-            Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
-
-            var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
-            Assert.Equal(CountryInfo.Belgium, nonGeographicPhoneNumber.Country);
-            Assert.False(nonGeographicPhoneNumber.IsFreephone);
+            Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
             Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
             Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
         }
@@ -68,6 +47,30 @@ namespace PhoneNumbers.Tests.Parsers
             var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
             Assert.Equal(CountryInfo.Belgium, nonGeographicPhoneNumber.Country);
             Assert.True(nonGeographicPhoneNumber.IsFreephone);
+            Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
+            Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
+            Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
+        }
+
+        [Theory]
+        [InlineData("070000000", "70", "000000")]
+        [InlineData("070999999", "70", "999999")]
+        [InlineData("090000000", "90", "000000")]
+        [InlineData("090099999", "90", "099999")]
+        public void Parse_Known_NonGeographicPhoneNumber_PremiumRate(string value, string NationalDestinationCode, string subscriberNumber)
+        {
+            var parseResult = s_parser.Parse(value);
+            parseResult.ThrowIfFailure();
+
+            var phoneNumber = parseResult.PhoneNumber;
+
+            Assert.NotNull(phoneNumber);
+            Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
+
+            var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
+            Assert.Equal(CountryInfo.Belgium, nonGeographicPhoneNumber.Country);
+            Assert.False(nonGeographicPhoneNumber.IsFreephone);
+            Assert.True(nonGeographicPhoneNumber.IsPremiumRate);
             Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
             Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
         }
