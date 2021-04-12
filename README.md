@@ -126,8 +126,8 @@ Portugal       | PT            | +351         |              | Yes        | Yes 
 San Marino     | SM            | +378         |              | Yes        |        |                        |                    |                      | Yes            |                               |
 Singapore      | SG            | +65          |              |            | Yes    |                        |                    |                      | Yes            | Yes                           |
 Spain          | ES            | +34          |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                           |
-Switzerland    | CH            | +41          | 0            | Yes        | Yes    |                        |                    |                      | Yes            |                               |
-United Kingdom | GB            | +44          | 0            | Yes        | Yes    | Yes                    | Yes                | Yes                  | Yes            | Yes                           |
+Switzerland    | CH            | +41          | 0            | Yes        | Yes    |                        |                    |                      | Yes            |                               | Yes
+United Kingdom | GB            | +44          | 0            | Yes        | Yes    | Yes                    | Yes                | Yes                  | Yes            | Yes                           | Yes
 
 ### Notes
 
