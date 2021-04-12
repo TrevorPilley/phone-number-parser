@@ -121,7 +121,7 @@ Italy          | IT            | +39          |              | Yes        | Yes 
 Jersey         | JE            | +44          | 0            | Yes        | Yes    |                        |                    |                      |                |                               |
 Macau          | MO            | +853         |              |            | Yes    |                        |                    |                      | Yes            |                               |
 Monaco         | MC            | +377         |              |            | Yes    |                        |                    |                      | Yes            |                               |
-Netherlands    | NL            | +31          | 0            | Yes        | Yes    |                        | Yes                |                      | Yes            | Yes                           |
+Netherlands    | NL            | +31          | 0            | Yes        | Yes    |                        | Yes                |                      | Yes            | Yes                           | Yes
 Portugal       | PT            | +351         |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                           | Yes
 San Marino     | SM            | +378         |              | Yes        |        |                        |                    |                      | Yes            |                               | Yes
 Singapore      | SG            | +65          |              |            | Yes    |                        |                    |                      | Yes            | Yes                           | Yes
