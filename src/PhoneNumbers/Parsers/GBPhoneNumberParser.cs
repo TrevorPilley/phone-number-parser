@@ -68,9 +68,9 @@ namespace PhoneNumbers.Parsers
                 ndcLength = 2;
                 phoneNumberKind = PhoneNumberKind.GeographicPhoneNumber;
             }
-            else if (nsnValue[0] == '3' || nsnValue[0] == '8')
+            else if (nsnValue[0] == '3' || nsnValue[0] == '8' || nsnValue[0] == '9')
             {
-                // 3XX and 8XX area codes are 3 digits and non-geographic numbers.
+                // 3XX, 8XX and 9XX area codes are 3 digits and non-geographic numbers.
                 ndcLength = 3;
                 phoneNumberKind = PhoneNumberKind.NonGeographicPhoneNumber;
             }

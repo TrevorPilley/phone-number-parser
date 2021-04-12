@@ -8,7 +8,7 @@ namespace PhoneNumbers.Tests
         [Fact]
         public void Constructor_Sets_Properties()
         {
-            var countryInfo = CountryInfo.UnitedKingdom;
+            var countryInfo = TestHelper.CreateCountryInfo();
             var phoneNumber = new GeographicPhoneNumber(countryInfo, PhoneNumberHint.None, "12345667788", "12345", "667788", "N/A");
 
             Assert.Equal(countryInfo, phoneNumber.Country);

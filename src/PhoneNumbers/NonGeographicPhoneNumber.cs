@@ -32,6 +32,13 @@ namespace PhoneNumbers
         public bool IsFreephone =>
             Hint == PhoneNumberHint.Freephone;
 
+        /// <summary>
+        /// The number is a premium rate number.
+        /// </summary>
+        /// <remarks>This is an indication only based upon the data available for each country.</remarks>
+        public bool IsPremiumRate =>
+            Hint == PhoneNumberHint.PremiumRate;
+
         /// <inheritdoc/>
         public override PhoneNumberKind PhoneNumberKind =>
             PhoneNumberKind.NonGeographicPhoneNumber;
