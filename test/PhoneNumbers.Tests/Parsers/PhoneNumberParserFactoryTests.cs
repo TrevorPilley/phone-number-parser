@@ -19,6 +19,10 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.France));
 
         [Fact]
+        public void GetParser_For_CountryInfo_Guernsey_Returns_DefaultPhoneNumberParser() =>
+            Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Guernsey));
+
+        [Fact]
         public void GetParser_For_CountryInfo_HongKong_Returns_DefaultPhoneNumberParser() =>
             Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.HongKong));
 
@@ -27,8 +31,16 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Ireland));
 
         [Fact]
+        public void GetParser_For_CountryInfo_IsleOfMan_Returns_DefaultPhoneNumberParser() =>
+            Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.IsleOfMan));
+
+        [Fact]
         public void GetParser_For_CountryInfo_Italy_Returns_DefaultPhoneNumberParser() =>
             Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Italy));
+
+        [Fact]
+        public void GetParser_For_CountryInfo_Jersey_Returns_DefaultPhoneNumberParser() =>
+            Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Jersey));
 
         [Fact]
         public void GetParser_For_CountryInfo_Macau_Returns_DefaultPhoneNumberParser() =>
