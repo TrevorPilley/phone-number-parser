@@ -36,7 +36,7 @@ public static CountryInfo CountryName { get; } = new()
 };
 ```
 
-2. If the country uses national dialling codes (aka. area codes), set the `NationalDiallingCodeLengths` property as appropriate and declare in descending order.
+2. If the country uses national dialling codes (aka. area codes), set the `NdcLengths` property as appropriate and declare in descending order.
 3. If the country doesn't use the ITU default `InternationalCallPrefix` of `00`, set the property appropriately.
 4. If the country uses trunk prefixes, set the `TrunkPrefix` appropriately.
 5. Add a new `CountryInfo_CountryName` test in the `CountryInfo_Countries_Tests.cs` file asserting the property values (see an existing implementation).
@@ -78,10 +78,11 @@ Can be specifid in the same way as national dialling code ranges.
 
 Optional but can be one of:
 
-- `D` _data only (such as a 4G tablet)_
-- `F` _a Freephone number_
-- `P` _a Pager_
-- `V` _a Virtual number (e.g. personal number)_
+- `D` _data only (such as a 4G tablet), where Kind is M_
+- `F` _a Freephone number, where Kind is N_
+- `P` _a Pager, where Kind is M_
+- `R` _a Premium rate number, where Kind is N_
+- `V` _a Virtual number (e.g. personal number), where Kind is M_
 
 #### Comments
 
