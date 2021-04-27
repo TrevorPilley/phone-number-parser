@@ -7,6 +7,10 @@ namespace PhoneNumbers.Tests
     public class PhoneNumberTests
     {
         [Fact]
+        public void Parse_Value_CountryCode_Ignores_Hyphens() =>
+            Assert.NotNull(PhoneNumber.Parse("0114-272-6444", "GB"));
+
+        [Fact]
         public void Parse_Value_CountryCode_Ignores_Parenthesis() =>
             Assert.NotNull(PhoneNumber.Parse("(0114) 272 6444", "GB"));
 
@@ -84,6 +88,13 @@ namespace PhoneNumbers.Tests
         {
             Assert.False(PhoneNumber.TryParse(null, "GB", out var phoneNumber));
             Assert.Null(phoneNumber);
+        }
+
+        [Fact]
+        public void TryParse_Value_CountryCode_Ignores_Hyphens()
+        {
+            Assert.True(PhoneNumber.TryParse("0114-272-6444", "GB", out var phoneNumber));
+            Assert.NotNull(phoneNumber);
         }
 
         [Fact]

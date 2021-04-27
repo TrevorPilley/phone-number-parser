@@ -93,6 +93,14 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
+        public void TryParse_Value_With_Portugal_CallingCode()
+        {
+            Assert.True(PhoneNumber.TryParse("+351211140200", out var phoneNumber));
+            Assert.NotNull(phoneNumber);
+            Assert.Equal(CountryInfo.Portugal, phoneNumber.Country);
+        }
+
+        [Fact]
         public void TryParse_Value_With_SanMarino_CallingCode()
         {
             Assert.True(PhoneNumber.TryParse("+37866661212", out var phoneNumber));
