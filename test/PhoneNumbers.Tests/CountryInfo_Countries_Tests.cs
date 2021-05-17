@@ -117,6 +117,24 @@ public class CountryInfo_Countries_Tests
     }
 
     [Fact]
+    public void CountryInfo_Germany()
+    {
+        Assert.Same(CountryInfo.Germany, CountryInfo.Germany);
+
+        var countryInfo = CountryInfo.Germany;
+
+        Assert.Equal("+49", countryInfo.CallingCode);
+        Assert.False(countryInfo.HasNationalDestinationCodes);
+        Assert.Equal("00", countryInfo.InternationalCallPrefix);
+        Assert.Equal("DE", countryInfo.Iso3166Code);
+        Assert.Equal("Germany", countryInfo.Name);
+        Assert.Empty(countryInfo.NdcLengths);
+        Assert.Equal(new[] { 12 }, countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Equal("0", countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_Gibraltar()
     {
         Assert.Same(CountryInfo.Gibraltar, CountryInfo.Gibraltar);
