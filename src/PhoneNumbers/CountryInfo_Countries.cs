@@ -83,6 +83,18 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Germany.
+    /// </summary>
+    public static CountryInfo Germany { get; } = new()
+    {
+        CallingCode = "+49",
+        Iso3166Code = "DE",
+        Name = "Germany",
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 12 }),
+        TrunkPrefix = "0",
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Gibraltar.
     /// </summary>
     public static CountryInfo Gibraltar { get; } = new()
