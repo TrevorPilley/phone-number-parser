@@ -60,9 +60,9 @@ namespace PhoneNumbers.Parsers
 
             string? line;
 
-            while ((line = reader.ReadLine()) != null)
+            while ((line = reader.ReadLine()) is not null)
             {
-                if (line[0] != '#')
+                if (line.Length > 0 && line[0] != '#')
                 {
                     yield return line;
                 }
