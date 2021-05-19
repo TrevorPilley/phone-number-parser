@@ -189,6 +189,11 @@ These were used as the references for the phone number data for each country.
 - https://fr.wikipedia.org/wiki/Liste_des_indicatifs_téléphoniques_en_France
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_France
 
+### Germany
+
+- https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000510005PDFE.pdf
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Germany
+
 ### Gibraltar
 
 - https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000530004PDFE.pdf
