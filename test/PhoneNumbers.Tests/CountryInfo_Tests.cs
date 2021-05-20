@@ -1,9 +1,18 @@
+using PhoneNumbers.Formatters;
 using Xunit;
 
 namespace PhoneNumbers.Tests
 {
     public class CountryInfo_Tests
     {
+        [Fact]
+        public void GetFormatter_E123_Returns_E123PhoneNumberFormatter() =>
+            Assert.IsType<E123PhoneNumberFormatter>(TestHelper.CreateCountryInfo().GetFormatter("E.123"));
+
+        [Fact]
+        public void GetFormatter_E164_Returns_E164PhoneNumberFormatter() =>
+            Assert.IsType<E164PhoneNumberFormatter>(TestHelper.CreateCountryInfo().GetFormatter("E.164"));
+
         [Theory]
         [InlineData(default(string))]
         [InlineData("")]
