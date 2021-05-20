@@ -27,6 +27,7 @@ namespace PhoneNumbers
             {
                 E164PhoneNumberFormatter.Instance,
                 E123PhoneNumberFormatter.Instance,
+                NationalPhoneNumberFormatter.Instance,
             });
         }
 

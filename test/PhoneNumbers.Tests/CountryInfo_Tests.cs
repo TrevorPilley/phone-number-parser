@@ -13,6 +13,10 @@ namespace PhoneNumbers.Tests
         public void GetFormatter_E164_Returns_E164PhoneNumberFormatter() =>
             Assert.IsType<E164PhoneNumberFormatter>(TestHelper.CreateCountryInfo().GetFormatter("E.164"));
 
+        [Fact]
+        public void GetFormatter_N_Returns_NationalPhoneNumberFormatter() =>
+            Assert.IsType<NationalPhoneNumberFormatter>(TestHelper.CreateCountryInfo().GetFormatter("N"));
+
         [Theory]
         [InlineData(default(string))]
         [InlineData("")]
