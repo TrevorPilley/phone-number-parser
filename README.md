@@ -29,7 +29,7 @@ There are 2 overloads:
 PhoneNumber phoneNumber = PhoneNumber.Parse("+441142726444");
 
 // If the phone number string is not in international format:
-// Specify the ISO 3166 Aplha-2 code for the country as the second parameter.
+// Specify the ISO 3166 Alpha-2 code for the country as the second parameter.
 PhoneNumber phoneNumber = PhoneNumber.Parse("01142726444", "GB");
 ```
 
@@ -108,7 +108,7 @@ ParseOptions.Default.Countries.Remove(CountryInfo.X);
 
 ## Country support
 
-The library currently supports parsing phone numbers for the following countries and although best endeavours are made to adhere to published telephone numbering plans, depending on the accessibility of data there may be descepencies. If you happen to find any, please raise a bug.
+The library currently supports parsing phone numbers for the following countries and although best endeavours are made to adhere to published telephone numbering plans, depending on the accessibility of data there may be discrepancies. If you happen to find any, please raise a bug.
 
 Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone)| Non-Geographic<br/>(Premium Rate)
 ---            | ---           | ---          | ---          | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:                           | :-:
