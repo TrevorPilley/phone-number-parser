@@ -24,7 +24,7 @@ namespace PhoneNumbers.Parsers
             new() { ParseError = parseError };
 
         /// <summary>
-        /// Creates a <see cref="ParseResult"/> which succeded.
+        /// Creates a <see cref="ParseResult"/> which succeeded.
         /// </summary>
         /// <param name="phoneNumber">The <see cref="PhoneNumber"/> which was successfully parsed.</param>
         /// <returns>A <see cref="ParseResult"/> for the parse success.</returns>

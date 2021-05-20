@@ -6,7 +6,7 @@ namespace PhoneNumbers
     public enum PhoneNumberKind
     {
         /// <summary>
-        /// The phone number represents a geographicly assigned phone number.
+        /// The phone number represents a geographically assigned phone number.
         /// </summary>
         GeographicPhoneNumber,
 

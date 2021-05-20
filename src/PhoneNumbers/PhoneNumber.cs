@@ -110,19 +110,19 @@ namespace PhoneNumbers
         }
 
         /// <summary>
-        /// Parses the specified phone number value into a <see cref="PhoneNumber"/> instance for the given ISO 3166 Aplha-2 country code.
+        /// Parses the specified phone number value into a <see cref="PhoneNumber"/> instance for the given ISO 3166 Alpha-2 country code.
         /// </summary>
         /// <param name="value">A string containing a phone number.</param>
-        /// <param name="countryCode">The ISO 3166 Aplha-2 country code of the country for the phone number.</param>
+        /// <param name="countryCode">The ISO 3166 Alpha-2 country code of the country for the phone number.</param>
         /// <returns>A <see cref="PhoneNumber"/> instance representing the specified string.</returns>
         public static PhoneNumber Parse(string value, string countryCode) =>
             Parse(value, countryCode, ParseOptions.Default);
 
         /// <summary>
-        /// Parses the specified phone number value into a <see cref="PhoneNumber"/> instance for the given ISO 3166 Aplha-2 country code.
+        /// Parses the specified phone number value into a <see cref="PhoneNumber"/> instance for the given ISO 3166 Alpha-2 country code.
         /// </summary>
         /// <param name="value">A string containing a phone number.</param>
-        /// <param name="countryCode">The ISO 3166 Aplha-2 country code of the country for the phone number.</param>
+        /// <param name="countryCode">The ISO 3166 Alpha-2 country code of the country for the phone number.</param>
         /// <param name="options">The options for parsing phone numbers.</param>
         /// <returns>A <see cref="PhoneNumber"/> instance representing the specified string.</returns>
         public static PhoneNumber Parse(string value, string countryCode, ParseOptions options)
@@ -186,7 +186,7 @@ namespace PhoneNumbers
         /// Converts the string representation of a phone number to its <see cref="PhoneNumber"/> equivalent. A return value indicates whether the conversion succeeded.
         /// </summary>
         /// <param name="value">A string containing a phone number.</param>
-        /// <param name="countryCode">The ISO 3166 Aplha-2 country code of the country for the phone number.</param>
+        /// <param name="countryCode">The ISO 3166 Alpha-2 country code of the country for the phone number.</param>
         /// <param name="phoneNumber">The <see cref="PhoneNumber"/> equivalent if the conversion succeeds, otherwise null.</param>
         /// <returns><c>true</c> if value was converted successfully; otherwise, <c>false</c>.</returns>
         public static bool TryParse(string value, string countryCode, out PhoneNumber? phoneNumber) =>
@@ -196,7 +196,7 @@ namespace PhoneNumbers
         /// Converts the string representation of a phone number to its <see cref="PhoneNumber"/> equivalent. A return value indicates whether the conversion succeeded.
         /// </summary>
         /// <param name="value">A string containing a phone number.</param>
-        /// <param name="countryCode">The ISO 3166 Aplha-2 country code of the country for the phone number.</param>
+        /// <param name="countryCode">The ISO 3166 Alpha-2 country code of the country for the phone number.</param>
         /// <param name="options">The options for parsing phone numbers.</param>
         /// <param name="phoneNumber">The <see cref="PhoneNumber"/> equivalent if the conversion succeeds, otherwise null.</param>
         /// <returns><c>true</c> if value was converted successfully; otherwise, <c>false</c>.</returns>
