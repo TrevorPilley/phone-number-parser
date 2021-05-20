@@ -1,3 +1,8 @@
 {
-    "cSpell.language": "en-GB"
+    "cSpell.language": "en-GB",
+    "cSpell.words": [
+        "Xunit",
+        "fuget",
+        "nuget"
+    ]
 }
