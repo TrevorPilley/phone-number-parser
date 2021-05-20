@@ -28,7 +28,7 @@ namespace PhoneNumbers
             .ToList();
 
         /// <summary>
-        /// Gets the supported <see cref="CountryInfo"/> with the specified ISO 3166 Aplha-2 code.
+        /// Gets the supported <see cref="CountryInfo"/> with the specified ISO 3166 Alpha-2 code.
         /// </summary>
         internal CountryInfo? GetCountryInfo(string countryCode) =>
             Countries.SingleOrDefault(x => x.Iso3166Code == countryCode);

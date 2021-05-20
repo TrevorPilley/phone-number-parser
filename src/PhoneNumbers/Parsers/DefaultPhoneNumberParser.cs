@@ -9,7 +9,7 @@ namespace PhoneNumbers.Parsers
     /// </summary>
     /// <remarks>
     /// Depending on the complexity of the country phone numbering, this can be a base class where
-    /// ParseAreaAndNumber is overriden or used on its own.
+    /// ParseAreaAndNumber is overridden or used on its own.
     /// </remarks>
     internal class DefaultPhoneNumberParser : PhoneNumberParser
     {

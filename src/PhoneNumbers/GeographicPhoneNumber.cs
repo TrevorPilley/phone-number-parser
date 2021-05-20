@@ -3,7 +3,7 @@ using System;
 namespace PhoneNumbers
 {
     /// <summary>
-    /// An implementation of <see cref="PhoneNumber"/> which represents a geographicly assigned phone number.
+    /// An implementation of <see cref="PhoneNumber"/> which represents a geographically assigned phone number.
     /// </summary>
     public sealed class GeographicPhoneNumber : PhoneNumber, IEquatable<GeographicPhoneNumber>
     {

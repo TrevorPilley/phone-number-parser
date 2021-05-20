@@ -49,7 +49,7 @@ namespace PhoneNumbers
         public string InternationalCallPrefix { get; init; } = "00";
 
         /// <summary>
-        /// Gets the ISO 3166 Aplha-2 code for the country.
+        /// Gets the ISO 3166 Alpha-2 code for the country.
         /// </summary>
         /// <remarks>See https://www.iso.org/iso-3166-country-codes.html</remarks>
         public string Iso3166Code { get; init; } = null!;
@@ -71,12 +71,12 @@ namespace PhoneNumbers
         public string? TrunkPrefix { get; init; }
 
         /// <summary>
-        /// Gets the possible lenghts of the national destination code.
+        /// Gets the possible lengths of the national destination code.
         /// </summary>
         internal ReadOnlyCollection<int> NdcLengths { get; init; } = new(Array.Empty<int>());
 
         /// <summary>
-        /// Gets the permitted lenghts of the national significant number.
+        /// Gets the permitted lengths of the national significant number.
         /// </summary>
         internal ReadOnlyCollection<int> NsnLengths { get; init; } = new(Array.Empty<int>());
 
