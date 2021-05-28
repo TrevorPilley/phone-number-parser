@@ -10,7 +10,7 @@ Firstly clone or fork the repository.
 
 There is a `build.ps1` to build, test, view code coverage and create a nuget package on Windows and a `build.sh` for those on macOS (not currently tested on linux or Windows Subsystem for Linux but it may still work).
 
-## Rasising a bug
+## Raising a bug
 
 Please raise bugs for any you might find, at some point I'll get an issue template sorted but if you could at least provide details so I can reproduce it that will help improve the chances of it being fixed.
 
@@ -45,7 +45,7 @@ public static CountryInfo CountryName { get; } = new()
 
 1. Add a `{Iso3166Code}.txt` in `/src/PhoneNumbers/DataFiles/` and set as an embedded resource within the project file.
 
-The structre of the file is pipe `|` delimted and the "columns" are as follows:
+The structure of the file is pipe `|` delimited and the "columns" are as follows:
 
 `Kind|NationalDiallingCodeRanges|GeographicalArea|SubscriberNumberRanges|Hint`
 
@@ -62,17 +62,17 @@ Must be one of:
 Can be expressed as either:
 
 - `NNNN` _a single number (typically for geographically assigned numbers)_
-- `NNNN-NNNN` _a range of numbers (e.g. 800-804) where the same kind, subsriber number ranges and hint apply)_
+- `NNNN-NNNN` _a range of numbers (e.g. 800-804) where the same kind, subscriber number ranges and hint apply)_
 
 Or a combination thereof (e.g. `NNNN,NNNN-NNNN,NNNN-NNNN`).
 
 #### Geographical area
 
-The name of the area a geographically assinged number is allocated to, preferably in the language of the data file rather than English (e.g. `Firenze` rather than `Florence` in Italy).
+The name of the area a geographically assigned number is allocated to, preferably in the language of the data file rather than English (e.g. `Firenze` rather than `Florence` in Italy).
 
 #### Subscriber number ranges
 
-Can be specifid in the same way as national dialling code ranges.
+Can be specified in the same way as national dialling code ranges.
 
 #### Hint
 
