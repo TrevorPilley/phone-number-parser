@@ -1,3 +1,4 @@
+using System;
 using PhoneNumbers.Formatters;
 using Xunit;
 
@@ -16,6 +17,10 @@ namespace PhoneNumbers.Tests
         [Fact]
         public void GetFormatter_N_Returns_NationalPhoneNumberFormatter() =>
             Assert.IsType<NationalPhoneNumberFormatter>(TestHelper.CreateCountryInfo().GetFormatter("N"));
+
+        [Fact]
+        public void GetFormatter_Throws_For_Invalid_Format() =>
+            Assert.Throws<FormatException>(() => TestHelper.CreateCountryInfo().GetFormatter("X"));
 
         [Theory]
         [InlineData(default(string))]
