@@ -19,7 +19,6 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0208000", "208", "000", "Oberhausen Rheinland")]
         [InlineData("020899999999", "208", "99999999", "Oberhausen Rheinland")]
         [InlineData("0209000", "209", "000", "Gelsenkirchen")]
-        [InlineData("020999999999", "209", "99999999", "Gelsenkirchen")]
         [InlineData("0211000", "211", "000", "Düsseldorf")]
         [InlineData("021199999999", "211", "99999999", "Düsseldorf")]
         [InlineData("0212000", "212", "000", "Solingen")]
@@ -46,10 +45,9 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("028199999999", "281", "99999999", "Wesel")]
         [InlineData("0291000", "291", "000", "Meschede")]
         [InlineData("029199999999", "291", "99999999", "Meschede")]
-        public void Parse_Known_GeographicPhoneNumber_2XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
-        {
-            var parseResult = s_parser.Parse(value);
-            parseResult.ThrowIfFailure();
+        [InlineData("0208000", "208", "000", "Oberhausen")]
+        [InlineData("020899999999", "208", "99999999", "Oberhausen")]
+        [InlineData("0209000", "209", "000", "Gelsenkirchen")]
 
             var phoneNumber = parseResult.PhoneNumber;
 
@@ -88,40 +86,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("020659999999", "2065", "9999999", "Duisburg-Rheinhausen")]
         [InlineData("0206600", "2066", "00", "Duisburg-Homberg")]
         [InlineData("020669999999", "2066", "9999999", "Duisburg-Homberg")]
-        [InlineData("0210200", "2102", "00", "Ratingen")]
-        [InlineData("021029999999", "2102", "9999999", "Ratingen")]
-        [InlineData("0210300", "2103", "00", "Hilden")]
-        [InlineData("021039999999", "2103", "9999999", "Hilden")]
-        [InlineData("0210400", "2104", "00", "Mettmann")]
-        [InlineData("021049999999", "2104", "9999999", "Mettmann")]
-        [InlineData("0212900", "2129", "00", "Haan Rheinland")]
-        [InlineData("021299999999", "2129", "9999999", "Haan Rheinland")]
-        [InlineData("0213100", "2131", "00", "Neuss")]
-        [InlineData("021319999999", "2131", "9999999", "Neuss")]
-        [InlineData("0213200", "2132", "00", "Meerbusch-Büderich")]
-        [InlineData("021329999999", "2132", "9999999", "Meerbusch-Büderich")]
-        [InlineData("0213300", "2133", "00", "Dormagen")]
-        [InlineData("021339999999", "2133", "9999999", "Dormagen")]
-        [InlineData("0213700", "2137", "00", "Neuss-Norf")]
-        [InlineData("021379999999", "2137", "9999999", "Neuss-Norf")]
-        [InlineData("0215000", "2150", "00", "Meerbusch-Lank")]
-        [InlineData("021509999999", "2150", "9999999", "Meerbusch-Lank")]
-        [InlineData("0215100", "2151", "00", "Krefeld")]
-        [InlineData("021519999999", "2151", "9999999", "Krefeld")]
-        [InlineData("0215200", "2152", "00", "Kempen")]
-        [InlineData("021529999999", "2152", "9999999", "Kempen")]
-        [InlineData("0215300", "2153", "00", "Nettetal-Lobberich")]
-        [InlineData("021539999999", "2153", "9999999", "Nettetal-Lobberich")]
-        [InlineData("0215400", "2154", "00", "Willich")]
-        [InlineData("021549999999", "2154", "9999999", "Willich")]
-        [InlineData("0215600", "2156", "00", "Willich-Anrath")]
-        [InlineData("021569999999", "2156", "9999999", "Willich-Anrath")]
-        [InlineData("0215700", "2157", "00", "Nettetal-Kaldenkirchen")]
-        [InlineData("021579999999", "2157", "9999999", "Nettetal-Kaldenkirchen")]
-        [InlineData("0215800", "2158", "00", "Grefrath bei Krefeld")]
-        [InlineData("021589999999", "2158", "9999999", "Grefrath bei Krefeld")]
-        [InlineData("0215900", "2159", "00", "Meerbusch-Osterath")]
-        [InlineData("021599999999", "2159", "9999999", "Meerbusch-Osterath")]
+
         [InlineData("0216100", "2161", "00", "Mönchengladbach")]
         [InlineData("021619999999", "2161", "9999999", "Mönchengladbach")]
         [InlineData("0216200", "2162", "00", "Viersen")]
@@ -1060,102 +1025,40 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("029939999999", "2993", "9999999", "Marsberg-Canstein")]
         [InlineData("0299400", "2994", "00", "Marsberg-Westheim")]
         [InlineData("029949999999", "2994", "9999999", "Marsberg-Westheim")]
-        public void Parse_Known_GeographicPhoneNumber_2XXX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
-        {
-            var parseResult = s_parser.Parse(value);
-            parseResult.ThrowIfFailure();
 
-            var phoneNumber = parseResult.PhoneNumber;
+        {
 
             Assert.NotNull(phoneNumber);
-            Assert.IsType<GeographicPhoneNumber>(phoneNumber);
-
             var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
-            Assert.Equal(CountryInfo.Germany, geographicPhoneNumber.Country);
-            Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
             Assert.Equal(NationalDestinationCode, geographicPhoneNumber.NationalDestinationCode);
-            Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
-        }
 
-        [Theory]
         [InlineData("030000", "30", "000", "Berlin")]
-        [InlineData("030999999999", "30", "999999999", "Berlin")]
-            parseResult.ThrowIfFailure();
 
-            var phoneNumber = parseResult.PhoneNumber;
 
             Assert.NotNull(phoneNumber);
-            Assert.IsType<GeographicPhoneNumber>(phoneNumber);
-
             var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
-            Assert.Equal(CountryInfo.Germany, geographicPhoneNumber.Country);
-            Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
             Assert.Equal(NationalDestinationCode, geographicPhoneNumber.NationalDestinationCode);
-            Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
-        }
         [Theory]
-        [InlineData("0331000", "331", "000", "Potsdam")]
-        [InlineData("033199999999", "331", "99999999", "Potsdam")]
         [InlineData("0335000", "335", "000", "Frankfurt (Oder)")]
-        [InlineData("033599999999", "335", "99999999", "Frankfurt (Oder)")]
-        [InlineData("0340000", "340", "000", "Dessau Anh")]
         [InlineData("034099999999", "340", "99999999", "Dessau Anh")]
-        [InlineData("0341000", "341", "000", "Leipzig")]
-        [InlineData("034199999999", "341", "99999999", "Leipzig")]
         [InlineData("0345000", "345", "000", "Halle Saale")]
-        [InlineData("034599999999", "345", "99999999", "Halle Saale")]
-        [InlineData("0351000", "351", "000", "Dresden")]
         [InlineData("035199999999", "351", "99999999", "Dresden")]
-        [InlineData("0355000", "355", "000", "Cottbus")]
-        [InlineData("035599999999", "355", "99999999", "Cottbus")]
         [InlineData("0361000", "361", "000", "Erfurt")]
-        [InlineData("036199999999", "361", "99999999", "Erfurt")]
-        [InlineData("0365000", "365", "000", "Gera")]
         [InlineData("036599999999", "365", "99999999", "Gera")]
-        [InlineData("0371000", "371", "000", "Chemnitz Sachsen")]
-        [InlineData("037199999999", "371", "99999999", "Chemnitz Sachsen")]
         [InlineData("0375000", "375", "000", "Zwickau")]
-        [InlineData("037599999999", "375", "99999999", "Zwickau")]
-        [InlineData("0381000", "381", "000", "Rostock")]
         [InlineData("038199999999", "381", "99999999", "Rostock")]
-        [InlineData("0385000", "385", "000", "Schwerin")]
-        [InlineData("038599999999", "385", "99999999", "Schwerin")]
         [InlineData("0391000", "391", "000", "Magdeburg")]
-        [InlineData("039199999999", "391", "99999999", "Magdeburg")]
-        [InlineData("0395000", "395", "000", "Neubrandenburg")]
         [InlineData("039599999999", "395", "99999999", "Neubrandenburg")]
-        public void Parse_Known_GeographicPhoneNumber_3XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
-        {
             var parseResult = s_parser.Parse(value);
-            parseResult.ThrowIfFailure();
-
             var phoneNumber = parseResult.PhoneNumber;
-
-            Assert.NotNull(phoneNumber);
             Assert.IsType<GeographicPhoneNumber>(phoneNumber);
-
-            var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
             Assert.Equal(CountryInfo.Germany, geographicPhoneNumber.Country);
-            Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
-            Assert.Equal(NationalDestinationCode, geographicPhoneNumber.NationalDestinationCode);
             Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
-        }
-
         [Theory]
-        [InlineData("0330100", "3301", "00", "Oranienburg")]
-        [InlineData("033019999999", "3301", "9999999", "Oranienburg")]
         [InlineData("0330200", "3302", "00", "Hennigsdorf")]
-        [InlineData("033029999999", "3302", "9999999", "Hennigsdorf")]
-        [InlineData("0330300", "3303", "00", "Birkenwerder")]
         [InlineData("033039999999", "3303", "9999999", "Birkenwerder")]
-        [InlineData("0330400", "3304", "00", "Velten")]
-        [InlineData("033049999999", "3304", "9999999", "Velten")]
         [InlineData("0330600", "3306", "00", "Gransee")]
-        [InlineData("033069999999", "3306", "9999999", "Gransee")]
-        [InlineData("0330700", "3307", "00", "Zehdenick")]
         [InlineData("033079999999", "3307", "9999999", "Zehdenick")]
-        [InlineData("0332100", "3321", "00", "Nauen Brandenburg")]
-        [InlineData("033219999999", "3321", "9999999", "Nauen Brandenburg")]
         [InlineData("0332200", "3322", "00", "Falkensee")]
         [InlineData("033229999999", "3322", "9999999", "Falkensee")]
         [InlineData("0332700", "3327", "00", "Werder Havel")]
