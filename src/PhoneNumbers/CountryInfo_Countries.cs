@@ -90,8 +90,8 @@ public partial class CountryInfo
         CallingCode = "+49",
         Iso3166Code = "DE",
         Name = "Germany",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 11, 12 }),
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 }),
         TrunkPrefix = "0",
     };
 
