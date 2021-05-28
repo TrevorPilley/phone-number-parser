@@ -11,7 +11,6 @@ namespace PhoneNumbers.Tests.Parsers
         private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Germany);
 
         [Theory]
-        [InlineData("0201000", "201", "000", "Essen")]
         [InlineData("020199999999", "201", "99999999", "Essen")]
         [InlineData("0202000", "202", "000", "Wuppertal")]
         [InlineData("020299999999", "202", "99999999", "Wuppertal")]
@@ -1081,9 +1080,6 @@ namespace PhoneNumbers.Tests.Parsers
         [Theory]
         [InlineData("030000", "30", "000", "Berlin")]
         [InlineData("030999999999", "30", "999999999", "Berlin")]
-        public void Parse_Known_GeographicPhoneNumber_3X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
-        {
-            var parseResult = s_parser.Parse(value);
             parseResult.ThrowIfFailure();
 
             var phoneNumber = parseResult.PhoneNumber;
@@ -1097,7 +1093,6 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.Equal(NationalDestinationCode, geographicPhoneNumber.NationalDestinationCode);
             Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
         }
-
         [Theory]
         [InlineData("0331000", "331", "000", "Potsdam")]
         [InlineData("033199999999", "331", "99999999", "Potsdam")]
@@ -10792,4 +10787,3 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
         }
     }
-}
