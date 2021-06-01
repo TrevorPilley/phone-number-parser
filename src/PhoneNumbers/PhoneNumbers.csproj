@@ -14,12 +14,12 @@
     <Authors>Trevor Pilley and Project Contributors</Authors>
     <Copyright>Copyright 2021 Project Contributors</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/TrevorPilley/PhoneNumbers</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/TrevorPilley/PhoneNumbers</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/TrevorPilley/phone-number-parser</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/TrevorPilley/phone-number-parser</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <NeutralLanguage>en-GB</NeutralLanguage>
     <PackageTags>Phone Number Parser</PackageTags>
-    <PackageReleaseNotes>See https://github.com/TrevorPilley/PhoneNumbers/releases for a summary of changes made in this release of the package.</PackageReleaseNotes>
+    <PackageReleaseNotes>See https://github.com/TrevorPilley/phone-number-parser/releases for a summary of changes made in this release of the package.</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net5.0|AnyCPU'">
