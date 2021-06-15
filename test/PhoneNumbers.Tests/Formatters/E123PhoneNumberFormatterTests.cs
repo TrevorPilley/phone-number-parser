@@ -9,13 +9,6 @@ namespace PhoneNumbers.Tests.Formatters
     public class E123PhoneNumberFormatterTests
     {
         [Fact]
-        public void Instance()
-        {
-            Assert.NotNull(E123PhoneNumberFormatter.Instance);
-            Assert.Same(E123PhoneNumberFormatter.Instance, E123PhoneNumberFormatter.Instance);
-        }
-
-        [Fact]
         public void CanFormat_Returns_False_For_Not_E123() =>
             Assert.False(E123PhoneNumberFormatter.Instance.CanFormat("E.164"));
 
@@ -38,5 +31,12 @@ namespace PhoneNumbers.Tests.Formatters
             Assert.Equal(
                 "+422 667788",
                 E123PhoneNumberFormatter.Instance.Format(TestHelper.CreateNonGeographicPhoneNumber("0", null, "667788")));
+
+        [Fact]
+        public void Instance()
+        {
+            Assert.NotNull(E123PhoneNumberFormatter.Instance);
+            Assert.Same(E123PhoneNumberFormatter.Instance, E123PhoneNumberFormatter.Instance);
+        }
     }
 }

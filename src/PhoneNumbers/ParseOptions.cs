@@ -28,6 +28,11 @@ namespace PhoneNumbers
             .ToList();
 
         /// <summary>
+        /// Gets the <see cref="PhoneNumberParserFactory"/>.
+        /// </summary>
+        internal PhoneNumberParserFactory Factory { get; } = new();
+
+        /// <summary>
         /// Gets the supported <see cref="CountryInfo"/> with the specified ISO 3166 Alpha-2 code.
         /// </summary>
         internal CountryInfo? GetCountryInfo(string countryCode) =>
@@ -38,10 +43,5 @@ namespace PhoneNumbers
         /// </summary>
         internal IEnumerable<CountryInfo> GetCountryInfos(string value) =>
             Countries.Where(x => x.IsInternationalNumber(value));
-
-        /// <summary>
-        /// Gets the <see cref="PhoneNumberParserFactory"/>.
-        /// </summary>
-        internal PhoneNumberParserFactory Factory { get; } = new();
     }
 }
