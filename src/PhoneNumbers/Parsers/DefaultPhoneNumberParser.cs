@@ -88,7 +88,7 @@ namespace PhoneNumbers.Parsers
 
         /// <inheritdoc/>
         /// <remarks>By the time this method is called, nsnValue will have been validated against the <see cref="CountryInfo"/>.NsnLengths and contain digits only.</remarks>
-        protected override ParseResult ParseNationalSignificantNumber(string nsnValue)
+        protected override ParseResult ParseNsn(string nsnValue)
         {
             var areaAndNumber = ParseNdcAndSn(nsnValue);
 
@@ -122,7 +122,7 @@ namespace PhoneNumbers.Parsers
                             areaAndNumber.NationalDiallingCode,
                             areaAndNumber.SubscriberNumber!)),
 
-                _ => base.ParseNationalSignificantNumber(nsnValue),
+                _ => base.ParseNsn(nsnValue),
             };
         }
     }
