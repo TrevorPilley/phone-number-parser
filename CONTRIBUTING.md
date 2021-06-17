@@ -38,7 +38,7 @@ public static CountryInfo CountryName { get; } = new()
 
 2. If the country uses national dialling codes (aka. area codes), set the `NdcLengths` property as appropriate and declare in descending order.
 3. If the country doesn't use the ITU default `InternationalCallPrefix` of `00`, set the property appropriately.
-4. If the country uses trunk prefixes, set the `TrunkPrefix` appropriately.
+4. If the country uses a trunk prefix, set the `TrunkPrefix` appropriately.
 5. Add a new `CountryInfo_CountryName` test in the `CountryInfo_Countries_Tests.cs` file asserting the property values (see an existing implementation).
 
 ### Add the data file
@@ -68,7 +68,7 @@ Or a combination thereof (e.g. `NNNN,NNNN-NNNN,NNNN-NNNN`).
 
 #### Geographical area
 
-The name of the area a geographically assigned number is allocated to, preferably in the language of the data file rather than English (e.g. `Firenze` rather than `Florence` in Italy).
+The name of the area a geographically assigned number is allocated to, preferably in the local language of the country the data file relates to rather than English (e.g. `Firenze` rather than `Florence` in Italy).
 
 #### Subscriber number ranges
 
