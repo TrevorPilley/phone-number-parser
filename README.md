@@ -1,12 +1,20 @@
 # PhoneNumbers
 
-A library for parsing phone numbers targetting .NET 5.0, .NET Standard 2.1 and .NET Standard 2.0 with [nullable reference type](https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references) annotations.
+A library for parsing phone numbers with builds for .NET 5.0, .NET Standard 2.1 and .NET Standard 2.0 and [nullable reference type](https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references) annotations.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/TrevorPilley/PhoneNumbers/blob/main/LICENSE) ![GitHub last commit](https://img.shields.io/github/last-commit/TrevorPilley/PhoneNumbers/main) ![Build Status](https://github.com/TrevorPilley/PhoneNumbers/workflows/CI/badge.svg?branch=main) ![CodeQL](https://github.com/TrevorPilley/PhoneNumbers/workflows/CodeQL/badge.svg) [![NuGet](https://img.shields.io/nuget/v/PhoneNumberParser.svg)](https://www.nuget.org/packages/PhoneNumberParser/) [![PhoneNumberParser on fuget.org](https://www.fuget.org/packages/PhoneNumberParser/badge.svg)](https://www.fuget.org/packages/PhoneNumberParser) ![GitHub Release Date](https://img.shields.io/github/release-date/TrevorPilley/PhoneNumbers) [![NuGet](https://img.shields.io/nuget/dt/PhoneNumberParser.svg)](https://www.nuget.org/packages/PhoneNumberParser/)
 
+The library provides a number of improvements over a regular expression, for example greater validity of phone numbers including the validity of national desination codes (area codes) and subscriber numbers. Additional attribues such as the kind of phone number (Mobile, Geographic or Non-Geographic). All parsing is performed within the library (in memory) and uses embedded data files.
+
+However the library **does not**:
+
+- Provide certainty that a phone number is assigned and in use
+- Provide the carrier for mobile phone numbers
+- Support extension numbers
+
 ## Install
 
-Install via nuget
+Install via nuget:
 
 ```bash
 dotnet add package PhoneNumberParser
@@ -133,7 +141,8 @@ United Kingdom | GB            | +44          | 0            | Yes        | Yes 
 ### Notes
 
 - The ISO code for the United Kingdom is 'GB' rather than 'UK'.
-- Geographically assigned numbers in france are currently only within the top level geographic zones (01 Île-de-France, 02 Nord-Ouest, 03 Nord-Est, 04 Sud-Est and 05 Sud-Ouest).
+- Geographically assigned numbers in France are currently only within the top level geographic zones (01 Île-de-France, 02 Nord-Ouest, 03 Nord-Est, 04 Sud-Est and 05 Sud-Ouest).
+- Where possible, the geograpic area name is in the language/locality of the country for the phone number (e.g. for an Italian phone number assigned to Florence, the gaographic area will be set to `Firenze`.
 
 ## References for number data
 
