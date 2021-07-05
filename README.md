@@ -1,15 +1,15 @@
 # PhoneNumbers
 
-A library for parsing phone numbers with builds for .NET 5.0, .NET Standard 2.1 and .NET Standard 2.0 and [nullable reference type](https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references) annotations.
+A library for parsing phone numbers, built for .NET 5.0, .NET Standard 2.1 and .NET Standard 2.0 using [nullable reference type](https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references) annotations.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/TrevorPilley/PhoneNumbers/blob/main/LICENSE) ![GitHub last commit](https://img.shields.io/github/last-commit/TrevorPilley/PhoneNumbers/main) ![Build Status](https://github.com/TrevorPilley/PhoneNumbers/workflows/CI/badge.svg?branch=main) ![CodeQL](https://github.com/TrevorPilley/PhoneNumbers/workflows/CodeQL/badge.svg) [![NuGet](https://img.shields.io/nuget/v/PhoneNumberParser.svg)](https://www.nuget.org/packages/PhoneNumberParser/) [![PhoneNumberParser on fuget.org](https://www.fuget.org/packages/PhoneNumberParser/badge.svg)](https://www.fuget.org/packages/PhoneNumberParser) ![GitHub Release Date](https://img.shields.io/github/release-date/TrevorPilley/PhoneNumbers) [![NuGet](https://img.shields.io/nuget/dt/PhoneNumberParser.svg)](https://www.nuget.org/packages/PhoneNumberParser/)
 
-The library provides a number of improvements over a regular expression, for example greater validity of phone numbers including the validity of national desination codes (area codes) and subscriber numbers. Additional attribues such as the kind of phone number (Mobile, Geographic or Non-Geographic). All parsing is performed within the library (in memory) and uses embedded data files.
+The library provides a number of improvements over a regular expression, for example greater validity of phone numbers including the validity of national desination codes (area codes) and subscriber numbers. Additional attribues such as the kind of phone number (Mobile, Geographic or Non-Geographic). All parsing is performed locally within the library using embedded in-memory data files.
 
-However the library **does not**:
+The library **does not**:
 
 - Provide certainty that a phone number is assigned and in use
-- Provide the carrier for mobile phone numbers
+- Provide the carrier for mobile phone numbers (due to number portability in most countries the accuracy of this is uncertain)
 - Support extension numbers
 
 ## Install
