@@ -79,4 +79,11 @@ G|2225|Meckenheim Rheinland|00-9999999|
 G|2226|Rheinbach|00-9999999|
 G|2227|Bornheim-Merten|00-9999999|
 G|2228|Remagen-Rolandseck|00-9999999|
+G|2232|Brühl Rheinland|00-9999999|
+G|2233|Hrühl Rheinland|00-9999999|
+G|2234|Frechen|00-9999999|
+G|2235|Erftstadt|00-9999999|
+G|2236|Wesseling Rheinland|00-9999999|
+G|2237|Kerpen Rheinland-Türnich|00-9999999|
+G|2238|Pulheim|00-9999999|
 G|30|Berlin|000000000-999999999|
