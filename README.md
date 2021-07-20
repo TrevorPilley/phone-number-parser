@@ -142,7 +142,7 @@ United Kingdom | GB            | +44          | 0            | Yes        | Yes 
 
 - The ISO code for the United Kingdom is 'GB' rather than 'UK'.
 - Geographically assigned numbers in France are currently only within the top level geographic zones (01 Île-de-France, 02 Nord-Ouest, 03 Nord-Est, 04 Sud-Est and 05 Sud-Ouest).
-- Where possible, the geograpic area name is in the language/locality of the country for the phone number (e.g. for an Italian phone number assigned to Florence, the gaographic area will be set to `Firenze`.
+- Where possible, the geograpic area name is in the language/locality of the country for the phone number (e.g. for an Italian phone number assigned to Florence, the geographic area will be set to `Firenze`.
 
 ## References for number data
 
