@@ -149,6 +149,10 @@ United Kingdom | GB            | +44          | 0            | Yes        | Yes 
 
 These were used as the references for the phone number data for each country.
 
+### Austria
+
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Austria
+
 ### Belgium
 
 - https://www.bipt.be/operators/publication/national-numbering-plan
