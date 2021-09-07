@@ -5,6 +5,17 @@ namespace PhoneNumbers
     public partial class CountryInfo
     {
         /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Austria.
+        /// </summary>
+        public static CountryInfo Austria { get; } = new()
+        {
+            CallingCode = "+43",
+            Iso3166Code = "AT",
+            Name = "Austria",
+            TrunkPrefix = "0",
+        };
+
+        /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Belgium.
         /// </summary>
         public static CountryInfo Belgium { get; } = new()
