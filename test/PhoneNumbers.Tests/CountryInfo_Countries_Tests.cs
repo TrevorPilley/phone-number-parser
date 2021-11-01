@@ -12,12 +12,12 @@ namespace PhoneNumbers.Tests
             var countryInfo = CountryInfo.Austria;
 
             Assert.Equal("+43", countryInfo.CallingCode);
-            Assert.False(countryInfo.HasNationalDestinationCodes);
+            Assert.True(countryInfo.HasNationalDestinationCodes);
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("AT", countryInfo.Iso3166Code);
             Assert.Equal("Austria", countryInfo.Name);
-            Assert.Empty(countryInfo.NdcLengths);
-            Assert.Empty(countryInfo.NsnLengths);
+            Assert.Equal(new[] { 4, 3, 1 }, countryInfo.NdcLengths);
+            Assert.Equal(new[] { 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 }, countryInfo.NsnLengths);
             Assert.False(countryInfo.SharesCallingCode);
             Assert.Equal("0", countryInfo.TrunkPrefix);
         }
