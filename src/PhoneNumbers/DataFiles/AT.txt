@@ -550,7 +550,7 @@ G|4356|Lavamünd|000-999999999|
 G|4357|Sankt Paul im Lavanttal|000-999999999|
 G|4358|Sankt Andrä|000-999999999|
 G|4359|Reichenfels|000-999999999|
-G|463|Klagenfurt am Wörthersee|000-999999999|
+G|463|Klagenfurt am Wörthersee|0000-9999999999|
 G|4710|Oberdrauburg|000-999999999|
 G|4712|Greifenburg|000-999999999|
 G|4713|Techendorf|000-999999999|
@@ -898,7 +898,7 @@ G|7286|Lembach im Mühlkreis|000-999999999|
 G|7287|Peilstein im Mühlviertel|000-999999999|
 G|7288|Ulrichsberg|000-999999999|
 G|7289|Rohrbach in Oberösterreich|000-999999999|
-G|732|Linz|000-999999999|
+G|732|Linz|0000-9999999999|
 G|7353|Gaflenz|000-999999999|
 G|7355|Weyer|000-999999999|
 G|7357|Kleinreifling|000-999999999|
