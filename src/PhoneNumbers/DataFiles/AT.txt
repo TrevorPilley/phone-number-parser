@@ -504,12 +504,11 @@ G|4236|Eberndorf|000-999999999|
 G|4237|Miklauzhof|000-999999999|
 G|4238|Eisenkappel-Vellach|000-999999999|
 G|4239|Sankt Kanzian am Klopeiner See|000-999999999|
-G|4240|Bad Kleinkirchheim|000-999999999|
+G|4240|Bad Kleinkirchheim|000-199999999|
 G|4242|Villach|000-999999999|
 G|4243|Bodensdorf|000-999999999|
 G|4244|Bad Bleiberg|000-999999999|
 G|4245|Feistritz an der Drau|000-999999999|
-G|4245|Gummern|000-999999999|
 G|4246|Radenthein|000-999999999|
 G|4247|Afritz am See|000-999999999|
 G|4248|Treffen am Ossiacher See|000-999999999|
@@ -519,6 +518,7 @@ G|4254|Faak am See|000-999999999|
 G|4255|Arnoldstein|000-999999999|
 G|4256|Nötsch im Gailtal|000-999999999|
 G|4257|Fürnitz|000-999999999|
+G|4258|Gummern|000-999999999|
 G|4262|Treibach|000-999999999|
 G|4263|Hüttenberg|000-999999999|
 G|4264|Klein Sankt Paul|000-999999999|
