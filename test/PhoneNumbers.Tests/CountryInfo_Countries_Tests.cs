@@ -17,7 +17,7 @@ namespace PhoneNumbers.Tests
             Assert.Equal("AT", countryInfo.Iso3166Code);
             Assert.Equal("Austria", countryInfo.Name);
             Assert.Equal(new[] { 4, 3, 1 }, countryInfo.NdcLengths);
-            Assert.Equal(new[] { 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 }, countryInfo.NsnLengths);
+            Assert.Equal(new[] { 7, 8, 9, 10, 11, 12, 13 }, countryInfo.NsnLengths);
             Assert.False(countryInfo.SharesCallingCode);
             Assert.Equal("0", countryInfo.TrunkPrefix);
         }

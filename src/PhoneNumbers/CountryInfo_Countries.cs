@@ -13,7 +13,7 @@ namespace PhoneNumbers
             Iso3166Code = "AT",
             Name = "Austria",
             NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 1 }),
-            NsnLengths = new ReadOnlyCollection<int>(new[] { 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 }),
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8, 9, 10, 11, 12, 13 }),
             TrunkPrefix = "0",
         };
 
