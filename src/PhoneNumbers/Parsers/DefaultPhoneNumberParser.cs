@@ -90,37 +90,37 @@ namespace PhoneNumbers.Parsers
         /// <remarks>By the time this method is called, nsnValue will have been validated against the <see cref="CountryInfo"/>.NsnLengths and contain digits only.</remarks>
         protected override ParseResult ParseNsn(string nsnValue)
         {
-            var areaAndNumber = ParseNdcAndSn(nsnValue);
+            var ndcAndSn = ParseNdcAndSn(nsnValue);
 
-            return (areaAndNumber.CountryNumber?.Kind) switch
+            return (ndcAndSn.CountryNumber?.Kind) switch
             {
                 PhoneNumberKind.GeographicPhoneNumber =>
                     ParseResult.Success(
                         new GeographicPhoneNumber(
                             Country,
-                            areaAndNumber.CountryNumber.Hint,
+                            ndcAndSn.CountryNumber.Hint,
                             nsnValue,
-                            areaAndNumber.NationalDiallingCode!,
-                            areaAndNumber.SubscriberNumber!,
-                            areaAndNumber.CountryNumber.GeographicArea!)),
+                            ndcAndSn.NationalDiallingCode!,
+                            ndcAndSn.SubscriberNumber!,
+                            ndcAndSn.CountryNumber.GeographicArea!)),
 
                 PhoneNumberKind.MobilePhoneNumber =>
                     ParseResult.Success(
                         new MobilePhoneNumber(
                             Country,
-                            areaAndNumber.CountryNumber.Hint,
+                            ndcAndSn.CountryNumber.Hint,
                             nsnValue,
-                            areaAndNumber.NationalDiallingCode,
-                            areaAndNumber.SubscriberNumber!)),
+                            ndcAndSn.NationalDiallingCode,
+                            ndcAndSn.SubscriberNumber!)),
 
                 PhoneNumberKind.NonGeographicPhoneNumber =>
                     ParseResult.Success(
                         new NonGeographicPhoneNumber(
                             Country,
-                            areaAndNumber.CountryNumber.Hint,
+                            ndcAndSn.CountryNumber.Hint,
                             nsnValue,
-                            areaAndNumber.NationalDiallingCode,
-                            areaAndNumber.SubscriberNumber!)),
+                            ndcAndSn.NationalDiallingCode,
+                            ndcAndSn.SubscriberNumber!)),
 
                 _ => base.ParseNsn(nsnValue),
             };
