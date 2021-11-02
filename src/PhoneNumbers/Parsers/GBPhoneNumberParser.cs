@@ -58,7 +58,7 @@ namespace PhoneNumbers.Parsers
                 {
                     // There are some 5 digit area codes which use a subset of numbers from the "parent" 4 digit area code:
                     // e.g. 1339 (Aboyne / Ballater) has 200000-719999 and 13397 (Ballater) has 20000-99899
-                    // Since geographic area codes are for a single value only, so we can just check against From.
+                    // Since geographic area codes are for a single value only, we can just check against From.
                     ndcLength = 5;
                 }
             }
