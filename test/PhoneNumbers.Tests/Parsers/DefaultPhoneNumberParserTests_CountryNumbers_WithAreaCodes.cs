@@ -14,7 +14,7 @@ namespace PhoneNumbers.Tests.Parsers
 
         private readonly PhoneNumberParser _parser;
 
-        public DefaultPhoneNumberParserTests_CountryNumbers_NationalDestinationCodes() =>
+        public DefaultPhoneNumberParserTests_CountryNumbers_WithNationalDestinationCodes() =>
             _parser = new DefaultPhoneNumberParser(
                 _countryInfo,
                 new[]
