@@ -61,7 +61,7 @@ namespace PhoneNumbers.Parsers
 
                     countryNumber = CountryNumbers
                         .FirstOrDefault(x =>
-                            x.NationalDiallingCodeRanges!.Any(x => x.Contains(ndc)) &&
+                            x.NationalDestinationCodeRanges!.Any(x => x.Contains(ndc)) &&
                             x.SubscriberNumberRanges.Any(x => x.Contains(sn)));
 
                     if (countryNumber != null)
