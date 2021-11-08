@@ -23,9 +23,9 @@ namespace PhoneNumbers.Parsers
         internal PhoneNumberKind Kind { get; init; }
 
         /// <summary>
-        /// Gets the <see cref="NumberRange"/>s of the national dialling codes.
+        /// Gets the <see cref="NumberRange"/>s of the national destination codes.
         /// </summary>
-        internal IReadOnlyList<NumberRange>? NationalDiallingCodeRanges { get; init; }
+        internal IReadOnlyList<NumberRange>? NationalDestinationCodeRanges { get; init; }
 
         /// <summary>
         /// Gets the <see cref="NumberRange"/>s of the subscriber numbers.

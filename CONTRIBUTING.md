@@ -36,7 +36,7 @@ public static CountryInfo CountryName { get; } = new()
 };
 ```
 
-2. If the country uses national dialling codes (aka. area codes), set the `NdcLengths` property as appropriate and declare in descending order.
+2. If the country uses national destination codes (aka. area codes), set the `NdcLengths` property as appropriate and declare in descending order.
 3. If the country doesn't use the ITU default `InternationalCallPrefix` of `00`, set the property appropriately.
 4. If the country uses a trunk prefix, set the `TrunkPrefix` appropriately.
 5. Add a new `CountryInfo_CountryName` test in the `CountryInfo_Countries_Tests.cs` file asserting the property values (see an existing implementation).
@@ -47,7 +47,7 @@ public static CountryInfo CountryName { get; } = new()
 
 The structure of the file is pipe `|` delimited and the "columns" are as follows:
 
-`Kind|NationalDiallingCodeRanges|GeographicalArea|SubscriberNumberRanges|Hint`
+`Kind|NationalDestinationCodeRanges|GeographicalArea|SubscriberNumberRanges|Hint`
 
 #### Kind
 
@@ -57,7 +57,7 @@ Must be one of:
 - `M` _for a mobile number_
 - `N` _for a non-geographically assigned number_
 
-#### National dialling code ranges
+#### National destination code ranges
 
 Can be expressed as either:
 
@@ -72,7 +72,7 @@ The name of the area a geographically assigned number is allocated to, preferabl
 
 #### Subscriber number ranges
 
-Can be specified in the same way as national dialling code ranges.
+Can be specified in the same way as national destination code ranges.
 
 #### Hint
 
@@ -94,7 +94,7 @@ A single line comment can be added in a data file by starting the line with a `#
 
 ### Add a parser
 
-1. If the `DefaultPhoneNumberParser` can parse the file, add tests for the country using the `DefaultPhoneNumberParser` as appropriate - typically the min and max permitted subscriber number(s) are tested within each national dialling code/number kind.
-2. If country requires more complex logic to determine the national dialling code, or the performance of the `DefaultPhoneNumberParser` is not acceptable then add a custom parser `{Iso3166Code}PhoneNumberParser` (see the GB one as an example) and add test cases based upon the data file.
+1. If the `DefaultPhoneNumberParser` can parse the file, add tests for the country using the `DefaultPhoneNumberParser` as appropriate - typically the min and max permitted subscriber number(s) are tested within each national destination code/number kind.
+2. If country requires more complex logic to determine the national destination code, or the performance of the `DefaultPhoneNumberParser` is not acceptable then add a custom parser `{Iso3166Code}PhoneNumberParser` (see the GB one as an example) and add test cases based upon the data file.
 3. Add a unit test for in `PhoneNumberParserFactoryTests` to assert the expected parser is returned for the `{Iso3166Code}`.
 4. Add a unit test for `Parse` and `TryParse` methods in `PhoneNumber_Parse_Tests.cs` and `PhoneNumber_TryParse_Tests.cs` for the `{Iso3166Code}` to check the country code is assigned.
