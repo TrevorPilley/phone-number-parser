@@ -102,7 +102,7 @@ namespace PhoneNumbers.Tests.Parsers
         }
 
         [Fact]
-        public void Parse_GeographicPhoneNumber_In_Sub_NationalDiallingCode()
+        public void Parse_GeographicPhoneNumber_In_Sub_NationalDestinationCode()
         {
             var phoneNumber = _parser.Parse("4031000").PhoneNumber;
             Assert.NotNull(phoneNumber);
