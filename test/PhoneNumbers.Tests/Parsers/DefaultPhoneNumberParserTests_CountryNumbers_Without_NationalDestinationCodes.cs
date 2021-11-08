@@ -6,13 +6,13 @@ namespace PhoneNumbers.Tests.Parsers
     /// <summary>
     /// Contains unit tests for the <see cref="DefaultPhoneNumberParser"/> class without <see cref="CountryNumber"/>s using area codes.
     /// </summary>
-    public class DefaultPhoneNumberParserTests_CountryNumbers_WithoutNationalDiallingCodes
+    public class DefaultPhoneNumberParserTests_CountryNumbers_WithoutNationalDestinationCodes
     {
         private readonly CountryInfo _countryInfo = TestHelper.CreateCountryInfo(nsnLengths: new[] { 5 });
 
         private readonly PhoneNumberParser _parser;
 
-        public DefaultPhoneNumberParserTests_CountryNumbers_WithoutNationalDiallingCodes() =>
+        public DefaultPhoneNumberParserTests_CountryNumbers_WithoutNationalDestinationCodes() =>
             _parser = new DefaultPhoneNumberParser(
                 _countryInfo,
                 new[]

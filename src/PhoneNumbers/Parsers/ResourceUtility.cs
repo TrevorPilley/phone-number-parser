@@ -18,7 +18,7 @@ namespace PhoneNumbers.Parsers
                     GeographicArea = x[2].Length > 0 ? x[2] : null,
                     Hint = ParseNumberHint(x[4].Length > 0 ? x[4][0] : '\0'),
                     Kind = ParseNumberKind(x[0][0]),
-                    NationalDiallingCodeRanges = x[1].Length > 0 ? ParseNumberRanges(x[1]) : null,
+                    NationalDestinationCodeRanges = x[1].Length > 0 ? ParseNumberRanges(x[1]) : null,
                     SubscriberNumberRanges = ParseNumberRanges(x[3]),
                 });
 

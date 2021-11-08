@@ -115,7 +115,7 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
-        public void Equality_Same_Values_With_NationalDiallingCode()
+        public void Equality_Same_Values_With_NationalDestinationCode()
         {
             var phoneNumber1 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, PhoneNumberHint.None, "7654112233", "7654", "112233");
             var phoneNumber2 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, PhoneNumberHint.None, "7654112233", "7654", "112233");
@@ -128,7 +128,7 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
-        public void Equality_Same_Values_Without_NationalDiallingCode()
+        public void Equality_Same_Values_Without_NationalDestinationCode()
         {
             var phoneNumber1 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, PhoneNumberHint.None, "112233", null, "112233");
             var phoneNumber2 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, PhoneNumberHint.None, "112233", null, "112233");
