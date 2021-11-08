@@ -11,28 +11,28 @@ namespace PhoneNumbers.Tests.Parsers
         private readonly PhoneNumberParser _parser = GBPhoneNumberParser.Create();
 
         [Fact]
-        public void Parse_Returns_Failure_For_1XX_NationalDiallingCode_And_SubscriberNumber_Not_7_Digits()
+        public void Parse_Returns_Failure_For_1XX_NationalDestinationCode_And_SubscriberNumber_Not_7_Digits()
         {
             var result = _parser.Parse("0113111222");
             Assert.Equal("The national significant number 113111222 is not valid for a United Kingdom phone number.", result.ParseError);
         }
 
         [Fact]
-        public void Parse_Returns_Failure_For_2X_NationalDiallingCode_And_SubscriberNumber_Not_8_Digits()
+        public void Parse_Returns_Failure_For_2X_NationalDestinationCode_And_SubscriberNumber_Not_8_Digits()
         {
             var result = _parser.Parse("0201112222");
             Assert.Equal("The national significant number 201112222 is not valid for a United Kingdom phone number.", result.ParseError);
         }
 
         [Fact]
-        public void Parse_Returns_Failure_For_3XX_NationalDiallingCode_And_SubscriberNumber_Not_7_Digits()
+        public void Parse_Returns_Failure_For_3XX_NationalDestinationCode_And_SubscriberNumber_Not_7_Digits()
         {
             var result = _parser.Parse("0300111111");
             Assert.Equal("The national significant number 300111111 is not valid for a United Kingdom phone number.", result.ParseError);
         }
 
         [Fact]
-        public void Parse_Returns_Failure_For_7XXX_NationalDiallingCode_And_SubscriberNumber_Not_6_Digits()
+        public void Parse_Returns_Failure_For_7XXX_NationalDestinationCode_And_SubscriberNumber_Not_6_Digits()
         {
             var result = _parser.Parse("0770012345");
             Assert.Equal("The national significant number 770012345 is not valid for a United Kingdom phone number.", result.ParseError);
@@ -64,7 +64,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("03800000000")]
         [InlineData("03900000000")]
         [InlineData("07200000000")]
-        public void Parse_Returns_Failure_If_NationalDiallingCode_Invalid(string value)
+        public void Parse_Returns_Failure_If_NationalDestinationCode_Invalid(string value)
         {
             var result = _parser.Parse(value);
             Assert.Equal($"The national significant number {value.Substring(1)} is not valid for a United Kingdom phone number.", result.ParseError);
@@ -98,7 +98,7 @@ namespace PhoneNumbers.Tests.Parsers
 
         [Theory]
         [InlineData("07101111111")]
-        public void Parse_Returns_Failure_If_SubscriberNumber_Invalid_For_NationalDiallingCode(string value)
+        public void Parse_Returns_Failure_If_SubscriberNumber_Invalid_For_NationalDestinationCode(string value)
         {
             var result = _parser.Parse(value);
             Assert.Equal($"The national significant number {value.Substring(1)} is not valid for a United Kingdom phone number.", result.ParseError);

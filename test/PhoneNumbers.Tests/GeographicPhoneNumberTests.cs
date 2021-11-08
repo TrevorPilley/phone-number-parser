@@ -98,7 +98,7 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
-        public void Equality_Same_Values_With_NationalDiallingCode()
+        public void Equality_Same_Values_With_NationalDestinationCode()
         {
             var phoneNumber1 = new GeographicPhoneNumber(CountryInfo.UnitedKingdom, PhoneNumberHint.None, "12345667788", "12345", "667788", "N/A");
             var phoneNumber2 = new GeographicPhoneNumber(CountryInfo.UnitedKingdom, PhoneNumberHint.None, "12345667788", "12345", "667788", "N/A");
@@ -111,7 +111,7 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
-        public void Equality_Same_Values_Without_NationalDiallingCode()
+        public void Equality_Same_Values_Without_NationalDestinationCode()
         {
             var phoneNumber1 = new GeographicPhoneNumber(CountryInfo.UnitedKingdom, PhoneNumberHint.None, "667788", null, "667788", "N/A");
             var phoneNumber2 = new GeographicPhoneNumber(CountryInfo.UnitedKingdom, PhoneNumberHint.None, "667788", null, "667788", "N/A");
