@@ -43,10 +43,10 @@ namespace PhoneNumbers.Parsers
         }
 
         /// <summary>
-        /// Parses the national dialling code, subscriber number and respective <see cref="CountryNumber"/>.
+        /// Parses the national destination code, subscriber number and respective <see cref="CountryNumber"/>.
         /// </summary>
         /// <remarks>By the time this method is called, nsnValue will have been validated against the <see cref="CountryInfo"/>.NsnLengths and contain digits only.</remarks>
-        protected virtual (string? NationalDiallingCode, string? SubscriberNumber, CountryNumber? CountryNumber) ParseNdcAndSn(string nsnValue)
+        protected virtual (string? NationalDestinationCode, string? SubscriberNumber, CountryNumber? CountryNumber) ParseNdcAndSn(string nsnValue)
         {
             string? ndc = null;
             string? sn = null;
