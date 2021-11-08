@@ -100,7 +100,7 @@ namespace PhoneNumbers.Parsers
                             Country,
                             ndcAndSn.CountryNumber.Hint,
                             nsnValue,
-                            ndcAndSn.NationalDiallingCode!,
+                            ndcAndSn.NationalDestinationCode!,
                             ndcAndSn.SubscriberNumber!,
                             ndcAndSn.CountryNumber.GeographicArea!)),
 
@@ -110,7 +110,7 @@ namespace PhoneNumbers.Parsers
                             Country,
                             ndcAndSn.CountryNumber.Hint,
                             nsnValue,
-                            ndcAndSn.NationalDiallingCode,
+                            ndcAndSn.NationalDestinationCode,
                             ndcAndSn.SubscriberNumber!)),
 
                 PhoneNumberKind.NonGeographicPhoneNumber =>
@@ -119,7 +119,7 @@ namespace PhoneNumbers.Parsers
                             Country,
                             ndcAndSn.CountryNumber.Hint,
                             nsnValue,
-                            ndcAndSn.NationalDiallingCode,
+                            ndcAndSn.NationalDestinationCode,
                             ndcAndSn.SubscriberNumber!)),
 
                 _ => base.ParseNsn(nsnValue),
