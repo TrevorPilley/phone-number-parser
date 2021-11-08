@@ -18,7 +18,7 @@ namespace PhoneNumbers.Parsers
 
         private GBPhoneNumberParser(IReadOnlyList<CountryNumber> countryNumbers)
             : base(CountryInfo.UnitedKingdom, countryNumbers) =>
-            _areaCodesWith5Digits = countryNumbers.Where(x => x.NationalDiallingCodeRanges!.Any(x => x.From.Length == 5)).ToList();
+            _areaCodesWith5Digits = countryNumbers.Where(x => x.NationalDestinationCodeRanges!.Any(x => x.From.Length == 5)).ToList();
 
         /// <summary>
         /// Creates an instance of the <see cref="GBPhoneNumberParser"/> class.
@@ -36,7 +36,7 @@ namespace PhoneNumbers.Parsers
 
         /// <inheritdoc/>
         /// <remarks>By the time this method is called, nsnValue will have been validated against the <see cref="CountryInfo"/>.NsnLengths and contain digits only.</remarks>
-        protected override (string? NationalDiallingCode, string? SubscriberNumber, CountryNumber? CountryNumber) ParseNdcAndSn(string nsnValue)
+        protected override (string? NationalDestinationCode, string? SubscriberNumber, CountryNumber? CountryNumber) ParseNdcAndSn(string nsnValue)
         {
             var ndcLength = 0;
             PhoneNumberKind phoneNumberKind = default;
@@ -53,7 +53,7 @@ namespace PhoneNumbers.Parsers
                     ndcLength = 3;
                 }
                 else if (_areaCodesWith5Digits
-                            .Where(x => x.NationalDiallingCodeRanges!.Any(x => nsnValue.StartsWith(x.From, StringComparison.Ordinal)))
+                            .Where(x => x.NationalDestinationCodeRanges!.Any(x => nsnValue.StartsWith(x.From, StringComparison.Ordinal)))
                             .Any(x => x.SubscriberNumberRanges.Any(x => x.Contains(nsnValue.Substring(5)))))
                 {
                     // There are some 5 digit area codes which use a subset of numbers from the "parent" 4 digit area code:
@@ -86,7 +86,7 @@ namespace PhoneNumbers.Parsers
 
             var countryNumber = CountryNumbers
                 .FirstOrDefault(x => x.Kind == phoneNumberKind &&
-                    x.NationalDiallingCodeRanges!.Any(x => x.Contains(ndc)) &&
+                    x.NationalDestinationCodeRanges!.Any(x => x.Contains(ndc)) &&
                     x.SubscriberNumberRanges.Any(x => x.Contains(sn)));
 
             return (ndc, sn, countryNumber);
