@@ -3,7 +3,7 @@
   <PropertyGroup>
     <AssemblyName>PhoneNumbers.Tests</AssemblyName>
     <RootNamespace>PhoneNumbers.Tests</RootNamespace>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <IsPackable>false</IsPackable>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\..\PhoneNumbers.snk</AssemblyOriginatorKeyFile>
