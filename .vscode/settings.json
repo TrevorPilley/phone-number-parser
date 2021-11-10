@@ -6,5 +6,13 @@
         "Xunit",
         "fuget",
         "nuget"
-    ]
+    ],
+    "cSpell.enabledLanguageIds": [
+      "csharp",
+      "markdown"
+    ],
+    "cSpell.ignorePaths": [
+      "test/PhoneNumbers.Tests/Parsers/DefaultPhoneNumberParserTests_*",
+      "test/PhoneNumbers.Tests/Parsers/GBPhoneNumberParserTests_*",
+  ]
 }
