@@ -38,7 +38,7 @@ namespace PhoneNumbers
             Iso3166Code = "GI",
             Name = "Gibraltar",
             NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
-            NsnLengths = new ReadOnlyCollection<int>(new[] { 8 }),
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 4, 8 }),
         };
 
         /// <summary>
