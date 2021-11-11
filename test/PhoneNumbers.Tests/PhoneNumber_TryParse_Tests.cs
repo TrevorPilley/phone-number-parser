@@ -21,6 +21,14 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
+        public void TryParse_Value_With_Gibraltar_CallingCode()
+        {
+            Assert.True(PhoneNumber.TryParse("+35020074636", out var phoneNumber));
+            Assert.NotNull(phoneNumber);
+            Assert.Equal(CountryInfo.Gibraltar, phoneNumber.Country);
+        }
+
+        [Fact]
         public void TryParse_Value_With_Guernsey_CallingCode()
         {
             Assert.True(PhoneNumber.TryParse("+441481717000", out var phoneNumber));

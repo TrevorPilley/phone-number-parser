@@ -41,6 +41,24 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
+        public void CountryInfo_Gibraltar()
+        {
+            Assert.Same(CountryInfo.Gibraltar, CountryInfo.Gibraltar);
+
+            var countryInfo = CountryInfo.Gibraltar;
+
+            Assert.Equal("+350", countryInfo.CallingCode);
+            Assert.True(countryInfo.HasNationalDestinationCodes);
+            Assert.Equal("00", countryInfo.InternationalCallPrefix);
+            Assert.Equal("GI", countryInfo.Iso3166Code);
+            Assert.Equal("Gibraltar", countryInfo.Name);
+            Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
+            Assert.Equal(new[] { 4,8 }, countryInfo.NsnLengths);
+            Assert.False(countryInfo.SharesCallingCode);
+            Assert.Null(countryInfo.TrunkPrefix);
+        }
+
+        [Fact]
         public void CountryInfo_Guernsey()
         {
             Assert.Same(CountryInfo.Guernsey, CountryInfo.Guernsey);

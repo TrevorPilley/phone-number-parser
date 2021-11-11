@@ -30,6 +30,18 @@ namespace PhoneNumbers
         };
 
         /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Gibraltar.
+        /// </summary>
+        public static CountryInfo Gibraltar { get; } = new()
+        {
+            CallingCode = "+350",
+            Iso3166Code = "GI",
+            Name = "Gibraltar",
+            NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 4, 8 }),
+        };
+
+        /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Guernsey.
         /// </summary>
         public static CountryInfo Guernsey { get; } = new()
