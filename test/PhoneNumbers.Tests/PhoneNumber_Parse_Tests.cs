@@ -4,7 +4,6 @@ namespace PhoneNumbers.Tests
 {
     public class PhoneNumber_Parse_Tests
     {
-
         [Fact]
         public void Parse_Value_With_Austria_CallingCode()
         {
