@@ -36,7 +36,7 @@ namespace PhoneNumbers.Parsers
         /// </summary>
         internal void ThrowIfFailure()
         {
-            if (ParseError != null)
+            if (ParseError is not null)
             {
                 throw new ParseException(ParseError);
             }

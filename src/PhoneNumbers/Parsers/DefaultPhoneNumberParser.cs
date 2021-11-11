@@ -64,7 +64,7 @@ namespace PhoneNumbers.Parsers
                             x.NationalDestinationCodeRanges!.Any(x => x.Contains(ndc)) &&
                             x.SubscriberNumberRanges.Any(x => x.Contains(sn)));
 
-                    if (countryNumber != null)
+                    if (countryNumber is not null)
                     {
                         break;
                     }
@@ -78,7 +78,7 @@ namespace PhoneNumbers.Parsers
                     .FirstOrDefault(x => x.SubscriberNumberRanges.Any(x => x.Contains(nsnValue)));
             }
 
-            if (countryNumber != null)
+            if (countryNumber is not null)
             {
                 return (ndc, sn, countryNumber);
             }

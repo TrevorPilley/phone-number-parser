@@ -113,7 +113,7 @@ namespace PhoneNumbers
 
                 startPos = CallingCode.Length;
             }
-            else if (TrunkPrefix != null)
+            else if (TrunkPrefix is not null)
             {
                 startPos = value.IndexOf(TrunkPrefix, StringComparison.Ordinal) + 1;
 
