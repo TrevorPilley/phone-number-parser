@@ -11,6 +11,10 @@ namespace PhoneNumbers.Tests.Parsers
         private readonly PhoneNumberParserFactory _factory = new();
 
         [Fact]
+        public void GetParser_For_CountryInfo_Austria_Returns_DefaultPhoneNumberParser() =>
+            Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Austria));
+
+        [Fact]
         public void GetParser_For_CountryInfo_Belgium_Returns_DefaultPhoneNumberParser() =>
             Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Belgium));
 

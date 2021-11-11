@@ -120,6 +120,7 @@ The library currently supports parsing phone numbers for the following countries
 
 Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone)| Non-Geographic<br/>(Premium Rate)
 ---            | ---           | ---          | ---          | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:                           | :-:
+Austria        | AT            | +43          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                           | Yes
 Belgium        | BE            | +32          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                           | Yes
 France         | FR            | +33          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                           | Yes
 Gibraltar      | GI            | +350         |              | Yes        | Yes    |                        |                    |                      |                | Yes                           | Yes
@@ -148,6 +149,10 @@ United Kingdom | GB            | +44          | 0            | Yes        | Yes 
 ## References for number data
 
 These were used as the references for the phone number data for each country.
+
+### Austria
+
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Austria
 
 ### Belgium
 

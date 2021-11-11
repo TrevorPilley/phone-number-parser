@@ -5,6 +5,14 @@ namespace PhoneNumbers.Tests
     public class PhoneNumber_Parse_Tests
     {
         [Fact]
+        public void Parse_Value_With_Austria_CallingCode()
+        {
+            var phoneNumber = PhoneNumber.Parse("+43170070");
+            Assert.NotNull(phoneNumber);
+            Assert.Equal(CountryInfo.Austria, phoneNumber.Country);
+        }
+
+        [Fact]
         public void Parse_Value_With_Belgium_CallingCode()
         {
             var phoneNumber = PhoneNumber.Parse("+3250444646");

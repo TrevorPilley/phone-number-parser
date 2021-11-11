@@ -5,6 +5,19 @@ namespace PhoneNumbers
     public partial class CountryInfo
     {
         /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Austria.
+        /// </summary>
+        public static CountryInfo Austria { get; } = new()
+        {
+            CallingCode = "+43",
+            Iso3166Code = "AT",
+            Name = "Austria",
+            NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 1 }),
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8, 9, 10, 11, 12, 13 }),
+            TrunkPrefix = "0",
+        };
+
+        /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Belgium.
         /// </summary>
         public static CountryInfo Belgium { get; } = new()
