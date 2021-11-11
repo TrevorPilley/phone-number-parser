@@ -78,7 +78,7 @@ namespace PhoneNumbers
             return Hint.Equals(other.Hint) &&
                 Country.Equals(other.Country) &&
                 PhoneNumberKind.Equals(other.PhoneNumberKind) &&
-                (NationalDestinationCode == null && other.NationalDestinationCode == null || NationalDestinationCode!.Equals(other.NationalDestinationCode, StringComparison.Ordinal)) &&
+                (NationalDestinationCode is null && other.NationalDestinationCode is null || NationalDestinationCode!.Equals(other.NationalDestinationCode, StringComparison.Ordinal)) &&
                 NationalSignificantNumber.Equals(other.NationalSignificantNumber, StringComparison.Ordinal) &&
                 SubscriberNumber.Equals(other.SubscriberNumber, StringComparison.Ordinal);
         }

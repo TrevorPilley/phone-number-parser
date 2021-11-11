@@ -31,7 +31,7 @@ namespace PhoneNumbers.Parsers
             if (!Country.IsValidNsnLength(nsnValue))
             {
                 return ParseResult.Failure(
-                    $"The value must be a {Country.Name} phone number starting {Country.CallingCode}{(Country.TrunkPrefix != null ? " or " + Country.TrunkPrefix : "")} and the national significant number of the phone number must be {string.Join(" or ", Country.NsnLengths)} digits in length.");
+                    $"The value must be a {Country.Name} phone number starting {Country.CallingCode}{(Country.TrunkPrefix is not null ? " or " + Country.TrunkPrefix : "")} and the national significant number of the phone number must be {string.Join(" or ", Country.NsnLengths)} digits in length.");
             }
 
             return ParseNsn(nsnValue);

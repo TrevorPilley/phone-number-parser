@@ -100,7 +100,7 @@ namespace PhoneNumbers
             {
                 var result = options!.Factory.GetParser(countryInfo).Parse(value);
 
-                if (result.PhoneNumber != null)
+                if (result.PhoneNumber is not null)
                 {
                     return result.PhoneNumber!;
                 }
@@ -134,7 +134,7 @@ namespace PhoneNumbers
 
             var countryInfo = options.GetCountryInfo(countryCode);
 
-            if (countryInfo == null)
+            if (countryInfo is null)
             {
                 throw new ParseException($"The country code {countryCode} is not currently supported.");
             }
@@ -171,7 +171,7 @@ namespace PhoneNumbers
 
                     phoneNumber = result.PhoneNumber;
 
-                    if (result.PhoneNumber != null)
+                    if (result.PhoneNumber is not null)
                     {
                         return true;
                     }
@@ -204,12 +204,12 @@ namespace PhoneNumbers
         {
             var countryInfo = options?.GetCountryInfo(countryCode);
 
-            if (countryInfo != null)
+            if (countryInfo is not null)
             {
                 var result = options!.Factory.GetParser(countryInfo).Parse(value);
 
                 phoneNumber = result.PhoneNumber;
-                return result.PhoneNumber != null;
+                return result.PhoneNumber is not null;
             }
 
             phoneNumber = default;

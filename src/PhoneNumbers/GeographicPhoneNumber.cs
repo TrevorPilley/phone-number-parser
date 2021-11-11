@@ -80,7 +80,7 @@ namespace PhoneNumbers
                 Country.Equals(other.Country) &&
                 GeographicArea.Equals(other.GeographicArea, StringComparison.Ordinal) &&
                 PhoneNumberKind.Equals(other.PhoneNumberKind) &&
-                (NationalDestinationCode == null && other.NationalDestinationCode == null || NationalDestinationCode!.Equals(other.NationalDestinationCode, StringComparison.Ordinal)) &&
+                (NationalDestinationCode is null && other.NationalDestinationCode is null || NationalDestinationCode!.Equals(other.NationalDestinationCode, StringComparison.Ordinal)) &&
                 NationalSignificantNumber.Equals(other.NationalSignificantNumber, StringComparison.Ordinal) &&
                 SubscriberNumber.Equals(other.SubscriberNumber, StringComparison.Ordinal);
         }
