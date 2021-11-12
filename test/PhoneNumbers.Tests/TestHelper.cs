@@ -13,7 +13,7 @@ namespace PhoneNumbers.Tests
             string trunkPrefix = default,
             int[] areaCodeLengths = default,
             int[] nsnLengths = default,
-            bool requireNdcForLocalDialling = false) =>
+            bool requireNdcForLocalDialling = true) =>
             new()
             {
                 CallingCode = "+422", // +422 isn't a used calling code.
@@ -29,7 +29,7 @@ namespace PhoneNumbers.Tests
             string trunkPrefix,
             string ndc,
             string sn,
-            bool requireNdcForLocalDialling = false) =>
+            bool requireNdcForLocalDialling = true) =>
             new NonGeographicPhoneNumber(
                 CreateCountryInfo(trunkPrefix: trunkPrefix, requireNdcForLocalDialling: requireNdcForLocalDialling),
                 PhoneNumberHint.None,
