@@ -26,7 +26,7 @@ namespace PhoneNumbers.Formatters
         /// <inheritdoc/>
         public override string Format(PhoneNumber phoneNumber) =>
             phoneNumber.Country.RequireNdcForLocalDialling
-            ? $"{phoneNumber!.Country.TrunkPrefix}{phoneNumber.NationalSignificantNumber}";
-            : $"{phoneNumber!.Country.TrunkPrefix} ({phoneNumber.NationalDestinationCode}) {phoneNumber.SubscriberNumber}".Trim();
+            ? $"{phoneNumber!.Country.TrunkPrefix}{phoneNumber.NationalDestinationCode} {phoneNumber.SubscriberNumber}";
+            : $"({phoneNumber!.Country.TrunkPrefix}{phoneNumber.NationalDestinationCode}) {phoneNumber.SubscriberNumber}";
     }
 }
