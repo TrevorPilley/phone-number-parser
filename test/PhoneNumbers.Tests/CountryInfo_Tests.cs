@@ -79,6 +79,7 @@ namespace PhoneNumbers.Tests
             Assert.Null(countryInfo.Name);
             Assert.Empty(countryInfo.NdcLengths);
             Assert.Empty(countryInfo.NsnLengths);
+            Assert.True(countryInfo.RequireNdcForLocalDialling);
             Assert.False(countryInfo.SharesCallingCode);
             Assert.Null(countryInfo.TrunkPrefix);
         }

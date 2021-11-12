@@ -12,7 +12,8 @@ namespace PhoneNumbers.Tests
         internal static CountryInfo CreateCountryInfo(
             string trunkPrefix = default,
             int[] areaCodeLengths = default,
-            int[] nsnLengths = default) =>
+            int[] nsnLengths = default,
+            bool requireNdcForLocalDialling = true) =>
             new()
             {
                 CallingCode = "+422", // +422 isn't a used calling code.
@@ -20,10 +21,45 @@ namespace PhoneNumbers.Tests
                 Name = "Zulu",
                 NdcLengths = new ReadOnlyCollection<int>(areaCodeLengths ?? Array.Empty<int>()),
                 NsnLengths = new ReadOnlyCollection<int>(nsnLengths ?? Array.Empty<int>()),
+                RequireNdcForLocalDialling = requireNdcForLocalDialling,
                 TrunkPrefix = trunkPrefix,
             };
 
-        internal static PhoneNumber CreateNonGeographicPhoneNumber(string trunkPrefix, string ndc, string sn) =>
-            new NonGeographicPhoneNumber(CreateCountryInfo(trunkPrefix: trunkPrefix), PhoneNumberHint.None, $"{ndc}{sn}", ndc, sn);
+        internal static PhoneNumber CreateGeographicPhoneNumber(
+            string trunkPrefix,
+            string ndc,
+            string sn,
+            bool requireNdcForLocalDialling = true) =>
+            new GeographicPhoneNumber(
+                CreateCountryInfo(trunkPrefix: trunkPrefix, requireNdcForLocalDialling: requireNdcForLocalDialling),
+                PhoneNumberHint.None,
+                $"{ndc}{sn}",
+                ndc,
+                sn,
+                "AreaName");
+
+        internal static PhoneNumber CreateMobilePhoneNumber(
+            string trunkPrefix,
+            string ndc,
+            string sn,
+            bool requireNdcForLocalDialling = true) =>
+            new MobilePhoneNumber(
+                CreateCountryInfo(trunkPrefix: trunkPrefix, requireNdcForLocalDialling: requireNdcForLocalDialling),
+                PhoneNumberHint.None,
+                $"{ndc}{sn}",
+                ndc,
+                sn);
+
+        internal static PhoneNumber CreateNonGeographicPhoneNumber(
+            string trunkPrefix,
+            string ndc,
+            string sn,
+            bool requireNdcForLocalDialling = true) =>
+            new NonGeographicPhoneNumber(
+                CreateCountryInfo(trunkPrefix: trunkPrefix, requireNdcForLocalDialling: requireNdcForLocalDialling),
+                PhoneNumberHint.None,
+                $"{ndc}{sn}",
+                ndc,
+                sn);
     }
 }
