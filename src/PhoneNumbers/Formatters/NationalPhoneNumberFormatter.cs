@@ -31,7 +31,7 @@ namespace PhoneNumbers.Formatters
                 return $"{phoneNumber!.Country.TrunkPrefix}{phoneNumber.SubscriberNumber}";
             }
             
-            return phoneNumber.Country.RequireNdcForLocalDialling
+            return phoneNumber.Country.RequireNdcForLocalDialling && phoneNumber.PhoneNumberKind == PhoneNumberKind.GeographicPhoneNumber
                 ? $"{phoneNumber!.Country.TrunkPrefix}{phoneNumber.NationalDestinationCode} {phoneNumber.SubscriberNumber}".Trim()
                 : $"({phoneNumber!.Country.TrunkPrefix}{phoneNumber.NationalDestinationCode}) {phoneNumber.SubscriberNumber}";
         }
