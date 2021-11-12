@@ -23,7 +23,7 @@ namespace PhoneNumbers.Tests.Formatters
         [Fact]
         public void Format_With_Ndc_And_Sn_With_TrunkPrefix() =>
             Assert.Equal(
-                "012345667788",
+                "012345 667788",
                 NationalPhoneNumberFormatter.Instance.Format(TestHelper.CreateNonGeographicPhoneNumber("0", "12345", "667788")));
 
         [Fact]
@@ -35,7 +35,7 @@ namespace PhoneNumbers.Tests.Formatters
         [Fact]
         public void Format_With_Ndc_And_Sn_Without_TrunkPrefix() =>
             Assert.Equal(
-                "12345667788",
+                "12345 667788",
                 NationalPhoneNumberFormatter.Instance.Format(TestHelper.CreateNonGeographicPhoneNumber(null, "12345", "667788")));
 
         [Fact]
