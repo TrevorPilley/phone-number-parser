@@ -94,7 +94,7 @@ namespace PhoneNumbers.Tests
             Assert.Equal("Guernsey", countryInfo.Name);
             Assert.Equal(new[] { 4 }, countryInfo.NdcLengths);
             Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
-            Assert.True(countryInfo.RequireNdcForLocalDialling);
+            Assert.False(countryInfo.RequireNdcForLocalDialling);
             Assert.True(countryInfo.SharesCallingCode);
             Assert.Equal("0", countryInfo.TrunkPrefix);
         }
@@ -132,7 +132,7 @@ namespace PhoneNumbers.Tests
             Assert.Equal("Ireland", countryInfo.Name);
             Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
             Assert.Equal(new[] { 7, 8, 9 }, countryInfo.NsnLengths);
-            Assert.True(countryInfo.RequireNdcForLocalDialling);
+            Assert.False(countryInfo.RequireNdcForLocalDialling);
             Assert.False(countryInfo.SharesCallingCode);
             Assert.Equal("0", countryInfo.TrunkPrefix);
         }
@@ -151,7 +151,7 @@ namespace PhoneNumbers.Tests
             Assert.Equal("Isle of Man", countryInfo.Name);
             Assert.Equal(new[] { 4 }, countryInfo.NdcLengths);
             Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
-            Assert.True(countryInfo.RequireNdcForLocalDialling);
+            Assert.False(countryInfo.RequireNdcForLocalDialling);
             Assert.True(countryInfo.SharesCallingCode);
             Assert.Equal("0", countryInfo.TrunkPrefix);
         }
@@ -189,7 +189,7 @@ namespace PhoneNumbers.Tests
             Assert.Equal("Jersey", countryInfo.Name);
             Assert.Equal(new[] { 4 }, countryInfo.NdcLengths);
             Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
-            Assert.True(countryInfo.RequireNdcForLocalDialling);
+            Assert.False(countryInfo.RequireNdcForLocalDialling);
             Assert.True(countryInfo.SharesCallingCode);
             Assert.Equal("0", countryInfo.TrunkPrefix);
         }
