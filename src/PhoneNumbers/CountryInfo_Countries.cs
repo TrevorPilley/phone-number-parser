@@ -64,6 +64,7 @@ namespace PhoneNumbers
             Name = "Guernsey",
             NdcLengths = new ReadOnlyCollection<int>(new[] { 4 }),
             NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
+            RequireNdcForLocalDialling = false,
             SharesCallingCode = true,
             TrunkPrefix = "0",
         };
@@ -91,6 +92,7 @@ namespace PhoneNumbers
             Name = "Ireland",
             NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
             NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8, 9 }),
+            RequireNdcForLocalDialling = false,
             TrunkPrefix = "0",
         };
 
@@ -104,6 +106,7 @@ namespace PhoneNumbers
             Name = "Isle of Man",
             NdcLengths = new ReadOnlyCollection<int>(new[] { 4 }),
             NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
+            RequireNdcForLocalDialling = false,
             SharesCallingCode = true,
             TrunkPrefix = "0",
         };
@@ -131,6 +134,7 @@ namespace PhoneNumbers
             Name = "Jersey",
             NdcLengths = new ReadOnlyCollection<int>(new[] { 4 }),
             NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
+            RequireNdcForLocalDialling = false,
             SharesCallingCode = true,
             TrunkPrefix = "0",
         };
