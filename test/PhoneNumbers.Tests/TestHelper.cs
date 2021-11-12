@@ -25,6 +25,31 @@ namespace PhoneNumbers.Tests
                 TrunkPrefix = trunkPrefix,
             };
 
+        internal static PhoneNumber CreateGeographicPhoneNumber(
+            string trunkPrefix,
+            string ndc,
+            string sn,
+            bool requireNdcForLocalDialling = true) =>
+            new GeographicPhoneNumber(
+                CreateCountryInfo(trunkPrefix: trunkPrefix, requireNdcForLocalDialling: requireNdcForLocalDialling),
+                PhoneNumberHint.None,
+                $"{ndc}{sn}",
+                ndc,
+                sn,
+                "AreaName");
+
+        internal static PhoneNumber CreateMobilePhoneNumber(
+            string trunkPrefix,
+            string ndc,
+            string sn,
+            bool requireNdcForLocalDialling = true) =>
+            new MobilePhoneNumber(
+                CreateCountryInfo(trunkPrefix: trunkPrefix, requireNdcForLocalDialling: requireNdcForLocalDialling),
+                PhoneNumberHint.None,
+                $"{ndc}{sn}",
+                ndc,
+                sn);
+
         internal static PhoneNumber CreateNonGeographicPhoneNumber(
             string trunkPrefix,
             string ndc,
