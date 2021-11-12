@@ -30,12 +30,12 @@ namespace PhoneNumbers.Formatters
             {
                 return $"{phoneNumber!.Country.TrunkPrefix}{phoneNumber.SubscriberNumber}";
             }
-            
+
             if (phoneNumber.PhoneNumberKind == PhoneNumberKind.GeographicPhoneNumber && !phoneNumber.Country.RequireNdcForLocalDialling)
             {
                 return $"({phoneNumber!.Country.TrunkPrefix}{phoneNumber.NationalDestinationCode}) {phoneNumber.SubscriberNumber}";
             }
-            
+
             return $"{phoneNumber!.Country.TrunkPrefix}{phoneNumber.NationalDestinationCode} {phoneNumber.SubscriberNumber}".Trim();
         }
     }
