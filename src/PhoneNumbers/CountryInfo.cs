@@ -15,6 +15,7 @@ namespace PhoneNumbers
     {
         private const char PlusSign = '+';
         private static readonly char[] s_digits1To9 = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+        private static readonly ReadOnlyCollection<int> s_emptyIntArray = new(Array.Empty<int>());
         private readonly List<PhoneNumberFormatter> _formatters;
 
         /// <summary>
@@ -73,12 +74,12 @@ namespace PhoneNumbers
         /// <summary>
         /// Gets the possible lengths of the national destination code.
         /// </summary>
-        internal ReadOnlyCollection<int> NdcLengths { get; init; } = new(Array.Empty<int>());
+        internal ReadOnlyCollection<int> NdcLengths { get; init; } = s_emptyIntArray;
 
         /// <summary>
         /// Gets the permitted lengths of the national significant number.
         /// </summary>
-        internal ReadOnlyCollection<int> NsnLengths { get; init; } = new(Array.Empty<int>());
+        internal ReadOnlyCollection<int> NsnLengths { get; init; } = s_emptyIntArray;
 
         internal PhoneNumberFormatter GetFormatter(string format) =>
             _formatters.SingleOrDefault(x => x.CanFormat(format)) ?? throw new FormatException($"{format} is not a supported format");
