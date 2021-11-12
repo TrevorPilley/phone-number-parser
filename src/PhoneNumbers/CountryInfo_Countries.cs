@@ -241,6 +241,7 @@ namespace PhoneNumbers
             Name = "United Kingdom",
             NdcLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2 }),
             NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 9, 10 }),
+            RequireNdcForLocalDialling = false,
             TrunkPrefix = "0",
         };
     }
