@@ -31,9 +31,12 @@ namespace PhoneNumbers.Formatters
                 return $"{phoneNumber!.Country.TrunkPrefix}{phoneNumber.SubscriberNumber}";
             }
             
-            return phoneNumber.PhoneNumberKind == PhoneNumberKind.GeographicPhoneNumber && phoneNumber.Country.RequireNdcForLocalDialling
-                ? $"{phoneNumber!.Country.TrunkPrefix}{phoneNumber.NationalDestinationCode} {phoneNumber.SubscriberNumber}".Trim()
-                : $"({phoneNumber!.Country.TrunkPrefix}{phoneNumber.NationalDestinationCode}) {phoneNumber.SubscriberNumber}";
+            if (phoneNumber.PhoneNumberKind == PhoneNumberKind.GeographicPhoneNumber && !phoneNumber.Country.RequireNdcForLocalDialling)
+            {
+                return $"({phoneNumber!.Country.TrunkPrefix}{phoneNumber.NationalDestinationCode}) {phoneNumber.SubscriberNumber}";
+            }
+            
+            return $"{phoneNumber!.Country.TrunkPrefix}{phoneNumber.NationalDestinationCode} {phoneNumber.SubscriberNumber}".Trim();
         }
     }
 }
