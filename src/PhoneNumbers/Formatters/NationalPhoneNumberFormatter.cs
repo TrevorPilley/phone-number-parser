@@ -24,9 +24,16 @@ namespace PhoneNumbers.Formatters
             format?.Equals("N", StringComparison.Ordinal) == true;
 
         /// <inheritdoc/>
-        public override string Format(PhoneNumber phoneNumber) =>
-            phoneNumber!.NationalDestinationCode is null || phoneNumber.Country.RequireNdcForLocalDialling
+        public override string Format(PhoneNumber phoneNumber)
+        {
+            if (phoneNumber!.NationalDestinationCode is null)
+            {
+                return $"{phoneNumber!.Country.TrunkPrefix}{phoneNumber.SubscriberNumber}";
+            }
+            
+            return phoneNumber.Country.RequireNdcForLocalDialling
                 ? $"{phoneNumber!.Country.TrunkPrefix}{phoneNumber.NationalDestinationCode} {phoneNumber.SubscriberNumber}".Trim()
                 : $"({phoneNumber!.Country.TrunkPrefix}{phoneNumber.NationalDestinationCode}) {phoneNumber.SubscriberNumber}";
+        }
     }
 }
