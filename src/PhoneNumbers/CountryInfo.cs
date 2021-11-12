@@ -81,6 +81,11 @@ namespace PhoneNumbers
         /// </summary>
         internal ReadOnlyCollection<int> NsnLengths { get; init; } = s_emptyIntArray;
 
+        /// <summary>
+        /// Gets a value indicating whether national dialling codes are required for local dialling.
+        /// </summary>
+        internal bool RequireNdcForLocalDialling { get; init; }
+
         internal PhoneNumberFormatter GetFormatter(string format) =>
             _formatters.SingleOrDefault(x => x.CanFormat(format)) ?? throw new FormatException($"{format} is not a supported format");
 
