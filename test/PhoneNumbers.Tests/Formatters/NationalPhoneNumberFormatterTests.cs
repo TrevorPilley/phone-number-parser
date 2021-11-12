@@ -27,7 +27,7 @@ namespace PhoneNumbers.Tests.Formatters
                 NationalPhoneNumberFormatter.Instance.Format(TestHelper.CreateNonGeographicPhoneNumber("0", "12345", "667788")));
 
         [Fact]
-        public void Format_With_Ndc_And_Sn_With_TrunkPrefix_Not_Required_For_Local_Dialling() =>
+        public void Format_With_Ndc_And_Sn_With_TrunkPrefix_Ndc_Not_Required_For_Local_Dialling() =>
             Assert.Equal(
                 "(012345) 667788",
                 NationalPhoneNumberFormatter.Instance.Format(TestHelper.CreateNonGeographicPhoneNumber("0", "12345", "667788", false)));
