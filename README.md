@@ -81,8 +81,8 @@ The phone number can be formatted in the following ways, the default format outp
 ```csharp
 phoneNumber.ToString();                         // +441142726444   (defaults to E.164 format)
 phoneNumber.ToString("E.164");                  // +441142726444   (format for E.164 format)
-phoneNumber.ToString("E.123");                  // +44 114 2726444 (format for E.123 format)
-phoneNumber.ToString("N");                      // (0114) 2726444  (format for National format)
+phoneNumber.ToString("E.123");                  // +44 114 2726444 (format for E.123 international format)
+phoneNumber.ToString("N");                      // (0114) 2726444  (format for E.123 national notation format)
 ```
 
 ### ParseOptions
