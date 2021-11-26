@@ -62,6 +62,25 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
+        public void CountryInfo_Croatia()
+        {
+            Assert.Same(CountryInfo.Croatia, CountryInfo.Croatia);
+
+            var countryInfo = CountryInfo.Croatia;
+
+            Assert.Equal("+385", countryInfo.CallingCode);
+            Assert.True(countryInfo.HasNationalDestinationCodes);
+            Assert.Equal("00", countryInfo.InternationalCallPrefix);
+            Assert.Equal("HR", countryInfo.Iso3166Code);
+            Assert.Equal("Croatia", countryInfo.Name);
+            Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
+            Assert.Equal(new[] { 8, 9 }, countryInfo.NsnLengths);
+            Assert.True(countryInfo.RequireNdcForLocalDialling);
+            Assert.False(countryInfo.SharesCallingCode);
+            Assert.Equal("0", countryInfo.TrunkPrefix);
+        }
+
+        [Fact]
         public void CountryInfo_France()
         {
             Assert.Same(CountryInfo.France, CountryInfo.France);
