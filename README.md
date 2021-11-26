@@ -123,6 +123,7 @@ Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobi
 Austria        | AT            | +43          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                           | Yes
 Belgium        | BE            | +32          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                           | Yes
 Bulgaria       | BG            | +359         | 0            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                           | Yes
+Croatia        | HR            | +385         | 0            |            |        |                        |                    |                      |                |                               |
 France         | FR            | +33          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                           | Yes
 Gibraltar      | GI            | +350         |              | Yes        | Yes    |                        |                    |                      |                | Yes                           | Yes
 Guernsey       | GG            | +44          | 0            | Yes        | Yes    |                        |                    |                      |                |                               |
