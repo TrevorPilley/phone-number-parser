@@ -11,7 +11,7 @@ namespace PhoneNumbers.Tests.Parsers
         private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Austria);
 
         [Theory]
-        [InlineData("01000000", "1", "000000", "Wien")]
+        [InlineData("0100000", "1", "00000", "Wien")]
         [InlineData("01999999999999", "1", "999999999999", "Wien")]
         public void Parse_Known_GeographicPhoneNumber_1_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
         {
