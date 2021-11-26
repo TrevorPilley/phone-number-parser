@@ -309,6 +309,25 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
+        public void CountryInfo_Poland()
+        {
+            Assert.Same(CountryInfo.Poland, CountryInfo.Poland);
+
+            var countryInfo = CountryInfo.Poland;
+
+            Assert.Equal("+48", countryInfo.CallingCode);
+            Assert.True(countryInfo.HasNationalDestinationCodes);
+            Assert.Equal("00", countryInfo.InternationalCallPrefix);
+            Assert.Equal("PL", countryInfo.Iso3166Code);
+            Assert.Equal("Poland", countryInfo.Name);
+            Assert.Equal(new[] { 2 }, countryInfo.NdcLengths);
+            Assert.Equal(new[] { 9 }, countryInfo.NsnLengths);
+            Assert.True(countryInfo.RequireNdcForLocalDialling);
+            Assert.False(countryInfo.SharesCallingCode);
+            Assert.Null(countryInfo.TrunkPrefix);
+        }
+
+        [Fact]
         public void CountryInfo_Portugal()
         {
             Assert.Same(CountryInfo.Portugal, CountryInfo.Portugal);
