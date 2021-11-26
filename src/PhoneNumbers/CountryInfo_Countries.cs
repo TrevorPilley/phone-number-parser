@@ -41,6 +41,7 @@ namespace PhoneNumbers
             Name = "Croatia",
             NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
             NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9 }),
+            RequireNdcForLocalDialling = false,
             TrunkPrefix = "0",
         };
 
