@@ -73,7 +73,7 @@ namespace PhoneNumbers.Tests
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("HR", countryInfo.Iso3166Code);
             Assert.Equal("Croatia", countryInfo.Name);
-            Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
+            Assert.Equal(new[] { 2, 1 }, countryInfo.NdcLengths);
             Assert.Equal(new[] { 8, 9 }, countryInfo.NsnLengths);
             Assert.False(countryInfo.RequireNdcForLocalDialling);
             Assert.False(countryInfo.SharesCallingCode);
