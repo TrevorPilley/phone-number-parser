@@ -385,6 +385,25 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
+        public void CountryInfo_Slovakia()
+        {
+            Assert.Same(CountryInfo.Slovakia, CountryInfo.Slovakia);
+
+            var countryInfo = CountryInfo.Slovakia;
+
+            Assert.Equal("+421", countryInfo.CallingCode);
+            Assert.True(countryInfo.HasNationalDestinationCodes);
+            Assert.Equal("00", countryInfo.InternationalCallPrefix);
+            Assert.Equal("SK", countryInfo.Iso3166Code);
+            Assert.Equal("Slovakia", countryInfo.Name);
+            Assert.Equal(new[] { 2, 1 }, countryInfo.NdcLengths);
+            Assert.Equal(new[] { 7, 8 }, countryInfo.NsnLengths);
+            Assert.True(countryInfo.RequireNdcForLocalDialling);
+            Assert.False(countryInfo.SharesCallingCode);
+            Assert.Null(countryInfo.TrunkPrefix);
+        }
+
+        [Fact]
         public void CountryInfo_Spain()
         {
             Assert.Same(CountryInfo.Spain, CountryInfo.Spain);
