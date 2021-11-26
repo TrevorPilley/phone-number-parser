@@ -275,6 +275,18 @@ namespace PhoneNumbers
         };
 
         /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Slovakia.
+        /// </summary>
+        public static CountryInfo Slovakia { get; } = new()
+        {
+            CallingCode = "+421",
+            Iso3166Code = "SK",
+            Name = "Slovakia",
+            NdcLengths = new ReadOnlyCollection<int>(new[] { 2, 1 }),
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8 }),
+        };
+
+        /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Switzerland.
         /// </summary>
         public static CountryInfo Switzerland { get; } = new()
