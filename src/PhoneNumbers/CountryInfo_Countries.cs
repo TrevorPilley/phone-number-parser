@@ -263,18 +263,6 @@ namespace PhoneNumbers
         };
 
         /// <summary>
-        /// Gets the <see cref="CountryInfo"/> for Spain.
-        /// </summary>
-        public static CountryInfo Spain { get; } = new()
-        {
-            CallingCode = "+34",
-            Iso3166Code = "ES",
-            Name = "Spain",
-            NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
-            NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
-        };
-
-        /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Slovakia.
         /// </summary>
         public static CountryInfo Slovakia { get; } = new()
@@ -284,6 +272,18 @@ namespace PhoneNumbers
             Name = "Slovakia",
             NdcLengths = new ReadOnlyCollection<int>(new[] { 2, 1 }),
             NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8 }),
+        };
+
+        /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Spain.
+        /// </summary>
+        public static CountryInfo Spain { get; } = new()
+        {
+            CallingCode = "+34",
+            Iso3166Code = "ES",
+            Name = "Spain",
+            NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
         };
 
         /// <summary>
