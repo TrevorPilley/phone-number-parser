@@ -39,7 +39,7 @@ namespace PhoneNumbers
             CallingCode = "+385",
             Iso3166Code = "HR",
             Name = "Croatia",
-            NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
+            NdcLengths = new ReadOnlyCollection<int>(new[] { 2, 1 }),
             NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9 }),
             RequireNdcForLocalDialling = false,
             TrunkPrefix = "0",
