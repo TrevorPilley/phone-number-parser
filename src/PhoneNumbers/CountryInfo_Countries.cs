@@ -60,6 +60,18 @@ namespace PhoneNumbers
         };
 
         /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Czech Republic.
+        /// </summary>
+        public static CountryInfo CzechRepublic { get; } = new()
+        {
+            CallingCode = "+420",
+            Iso3166Code = "CZ",
+            Name = "Czech Republic",
+            NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 8 }),
+        };
+
+        /// <summary>
         /// Gets the <see cref="CountryInfo"/> for France.
         /// </summary>
         public static CountryInfo France { get; } = new()
