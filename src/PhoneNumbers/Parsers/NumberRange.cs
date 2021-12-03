@@ -50,14 +50,23 @@ internal sealed class NumberRange
             value,
             x =>
             {
-                var rangeParts = x.Split('-');
+#pragma warning disable CA1307 // Specify StringComparison for clarity
+                var separatorIndex = x.IndexOf('-');
+#pragma warning restore CA1307 // Specify StringComparison for clarity
 
-                return rangeParts.Length switch
+                if (separatorIndex == -1)
                 {
-                    1 => new NumberRange(rangeParts[0], rangeParts[0]),
-                    2 => new NumberRange(rangeParts[0], rangeParts[1]),
-                    _ => throw new InvalidOperationException("A number range must be expressed as either X or X-X."),
-                };
+                    return new NumberRange(x, x);
+                }
+
+                if (separatorIndex != x.LastIndexOf('-'))
+                {
+                    throw new InvalidOperationException("A number range must be expressed as either X or X-X.");
+                }
+
+                return new NumberRange(
+                    x.Substring(0, separatorIndex),
+                    x.Substring(separatorIndex + 1));
             });
 
     internal bool Contains(string value)
