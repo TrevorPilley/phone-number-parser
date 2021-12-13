@@ -40,6 +40,7 @@ namespace PhoneNumbers
             Name = "Bulgaria",
             NdcLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2, 1 }),
             NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9 }),
+            RequireNdcForLocalDialling = false,
             TrunkPrefix = "0",
         };
 
