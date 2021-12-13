@@ -72,6 +72,7 @@
   <ItemGroup>
     <None Remove="DataFiles\AT.txt"/>
     <None Remove="DataFiles\BE.txt"/>
+    <None Remove="DataFiles\BG.txt"/>
     <None Remove="DataFiles\CH.txt"/>
     <None Remove="DataFiles\ES.txt"/>
     <None Remove="DataFiles\FR.txt"/>
@@ -94,6 +95,7 @@
   <ItemGroup>
     <EmbeddedResource Include="DataFiles\AT.txt"/>
     <EmbeddedResource Include="DataFiles\BE.txt"/>
+    <EmbeddedResource Include="DataFiles\BG.txt"/>
     <EmbeddedResource Include="DataFiles\CH.txt"/>
     <EmbeddedResource Include="DataFiles\ES.txt"/>
     <EmbeddedResource Include="DataFiles\FR.txt"/>
