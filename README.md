@@ -122,6 +122,7 @@ Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobi
 ---            | ---           | ---          | ---          | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:                           | :-:
 Austria        | AT            | +43          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                           | Yes
 Belgium        | BE            | +32          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                           | Yes
+Bulgaria       | BG            | +359         | 0            |            |        |                        |                    |                      |                |                               |
 France         | FR            | +33          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                           | Yes
 Gibraltar      | GI            | +350         |              | Yes        | Yes    |                        |                    |                      |                | Yes                           | Yes
 Guernsey       | GG            | +44          | 0            | Yes        | Yes    |                        |                    |                      |                |                               |
@@ -159,6 +160,11 @@ These were used as the references for the phone number data for each country.
 - https://www.bipt.be/operators/publication/national-numbering-plan
 - https://www.bipt.be/operators/publication/database-with-reserved-and-allocated-numbers
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Belgium
+
+### Bulgaria
+
+- https://crc.bg/files/_en/bulgarian_NNP-en-2014(ver..2016).pdf
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Bulgaria
 
 ### France
 
