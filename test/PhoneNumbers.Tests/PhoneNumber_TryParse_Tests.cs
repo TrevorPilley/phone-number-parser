@@ -37,6 +37,14 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
+        public void TryParse_Value_With_CzechRepublic_CallingCode()
+        {
+            Assert.True(PhoneNumber.TryParse("+420221714714", out var phoneNumber));
+            Assert.NotNull(phoneNumber);
+            Assert.Equal(CountryInfo.CzechRepublic, phoneNumber.Country);
+        }
+
+        [Fact]
         public void TryParse_Value_With_France_CallingCode()
         {
             Assert.True(PhoneNumber.TryParse("+33140477283", out var phoneNumber));
