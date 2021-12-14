@@ -271,7 +271,7 @@ namespace PhoneNumbers
             Iso3166Code = "SK",
             Name = "Slovakia",
             NdcLengths = new ReadOnlyCollection<int>(new[] { 2, 1 }),
-            NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8 }),
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8 }),
         };
 
         /// <summary>
