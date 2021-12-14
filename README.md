@@ -124,7 +124,7 @@ Austria        | AT            | +43          | 0            | Yes        | Yes 
 Belgium        | BE            | +32          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                           | Yes
 Bulgaria       | BG            | +359         | 0            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                           | Yes
 Croatia        | HR            | +385         | 0            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                           | Yes
-Czech Republic | CZ            | +420         |              | Yes        | Yes    |                        |                    |                      |                | Yes                           |
+Czech Republic | CZ            | +420         |              | Yes        | Yes    |                        |                    |                      | Yes            | Yes                           | Yes
 France         | FR            | +33          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                           | Yes
 Gibraltar      | GI            | +350         |              | Yes        | Yes    |                        |                    |                      |                | Yes                           | Yes
 Guernsey       | GG            | +44          | 0            | Yes        | Yes    |                        |                    |                      |                |                               |
