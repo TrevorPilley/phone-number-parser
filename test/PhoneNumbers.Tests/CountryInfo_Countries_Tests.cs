@@ -93,7 +93,7 @@ namespace PhoneNumbers.Tests
             Assert.Equal("CZ", countryInfo.Iso3166Code);
             Assert.Equal("Czech Republic", countryInfo.Name);
             Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
-            Assert.Equal(new[] { 6, 8 }, countryInfo.NsnLengths);
+            Assert.Equal(new[] { 6, 8, 9 }, countryInfo.NsnLengths);
             Assert.True(countryInfo.RequireNdcForLocalDialling);
             Assert.False(countryInfo.SharesCallingCode);
             Assert.Null(countryInfo.TrunkPrefix);
