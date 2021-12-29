@@ -167,7 +167,7 @@ namespace PhoneNumbers.Tests
         [Fact]
         public void Parse_Value_With_Slovakia_CallingCode()
         {
-            var phoneNumber = PhoneNumber.Parse("+421216186");
+            var phoneNumber = PhoneNumber.Parse("+421257881101");
             Assert.NotNull(phoneNumber);
             Assert.Equal(CountryInfo.Slovakia, phoneNumber.Country);
         }
