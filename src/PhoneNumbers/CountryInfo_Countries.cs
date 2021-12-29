@@ -270,8 +270,8 @@ namespace PhoneNumbers
             CallingCode = "+421",
             Iso3166Code = "SK",
             Name = "Slovakia",
-            NdcLengths = new ReadOnlyCollection<int>(new[] { 2, 1 }),
-            NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8 }),
+            NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2, 1 }),
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 3, 6, 8, 9 }),
         };
 
         /// <summary>
