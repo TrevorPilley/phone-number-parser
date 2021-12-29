@@ -397,7 +397,7 @@ namespace PhoneNumbers.Tests
             Assert.Equal("SK", countryInfo.Iso3166Code);
             Assert.Equal("Slovakia", countryInfo.Name);
             Assert.Equal(new[] { 4, 3, 2, 1 }, countryInfo.NdcLengths);
-            Assert.Equal(new[] { 3, 6, 8, 9 }, countryInfo.NsnLengths);
+            Assert.Equal(new[] { 7, 9 }, countryInfo.NsnLengths);
             Assert.True(countryInfo.RequireNdcForLocalDialling);
             Assert.False(countryInfo.SharesCallingCode);
             Assert.Null(countryInfo.TrunkPrefix);
