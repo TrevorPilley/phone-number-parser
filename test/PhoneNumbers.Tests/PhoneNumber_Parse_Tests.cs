@@ -23,7 +23,7 @@ namespace PhoneNumbers.Tests
         [Fact]
         public void Parse_Value_With_Bulgaria_CallingCode()
         {
-            var phoneNumber = PhoneNumber.Parse("+35924918344");
+            var phoneNumber = PhoneNumber.Parse("+35929492760");
             Assert.NotNull(phoneNumber);
             Assert.Equal(CountryInfo.Bulgaria, phoneNumber.Country);
         }
