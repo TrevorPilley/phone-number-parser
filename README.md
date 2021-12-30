@@ -242,6 +242,11 @@ These were used as the references for the phone number data for each country.
 - https://www.imda.gov.sg/-/media/Imda/Files/Regulation-Licensing-and-Consultations/Frameworks-and-Policies/Numbering/National-Numbering-Plan-and-Allocation-Process/IMDA-National-Numbering-Plan-12-Aug-2019.pdf?la=en
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Singapore
 
+### Slovakia
+
+- https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000BD0002PDFE.pdf
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Slovakia
+
 ### Spain
 
 - https://avancedigital.mineco.gob.es/es-ES/Servicios/Numeracion/Documents/Descripcion_PNN.pdf
