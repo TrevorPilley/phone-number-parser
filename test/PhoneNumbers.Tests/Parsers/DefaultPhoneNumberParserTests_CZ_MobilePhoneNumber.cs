@@ -11,6 +11,10 @@ namespace PhoneNumbers.Tests.Parsers
         private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.CzechRepublic);
 
         [Theory]
+        [InlineData("601000000", "601", "000000")]
+        [InlineData("601999999", "601", "999999")]
+        [InlineData("608000000", "608", "000000")]
+        [InlineData("608999999", "608", "999999")]
         [InlineData("702000000", "702", "000000")]
         [InlineData("702999999", "702", "999999")]
         [InlineData("705000000", "705", "000000")]
