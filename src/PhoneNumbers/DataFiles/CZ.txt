@@ -1,0 +1,20 @@
+G|2|Capital Praha and Region Stredocesky|20000000-99999999|
+G|31-32|Capital Praha and Region Stredocesky|2000000-9999999|
+G|35|Region Karlovarsky|2000000-9999999|
+G|37|Region Plzensky|2000000-9999999|
+G|38-39|Region Jihocesky|2000000-9999999|
+G|41|Region Ustecky|2000000-9999999|
+G|46|Region Pardubicky|2000000-9999999|
+G|47|Region Ustecky|2000000-9999999|
+G|48|Region Liberecky|2000000-9999999|
+G|49|Region Kralovehradecky|2000000-9999999|
+G|51-53|Region Jihomoravsky|2000000-9999999|
+G|55,59|Region Moravskoslezsky|2000000-9999999|
+G|56|Region Vysocina|2000000-9999999|
+G|57|Region Zlinsky|2000000-9999999|
+G|58|Region Olomoucky|2000000-9999999|
+M|601-608,702-705||000000-999999|
+M|72-73,77,79||0000000-9999999|
+N|800||000000-999999|F
+N|81-84||0000000-9999999|
+N|900,905-906,908-909||000000-999999|R
