@@ -124,6 +124,7 @@ Austria        | AT            | +43          | 0            | Yes        | Yes 
 Belgium        | BE            | +32          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                           | Yes
 Bulgaria       | BG            | +359         | 0            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                           | Yes
 Croatia        | HR            | +385         | 0            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                           | Yes
+Czech Republic | CZ            | +420         |              | Yes        | Yes    |                        |                    |                      | Yes            | Yes                           | Yes
 France         | FR            | +33          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                           | Yes
 Gibraltar      | GI            | +350         |              | Yes        | Yes    |                        |                    |                      |                | Yes                           | Yes
 Guernsey       | GG            | +44          | 0            | Yes        | Yes    |                        |                    |                      |                |                               |
@@ -172,6 +173,11 @@ These were used as the references for the phone number data for each country.
 
 - https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000320003PDFE.pdf
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Croatia
+
+### Czech Republic
+
+- https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000350001PDFE.pdf
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_the_Czech_Republic
 
 ### France
 
