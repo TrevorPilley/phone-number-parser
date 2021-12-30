@@ -11,26 +11,26 @@ namespace PhoneNumbers.Tests.Parsers
         private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Slovakia);
 
         [Theory]
-        [InlineData("901000000", "901", "000000")]
-        [InlineData("901999999", "901", "999999")]
-        [InlineData("908000000", "908", "000000")]
-        [InlineData("908999999", "908", "999999")]
-        [InlineData("910000000", "910", "000000")]
-        [InlineData("910999999", "910", "999999")]
-        [InlineData("912000000", "912", "000000")]
-        [InlineData("912999999", "912", "999999")]
-        [InlineData("914000000", "914", "000000")]
-        [InlineData("914999999", "914", "999999")]
-        [InlineData("919000000", "919", "000000")]
-        [InlineData("919999999", "919", "999999")]
-        [InlineData("940000000", "940", "000000")]
-        [InlineData("940999999", "940", "999999")]
-        [InlineData("944000000", "944", "000000")]
-        [InlineData("944999999", "944", "999999")]
-        [InlineData("949000000", "949", "000000")]
-        [InlineData("949999999", "949", "999999")]
-        [InlineData("950000000", "950", "000000")]
-        [InlineData("950999999", "950", "999999")]
+        [InlineData("0901000000", "901", "000000")]
+        [InlineData("0901999999", "901", "999999")]
+        [InlineData("0908000000", "908", "000000")]
+        [InlineData("0908999999", "908", "999999")]
+        [InlineData("0910000000", "910", "000000")]
+        [InlineData("0910999999", "910", "999999")]
+        [InlineData("0912000000", "912", "000000")]
+        [InlineData("0912999999", "912", "999999")]
+        [InlineData("0914000000", "914", "000000")]
+        [InlineData("0914999999", "914", "999999")]
+        [InlineData("0919000000", "919", "000000")]
+        [InlineData("0919999999", "919", "999999")]
+        [InlineData("0940000000", "940", "000000")]
+        [InlineData("0940999999", "940", "999999")]
+        [InlineData("0944000000", "944", "000000")]
+        [InlineData("0944999999", "944", "999999")]
+        [InlineData("0949000000", "949", "000000")]
+        [InlineData("0949999999", "949", "999999")]
+        [InlineData("0950000000", "950", "000000")]
+        [InlineData("0950999999", "950", "999999")]
         public void Parse_Known_MobilePhoneNumber(string value, string NationalDestinationCode, string subscriberNumber)
         {
             var parseResult = s_parser.Parse(value);
@@ -51,8 +51,8 @@ namespace PhoneNumbers.Tests.Parsers
         }
 
         [Theory]
-        [InlineData("9090000", "9090", "000")]
-        [InlineData("9090999", "9090", "999")]
+        [InlineData("09090000", "9090", "000")]
+        [InlineData("09090999", "9090", "999")]
         public void Parse_Known_MobilePhoneNumber_Pager(string value, string NationalDestinationCode, string subscriberNumber)
         {
             var parseResult = s_parser.Parse(value);

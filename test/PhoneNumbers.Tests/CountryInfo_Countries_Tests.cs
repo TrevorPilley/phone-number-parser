@@ -400,7 +400,7 @@ namespace PhoneNumbers.Tests
             Assert.Equal(new[] { 7, 9 }, countryInfo.NsnLengths);
             Assert.True(countryInfo.RequireNdcForLocalDialling);
             Assert.False(countryInfo.SharesCallingCode);
-            Assert.Null(countryInfo.TrunkPrefix);
+            Assert.Equal("0", countryInfo.TrunkPrefix);
         }
 
         [Fact]
