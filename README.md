@@ -225,6 +225,7 @@ These were used as the references for the phone number data for each country.
 
 ### Poland
 - https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000A80004PDFE.pdf
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Poland
 
 ### Portugal
 
