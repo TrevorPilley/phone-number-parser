@@ -263,6 +263,19 @@ namespace PhoneNumbers
         };
 
         /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Slovakia.
+        /// </summary>
+        public static CountryInfo Slovakia { get; } = new()
+        {
+            CallingCode = "+421",
+            Iso3166Code = "SK",
+            Name = "Slovakia",
+            NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2, 1 }),
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 9 }),
+            TrunkPrefix = "0",
+        };
+
+        /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Spain.
         /// </summary>
         public static CountryInfo Spain { get; } = new()
