@@ -187,8 +187,6 @@ namespace PhoneNumbers.Tests.Parsers
         }
 
         [Theory]
-        [InlineData("700000000", "70", "0000000", "Services of intelligent network")]
-        [InlineData("709999999", "70", "9999999", "Services of intelligent network")]
         [InlineData("710000000", "71", "0000000", "Wroclaw")]
         [InlineData("719999999", "71", "9999999", "Wroclaw")]
         [InlineData("740000000", "74", "0000000", "Walbrzych")]
@@ -217,8 +215,6 @@ namespace PhoneNumbers.Tests.Parsers
         }
 
         [Theory]
-        [InlineData("800000000", "80", "0000000", "Services of intelligent network")]
-        [InlineData("809999999", "80", "9999999", "Services of intelligent network")]
         [InlineData("810000000", "81", "0000000", "Lublin")]
         [InlineData("819999999", "81", "9999999", "Lublin")]
         [InlineData("820000000", "82", "0000000", "Chelm")]
