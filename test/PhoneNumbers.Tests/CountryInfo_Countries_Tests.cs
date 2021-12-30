@@ -43,6 +43,25 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
+        public void CountryInfo_Bulgaria()
+        {
+            Assert.Same(CountryInfo.Bulgaria, CountryInfo.Bulgaria);
+
+            var countryInfo = CountryInfo.Bulgaria;
+
+            Assert.Equal("+359", countryInfo.CallingCode);
+            Assert.True(countryInfo.HasNationalDestinationCodes);
+            Assert.Equal("00", countryInfo.InternationalCallPrefix);
+            Assert.Equal("BG", countryInfo.Iso3166Code);
+            Assert.Equal("Bulgaria", countryInfo.Name);
+            Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
+            Assert.Equal(new[] { 8, 9 }, countryInfo.NsnLengths);
+            Assert.False(countryInfo.RequireNdcForLocalDialling);
+            Assert.False(countryInfo.SharesCallingCode);
+            Assert.Equal("0", countryInfo.TrunkPrefix);
+        }
+
+        [Fact]
         public void CountryInfo_France()
         {
             Assert.Same(CountryInfo.France, CountryInfo.France);
