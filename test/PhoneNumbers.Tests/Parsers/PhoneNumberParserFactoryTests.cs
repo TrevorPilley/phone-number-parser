@@ -91,6 +91,10 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Singapore));
 
         [Fact]
+        public void GetParser_For_CountryInfo_Slovakia_Returns_DefaultPhoneNumberParser() =>
+            Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Slovakia));
+
+        [Fact]
         public void GetParser_For_CountryInfo_Spain_Returns_DefaultPhoneNumberParser() =>
             Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Spain));
 

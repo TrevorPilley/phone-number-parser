@@ -141,6 +141,7 @@ Portugal       | PT            | +351         |              | Yes        | Yes 
 San Marino     | SM            | +378         |              | Yes        |        |                        |                    |                      | Yes            |                               | Yes
 Singapore      | SG            | +65          |              |            | Yes    |                        |                    |                      | Yes            | Yes                           | Yes
 Spain          | ES            | +34          |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                           | Yes
+Slovakia       | SK            | +421         | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                           | Yes
 Switzerland    | CH            | +41          | 0            | Yes        | Yes    |                        |                    |                      | Yes            |                               | Yes
 United Kingdom | GB            | +44          | 0            | Yes        | Yes    | Yes                    | Yes                | Yes                  | Yes            | Yes                           | Yes
 
@@ -240,6 +241,11 @@ These were used as the references for the phone number data for each country.
 
 - https://www.imda.gov.sg/-/media/Imda/Files/Regulation-Licensing-and-Consultations/Frameworks-and-Policies/Numbering/National-Numbering-Plan-and-Allocation-Process/IMDA-National-Numbering-Plan-12-Aug-2019.pdf?la=en
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Singapore
+
+### Slovakia
+
+- https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000BD0002PDFE.pdf
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Slovakia
 
 ### Spain
 
