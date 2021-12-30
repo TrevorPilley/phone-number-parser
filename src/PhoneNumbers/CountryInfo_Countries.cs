@@ -224,7 +224,7 @@ namespace PhoneNumbers
             Iso3166Code = "PL",
             Name = "Poland",
             NdcLengths = new ReadOnlyCollection<int>(new[] { 2 }),
-            NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8, 9 }),
         };
 
         /// <summary>

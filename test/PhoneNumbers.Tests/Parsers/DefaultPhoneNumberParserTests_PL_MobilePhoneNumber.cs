@@ -297,7 +297,7 @@ namespace PhoneNumbers.Tests.Parsers
         }
 
         [Theory]
-        [InlineData("640000000", "64", "0000000")]
+        [InlineData("640000", "64", "0000")]
         [InlineData("649999999", "64", "9999999")]
         public void Parse_Known_MobilePhoneNumber_Pager(string value, string NationalDestinationCode, string subscriberNumber)
         {
