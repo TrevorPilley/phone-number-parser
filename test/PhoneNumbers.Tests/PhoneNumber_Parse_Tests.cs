@@ -21,6 +21,14 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
+        public void Parse_Value_With_Bulgaria_CallingCode()
+        {
+            var phoneNumber = PhoneNumber.Parse("+35929492760");
+            Assert.NotNull(phoneNumber);
+            Assert.Equal(CountryInfo.Bulgaria, phoneNumber.Country);
+        }
+
+        [Fact]
         public void Parse_Value_With_France_CallingCode()
         {
             var phoneNumber = PhoneNumber.Parse("+33140477283");

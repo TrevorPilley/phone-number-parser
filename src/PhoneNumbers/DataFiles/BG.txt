@@ -1,0 +1,60 @@
+G|2|Sofia|2000000-9999999|
+G|30|Smolyan, Smolyan region and Plovdiv region|200000-999999|
+G|31,33|Plovdiv region|200000-999999|
+G|32|Plovdiv|200000-999999|
+G|34|Pazardzhik|200000-999999|
+G|35|Pazardzhik region|200000-999999|
+G|36|Kardzhali, Kardzhali region and Haskovo region|200000-999999|
+G|37,39|Haskovo region|200000-999999|
+G|38|Haskovo|200000-999999|
+G|41|Stara Zagora region|200000-999999|
+G|42|Stara Zagora|200000-999999|
+G|431-436|Stara Zagora region|20000-99999|
+M|437-439||00000-99999|
+G|44|Sliven|200000-999999|
+G|45|Sliven region|200000-999999|
+G|46|Yambol|200000-999999|
+G|47|Yambol region and Haskovo region|200000-999999|
+G|51|Varna region|200000-999999|
+G|52|Varna|200000-999999|
+G|53|Shumen region|200000-999999|
+G|54|Shumen|200000-999999|
+G|55|Burgas region|200000-999999|
+G|56|Burgas|200000-999999|
+G|57|Dobrich region|200000-999999|
+G|58|Dobrich|200000-999999|
+G|59|Burgas region|200000-999999|
+G|60|Targovishte and Targovishte region|200000-999999|
+G|61,63|Veliko Tarnovo region|200000-999999|
+G|62|Veliko Tarnovo|200000-999999|
+G|64|Pleven|200000-999999|
+G|65|Pleven region|200000-999999|
+G|66|Gabrovo|200000-999999|
+G|67|Gabrovo region and Lovech region|200000-999999|
+G|68|Lovech|200000-999999|
+G|69|Lovech region|200000-999999|
+N|700||00000-99999|V
+G|701-707|Kyustendil region|20000-99999|
+G|71,72|Sofia region|200000-999999|
+G|73|Blagoevgrad|200000-999999|
+G|74|Blagoevgrad region|200000-999999|
+G|75|Blagoevgrad region and Sofia region|200000-999999|
+G|76|Pernik|200000-999999|
+G|77|Pernik region|200000-999999|
+G|78|Kyustendil|200000-999999|
+G|79|Kyustendil region|200000-999999|
+N|800||00000-99999|F
+G|81|Ruse region|200000-999999|
+G|82|Ruse|200000-999999|
+G|84|Razgrad and Razgrad region|200000-999999|
+G|86|Silistra and Silistra region|200000-999999|
+M|87-89||0000000-9999999|
+N|90||000000-999999|R
+G|91|Vratsa region|200000-999999|
+G|92|Vratsa|200000-999999|
+G|93|Vidin region|200000-999999|
+G|94|Vidin|200000-999999|
+G|95|Montana region|200000-999999|
+G|96|Montana|200000-999999|
+G|97|Montana region and Vratsa region|200000-999999|
+M|984-989,990-999||000000-999999|

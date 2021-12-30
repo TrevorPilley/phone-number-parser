@@ -31,6 +31,20 @@ namespace PhoneNumbers
         };
 
         /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Bulgaria.
+        /// </summary>
+        public static CountryInfo Bulgaria { get; } = new()
+        {
+            CallingCode = "+359",
+            Iso3166Code = "BG",
+            Name = "Bulgaria",
+            NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9 }),
+            RequireNdcForLocalDialling = false,
+            TrunkPrefix = "0",
+        };
+
+        /// <summary>
         /// Gets the <see cref="CountryInfo"/> for France.
         /// </summary>
         public static CountryInfo France { get; } = new()
