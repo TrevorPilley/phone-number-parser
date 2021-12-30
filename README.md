@@ -174,6 +174,11 @@ These were used as the references for the phone number data for each country.
 - https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000320003PDFE.pdf
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Croatia
 
+### Czech Republic
+
+- https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000350001PDFE.pdf
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_the_Czech_Republic
+
 ### France
 
 - https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200004A0002PDFE.pdf
