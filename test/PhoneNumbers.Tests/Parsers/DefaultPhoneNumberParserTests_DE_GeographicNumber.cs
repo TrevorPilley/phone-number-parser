@@ -59,6 +59,8 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("022199999999", "221", "99999999", "Köln")]
         [InlineData("0228000", "228", "000", "Bonn")]
         [InlineData("022899999999", "228", "99999999", "Bonn")]
+        [InlineData("0231000", "231", "000", "Dortmund")]
+        [InlineData("023199999999", "231", "99999999", "Dortmund")]
         public void Parse_Known_GeographicPhoneNumber_2XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
         {
             var parseResult = s_parser.Parse(value);
@@ -285,6 +287,32 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("022969999999", "2296", "9999999", "Reichshof-Brüchermühle")]
         [InlineData("0229700", "2297", "00", "Wildbergerhütte")]
         [InlineData("022979999999", "2297", "9999999", "Wildbergerhütte")]
+        [InlineData("0230100", "2301", "00", "Holzwickede")]
+        [InlineData("023019999999", "2301", "9999999", "Holzwickede")]
+        [InlineData("0230200", "2302", "00", "Witten")]
+        [InlineData("023029999999", "2302", "9999999", "Witten")]
+        [InlineData("0230300", "2303", "00", "Unna")]
+        [InlineData("023039999999", "2303", "9999999", "Unna")]
+        [InlineData("0230400", "2304", "00", "Schwerte")]
+        [InlineData("023049999999", "2304", "9999999", "Schwerte")]
+        [InlineData("0230500", "2305", "00", "Castrop-Rauxel")]
+        [InlineData("023059999999", "2305", "9999999", "Castrop-Rauxel")]
+        [InlineData("0230600", "2306", "00", "Lünen")]
+        [InlineData("023069999999", "2306", "9999999", "Lünen")]
+        [InlineData("0230700", "2307", "00", "Kamen")]
+        [InlineData("023079999999", "2307", "9999999", "Kamen")]
+        [InlineData("0230800", "2308", "00", "Unna-Hemmerde")]
+        [InlineData("023089999999", "2308", "9999999", "Unna-Hemmerde")]
+        [InlineData("0230900", "2309", "00", "Waltrop")]
+        [InlineData("023099999999", "2309", "9999999", "Waltrop")]
+        [InlineData("0232300", "2323", "00", "Herne")]
+        [InlineData("023239999999", "2323", "9999999", "Herne")]
+        [InlineData("0232400", "2324", "00", "Hattingen Ruhr")]
+        [InlineData("023249999999", "2324", "9999999", "Hattingen Ruhr")]
+        [InlineData("0232500", "2325", "00", "CWanne-Eickel")]
+        [InlineData("023259999999", "2325", "9999999", "CWanne-Eickel")]
+        [InlineData("0232700", "2327", "00", "Bochum-Wattenscheid")]
+        [InlineData("023279999999", "2327", "9999999", "Bochum-Wattenscheid")]
         public void Parse_Known_GeographicPhoneNumber_2XXX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
 
         {

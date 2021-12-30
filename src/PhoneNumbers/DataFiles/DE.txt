@@ -120,4 +120,18 @@ G|2294|Morsbach Sieg|00-9999999|
 G|2295|Ruppichteroth|00-9999999|
 G|2296|Reichshof-Brüchermühle|00-9999999|
 G|2297|Wildbergerhütte|00-9999999|
+G|2301|Holzwickede|00-9999999|
+G|2302|Witten|00-9999999|
+G|2303|Unna|00-9999999|
+G|2304|Schwerte|00-9999999|
+G|2305|Castrop-Rauxel|00-9999999|
+G|2306|Lünen|00-9999999|
+G|2307|Kamen|00-9999999|
+G|2308|Unna-Hemmerde|00-9999999|
+G|2309|Waltrop|00-9999999|
+G|231|Dortmund|000-99999999|
+G|2323|Herne|00-9999999|
+G|2324|Hattingen Ruhr|00-9999999|
+G|2325|CWanne-Eickel|00-9999999|
+G|2327|Bochum-Wattenscheid|00-9999999|
 G|30|Berlin|000000000-999999999|
