@@ -38,7 +38,7 @@ namespace PhoneNumbers
             CallingCode = "+359",
             Iso3166Code = "BG",
             Name = "Bulgaria",
-            NdcLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2, 1 }),
+            NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
             NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9 }),
             RequireNdcForLocalDialling = false,
             TrunkPrefix = "0",

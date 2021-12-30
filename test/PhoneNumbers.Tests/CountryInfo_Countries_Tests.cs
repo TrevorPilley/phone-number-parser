@@ -54,7 +54,7 @@ namespace PhoneNumbers.Tests
             Assert.Equal("00", countryInfo.InternationalCallPrefix);
             Assert.Equal("BG", countryInfo.Iso3166Code);
             Assert.Equal("Bulgaria", countryInfo.Name);
-            Assert.Equal(new[] { 5, 4, 3, 2, 1 }, countryInfo.NdcLengths);
+            Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
             Assert.Equal(new[] { 8, 9 }, countryInfo.NsnLengths);
             Assert.False(countryInfo.RequireNdcForLocalDialling);
             Assert.False(countryInfo.SharesCallingCode);
