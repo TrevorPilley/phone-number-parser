@@ -39,7 +39,7 @@ namespace PhoneNumbers.Tests
         [Fact]
         public void Parse_Value_With_CzechRepublic_CallingCode()
         {
-            var phoneNumber = PhoneNumber.Parse("+420221714714");
+            var phoneNumber = PhoneNumber.Parse("+420224004111");
             Assert.NotNull(phoneNumber);
             Assert.Equal(CountryInfo.CzechRepublic, phoneNumber.Country);
         }
