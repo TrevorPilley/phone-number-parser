@@ -133,6 +133,14 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
+        public void Parse_Value_With_Poland_CallingCode()
+        {
+            var phoneNumber = PhoneNumber.Parse("+48222455856");
+            Assert.NotNull(phoneNumber);
+            Assert.Equal(CountryInfo.Poland, phoneNumber.Country);
+        }
+
+        [Fact]
         public void Parse_Value_With_Portugal_CallingCode()
         {
             var phoneNumber = PhoneNumber.Parse("+351217211000");

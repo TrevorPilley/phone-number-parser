@@ -216,6 +216,18 @@ namespace PhoneNumbers
         };
 
         /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Poland.
+        /// </summary>
+        public static CountryInfo Poland { get; } = new()
+        {
+            CallingCode = "+48",
+            Iso3166Code = "PL",
+            Name = "Poland",
+            NdcLengths = new ReadOnlyCollection<int>(new[] { 2 }),
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8, 9 }),
+        };
+
+        /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Portugal.
         /// </summary>
         public static CountryInfo Portugal { get; } = new()
