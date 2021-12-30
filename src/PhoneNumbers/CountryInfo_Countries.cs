@@ -30,6 +30,21 @@ namespace PhoneNumbers
             TrunkPrefix = "0",
         };
 
+
+        /// <summary>
+        /// Gets the <see cref="CountryInfo"/> for Croatia.
+        /// </summary>
+        public static CountryInfo Croatia { get; } = new()
+        {
+            CallingCode = "+385",
+            Iso3166Code = "HR",
+            Name = "Croatia",
+            NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8, 9, 10 }),
+            RequireNdcForLocalDialling = false,
+            TrunkPrefix = "0",
+        };
+
         /// <summary>
         /// Gets the <see cref="CountryInfo"/> for Bulgaria.
         /// </summary>
