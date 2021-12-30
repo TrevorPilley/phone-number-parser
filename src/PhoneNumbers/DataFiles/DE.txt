@@ -83,4 +83,41 @@ G|2235|Erftstadt|00-9999999|
 G|2236|Wesseling Rheinland|00-9999999|
 G|2237|Kerpen Rheinland-Türnich|00-9999999|
 G|2238|Pulheim|00-9999999|
+G|2241|Siegburg|00-9999999|
+G|2242|Hennef Sieg|00-9999999|
+G|2243|Eitorf|00-9999999|
+G|2244|Königswinter-Oberpleis|00-9999999|
+G|2245|Much|00-9999999|
+G|2246|Lohmar Rheinland|00-9999999|
+G|2247|Neunkirchen-Seelscheid|00-9999999|
+G|2248|Hennef-Uckerath|00-9999999|
+G|2251|Euskirchen|00-9999999|
+G|2252|Zülpich|00-9999999|
+G|2253|Bad Münstereifel|00-9999999|
+G|2254|Weilerswist|00-9999999|
+G|2255|Euskirchen-Flamersheim|00-9999999|
+G|2256|Mechernich-Satzvey|00-9999999|
+G|2257|Reckerscheid|00-9999999|
+G|2261|Gummersbach|00-9999999|
+G|2262|Wiehl|00-9999999|
+G|2263|Engelskirchen|00-9999999|
+G|2264|Marienheide|00-9999999|
+G|2265|Reichshof-Eckenhagen|00-9999999|
+G|2266|Lindlar|00-9999999|
+G|2267|Wipperfürth|00-9999999|
+G|2268|Kürten|00-9999999|
+G|2269|Kierspe-Rönsahl|00-9999999|
+G|2271|Bergheim Erft|00-9999999|
+G|2272|Bedburg Erft|00-9999999|
+G|2273|Kerpen-Horrem|00-9999999|
+G|2274|Elsdorf Rheinland|00-9999999|
+G|2275|Kerpen-Buir|00-9999999|
+G|228|Bonn|000-99999999|
+G|2291|Waldbröl|00-9999999|
+G|2292|Windeck Sieg|00-9999999|
+G|2293|Nümbrecht|00-9999999|
+G|2294|Morsbach Sieg|00-9999999|
+G|2295|Ruppichteroth|00-9999999|
+G|2296|Reichshof-Brüchermühle|00-9999999|
+G|2297|Wildbergerhütte|00-9999999|
 G|30|Berlin|000000000-999999999|
