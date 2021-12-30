@@ -53,7 +53,7 @@ public class PhoneNumber_Parse_Tests
     [Fact]
     public void Parse_Value_With_Germany_CallingCode()
     {
-        var phoneNumber = PhoneNumber.Parse("+4930311682904");
+        var phoneNumber = PhoneNumber.Parse("+49228141177");
         Assert.NotNull(phoneNumber);
         Assert.Equal(CountryInfo.Germany, phoneNumber.Country);
     }
