@@ -152,6 +152,7 @@ These were used as the references for the phone number data for each country.
 
 ### Austria
 
+- https://www.rtr.at/TKP/was_wir_tun/telekommunikation/nummerierung/rechtlicheGrundlagen/KEM-V2009/KEMV.en.html
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Austria
 
 ### Belgium
@@ -180,9 +181,9 @@ These were used as the references for the phone number data for each country.
 
 ### Ireland
 
+- https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000680001PDFE.pdf
 - https://www.comreg.ie/industry/licensing/numbering/area-code-maps-2/
 - https://www.comreg.ie/csv/downloads/ComReg0804.pdf
-- https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000680001PDFE.pdf
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_the_Republic_of_Ireland
 
 ### Italy
@@ -219,6 +220,7 @@ These were used as the references for the phone number data for each country.
 ### Spain
 
 - https://avancedigital.mineco.gob.es/es-ES/Servicios/Numeracion/Documents/Descripcion_PNN.pdf
+- https://avancedigital.mineco.gob.es/es-ES/Servicios/Numeracion/Documents/Presentation_NNP_Spain.pdf
 - https://numeracionyoperadores.cnmc.es/numeracion
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Spain
 
@@ -229,8 +231,8 @@ These were used as the references for the phone number data for each country.
 
 ### United Kingdom, Guernsey, Jersey, Isle of Man
 
-- https://www.area-codes.org.uk/
 - https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000DD0001PDFE.pdf
-- http://static.ofcom.org.uk/static/numbering/index.htm
 - https://www.ofcom.org.uk/__data/assets/pdf_file/0013/102613/national-numbering-plan.pdf
+- http://static.ofcom.org.uk/static/numbering/index.htm
+- https://www.area-codes.org.uk/
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_the_United_Kingdom
