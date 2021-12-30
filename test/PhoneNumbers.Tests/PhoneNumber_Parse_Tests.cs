@@ -29,6 +29,14 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
+        public void Parse_Value_With_Croatia_CallingCode()
+        {
+            var phoneNumber = PhoneNumber.Parse("+38517007007");
+            Assert.NotNull(phoneNumber);
+            Assert.Equal(CountryInfo.Croatia, phoneNumber.Country);
+        }
+
+        [Fact]
         public void Parse_Value_With_France_CallingCode()
         {
             var phoneNumber = PhoneNumber.Parse("+33140477283");
