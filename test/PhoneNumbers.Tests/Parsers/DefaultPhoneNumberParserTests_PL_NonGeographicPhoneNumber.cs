@@ -51,26 +51,5 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
             Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
         }
-
-        [Theory]
-        [InlineData("700000000", "70", "0000000")]
-        [InlineData("709999999", "70", "9999999")]
-        public void Parse_Known_NonGeographicPhoneNumber_PremiumRate(string value, string NationalDestinationCode, string subscriberNumber)
-        {
-            var parseResult = s_parser.Parse(value);
-            parseResult.ThrowIfFailure();
-
-            var phoneNumber = parseResult.PhoneNumber;
-
-            Assert.NotNull(phoneNumber);
-            Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
-
-            var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
-            Assert.Equal(CountryInfo.Poland, nonGeographicPhoneNumber.Country);
-            Assert.False(nonGeographicPhoneNumber.IsFreephone);
-            Assert.True(nonGeographicPhoneNumber.IsPremiumRate);
-            Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
-            Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
-        }
     }
 }
