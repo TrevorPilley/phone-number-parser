@@ -31,7 +31,7 @@ namespace PhoneNumbers.Tests
         [Fact]
         public void TryParse_Value_With_Croatia_CallingCode()
         {
-            Assert.True(PhoneNumber.TryParse("+38516158664", out var phoneNumber));
+            Assert.True(PhoneNumber.TryParse("+38517007007", out var phoneNumber));
             Assert.NotNull(phoneNumber);
             Assert.Equal(CountryInfo.Croatia, phoneNumber.Country);
         }
