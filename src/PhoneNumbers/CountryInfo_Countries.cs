@@ -68,7 +68,7 @@ namespace PhoneNumbers
             Iso3166Code = "CZ",
             Name = "Czech Republic",
             NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
-            NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 8, 9 }),
+            NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
         };
 
         /// <summary>
