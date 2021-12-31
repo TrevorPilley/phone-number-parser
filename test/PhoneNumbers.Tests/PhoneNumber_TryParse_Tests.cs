@@ -187,6 +187,14 @@ public class PhoneNumber_TryParse_Tests
     }
 
     [Fact]
+    public void TryParse_Ukraine_CallingCode()
+    {
+        Assert.True(PhoneNumber.TryParse("+380442819196", out var phoneNumber));
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Ukraine, phoneNumber.Country);
+    }
+
+    [Fact]
     public void TryParse_Value_With_UnitedKingdom_CallingCode()
     {
         Assert.True(PhoneNumber.TryParse("+442079813000", out var phoneNumber));
