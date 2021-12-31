@@ -1,1 +1,87 @@
-
+G|21|Bucharest Municipality and Ilfov county|0000-9999999|
+G|230|Suceava county|000-999999|
+G|231|Botosani county|000-999999|
+G|232|Iasi county|000-999999|
+G|233|Neamt county|000-999999|
+G|234|Bacau county|000-999999|
+G|235|Vaslui county|000-999999|
+G|236|Galati county|000-999999|
+G|237|Vrancea county|000-999999|
+G|238|Buzau county|000-999999|
+G|239|Braila county|000-999999|
+G|240|Tulcea county|000-999999|
+G|241|Constanta county|000-999999|
+G|242|Calarasi county|000-999999|
+G|243|Ialomita county|000-999999|
+G|244|Prahova county|000-999999|
+G|245|Dambovita county|000-999999|
+G|246|Giurgiu county|000-999999|
+G|247|Teleorman county|000-999999|
+G|248|Arges county|000-999999|
+G|249|Olt county|000-999999|
+G|250|Valcea county|000-999999|
+G|251|Dolj county|000-999999|
+G|252|Mehedinti county|000-999999|
+G|253|Gorj county|000-999999|
+G|254|Hunedoara county|000-999999|
+G|255|Caras–Severin county|000-999999|
+G|256|Timis county|000-999999|
+G|257|Arad county|000-999999|
+G|258|Alba county|000-999999|
+G|259|Bihor county|000-999999|
+G|260|Salaj county|000-999999|
+G|261|Satu Mare county|000-999999|
+G|262|Maramures county|000-999999|
+G|263|Bistrita–Nasaud county|000-999999|
+G|264|Cluj county|000-999999|
+G|265|Mures county|000-999999|
+G|266|Harghita county|000-999999|
+G|267|Covasna county|000-999999|
+G|268|Brasov county|000-999999|
+G|269|Sibiu county|000-999999|
+G|330|Suceava county|000-999999|
+G|331|Botosani county|000-999999|
+G|332|Iasi county|000-999999|
+G|333|Neamt county|000-999999|
+G|334|Bacau county|000-999999|
+G|335|Vaslui county|000-999999|
+G|336|Galati county|000-999999|
+G|337|Vrancea county|000-999999|
+G|338|Buzau county|000-999999|
+G|339|Braila county|000-999999|
+G|340|Tulcea county|000-999999|
+G|341|Constanta county|000-999999|
+G|342|Calarasi county|000-999999|
+G|343|Ialomita county|000-999999|
+G|344|Prahova county|000-999999|
+G|345|Dambovita county|000-999999|
+G|346|Giurgiu county|000-999999|
+G|347|Teleorman county|000-999999|
+G|348|Arges county|000-999999|
+G|349|Olt county|000-999999|
+G|350|Valcea county|000-999999|
+G|351|Dolj county|000-999999|
+G|352|Mehedinti county|000-999999|
+G|353|Gorj county|000-999999|
+G|354|Hunedoara county|000-999999|
+G|355|Caras–Severin county|000-999999|
+G|356|Timis county|000-999999|
+G|357|Arad county|000-999999|
+G|358|Alba county|000-999999|
+G|359|Bihor county|000-999999|
+G|360|Salaj county|000-999999|
+G|361|Satu Mare county|000-999999|
+G|362|Maramures county|000-999999|
+G|363|Bistrita–Nasaud county|000-999999|
+G|364|Cluj county|000-999999|
+G|365|Mures county|000-999999|
+G|366|Harghita county|000-999999|
+G|367|Covasna county|000-999999|
+G|368|Brasov county|000-999999|
+G|369|Sibiu county|000-999999|
+N|37-39||0000000-9999999|
+M|60,70||0000000-9999999|V
+M|61-69,71-79||0000000-9999999|
+N|800||000000-999999|F
+N|801,803,805,808,870||000000-999999|
+N|900,903,906||000000-999999|R
