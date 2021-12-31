@@ -147,6 +147,14 @@ public class PhoneNumber_TryParse_Tests
     }
 
     [Fact]
+    public void TryParse_Value_With_Romania_CallingCode()
+    {
+        Assert.True(PhoneNumber.TryParse("+40372845414", out var phoneNumber));
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Romania, phoneNumber.Country);
+    }
+
+    [Fact]
     public void TryParse_Value_With_SanMarino_CallingCode()
     {
         Assert.True(PhoneNumber.TryParse("+3780549882555", out var phoneNumber));
