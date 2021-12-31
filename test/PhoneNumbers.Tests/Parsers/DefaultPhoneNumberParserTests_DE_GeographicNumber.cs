@@ -52,7 +52,7 @@ namespace PhoneNumbers.Tests.Parsers
         [InlineData("0211000", "211", "000", "Düsseldorf")]
         [InlineData("021199999999", "211", "99999999", "Düsseldorf")]
         [InlineData("0212000", "212", "000", "Solingen")]
-        [InlineData("021299999999", "212", "99999999", "Solingen")]
+        [InlineData("021289999999", "212", "89999999", "Solingen")]
         [InlineData("0214000", "214", "000", "Leverkusen")]
         [InlineData("021499999999", "214", "99999999", "Leverkusen")]
         [InlineData("0221000", "221", "000", "Köln")]
