@@ -131,34 +131,6 @@ namespace PhoneNumbers.Tests.Parsers
         }
 
         [Theory]
-        [InlineData("018000000", "180", "00000")]
-        [InlineData("01809999999", "180", "9999999")]
-        [InlineData("018100000", "181", "00000")]
-        [InlineData("018199999999999", "181", "99999999999")]
-        [InlineData("018200000000", "182", "00000000")]
-        [InlineData("018299999999", "182", "99999999")]
-        [InlineData("018900000000", "189", "00000000")]
-        [InlineData("018999999999", "189", "99999999")]
-        public void Parse_Known_MobilePhoneNumber_18X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
-        {
-            var parseResult = s_parser.Parse(value);
-            parseResult.ThrowIfFailure();
-
-            var phoneNumber = parseResult.PhoneNumber;
-
-            Assert.NotNull(phoneNumber);
-            Assert.IsType<MobilePhoneNumber>(phoneNumber);
-
-            var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
-            Assert.Equal(CountryInfo.Germany, mobilePhoneNumber.Country);
-            Assert.False(mobilePhoneNumber.IsDataOnly);
-            Assert.False(mobilePhoneNumber.IsPager);
-            Assert.False(mobilePhoneNumber.IsVirtual);
-            Assert.Equal(NationalDestinationCode, mobilePhoneNumber.NationalDestinationCode);
-            Assert.Equal(subscriberNumber, mobilePhoneNumber.SubscriberNumber);
-        }
-
-        [Theory]
         [InlineData("01640", "164", "0")]
         [InlineData("01649999999999", "164", "9999999999")]
         [InlineData("01680", "168", "0")]

@@ -3,12 +3,9 @@ M|1511-1512,1514-1517,1520-1523,1525-1526,1529,1570,1573,1575,1577-1579,1590||00
 M|160||0000000-99999999|
 M|162-163||0000000-9999999|
 M|164||0-9999999999|P
-M|168,169||0-99999999999|P
+M|168-169||0-99999999999|P
 M|170-175,177-179||0000000-9999999|
 M|176||00000000-99999999|
-M|180||00000-9999999|
-M|181||00000-99999999999|
-M|182-189||00000000-99999999|
 G|201|Essen|000-99999999|
 G|202|Wuppertal|000-99999999|
 G|203|Duisburg|000-99999999|
@@ -24,50 +21,50 @@ G|2058|Wülfrath|00-9999999|
 G|2064|Dinslaken|00-9999999|
 G|2065|Duisburg-Rheinhausen|00-9999999|
 G|2066|Duisburg-Homberg|00-9999999|
-G|208|Oberhausen|000-99999999|
+G|208|Oberhausen Rheinland|000-99999999|
 G|209|Gelsenkirchen|000-99999999|
-G|2102|Ratingen|00-99999999|
-G|2103|Hilden|00-99999999|
-G|2104|Mettmann|00-99999999|
+G|2102|Ratingen|00-9999999|
+G|2103|Hilden|00-9999999|
+G|2104|Mettmann|00-9999999|
 G|211|Düsseldorf|000-99999999|
 G|212|Solingen|000-89999999|
-G|2129|Haan Rheinland|00-99999999|
-G|2131|Neuss|00-99999999|
-G|2132|Meerbusch-Büderich|00-99999999|
-G|2133|Dormagen|00-99999999|
-G|2137|Neuss-Norf|00-99999999|
+G|2129|Haan Rheinland|00-9999999|
+G|2131|Neuss|00-9999999|
+G|2132|Meerbusch-Büderich|00-9999999|
+G|2133|Dormagen|00-9999999|
+G|2137|Neuss-Norf|00-9999999|
 G|214|Leverkusen|000-99999999|
-G|2150|Meerbusch-Lank|00-99999999|
-G|2151|Krefeld|00-99999999|
-G|2152|Kempen|00-99999999|
-G|2153|Nettetal-Lobberich|00-99999999|
-G|2154|Willich|00-99999999|
-G|2156|Willich-Anrath|00-99999999|
-G|2157|Nettetal-Kaldenkirchen|00-99999999|
-G|2158|Grefrath bei Krefeld|00-99999999|
-G|2159|Meerbusch-Osterath|00-99999999|
-G|2161|Mönchengladbach|00-99999999|
-G|2162|Viersen|00-99999999|
-G|2163|Schwalmtal Niederrhein|00-99999999|
-G|2164|Jüchen-Otzenrath|00-99999999|
-G|2165|Jüchen|00-99999999|
-G|2166|Mönchengladbach-Rheydt|00-99999999|
-G|2171|Leverkusen-Opladen|00-99999999|
-G|2173|Langenfeld Rheinland|00-99999999|
-G|2174|Langenfeld Rheinland|00-99999999|
-G|2175|Leichlingen Rheinland|00-99999999|
-G|2181|Grevenbroich|00-99999999|
-G|2182|Grevenbroich-Kapellen|00-99999999|
-G|2183|Rommerskirchen|00-99999999|
-G|2191|Remscheid|00-99999999|
-G|2192|Hückeswagen|00-99999999|
-G|2193|Dabringhausen|00-99999999|
-G|2195|Radevormwald|00-99999999|
-G|2196|Wermelskirchen|00-99999999|
-G|2202|Bergisch Gladbach|00-99999999|
-G|2203|Köln-Porz|00-99999999|
-G|2204|Bensberg|00-99999999|
-G|2205|Rösrath|00-99999999|
+G|2150|Meerbusch-Lank|00-9999999|
+G|2151|Krefeld|00-9999999|
+G|2152|Kempen|00-9999999|
+G|2153|Nettetal-Lobberich|00-9999999|
+G|2154|Willich|00-9999999|
+G|2156|Willich-Anrath|00-9999999|
+G|2157|Nettetal-Kaldenkirchen|00-9999999|
+G|2158|Grefrath bei Krefeld|00-9999999|
+G|2159|Meerbusch-Osterath|00-9999999|
+G|2161|Mönchengladbach|00-9999999|
+G|2162|Viersen|00-9999999|
+G|2163|Schwalmtal Niederrhein|00-9999999|
+G|2164|Jüchen-Otzenrath|00-9999999|
+G|2165|Jüchen|00-9999999|
+G|2166|Mönchengladbach-Rheydt|00-9999999|
+G|2171|Leverkusen-Opladen|00-9999999|
+G|2173|Langenfeld Rheinland|00-9999999|
+G|2174|Burscheid Rheinland|00-9999999|
+G|2175|Leichlingen Rheinland|00-9999999|
+G|2181|Grevenbroich|00-9999999|
+G|2182|Grevenbroich-Kapellen|00-9999999|
+G|2183|Rommerskirchen|00-9999999|
+G|2191|Remscheid|00-9999999|
+G|2192|Hückeswagen|00-9999999|
+G|2193|Dabringhausen|00-9999999|
+G|2195|Radevormwald|00-9999999|
+G|2196|Wermelskirchen|00-9999999|
+G|2202|Bergisch Gladbach|00-9999999|
+G|2203|Köln-Porz|00-9999999|
+G|2204|Bensberg|00-9999999|
+G|2205|Rösrath|00-9999999|
 G|2206|Overath|00-9999999|
 G|2207|Kürten-Dürscheid|00-9999999|
 G|2208|Niederkassel|00-9999999|
@@ -80,7 +77,7 @@ G|2226|Rheinbach|00-9999999|
 G|2227|Bornheim-Merten|00-9999999|
 G|2228|Remagen-Rolandseck|00-9999999|
 G|2232|Brühl Rheinland|00-9999999|
-G|2233|Hrühl Rheinland|00-9999999|
+G|2233|Hürth Rheinland|00-9999999|
 G|2234|Frechen|00-9999999|
 G|2235|Erftstadt|00-9999999|
 G|2236|Wesseling Rheinland|00-9999999|
@@ -89,14 +86,14 @@ G|2238|Pulheim|00-9999999|
 G|2241|Siegburg|00-9999999|
 G|2242|Hennef Sieg|00-9999999|
 G|2243|Eitorf|00-9999999|
-G|2244|Königswinter-Oberpleis|00-9999999|
+G|2244|Königswinter-Oberpleis|00-9999999|
 G|2245|Much|00-9999999|
 G|2246|Lohmar Rheinland|00-9999999|
 G|2247|Neunkirchen-Seelscheid|00-9999999|
 G|2248|Hennef-Uckerath|00-9999999|
 G|2251|Euskirchen|00-9999999|
-G|2252|Zülpich|00-9999999|
-G|2253|Bad Münstereifel|00-9999999|
+G|2252|Zülpich|00-9999999|
+G|2253|Bad Münstereifel|00-9999999|
 G|2254|Weilerswist|00-9999999|
 G|2255|Euskirchen-Flamersheim|00-9999999|
 G|2256|Mechernich-Satzvey|00-9999999|
@@ -107,34 +104,5114 @@ G|2263|Engelskirchen|00-9999999|
 G|2264|Marienheide|00-9999999|
 G|2265|Reichshof-Eckenhagen|00-9999999|
 G|2266|Lindlar|00-9999999|
-G|2267|Wipperfürth|00-9999999|
-G|2268|Kürten|00-9999999|
-G|2269|Kierspe-Rönsahl|00-9999999|
+G|2267|Wipperfürth|00-9999999|
+G|2268|Kürten|00-9999999|
+G|2269|Kierspe-Rönsahl|00-9999999|
 G|2271|Bergheim Erft|00-9999999|
 G|2272|Bedburg Erft|00-9999999|
 G|2273|Kerpen-Horrem|00-9999999|
 G|2274|Elsdorf Rheinland|00-9999999|
 G|2275|Kerpen-Buir|00-9999999|
 G|228|Bonn|000-99999999|
-G|2291|Waldbröl|00-9999999|
+G|2291|Waldbröl|00-9999999|
 G|2292|Windeck Sieg|00-9999999|
-G|2293|Nümbrecht|00-9999999|
+G|2293|Nümbrecht|00-9999999|
 G|2294|Morsbach Sieg|00-9999999|
 G|2295|Ruppichteroth|00-9999999|
-G|2296|Reichshof-Brüchermühle|00-9999999|
-G|2297|Wildbergerhütte|00-9999999|
+G|2296|Reichshof-Brüchermühle|00-9999999|
+G|2297|Wildbergerhütte|00-9999999|
 G|2301|Holzwickede|00-9999999|
 G|2302|Witten|00-9999999|
 G|2303|Unna|00-9999999|
 G|2304|Schwerte|00-9999999|
 G|2305|Castrop-Rauxel|00-9999999|
-G|2306|Lünen|00-9999999|
+G|2306|Lünen|00-9999999|
 G|2307|Kamen|00-9999999|
 G|2308|Unna-Hemmerde|00-9999999|
 G|2309|Waltrop|00-9999999|
 G|231|Dortmund|000-99999999|
 G|2323|Herne|00-9999999|
 G|2324|Hattingen Ruhr|00-9999999|
-G|2325|CWanne-Eickel|00-9999999|
+G|2325|Wanne-Eickel|00-9999999|
 G|2327|Bochum-Wattenscheid|00-9999999|
-G|30|Berlin|000000000-999999999|
+G|2330|Herdecke|00-9999999|
+G|2331|Hagen Westfalen|00-9999999|
+G|2332|Gevelsberg|00-9999999|
+G|2333|Ennepetal|00-9999999|
+G|2334|Hagen-Hohenlimburg|00-9999999|
+G|2335|Wetter Ruhr|00-9999999|
+G|2336|Schwelm|00-9999999|
+G|2337|Hagen-Dahl|00-9999999|
+G|2338|Breckerfeld|00-9999999|
+G|2339|Sprockhövel-Haßlinghausen|00-9999999|
+G|234|Bochum|000-99999999|
+G|2351|Lüdenscheid|00-9999999|
+G|2352|Altena Westfalen|00-9999999|
+G|2353|Halver|00-9999999|
+G|2354|Meinerzhagen|00-9999999|
+G|2355|Schalksmühle|00-9999999|
+G|2357|Herscheid Westfalen|00-9999999|
+G|2358|Meinerzhagen-Valbert|00-9999999|
+G|2359|Kierspe|00-9999999|
+G|2360|Haltern-Lippramsdorf|00-9999999|
+G|2361|Recklinghausen|00-9999999|
+G|2362|Dorsten|00-9999999|
+G|2363|Datteln|00-9999999|
+G|2364|Haltern Westfalen|00-9999999|
+G|2365|Marl|00-9999999|
+G|2366|Herten Westfalen|00-9999999|
+G|2367|Henrichenburg|00-9999999|
+G|2368|Oer-Erkenschwick|00-9999999|
+G|2369|Dorsten-Wulfen|00-9999999|
+G|2371|Iserlohn|00-9999999|
+G|2372|Hemer|00-9999999|
+G|2373|Menden Sauerland|00-9999999|
+G|2374|Iserlohn-Letmathe|00-9999999|
+G|2375|Balve|00-9999999|
+G|2377|Wickede Ruhr|00-9999999|
+G|2378|Fröndenberg-Langschede|00-9999999|
+G|2379|Menden-Asbeck|00-9999999|
+G|2381|Hamm Westfalen|00-9999999|
+G|2382|Ahlen Westfalen|00-9999999|
+G|2383|Bönen|00-9999999|
+G|2384|Welver|00-9999999|
+G|2385|Hamm-Rhynern|00-9999999|
+G|2387|Drensteinfurt-Walstedde|00-9999999|
+G|2388|Hamm-Uentrop|00-9999999|
+G|2389|Werne|00-9999999|
+G|2391|Plettenberg|00-9999999|
+G|2392|Werdohl|00-9999999|
+G|2393|Sundern-Allendorf|00-9999999|
+G|2394|Neuenrade-Affeln|00-9999999|
+G|2395|Finnentrop-Rönkhausen|00-9999999|
+G|2401|Baesweiler|00-9999999|
+G|2402|Stolberg Rheinland|00-9999999|
+G|2403|Eschweiler Rheinland|00-9999999|
+G|2404|Alsdorf Rheinland|00-9999999|
+G|2405|Würselen|00-9999999|
+G|2406|Herzogenrath|00-9999999|
+G|2407|Herzogenrath-Kohlscheid|00-9999999|
+G|2408|Aachen-Kornelimünster|00-9999999|
+G|2409|Stolberg-Gressenich|00-9999999|
+G|241|Aachen|000-99999999|
+G|2421|Düren|00-9999999|
+G|2422|Kreuzau|00-9999999|
+G|2423|Langerwehe|00-9999999|
+G|2424|Vettweiss|00-9999999|
+G|2425|Nideggen-Embken|00-9999999|
+G|2426|Nörvenich|00-9999999|
+G|2427|Nideggen|00-9999999|
+G|2428|Niederzier|00-9999999|
+G|2429|Hürtgenwald|00-9999999|
+G|2431|Erkelenz|00-9999999|
+G|2432|Wassenberg|00-9999999|
+G|2433|Hückelhoven|00-9999999|
+G|2434|Wegberg|00-9999999|
+G|2435|Erkelenz-Lövenich|00-9999999|
+G|2436|Wegberg-Rödgen|00-9999999|
+G|2440|Nettersheim-Tondorf|00-9999999|
+G|2441|Kall|00-9999999|
+G|2443|Mechernich|00-9999999|
+G|2444|Schleiden-Gemünd|00-9999999|
+G|2445|Schleiden Eifel|00-9999999|
+G|2446|Heimbach Eifel|00-9999999|
+G|2447|Dahlem bei Kall|00-9999999|
+G|2448|Hellenthal-Rescheid|00-9999999|
+G|2449|Blankenheim Ahr|00-9999999|
+G|2451|Geilenkirchen|00-9999999|
+G|2452|Heinsberg Rheinland|00-9999999|
+G|2453|Heinsberg-Randerath|00-9999999|
+G|2454|Gangelt|00-9999999|
+G|2455|Waldfeucht|00-9999999|
+G|2456|Selfkant|00-9999999|
+G|2461|Jülich|00-9999999|
+G|2462|Linnich|00-9999999|
+G|2463|Titz|00-9999999|
+G|2464|Aldenhoven bei Jülich|00-9999999|
+G|2465|Inden|00-9999999|
+G|2471|Roetgen Eifel|00-9999999|
+G|2472|Monschau|00-9999999|
+G|2473|Simmerath|00-9999999|
+G|2474|Nideggen-Schmidt|00-9999999|
+G|2482|Hellenthal|00-9999999|
+G|2484|Mechernich-Eiserfey|00-9999999|
+G|2485|Schleiden-Dreiborn|00-9999999|
+G|2486|Nettersheim|00-9999999|
+G|2501|Münster-Hiltrup|00-9999999|
+G|2502|Nottuln|00-9999999|
+G|2504|Telgte|00-9999999|
+G|2505|Altenberge Westfalen|00-9999999|
+G|2506|Münster-Wolbeck|00-9999999|
+G|2507|Havixbeck|00-9999999|
+G|2508|Drensteinfurt|00-9999999|
+G|2509|Nottuln-Appelhülsen|00-9999999|
+G|251|Münster|000-99999999|
+G|2520|Wadersloh-Diestedde|00-9999999|
+G|2521|Beckum|00-9999999|
+G|2522|Oelde|00-9999999|
+G|2523|Wadersloh|00-9999999|
+G|2524|Ennigerloh|00-9999999|
+G|2525|Beckum-Neubeckum|00-9999999|
+G|2526|Sendenhorst|00-9999999|
+G|2527|Lippetal-Lippborg|00-9999999|
+G|2528|Ennigerloh-Enniger|00-9999999|
+G|2529|Oelde-Stromberg|00-9999999|
+G|2532|Ostbevern|00-9999999|
+G|2533|Münster-Nienberge|00-9999999|
+G|2534|Münster-Roxel|00-9999999|
+G|2535|Sendenhorst-Albersloh|00-9999999|
+G|2536|Münster-Albachten|00-9999999|
+G|2538|Drensteinfurt-Rinkerode|00-9999999|
+G|2541|Coesfeld|00-9999999|
+G|2542|Gescher|00-9999999|
+G|2543|Billerbeck Westfalen|00-9999999|
+G|2545|Rosendahl-Darfeld|00-9999999|
+G|2546|Coesfeld-Lette|00-9999999|
+G|2547|Rosendahl-Osterwick|00-9999999|
+G|2548|Dülmen-Rorup|00-9999999|
+G|2551|Steinfurt-Burgsteinfurt|00-9999999|
+G|2552|Steinfurt-Borghorst|00-9999999|
+G|2553|Ochtrup|00-9999999|
+G|2554|Laer Kreis Steinfurt|00-9999999|
+G|2555|Schöppingen|00-9999999|
+G|2556|Metelen|00-9999999|
+G|2557|Wettringen Kreis Steinfurt|00-9999999|
+G|2558|Horstmar|00-9999999|
+G|2561|Ahaus|00-9999999|
+G|2562|Gronau Westfalen|00-9999999|
+G|2563|Stadtlohn|00-9999999|
+G|2564|Vreden|00-9999999|
+G|2565|Gronau-Epe|00-9999999|
+G|2566|Legden|00-9999999|
+G|2567|Ahaus-Alstätte|00-9999999|
+G|2568|Heek|00-9999999|
+G|2571|Greven Westfalen|00-9999999|
+G|2572|Emsdetten|00-9999999|
+G|2573|Nordwalde|00-9999999|
+G|2574|Saerbeck|00-9999999|
+G|2575|Greven-Reckenfeld|00-9999999|
+G|2581|Warendorf|00-9999999|
+G|2582|Everswinkel|00-9999999|
+G|2583|Sassenberg|00-9999999|
+G|2584|Warendorf-Milte|00-9999999|
+G|2585|Warendorf-Hoetmar|00-9999999|
+G|2586|Beelen|00-9999999|
+G|2587|Ennigerloh-Westkirchen|00-9999999|
+G|2588|Harsewinkel-Greffen|00-9999999|
+G|2590|Dülmen-Buldern|00-9999999|
+G|2591|Lüdinghausen|00-9999999|
+G|2592|Selm|00-9999999|
+G|2593|Ascheberg Westfalen|00-9999999|
+G|2594|Dülmen|00-9999999|
+G|2595|Olfen|00-9999999|
+G|2596|Nordkirchen|00-9999999|
+G|2597|Senden Westfalen|00-9999999|
+G|2598|Senden-Ottmarsbocholt|00-9999999|
+G|2599|Ascheberg-Herbern|00-9999999|
+G|2601|Nauort|00-9999999|
+G|2602|Montabaur|00-9999999|
+G|2603|Bad Ems|00-9999999|
+G|2604|Nassau Lahn|00-9999999|
+G|2605|Löf|00-9999999|
+G|2606|Winningen Mosel|00-9999999|
+G|2607|Kobern-Gondorf|00-9999999|
+G|2608|Welschneudorf|00-9999999|
+G|261|Koblenz am Rhein|000-99999999|
+G|2620|Neuhäusel Westerwald|00-9999999|
+G|2621|Lahnstein|00-9999999|
+G|2622|Bendorf am Rhein|00-9999999|
+G|2623|Ransbach-Baumbach|00-9999999|
+G|2624|Höhr-Grenzhausen|00-9999999|
+G|2625|Ochtendung|00-9999999|
+G|2626|Selters Westferwald|00-9999999|
+G|2627|Braubach|00-9999999|
+G|2628|Rhens|00-9999999|
+G|2630|Mülheim-Kärlich|00-9999999|
+G|2631|Neuwied|00-9999999|
+G|2632|Andernach|00-9999999|
+G|2633|Brohl-Lützing|00-9999999|
+G|2634|Rengsdorf|00-9999999|
+G|2635|Rheinbrohl|00-9999999|
+G|2636|Burgbrohl|00-9999999|
+G|2637|Weissenthurm|00-9999999|
+G|2638|Waldbreitbach|00-9999999|
+G|2639|Anhausen Kreis Neuwied|00-9999999|
+G|2641|Bad Neuenahr-Ahrweiler|00-9999999|
+G|2642|Remagen|00-9999999|
+G|2643|Altenahr|00-9999999|
+G|2644|Linz am Rhein|00-9999999|
+G|2645|Vettelschoss|00-9999999|
+G|2646|Königsfeld Eifel|00-9999999|
+G|2647|Kesseling|00-9999999|
+G|2651|Mayen|00-9999999|
+G|2652|Mendig|00-9999999|
+G|2653|Kaisersesch|00-9999999|
+G|2654|Polch|00-9999999|
+G|2655|Weibern|00-9999999|
+G|2656|Virneburg|00-9999999|
+G|2657|Uersfeld|00-9999999|
+G|2661|Bad Marienberg Westerwald|00-9999999|
+G|2662|Hachenburg|00-9999999|
+G|2663|Westerburg Westerwald|00-9999999|
+G|2664|Rennerod|00-9999999|
+G|2666|Freilingen Westerwald|00-9999999|
+G|2667|Stein-Neukirch|00-9999999|
+G|2671|Cochem|00-9999999|
+G|2672|Treis-Karden|00-9999999|
+G|2673|Ellenz-Poltersdorf|00-9999999|
+G|2674|Bad Bertrich|00-9999999|
+G|2675|Ediger-Eller|00-9999999|
+G|2676|Ulmen|00-9999999|
+G|2677|Lutzerath|00-9999999|
+G|2678|Büchel bei Cochem|00-9999999|
+G|2680|Mündersbach|00-9999999|
+G|2681|Altenkirchen Westerwald|00-9999999|
+G|2682|Hamm Sieg|00-9999999|
+G|2683|Asbach Westerwald|00-9999999|
+G|2684|Puderbach Westerwald|00-9999999|
+G|2685|Flammersfeld|00-9999999|
+G|2686|Weyerbusch|00-9999999|
+G|2687|Horhausen Westerwald|00-9999999|
+G|2688|Kroppach|00-9999999|
+G|2689|Dierdorf|00-9999999|
+G|2691|Adenau|00-9999999|
+G|2692|Kelberg|00-9999999|
+G|2693|Antweiler|00-9999999|
+G|2694|Wershofen|00-9999999|
+G|2695|Insul|00-9999999|
+G|2696|Nohn Eifel|00-9999999|
+G|2697|Blankenheim-Ahrhütte|00-9999999|
+G|271|Siegen|000-99999999|
+G|2721|Lennestadt|00-9999999|
+G|2722|Attendorn|00-9999999|
+G|2723|Kirchhundem|00-9999999|
+G|2724|Finnentrop-Serkenrode|00-9999999|
+G|2725|Lennestadt-Oedingen|00-9999999|
+G|2732|Kreuztal|00-9999999|
+G|2733|Hilchenbach|00-9999999|
+G|2734|Freudenberg Westfalen|00-9999999|
+G|2735|Neunkirchen Siegerl|00-9999999|
+G|2736|Burbach Siegerl|00-9999999|
+G|2737|Netphen-Deuz|00-9999999|
+G|2738|Netphen|00-9999999|
+G|2739|Wilnsdorf|00-9999999|
+G|2741|Betzdorf|00-9999999|
+G|2742|Wissen|00-9999999|
+G|2743|Daaden|00-9999999|
+G|2744|Herdorf|00-9999999|
+G|2745|Brachbach Sieg|00-9999999|
+G|2747|Molzhain|00-9999999|
+G|2750|Diedenshausen|00-9999999|
+G|2751|Bad Berleburg|00-9999999|
+G|2752|Bad Laasphe|00-9999999|
+G|2753|Erndtebrück|00-9999999|
+G|2754|Bad Laasphe-Feudingen|00-9999999|
+G|2755|Bad Berleburg-Schwarzenau|00-9999999|
+G|2758|Bad Berleburg-Girkhausen|00-9999999|
+G|2759|Bad Berleburg-Aue|00-9999999|
+G|2761|Olpe Biggesee|00-9999999|
+G|2762|Wenden Südsauerland|00-9999999|
+G|2763|Drolshagen-Bleche|00-9999999|
+G|2764|Welschen Ennest|00-9999999|
+G|2770|Eschenburg|00-9999999|
+G|2771|Dillenburg|00-9999999|
+G|2772|Herborn Hessen|00-9999999|
+G|2773|Haiger|00-9999999|
+G|2774|Dietzhölztal|00-9999999|
+G|2775|Driedorf|00-9999999|
+G|2776|Bad Endbach-Hartenrod|00-9999999|
+G|2777|Breitscheid Hessen|00-9999999|
+G|2778|Siegbach|00-9999999|
+G|2779|Greifenstein-Beilstein|00-9999999|
+G|2801|Xanten|00-9999999|
+G|2802|Alpen|00-9999999|
+G|2803|Wesel-Büderich|00-9999999|
+G|2804|Xanten-Marienbaum|00-9999999|
+G|281|Wesel|000-99999999|
+G|2821|Kleve Niederrhein|00-9999999|
+G|2822|Emmerich|00-9999999|
+G|2823|Goch|00-9999999|
+G|2824|Kalkar|00-9999999|
+G|2825|Uedem|00-9999999|
+G|2826|Kranenburg Niederrhein|00-9999999|
+G|2827|Goch-Hassum|00-9999999|
+G|2828|Emmerich-Elten|00-9999999|
+G|2831|Geldern|00-9999999|
+G|2832|Kevelaer|00-9999999|
+G|2833|Kerken|00-9999999|
+G|2834|Straelen|00-9999999|
+G|2835|Issum|00-9999999|
+G|2836|Wachtendonk|00-9999999|
+G|2837|Weeze|00-9999999|
+G|2838|Sonsbeck|00-9999999|
+G|2839|Straelen-Herongen|00-9999999|
+G|2841|Moers|00-9999999|
+G|2842|Kamp-Lintfort|00-9999999|
+G|2843|Rheinberg|00-9999999|
+G|2844|Rheinberg-Orsoy|00-9999999|
+G|2845|Neukirchen-Vluyn|00-9999999|
+G|2850|Rees-Haldern|00-9999999|
+G|2851|Rees|00-9999999|
+G|2852|Hamminkeln|00-9999999|
+G|2853|Schermbeck|00-9999999|
+G|2855|Voerde Niederrhein|00-9999999|
+G|2856|Hamminkeln-Brünen|00-9999999|
+G|2857|Rees-Mehr|00-9999999|
+G|2858|Hünxe|00-9999999|
+G|2859|Wesel-Bislich|00-9999999|
+G|2861|Borken Westfalen|00-9999999|
+G|2862|Südlohn|00-9999999|
+G|2863|Velen|00-9999999|
+G|2864|Reken|00-9999999|
+G|2865|Raesfeld|00-9999999|
+G|2866|Dorsten-Rhade|00-9999999|
+G|2867|Heiden Kreis Borken|00-9999999|
+G|2871|Bocholt|00-9999999|
+G|2872|Rhede Westfalen|00-9999999|
+G|2873|Isselburg-Werth|00-9999999|
+G|2874|Isselburg|00-9999999|
+G|2902|Warstein|00-9999999|
+G|2903|Meschede-Freienohl|00-9999999|
+G|2904|Bestwig|00-9999999|
+G|2905|Bestwig-Ramsbeck|00-9999999|
+G|291|Meschede|000-99999999|
+G|2921|Soest|00-9999999|
+G|2922|Werl|00-9999999|
+G|2923|Lippetal-Herzfeld|00-9999999|
+G|2924|Möhnesee|00-9999999|
+G|2925|Warstein-Allagen|00-9999999|
+G|2927|Neuengeseke|00-9999999|
+G|2928|Soest-Ostönnen|00-9999999|
+G|2931|Arnsberg|00-9999999|
+G|2932|Neheim-Hüsten|00-9999999|
+G|2933|Sundern Sauerland|00-9999999|
+G|2934|Sundern-Altenhellefeld|00-9999999|
+G|2935|Sundern-Hachen|00-9999999|
+G|2937|Arnsberg-Oeventrop|00-9999999|
+G|2938|Ense|00-9999999|
+G|2941|Lippstadt|00-9999999|
+G|2942|Geseke|00-9999999|
+G|2943|Erwitte|00-9999999|
+G|2944|Rietberg-Mastholte|00-9999999|
+G|2945|Lippstadt-Benninghausen|00-9999999|
+G|2947|Anröchte|00-9999999|
+G|2948|Lippstadt-Rebbeke|00-9999999|
+G|2951|Büren|00-9999999|
+G|2952|Rüthen|00-9999999|
+G|2953|Wünnenberg|00-9999999|
+G|2954|Rüthen-Oestereiden|00-9999999|
+G|2955|Büren-Wewelsburg|00-9999999|
+G|2957|Wünnenberg-Haaren|00-9999999|
+G|2958|Büren-Harth|00-9999999|
+G|2961|Brilon|00-9999999|
+G|2962|Olsberg|00-9999999|
+G|2963|Brilon-Messinghausen|00-9999999|
+G|2964|Brilon-Alme|00-9999999|
+G|2971|Schmallenberg-Dorlar|00-9999999|
+G|2972|Schmallenberg|00-9999999|
+G|2973|Eslohe Sauerland|00-9999999|
+G|2974|Schmallenberg-Fredeburg|00-9999999|
+G|2975|Schmallenberg-Oberkirchen|00-9999999|
+G|2977|Schmallenberg-Bödefeld|00-9999999|
+G|2981|Winterberg Westfalen|00-9999999|
+G|2982|Medebach|00-9999999|
+G|2983|Winterberg-Siedlinghausen|00-9999999|
+G|2984|Hallenberg|00-9999999|
+G|2985|Winterberg-Niedersfeld|00-9999999|
+G|2991|Marsberg-Bredelar|00-9999999|
+G|2992|Marsberg|00-9999999|
+G|2993|Marsberg-Canstein|00-9999999|
+G|2994|Marsberg-Westheim|00-9999999|
+G|30|Berlin|000-999999999|
+N|32||000000000-99999999999|
+G|3301|Oranienburg|00-9999999|
+G|3302|Hennigsdorf|00-9999999|
+G|3303|Birkenwerder|00-9999999|
+G|3304|Velten|00-9999999|
+G|33051|Nassenheide|0-999999|
+G|33052|Leegebruch|0-999999|
+G|33053|Zehlendorf Kreis Oberhavel|0-999999|
+G|33054|Liebenwalde|0-999999|
+G|33055|Kremmen|0-999999|
+G|33056|Mühlenbeck Kreis Oberhavel|0-999999|
+G|3306|Gransee|00-9999999|
+G|3307|Zehdenick|00-9999999|
+G|33080|Marienthal Kreis Oberhavel|0-999999|
+G|33082|Menz Kreis Oberhavel|0-999999|
+G|33083|Schulzendorf Kreis Oberhavel|0-999999|
+G|33084|Gutengermendorf|0-999999|
+G|33085|Seilershof|0-999999|
+G|33086|Grieben Kreis Oberhavel|0-999999|
+G|33087|Bredereiche|0-999999|
+G|33088|Falkenthal|0-999999|
+G|33089|Himmelpfort|0-999999|
+G|33093|Fürstenberg Havel|0-999999|
+G|33094|Löwenberg|0-999999|
+G|331|Potsdam|000-99999999|
+G|33200|Bergholz-Rehbrücke|0-999999|
+G|33201|Gross Glienicke|0-999999|
+G|33202|Töplitz|0-999999|
+G|33203|Kleinmachnow|0-999999|
+G|33204|Beelitz Mark|0-999999|
+G|33205|Michendorf|0-999999|
+G|33206|Fichtenwalde|0-999999|
+G|33207|Gross Kreutz|0-999999|
+G|33208|Fahrland|0-999999|
+G|33209|Caputh|0-999999|
+G|3321|Nauen Brandenburg|00-9999999|
+G|3322|Falkensee|00-9999999|
+G|33230|Börnicke Kreis Havelland|0-999999|
+G|33231|Pausin|0-999999|
+G|33232|Brieselang|0-999999|
+G|33233|Ketzin|0-999999|
+G|33234|Wustermark|0-999999|
+G|33235|Friesack|0-999999|
+G|33237|Paulinenaue|0-999999|
+G|33238|Senzke|0-999999|
+G|33239|Gross Behnitz|0-999999|
+G|3327|Werder Havel|00-9999999|
+G|3328|Teltow|00-9999999|
+G|3329|Stahnsdorf|00-9999999|
+G|3331|Angermünde|00-9999999|
+G|3332|Schwedt/Oder|00-9999999|
+G|33331|Casekow|0-999999|
+G|33332|Gartz Oder|0-999999|
+G|33333|Tantow|0-999999|
+G|33334|Greiffenberg|0-999999|
+G|33335|Pinnow Kreis Uckermark|0-999999|
+G|33336|Passow Kreis Uckermark|0-999999|
+G|33337|Altkünkendorf|0-999999|
+G|33338|Stolpe/Oder|0-999999|
+G|3334|Eberswalde|00-9999999|
+G|3335|Finowfurt|00-9999999|
+G|33361|Joachimsthal|0-999999|
+G|33362|Liepe Kreis Barnim|0-999999|
+G|33363|Altenhof Kreis Barnim|0-999999|
+G|33364|Gross Ziethen Kreis Barnim|0-999999|
+G|33365|Lüdersdorf Kreis Barnim|0-999999|
+G|33366|Chorin|0-999999|
+G|33367|Friedrichswalde Brandenburg|0-999999|
+G|33368|Hohensaaten|0-999999|
+G|33369|Oderberg|0-999999|
+G|3337|Biesenthal Brandenburg|00-9999999|
+G|3338|Bernau Brandenburg|00-9999999|
+G|33393|Gross Schönebeck Kreis Barnim|0-999999|
+G|33394|Blumberg Kreis Barnim|0-999999|
+G|33395|Zerpenschleuse|0-999999|
+G|33396|Klosterfelde|0-999999|
+G|33397|Wandlitz|0-999999|
+G|33398|Werneuchen|0-999999|
+G|3341|Strausberg|00-9999999|
+G|3342|Neuenhagen bei Berlin|00-9999999|
+G|33432|Müncheberg|0-999999|
+G|33433|Buckow Märkische Schweiz|0-999999|
+G|33434|Herzfelde bei Strausberg|0-999999|
+G|33435|Rehfelde|0-999999|
+G|33436|Prötzel|0-999999|
+G|33437|Reichenberg bei Strausberg|0-999999|
+G|33438|Altlandsberg|0-999999|
+G|33439|Fredersdorf-Vogelsdorf|0-999999|
+G|3344|Bad Freienwalde|00-9999999|
+G|33451|Heckelberg|0-999999|
+G|33452|Neulewin|0-999999|
+G|33454|Wölsickendorf/Wollenberg|0-999999|
+G|33456|Wriezen|0-999999|
+G|33457|Altreetz|0-999999|
+G|33458|Falkenberg Mark|0-999999|
+G|3346|Seelow|00-9999999|
+G|33470|Lietzen|0-999999|
+G|33472|Golzow bei Seelow|0-999999|
+G|33473|Zechin|0-999999|
+G|33474|Neutrebbin|0-999999|
+G|33475|Letschin|0-999999|
+G|33476|Neuhardenberg|0-999999|
+G|33477|Trebnitz bei Müncheberg|0-999999|
+G|33478|Gross Neuendorf|0-999999|
+G|33479|Küstrin-Kietz|0-999999|
+G|335|Frankfurt (Oder)|000-99999999|
+G|33601|Podelzig|0-999999|
+G|33602|Alt Zeschdorf|0-999999|
+G|33603|Falkenhagen bei Seelow|0-999999|
+G|33604|Lebus|0-999999|
+G|33605|Boossen|0-999999|
+G|33606|Müllrose|0-999999|
+G|33607|Briesen Mark|0-999999|
+G|33608|Jacobsdorf Mark|0-999999|
+G|33609|Brieskow-Finkenheerd|0-999999|
+G|3361|Fürstenwalde Spree|00-9999999|
+G|3362|Erkner|00-9999999|
+G|33631|Bad Saarow-Pieskow|0-999999|
+G|33632|Hangelsberg|0-999999|
+G|33633|Spreenhagen|0-999999|
+G|33634|Berkenbrück Kreis Oder-Spree|0-999999|
+G|33635|Arensdorf Kreis Oder-Spree|0-999999|
+G|33636|Steinhöfel Kreis Oder-Spree|0-999999|
+G|33637|Beerfelde|0-999999|
+G|33638|Rüdersdorf bei Berlin|0-999999|
+G|3364|Eisenhüttenstadt|00-9999999|
+G|33652|Neuzelle|0-999999|
+G|33653|Ziltendorf|0-999999|
+G|33654|Fünfeichen|0-999999|
+G|33655|Grunow Kreis Oder-Spree|0-999999|
+G|33656|Bahro|0-999999|
+G|33657|Steinsdorf Brandenburg|0-999999|
+G|3366|Beeskow|00-9999999|
+G|33671|Lieberose|0-999999|
+G|33672|Pfaffendorfb Beeskow|0-999999|
+G|33673|Weichensdorf|0-999999|
+G|33674|Trebatsch|0-999999|
+G|33675|Tauche|0-999999|
+G|33676|Friedland bei Beeskow|0-999999|
+G|33677|Glienicke bei Beeskow|0-999999|
+G|33678|Storkow Mark|0-999999|
+G|33679|Wendisch Rietz|0-999999|
+G|33701|Grossbeeren|0-999999|
+G|33702|Wünsdorf|0-999999|
+G|33703|Sperenberg|0-999999|
+G|33704|Baruth Mark|0-999999|
+G|33708|Rangsdorf|0-999999|
+G|3371|Luckenwalde|00-9999999|
+G|3372|Jüterbog|00-9999999|
+G|33731|Trebbin|0-999999|
+G|33732|Hennickendorf bei Luckenwalde|0-999999|
+G|33733|Stülpe|0-999999|
+G|33734|Felgentreu|0-999999|
+G|33741|Niedergörsdorf|0-999999|
+G|33742|Oehna Brandenburg|0-999999|
+G|33743|Blönsdorf|0-999999|
+G|33744|Hohenseefeld|0-999999|
+G|33745|Petkus|0-999999|
+G|33746|Werbig bei Jüterbog|0-999999|
+G|33747|Marzahna|0-999999|
+G|33748|Treuenbrietzen|0-999999|
+G|3375|Königs Wusterhausen|00-9999999|
+G|33760|Münchehofe Kreis Dahme-Spreewald|0-999999|
+G|33762|Zeuthen|0-999999|
+G|33763|Bestensee|0-999999|
+G|33764|Mittenwalde Mark|0-999999|
+G|33765|Märkisch Buchholz|0-999999|
+G|33766|Teupitz|0-999999|
+G|33767|Friedersdorf bei Berlin|0-999999|
+G|33768|Prieros|0-999999|
+G|33769|Töpchin|0-999999|
+G|3377|Zossen Brandenburg|00-9999999|
+G|3378|Ludwigsfelde|00-9999999|
+G|3379|Mahlow|00-9999999|
+G|3381|Brandenburg an der Havel|00-9999999|
+G|3382|Lehnin|00-9999999|
+G|33830|Ziesar|0-999999|
+G|33831|Weseram|0-999999|
+G|33832|Rogäsen|0-999999|
+G|33833|Wollin bei Brandenburg|0-999999|
+G|33834|Pritzerbe|0-999999|
+G|33835|Golzow bei Brandenburg|0-999999|
+G|33836|Butzow bei Brandenburg|0-999999|
+G|33837|Brielow|0-999999|
+G|33838|Päwesin|0-999999|
+G|33839|Wusterwitz|0-999999|
+G|33841|Belzig|0-999999|
+G|33843|Niemegk|0-999999|
+G|33844|Brück Brandenburg|0-999999|
+G|33845|Borkheide|0-999999|
+G|33846|Dippmannsdorf|0-999999|
+G|33847|Görzke|0-999999|
+G|33848|Raben|0-999999|
+G|33849|Wiesenburg Mark|0-999999|
+G|3385|Rathenow|00-9999999|
+G|3386|Premnitz|00-9999999|
+G|33870|Zollchow bei Rathenow|0-999999|
+G|33872|Hohennauen|0-999999|
+G|33873|Grosswudicke|0-999999|
+G|33874|Stechow Brandenburg|0-999999|
+G|33875|Rhinow|0-999999|
+G|33876|Buschow|0-999999|
+G|33877|Nitzahn|0-999999|
+G|33878|Nennhausen|0-999999|
+G|3391|Neuruppin|00-9999999|
+G|33920|Walsleben bei Neuruppin|0-999999|
+G|33921|Zechlinerhütte|0-999999|
+G|33922|Karwesee|0-999999|
+G|33923|Flecken Zechlin|0-999999|
+G|33924|Rägelin|0-999999|
+G|33925|Wustrau-Altfriesack|0-999999|
+G|33926|Herzberg Mark|0-999999|
+G|33927|Linum|0-999999|
+G|33928|Wildberg Brandenburg|0-999999|
+G|33929|Gühlen-Glienicke|0-999999|
+G|33931|Rheinsberg Mark|0-999999|
+G|33932|Fehrbellin|0-999999|
+G|33933|Lindow Mark|0-999999|
+G|3394|Wittstock Dosse|00-9999999|
+G|3395|Pritzwalk|00-9999999|
+G|33962|Heiligengrabe|0-999999|
+G|33963|Wulfersdorf bei Wittstock|0-999999|
+G|33964|Fretzdorf|0-999999|
+G|33965|Herzsprung bei Wittstock|0-999999|
+G|33966|Dranse|0-999999|
+G|33967|Freyenstein|0-999999|
+G|33968|Meyenburg Kreis Prignitz|0-999999|
+G|33969|Stepenitz|0-999999|
+G|33970|Neustadt Dosse|0-999999|
+G|33971|Kyritz Brandenburg|0-999999|
+G|33972|Breddin|0-999999|
+G|33973|Zernitz bei Neustadt Dosse|0-999999|
+G|33974|Dessow|0-999999|
+G|33975|Dannenwalde Kreis Prignitz|0-999999|
+G|33976|Wutike|0-999999|
+G|33977|Gumtow|0-999999|
+G|33978|Segeletz|0-999999|
+G|33979|Wusterhausen Dosse|0-999999|
+G|33981|Putlitz|0-999999|
+G|33982|Hoppenrade Kreis Prignitz|0-999999|
+G|33983|Gross Pankow Kreis Prignitz|0-999999|
+G|33984|Blumenthal bei Pritzwalk|0-999999|
+G|33986|Falkenhagen Kreis Prignitz|0-999999|
+G|33989|Sadenbeck|0-999999|
+G|340|Dessau Anh|000-99999999|
+G|341|Leipzig|000-99999999|
+G|34202|Delitzsch|0-999999|
+G|34203|Zwenkau|0-999999|
+G|34204|Schkeuditz|0-999999|
+G|34205|Markranstädt|0-999999|
+G|34206|Rötha|0-999999|
+G|34207|Zwochau|0-999999|
+G|34208|Löbnitz bei Delitzsch|0-999999|
+G|3421|Torgau|00-9999999|
+G|34221|Schildau Gneisenaustadt|0-999999|
+G|34222|Arzberg bei Torgau|0-999999|
+G|34223|Dommitzsch|0-999999|
+G|34224|Belgern Sachsen|0-999999|
+G|3423|Eilenburg|00-9999999|
+G|34241|Jesewitz|0-999999|
+G|34242|Hohenpriessnitz|0-999999|
+G|34243|Bad Düben|0-999999|
+G|34244|Mockrehna|0-999999|
+G|3425|Wurzen|00-9999999|
+G|34261|Kühren bei Wurzen|0-999999|
+G|34262|Falkenhain bei Wurzen|0-999999|
+G|34263|Hohburg|0-999999|
+G|34291|Borsdorf|0-999999|
+G|34292|Brandis bei Wurzen|0-999999|
+G|34293|Naunhof bei Grimma|0-999999|
+G|34294|Rackwitz|0-999999|
+G|34295|Krensitz|0-999999|
+G|34296|Groitzsch bei Pegau|0-999999|
+G|34297|Liebertwolkwitz|0-999999|
+G|34298|Taucha bei Leipzig|0-999999|
+G|34299|Gaschwitz|0-999999|
+G|3431|Döbeln|00-9999999|
+G|34321|Leisnig|0-999999|
+G|34322|Rosswein|0-999999|
+G|34324|Ostrau Sachsen|0-999999|
+G|34325|Mochau-Lüttewitz|0-999999|
+G|34327|Waldheim Sachsen|0-999999|
+G|34328|Hartha bei Döbeln|0-999999|
+G|3433|Borna Stadt|00-9999999|
+G|34341|Geithain|0-999999|
+G|34342|Neukieritzsch|0-999999|
+G|34343|Regis-Breitingen|0-999999|
+G|34344|Kohren-Sahlis|0-999999|
+G|34345|Bad Lausick|0-999999|
+G|34346|Narsdorf|0-999999|
+G|34347|Oelzschau bei Borna|0-999999|
+G|34348|Frohburg|0-999999|
+G|3435|Oschatz|00-9999999|
+G|34361|Dahlen Sachsen|0-999999|
+G|34362|Mügeln bei Oschatz|0-999999|
+G|34363|Cavertitz|0-999999|
+G|34364|Wermsdorf|0-999999|
+G|3437|Grimma|00-9999999|
+G|34381|Colditz|0-999999|
+G|34382|Nerchau|0-999999|
+G|34383|Trebsen Mulde|0-999999|
+G|34384|Grossbothen|0-999999|
+G|34385|Mutzschen|0-999999|
+G|34386|Dürrweitzschen bei Grimma|0-999999|
+G|3441|Zeitz|00-9999999|
+G|34422|Osterfeld|0-999999|
+G|34423|Heuckewalde|0-999999|
+G|34424|Reuden bei Zeitz|0-999999|
+G|34425|Droyssig|0-999999|
+G|34426|Kayna|0-999999|
+G|3443|Weissenfels Sachsen-Anhalt|00-9999999|
+G|34441|Hohenmölsen|0-999999|
+G|34443|Teuchern|0-999999|
+G|34444|Lützen|0-999999|
+G|34445|Stößen|0-999999|
+G|34446|Grosskorbetha|0-999999|
+G|3445|Naumburg Saale|00-9999999|
+G|34461|Nebra Unstrut|0-999999|
+G|34462|Laucha Unstrut|0-999999|
+G|34463|Bad Kösen|0-999999|
+G|34464|Freyburg Unstrut|0-999999|
+G|34465|Bad Bibra|0-999999|
+G|34466|Janisroda|0-999999|
+G|34467|Eckartsberga|0-999999|
+G|3447|Altenburg Thüringen|00-9999999|
+G|3448|Meuselwitz Thüringen|00-9999999|
+G|34491|Schmölln Thüringen|0-999999|
+G|34492|Lucka|0-999999|
+G|34493|Gößnitz Thüringen|0-999999|
+G|34494|Ehrenhain|0-999999|
+G|34495|Dobitschen|0-999999|
+G|34496|Nöbdenitz|0-999999|
+G|34497|Langenleuba-Niederhain|0-999999|
+G|34498|Rositz|0-999999|
+G|345|Halle Saale|000-99999999|
+G|34600|Ostrau Saalkreis|0-999999|
+G|34601|Teutschenthal|0-999999|
+G|34602|Landsberg Sachsen-Anhalt|0-999999|
+G|34603|Nauendorf Sachsen-Anhalt|0-999999|
+G|34604|Niemberg|0-999999|
+G|34605|Gröbers|0-999999|
+G|34606|Teicha Sachsen-Anhalt|0-999999|
+G|34607|Wettin|0-999999|
+G|34609|Salzmünde|0-999999|
+G|3461|Merseburg Saale|00-9999999|
+G|3462|Bad Dürrenberg|00-9999999|
+G|34632|Mücheln Geiseltal|0-999999|
+G|34633|Braunsbedra|0-999999|
+G|34635|Bad Lauchstädt|0-999999|
+G|34636|Schafstädt|0-999999|
+G|34637|Frankleben|0-999999|
+G|34638|Zöschen|0-999999|
+G|34639|Wallendorf Luppe|0-999999|
+G|3464|Sangerhausen|00-9999999|
+G|34651|Rossla|0-999999|
+G|34652|Allstedt|0-999999|
+G|34653|Rottleberode|0-999999|
+G|34654|Stolberg Harz|0-999999|
+G|34656|Wallhausen Sachsen-Anhalt|0-999999|
+G|34658|Hayn Harz|0-999999|
+G|34659|Blankenheim bei Sangerhausen|0-999999|
+G|3466|Artern Unstrut|00-9999999|
+G|34671|Bad Frankenhausen Kyffhäuser|0-999999|
+G|34672|Rossleben|0-999999|
+G|34673|Heldrungen|0-999999|
+G|34691|Könnern|0-999999|
+G|34692|Alsleben Saale|0-999999|
+G|3471|Bernburg Saale|00-9999999|
+G|34721|Nienburg Saale|0-999999|
+G|34722|Preusslitz|0-999999|
+G|3473|Aschersleben Sachsen-Anhalt|00-9999999|
+G|34741|Frose|0-999999|
+G|34742|Sylda|0-999999|
+G|34743|Ermsleben|0-999999|
+G|34745|Winningen Sachsen-Anhalt|0-999999|
+G|34746|Giersleben|0-999999|
+G|3475|Lutherstadt Eisleben|00-9999999|
+G|3476|Hettstedt Sachsen-Anhalt|00-9999999|
+G|34771|Querfurt|0-999999|
+G|34772|Helbra|0-999999|
+G|34773|Schwittersdorf|0-999999|
+G|34774|Röblingen am See|0-999999|
+G|34775|Wippra|0-999999|
+G|34776|Rothenschirmbach|0-999999|
+G|34779|Abberode|0-999999|
+G|34781|Greifenhagen|0-999999|
+G|34782|Mansfeld Südharz|0-999999|
+G|34783|Gerbstedt|0-999999|
+G|34785|Sandersleben|0-999999|
+G|34901|Roßlau Elbe|0-999999|
+G|34903|Coswig Anhalt|0-999999|
+G|34904|Oranienbaum|0-999999|
+G|34905|Wörlitz|0-999999|
+G|34906|Raguhn|0-999999|
+G|34907|Jeber-Bergfrieden|0-999999|
+G|34909|Aken Elbe|0-999999|
+G|3491|Lutherstadt Wittenberg|00-9999999|
+G|34920|Kropstädt|0-999999|
+G|34921|Kemberg|0-999999|
+G|34922|Mühlanger|0-999999|
+G|34923|Cobbelsdorf|0-999999|
+G|34924|Zahna|0-999999|
+G|34925|Bad Schmiedeberg|0-999999|
+G|34926|Pretzsch Elbe|0-999999|
+G|34927|Globig-Bleddin|0-999999|
+G|34928|Seegrehna|0-999999|
+G|34929|Straach|0-999999|
+G|3493|Bitterfeld|00-9999999|
+G|3494|Wolfen|00-9999999|
+G|34953|Gräfenhainichen|0-999999|
+G|34954|Roitzsch bei Bitterfeld|0-999999|
+G|34955|Gossa|0-999999|
+G|34956|Zörbig|0-999999|
+G|3496|Köthen Anhalt|00-9999999|
+G|34973|Osternienburg|0-999999|
+G|34975|Görzig Kreis Köthen|0-999999|
+G|34976|Gröbzig|0-999999|
+G|34977|Quellendorf|0-999999|
+G|34978|Radegast Kreis Köthen|0-999999|
+G|34979|Wulfen Sachsen-Anhalt|0-999999|
+G|3501|Pirna|00-9999999|
+G|35020|Struppen|0-999999|
+G|35021|Königstein Sächsische Schweiz|0-999999|
+G|35022|Bad Schandau|0-999999|
+G|35023|Bad Gottleuba|0-999999|
+G|35024|Stadt Wehlen|0-999999|
+G|35025|Liebstadt|0-999999|
+G|35026|Dürrröhrsdorf-Dittersbach|0-999999|
+G|35027|Weesenstein|0-999999|
+G|35028|Krippen|0-999999|
+G|35032|Langenhennersdorf|0-999999|
+G|35033|Rosenthal Sächsische Schweiz|0-999999|
+G|3504|Dippoldiswalde|00-9999999|
+G|35052|Kipsdorf Kurort|0-999999|
+G|35053|Glashütte Sachsen|0-999999|
+G|35054|Lauenstein Sachsen|0-999999|
+G|35055|Höckendorf bei Dippoldiswalde|0-999999|
+G|35056|Altenberg Sachsen|0-999999|
+G|35057|Hermsdorf Erzgebirge|0-999999|
+G|35058|Pretzschendorf|0-999999|
+G|351|Dresden|000-99999999|
+G|35200|Arnsdorf bei Dresden|0-999999|
+G|35201|Langebrück|0-999999|
+G|35202|Klingenberg Sachsen|0-999999|
+G|35203|Tharandt|0-999999|
+G|35204|Wilsdruff|0-999999|
+G|35205|Ottendorf-Okrilla|0-999999|
+G|35206|Kreischa bei Dresden|0-999999|
+G|35207|Moritzburg|0-999999|
+G|35208|Radeburg|0-999999|
+G|35209|Mohorn|0-999999|
+G|3521|Meissen|00-9999999|
+G|3522|Grossenhain Sachsen|00-9999999|
+G|3523|Coswig bei Dresden|00-9999999|
+G|35240|Tauscha bei Großenhain|0-999999|
+G|35241|Lommatzsch|0-999999|
+G|35242|Nossen|0-999999|
+G|35243|Weinböhla|0-999999|
+G|35244|Krögis|0-999999|
+G|35245|Burkhardswalde-Munzig|0-999999|
+G|35246|Ziegenhain Sachsen|0-999999|
+G|35247|Zehren Sachsen|0-999999|
+G|35248|Schönfeld bei Großenhain|0-999999|
+G|35249|Basslitz|0-999999|
+G|3525|Riesa|00-9999999|
+G|35263|Gröditz bei Riesa|0-999999|
+G|35264|Strehla|0-999999|
+G|35265|Glaubitz|0-999999|
+G|35266|Heyda bei Riesa|0-999999|
+G|35267|Diesbar-Seusslitz|0-999999|
+G|35268|Stauchitz|0-999999|
+G|3528|Radeberg|00-9999999|
+G|3529|Heidenau Sachsen|00-9999999|
+G|3531|Finsterwalde|00-9999999|
+G|35322|Doberlug-Kirchhain|0-999999|
+G|35323|Sonnewalde|0-999999|
+G|35324|Crinitz|0-999999|
+G|35325|Rückersdorf bei Finsterwalde|0-999999|
+G|35326|Schönborn Kreis Elbe-Elster|0-999999|
+G|35327|Priessen|0-999999|
+G|35329|Dollenchen|0-999999|
+G|3533|Elsterwerda|00-9999999|
+G|35341|Bad Liebenwerda|0-999999|
+G|35342|Mühlberg Elbe|0-999999|
+G|35343|Hirschfeld bei Elsterwerda|0-999999|
+G|3535|Herzberg Elster|00-9999999|
+G|35361|Schlieben|0-999999|
+G|35362|Schönewalde bei Herzberg|0-999999|
+G|35363|Fermerswalde|0-999999|
+G|35364|Lebusa|0-999999|
+G|35365|Falkenberg Elster|0-999999|
+G|3537|Jessen Elster|00-9999999|
+G|35383|Elster Elbe|0-999999|
+G|35384|Steinsdorf bei Jessen|0-999999|
+G|35385|Annaburg|0-999999|
+G|35386|Prettin|0-999999|
+G|35387|Seyda|0-999999|
+G|35388|Klöden|0-999999|
+G|35389|Holzdorf Elster|0-999999|
+G|3541|Calau|00-9999999|
+G|3542|Lübbenau Spreewald|00-9999999|
+G|35433|Vetschau|0-999999|
+G|35434|Altdöbern|0-999999|
+G|35435|Gollmitz bei Calau|0-999999|
+G|35436|Laasow bei Calau|0-999999|
+G|35439|Zinnitz|0-999999|
+G|3544|Luckau Brandenburg|00-9999999|
+G|35451|Dahme Brandenburg|0-999999|
+G|35452|Golssen|0-999999|
+G|35453|Drahnsdorf|0-999999|
+G|35454|Uckro|0-999999|
+G|35455|Walddrehna|0-999999|
+G|35456|Terpt|0-999999|
+G|3546|Lübben Spreewald|00-9999999|
+G|35471|Birkenhainchen|0-999999|
+G|35472|Schlepzig|0-999999|
+G|35473|Neu Lübbenau|0-999999|
+G|35474|Schönwalde bei Lübben|0-999999|
+G|35475|Straupitz|0-999999|
+G|35476|Wittmannsdorf-Bückchen|0-999999|
+G|35477|Rietzneuendorf-Friedrichshof|0-999999|
+G|35478|Goyatz|0-999999|
+G|355|Cottbus|000-99999999|
+G|35600|Döbern NL|0-999999|
+G|35601|Peitz|0-999999|
+G|35602|Drebkau|0-999999|
+G|35603|Burg Spreewald|0-999999|
+G|35604|Krieschow|0-999999|
+G|35605|Komptendorf|0-999999|
+G|35606|Briesen bei Cottbus|0-999999|
+G|35607|Jänschwalde|0-999999|
+G|35608|Gross Ossnig|0-999999|
+G|35609|Drachhausen|0-999999|
+G|3561|Guben|00-9999999|
+G|3562|Forst Lausitz|00-9999999|
+G|3563|Spremberg|00-9999999|
+G|3564|Schwarze Pumpe|00-9999999|
+G|35691|Bärenklau NL|0-999999|
+G|35692|Kerkwitz|0-999999|
+G|35693|Lauschütz|0-999999|
+G|35694|Gosda bei Klinge|0-999999|
+G|35695|Simmersdorf|0-999999|
+G|35696|Briesnig|0-999999|
+G|35697|Bagenz|0-999999|
+G|35698|Hornow|0-999999|
+G|3571|Hoyerswerda|00-9999999|
+G|35722|Lauta bei Hoyerswerda|0-999999|
+G|35723|Bernsdorf OL|0-999999|
+G|35724|Lohsa|0-999999|
+G|35725|Wittichenau|0-999999|
+G|35726|Groß Särchen|0-999999|
+G|35727|Burghammer|0-999999|
+G|35728|Uhyst Spree|0-999999|
+G|3573|Senftenberg|00-9999999|
+G|3574|Lauchhammer|00-9999999|
+G|35751|Welzow|0-999999|
+G|35752|Ruhland|0-999999|
+G|35753|Großräschen|0-999999|
+G|35754|Klettwitz|0-999999|
+G|35755|Ortrand|0-999999|
+G|35756|Hosena|0-999999|
+G|3576|Weisswasser|00-9999999|
+G|35771|Bad Muskau|0-999999|
+G|35772|Rietschen|0-999999|
+G|35773|Schleife|0-999999|
+G|35774|Boxberg Sachsen|0-999999|
+G|35775|Pechern|0-999999|
+G|3578|Kamenz|00-9999999|
+G|35792|Ossling|0-999999|
+G|35793|Elstra|0-999999|
+G|35795|Königsbrück|0-999999|
+G|35796|Panschwitz-Kuckau|0-999999|
+G|35797|Schwepnitz|0-999999|
+G|3581|Görlitz|00-9999999|
+G|35820|Zodel|0-999999|
+G|35822|Hagenwerder|0-999999|
+G|35823|Ostritz|0-999999|
+G|35825|Kodersdorf|0-999999|
+G|35826|Königshain bei Görlitz|0-999999|
+G|35827|Nieder-Seifersdorf|0-999999|
+G|35828|Reichenbach OL|0-999999|
+G|35829|Gersdorf bei Görlitz|0-999999|
+G|3583|Zittau|00-9999999|
+G|35841|Großschönau Sachsen|0-999999|
+G|35842|Oderwitz|0-999999|
+G|35843|Hirschfelde bei Zittau|0-999999|
+G|35844|Oybin Kurort|0-999999|
+G|3585|Löbau|00-9999999|
+G|3586|Neugersdorf Sachsen|00-9999999|
+G|35872|Neusalza-Spremberg|0-999999|
+G|35873|Herrnhut|0-999999|
+G|35874|Bernstadt an der Eigen|0-999999|
+G|35875|Obercunnersdorf bei Löbau|0-999999|
+G|35876|Weissenberg Sachsen|0-999999|
+G|35877|Cunewalde|0-999999|
+G|3588|Niesky|00-9999999|
+G|35891|Rothenburg OL|0-999999|
+G|35892|Horka OL|0-999999|
+G|35893|Mücka|0-999999|
+G|35894|Hähnichen|0-999999|
+G|35895|Klitten|0-999999|
+G|3591|Bautzen|00-9999999|
+G|3592|Kirschau|00-9999999|
+G|35930|Seitschen|0-999999|
+G|35931|Königswartha|0-999999|
+G|35932|Guttau|0-999999|
+G|35933|Neschwitz|0-999999|
+G|35934|Grossdubrau|0-999999|
+G|35935|Kleinwelka|0-999999|
+G|35936|Sohland Spree|0-999999|
+G|35937|Prischwitz|0-999999|
+G|35938|Großpostwitz OL|0-999999|
+G|35939|Hochkirch|0-999999|
+G|3594|Bischofswerda|00-9999999|
+G|35951|Neukirch Lausitz|0-999999|
+G|35952|Großröhrsdorf OL|0-999999|
+G|35953|Burkau|0-999999|
+G|35954|Grossharthau|0-999999|
+G|35955|Pulsnitz|0-999999|
+G|3596|Neustadt in Sachsen|00-9999999|
+G|35971|Sebnitz|0-999999|
+G|35973|Stolpen|0-999999|
+G|35974|Hinterhermsdorf|0-999999|
+G|35975|Hohnstein|0-999999|
+G|3601|Mühlhausen Thüringen|00-9999999|
+G|36020|Ebeleben|0-999999|
+G|36021|Schlotheim|0-999999|
+G|36022|Grossengottern|0-999999|
+G|36023|Horsmar|0-999999|
+G|36024|Diedorf bei Mühlhausen|0-999999|
+G|36025|Körner|0-999999|
+G|36026|Struth bei Mühlhausen|0-999999|
+G|36027|Lengenfeld Unterm Stein|0-999999|
+G|36028|Kammerforst Thüringen|0-999999|
+G|36029|Menteroda|0-999999|
+G|3603|Bad Langensalza|00-9999999|
+G|36041|Bad Tennstedt|0-999999|
+G|36042|Tonna|0-999999|
+G|36043|Kirchheilingen|0-999999|
+G|3605|Leinefelde|00-9999999|
+G|3606|Heiligenstadt Heilbad|00-9999999|
+G|36071|Teistungen|0-999999|
+G|36072|Weißenborn-Lüderode|0-999999|
+G|36074|Worbis|0-999999|
+G|36075|Dingelstädt Eichsfeld|0-999999|
+G|36076|Niederorschel|0-999999|
+G|36077|Grossbodungen|0-999999|
+G|36081|Arenshausen|0-999999|
+G|36082|Ershausen|0-999999|
+G|36083|Uder|0-999999|
+G|36084|Heuthen|0-999999|
+G|36085|Reinholterode|0-999999|
+G|36087|Wüstheuterode|0-999999|
+G|361|Erfurt|000-99999999|
+G|36200|Elxleben bei Arnstadt|0-999999|
+G|36201|Walschleben|0-999999|
+G|36202|Neudietendorf|0-999999|
+G|36203|Vieselbach|0-999999|
+G|36204|Stotternheim|0-999999|
+G|36205|Gräfenroda|0-999999|
+G|36206|Grossfahner|0-999999|
+G|36207|Plaue Thüringen|0-999999|
+G|36208|Ermstedt|0-999999|
+G|36209|Klettbach|0-999999|
+G|3621|Gotha Thüringen|00-9999999|
+G|3622|Waltershausen Thüringen|00-9999999|
+G|3623|Friedrichroda|00-9999999|
+G|3624|Ohrdruf|00-9999999|
+G|36252|Tambach-Dietharz|0-999999|
+G|36253|Georgenthal Thüringer Wald|0-999999|
+G|36254|Friedrichswerth|0-999999|
+G|36255|Goldbach bei Gotha|0-999999|
+G|36256|Wechmar|0-999999|
+G|36257|Luisenthal Thüringen|0-999999|
+G|36258|Friemar|0-999999|
+G|36259|Tabarz Thüringer Wald|0-999999|
+G|3628|Arnstadt|00-9999999|
+G|3629|Stadtilm|00-9999999|
+G|3631|Nordhausen Thüringen|00-9999999|
+G|3632|Sondershausen|00-9999999|
+G|36330|Grossberndten|0-999999|
+G|36331|Ilfeld|0-999999|
+G|36332|Ellrich|0-999999|
+G|36333|Heringen Helme|0-999999|
+G|36334|Wolkramshausen|0-999999|
+G|36335|Grosswechsungen|0-999999|
+G|36336|Klettenberg|0-999999|
+G|36337|Schiedungen|0-999999|
+G|36338|Bleicherode|0-999999|
+G|3634|Sömmerda|00-9999999|
+G|3635|Kölleda|00-9999999|
+G|3636|Greussen|00-9999999|
+G|36370|Grossenehrich|0-999999|
+G|36371|Schlossvippach|0-999999|
+G|36372|Kleinneuhausen|0-999999|
+G|36373|Buttstädt|0-999999|
+G|36374|Weissensee|0-999999|
+G|36375|Kindelbrück|0-999999|
+G|36376|Straussfurt|0-999999|
+G|36377|Rastenberg|0-999999|
+G|36378|Ostramondra|0-999999|
+G|36379|Holzengel|0-999999|
+G|3641|Jena|00-9999999|
+G|36421|Camburg|0-999999|
+G|36422|Reinstädt Thüringen|0-999999|
+G|36423|Orlamünde|0-999999|
+G|36424|Kahla Thüringen|0-999999|
+G|36425|Isserstedt|0-999999|
+G|36426|Ottendorf bei Stadtroda|0-999999|
+G|36427|Dornburg Saale|0-999999|
+G|36428|Stadtroda|0-999999|
+G|3643|Weimar Thüringen|00-9999999|
+G|3644|Apolda|00-9999999|
+G|36450|Kranichfeld|0-999999|
+G|36451|Buttelstedt|0-999999|
+G|36452|Berlstedt|0-999999|
+G|36453|Mellingen|0-999999|
+G|36454|Magdala|0-999999|
+G|36458|Bad Berka|0-999999|
+G|36459|Blankenhain Thüringen|0-999999|
+G|36461|Bad Sulza|0-999999|
+G|36462|Ossmannstedt|0-999999|
+G|36463|Gebstedt|0-999999|
+G|36464|Wormstedt|0-999999|
+G|36465|Oberndorf bei Apolda|0-999999|
+G|3647|Pößneck|00-9999999|
+G|36481|Neustadt an der Orla|0-999999|
+G|36482|Triptis|0-999999|
+G|36483|Ziegenrück|0-999999|
+G|36484|Knau bei Pößneck|0-999999|
+G|365|Gera|000-99999999|
+G|36601|Hermsdorf Thüringen|0-999999|
+G|36602|Ronneburg Thüringen|0-999999|
+G|36603|Weida|0-999999|
+G|36604|Münchenbernsdorf|0-999999|
+G|36605|Bad Köstritz|0-999999|
+G|36606|Kraftsdorf|0-999999|
+G|36607|Niederpöllnitz|0-999999|
+G|36608|Seelingstädt bei Gera|0-999999|
+G|3661|Greiz|00-9999999|
+G|36621|Elsterberg bei Plauen|0-999999|
+G|36622|Triebes|0-999999|
+G|36623|Berga Elster|0-999999|
+G|36624|Teichwolframsdorf|0-999999|
+G|36625|Langenwetzendorf|0-999999|
+G|36626|Auma|0-999999|
+G|36628|Zeulenroda|0-999999|
+G|3663|Schleiz|00-9999999|
+G|36640|Remptendorf|0-999999|
+G|36642|Harra|0-999999|
+G|36643|Thimmendorf|0-999999|
+G|36644|Hirschberg Saale|0-999999|
+G|36645|Mühltroff|0-999999|
+G|36646|Tanna bei Schleiz|0-999999|
+G|36647|Saalburg Thüringen|0-999999|
+G|36648|Dittersdorf bei Schleiz|0-999999|
+G|36649|Gefell bei Schleiz|0-999999|
+G|36651|Lobenstein|0-999999|
+G|36652|Wurzbach|0-999999|
+G|36653|Lehesten Thüringer Wald|0-999999|
+G|36691|Eisenberg Thüringen|0-999999|
+G|36692|Bürgel|0-999999|
+G|36693|Crossen an der Elster|0-999999|
+G|36694|Schkölen Thüringen|0-999999|
+G|36695|Söllmnitz|0-999999|
+G|36701|Lichte|0-999999|
+G|36702|Lauscha|0-999999|
+G|36703|Gräfenthal|0-999999|
+G|36704|Steinheid|0-999999|
+G|36705|Oberweißbach Thüringer Wald|0-999999|
+G|3671|Saalfeld Saale|00-9999999|
+G|3672|Rudolstadt|00-9999999|
+G|36730|Sitzendorf|0-999999|
+G|36731|Unterloquitz|0-999999|
+G|36732|Könitz|0-999999|
+G|36733|Kaulsdorf|0-999999|
+G|36734|Leutenberg|0-999999|
+G|36735|Probstzella|0-999999|
+G|36736|Arnsgereuth|0-999999|
+G|36737|Drognitz|0-999999|
+G|36738|Königsee|0-999999|
+G|36739|Rottenbach|0-999999|
+G|36741|Bad Blankenburg|0-999999|
+G|36742|Uhlstädt|0-999999|
+G|36743|Teichel|0-999999|
+G|36744|Remda|0-999999|
+G|3675|Sonneberg Thüringen|00-9999999|
+G|36761|Heubisch|0-999999|
+G|36762|Steinach Thüringen|0-999999|
+G|36764|Neuhaus-Schierschnitz|0-999999|
+G|36766|Schalkau|0-999999|
+G|3677|Ilmenau Thüringen|00-9999999|
+G|36781|Grossbreitenbach|0-999999|
+G|36782|Schmiedefeld am Rennsteig|0-999999|
+G|36783|Gehren Thüringen|0-999999|
+G|36784|Stützerbach|0-999999|
+G|36785|Gräfinau-Angstedt|0-999999|
+G|3679|Neuhaus am Rennweg|00-9999999|
+G|3681|Suhl|00-9999999|
+G|3682|Zella-Mehlis|00-9999999|
+G|3683|Schmalkalden|00-9999999|
+G|36840|Trusetal|0-999999|
+G|36841|Schleusingen|0-999999|
+G|36842|Oberhof Thüringen|0-999999|
+G|36843|Benshausen|0-999999|
+G|36844|Rohr Thüringen|0-999999|
+G|36845|Gehlberg|0-999999|
+G|36846|Suhl-Dietzhausen|0-999999|
+G|36847|Steinbach-Hallenberg|0-999999|
+G|36848|Wernshausen|0-999999|
+G|36849|Kleinschmalkalden|0-999999|
+G|3685|Hildburghausen|00-9999999|
+G|3686|Eisfeld|00-9999999|
+G|36870|Masserberg|0-999999|
+G|36871|Bad Colberg-Heldburg|0-999999|
+G|36873|Themar|0-999999|
+G|36874|Schönbrunn bei Hildburghaus|0-999999|
+G|36875|Straufhain-Streufdorf|0-999999|
+G|36878|Oberland|0-999999|
+G|3691|Eisenach Thüringen|00-9999999|
+G|36920|Grossenlupnitz|0-999999|
+G|36921|Wutha-Farnroda|0-999999|
+G|36922|Gerstungen|0-999999|
+G|36923|Treffurt|0-999999|
+G|36924|Mihla|0-999999|
+G|36925|Marksuhl|0-999999|
+G|36926|Creuzburg|0-999999|
+G|36927|Unterellen|0-999999|
+G|36928|Neuenhof Thüringen|0-999999|
+G|36929|Ruhla|0-999999|
+G|3693|Meiningen|00-9999999|
+G|36940|Oepfershausen|0-999999|
+G|36941|Wasungen|0-999999|
+G|36943|Bettenhausen Thüringen|0-999999|
+G|36944|Rentwertshausen|0-999999|
+G|36945|Henneberg|0-999999|
+G|36946|Erbenhausen Thüringen|0-999999|
+G|36947|Jüchsen|0-999999|
+G|36948|Römhild|0-999999|
+G|36949|Obermaßfeld-Grimmenthal|0-999999|
+G|3695|Bad Salzungen|00-9999999|
+G|36961|Bad Liebenstein|0-999999|
+G|36962|Vacha|0-999999|
+G|36963|Dorndorf Rhön|0-999999|
+G|36964|Dermbach Rhön|0-999999|
+G|36965|Stadtlengsfeld|0-999999|
+G|36966|Kaltennordheim|0-999999|
+G|36967|Geisa|0-999999|
+G|36968|Rossdorf Rhön|0-999999|
+G|36969|Merkers|0-999999|
+G|371|Chemnitz Sachsen|000-99999999|
+G|37200|Wittgensdorf bei Chemnitz|0-999999|
+G|37202|Claussnitz bei Chemnitz|0-999999|
+G|37203|Gersdorf bei Chemnitz|0-999999|
+G|37204|Lichtenstein Sachsen|0-999999|
+G|37206|Frankenberg Sachsen|0-999999|
+G|37207|Hainichen Sachsen|0-999999|
+G|37208|Auerswalde|0-999999|
+G|37209|Einsiedel bei Chemnitz|0-999999|
+G|3721|Meinersdorf|00-9999999|
+G|3722|Limbach-Oberfrohna|00-9999999|
+G|3723|Hohenstein-Ernstthal|00-9999999|
+G|3724|Burgstädt|00-9999999|
+G|3725|Zschopau|00-9999999|
+G|3726|Flöha|00-9999999|
+G|3727|Mittweida|00-9999999|
+G|37291|Augustusburg|0-999999|
+G|37292|Oederan|0-999999|
+G|37293|Eppendorf Sachsen|0-999999|
+G|37294|Grünhainichen|0-999999|
+G|37295|Lugau Erzgebirge|0-999999|
+G|37296|Stollberg Erzgebirge|0-999999|
+G|37297|Thum Sachsen|0-999999|
+G|37298|Oelsnitz Erzgebirge|0-999999|
+G|3731|Freiberg Sachsen|00-9999999|
+G|37320|Mulda Sachsen|0-999999|
+G|37321|Frankenstein Sachsen|0-999999|
+G|37322|Brand-Erbisdorf|0-999999|
+G|37323|Lichtenberg Erzgebirge|0-999999|
+G|37324|Reinsberg Sachsen|0-999999|
+G|37325|Niederbobritzsch|0-999999|
+G|37326|Frauenstein Sachsen|0-999999|
+G|37327|Rechenberg-Bienenmühle|0-999999|
+G|37328|Grossschirma|0-999999|
+G|37329|Grosshartmannsdorf|0-999999|
+G|3733|Annaberg-Buchholz|00-9999999|
+G|37341|Ehrenfriedersdorf|0-999999|
+G|37342|Cranzahl|0-999999|
+G|37343|Jöhstadt|0-999999|
+G|37344|Crottendorf Sachsen|0-999999|
+G|37346|Geyer|0-999999|
+G|37347|Bärenstein Kreis Annaberg|0-999999|
+G|37348|Oberwiesenthal Kurort|0-999999|
+G|37349|Scheibenberg|0-999999|
+G|3735|Marienberg Sachsen|00-9999999|
+G|37360|Olbernhau|0-999999|
+G|37361|Neuhausen Erzgebirge|0-999999|
+G|37362|Seiffen Erzgebirge|0-999999|
+G|37363|Zöblitz|0-999999|
+G|37364|Reitzenhain Erzgebirge|0-999999|
+G|37365|Sayda|0-999999|
+G|37366|Rübenau|0-999999|
+G|37367|Lengefeld Erzgebirge|0-999999|
+G|37368|Deutschneudorf|0-999999|
+G|37369|Wolkenstein|0-999999|
+G|3737|Rochlitz|00-9999999|
+G|37381|Penig|0-999999|
+G|37382|Geringswalde|0-999999|
+G|37383|Lunzenau|0-999999|
+G|37384|Wechselburg|0-999999|
+G|3741|Plauen|00-9999999|
+G|37421|Oelsnitz Vogtland|0-999999|
+G|37422|Markneukirchen|0-999999|
+G|37423|Adorf Vogtland|0-999999|
+G|37430|Eichigt|0-999999|
+G|37431|Mehltheuer Vogtland|0-999999|
+G|37432|Pausa Vogtland|0-999999|
+G|37433|Gutenfürst|0-999999|
+G|37434|Bobenneukirchen|0-999999|
+G|37435|Reuth bei Plauen|0-999999|
+G|37436|Weischlitz|0-999999|
+G|37437|Bad Elster|0-999999|
+G|37438|Bad Brambach|0-999999|
+G|37439|Jocketa|0-999999|
+G|3744|Auerbach Vogtland|00-9999999|
+G|3745|Falkenstein Vogtland|00-9999999|
+G|37462|Rothenkirchen Vogtland|0-999999|
+G|37463|Bergen Vogtland|0-999999|
+G|37464|Schöneck Vogtland|0-999999|
+G|37465|Tannenbergsthal Vogtland|0-999999|
+G|37467|Klingenthal Sachsen|0-999999|
+G|37468|Treuen Vogtland|0-999999|
+G|375|Zwickau|000-99999999|
+G|37600|Neumark Sachsen|0-999999|
+G|37601|Mülsen Skt Jacob|0-999999|
+G|37602|Kirchberg Sachsen|0-999999|
+G|37603|Wildenfels|0-999999|
+G|37604|Mosel|0-999999|
+G|37605|Hartenstein Sachsen|0-999999|
+G|37606|Lengenfeld Vogtland|0-999999|
+G|37607|Ebersbrunn Sachsen|0-999999|
+G|37608|Waldenburg Sachsen|0-999999|
+G|37609|Wolkenburg Mulde|0-999999|
+G|3761|Werdau Sachsen|00-9999999|
+G|3762|Crimmitschau|00-9999999|
+G|3763|Glauchau|00-9999999|
+G|3764|Meerane|00-9999999|
+G|3765|Reichenbach Vogtland|00-9999999|
+G|3771|Aue Sachsen|00-9999999|
+G|3772|Schneeberg Erzgebirge|00-9999999|
+G|3773|Johanngeorgenstadt|00-9999999|
+G|3774|Schwarzenberg|00-9999999|
+G|37752|Eibenstock|0-999999|
+G|37754|Zwönitz|0-999999|
+G|37755|Schönheide Erzgebirge|0-999999|
+G|37756|Breitenbrunn Erzgebirge|0-999999|
+G|37757|Rittersgrün|0-999999|
+G|381|Rostock|000-99999999|
+G|38201|Gelbensande|0-999999|
+G|38202|Volkenshagen|0-999999|
+G|38203|Bad Doberan|0-999999|
+G|38204|Broderstorf|0-999999|
+G|38205|Tessin bei Rostock|0-999999|
+G|38206|Graal-Müritz Seeheilbad|0-999999|
+G|38207|Stäbelow|0-999999|
+G|38208|Kavelstorf|0-999999|
+G|38209|Sanitz bei Rostock|0-999999|
+G|3821|Ribnitz-Damgarten|00-9999999|
+G|38220|Wustrow Ostseebad|0-999999|
+G|38221|Marlow|0-999999|
+G|38222|Semlow|0-999999|
+G|38223|Saal Vorpom|0-999999|
+G|38224|Gresenhorst|0-999999|
+G|38225|Trinwillershagen|0-999999|
+G|38226|Dierhagen Ostseebad|0-999999|
+G|38227|Lüdershagen bei Barth|0-999999|
+G|38228|Dettmannsdorf-Kölzow|0-999999|
+G|38229|Bad Sülze|0-999999|
+G|38231|Barth|0-999999|
+G|38232|Zingst Ostseebad|0-999999|
+G|38233|Prerow Ostseebad|0-999999|
+G|38234|Born Darß|0-999999|
+G|38292|Kröpelin|0-999999|
+G|38293|Kühlungsborn Ostseebad|0-999999|
+G|38294|Neubukow|0-999999|
+G|38295|Satow bei Bad Doberan|0-999999|
+G|38296|Rerik Ostseebad|0-999999|
+G|38297|Moitin|0-999999|
+G|38300|Insel Hiddensee|0-999999|
+G|38301|Putbus|0-999999|
+G|38302|Sagard|0-999999|
+G|38303|Sellin Ostseebad|0-999999|
+G|38304|Garz Rügen|0-999999|
+G|38305|Gingst|0-999999|
+G|38306|Samtens|0-999999|
+G|38307|Poseritz|0-999999|
+G|38308|Göhren Rügen|0-999999|
+G|38309|Trent|0-999999|
+G|3831|Stralsund|00-9999999|
+G|38320|Tribsees|0-999999|
+G|38321|Martensdorf bei Stralsund|0-999999|
+G|38322|Richtenberg|0-999999|
+G|38323|Prohn|0-999999|
+G|38324|Velgast|0-999999|
+G|38325|Rolofshagen|0-999999|
+G|38326|Grimmen|0-999999|
+G|38327|Elmenhorst Vorpom|0-999999|
+G|38328|Miltzow|0-999999|
+G|38331|Rakow Vorpom|0-999999|
+G|38332|Gross Bisdorf|0-999999|
+G|38333|Horst bei Grimmen|0-999999|
+G|38334|Grammendorf|0-999999|
+G|3834|Greifswald|00-9999999|
+G|38351|Mesekenhagen|0-999999|
+G|38352|Kemnitz bei Greifswald|0-999999|
+G|38353|Gützkow bei Greifswald|0-999999|
+G|38354|Wusterhusen|0-999999|
+G|38355|Züssow|0-999999|
+G|38356|Behrenhoff|0-999999|
+G|3836|Wolgast|00-9999999|
+G|38370|Kröslin|0-999999|
+G|38371|Karlshagen|0-999999|
+G|38372|Usedom|0-999999|
+G|38373|Katzow|0-999999|
+G|38374|Lassan bei Wolgast|0-999999|
+G|38375|Koserow|0-999999|
+G|38376|Zirchow|0-999999|
+G|38377|Zinnowitz|0-999999|
+G|38378|Heringsdorf Seebad|0-999999|
+G|38379|Benz Usedom|0-999999|
+G|3838|Bergen auf Rügen|00-9999999|
+G|38391|Altenkirchen Rügen|0-999999|
+G|38392|Sassnitz|0-999999|
+G|38393|Binz Ostseebad|0-999999|
+G|3841|Wismar|00-9999999|
+G|38422|Neukloster|0-999999|
+G|38423|Bad Kleinen|0-999999|
+G|38424|Bobitz|0-999999|
+G|38425|Kirchdorf Poel|0-999999|
+G|38426|Neuburg-Steinhausen|0-999999|
+G|38427|Blowatz|0-999999|
+G|38428|Hohenkirchen bei Wismar|0-999999|
+G|38429|Glasin|0-999999|
+G|3843|Güstrow|00-9999999|
+G|3844|Schwaan|00-9999999|
+G|38450|Tarnow bei Bützow|0-999999|
+G|38451|Hoppenrade bei Güstrow|0-999999|
+G|38452|Lalendorf|0-999999|
+G|38453|Mistorf|0-999999|
+G|38454|Kritzkow|0-999999|
+G|38455|Plaaz|0-999999|
+G|38456|Langhagen bei Güstrow|0-999999|
+G|38457|Krakow am See|0-999999|
+G|38458|Zehna|0-999999|
+G|38459|Laage|0-999999|
+G|38461|Bützow|0-999999|
+G|38462|Baumgarten|0-999999|
+G|38464|Bernitt|0-999999|
+G|38466|Jürgenshagen|0-999999|
+G|3847|Sternberg|00-9999999|
+G|38481|Witzin|0-999999|
+G|38482|Warin|0-999999|
+G|38483|Brüel|0-999999|
+G|38484|Ventschow|0-999999|
+G|38485|Dabel|0-999999|
+G|38486|Gustävel|0-999999|
+G|38488|Demen|0-999999|
+G|385|Schwerin|000-99999999|
+G|3860|Raben Steinfeld|00-9999999|
+G|3861|Plate|00-9999999|
+G|3863|Crivitz|00-9999999|
+G|3865|Holthusen|00-9999999|
+G|3866|Cambs|00-9999999|
+G|3867|Lübstorf|00-9999999|
+G|3868|Rastow|00-9999999|
+G|3869|Dümmer|00-9999999|
+G|3871|Parchim|00-9999999|
+G|38720|Grebbin|0-999999|
+G|38721|Ziegendorf|0-999999|
+G|38722|Raduhn|0-999999|
+G|38723|Kladrum|0-999999|
+G|38724|Siggelkow|0-999999|
+G|38725|Gross Godems|0-999999|
+G|38726|Spornitz|0-999999|
+G|38727|Mestlin|0-999999|
+G|38728|Domsühl|0-999999|
+G|38729|Marnitz|0-999999|
+G|38731|Lübz|0-999999|
+G|38732|Gallin bei Lübz|0-999999|
+G|38733|Karbow-Vietlübbe|0-999999|
+G|38735|Plau am See|0-999999|
+G|38736|Goldberg|0-999999|
+G|38737|Ganzlin|0-999999|
+G|38738|Karow bei Lübz|0-999999|
+G|3874|Ludwigslust|00-9999999|
+G|38750|Malliss|0-999999|
+G|38751|Picher|0-999999|
+G|38752|Zierzow bei Ludwigslust|0-999999|
+G|38753|Wöbbelin|0-999999|
+G|38754|Leussow bei Ludwigslust|0-999999|
+G|38755|Eldena|0-999999|
+G|38756|Grabow|0-999999|
+G|38757|Neustadt-Glewe|0-999999|
+G|38758|Dömitz|0-999999|
+G|38759|Tewswoos|0-999999|
+G|3876|Perleberg|00-9999999|
+G|3877|Wittenberge|00-9999999|
+G|38780|Lanz Brandenburg|0-999999|
+G|38781|Mellen|0-999999|
+G|38782|Reetz bei Perleberg|0-999999|
+G|38783|Dallmin|0-999999|
+G|38784|Kleinow Kreis Prignitz|0-999999|
+G|38785|Berge bei Perleberg|0-999999|
+G|38787|Glöwen|0-999999|
+G|38788|Gross Warnow|0-999999|
+G|38789|Wolfshagen bei Perleberg|0-999999|
+G|38791|Bad Wilsnack|0-999999|
+G|38792|Lenzen (Elbe)|0-999999|
+G|38793|Dergenthin|0-999999|
+G|38794|Cumlosen|0-999999|
+G|38796|Viesecke|0-999999|
+G|38797|Karstädt Kreis Prignitz|0-999999|
+G|3881|Grevesmühlen|00-9999999|
+G|38821|Lüdersdorf|0-999999|
+G|38822|Diedrichshagen bei Grevesmühlen|0-999999|
+G|38823|Selmsdorf|0-999999|
+G|38824|Mallentin|0-999999|
+G|38825|Klütz|0-999999|
+G|38826|Dassow|0-999999|
+G|38827|Kalkhorst|0-999999|
+G|38828|Schönberg|0-999999|
+G|3883|Hagenow|00-9999999|
+G|38841|Neuhaus Elbe|0-999999|
+G|38842|Lüttenmark|0-999999|
+G|38843|Bennin|0-999999|
+G|38844|Gülze|0-999999|
+G|38845|Kaarssen|0-999999|
+G|38847|Boizenburg Elbe|0-999999|
+G|38848|Vellahn|0-999999|
+G|38850|Gammelin|0-999999|
+G|38851|Zarrentin|0-999999|
+G|38852|Wittenburg|0-999999|
+G|38853|Drönnewitz bei Hagenow|0-999999|
+G|38854|Redefin|0-999999|
+G|38855|Lübtheen|0-999999|
+G|38856|Pritzier bei Hagenow|0-999999|
+G|38858|Lassahn|0-999999|
+G|38859|Alt Zachun|0-999999|
+G|3886|Gadebusch|00-9999999|
+G|38871|Mühlen Eichsen|0-999999|
+G|38872|Rehna|0-999999|
+G|38873|Carlow|0-999999|
+G|38874|Lützow|0-999999|
+G|38875|Schlagsdorf bei Gadebusch|0-999999|
+G|38876|Roggendorf|0-999999|
+G|39000|Beetzendorf|0-999999|
+G|39001|Apenburg|0-999999|
+G|39002|Oebisfelde|0-999999|
+G|39003|Jübar|0-999999|
+G|39004|Köckte bei Gardelegen|0-999999|
+G|39005|Kusey|0-999999|
+G|39006|Miesterhorst|0-999999|
+G|39007|Tangeln|0-999999|
+G|39008|Kunrau|0-999999|
+G|39009|Badel|0-999999|
+G|3901|Salzwedel|00-9999999|
+G|3902|Diesdorf Altm|00-9999999|
+G|39030|Brunau|0-999999|
+G|39031|Dähre|0-999999|
+G|39032|Mahlsdorf bei Salzwedel|0-999999|
+G|39033|Wallstawe|0-999999|
+G|39034|Fleetmark|0-999999|
+G|39035|Kuhfelde|0-999999|
+G|39036|Binde|0-999999|
+G|39037|Pretzier|0-999999|
+G|39038|Henningen|0-999999|
+G|39039|Bonese|0-999999|
+G|3904|Haldensleben|00-9999999|
+G|39050|Bartensleben|0-999999|
+G|39051|Calvörde|0-999999|
+G|39052|Erxleben bei Haldensleben|0-999999|
+G|39053|Süplingen|0-999999|
+G|39054|Flechtingen|0-999999|
+G|39055|Hörsingen|0-999999|
+G|39056|Klüden|0-999999|
+G|39057|Rätzlingen Sachsen-Anhalt|0-999999|
+G|39058|Uthmöden|0-999999|
+G|39059|Wegenstedt|0-999999|
+G|39061|Weferlingen|0-999999|
+G|39062|Bebertal|0-999999|
+G|3907|Gardelegen|00-9999999|
+G|39080|Kalbe Milde|0-999999|
+G|39081|Kakerbeck Sachsen-Anhalt|0-999999|
+G|39082|Mieste|0-999999|
+G|39083|Messdorf|0-999999|
+G|39084|Lindstedt|0-999999|
+G|39085|Zichtau|0-999999|
+G|39086|Jävenitz|0-999999|
+G|39087|Jerchel Altmark|0-999999|
+G|39088|Letzlingen|0-999999|
+G|39089|Bismark Altmark|0-999999|
+G|3909|Klötze Altmark|00-9999999|
+G|391|Magdeburg|000-99999999|
+G|39200|Gommern|0-999999|
+G|39201|Wolmirstedt|0-999999|
+G|39202|Gross Ammensleben|0-999999|
+G|39203|Barleben|0-999999|
+G|39204|Niederndodeleben|0-999999|
+G|39205|Langenweddingen|0-999999|
+G|39206|Eichenbarleben|0-999999|
+G|39207|Colbitz|0-999999|
+G|39208|Loitsche|0-999999|
+G|39209|Wanzleben|0-999999|
+G|3921|Burg bei Magdeburg|00-9999999|
+G|39221|Möckern bei Magdeburg|0-999999|
+G|39222|Möser|0-999999|
+G|39223|Theessen|0-999999|
+G|39224|Büden|0-999999|
+G|39225|Altengrabow|0-999999|
+G|39226|Hohenziatz|0-999999|
+G|3923|Zerbst|00-9999999|
+G|39241|Leitzkau|0-999999|
+G|39242|Prödel|0-999999|
+G|39243|Nedlitz bei Zerbst|0-999999|
+G|39244|Steutz|0-999999|
+G|39245|Loburg|0-999999|
+G|39246|Lindau Anh|0-999999|
+G|39247|Güterglück|0-999999|
+G|39248|Dobritz|0-999999|
+G|3925|Stassfurt|00-9999999|
+G|39262|Güsten Anh|0-999999|
+G|39263|Unseburg|0-999999|
+G|39264|Kroppenstedt|0-999999|
+G|39265|Löderburg|0-999999|
+G|39266|Förderstedt|0-999999|
+G|39267|Schneidlingen|0-999999|
+G|39268|Egeln|0-999999|
+G|3928|Schönebeck Elbe|00-9999999|
+G|39291|Calbe Saale|0-999999|
+G|39292|Biederitz|0-999999|
+G|39293|Dreileben|0-999999|
+G|39294|Gross Rosenburg|0-999999|
+G|39295|Zuchau|0-999999|
+G|39296|Welsleben|0-999999|
+G|39297|Eickendorf Kreis Schönebeck|0-999999|
+G|39298|Barby Elbe|0-999999|
+G|3931|Stendal|00-9999999|
+G|39320|Schinne|0-999999|
+G|39321|Arneburg|0-999999|
+G|39322|Tangermünde|0-999999|
+G|39323|Schönhausen Elbe|0-999999|
+G|39324|Kläden bei Stendal|0-999999|
+G|39325|Vinzelberg|0-999999|
+G|39327|Klietz|0-999999|
+G|39328|Rochau|0-999999|
+G|39329|Möringen|0-999999|
+G|3933|Genthin|00-9999999|
+G|39341|Redekin|0-999999|
+G|39342|Gladau|0-999999|
+G|39343|Jerichow|0-999999|
+G|39344|Güsen|0-999999|
+G|39345|Parchen|0-999999|
+G|39346|Tucheim|0-999999|
+G|39347|Kade|0-999999|
+G|39348|Klitsche|0-999999|
+G|39349|Parey Elbe|0-999999|
+G|3935|Tangerhütte|00-9999999|
+G|39361|Lüderitz|0-999999|
+G|39362|Grieben bei Tangerhütte|0-999999|
+G|39363|Angern|0-999999|
+G|39364|Dolle|0-999999|
+G|39365|Bellingen bei Stendal|0-999999|
+G|39366|Kehnert|0-999999|
+G|3937|Osterburg Altmark|00-9999999|
+G|39382|Kamern|0-999999|
+G|39383|Sandau Elbe|0-999999|
+G|39384|Arendsee Altmark|0-999999|
+G|39386|Seehausen Altmark|0-999999|
+G|39387|Havelberg|0-999999|
+G|39388|Goldbeck Altm|0-999999|
+G|39389|Schollene|0-999999|
+G|39390|Iden|0-999999|
+G|39391|Lückstedt|0-999999|
+G|39392|Rönnebeck Sachsen-Anhalt|0-999999|
+G|39393|Werben Elbe|0-999999|
+G|39394|Hohenberg-Krusemark|0-999999|
+G|39395|Wanzer|0-999999|
+G|39396|Neukirchen Altmark|0-999999|
+G|39397|Geestgottberg|0-999999|
+G|39398|Gross Garz|0-999999|
+G|39399|Kleinau|0-999999|
+G|39400|Wefensleben|0-999999|
+G|39401|Neuwegersleben|0-999999|
+G|39402|Völpke|0-999999|
+G|39403|Gröningen Sachsen-Anhalt|0-999999|
+G|39404|Ausleben|0-999999|
+G|39405|Hötensleben|0-999999|
+G|39406|Harbke|0-999999|
+G|39407|Seehausen Börde|0-999999|
+G|39408|Hadmersleben|0-999999|
+G|39409|Eilsleben|0-999999|
+G|3941|Halberstadt|00-9999999|
+G|39421|Osterwieck|0-999999|
+G|39422|Badersleben|0-999999|
+G|39423|Wegeleben|0-999999|
+G|39424|Schwanebeck Sachsen-Anhalt|0-999999|
+G|39425|Dingelstedt am Huy|0-999999|
+G|39426|Hessen|0-999999|
+G|39427|Ströbeck|0-999999|
+G|39428|Pabstorf|0-999999|
+G|3943|Wernigerode|00-9999999|
+G|3944|Blankenburg Harz|00-9999999|
+G|39451|Wasserleben|0-999999|
+G|39452|Ilsenburg|0-999999|
+G|39453|Derenburg|0-999999|
+G|39454|Elbingerode Harz|0-999999|
+G|39455|Schierke|0-999999|
+G|39456|Altenbrak|0-999999|
+G|39457|Benneckenstein Harz|0-999999|
+G|39458|Heudeber|0-999999|
+G|39459|Hasselfelde|0-999999|
+G|3946|Quedlinburg|00-9999999|
+G|3947|Thale|00-9999999|
+G|39481|Hedersleben bei Aschersleben|0-999999|
+G|39482|Gatersleben|0-999999|
+G|39483|Ballenstedt|0-999999|
+G|39484|Harzgerode|0-999999|
+G|39485|Gernrode Harz|0-999999|
+G|39487|Friedrichsbrunn|0-999999|
+G|39488|Güntersberge|0-999999|
+G|39489|Strassberg Harz|0-999999|
+G|3949|Oschersleben Bode|00-9999999|
+G|395|Neubrandenburg|000-99999999|
+G|39600|Zwiedorf|0-999999|
+G|39601|Friedland|0-999999|
+G|39602|Kleeth|0-999999|
+G|39603|Burg Stargard|0-999999|
+G|39604|Wildberg bei Altentreptow|0-999999|
+G|39605|Gross Nemerow|0-999999|
+G|39606|Glienke|0-999999|
+G|39607|Kotelow|0-999999|
+G|39608|Staven|0-999999|
+G|3961|Altentreptow|00-9999999|
+G|3962|Penzlin bei Waren|00-9999999|
+G|3963|Woldegk|00-9999999|
+G|3964|Bredenfelde bei Strasburg|00-9999999|
+G|3965|Burow bei Altentreptow|00-9999999|
+G|3966|Cölpin|00-9999999|
+G|3967|Oertzenhof bei Strasburg|00-9999999|
+G|3968|Schönbeck|00-9999999|
+G|3969|Siedenbollentin|00-9999999|
+G|3971|Anklam|00-9999999|
+G|39721|Liepen bei Anklam|0-999999|
+G|39722|Sarnow bei Anklam|0-999999|
+G|39723|Krien|0-999999|
+G|39724|Klein Bünzow|0-999999|
+G|39726|Ducherow|0-999999|
+G|39727|Spantekow|0-999999|
+G|39728|Medow bei Anklam|0-999999|
+G|3973|Pasewalk|00-9999999|
+G|39740|Nechlin|0-999999|
+G|39741|Jatznick|0-999999|
+G|39742|Brüssow bei Pasewalk|0-999999|
+G|39743|Zerrenthin|0-999999|
+G|39744|Rothenklempenow|0-999999|
+G|39745|Hetzdorf bei Strasburg|0-999999|
+G|39746|Krackow|0-999999|
+G|39747|Züsedom|0-999999|
+G|39748|Viereck|0-999999|
+G|39749|Grambow bei Pasewalk|0-999999|
+G|39751|Penkun|0-999999|
+G|39752|Blumenhagen bei Strasburg|0-999999|
+G|39753|Strasburg|0-999999|
+G|39754|Löcknitz Vorpom|0-999999|
+G|3976|Torgelow bei Ueckermünde|00-9999999|
+G|39771|Ueckermünde|0-999999|
+G|39772|Rothemühl|0-999999|
+G|39773|Altwarp|0-999999|
+G|39774|Mönkebude|0-999999|
+G|39775|Ahlbeck bei Torgelow|0-999999|
+G|39776|Hintersee|0-999999|
+G|39777|Borkenfriede|0-999999|
+G|39778|Ferdinandshof bei Torgelow|0-999999|
+G|39779|Eggesin|0-999999|
+G|3981|Neustrelitz|00-9999999|
+G|39820|Triepkendorf|0-999999|
+G|39821|Carpin|0-999999|
+G|39822|Kratzeburg|0-999999|
+G|39823|Rechlin|0-999999|
+G|39824|Hohenzieritz|0-999999|
+G|39825|Wokuhl|0-999999|
+G|39826|Blankensee bei Neustrelitz|0-999999|
+G|39827|Schwarz bei Neustrelitz|0-999999|
+G|39828|Wustrow Kreis Mecklenburg-Strelitz|0-999999|
+G|39829|Blankenförde|0-999999|
+G|39831|Feldberg|0-999999|
+G|39832|Wesenberg|0-999999|
+G|39833|Mirow Kreis Neustrelitz|0-999999|
+G|3984|Prenzlau|00-9999999|
+G|39851|Göritz bei Prenzlau|0-999999|
+G|39852|Schönermark bei Prenzlau|0-999999|
+G|39853|Holzendorf bei Prenzlau|0-999999|
+G|39854|Kleptow|0-999999|
+G|39855|Parmen-Weggun|0-999999|
+G|39856|Beenz bei Prenzlau|0-999999|
+G|39857|Drense|0-999999|
+G|39858|Bietikow|0-999999|
+G|39859|Fürstenwerder|0-999999|
+G|39861|Gramzow bei Prenzlau|0-999999|
+G|39862|Schmölln bei Prenzlau|0-999999|
+G|39863|Seehausen bei Prenzlau|0-999999|
+G|3987|Templin|00-9999999|
+G|39881|Ringenwalde bei Templin|0-999999|
+G|39882|Gollin|0-999999|
+G|39883|Groß Dölln|0-999999|
+G|39884|Hassleben bei Prenzlau|0-999999|
+G|39885|Jakobshagen|0-999999|
+G|39886|Milmersdorf|0-999999|
+G|39887|Gerswalde|0-999999|
+G|39888|Lychen|0-999999|
+G|39889|Boitzenburg|0-999999|
+G|3991|Waren Müritz|00-9999999|
+G|39921|Ankershagen|0-999999|
+G|39922|Dambeck bei Röbel|0-999999|
+G|39923|Priborn|0-999999|
+G|39924|Stuer|0-999999|
+G|39925|Wredenhagen|0-999999|
+G|39926|Grabowhöfe|0-999999|
+G|39927|Nossentiner Hütte|0-999999|
+G|39928|Möllenhagen|0-999999|
+G|39929|Jabel bei Waren|0-999999|
+G|39931|Röbel Müritz|0-999999|
+G|39932|Malchow bei Waren|0-999999|
+G|39933|Vollrathsruhe|0-999999|
+G|39934|Groß Plasten|0-999999|
+G|3994|Malchin|00-9999999|
+G|39951|Faulenrost|0-999999|
+G|39952|Grammentin|0-999999|
+G|39953|Schwinkendorf|0-999999|
+G|39954|Stavenhagen Reuterstadt|0-999999|
+G|39955|Jürgenstorf|0-999999|
+G|39956|Neukalen|0-999999|
+G|39957|Gielow|0-999999|
+G|39959|Dargun|0-999999|
+G|3996|Teterow|00-9999999|
+G|39971|Gnoien|0-999999|
+G|39972|Walkendorf|0-999999|
+G|39973|Altkalen|0-999999|
+G|39975|Thürkow|0-999999|
+G|39976|Groß Bützin|0-999999|
+G|39977|Jördenstorf|0-999999|
+G|39978|Gross Roge|0-999999|
+G|3998|Demmin|00-9999999|
+G|39991|Daberkow|0-999999|
+G|39992|Görmin|0-999999|
+G|39993|Hohenmocker|0-999999|
+G|39994|Metschow|0-999999|
+G|39995|Nossendorf|0-999999|
+G|39996|Törpin|0-999999|
+G|39997|Jarmen|0-999999|
+G|39998|Loitz bei Demmin|0-999999|
+G|39999|Tutow|0-999999|
+G|40|Hamburg|000-999999999|
+G|4101|Pinneberg|00-9999999|
+G|4102|Ahrensburg|00-9999999|
+G|4103|Wedel|00-9999999|
+G|4104|Aumühle bei Hamburg|00-9999999|
+G|4105|Seevetal|00-9999999|
+G|4106|Quickborn Kreis Pinneberg|00-9999999|
+G|4107|Siek Kreis Stormarn|00-9999999|
+G|4108|Rosengarten Kreis Harburg|00-9999999|
+G|4109|Tangstedt Bz Hamburg|00-9999999|
+G|4120|Ellerhoop|00-9999999|
+G|4121|Elmshorn|00-9999999|
+G|4122|Uetersen|00-9999999|
+G|4123|Barmstedt|00-9999999|
+G|4124|Glückstadt|00-9999999|
+G|4125|Seestermühe|00-9999999|
+G|4126|Horst Holstein|00-9999999|
+G|4127|Westerhorn|00-9999999|
+G|4128|Kollmar|00-9999999|
+G|4129|Haseldorf|00-9999999|
+G|4131|Lüneburg|00-9999999|
+G|4132|Amelinghausen|00-9999999|
+G|4133|Wittorf Kreis Lünebeburg|00-9999999|
+G|4134|Embsen Kreis Lünebeburg|00-9999999|
+G|4135|Kirchgellersen|00-9999999|
+G|4136|Scharnebeck|00-9999999|
+G|4137|Barendorf|00-9999999|
+G|4138|Betzendorf Kreis Lünebeburg|00-9999999|
+G|4139|Hohnstorf Elbe|00-9999999|
+G|4140|Estorf Kreis Stade|00-9999999|
+G|4141|Stade|00-9999999|
+G|4142|Steinkirchen Kreis Stade|00-9999999|
+G|4143|Drochtersen|00-9999999|
+G|4144|Himmelpforten|00-9999999|
+G|4146|Stade-Bützfleth|00-9999999|
+G|4148|Drochtersen-Assel|00-9999999|
+G|4149|Fredenbeck|00-9999999|
+G|4151|Schwarzenbek|00-9999999|
+G|4152|Geesthacht|00-9999999|
+G|4153|Lauenburg Elbe|00-9999999|
+G|4154|Trittau|00-9999999|
+G|4155|Büchen|00-9999999|
+G|4156|Talkau|00-9999999|
+G|4158|Roseburg|00-9999999|
+G|4159|Basthorst|00-9999999|
+G|4161|Buxtehude|00-9999999|
+G|4162|Jork|00-9999999|
+G|4163|Horneburg Niederelbe|00-9999999|
+G|4164|Harsefeld|00-9999999|
+G|4165|Hollenstedt Nordheide|00-9999999|
+G|4166|Ahlerstedt|00-9999999|
+G|4167|Apensen|00-9999999|
+G|4168|Neu Wulmstorf-Elstorf|00-9999999|
+G|4169|Sauensiek|00-9999999|
+G|4171|Winsen Luhe|00-9999999|
+G|4172|Salzhausen|00-9999999|
+G|4173|Wulfsen|00-9999999|
+G|4174|Stelle Kreis Harburg|00-9999999|
+G|4175|Egestorf Nordheide|00-9999999|
+G|4176|Marschacht|00-9999999|
+G|4177|Drage Elbe|00-9999999|
+G|4178|Radbruch|00-9999999|
+G|4179|Winsen-Tönnhausen|00-9999999|
+G|4180|Königsmoor|00-9999999|
+G|4181|Buchholz in der Nordheide|00-9999999|
+G|4182|Tostedt|00-9999999|
+G|4183|Jesteburg|00-9999999|
+G|4184|Hanstedt Nordheide|00-9999999|
+G|4185|Marxen Auetal|00-9999999|
+G|4186|Buchholz-Trelde|00-9999999|
+G|4187|Holm-Seppensen|00-9999999|
+G|4188|Welle Nordheide|00-9999999|
+G|4189|Undeloh|00-9999999|
+G|4191|Kaltenkirchen Holstein|00-9999999|
+G|4192|Bad Bramstedt|00-9999999|
+G|4193|Henstedt-Ulzburg|00-9999999|
+G|4194|Sievershütten|00-9999999|
+G|4195|Hartenholm|00-9999999|
+G|4202|Achim bei Bremen|00-9999999|
+G|4203|Weyhe bei Bremen|00-9999999|
+G|4204|Thedinghausen|00-9999999|
+G|4205|Ottersberg|00-9999999|
+G|4206|Stuhr-Heiligenrode|00-9999999|
+G|4207|Oyten|00-9999999|
+G|4208|Grasberg|00-9999999|
+G|4209|Schwanewede|00-9999999|
+G|421|Bremen|000-99999999|
+G|4221|Delmenhorst|00-9999999|
+G|4222|Ganderkesee|00-9999999|
+G|4223|Ganderkesee-Bookholzberg|00-9999999|
+G|4224|Gross Ippener|00-9999999|
+G|4230|Verden-Walle|00-9999999|
+G|4231|Verden Aller|00-9999999|
+G|4232|Langwedel Kreis Verden|00-9999999|
+G|4233|Blender|00-9999999|
+G|4234|Dörverden|00-9999999|
+G|4235|Langwedel-Etelsen|00-9999999|
+G|4236|Kirchlinteln|00-9999999|
+G|4237|Bendingbostel|00-9999999|
+G|4238|Neddenaverbergen|00-9999999|
+G|4239|Dörverden-Westen|00-9999999|
+G|4240|Syke-Heiligenfelde|00-9999999|
+G|4241|Bassum|00-9999999|
+G|4242|Syke|00-9999999|
+G|4243|Twistringen|00-9999999|
+G|4244|Harpstedt|00-9999999|
+G|4245|Neuenkirchen bei Bassum|00-9999999|
+G|4246|Twistringen-Heiligenloh|00-9999999|
+G|4247|Affinghausen|00-9999999|
+G|4248|Bassum-Neubruchhausen|00-9999999|
+G|4249|Bassum-Nordwohlde|00-9999999|
+G|4251|Hoya|00-9999999|
+G|4252|Bruchhausen-Vilsen|00-9999999|
+G|4253|Asendorf Kreis Diepholz|00-9999999|
+G|4254|Eystrup|00-9999999|
+G|4255|Martfeld|00-9999999|
+G|4256|Hilgermissen|00-9999999|
+G|4257|Schweringen|00-9999999|
+G|4258|Schwarme|00-9999999|
+G|4260|Visselhövede-Wittorf|00-9999999|
+G|4261|Rotenburg Wümme|00-9999999|
+G|4262|Visselhövede|00-9999999|
+G|4263|Scheessel|00-9999999|
+G|4264|Sottrum Kreis Rotenburg|00-9999999|
+G|4265|Fintel|00-9999999|
+G|4266|Brockel|00-9999999|
+G|4267|Lauenbrück|00-9999999|
+G|4268|Bötersen|00-9999999|
+G|4269|Ahausen-Kirchwalsede|00-9999999|
+G|4271|Sulingen|00-9999999|
+G|4272|Siedenburg|00-9999999|
+G|4273|Kirchdorf bei Sulingen|00-9999999|
+G|4274|Varrel bei Sulingen|00-9999999|
+G|4275|Ehrenburg|00-9999999|
+G|4276|Borstel bei Sulingen|00-9999999|
+G|4277|Schwaförden|00-9999999|
+G|4281|Zeven|00-9999999|
+G|4282|Sittensen|00-9999999|
+G|4283|Tarmstedt|00-9999999|
+G|4284|Selsingen|00-9999999|
+G|4285|Rhade bei Zeven|00-9999999|
+G|4286|Gyhum|00-9999999|
+G|4287|Heeslingen-Boitzen|00-9999999|
+G|4288|Horstedt Kreis Rotenburg|00-9999999|
+G|4289|Kirchtimke|00-9999999|
+G|4292|Ritterhude|00-9999999|
+G|4293|Ottersberg-Fischerhude|00-9999999|
+G|4294|Riede Kreis Verden|00-9999999|
+G|4295|Emtinghausen|00-9999999|
+G|4296|Schwanewede-Aschwarden|00-9999999|
+G|4297|Ottersberg-Posthausen|00-9999999|
+G|4298|Lilienthal|00-9999999|
+G|4302|Kirchbarkau|00-9999999|
+G|4303|Schlesen|00-9999999|
+G|4305|Westensee|00-9999999|
+G|4307|Raisdorf|00-9999999|
+G|4308|Schwedeneck|00-9999999|
+G|431|Kiel|000-99999999|
+G|4320|Heidmühlen|00-9999999|
+G|4321|Neumünster|00-9999999|
+G|4322|Bordesholm|00-9999999|
+G|4323|Bornhöved|00-9999999|
+G|4324|Brokstedt|00-9999999|
+G|4326|Wankendorf|00-9999999|
+G|4327|Grossenaspe|00-9999999|
+G|4328|Rickling|00-9999999|
+G|4329|Langwedel Holstein|00-9999999|
+G|4330|Emkendorf|00-9999999|
+G|4331|Rendsburg|00-9999999|
+G|4332|Hamdorf bei Rendsburg|00-9999999|
+G|4333|Erfde|00-9999999|
+G|4334|Bredenbek bei Rendsburg|00-9999999|
+G|4335|Hohn bei Rendsburg|00-9999999|
+G|4336|Owschlag|00-9999999|
+G|4337|Jevenstedt|00-9999999|
+G|4338|Alt Duvenstedt|00-9999999|
+G|4339|Christiansholm|00-9999999|
+G|4340|Achterwehr|00-9999999|
+G|4342|Preetz Kreis Plön|00-9999999|
+G|4343|Laboe|00-9999999|
+G|4344|Schönberg Holstein|00-9999999|
+G|4346|Gettorf|00-9999999|
+G|4347|Flintbek|00-9999999|
+G|4348|Schönkirchen|00-9999999|
+G|4349|Dänischenhagen|00-9999999|
+G|4351|Eckernförde|00-9999999|
+G|4352|Damp|00-9999999|
+G|4353|Ascheffel|00-9999999|
+G|4354|Fleckeby|00-9999999|
+G|4355|Rieseby|00-9999999|
+G|4356|Gross Wittensee|00-9999999|
+G|4357|Sehestedt Eider|00-9999999|
+G|4358|Loose bei Eckernförde|00-9999999|
+G|4361|Oldenburg in Holstein|00-9999999|
+G|4362|Heiligenhafen|00-9999999|
+G|4363|Lensahn|00-9999999|
+G|4364|Dahme Kreis Ostholstein|00-9999999|
+G|4365|Heringsdorf Holstein|00-9999999|
+G|4366|Grömitz-Cismar|00-9999999|
+G|4367|Grossenbrode|00-9999999|
+G|4371|Burg auf Fehmarn|00-9999999|
+G|4372|Westfehmarn|00-9999999|
+G|4381|Lütjenburg|00-9999999|
+G|4382|Wangels|00-9999999|
+G|4383|Grebin|00-9999999|
+G|4384|Selent|00-9999999|
+G|4385|Hohenfelde bei Kiel|00-9999999|
+G|4392|Nortorf bei Neumünster|00-9999999|
+G|4393|Boostedt|00-9999999|
+G|4394|Bokhorst|00-9999999|
+G|4401|Brake Unterweser|00-9999999|
+G|4402|Rastede|00-9999999|
+G|4403|Bad Zwischenahn|00-9999999|
+G|4404|Elsfleth|00-9999999|
+G|4405|Edewecht|00-9999999|
+G|4406|Berne|00-9999999|
+G|4407|Wardenburg|00-9999999|
+G|4408|Hude Oldenburg|00-9999999|
+G|4409|Westerstede-Ocholt|00-9999999|
+G|441|Oldenburg (Oldb)|000-99999999|
+G|4421|Wilhelmshaven|00-9999999|
+G|4422|Sande Kreis Friesl|00-9999999|
+G|4423|Fedderwarden|00-9999999|
+G|4425|Wangerland-Hooksiel|00-9999999|
+G|4426|Wangerland-Horumersiel|00-9999999|
+G|4431|Wildeshausen|00-9999999|
+G|4432|Dötlingen-Brettorf|00-9999999|
+G|4433|Dötlingen|00-9999999|
+G|4434|Colnrade|00-9999999|
+G|4435|Grossenkneten|00-9999999|
+G|4441|Vechta|00-9999999|
+G|4442|Lohne Oldenburg|00-9999999|
+G|4443|Dinklage|00-9999999|
+G|4444|Goldenstedt|00-9999999|
+G|4445|Visbek Kreis Vechta|00-9999999|
+G|4446|Bakum Kreis Vechta|00-9999999|
+G|4447|Vechta-Langförden|00-9999999|
+G|4451|Varel Jadebusen|00-9999999|
+G|4452|Zetel-Neuenburg|00-9999999|
+G|4453|Zetel|00-9999999|
+G|4454|Jade|00-9999999|
+G|4455|Jade-Schweiburg|00-9999999|
+G|4456|Varel-Altjührden|00-9999999|
+G|4458|Wiefelstede-Spohle|00-9999999|
+G|4461|Jever|00-9999999|
+G|4462|Wittmund|00-9999999|
+G|4463|Wangerland|00-9999999|
+G|4464|Wittmund-Carolinensiel|00-9999999|
+G|4465|Friedeburg Ostfriesland|00-9999999|
+G|4466|Wittmund-Ardorf|00-9999999|
+G|4467|Wittmund-Funnix|00-9999999|
+G|4468|Friedeburg-Reepsholt|00-9999999|
+G|4469|Wangerooge|00-9999999|
+G|4471|Cloppenburg|00-9999999|
+G|4472|Lastrup|00-9999999|
+G|4473|Emstek|00-9999999|
+G|4474|Garrel|00-9999999|
+G|4475|Molbergen|00-9999999|
+G|4477|Lastrup-Hemmelte|00-9999999|
+G|4478|Cappeln Oldenburg|00-9999999|
+G|4479|Molbergen-Peheim|00-9999999|
+G|4480|Ovelgönne-Strückhausen|00-9999999|
+G|4481|Hatten-Sandkrug|00-9999999|
+G|4482|Hatten|00-9999999|
+G|4483|Ovelgönne-Großenmeer|00-9999999|
+G|4484|Hude-Wüsting|00-9999999|
+G|4485|Elsfleth-Huntorf|00-9999999|
+G|4486|Edewecht-Friedrichsfehn|00-9999999|
+G|4487|Grossenkneten-Huntlosen|00-9999999|
+G|4488|Westerstede|00-9999999|
+G|4489|Apen|00-9999999|
+G|4491|Friesoythe|00-9999999|
+G|4492|Saterland|00-9999999|
+G|4493|Friesoythe-Gehlenberg|00-9999999|
+G|4494|Bösel Oldenburg|00-9999999|
+G|4495|Friesoythe-Thüle|00-9999999|
+G|4496|Friesoythe-Markhausen|00-9999999|
+G|4497|Barßel-Harkebrügge|00-9999999|
+G|4498|Saterland-Ramsloh|00-9999999|
+G|4499|Barssel|00-9999999|
+G|4501|Kastorf Holstein|00-9999999|
+G|4502|Lübeck-Travemünde|00-9999999|
+G|4503|Timmendorfer Strand|00-9999999|
+G|4504|Ratekau|00-9999999|
+G|4505|Stockelsdorf-Curau|00-9999999|
+G|4506|Stockelsdorf-Krumbeck|00-9999999|
+G|4508|Krummesse|00-9999999|
+G|4509|Groß Grönau|00-9999999|
+G|451|Lübeck|000-99999999|
+G|4521|Eutin|00-9999999|
+G|4522|Plön|00-9999999|
+G|4523|Malente|00-9999999|
+G|4524|Scharbeutz-Pönitz|00-9999999|
+G|4525|Ahrensbök|00-9999999|
+G|4526|Ascheberg Holstein|00-9999999|
+G|4527|Bosau|00-9999999|
+G|4528|Schönwalde am Bungsberg|00-9999999|
+G|4529|Süsel-Bujendorf|00-9999999|
+G|4531|Bad Oldesloe|00-9999999|
+G|4532|Bargteheide|00-9999999|
+G|4533|Reinfeld Holstein|00-9999999|
+G|4534|Steinburg Kreis Storman|00-9999999|
+G|4535|Nahe|00-9999999|
+G|4536|Steinhorst Lauenburg|00-9999999|
+G|4537|Sülfeld Holstein|00-9999999|
+G|4539|Westerau|00-9999999|
+G|4541|Ratzeburg|00-9999999|
+G|4542|Mölln Lauenburg|00-9999999|
+G|4543|Nusse|00-9999999|
+G|4544|Berkenthin|00-9999999|
+G|4545|Seedorf Lauenburg|00-9999999|
+G|4546|Mustin Lauenburg|00-9999999|
+G|4547|Gudow Lauenburg|00-9999999|
+G|4550|Bühnsdorf|00-9999999|
+G|4551|Bad Segeberg|00-9999999|
+G|4552|Leezen|00-9999999|
+G|4553|Geschendorf|00-9999999|
+G|4554|Wahlstedt|00-9999999|
+G|4555|Seedorf bei Bad Segeberg|00-9999999|
+G|4556|Ahrensbök-Gnissau|00-9999999|
+G|4557|Blunk|00-9999999|
+G|4558|Todesfelde|00-9999999|
+G|4559|Wensin|00-9999999|
+G|4561|Neustadt in Holstein|00-9999999|
+G|4562|Grömitz|00-9999999|
+G|4563|Scharbeutz-Haffkrug|00-9999999|
+G|4564|Schashagen|00-9999999|
+G|4602|Freienwill|00-9999999|
+G|4603|Havetoft|00-9999999|
+G|4604|Grossenwiehe|00-9999999|
+G|4605|Medelby|00-9999999|
+G|4606|Wanderup|00-9999999|
+G|4607|Janneby|00-9999999|
+G|4608|Handewitt|00-9999999|
+G|4609|Eggebek|00-9999999|
+G|461|Flensburg|000-99999999|
+G|4621|Schleswig|00-9999999|
+G|4622|Taarstedt|00-9999999|
+G|4623|Böklund|00-9999999|
+G|4624|Kropp|00-9999999|
+G|4625|Jübek|00-9999999|
+G|4626|Treia|00-9999999|
+G|4627|Dörpstedt|00-9999999|
+G|4630|Barderup|00-9999999|
+G|4631|Glücksburg Ostsee|00-9999999|
+G|4632|Steinbergkirche|00-9999999|
+G|4633|Satrup|00-9999999|
+G|4634|Husby|00-9999999|
+G|4635|Sörup|00-9999999|
+G|4636|Langballig|00-9999999|
+G|4637|Sterup|00-9999999|
+G|4638|Tarp|00-9999999|
+G|4639|Schafflund|00-9999999|
+G|4641|Süderbrarup|00-9999999|
+G|4642|Kappeln Schlei|00-9999999|
+G|4643|Gelting Angeln|00-9999999|
+G|4644|Karby|00-9999999|
+G|4646|Mohrkirch|00-9999999|
+G|4651|Sylt|00-9999999|
+G|4661|Niebüll|00-9999999|
+G|4662|Leck|00-9999999|
+G|4663|Süderlügum|00-9999999|
+G|4664|Neukirchen bei Niebüll|00-9999999|
+G|4665|Emmelsbüll-Horsbüll|00-9999999|
+G|4666|Ladelund|00-9999999|
+G|4667|Dagebüll|00-9999999|
+G|4668|Klanxbüll|00-9999999|
+G|4671|Bredstedt|00-9999999|
+G|4672|Langenhorn|00-9999999|
+G|4673|Joldelund|00-9999999|
+G|4674|Ockholm|00-9999999|
+G|4681|Wyk auf Föhr|00-9999999|
+G|4682|Amrum|00-9999999|
+G|4683|Oldsum|00-9999999|
+G|4684|Langeneß Hallig|00-9999999|
+G|4702|Sandstedt|00-9999999|
+G|4703|Loxstedt-Donnern|00-9999999|
+G|4704|Drangstedt|00-9999999|
+G|4705|Wremen|00-9999999|
+G|4706|Schiffdorf|00-9999999|
+G|4707|Langen-Neuenwalde|00-9999999|
+G|4708|Ringstedt|00-9999999|
+G|471|Bremerhaven|000-99999999|
+G|4721|Cuxhaven|00-9999999|
+G|4722|Cuxhaven-Altenbruch|00-9999999|
+G|4723|Cuxhaven-Altenwalde|00-9999999|
+G|4724|Cuxhaven-Lüdingworth|00-9999999|
+G|4725|Helgoland|00-9999999|
+G|4731|Nordenham|00-9999999|
+G|4732|Stadland-Rodenkirchen|00-9999999|
+G|4733|Butjadingen-Burhave|00-9999999|
+G|4734|Stadland-Seefeld|00-9999999|
+G|4735|Butjadingen-Stollhamm|00-9999999|
+G|4736|Butjadingen-Tossens|00-9999999|
+G|4737|Stadland-Schwei|00-9999999|
+G|4740|Loxstedt-Dedesdorf|00-9999999|
+G|4741|Nordholz bei Bremerhaven|00-9999999|
+G|4742|Dorum|00-9999999|
+G|4743|Langen bei Bremerhaven|00-9999999|
+G|4744|Loxstedt|00-9999999|
+G|4745|Bad Bederkesa|00-9999999|
+G|4746|Hagen bei Bremerhaven|00-9999999|
+G|4747|Beverstedt|00-9999999|
+G|4748|Stubben bei Bremerhaven|00-9999999|
+G|4749|Schiffdorf-Geestenseth|00-9999999|
+G|4751|Otterndorf|00-9999999|
+G|4752|Neuhaus Oste|00-9999999|
+G|4753|Balje|00-9999999|
+G|4754|Bülkau|00-9999999|
+G|4755|Ihlienworth|00-9999999|
+G|4756|Odisheim|00-9999999|
+G|4757|Wanna|00-9999999|
+G|4758|Nordleda|00-9999999|
+G|4761|Bremervörde|00-9999999|
+G|4762|Kutenholz|00-9999999|
+G|4763|Gnarrenburg|00-9999999|
+G|4764|Gnarrenburg-Klenkendorf|00-9999999|
+G|4765|Ebersdorf bei Bremervörde|00-9999999|
+G|4766|Basdahl|00-9999999|
+G|4767|Bremervörde-Bevern|00-9999999|
+G|4768|Hipstedt|00-9999999|
+G|4769|Bremervörde-Iselersheim|00-9999999|
+G|4770|Wischhafen|00-9999999|
+G|4771|Hemmoor|00-9999999|
+G|4772|Oberndorf Oste|00-9999999|
+G|4773|Lamstedt|00-9999999|
+G|4774|Hechthausen|00-9999999|
+G|4775|Grossenwörden|00-9999999|
+G|4776|Osten-Altendorf|00-9999999|
+G|4777|Cadenberge|00-9999999|
+G|4778|Wingst|00-9999999|
+G|4779|Freiburg Elbe|00-9999999|
+G|4791|Osterholz-Scharmbeck|00-9999999|
+G|4792|Worpswede|00-9999999|
+G|4793|Hambergen|00-9999999|
+G|4794|Worpswede-Ostersode|00-9999999|
+G|4795|Garlstedt|00-9999999|
+G|4796|Teufelsmoor|00-9999999|
+G|4802|Wrohm|00-9999999|
+G|4803|Pahlen|00-9999999|
+G|4804|Nordhastedt|00-9999999|
+G|4805|Schafstedt|00-9999999|
+G|4806|Sarzbüttel|00-9999999|
+G|481|Heide Holstein|000-99999999|
+G|4821|Itzehoe|00-9999999|
+G|4822|Kellinghusen|00-9999999|
+G|4823|Wilster|00-9999999|
+G|4824|Krempe|00-9999999|
+G|4825|Burg Dithmarschen|00-9999999|
+G|4826|Hohenlockstedt|00-9999999|
+G|4827|Wacken|00-9999999|
+G|4828|Lägerdorf|00-9999999|
+G|4829|Wewelsfleth|00-9999999|
+G|4830|Süderhastedt|00-9999999|
+G|4832|Meldorf|00-9999999|
+G|4833|Wesselburen|00-9999999|
+G|4834|Büsum|00-9999999|
+G|4835|Albersdorf Holstein|00-9999999|
+G|4836|Hennstedt Dithmarschen|00-9999999|
+G|4837|Neuenkirchen Dithmarschen|00-9999999|
+G|4838|Tellingstedt|00-9999999|
+G|4839|Wöhrden Dithmarschen|00-9999999|
+G|4841|Husum Nordsee|00-9999999|
+G|4842|Nordstrand|00-9999999|
+G|4843|Viöl|00-9999999|
+G|4844|Pellworm|00-9999999|
+G|4845|Ostenfeld Husum|00-9999999|
+G|4846|Hattstedt|00-9999999|
+G|4847|Oster-Ohrstedt|00-9999999|
+G|4848|Rantrum|00-9999999|
+G|4849|Hooge|00-9999999|
+G|4851|Marne|00-9999999|
+G|4852|Brunsbüttel|00-9999999|
+G|4853|Sankt Michaelisdonn|00-9999999|
+G|4854|Friedrichskoog|00-9999999|
+G|4855|Eddelak|00-9999999|
+G|4856|Kronprinzenkoog|00-9999999|
+G|4857|Barlt|00-9999999|
+G|4858|Sankt Margarethen Holstein|00-9999999|
+G|4859|Windbergen|00-9999999|
+G|4861|Tönning|00-9999999|
+G|4862|Garding|00-9999999|
+G|4863|Sankt Peter-Ording|00-9999999|
+G|4864|Oldenswort|00-9999999|
+G|4865|Osterhever|00-9999999|
+G|4871|Hohenwestedt|00-9999999|
+G|4872|Hanerau-Hademarschen|00-9999999|
+G|4873|Aukrug|00-9999999|
+G|4874|Todenbüttel|00-9999999|
+G|4875|Stafstedt|00-9999999|
+G|4876|Reher Holstein|00-9999999|
+G|4877|Hennstedt bei Itzehoe|00-9999999|
+G|4881|Friedrichstadt|00-9999999|
+G|4882|Lunden|00-9999999|
+G|4883|Süderstapel|00-9999999|
+G|4884|Schwabstedt|00-9999999|
+G|4885|Bergenhusen|00-9999999|
+G|4892|Schenefeld Mittelholstein|00-9999999|
+G|4893|Hohenaspe|00-9999999|
+G|4902|Jemgum-Ditzum|00-9999999|
+G|4903|Wymeer|00-9999999|
+G|491|Leer Ostfriesland|000-99999999|
+G|4920|Wirdum|00-9999999|
+G|4921|Emden Stadt|00-9999999|
+G|4922|Borkum|00-9999999|
+G|4923|Krummhörn-Pewsum|00-9999999|
+G|4924|Moormerland-Oldersum|00-9999999|
+G|4925|Hinte|00-9999999|
+G|4926|Krummhörn-Greetsiel|00-9999999|
+G|4927|Krummhörn-Loquard|00-9999999|
+G|4928|Ihlow-Riepe|00-9999999|
+G|4929|Ihlow Kreis Aurich|00-9999999|
+G|4931|Norden|00-9999999|
+G|4932|Norderney|00-9999999|
+G|4933|Dornum Ostfriesland|00-9999999|
+G|4934|Marienhafe|00-9999999|
+G|4935|Juist|00-9999999|
+G|4936|Grossheide|00-9999999|
+G|4938|Hagermarsch|00-9999999|
+G|4939|Baltrum|00-9999999|
+G|4941|Aurich|00-9999999|
+G|4942|Südbrookmerland|00-9999999|
+G|4943|Grossefehn|00-9999999|
+G|4944|Wiesmoor|00-9999999|
+G|4945|Grossefehn-Timmel|00-9999999|
+G|4946|Grossefehn-Bagband|00-9999999|
+G|4947|Aurich-Ogenbargen|00-9999999|
+G|4948|Wiesmoor-Marcardsmoor|00-9999999|
+G|4950|Holtland|00-9999999|
+G|4951|Weener|00-9999999|
+G|4952|Rhauderfehn|00-9999999|
+G|4953|Bunde|00-9999999|
+G|4954|Moormerland|00-9999999|
+G|4955|Westoverledingen|00-9999999|
+G|4956|Uplengen|00-9999999|
+G|4957|Detern|00-9999999|
+G|4958|Jemgum|00-9999999|
+G|4959|Dollart|00-9999999|
+G|4961|Papenburg|00-9999999|
+G|4962|Papenburg-Aschendorf|00-9999999|
+G|4963|Dörpen|00-9999999|
+G|4964|Rhede Ems|00-9999999|
+G|4965|Surwold|00-9999999|
+G|4966|Neubörger|00-9999999|
+G|4967|Rhauderfehn-Burlage|00-9999999|
+G|4968|Neulehe|00-9999999|
+G|4971|Esens|00-9999999|
+G|4972|Langeoog|00-9999999|
+G|4973|Wittmund-Burhafe|00-9999999|
+G|4974|Neuharlingersiel|00-9999999|
+G|4975|Westerholt Ostfriesland|00-9999999|
+G|4976|Spiekeroog|00-9999999|
+G|4977|Blomberg Ostfriesland|00-9999999|
+G|5021|Nienburg Weser|00-9999999|
+G|5022|Wietzen|00-9999999|
+G|5023|Liebenau Kreis Nieburg Weser|00-9999999|
+G|5024|Rohrsen Kreis Nienburg Weser|00-9999999|
+G|5025|Estorf Weser|00-9999999|
+G|5026|Steimbke|00-9999999|
+G|5027|Linsburg|00-9999999|
+G|5028|Pennigsehl|00-9999999|
+G|5031|Wunstorf|00-9999999|
+G|5032|Neustadt am Rübenberge|00-9999999|
+G|5033|Wunstorf-Grossenheidorn|00-9999999|
+G|5034|Neustadt-Hagen|00-9999999|
+G|5035|Gross Munzel|00-9999999|
+G|5036|Neustadt-Schneeren|00-9999999|
+G|5037|Bad Rehburg|00-9999999|
+G|5041|Springe Deister|00-9999999|
+G|5042|Bad Münder am Deister|00-9999999|
+G|5043|Lauenau|00-9999999|
+G|5044|Springe-Eldagsen|00-9999999|
+G|5045|Springe-Bennigsen|00-9999999|
+G|5051|Bergen Kreis Celle|00-9999999|
+G|5052|Hermannsburg|00-9999999|
+G|5053|Faßberg-Müden|00-9999999|
+G|5054|Bergen-Sülze|00-9999999|
+G|5055|Fassberg|00-9999999|
+G|5056|Winsen-Meissendorf|00-9999999|
+G|5060|Bodenburg|00-9999999|
+G|5062|Holle bei Hildesheim|00-9999999|
+G|5063|Bad Salzdetfurth|00-9999999|
+G|5064|Groß Düngen|00-9999999|
+G|5065|Sibbesse|00-9999999|
+G|5066|Sarstedt|00-9999999|
+G|5067|Bockenem|00-9999999|
+G|5068|Elze Leine|00-9999999|
+G|5069|Nordstemmen|00-9999999|
+G|5071|Schwarmstedt|00-9999999|
+G|5072|Neustadt-Mandelsloh|00-9999999|
+G|5073|Neustadt-Esperke|00-9999999|
+G|5074|Rodewald|00-9999999|
+G|5082|Langlingen|00-9999999|
+G|5083|Hohne bei Celle|00-9999999|
+G|5084|Hambühren|00-9999999|
+G|5085|Burgdorf-Ehlershausen|00-9999999|
+G|5086|Celle-Scheuen|00-9999999|
+G|5101|Pattensen|00-9999999|
+G|5102|Laatzen|00-9999999|
+G|5103|Wennigsen Deister|00-9999999|
+G|5105|Barsinghausen|00-9999999|
+G|5108|Gehrden Han|00-9999999|
+G|5109|Ronnenberg|00-9999999|
+G|511|Hannover|000-99999999|
+G|5121|Hildesheim|00-9999999|
+G|5123|Schellerten|00-9999999|
+G|5126|Algermissen|00-9999999|
+G|5127|Harsum|00-9999999|
+G|5128|Hohenhameln|00-9999999|
+G|5129|Söhlde|00-9999999|
+G|5130|Wedemark|00-9999999|
+G|5131|Garbsen|00-9999999|
+G|5132|Lehrte|00-9999999|
+G|5135|Burgwedel-Fuhrberg|00-9999999|
+G|5136|Burgdorf Kreis Hannover|00-9999999|
+G|5137|Seelze|00-9999999|
+G|5138|Sehnde|00-9999999|
+G|5139|Burgwedel|00-9999999|
+G|5141|Celle|00-9999999|
+G|5142|Eschede|00-9999999|
+G|5143|Winsen Aller|00-9999999|
+G|5144|Wathlingen|00-9999999|
+G|5145|Beedenbostel|00-9999999|
+G|5146|Wietze|00-9999999|
+G|5147|Uetze-Hänigsen|00-9999999|
+G|5148|Steinhorst Niedersachsen|00-9999999|
+G|5149|Wienhausen|00-9999999|
+G|5151|Hameln|00-9999999|
+G|5152|Hessisch Oldendorf|00-9999999|
+G|5153|Salzhemmendorf|00-9999999|
+G|5154|Aerzen|00-9999999|
+G|5155|Emmerthal|00-9999999|
+G|5156|Coppenbrügge|00-9999999|
+G|5157|Emmerthal-Börry|00-9999999|
+G|5158|Hemeringen|00-9999999|
+G|5159|Coppenbrügge-Bisperode|00-9999999|
+G|5161|Walsrode|00-9999999|
+G|5162|Fallingbostel|00-9999999|
+G|5163|Fallingbostel-Dorfmark|00-9999999|
+G|5164|Hodenhagen|00-9999999|
+G|5165|Rethem Aller|00-9999999|
+G|5166|Walsrode-Kirchboitzen|00-9999999|
+G|5167|Walsrode-Westenholz|00-9999999|
+G|5168|Walsrode-Stellichte|00-9999999|
+G|5171|Peine|00-9999999|
+G|5172|Ilsede|00-9999999|
+G|5173|Uetze|00-9999999|
+G|5174|Lahstedt|00-9999999|
+G|5175|Lehrte-Arpke|00-9999999|
+G|5176|Edemissen|00-9999999|
+G|5177|Edemissen-Abbensen|00-9999999|
+G|5181|Alfeld Leine|00-9999999|
+G|5182|Gronau Leine|00-9999999|
+G|5183|Lamspringe|00-9999999|
+G|5184|Freden Leine|00-9999999|
+G|5185|Duingen|00-9999999|
+G|5186|Salzhemmendorf-Wallensen|00-9999999|
+G|5187|Delligsen|00-9999999|
+G|5190|Soltau-Emmingen|00-9999999|
+G|5191|Soltau|00-9999999|
+G|5192|Munster|00-9999999|
+G|5193|Schneverdingen|00-9999999|
+G|5194|Bispingen|00-9999999|
+G|5195|Neuenkirchen bei Soltau|00-9999999|
+G|5196|Wietzendorf|00-9999999|
+G|5197|Soltau-Frielingen|00-9999999|
+G|5198|Schneverdingen-Wintermoor|00-9999999|
+G|5199|Schneverdingen-Heber|00-9999999|
+G|5201|Halle Westfalen|00-9999999|
+G|5202|Oerlinghausen|00-9999999|
+G|5203|Werther Westfalen|00-9999999|
+G|5204|Steinhagen Westfalen|00-9999999|
+G|5205|Bielefeld-Sennestadt|00-9999999|
+G|5206|Bielefeld-Jöllenbeck|00-9999999|
+G|5207|Schloss Holte-Stukenbrock|00-9999999|
+G|5208|Leopoldshöhe|00-9999999|
+G|5209|Gütersloh-Friedrichsdorf|00-9999999|
+G|521|Bielefeld|000-99999999|
+G|5221|Herford|00-9999999|
+G|5222|Bad Salzuflen|00-9999999|
+G|5223|Bünde|00-9999999|
+G|5224|Enger Westfalen|00-9999999|
+G|5225|Spenge|00-9999999|
+G|5226|Bruchmühlen Westfalen|00-9999999|
+G|5228|Vlotho-Exter|00-9999999|
+G|5231|Detmold|00-9999999|
+G|5232|Lage Lippe|00-9999999|
+G|5233|Steinheim Westfalen|00-9999999|
+G|5234|Horn-Bad Meinberg|00-9999999|
+G|5235|Blomberg Lippe|00-9999999|
+G|5236|Blomberg-Grossenmarpe|00-9999999|
+G|5237|Augustdorf|00-9999999|
+G|5238|Nieheim-Himmighausen|00-9999999|
+G|5241|Gütersloh|00-9999999|
+G|5242|Rheda-Wiedenbrück|00-9999999|
+G|5244|Rietberg|00-9999999|
+G|5245|Herzebrock-Clarholz|00-9999999|
+G|5246|Verl|00-9999999|
+G|5247|Harsewinkel|00-9999999|
+G|5248|Langenberg Kreis Gütersloh|00-9999999|
+G|5250|Delbrück Westfalen|00-9999999|
+G|5251|Paderborn|00-9999999|
+G|5252|Bad Lippspringe|00-9999999|
+G|5253|Bad Driburg|00-9999999|
+G|5254|Paderborn-Schloss Neuhaus|00-9999999|
+G|5255|Altenbeken|00-9999999|
+G|5257|Hövelhof|00-9999999|
+G|5258|Salzkotten|00-9999999|
+G|5259|Bad Driburg-Neuenheerse|00-9999999|
+G|5261|Lemgo|00-9999999|
+G|5262|Extertal|00-9999999|
+G|5263|Barntrup|00-9999999|
+G|5264|Kalletal|00-9999999|
+G|5265|Dörentrup|00-9999999|
+G|5266|Lemgo-Kirchheide|00-9999999|
+G|5271|Höxter|00-9999999|
+G|5272|Brakel Westfalen|00-9999999|
+G|5273|Beverungen|00-9999999|
+G|5274|Nieheim|00-9999999|
+G|5275|Höxter-Ottbergen|00-9999999|
+G|5276|Marienmünster|00-9999999|
+G|5277|Höxter-Fürstenau|00-9999999|
+G|5278|Höxter-Ovenhausen|00-9999999|
+G|5281|Bad Pyrmont|00-9999999|
+G|5282|Schieder-Schwalenberg|00-9999999|
+G|5283|Lügde-Rischenau|00-9999999|
+G|5284|Schwalenberg|00-9999999|
+G|5285|Bad Pyrmont-Kleinenberg|00-9999999|
+G|5286|Ottenstein Niedersachsen|00-9999999|
+G|5292|Lichtenau-Atteln|00-9999999|
+G|5293|Paderborn-Dahl|00-9999999|
+G|5294|Hövelhof-Espeln|00-9999999|
+G|5295|Lichtenau Westfalen|00-9999999|
+G|5300|Salzgitter-Üfingen|00-9999999|
+G|5301|Lehre-Essenrode|00-9999999|
+G|5302|Vechelde|00-9999999|
+G|5303|Wendeburg|00-9999999|
+G|5304|Meine|00-9999999|
+G|5305|Sickte|00-9999999|
+G|5306|Cremlingen|00-9999999|
+G|5307|Braunschweig-Wenden|00-9999999|
+G|5308|Lehre|00-9999999|
+G|5309|Lehre-Wendhausen|00-9999999|
+G|531|Braunschweig|000-99999999|
+G|5320|Torfhaus|00-9999999|
+G|5321|Goslar|00-9999999|
+G|5322|Bad Harzburg|00-9999999|
+G|5323|Clausthal-Zellerfeld|00-9999999|
+G|5324|Vienenburg|00-9999999|
+G|5325|Goslar-Hahnenklee|00-9999999|
+G|5326|Langelsheim|00-9999999|
+G|5327|Bad Grund Harz|00-9999999|
+G|5328|Altenau Harz|00-9999999|
+G|5329|Schulenberg im Oberharz|00-9999999|
+G|5331|Wolfenbüttel|00-9999999|
+G|5332|Schöppenstedt|00-9999999|
+G|5333|Dettum|00-9999999|
+G|5334|Hornburg Kreis Wolfenbüttel|00-9999999|
+G|5335|Schladen|00-9999999|
+G|5336|Semmenstedt|00-9999999|
+G|5337|Kissenbrück|00-9999999|
+G|5339|Gielde|00-9999999|
+G|5341|Salzgitter|00-9999999|
+G|5344|Lengede|00-9999999|
+G|5345|Baddeckenstedt|00-9999999|
+G|5346|Liebenburg|00-9999999|
+G|5347|Burgdorf bei Salzgitter|00-9999999|
+G|5351|Helmstedt|00-9999999|
+G|5352|Schöningen|00-9999999|
+G|5353|Königslutter am Elm|00-9999999|
+G|5354|Jerxheim|00-9999999|
+G|5355|Frellstedt|00-9999999|
+G|5356|Helmstedt-Barmke|00-9999999|
+G|5357|Grasleben|00-9999999|
+G|5358|Bahrdorf-Mackendorf|00-9999999|
+G|5361|Wolfsburg|00-9999999|
+G|5362|Wolfsburg-Fallersleben|00-9999999|
+G|5363|Wolfsburg-Vorsfelde|00-9999999|
+G|5364|Velpke|00-9999999|
+G|5365|Wolfsburg-Neindorf|00-9999999|
+G|5366|Jembke|00-9999999|
+G|5367|Rühen|00-9999999|
+G|5368|Parsau|00-9999999|
+G|5371|Gifhorn|00-9999999|
+G|5372|Meinersen|00-9999999|
+G|5373|Hillerse Kreis Gifhorn|00-9999999|
+G|5374|Isenbüttel|00-9999999|
+G|5375|Müden Aller|00-9999999|
+G|5376|Wesendorf Kreis Gifhorn|00-9999999|
+G|5377|Ehra-Lessien|00-9999999|
+G|5378|Sassenburg-Platendorf|00-9999999|
+G|5379|Sassenburg-Grussendorf|00-9999999|
+G|5381|Seesen|00-9999999|
+G|5382|Bad Gandersheim|00-9999999|
+G|5383|Lutter am Barenberge|00-9999999|
+G|5384|Seesen-Groß Rhüden|00-9999999|
+G|5401|Georgsmarienhütte|00-9999999|
+G|5402|Bissendorf Kreis Osnabrück|00-9999999|
+G|5403|Bad Iburg|00-9999999|
+G|5404|Westerkappeln|00-9999999|
+G|5405|Hasbergen Kreis Osnabrück|00-9999999|
+G|5406|Belm|00-9999999|
+G|5407|Wallenhorst|00-9999999|
+G|5409|Hilter am Teutoburger Wald|00-9999999|
+G|541|Osnabrück|000-99999999|
+G|5421|Dissen am Teutoburger Wald|00-9999999|
+G|5422|Melle|00-9999999|
+G|5423|Versmold|00-9999999|
+G|5424|Bad Rothenfelde|00-9999999|
+G|5425|Borgholzhausen|00-9999999|
+G|5426|Glandorf|00-9999999|
+G|5427|Melle-Buer|00-9999999|
+G|5428|Melle-Neuenkirchen|00-9999999|
+G|5429|Melle-Wellingholzhausen|00-9999999|
+G|5431|Quakenbrück|00-9999999|
+G|5432|Löningen|00-9999999|
+G|5433|Badbergen|00-9999999|
+G|5434|Essen Oldenburg|00-9999999|
+G|5435|Berge bei Quakenbrück|00-9999999|
+G|5436|Nortrup|00-9999999|
+G|5437|Menslage|00-9999999|
+G|5438|Bakum-Lüsche|00-9999999|
+G|5439|Bersenbrück|00-9999999|
+G|5441|Diepholz|00-9999999|
+G|5442|Barnstorf Kreis Diepholz|00-9999999|
+G|5443|Lemförde|00-9999999|
+G|5444|Wagenfeld|00-9999999|
+G|5445|Drebber|00-9999999|
+G|5446|Rehden|00-9999999|
+G|5447|Lembruch|00-9999999|
+G|5448|Barver|00-9999999|
+G|5451|Ibbenbüren|00-9999999|
+G|5452|Mettingen Westfalen|00-9999999|
+G|5453|Recke|00-9999999|
+G|5454|Hörstel-Riesenbeck|00-9999999|
+G|5455|Tecklenburg-Brochterbeck|00-9999999|
+G|5456|Westerkappeln-Velpe|00-9999999|
+G|5457|Hopsten-Schale|00-9999999|
+G|5458|Hopsten|00-9999999|
+G|5459|Hörstel|00-9999999|
+G|5461|Bramsche Hase|00-9999999|
+G|5462|Ankum|00-9999999|
+G|5464|Alfhausen|00-9999999|
+G|5465|Neuenkirchen bei Bramsche|00-9999999|
+G|5466|Merzen|00-9999999|
+G|5467|Voltlage|00-9999999|
+G|5468|Bramsche-Engter|00-9999999|
+G|5471|Bohmte|00-9999999|
+G|5472|Bad Essen|00-9999999|
+G|5473|Ostercappeln|00-9999999|
+G|5474|Stemwede-Dielingen|00-9999999|
+G|5475|Bohmte-Hunteburg|00-9999999|
+G|5476|Ostercappeln-Venne|00-9999999|
+G|5481|Lengerich Westfalen|00-9999999|
+G|5482|Tecklenburg|00-9999999|
+G|5483|Lienen|00-9999999|
+G|5484|Lienen-Kattenvenne|00-9999999|
+G|5485|Ladbergen|00-9999999|
+G|5491|Damme Dümmer|00-9999999|
+G|5492|Steinfeld Oldenburg|00-9999999|
+G|5493|Neuenkirchen Kreis Vechta|00-9999999|
+G|5494|Holdorf Niedersachsen|00-9999999|
+G|5495|Vörden Kreis Vechta|00-9999999|
+G|5502|Dransfeld|00-9999999|
+G|5503|Nörten-Hardenberg|00-9999999|
+G|5504|Friedland Kreis Göttingen|00-9999999|
+G|5505|Hardegsen|00-9999999|
+G|5506|Adelebsen|00-9999999|
+G|5507|Ebergötzen|00-9999999|
+G|5508|Gleichen-Rittmarshausen|00-9999999|
+G|5509|Rosdorf Kreis Göttingen|00-9999999|
+G|551|Göttingen|000-99999999|
+G|5520|Braunlage|00-9999999|
+G|5521|Herzberg am Harz|00-9999999|
+G|5522|Osterode am Harz|00-9999999|
+G|5523|Bad Sachsa|00-9999999|
+G|5524|Bad Lauterberg im Harz|00-9999999|
+G|5525|Walkenried|00-9999999|
+G|5527|Duderstadt|00-9999999|
+G|5528|Gieboldehausen|00-9999999|
+G|5529|Rhumspringe|00-9999999|
+G|5531|Holzminden|00-9999999|
+G|5532|Stadtoldendorf|00-9999999|
+G|5533|Bodenwerder|00-9999999|
+G|5534|Eschershausen an der Lenne|00-9999999|
+G|5535|Polle|00-9999999|
+G|5536|Holzminden-Neuhaus|00-9999999|
+G|5541|Hann. Münden|00-9999999|
+G|5542|Witzenhausen|00-9999999|
+G|5543|Staufenberg Niedersachsen|00-9999999|
+G|5544|Reinhardshagen|00-9999999|
+G|5545|Hedemünden|00-9999999|
+G|5546|Scheden|00-9999999|
+G|5551|Northeim|00-9999999|
+G|5552|Katlenburg|00-9999999|
+G|5553|Kalefeld|00-9999999|
+G|5554|Moringen|00-9999999|
+G|5555|Moringen-Fredelsloh|00-9999999|
+G|5556|Lindau Harz|00-9999999|
+G|5561|Einbeck|00-9999999|
+G|5562|Dassel-Markoldendorf|00-9999999|
+G|5563|Kreiensen|00-9999999|
+G|5564|Dassel|00-9999999|
+G|5565|Einbeck-Wenzen|00-9999999|
+G|5571|Uslar|00-9999999|
+G|5572|Bodenfelde|00-9999999|
+G|5573|Uslar-Volpriehausen|00-9999999|
+G|5574|Oberweser|00-9999999|
+G|5582|Sankt Andreasberg|00-9999999|
+G|5583|Braunlage-Hohegeiss|00-9999999|
+G|5584|Hattorf am Harz|00-9999999|
+G|5585|Herzberg-Sieber|00-9999999|
+G|5586|Wieda|00-9999999|
+G|5592|Gleichen-Bremke|00-9999999|
+G|5593|Bovenden-Lenglern|00-9999999|
+G|5594|Bovenden-Reyershausen|00-9999999|
+G|5601|Schauenburg|00-9999999|
+G|5602|Hessisch Lichtenau|00-9999999|
+G|5603|Gudensberg|00-9999999|
+G|5604|Grossalmerode|00-9999999|
+G|5605|Kaufungen Hessen|00-9999999|
+G|5606|Zierenberg|00-9999999|
+G|5607|Fuldatal|00-9999999|
+G|5608|Söhrewald|00-9999999|
+G|5609|Ahnatal|00-9999999|
+G|561|Kassel|000-99999999|
+G|5621|Bad Wildungen|00-9999999|
+G|5622|Fritzlar|00-9999999|
+G|5623|Edertal|00-9999999|
+G|5624|Bad Emstal|00-9999999|
+G|5625|Naumburg Hessen|00-9999999|
+G|5626|Bad Zwesten|00-9999999|
+G|5631|Korbach|00-9999999|
+G|5632|Willingen Upland|00-9999999|
+G|5633|Diemelsee|00-9999999|
+G|5634|Waldeck-Sachsenhausen|00-9999999|
+G|5635|Vöhl|00-9999999|
+G|5636|Lichtenfels-Goddelsheim|00-9999999|
+G|5641|Warburg|00-9999999|
+G|5642|Warburg-Scherfede|00-9999999|
+G|5643|Borgentreich|00-9999999|
+G|5644|Willebadessen-Peckelsheim|00-9999999|
+G|5645|Borgentreich-Borgholz|00-9999999|
+G|5646|Willebadessen|00-9999999|
+G|5647|Lichtenau-Kleinenberg|00-9999999|
+G|5648|Brakel-Gehrden|00-9999999|
+G|5650|Cornberg|00-9999999|
+G|5651|Eschwege|00-9999999|
+G|5652|Bad Sooden-Allendorf|00-9999999|
+G|5653|Sontra|00-9999999|
+G|5654|Herleshausen|00-9999999|
+G|5655|Wanfried|00-9999999|
+G|5656|Waldkappel|00-9999999|
+G|5657|Meissner|00-9999999|
+G|5658|Wehretal|00-9999999|
+G|5659|Ringgau|00-9999999|
+G|5661|Melsungen|00-9999999|
+G|5662|Felsberg Hessen|00-9999999|
+G|5663|Spangenberg|00-9999999|
+G|5664|Morschen|00-9999999|
+G|5665|Guxhagen|00-9999999|
+G|5671|Hofgeismar|00-9999999|
+G|5672|Bad Karlshafen|00-9999999|
+G|5673|Immenhausen Hessen|00-9999999|
+G|5674|Grebenstein|00-9999999|
+G|5675|Trendelburg|00-9999999|
+G|5676|Liebenau Hessen|00-9999999|
+G|5677|Calden-Westuffeln|00-9999999|
+G|5681|Homberg Efze|00-9999999|
+G|5682|Borken Hessen|00-9999999|
+G|5683|Wabern Hessen|00-9999999|
+G|5684|Frielendorf|00-9999999|
+G|5685|Knüllwald|00-9999999|
+G|5686|Schwarzenborn Knüll|00-9999999|
+G|5691|Bad Arolsen|00-9999999|
+G|5692|Wolfhagen|00-9999999|
+G|5693|Volkmarsen|00-9999999|
+G|5694|Diemelstadt|00-9999999|
+G|5695|Twistetal|00-9999999|
+G|5696|Bad Arolsen-Landau|00-9999999|
+G|5702|Petershagen-Lahde|00-9999999|
+G|5703|Hille|00-9999999|
+G|5704|Petershagen-Friedewalde|00-9999999|
+G|5705|Petershagen-Windheim|00-9999999|
+G|5706|Porta Westfalica|00-9999999|
+G|5707|Petershagen Weser|00-9999999|
+G|571|Minden Westfalen|000-99999999|
+G|5721|Stadthagen|00-9999999|
+G|5722|Bückeburg|00-9999999|
+G|5723|Bad Nenndorf|00-9999999|
+G|5724|Obernkirchen|00-9999999|
+G|5725|Lindhorst bei Stadthagen|00-9999999|
+G|5726|Wiedensahl|00-9999999|
+G|5731|Bad Oeynhausen|00-9999999|
+G|5732|Löhne|00-9999999|
+G|5733|Vlotho|00-9999999|
+G|5734|Bergkirchen Westfalen|00-9999999|
+G|5741|Lübbecke|00-9999999|
+G|5742|Preussisch Oldendorf|00-9999999|
+G|5743|Espelkamp-Gestringen|00-9999999|
+G|5744|Hüllhorst|00-9999999|
+G|5745|Stemwede-Levern|00-9999999|
+G|5746|Rödinghausen|00-9999999|
+G|5751|Rinteln|00-9999999|
+G|5752|Auetal-Hattendorf|00-9999999|
+G|5753|Auetal-Bernsen|00-9999999|
+G|5754|Extertal-Bremke|00-9999999|
+G|5755|Kalletal-Varenholz|00-9999999|
+G|5761|Stolzenau|00-9999999|
+G|5763|Uchte|00-9999999|
+G|5764|Steyerberg|00-9999999|
+G|5765|Raddestorf|00-9999999|
+G|5766|Rehburg-Loccum|00-9999999|
+G|5767|Warmsen|00-9999999|
+G|5768|Petershagen-Heimsen|00-9999999|
+G|5769|Steyerberg-Voigtei|00-9999999|
+G|5771|Rahden Westfalen|00-9999999|
+G|5772|Espelkamp|00-9999999|
+G|5773|Stemwede-Wehdem|00-9999999|
+G|5774|Wagenfeld-Ströhen|00-9999999|
+G|5775|Diepenau|00-9999999|
+G|5776|Preussisch Ströhen|00-9999999|
+G|5777|Diepenau-Essern|00-9999999|
+G|5802|Wrestedt|00-9999999|
+G|5803|Rosche|00-9999999|
+G|5804|Rätzlingen Kreis Uelzen|00-9999999|
+G|5805|Oetzen|00-9999999|
+G|5806|Barum bei Bad Bevensen|00-9999999|
+G|5807|Altenmedingen|00-9999999|
+G|5808|Gerdau|00-9999999|
+G|581|Uelzen|000-99999999|
+G|5820|Suhlendorf|00-9999999|
+G|5821|Bad Bevensen|00-9999999|
+G|5822|Ebstorf|00-9999999|
+G|5823|Bienenbüttel|00-9999999|
+G|5824|Bad Bodenteich|00-9999999|
+G|5825|Wieren|00-9999999|
+G|5826|Suderburg|00-9999999|
+G|5827|Unterlüß|00-9999999|
+G|5828|Himbergen|00-9999999|
+G|5829|Wriedel|00-9999999|
+G|5831|Wittingen|00-9999999|
+G|5832|Hankensbüttel|00-9999999|
+G|5833|Brome|00-9999999|
+G|5834|Wittingen-Knesebeck|00-9999999|
+G|5835|Wahrenholz|00-9999999|
+G|5836|Wittingen-Radenbeck|00-9999999|
+G|5837|Sprakensehl|00-9999999|
+G|5838|Gross Oesingen|00-9999999|
+G|5839|Wittingen-Ohrdorf|00-9999999|
+G|5840|Schnackenburg|00-9999999|
+G|5841|Lüchow Wendland|00-9999999|
+G|5842|Schnega|00-9999999|
+G|5843|Wustrow Wendland|00-9999999|
+G|5844|Clenze|00-9999999|
+G|5845|Bergen Dumme|00-9999999|
+G|5846|Gartow Niedersachsen|00-9999999|
+G|5848|Trebel|00-9999999|
+G|5849|Waddeweitz|00-9999999|
+G|5850|Neetze|00-9999999|
+G|5851|Dahlenburg|00-9999999|
+G|5852|Bleckede|00-9999999|
+G|5853|Neu Darchau|00-9999999|
+G|5854|Bleckede-Barskamp|00-9999999|
+G|5855|Nahrendorf|00-9999999|
+G|5857|Bleckede-Brackede|00-9999999|
+G|5858|Hitzacker-Wietzetze|00-9999999|
+G|5859|Thomasburg|00-9999999|
+G|5861|Dannenberg Elbe|00-9999999|
+G|5862|Hitzacker Elbe|00-9999999|
+G|5863|Zernien|00-9999999|
+G|5864|Jameln|00-9999999|
+G|5865|Gusborn|00-9999999|
+G|5872|Stoetze|00-9999999|
+G|5873|Eimke|00-9999999|
+G|5874|Soltendieck|00-9999999|
+G|5875|Emmendorf|00-9999999|
+G|5882|Gorleben|00-9999999|
+G|5883|Lemgow|00-9999999|
+G|5901|Fürstenau bei Bramsche|00-9999999|
+G|5902|Freren|00-9999999|
+G|5903|Emsbüren|00-9999999|
+G|5904|Lengerich Emsl|00-9999999|
+G|5905|Beesten|00-9999999|
+G|5906|Lünne|00-9999999|
+G|5907|Geeste|00-9999999|
+G|5908|Wietmarschen-Lohne|00-9999999|
+G|5909|Wettrup|00-9999999|
+G|591|Lingen (Ems)|000-99999999|
+G|5921|Nordhorn|00-9999999|
+G|5922|Bad Bentheim|00-9999999|
+G|5923|Schüttorf|00-9999999|
+G|5924|Bad Bentheim-Gildehaus|00-9999999|
+G|5925|Wietmarschen|00-9999999|
+G|5926|Engden|00-9999999|
+G|5931|Meppen|00-9999999|
+G|5932|Haren Ems|00-9999999|
+G|5933|Lathen|00-9999999|
+G|5934|Haren-Rütenbrock|00-9999999|
+G|5935|Twist-Schöninghsdorf|00-9999999|
+G|5936|Twist|00-9999999|
+G|5937|Geeste-Gross Hesepe|00-9999999|
+G|5939|Sustrum|00-9999999|
+G|5941|Neuenhaus Dinkel|00-9999999|
+G|5942|Uelsen|00-9999999|
+G|5943|Emlichheim|00-9999999|
+G|5944|Hoogstede|00-9999999|
+G|5945|Wilsum|00-9999999|
+G|5946|Georgsdorf|00-9999999|
+G|5947|Laar Vechte|00-9999999|
+G|5948|Itterbeck|00-9999999|
+G|5951|Werlte|00-9999999|
+G|5952|Sögel|00-9999999|
+G|5953|Börger|00-9999999|
+G|5954|Lorup|00-9999999|
+G|5955|Esterwegen|00-9999999|
+G|5956|Rastdorf|00-9999999|
+G|5957|Lindern Oldenburg|00-9999999|
+G|5961|Haselünne|00-9999999|
+G|5962|Herzlake|00-9999999|
+G|5963|Bawinkel|00-9999999|
+G|5964|Lähden|00-9999999|
+G|5965|Klein Berssen|00-9999999|
+G|5966|Meppen-Apeldorn|00-9999999|
+G|5971|Rheine|00-9999999|
+G|5973|Neuenkirchen Kreis Steinfurt|00-9999999|
+G|5975|Rheine-Mesum|00-9999999|
+G|5976|Salzbergen|00-9999999|
+G|5977|Spelle|00-9999999|
+G|5978|Hörstel-Dreierwalde|00-9999999|
+G|6002|Ober-Mörlen|00-9999999|
+G|6003|Rosbach von der Höhe|00-9999999|
+G|6004|Lich-Eberstadt|00-9999999|
+G|6007|Rosbach-Rodheim|00-9999999|
+G|6008|Echzell|00-9999999|
+G|6020|Heigenbrücken|00-9999999|
+G|6021|Aschaffenburg|00-9999999|
+G|6022|Obernburg am Main|00-9999999|
+G|6023|Alzenau in Unterfranken|00-9999999|
+G|6024|Schöllkrippen|00-9999999|
+G|6026|Grossostheim|00-9999999|
+G|6027|Stockstadt am Main|00-9999999|
+G|6028|Sulzbach am Main|00-9999999|
+G|6029|Mömbris|00-9999999|
+G|6031|Friedberg Hessen|00-9999999|
+G|6032|Bad Nauheim|00-9999999|
+G|6033|Butzbach|00-9999999|
+G|6034|Wöllstadt|00-9999999|
+G|6035|Reichelsheim Wetterau|00-9999999|
+G|6036|Wölfersheim|00-9999999|
+G|6039|Karben|00-9999999|
+G|6041|Glauburg|00-9999999|
+G|6042|Büdingen Hessen|00-9999999|
+G|6043|Nidda|00-9999999|
+G|6044|Schotten Hessen|00-9999999|
+G|6045|Gedern|00-9999999|
+G|6046|Ortenberg Hessen|00-9999999|
+G|6047|Altenstadt Hessen|00-9999999|
+G|6048|Büdingen-Eckartshausen|00-9999999|
+G|6049|Kefenrod|00-9999999|
+G|6050|Biebergemünd|00-9999999|
+G|6051|Gelnhausen|00-9999999|
+G|6052|Bad Orb|00-9999999|
+G|6053|Wächtersbach|00-9999999|
+G|6054|Birstein|00-9999999|
+G|6055|Freigericht|00-9999999|
+G|6056|Bad Soden-Salmünster|00-9999999|
+G|6057|Flörsbachtal|00-9999999|
+G|6058|Gründau|00-9999999|
+G|6059|Jossgrund|00-9999999|
+G|6061|Michelstadt|00-9999999|
+G|6062|Erbach Odenwald|00-9999999|
+G|6063|Bad König|00-9999999|
+G|6066|Michelstadt-Vielbrunn|00-9999999|
+G|6068|Beerfelden|00-9999999|
+G|6071|Dieburg|00-9999999|
+G|6073|Babenhausen Hessen|00-9999999|
+G|6074|Rödermark|00-9999999|
+G|6078|Gross-Umstadt|00-9999999|
+G|6081|Usingen|00-9999999|
+G|6082|Niederreifenberg|00-9999999|
+G|6083|Weilrod|00-9999999|
+G|6084|Schmitten Taunus|00-9999999|
+G|6085|Waldsolms|00-9999999|
+G|6086|Grävenwiesbach|00-9999999|
+G|6087|Waldems|00-9999999|
+G|6092|Heimbuchenthal|00-9999999|
+G|6093|Laufach|00-9999999|
+G|6094|Weibersbrunn|00-9999999|
+G|6095|Bessenbach|00-9999999|
+G|6096|Wiesen Unterfranken|00-9999999|
+G|6101|Bad Vilbel|00-9999999|
+G|6102|Neu-Isenburg|00-9999999|
+G|6103|Langen Hessen|00-9999999|
+G|6104|Heusenstamm|00-9999999|
+G|6105|Mörfelden-Walldorf|00-9999999|
+G|6106|Rodgau|00-9999999|
+G|6107|Kelsterbach|00-9999999|
+G|6108|Mühlheim am Main|00-9999999|
+G|6109|Frankfurt-Bergen-Enkheim|00-9999999|
+G|611|Wiesbaden|000-99999999|
+G|6120|Aarbergen|00-9999999|
+G|6122|Hofheim-Wallau|00-9999999|
+G|6123|Eltville am Rhein|00-9999999|
+G|6124|Bad Schwalbach|00-9999999|
+G|6126|Idstein|00-9999999|
+G|6127|Niedernhausen Taunus|00-9999999|
+G|6128|Taunusstein|00-9999999|
+G|6129|Schlangenbad|00-9999999|
+G|6130|Schwabenheim an der Selz|00-9999999|
+G|6131|Mainz|00-9999999|
+G|6132|Ingelheim am Rhein|00-9999999|
+G|6133|Oppenheim|00-9999999|
+G|6134|Mainz-Kastel|00-9999999|
+G|6135|Bodenheim Rhein|00-9999999|
+G|6136|Nieder-Olm|00-9999999|
+G|6138|Mommenheim|00-9999999|
+G|6139|Budenheim|00-9999999|
+G|6142|Rüsselsheim|00-9999999|
+G|6144|Bischofsheim bei Rüsselsheim|00-9999999|
+G|6145|Flörsheim am Main|00-9999999|
+G|6146|Hochheim am Main|00-9999999|
+G|6147|Trebur|00-9999999|
+G|6150|Weiterstadt|00-9999999|
+G|6151|Darmstadt|00-9999999|
+G|6152|Gross-Gerau|00-9999999|
+G|6154|Ober-Ramstadt|00-9999999|
+G|6155|Griesheim Hessen|00-9999999|
+G|6157|Pfungstadt|00-9999999|
+G|6158|Riedstadt|00-9999999|
+G|6159|Messel|00-9999999|
+G|6161|Brensbach|00-9999999|
+G|6162|Reinheim Odenwald|00-9999999|
+G|6163|Höchst im Odenwald|00-9999999|
+G|6164|Reichelsheim Odenwald|00-9999999|
+G|6165|Breuberg|00-9999999|
+G|6166|Fischbachtal|00-9999999|
+G|6167|Modautal|00-9999999|
+G|6171|Oberursel Taunus|00-9999999|
+G|6172|Bad Homburg von der Höhe|00-9999999|
+G|6173|Kronberg im Taunus|00-9999999|
+G|6174|Königstein im Taunus|00-9999999|
+G|6175|Friedrichsdorf Taunus|00-9999999|
+G|6181|Hanau|00-9999999|
+G|6182|Seligenstadt|00-9999999|
+G|6183|Erlensee|00-9999999|
+G|6184|Langenselbold|00-9999999|
+G|6185|Hammersbach Hessen|00-9999999|
+G|6186|Grosskrotzenburg|00-9999999|
+G|6187|Schöneck|00-9999999|
+G|6188|Kahl am Main|00-9999999|
+G|6190|Hattersheim am Main|00-9999999|
+G|6192|Hofheim am Taunus|00-9999999|
+G|6195|Kelkheim Taunus|00-9999999|
+G|6196|Bad Soden am Taunus|00-9999999|
+G|6198|Eppstein|00-9999999|
+G|6201|Weinheim Bergstr|00-9999999|
+G|6202|Schwetzingen|00-9999999|
+G|6203|Ladenburg|00-9999999|
+G|6204|Viernheim|00-9999999|
+G|6205|Hockenheim|00-9999999|
+G|6206|Lampertheim|00-9999999|
+G|6207|Wald-Michelbach|00-9999999|
+G|6209|Mörlenbach|00-9999999|
+G|621|Mannheim|000-99999999|
+G|6220|Wilhelmsfeld|00-9999999|
+G|6221|Heidelberg|00-9999999|
+G|6222|Wiesloch|00-9999999|
+G|6223|Neckargemünd|00-9999999|
+G|6224|Sandhausen Baden|00-9999999|
+G|6226|Meckesheim|00-9999999|
+G|6227|Walldorf Baden|00-9999999|
+G|6228|Schönau Odenwald|00-9999999|
+G|6229|Neckarsteinach|00-9999999|
+G|6231|Hochdorf-Assenheim|00-9999999|
+G|6232|Speyer|00-9999999|
+G|6233|Frankenthal Pfalz|00-9999999|
+G|6234|Mutterstadt|00-9999999|
+G|6235|Schifferstadt|00-9999999|
+G|6236|Neuhofen Pfalz|00-9999999|
+G|6237|Maxdorf|00-9999999|
+G|6238|Dirmstein|00-9999999|
+G|6239|Bobenheim-Roxheim|00-9999999|
+G|6241|Worms|00-9999999|
+G|6242|Osthofen|00-9999999|
+G|6243|Monsheim|00-9999999|
+G|6244|Westhofen Rheinhessenen|00-9999999|
+G|6245|Biblis|00-9999999|
+G|6246|Eich Rheinhessen|00-9999999|
+G|6247|Worms-Pfeddersheim|00-9999999|
+G|6249|Guntersblum|00-9999999|
+G|6251|Bensheim|00-9999999|
+G|6252|Heppenheim Bergstraße|00-9999999|
+G|6253|Fürth Odenwald|00-9999999|
+G|6254|Lautertal Odenwald|00-9999999|
+G|6255|Lindenfels|00-9999999|
+G|6256|Lampertheim-Hüttenfeld|00-9999999|
+G|6257|Seeheim-Jugenheim|00-9999999|
+G|6258|Gernsheim|00-9999999|
+G|6261|Mosbach Baden|00-9999999|
+G|6262|Aglasterhausen|00-9999999|
+G|6263|Neckargerach|00-9999999|
+G|6264|Neudenau|00-9999999|
+G|6265|Billigheim Baden|00-9999999|
+G|6266|Hassmersheim|00-9999999|
+G|6267|Fahrenbach Baden|00-9999999|
+G|6268|Hüffenhardt|00-9999999|
+G|6269|Gundelsheim Württemberg|00-9999999|
+G|6271|Eberbach Baden|00-9999999|
+G|6272|Hirschhorn Neckar|00-9999999|
+G|6274|Waldbrunn Odenwald|00-9999999|
+G|6275|Rothenberg Odenwald|00-9999999|
+G|6276|Hesseneck|00-9999999|
+G|6281|Buchen Odenwald|00-9999999|
+G|6282|Walldürn|00-9999999|
+G|6283|Hardheim Odenwald|00-9999999|
+G|6284|Mudau|00-9999999|
+G|6285|Walldürn-Altheim|00-9999999|
+G|6286|Walldürn-Rippberg|00-9999999|
+G|6287|Limbach Baden|00-9999999|
+G|6291|Adelsheim|00-9999999|
+G|6292|Seckach|00-9999999|
+G|6293|Schefflenz|00-9999999|
+G|6294|Krautheim Jagst|00-9999999|
+G|6295|Rosenberg Baden|00-9999999|
+G|6296|Ahorn Baden|00-9999999|
+G|6297|Ravenstein Baden|00-9999999|
+G|6298|Möckmühl|00-9999999|
+G|6301|Otterbach Pfalz|00-9999999|
+G|6302|Winnweiler|00-9999999|
+G|6303|Enkenbach-Alsenborn|00-9999999|
+G|6304|Wolfstein Pfalz|00-9999999|
+G|6305|Hochspeyer|00-9999999|
+G|6306|Trippstadt|00-9999999|
+G|6307|Schopp|00-9999999|
+G|6308|Olsbrücken|00-9999999|
+G|631|Kaiserslautern|000-99999999|
+G|6321|Neustadt an der Weinstraße|00-9999999|
+G|6322|Bad Dürkheim|00-9999999|
+G|6323|Edenkoben|00-9999999|
+G|6324|Hassloch|00-9999999|
+G|6325|Lambrecht Pfalz|00-9999999|
+G|6326|Deidesheim|00-9999999|
+G|6327|Neustadt-Lachen|00-9999999|
+G|6328|Elmstein|00-9999999|
+G|6329|Weidenthal Pfalz|00-9999999|
+G|6331|Pirmasens|00-9999999|
+G|6332|Zweibrücken|00-9999999|
+G|6333|Waldfischbach-Burgalben|00-9999999|
+G|6334|Thaleischweiler-Fröschen|00-9999999|
+G|6335|Trulben|00-9999999|
+G|6336|Dellfeld|00-9999999|
+G|6337|Grossbundenbach|00-9999999|
+G|6338|Hornbach Pfalz|00-9999999|
+G|6339|Grosssteinhausen|00-9999999|
+G|6340|Wörth-Schaidt|00-9999999|
+G|6341|Landau in der Pfalz|00-9999999|
+G|6342|Schweigen-Rechtenbach|00-9999999|
+G|6343|Bad Bergzabern|00-9999999|
+G|6344|Schwegenheim|00-9999999|
+G|6345|Albersweiler|00-9999999|
+G|6346|Annweiler am Trifels|00-9999999|
+G|6347|Hochstadt Pfalz|00-9999999|
+G|6348|Offenbach an der Queich|00-9999999|
+G|6349|Billigheim-Ingenheim|00-9999999|
+G|6351|Eisenberg Pfalz|00-9999999|
+G|6352|Kirchheimbolanden|00-9999999|
+G|6353|Freinsheim|00-9999999|
+G|6355|Albisheim Pfrimm|00-9999999|
+G|6356|Carlsberg Pfalz|00-9999999|
+G|6357|Standenbühl|00-9999999|
+G|6358|Kriegsfeld|00-9999999|
+G|6359|Grünstadt|00-9999999|
+G|6361|Rockenhausen|00-9999999|
+G|6362|Alsenz|00-9999999|
+G|6363|Niederkirchen|00-9999999|
+G|6364|Nußbach Pfalz|00-9999999|
+G|6371|Landstuhl|00-9999999|
+G|6372|Bruchmühlbach-Miesau|00-9999999|
+G|6373|Schönenberg-Kübelberg|00-9999999|
+G|6374|Weilerbach|00-9999999|
+G|6375|Wallhalben|00-9999999|
+G|6381|Kusel|00-9999999|
+G|6382|Lauterecken|00-9999999|
+G|6383|Glan-Münchweiler|00-9999999|
+G|6384|Konken|00-9999999|
+G|6385|Reichenbach-Steegen|00-9999999|
+G|6386|Altenkirchen Pfalz|00-9999999|
+G|6387|Sankt Julian|00-9999999|
+G|6391|Dahn|00-9999999|
+G|6392|Hauenstein Pfalz|00-9999999|
+G|6393|Fischbach bei Dahn|00-9999999|
+G|6394|Bundenthal|00-9999999|
+G|6395|Münchweiler an der Rodalb|00-9999999|
+G|6396|Hinterweidenthal|00-9999999|
+G|6397|Leimen Pfalz|00-9999999|
+G|6398|Vorderweidenthal|00-9999999|
+G|6400|Mücke|00-9999999|
+G|6401|Grünberg Hessen|00-9999999|
+G|6402|Hungen|00-9999999|
+G|6403|Linden Hessen|00-9999999|
+G|6404|Lich Hessen|00-9999999|
+G|6405|Laubach Hessen|00-9999999|
+G|6406|Lollar|00-9999999|
+G|6407|Rabenau Hessen|00-9999999|
+G|6408|Buseck|00-9999999|
+G|6409|Biebertal|00-9999999|
+G|641|Giessen|000-99999999|
+G|6420|Lahntal|00-9999999|
+G|6421|Marburg|00-9999999|
+G|6422|Kirchhain|00-9999999|
+G|6423|Wetter Hessen|00-9999999|
+G|6424|Ebsdorfergrund|00-9999999|
+G|6425|Rauschenberg Hessen|00-9999999|
+G|6426|Fronhausen|00-9999999|
+G|6427|Cölbe-Schönstadt|00-9999999|
+G|6428|Stadtallendorf|00-9999999|
+G|6429|Schweinsberg Hessen|00-9999999|
+G|6430|Hahnstätten|00-9999999|
+G|6431|Limburg an der Lahn|00-9999999|
+G|6432|Diez|00-9999999|
+G|6433|Hadamar|00-9999999|
+G|6434|Bad Camberg|00-9999999|
+G|6435|Wallmerod|00-9999999|
+G|6436|Dornburg Hessen|00-9999999|
+G|6438|Hünfelden|00-9999999|
+G|6439|Holzappel|00-9999999|
+G|6440|Kölschhausen|00-9999999|
+G|6441|Wetzlar|00-9999999|
+G|6442|Braunfels|00-9999999|
+G|6443|Ehringshausen Dill|00-9999999|
+G|6444|Bischoffen|00-9999999|
+G|6445|Schöffengrund|00-9999999|
+G|6446|Hohenahr|00-9999999|
+G|6447|Langgöns-Niederkleen|00-9999999|
+G|6449|Ehringshausen-Katzenfurt|00-9999999|
+G|6451|Frankenberg Eder|00-9999999|
+G|6452|Battenberg Eder|00-9999999|
+G|6453|Gemünden Wohra|00-9999999|
+G|6454|Lichtenfels-Sachsenberg|00-9999999|
+G|6455|Frankenau Hessen|00-9999999|
+G|6456|Haina Kloster|00-9999999|
+G|6457|Burgwald Eder|00-9999999|
+G|6458|Rosenthal Hessen|00-9999999|
+G|6461|Biedenkopf|00-9999999|
+G|6462|Gladenbach|00-9999999|
+G|6464|Angelburg|00-9999999|
+G|6465|Breidenbach bei Biedenkopf|00-9999999|
+G|6466|Dautphetal-Friedensdorf|00-9999999|
+G|6467|Hatzfeld Eder|00-9999999|
+G|6468|Dautphetal-Mornshausen|00-9999999|
+G|6471|Weilburg|00-9999999|
+G|6472|Weilmünster|00-9999999|
+G|6473|Leun|00-9999999|
+G|6474|Villmar-Aumenau|00-9999999|
+G|6475|Weilmünster-Wolfenhausen|00-9999999|
+G|6476|Mengerskirchen|00-9999999|
+G|6477|Greifenstein-Nenderoth|00-9999999|
+G|6478|Greifenstein-Ulm|00-9999999|
+G|6479|Waldbrunn Westerwald|00-9999999|
+G|6482|Runkel|00-9999999|
+G|6483|Selters Taunus|00-9999999|
+G|6484|Beselich|00-9999999|
+G|6485|Nentershausen Westerwald|00-9999999|
+G|6486|Katzenelnbogen|00-9999999|
+G|6500|Waldrach|00-9999999|
+G|6501|Konz|00-9999999|
+G|6502|Schweich|00-9999999|
+G|6503|Hermeskeil|00-9999999|
+G|6504|Thalfang|00-9999999|
+G|6505|Kordel|00-9999999|
+G|6506|Welschbillig|00-9999999|
+G|6507|Neumagen-Dhron|00-9999999|
+G|6508|Hetzerath Mosel|00-9999999|
+G|6509|Büdlich|00-9999999|
+G|651|Trier|000-99999999|
+G|6522|Mettendorf|00-9999999|
+G|6523|Holsthum|00-9999999|
+G|6524|Rodershausen|00-9999999|
+G|6525|Irrel|00-9999999|
+G|6526|Bollendorf|00-9999999|
+G|6527|Oberweis|00-9999999|
+G|6531|Bernkastel-Kues|00-9999999|
+G|6532|Zeltingen-Rachtig|00-9999999|
+G|6533|Morbach Hunsrück|00-9999999|
+G|6534|Mülheim Mosel|00-9999999|
+G|6535|Osann-Monzel|00-9999999|
+G|6536|Kleinich|00-9999999|
+G|6541|Traben-Trarbach|00-9999999|
+G|6542|Bullay|00-9999999|
+G|6543|Büchenbeuren|00-9999999|
+G|6544|Rhaunen|00-9999999|
+G|6545|Blankenrath|00-9999999|
+G|6550|Irrhausen|00-9999999|
+G|6551|Prüm|00-9999999|
+G|6552|Olzheim|00-9999999|
+G|6553|Schönecken|00-9999999|
+G|6554|Waxweiler|00-9999999|
+G|6555|Bleialf|00-9999999|
+G|6556|Pronsfeld|00-9999999|
+G|6557|Hallschlag|00-9999999|
+G|6558|Büdesheim Eifel|00-9999999|
+G|6559|Leidenborn|00-9999999|
+G|6561|Bitburg|00-9999999|
+G|6562|Speicher|00-9999999|
+G|6563|Kyllburg|00-9999999|
+G|6564|Neuerburg Eifel|00-9999999|
+G|6565|Dudeldorf|00-9999999|
+G|6566|Körperich|00-9999999|
+G|6567|Oberkail|00-9999999|
+G|6568|Wolsfeld|00-9999999|
+G|6569|Bickendorf|00-9999999|
+G|6571|Wittlich|00-9999999|
+G|6572|Manderscheid Eifel|00-9999999|
+G|6573|Gillenfeld|00-9999999|
+G|6574|Hasborn|00-9999999|
+G|6575|Landscheid|00-9999999|
+G|6578|Salmtal|00-9999999|
+G|6580|Zemmer|00-9999999|
+G|6581|Saarburg|00-9999999|
+G|6582|Freudenburg|00-9999999|
+G|6583|Palzem|00-9999999|
+G|6584|Wellen Mosel|00-9999999|
+G|6585|Ralingen|00-9999999|
+G|6586|Beuren Hochwald|00-9999999|
+G|6587|Zerf|00-9999999|
+G|6588|Pluwig|00-9999999|
+G|6589|Kell am See|00-9999999|
+G|6591|Gerolstein|00-9999999|
+G|6592|Daun|00-9999999|
+G|6593|Hillesheim Eifel|00-9999999|
+G|6594|Birresborn|00-9999999|
+G|6595|Dockweiler|00-9999999|
+G|6596|Üdersdorf|00-9999999|
+G|6597|Jünkerath|00-9999999|
+G|6599|Weidenbach bei Gerolstein|00-9999999|
+G|661|Fulda|000-99999999|
+G|6620|Philippsthal Werra|00-9999999|
+G|6621|Bad Hersfeld|00-9999999|
+G|6622|Bebra|00-9999999|
+G|6623|Rotenburg an der Fulda|00-9999999|
+G|6624|Heringen Werra|00-9999999|
+G|6625|Niederaula|00-9999999|
+G|6626|Wildeck-Obersuhl|00-9999999|
+G|6627|Nentershausen Hessen|00-9999999|
+G|6628|Oberaula|00-9999999|
+G|6629|Schenklengsfeld|00-9999999|
+G|6630|Schwalmtal-Storndorf|00-9999999|
+G|6631|Alsfeld|00-9999999|
+G|6633|Homberg Ohm|00-9999999|
+G|6634|Gemünden Felda|00-9999999|
+G|6635|Kirtorf|00-9999999|
+G|6636|Romrod|00-9999999|
+G|6637|Feldatal|00-9999999|
+G|6638|Schwalmtal-Renzendorf|00-9999999|
+G|6639|Ottrau|00-9999999|
+G|6641|Lauterbach Hessen|00-9999999|
+G|6642|Schlitz|00-9999999|
+G|6643|Herbstein|00-9999999|
+G|6644|Grebenhain|00-9999999|
+G|6645|Ulrichstein|00-9999999|
+G|6646|Grebenau|00-9999999|
+G|6647|Herbstein-Stockhausen|00-9999999|
+G|6648|Bad Salzschlirf|00-9999999|
+G|6650|Hosenfeld|00-9999999|
+G|6651|Rasdorf|00-9999999|
+G|6652|Hünfeld|00-9999999|
+G|6653|Burghaun|00-9999999|
+G|6654|Gersfeld Rhön|00-9999999|
+G|6655|Neuhof Kreis Fulda|00-9999999|
+G|6656|Ebersburg|00-9999999|
+G|6657|Hofbieber|00-9999999|
+G|6658|Poppenhausen Wasserkuppe|00-9999999|
+G|6659|Eichenzell|00-9999999|
+G|6660|Steinau-Marjoss|00-9999999|
+G|6661|Schlüchtern|00-9999999|
+G|6663|Steinau an der Straße|00-9999999|
+G|6664|Sinntal-Sterbfritz|00-9999999|
+G|6665|Sinntal-Altengronau|00-9999999|
+G|6666|Freiensteinau|00-9999999|
+G|6667|Steinau-Ulmbach|00-9999999|
+G|6668|Birstein-Lichenroth|00-9999999|
+G|6669|Neuhof-Hauswurz|00-9999999|
+G|6670|Ludwigsau Hessen|00-9999999|
+G|6672|Eiterfeld|00-9999999|
+G|6673|Haunetal|00-9999999|
+G|6674|Friedewald Hessen|00-9999999|
+G|6675|Breitenbach am Herzberg|00-9999999|
+G|6676|Hohenroda Hessen|00-9999999|
+G|6677|Neuenstein Hessen|00-9999999|
+G|6678|Wildeck-Hönebach|00-9999999|
+G|6681|Hilders|00-9999999|
+G|6682|Tann Rhön|00-9999999|
+G|6683|Ehrenberg Rhön|00-9999999|
+G|6684|Hofbieber-Schwarzbach|00-9999999|
+G|6691|Schwalmstadt|00-9999999|
+G|6692|Neustadt Hessen|00-9999999|
+G|6693|Neuental|00-9999999|
+G|6694|Neukirchen Knüll|00-9999999|
+G|6695|Jesberg|00-9999999|
+G|6696|Gilserberg|00-9999999|
+G|6697|Willingshausen|00-9999999|
+G|6698|Schrecksbach|00-9999999|
+G|6701|Sprendlingen Rheinhessen|00-9999999|
+G|6703|Wöllstein Rheinhessen|00-9999999|
+G|6704|Langenlonsheim|00-9999999|
+G|6706|Wallhausen Nahe|00-9999999|
+G|6707|Windesheim|00-9999999|
+G|6708|Bad Münster am Stein-Ebernburg|00-9999999|
+G|6709|Fürfeld Kreis Bad Kreuznach|00-9999999|
+G|671|Bad Kreuznach|000-99999999|
+G|6721|Bingen am Rhein|00-9999999|
+G|6722|Rüdesheim am Rhein|00-9999999|
+G|6723|Oestrich-Winkel|00-9999999|
+G|6724|Stromberg Hunsrück|00-9999999|
+G|6725|Gau-Algesheim|00-9999999|
+G|6726|Lorch Rheingau|00-9999999|
+G|6727|Gensingen|00-9999999|
+G|6728|Ober-Hilbersheim|00-9999999|
+G|6731|Alzey|00-9999999|
+G|6732|Wörrstadt|00-9999999|
+G|6733|Gau-Odernheim|00-9999999|
+G|6734|Flonheim|00-9999999|
+G|6735|Eppelsheim|00-9999999|
+G|6736|Bechenheim|00-9999999|
+G|6737|Köngernheim|00-9999999|
+G|6741|St Goar|00-9999999|
+G|6742|Boppard|00-9999999|
+G|6743|Bacharach|00-9999999|
+G|6744|Oberwesel|00-9999999|
+G|6745|Gondershausen|00-9999999|
+G|6746|Pfalzfeld|00-9999999|
+G|6747|Emmelshausen|00-9999999|
+G|6751|Bad Sobernheim|00-9999999|
+G|6752|Kirn Nahe|00-9999999|
+G|6753|Meisenheim|00-9999999|
+G|6754|Martinstein|00-9999999|
+G|6755|Odernheim am Glan|00-9999999|
+G|6756|Winterbach Soonwald|00-9999999|
+G|6757|Becherbach bei Kirn|00-9999999|
+G|6758|Waldböckelheim|00-9999999|
+G|6761|Simmern Hunsrück|00-9999999|
+G|6762|Kastellaun|00-9999999|
+G|6763|Kirchberg Hunsrück|00-9999999|
+G|6764|Rheinböllen|00-9999999|
+G|6765|Gemünden Hunsrück|00-9999999|
+G|6766|Kisselbach|00-9999999|
+G|6771|St Goarshausen|00-9999999|
+G|6772|Nastätten|00-9999999|
+G|6773|Kamp-Bornhofen|00-9999999|
+G|6774|Kaub|00-9999999|
+G|6775|Strüth Taunus|00-9999999|
+G|6776|Dachsenhausen|00-9999999|
+G|6781|Idar-Oberstein|00-9999999|
+G|6782|Birkenfeld Nahe|00-9999999|
+G|6783|Baumholder|00-9999999|
+G|6784|Weierbach|00-9999999|
+G|6785|Herrstein|00-9999999|
+G|6786|Kempfeld|00-9999999|
+G|6787|Niederbrombach|00-9999999|
+G|6788|Sien|00-9999999|
+G|6789|Heimbach Nahe|00-9999999|
+G|6802|Völklingen-Lauterbach|00-9999999|
+G|6803|Mandelbachtal-Ommersheim|00-9999999|
+G|6804|Mandelbachtal|00-9999999|
+G|6805|Kleinblittersdorf|00-9999999|
+G|6806|Heusweiler|00-9999999|
+G|6809|Grossrosseln|00-9999999|
+G|681|Saarbrücken|000-99999999|
+G|6821|Neunkirchen Saar|00-9999999|
+G|6824|Ottweiler|00-9999999|
+G|6825|Illingen Saar|00-9999999|
+G|6826|Bexbach|00-9999999|
+G|6827|Eppelborn|00-9999999|
+G|6831|Saarlouis|00-9999999|
+G|6832|Beckingen-Reimsbach|00-9999999|
+G|6833|Rehlingen-Siersburg|00-9999999|
+G|6834|Bous|00-9999999|
+G|6835|Beckingen|00-9999999|
+G|6836|Überherrn|00-9999999|
+G|6837|Wallerfangen|00-9999999|
+G|6838|Saarwellingen|00-9999999|
+G|6841|Homburg Saar|00-9999999|
+G|6842|Blieskastel|00-9999999|
+G|6843|Gersheim|00-9999999|
+G|6844|Blieskastel-Altheim|00-9999999|
+G|6848|Homburg-Einöd|00-9999999|
+G|6849|Kirkel|00-9999999|
+G|6851|St Wendel|00-9999999|
+G|6852|Nohfelden|00-9999999|
+G|6853|Marpingen|00-9999999|
+G|6854|Oberthal Saar|00-9999999|
+G|6855|Freisen|00-9999999|
+G|6856|St Wendel-Niederkirchen|00-9999999|
+G|6857|Namborn|00-9999999|
+G|6858|Ottweiler-Fürth|00-9999999|
+G|6861|Merzig|00-9999999|
+G|6864|Mettlach|00-9999999|
+G|6865|Mettlach-Orscholz|00-9999999|
+G|6866|Perl-Nennig|00-9999999|
+G|6867|Perl|00-9999999|
+G|6868|Mettlach-Tünsdorf|00-9999999|
+G|6869|Merzig-Silwingen|00-9999999|
+G|6871|Wadern|00-9999999|
+G|6872|Losheim am See|00-9999999|
+G|6873|Nonnweiler|00-9999999|
+G|6874|Wadern-Nunkirchen|00-9999999|
+G|6875|Nonnweiler-Primstal|00-9999999|
+G|6876|Weiskirchen Saar|00-9999999|
+G|6881|Lebach|00-9999999|
+G|6887|Schmelz Saar|00-9999999|
+G|6888|Lebach-Steinbach|00-9999999|
+G|6893|Saarbrücken-Ensheim|00-9999999|
+G|6894|St Ingbert|00-9999999|
+G|6897|Sulzbach Saar|00-9999999|
+G|6898|Völklingen|00-9999999|
+G|69|Frankfurt am Main|000-999999999|
+N|700||00000000-99999999|V
+G|7021|Kirchheim unter Teck|00-9999999|
+G|7022|Nürtingen|00-9999999|
+G|7023|Weilheim an der Teck|00-9999999|
+G|7024|Wendlingen am Neckar|00-9999999|
+G|7025|Neuffen|00-9999999|
+G|7026|Lenningen|00-9999999|
+G|7031|Böblingen|00-9999999|
+G|7032|Herrenberg|00-9999999|
+G|7033|Weil Der Stadt|00-9999999|
+G|7034|Ehningen|00-9999999|
+G|7041|Mühlacker|00-9999999|
+G|7042|Vaihingen an der Enz|00-9999999|
+G|7043|Maulbronn|00-9999999|
+G|7044|Mönsheim|00-9999999|
+G|7045|Oberderdingen|00-9999999|
+G|7046|Zaberfeld|00-9999999|
+G|7051|Calw|00-9999999|
+G|7052|Bad Liebenzell|00-9999999|
+G|7053|Bad Teinach-Zavelstein|00-9999999|
+G|7054|Wildberg Württemberg|00-9999999|
+G|7055|Neuweiler Kreis Calw|00-9999999|
+G|7056|Gechingen|00-9999999|
+G|7062|Beilstein Württemberg|00-9999999|
+G|7063|Bad Wimpfen|00-9999999|
+G|7066|Bad Rappenau-Bonfeld|00-9999999|
+G|7071|Tübingen|00-9999999|
+G|7072|Gomaringen|00-9999999|
+G|7073|Ammerbuch|00-9999999|
+G|7081|Bad Wildbad|00-9999999|
+G|7082|Neuenbürg Württemberg|00-9999999|
+G|7083|Bad Herrenalb|00-9999999|
+G|7084|Schömberg bei Neuenbürg|00-9999999|
+G|7085|Enzklösterle|00-9999999|
+G|711|Stuttgart|000-99999999|
+G|7121|Reutlingen|00-9999999|
+G|7122|St Johann Württemberg|00-9999999|
+G|7123|Metzingen Württemberg|00-9999999|
+G|7124|Trochtelfingen Hohenz|00-9999999|
+G|7125|Bad Urach|00-9999999|
+G|7126|Burladingen-Melchingen|00-9999999|
+G|7127|Neckartenzlingen|00-9999999|
+G|7128|Sonnenbühl|00-9999999|
+G|7129|Lichtenstein Württemberg|00-9999999|
+G|7130|Löwenstein Württemberg|00-9999999|
+G|7131|Heilbronn Neckar|00-9999999|
+G|7132|Neckarsulm|00-9999999|
+G|7133|Lauffen am Neckar|00-9999999|
+G|7134|Weinsberg|00-9999999|
+G|7135|Brackenheim|00-9999999|
+G|7136|Bad Friedrichshall|00-9999999|
+G|7138|Schwaigern|00-9999999|
+G|7139|Neuenstadt am Kocher|00-9999999|
+G|7141|Ludwigsburg Württemberg|00-9999999|
+G|7142|Bietigheim-Bissingen|00-9999999|
+G|7143|Besigheim|00-9999999|
+G|7144|Marbach am Neckar|00-9999999|
+G|7145|Markgröningen|00-9999999|
+G|7146|Remseck am Neckar|00-9999999|
+G|7147|Sachsenheim Württemberg|00-9999999|
+G|7148|Grossbottwar|00-9999999|
+G|7150|Korntal-Münchingen|00-9999999|
+G|7151|Waiblingen|00-9999999|
+G|7152|Leonberg Württemberg|00-9999999|
+G|7153|Plochingen|00-9999999|
+G|7154|Kornwestheim|00-9999999|
+G|7156|Ditzingen|00-9999999|
+G|7157|Waldenbuch|00-9999999|
+G|7158|Neuhausen auf den Fildern|00-9999999|
+G|7159|Renningen|00-9999999|
+G|7161|Göppingen|00-9999999|
+G|7162|Süßen|00-9999999|
+G|7163|Ebersbach an der Fils|00-9999999|
+G|7164|Boll Kreis Göppingen|00-9999999|
+G|7165|Göppingen-Hohenstaufen|00-9999999|
+G|7166|Adelberg|00-9999999|
+G|7171|Schwäbisch Gmünd|00-9999999|
+G|7172|Lorch Württemberg|00-9999999|
+G|7173|Heubach|00-9999999|
+G|7174|Mögglingen|00-9999999|
+G|7175|Leinzell|00-9999999|
+G|7176|Spraitbach|00-9999999|
+G|7181|Schorndorf Württemberg|00-9999999|
+G|7182|Welzheim|00-9999999|
+G|7183|Rudersberg Württemberg|00-9999999|
+G|7184|Kaisersbach|00-9999999|
+G|7191|Backnang|00-9999999|
+G|7192|Murrhardt|00-9999999|
+G|7193|Sulzbach an der Murr|00-9999999|
+G|7194|Spiegelberg|00-9999999|
+G|7195|Winnenden|00-9999999|
+G|7202|Karlsbad|00-9999999|
+G|7203|Walzbachtal|00-9999999|
+G|7204|Malsch-Völkersbach|00-9999999|
+G|721|Karlsruhe|000-99999999|
+G|7220|Forbach-Hundsbach|00-9999999|
+G|7221|Baden-Baden|00-9999999|
+G|7222|Rastatt|00-9999999|
+G|7223|Bühl Baden|00-9999999|
+G|7224|Gernsbach|00-9999999|
+G|7225|Gaggenau|00-9999999|
+G|7226|Bühl-Sand|00-9999999|
+G|7227|Lichtenau Baden|00-9999999|
+G|7228|Forbach|00-9999999|
+G|7229|Iffezheim|00-9999999|
+G|7231|Pforzheim|00-9999999|
+G|7232|Königsbach-Stein|00-9999999|
+G|7233|Niefern-Öschelbronn|00-9999999|
+G|7234|Tiefenbronn|00-9999999|
+G|7235|Unterreichenbach Kreis Calw|00-9999999|
+G|7236|Keltern|00-9999999|
+G|7237|Neulingen Enzkreis|00-9999999|
+G|7240|Pfinztal|00-9999999|
+G|7242|Rheinstetten|00-9999999|
+G|7243|Ettlingen|00-9999999|
+G|7244|Weingarten Baden|00-9999999|
+G|7245|Durmersheim|00-9999999|
+G|7246|Malsch Kreis Karlsruhe|00-9999999|
+G|7247|Linkenheim-Hochstetten|00-9999999|
+G|7248|Marxzell|00-9999999|
+G|7249|Stutensee|00-9999999|
+G|7250|Kraichtal|00-9999999|
+G|7251|Bruchsal|00-9999999|
+G|7252|Bretten|00-9999999|
+G|7253|Bad Schönborn|00-9999999|
+G|7254|Waghäusel|00-9999999|
+G|7255|Graben-Neudorf|00-9999999|
+G|7256|Philippsburg|00-9999999|
+G|7257|Bruchsal-Untergrombach|00-9999999|
+G|7258|Oberderdingen-Flehingen|00-9999999|
+G|7259|Östringen-Odenheim|00-9999999|
+G|7260|Sinsheim-Hilsbach|00-9999999|
+G|7261|Sinsheim|00-9999999|
+G|7262|Eppingen|00-9999999|
+G|7263|Waibstadt|00-9999999|
+G|7264|Bad Rappenau|00-9999999|
+G|7265|Angelbachtal|00-9999999|
+G|7266|Kirchardt|00-9999999|
+G|7267|Gemmingen|00-9999999|
+G|7268|Bad Rappenau-Obergimpern|00-9999999|
+G|7269|Sulzfeld Baden|00-9999999|
+G|7271|Wörth am Rhein|00-9999999|
+G|7272|Rülzheim|00-9999999|
+G|7273|Hagenbach Pfalz|00-9999999|
+G|7274|Germersheim|00-9999999|
+G|7275|Kandel|00-9999999|
+G|7276|Herxheim bei Landau Pfalz|00-9999999|
+G|7277|Wörth-Büchelberg|00-9999999|
+G|7300|Roggenburg|00-9999999|
+G|7302|Pfaffenhofen an der Roth|00-9999999|
+G|7303|Illertissen|00-9999999|
+G|7304|Blaustein Württemberg|00-9999999|
+G|7305|Erbach Donau|00-9999999|
+G|7306|Vöhringen Iller|00-9999999|
+G|7307|Senden Iller|00-9999999|
+G|7308|Nersingen|00-9999999|
+G|7309|Weissenhorn|00-9999999|
+G|731|Ulm Donau|000-99999999|
+G|7321|Heidenheim an der Brenz|00-9999999|
+G|7322|Giengen an der Brenz|00-9999999|
+G|7323|Gerstetten|00-9999999|
+G|7324|Herbrechtingen|00-9999999|
+G|7325|Sontheim an der Brenz|00-9999999|
+G|7326|Neresheim|00-9999999|
+G|7327|Dischingen|00-9999999|
+G|7328|Königsbronn|00-9999999|
+G|7329|Steinheim am Albuch|00-9999999|
+G|7331|Geislingen an der Steige|00-9999999|
+G|7332|Lauterstein|00-9999999|
+G|7333|Laichingen|00-9999999|
+G|7334|Deggingen|00-9999999|
+G|7335|Wiesensteig|00-9999999|
+G|7336|Lonsee|00-9999999|
+G|7337|Nellingen Alb|00-9999999|
+G|7340|Neenstetten|00-9999999|
+G|7343|Buch bei Illertissen|00-9999999|
+G|7344|Blaubeuren|00-9999999|
+G|7345|Langenau Württemberg|00-9999999|
+G|7346|Illerkirchberg|00-9999999|
+G|7347|Dietenheim|00-9999999|
+G|7348|Beimerstetten|00-9999999|
+G|7351|Biberach an der Riß|00-9999999|
+G|7352|Ochsenhausen|00-9999999|
+G|7353|Schwendi|00-9999999|
+G|7354|Erolzheim|00-9999999|
+G|7355|Hochdorf Riß|00-9999999|
+G|7356|Schemmerhofen|00-9999999|
+G|7357|Attenweiler|00-9999999|
+G|7358|Eberhardzell-Füramoos|00-9999999|
+G|7361|Aalen|00-9999999|
+G|7362|Bopfingen|00-9999999|
+G|7363|Lauchheim|00-9999999|
+G|7364|Oberkochen|00-9999999|
+G|7365|Essingen Württemberg|00-9999999|
+G|7366|Abtsgmünd|00-9999999|
+G|7367|Aalen-Ebnat|00-9999999|
+G|7371|Riedlingen Württemberg|00-9999999|
+G|7373|Zwiefalten|00-9999999|
+G|7374|Uttenweiler|00-9999999|
+G|7375|Obermarchtal|00-9999999|
+G|7376|Langenenslingen|00-9999999|
+G|7381|Münsingen|00-9999999|
+G|7382|Römerstein|00-9999999|
+G|7383|Münsingen-Buttenhausen|00-9999999|
+G|7384|Schelklingen-Hütten|00-9999999|
+G|7385|Gomadingen|00-9999999|
+G|7386|Hayingen|00-9999999|
+G|7387|Hohenstein Württemberg|00-9999999|
+G|7388|Pfronstetten|00-9999999|
+G|7389|Heroldstatt|00-9999999|
+G|7391|Ehingen Donau|00-9999999|
+G|7392|Laupheim|00-9999999|
+G|7393|Munderkingen|00-9999999|
+G|7394|Schelklingen|00-9999999|
+G|7395|Ehingen-Dächingen|00-9999999|
+G|7402|Fluorn-Winzeln|00-9999999|
+G|7403|Dunningen|00-9999999|
+G|7404|Epfendorf|00-9999999|
+G|741|Rottweil|000-99999999|
+G|7420|Deisslingen|00-9999999|
+G|7422|Schramberg|00-9999999|
+G|7423|Oberndorf am Neckar|00-9999999|
+G|7424|Spaichingen|00-9999999|
+G|7425|Trossingen|00-9999999|
+G|7426|Gosheim|00-9999999|
+G|7427|Schömberg bei Balingen|00-9999999|
+G|7428|Rosenfeld|00-9999999|
+G|7429|Egesheim|00-9999999|
+G|7431|Albstadt-Ebingen|00-9999999|
+G|7432|Albstadt-Tailfingen|00-9999999|
+G|7433|Balingen|00-9999999|
+G|7434|Winterlingen|00-9999999|
+G|7435|Albstadt-Laufen|00-9999999|
+G|7436|Messstetten-Oberdigisheim|00-9999999|
+G|7440|Bad Rippoldsau|00-9999999|
+G|7441|Freudenstadt|00-9999999|
+G|7442|Baiersbronn|00-9999999|
+G|7443|Dornstetten|00-9999999|
+G|7444|Alpirsbach|00-9999999|
+G|7445|Pfalzgrafenweiler|00-9999999|
+G|7446|Lossburg|00-9999999|
+G|7447|Baiersbronn-Schwarzenberg|00-9999999|
+G|7448|Seewald|00-9999999|
+G|7449|Baiersbronn-Obertal|00-9999999|
+G|7451|Horb am Neckar|00-9999999|
+G|7452|Nagold|00-9999999|
+G|7453|Altensteig Württemberg|00-9999999|
+G|7454|Sulz am Neckar|00-9999999|
+G|7455|Dornhan|00-9999999|
+G|7456|Haiterbach|00-9999999|
+G|7457|Rottenburg-Ergenzingen|00-9999999|
+G|7458|Ebhausen|00-9999999|
+G|7459|Nagold-Hochdorf|00-9999999|
+G|7461|Tuttlingen|00-9999999|
+G|7462|Immendingen|00-9999999|
+G|7463|Mühlheim an der Donau|00-9999999|
+G|7464|Talheim Kreis Tuttlingen|00-9999999|
+G|7465|Emmingen-Liptingen|00-9999999|
+G|7466|Beuron|00-9999999|
+G|7467|Neuhausen ob Eck|00-9999999|
+G|7471|Hechingen|00-9999999|
+G|7472|Rottenburg am Neckar|00-9999999|
+G|7473|Mössingen|00-9999999|
+G|7474|Haigerloch|00-9999999|
+G|7475|Burladingen|00-9999999|
+G|7476|Bisingen|00-9999999|
+G|7477|Jungingen bei Hechingen|00-9999999|
+G|7478|Hirrlingen|00-9999999|
+G|7482|Horb-Dettingen|00-9999999|
+G|7483|Horb-Mühringen|00-9999999|
+G|7484|Simmersfeld|00-9999999|
+G|7485|Empfingen|00-9999999|
+G|7486|Horb-Altheim|00-9999999|
+G|7502|Wolpertswende|00-9999999|
+G|7503|Wilhelmsdorf Württemberg|00-9999999|
+G|7504|Horgenzell|00-9999999|
+G|7505|Fronreute|00-9999999|
+G|7506|Wangen-Leupolz|00-9999999|
+G|751|Ravensburg|000-99999999|
+G|7520|Bodnegg|00-9999999|
+G|7522|Wangen im Allgäu|00-9999999|
+G|7524|Bad Waldsee|00-9999999|
+G|7525|Aulendorf|00-9999999|
+G|7527|Wolfegg|00-9999999|
+G|7528|Neukirch bei Tettnang|00-9999999|
+G|7529|Waldburg Württemberg|00-9999999|
+G|7531|Konstanz|00-9999999|
+G|7532|Meersburg|00-9999999|
+G|7533|Allensbach|00-9999999|
+G|7534|Reichenau Baden|00-9999999|
+G|7541|Friedrichshafen|00-9999999|
+G|7542|Tettnang|00-9999999|
+G|7543|Kressbronn am Bodensee|00-9999999|
+G|7544|Markdorf|00-9999999|
+G|7545|Immenstaad am Bodensee|00-9999999|
+G|7546|Oberteuringen|00-9999999|
+G|7551|Überlingen Bodensee|00-9999999|
+G|7552|Pfullendorf|00-9999999|
+G|7553|Salem Baden|00-9999999|
+G|7554|Heiligenberg Baden|00-9999999|
+G|7555|Deggenhausertal|00-9999999|
+G|7556|Uhldingen-Mühlhofen|00-9999999|
+G|7557|Herdwangen-Schönach|00-9999999|
+G|7558|Illmensee|00-9999999|
+G|7561|Leutkirch im Allgäu|00-9999999|
+G|7562|Isny im Allgäu|00-9999999|
+G|7563|Kisslegg|00-9999999|
+G|7564|Bad Wurzach|00-9999999|
+G|7565|Aichstetten Kreis Ravensburg|00-9999999|
+G|7566|Argenbühl|00-9999999|
+G|7567|Leutkirch-Friesenhofen|00-9999999|
+G|7568|Bad Wurzach-Hauerz|00-9999999|
+G|7569|Isny-Eisenbach|00-9999999|
+G|7570|Sigmaringen-Gutenstein|00-9999999|
+G|7571|Sigmaringen|00-9999999|
+G|7572|Mengen Württemberg|00-9999999|
+G|7573|Stetten am kalten Markt|00-9999999|
+G|7574|Gammertingen|00-9999999|
+G|7575|Messkirch|00-9999999|
+G|7576|Krauchenwies|00-9999999|
+G|7577|Veringenstadt|00-9999999|
+G|7578|Wald Hohenz|00-9999999|
+G|7579|Schwenningen Baden|00-9999999|
+G|7581|Saulgau|00-9999999|
+G|7582|Bad Buchau|00-9999999|
+G|7583|Bad Schussenried|00-9999999|
+G|7584|Altshausen|00-9999999|
+G|7585|Ostrach|00-9999999|
+G|7586|Herbertingen|00-9999999|
+G|7587|Hosskirch|00-9999999|
+G|7602|Oberried Breisgau|00-9999999|
+G|761|Freiburg im Breisgau|000-99999999|
+G|7620|Schopfheim-Gersbach|00-9999999|
+G|7621|Lörrach|00-9999999|
+G|7622|Schopfheim|00-9999999|
+G|7623|Rheinfelden Baden|00-9999999|
+G|7624|Grenzach-Wyhlen|00-9999999|
+G|7625|Zell im Wiesental|00-9999999|
+G|7626|Kandern|00-9999999|
+G|7627|Steinen Kreis Lörrach|00-9999999|
+G|7628|Efringen-Kirchen|00-9999999|
+G|7629|Tegernau Baden|00-9999999|
+G|7631|Müllheim Baden|00-9999999|
+G|7632|Badenweiler|00-9999999|
+G|7633|Staufen im Breisgau|00-9999999|
+G|7634|Sulzburg|00-9999999|
+G|7635|Schliengen|00-9999999|
+G|7636|Münstertal Schwarzwald|00-9999999|
+G|7641|Emmendingen|00-9999999|
+G|7642|Endingen Kaiserstuhl|00-9999999|
+G|7643|Herbolzheim Breisgau|00-9999999|
+G|7644|Kenzingen|00-9999999|
+G|7645|Freiamt|00-9999999|
+G|7646|Weisweil Breisgau|00-9999999|
+G|7651|Titisee-Neustadt|00-9999999|
+G|7652|Hinterzarten|00-9999999|
+G|7653|Lenzkirch|00-9999999|
+G|7654|Löffingen|00-9999999|
+G|7655|Feldberg-Altglashütten|00-9999999|
+G|7656|Schluchsee|00-9999999|
+G|7657|Eisenbach Hochschwarzwald|00-9999999|
+G|7660|St Peter Schwarzwald|00-9999999|
+G|7661|Kirchzarten|00-9999999|
+G|7662|Vogtsburg im Kaiserstuhl|00-9999999|
+G|7663|Eichstetten|00-9999999|
+G|7664|Freiburg-Tiengen|00-9999999|
+G|7665|March Breisgau|00-9999999|
+G|7666|Denzlingen|00-9999999|
+G|7667|Breisach am Rhein|00-9999999|
+G|7668|Ihringen|00-9999999|
+G|7669|St Märgen|00-9999999|
+G|7671|Todtnau|00-9999999|
+G|7672|St Blasien|00-9999999|
+G|7673|Schönau im Schwarzwald|00-9999999|
+G|7674|Todtmoos|00-9999999|
+G|7675|Bernau Baden|00-9999999|
+G|7676|Feldberg Schwarzwald|00-9999999|
+G|7681|Waldkirch Breisgau|00-9999999|
+G|7682|Elzach|00-9999999|
+G|7683|Simonswald|00-9999999|
+G|7684|Glottertal|00-9999999|
+G|7685|Gutach-Bleibach|00-9999999|
+G|7702|Blumberg Baden|00-9999999|
+G|7703|Bonndorf im Schwarzwald|00-9999999|
+G|7704|Geisingen Baden|00-9999999|
+G|7705|Wolterdingen Schwarzw|00-9999999|
+G|7706|Oberbaldingen|00-9999999|
+G|7707|Bräunlingen|00-9999999|
+G|7708|Geisingen-Leipferdingen|00-9999999|
+G|7709|Wutach|00-9999999|
+G|771|Donaueschingen|000-99999999|
+G|7720|Schwenningen am Neckar|00-9999999|
+G|7721|Villingen im Schwarzwald|00-9999999|
+G|7722|Triberg im Schwarzwald|00-9999999|
+G|7723|Furtwangen im Schwarzwald|00-9999999|
+G|7724|St Georgen im Schwarzwald|00-9999999|
+G|7725|Königsfeld im Schwarzwald|00-9999999|
+G|7726|Bad Dürrheim|00-9999999|
+G|7727|Vöhrenbach|00-9999999|
+G|7728|Niedereschach|00-9999999|
+G|7729|Tennenbronn|00-9999999|
+G|7731|Singen Hohentwiel|00-9999999|
+G|7732|Radolfzell am Bodensee|00-9999999|
+G|7733|Engen Hegau|00-9999999|
+G|7734|Gailingen|00-9999999|
+G|7735|Öhningen|00-9999999|
+G|7736|Tengen|00-9999999|
+G|7738|Steisslingen|00-9999999|
+G|7739|Hilzingen|00-9999999|
+G|7741|Tiengen Hochrhein|00-9999999|
+G|7742|Klettgau|00-9999999|
+G|7743|Ühlingen-Birkendorf|00-9999999|
+G|7744|Stühlingen|00-9999999|
+G|7745|Jestetten|00-9999999|
+G|7746|Wutöschingen|00-9999999|
+G|7747|Berau|00-9999999|
+G|7748|Grafenhausen Hochschwarzwald|00-9999999|
+G|7751|Waldshut|00-9999999|
+G|7753|Albbruck|00-9999999|
+G|7754|Görwihl|00-9999999|
+G|7755|Weilheim Kreis Waldshut|00-9999999|
+G|7761|Bad Säckingen|00-9999999|
+G|7762|Wehr Baden|00-9999999|
+G|7763|Murg|00-9999999|
+G|7764|Herrischried|00-9999999|
+G|7765|Rickenbach Hotzenwald|00-9999999|
+G|7771|Stockach|00-9999999|
+G|7773|Bodman-Ludwigshafen|00-9999999|
+G|7774|Eigeltingen|00-9999999|
+G|7775|Mühlingen|00-9999999|
+G|7777|Sauldorf|00-9999999|
+G|7802|Oberkirch Baden|00-9999999|
+G|7803|Gengenbach|00-9999999|
+G|7804|Oppenau|00-9999999|
+G|7805|Appenweier|00-9999999|
+G|7806|Bad Peterstal-Griesbach|00-9999999|
+G|7807|Neuried Ortenaukreis|00-9999999|
+G|7808|Hohberg bei Offenburg|00-9999999|
+G|781|Offenburg|000-99999999|
+G|7821|Lahr Schwarzwald|00-9999999|
+G|7822|Ettenheim|00-9999999|
+G|7823|Seelbach Schutter|00-9999999|
+G|7824|Schwanau|00-9999999|
+G|7825|Kippenheim|00-9999999|
+G|7826|Schuttertal|00-9999999|
+G|7831|Hausach|00-9999999|
+G|7832|Haslach im Kinzigtal|00-9999999|
+G|7833|Hornberg Schwarzwaldbahn|00-9999999|
+G|7834|Wolfach|00-9999999|
+G|7835|Zell am Harmersbach|00-9999999|
+G|7836|Schiltach|00-9999999|
+G|7837|Oberharmersbach|00-9999999|
+G|7838|Nordrach|00-9999999|
+G|7839|Schapbach|00-9999999|
+G|7841|Achern|00-9999999|
+G|7842|Kappelrodeck|00-9999999|
+G|7843|Renchen|00-9999999|
+G|7844|Rheinau|00-9999999|
+G|7851|Kehl|00-9999999|
+G|7852|Willstätt|00-9999999|
+G|7853|Kehl-Bodersweier|00-9999999|
+G|7854|Kehl-Goldscheuer|00-9999999|
+G|7903|Mainhardt|00-9999999|
+G|7904|Ilshofen|00-9999999|
+G|7905|Langenburg|00-9999999|
+G|7906|Braunsbach|00-9999999|
+G|7907|Schwäbisch Hall-Sulzdorf|00-9999999|
+G|791|Schwäbisch Hall|000-99999999|
+G|7930|Boxberg Baden|00-9999999|
+G|7931|Bad Mergentheim|00-9999999|
+G|7932|Niederstetten Württemberg|00-9999999|
+G|7933|Creglingen|00-9999999|
+G|7934|Weikersheim|00-9999999|
+G|7935|Schrozberg|00-9999999|
+G|7936|Schrozberg-Bartenstein|00-9999999|
+G|7937|Dörzbach|00-9999999|
+G|7938|Mulfingen Jagst|00-9999999|
+G|7939|Schrozberg-Spielbach|00-9999999|
+G|7940|Künzelsau|00-9999999|
+G|7941|Öhringen|00-9999999|
+G|7942|Neuenstein Württemberg|00-9999999|
+G|7943|Schöntal Jagst|00-9999999|
+G|7944|Kupferzell|00-9999999|
+G|7945|Wüstenrot|00-9999999|
+G|7946|Bretzfeld|00-9999999|
+G|7947|Forchtenberg|00-9999999|
+G|7948|Öhringen-Ohrnberg|00-9999999|
+G|7949|Pfedelbach-Untersteinbach|00-9999999|
+G|7950|Schnelldorf|00-9999999|
+G|7951|Crailsheim|00-9999999|
+G|7952|Gerabronn|00-9999999|
+G|7953|Blaufelden|00-9999999|
+G|7954|Kirchberg an der Jagst|00-9999999|
+G|7955|Wallhausen Württemberg|00-9999999|
+G|7957|Kressberg|00-9999999|
+G|7958|Rot Am See-Brettheim|00-9999999|
+G|7959|Frankenhardt|00-9999999|
+G|7961|Ellwangen Jagst|00-9999999|
+G|7962|Fichtenau|00-9999999|
+G|7963|Adelmannsfelden|00-9999999|
+G|7964|Stödtlen|00-9999999|
+G|7965|Ellwangen-Röhlingen|00-9999999|
+G|7966|Unterschneidheim|00-9999999|
+G|7967|Jagstzell|00-9999999|
+G|7971|Gaildorf|00-9999999|
+G|7972|Gschwend bei Gaildorf|00-9999999|
+G|7973|Obersontheim|00-9999999|
+G|7974|Bühlerzell|00-9999999|
+G|7975|Untergröningen|00-9999999|
+G|7976|Sulzbach-Laufen|00-9999999|
+G|7977|Oberrot bei Gaildorf|00-9999999|
+N|800||0000000-9999999|F
+G|8020|Weyarn|00-9999999|
+G|8021|Waakirchen|00-9999999|
+G|8022|Tegernsee|00-9999999|
+G|8023|Bayrischzell|00-9999999|
+G|8024|Holzkirchen|00-9999999|
+G|8025|Miesbach|00-9999999|
+G|8026|Hausham|00-9999999|
+G|8027|Dietramszell|00-9999999|
+G|8028|Fischbachau|00-9999999|
+G|8029|Kreuth bei Tegernsee|00-9999999|
+G|8031|Rosenheim Oberbayern|00-9999999|
+G|8032|Rohrdorf Kreis Rosenheim|00-9999999|
+G|8033|Oberaudorf|00-9999999|
+G|8034|Brannenburg|00-9999999|
+G|8035|Raubling|00-9999999|
+G|8036|Stephanskirchen Simssee|00-9999999|
+G|8038|Vogtareuth|00-9999999|
+G|8039|Rott am Inn|00-9999999|
+G|8041|Bad Tölz|00-9999999|
+G|8042|Lenggries|00-9999999|
+G|8043|Jachenau|00-9999999|
+G|8045|Lenggries-Fall|00-9999999|
+G|8046|Bad Heilbrunn|00-9999999|
+G|8051|Prien am Chiemsee|00-9999999|
+G|8052|Aschau im Chiemgau|00-9999999|
+G|8053|Bad Endorf|00-9999999|
+G|8054|Breitbrunn am Chiemsee|00-9999999|
+G|8055|Halfing|00-9999999|
+G|8056|Eggstätt|00-9999999|
+G|8057|Aschau-Sachrang|00-9999999|
+G|8061|Bad Aibling|00-9999999|
+G|8062|Bruckmühl Mangfall|00-9999999|
+G|8063|Feldkirchen-Westerham|00-9999999|
+G|8064|Au bei Bad Aibling|00-9999999|
+G|8065|Tuntenhausen-Schönau|00-9999999|
+G|8066|Bad Feilnbach|00-9999999|
+G|8067|Tuntenhausen|00-9999999|
+G|8071|Wasserburg am Inn|00-9999999|
+G|8072|Haag in Oberbayern|00-9999999|
+G|8073|Gars am Inn|00-9999999|
+G|8074|Schnaitsee|00-9999999|
+G|8075|Amerang|00-9999999|
+G|8076|Pfaffing|00-9999999|
+G|8081|Dorfen Stadt|00-9999999|
+G|8082|Schwindegg|00-9999999|
+G|8083|Isen|00-9999999|
+G|8084|Taufkirchen Vils|00-9999999|
+G|8085|Sankt Wolfgang|00-9999999|
+G|8086|Buchbach Oberbayern|00-9999999|
+G|8091|Kirchseeon|00-9999999|
+G|8092|Grafing bei München|00-9999999|
+G|8093|Glonn Kreis Ebersberg|00-9999999|
+G|8094|Steinhöring|00-9999999|
+G|8095|Aying|00-9999999|
+G|8102|Höhenkirchen-Siegertsbrunn|00-9999999|
+G|8104|Sauerlach|00-9999999|
+G|8105|Gilching|00-9999999|
+G|8106|Vaterstetten|00-9999999|
+G|811|Hallbergmoos|000-99999999|
+G|8121|Markt Schwaben|00-9999999|
+G|8122|Erding|00-9999999|
+G|8123|Moosinning|00-9999999|
+G|8124|Forstern Oberbayern|00-9999999|
+G|8131|Dachau|00-9999999|
+G|8133|Haimhausen Oberbayern|00-9999999|
+G|8134|Odelzhausen|00-9999999|
+G|8135|Sulzemoos|00-9999999|
+G|8136|Markt Indersdorf|00-9999999|
+G|8137|Petershausen|00-9999999|
+G|8138|Schwabhausen bei Dachau|00-9999999|
+G|8139|Röhrmoos|00-9999999|
+G|8141|Fürstenfeldbruck|00-9999999|
+G|8142|Olching|00-9999999|
+G|8143|Inning am Ammersee|00-9999999|
+G|8144|Grafrath|00-9999999|
+G|8145|Mammendorf|00-9999999|
+G|8146|Moorenweis|00-9999999|
+G|8151|Starnberg|00-9999999|
+G|8152|Herrsching am Ammersee|00-9999999|
+G|8153|Wessling|00-9999999|
+G|8157|Feldafing|00-9999999|
+G|8158|Tutzing|00-9999999|
+G|8161|Freising|00-9999999|
+G|8165|Neufahrn bei Freising|00-9999999|
+G|8166|Allershausen Oberbayern|00-9999999|
+G|8167|Zolling|00-9999999|
+G|8168|Attenkirchen|00-9999999|
+G|8170|Straßlach-Dingharting|00-9999999|
+G|8171|Wolfratshausen|00-9999999|
+G|8176|Egling bei Wolfratshausen|00-9999999|
+G|8177|Münsing Starnberger See|00-9999999|
+G|8178|Icking|00-9999999|
+G|8179|Eurasburg an der Loisach|00-9999999|
+G|8191|Landsberg am Lech|00-9999999|
+G|8192|Schondorf am Ammersee|00-9999999|
+G|8193|Geltendorf|00-9999999|
+G|8194|Vilgertshofen|00-9999999|
+G|8195|Weil Kreis Landsberg am Lech|00-9999999|
+G|8196|Pürgen|00-9999999|
+G|8202|Althegnenberg|00-9999999|
+G|8203|Grossaitingen|00-9999999|
+G|8204|Mickhausen|00-9999999|
+G|8205|Dasing|00-9999999|
+G|8206|Egling an der Paar|00-9999999|
+G|8207|Affing|00-9999999|
+G|8208|Eurasburg bei Augsburg|00-9999999|
+G|821|Augsburg|000-99999999|
+G|8221|Günzburg|00-9999999|
+G|8222|Burgau Schwaben|00-9999999|
+G|8223|Ichenhausen|00-9999999|
+G|8224|Offingen Donau|00-9999999|
+G|8225|Jettingen-Scheppach|00-9999999|
+G|8226|Bibertal|00-9999999|
+G|8230|Gablingen|00-9999999|
+G|8231|Königsbrunn bei Augsburg|00-9999999|
+G|8232|Schwabmünchen|00-9999999|
+G|8233|Kissing|00-9999999|
+G|8234|Bobingen|00-9999999|
+G|8236|Fischach|00-9999999|
+G|8237|Aindling|00-9999999|
+G|8238|Gessertshausen|00-9999999|
+G|8239|Langenneufnach|00-9999999|
+G|8241|Buchloe|00-9999999|
+G|8243|Fuchstal|00-9999999|
+G|8245|Türkheim Wertach|00-9999999|
+G|8246|Waal|00-9999999|
+G|8247|Bad Wörishofen|00-9999999|
+G|8248|Lamerdingen|00-9999999|
+G|8249|Ettringen Wertach|00-9999999|
+G|8250|Hilgertshausen-Tandern|00-9999999|
+G|8251|Aichach|00-9999999|
+G|8252|Schrobenhausen|00-9999999|
+G|8253|Pöttmes|00-9999999|
+G|8254|Altomünster|00-9999999|
+G|8257|Inchenhofen|00-9999999|
+G|8258|Sielenbach|00-9999999|
+G|8259|Schiltberg|00-9999999|
+G|8261|Mindelheim|00-9999999|
+G|8262|Mittelneufnach|00-9999999|
+G|8263|Breitenbrunn Schwaben|00-9999999|
+G|8265|Pfaffenhausen Schwaben|00-9999999|
+G|8266|Kirchheim in Schwaben|00-9999999|
+G|8267|Dirlewang|00-9999999|
+G|8268|Tussenhausen|00-9999999|
+G|8269|Unteregg bei Mindelheim|00-9999999|
+G|8271|Meitingen|00-9999999|
+G|8272|Wertingen|00-9999999|
+G|8273|Nordendorf|00-9999999|
+G|8274|Buttenwiesen|00-9999999|
+G|8276|Baar Schwaben|00-9999999|
+G|8281|Thannhausen Schwaben|00-9999999|
+G|8282|Krumbach Schwaben|00-9999999|
+G|8283|Neuburg an der Kammel|00-9999999|
+G|8284|Ziemetshausen|00-9999999|
+G|8285|Burtenbach|00-9999999|
+G|8291|Zusmarshausen|00-9999999|
+G|8292|Dinkelscherben|00-9999999|
+G|8293|Welden bei Augsburg|00-9999999|
+G|8294|Horgau|00-9999999|
+G|8295|Altenmünster Schwaben|00-9999999|
+G|8296|Villenbach|00-9999999|
+G|8302|Görisried|00-9999999|
+G|8303|Waltenhofen|00-9999999|
+G|8304|Wildpoldsried|00-9999999|
+G|8306|Ronsberg|00-9999999|
+G|831|Kempten Allgäu|000-99999999|
+G|8320|Missen-Wilhams|00-9999999|
+G|8321|Sonthofen|00-9999999|
+G|8322|Oberstdorf|00-9999999|
+G|8323|Immenstadt im Allgäu|00-9999999|
+G|8324|Hindelang|00-9999999|
+G|8325|Oberstaufen-Thalkirchdorf|00-9999999|
+G|8326|Fischen im Allgäu|00-9999999|
+G|8327|Rettenberg|00-9999999|
+G|8328|Balderschwang|00-9999999|
+G|8330|Legau|00-9999999|
+G|8331|Memmingen|00-9999999|
+G|8332|Ottobeuren|00-9999999|
+G|8333|Babenhausen Schwaben|00-9999999|
+G|8334|Bad Grönenbach|00-9999999|
+G|8335|Fellheim|00-9999999|
+G|8336|Erkheim|00-9999999|
+G|8337|Altenstadt Iller|00-9999999|
+G|8338|Böhen|00-9999999|
+G|8340|Baisweil|00-9999999|
+G|8341|Kaufbeuren|00-9999999|
+G|8342|Marktoberdorf|00-9999999|
+G|8343|Aitrang|00-9999999|
+G|8344|Westendorf bei Kaufbeuren|00-9999999|
+G|8345|Stöttwang|00-9999999|
+G|8346|Pforzen|00-9999999|
+G|8347|Friesenried|00-9999999|
+G|8348|Bidingen|00-9999999|
+G|8349|Stötten am Auerberg|00-9999999|
+G|8361|Nesselwang|00-9999999|
+G|8362|Füssen|00-9999999|
+G|8363|Pfronten|00-9999999|
+G|8364|Seeg|00-9999999|
+G|8365|Wertach|00-9999999|
+G|8366|Oy-Mittelberg|00-9999999|
+G|8367|Roßhaupten Forggensee|00-9999999|
+G|8368|Halblech|00-9999999|
+G|8369|Rückholz|00-9999999|
+G|8370|Wiggensbach|00-9999999|
+G|8372|Obergünzburg|00-9999999|
+G|8373|Altusried|00-9999999|
+G|8374|Dietmannsried|00-9999999|
+G|8375|Weitnau|00-9999999|
+G|8376|Sulzberg Allgäu|00-9999999|
+G|8377|Unterthingau|00-9999999|
+G|8378|Buchenberg bei Kempten|00-9999999|
+G|8379|Waltenhofen-Oberdorf|00-9999999|
+G|8380|Achberg|00-9999999|
+G|8381|Lindenberg im Allgäu|00-9999999|
+G|8382|Lindau Bodensee|00-9999999|
+G|8383|Grünenbach Allgäu|00-9999999|
+G|8384|Röthenbach Allgäu|00-9999999|
+G|8385|Hergatz|00-9999999|
+G|8386|Oberstaufen|00-9999999|
+G|8387|Weiler-Simmerberg|00-9999999|
+G|8388|Hergensweiler|00-9999999|
+G|8389|Weissensberg|00-9999999|
+G|8392|Markt Rettenbach|00-9999999|
+G|8393|Holzgünz|00-9999999|
+G|8394|Lautrach|00-9999999|
+G|8395|Tannheim Württemberg|00-9999999|
+G|8402|Münchsmünster|00-9999999|
+G|8403|Pförring|00-9999999|
+G|8404|Oberdolling|00-9999999|
+G|8405|Stammham bei Ingolstadt|00-9999999|
+G|8406|Böhmfeld|00-9999999|
+G|8407|Grossmehring|00-9999999|
+G|841|Ingolstadt Donau|000-99999999|
+G|8421|Eichstätt Bayern|00-9999999|
+G|8422|Dollnstein|00-9999999|
+G|8423|Titting|00-9999999|
+G|8424|Nassenfels|00-9999999|
+G|8426|Walting Kreis Eichstätt|00-9999999|
+G|8427|Wellheim|00-9999999|
+G|8431|Neuburg an der Donau|00-9999999|
+G|8432|Burgheim|00-9999999|
+G|8433|Königsmoos|00-9999999|
+G|8434|Rennertshofen|00-9999999|
+G|8435|Ehekirchen|00-9999999|
+G|8441|Pfaffenhofen an der Ilm|00-9999999|
+G|8442|Wolnzach|00-9999999|
+G|8443|Hohenwart Paar|00-9999999|
+G|8444|Schweitenkirchen|00-9999999|
+G|8445|Gerolsbach|00-9999999|
+G|8446|Pörnbach|00-9999999|
+G|8450|Ingolstadt-Zuchering|00-9999999|
+G|8452|Geisenfeld|00-9999999|
+G|8453|Reichertshofen Oberbayern|00-9999999|
+G|8454|Karlshuld|00-9999999|
+G|8456|Lenting|00-9999999|
+G|8457|Vohburg an der Donau|00-9999999|
+G|8458|Gaimersheim|00-9999999|
+G|8459|Manching|00-9999999|
+G|8460|Berching-Holnstein|00-9999999|
+G|8461|Beilngries|00-9999999|
+G|8462|Berching|00-9999999|
+G|8463|Greding|00-9999999|
+G|8464|Dietfurt an der Altmühl|00-9999999|
+G|8465|Kipfenberg|00-9999999|
+G|8466|Denkendorf Oberbayern|00-9999999|
+G|8467|Kinding|00-9999999|
+G|8468|Altmannstein-Pondorf|00-9999999|
+G|8469|Freystadt-Burggriesbach|00-9999999|
+G|8501|Thyrnau|00-9999999|
+G|8502|Fürstenzell|00-9999999|
+G|8503|Neuhaus am Inn|00-9999999|
+G|8504|Tittling|00-9999999|
+G|8505|Hutthurm|00-9999999|
+G|8506|Bad Höhenstadt|00-9999999|
+G|8507|Neuburg am Inn|00-9999999|
+G|8509|Ruderting|00-9999999|
+G|851|Passau|000-99999999|
+G|8531|Pocking|00-9999999|
+G|8532|Griesbach im Rottal|00-9999999|
+G|8533|Rotthalmünster|00-9999999|
+G|8534|Tettenweis|00-9999999|
+G|8535|Haarbach|00-9999999|
+G|8536|Kößlarn|00-9999999|
+G|8537|Bad Füssing-Aigen|00-9999999|
+G|8538|Pocking-Hartkirchen|00-9999999|
+G|8541|Vilshofen Niederbayern|00-9999999|
+G|8542|Ortenburg|00-9999999|
+G|8543|Aidenbach|00-9999999|
+G|8544|Eging am See|00-9999999|
+G|8545|Hofkirchen Bayern|00-9999999|
+G|8546|Windorf-Otterskirchen|00-9999999|
+G|8547|Osterhofen-Gergweis|00-9999999|
+G|8548|Vilshofen-Sandbach|00-9999999|
+G|8549|Vilshofen-Pleinting|00-9999999|
+G|8550|Philippsreut|00-9999999|
+G|8551|Freyung|00-9999999|
+G|8552|Grafenau Niederbayern|00-9999999|
+G|8553|Spiegelau|00-9999999|
+G|8554|Schönberg Niederbayern|00-9999999|
+G|8555|Perlesreut|00-9999999|
+G|8556|Haidmühle|00-9999999|
+G|8557|Mauth|00-9999999|
+G|8558|Hohenau Niederbayern|00-9999999|
+G|8561|Pfarrkirchen Niederbayern|00-9999999|
+G|8562|Triftern|00-9999999|
+G|8563|Bad Birnbach Rottal|00-9999999|
+G|8564|Johanniskirchen|00-9999999|
+G|8565|Dietersburg-Baumgarten|00-9999999|
+G|8571|Simbach am Inn|00-9999999|
+G|8572|Tann Niederbayern|00-9999999|
+G|8573|Ering|00-9999999|
+G|8574|Wittibreut|00-9999999|
+G|8581|Waldkirchen Niederbayern|00-9999999|
+G|8582|Röhrnbach|00-9999999|
+G|8583|Neureichenau|00-9999999|
+G|8584|Breitenberg Niederbayern|00-9999999|
+G|8585|Grainet|00-9999999|
+G|8586|Hauzenberg|00-9999999|
+G|8591|Obernzell|00-9999999|
+G|8592|Wegscheid Niederbayern|00-9999999|
+G|8593|Untergriesbach|00-9999999|
+G|861|Traunstein|000-99999999|
+G|8621|Trostberg|00-9999999|
+G|8622|Tacherting-Peterskirchen|00-9999999|
+G|8623|Kirchweidach|00-9999999|
+G|8624|Obing|00-9999999|
+G|8628|Kienberg Oberbayern|00-9999999|
+G|8629|Palling|00-9999999|
+G|8630|Oberneukirchen|00-9999999|
+G|8631|Mühldorf am Inn|00-9999999|
+G|8633|Tüßling|00-9999999|
+G|8634|Garching an der Alz|00-9999999|
+G|8635|Pleiskirchen|00-9999999|
+G|8636|Ampfing|00-9999999|
+G|8637|Lohkirchen|00-9999999|
+G|8638|Waldkraiburg|00-9999999|
+G|8639|Neumarkt-Sankt Veit|00-9999999|
+G|8640|Reit Im Winkl|00-9999999|
+G|8641|Grassau Kreis Traunstein|00-9999999|
+G|8642|Übersee|00-9999999|
+G|8649|Schleching|00-9999999|
+G|8650|Marktschellenberg|00-9999999|
+G|8651|Bad Reichenhall|00-9999999|
+G|8652|Berchtesgaden|00-9999999|
+G|8654|Freilassing|00-9999999|
+G|8656|Anger|00-9999999|
+G|8657|Ramsau bei Berchtesgaden|00-9999999|
+G|8661|Grabenstätt Chiemsee|00-9999999|
+G|8662|Siegsdorf Kreis Traunstein|00-9999999|
+G|8663|Ruhpolding|00-9999999|
+G|8664|Chieming|00-9999999|
+G|8665|Inzell|00-9999999|
+G|8666|Teisendorf|00-9999999|
+G|8667|Seeon-Seebruck|00-9999999|
+G|8669|Traunreut|00-9999999|
+G|8670|Reischach Kreis Altötting|00-9999999|
+G|8671|Altötting|00-9999999|
+G|8677|Burghausen Salzach|00-9999999|
+G|8678|Marktl|00-9999999|
+G|8679|Burgkirchen an der Alz|00-9999999|
+G|8681|Waging am See|00-9999999|
+G|8682|Laufen Salzach|00-9999999|
+G|8683|Tittmoning|00-9999999|
+G|8684|Fridolfing|00-9999999|
+G|8685|Kirchanschöring|00-9999999|
+G|8686|Petting|00-9999999|
+G|8687|Taching-Tengling|00-9999999|
+G|8702|Wörth an der Isar|00-9999999|
+G|8703|Essenbach|00-9999999|
+G|8704|Altdorf-Pfettrach|00-9999999|
+G|8705|Altfraunhofen|00-9999999|
+G|8706|Vilsheim|00-9999999|
+G|8707|Adlkofen|00-9999999|
+G|8708|Weihmichl-Unterneuhausen|00-9999999|
+G|8709|Eching Niederbayern|00-9999999|
+G|871|Landshut|000-99999999|
+G|8721|Eggenfelden|00-9999999|
+G|8722|Gangkofen|00-9999999|
+G|8723|Arnstorf|00-9999999|
+G|8724|Massing|00-9999999|
+G|8725|Wurmannsquick|00-9999999|
+G|8726|Schönau Niederbayern|00-9999999|
+G|8727|Falkenberg Niederbayern|00-9999999|
+G|8728|Geratskirchen|00-9999999|
+G|8731|Dingolfing|00-9999999|
+G|8732|Frontenhausen|00-9999999|
+G|8733|Mengkofen|00-9999999|
+G|8734|Reisbach Niederbayern|00-9999999|
+G|8735|Gangkofen-Kollbach|00-9999999|
+G|8741|Vilsbiburg|00-9999999|
+G|8742|Velden Vils|00-9999999|
+G|8743|Geisenhausen|00-9999999|
+G|8744|Gerzen|00-9999999|
+G|8745|Bodenkirchen|00-9999999|
+G|8751|Mainburg|00-9999999|
+G|8752|Au in der Hallertau|00-9999999|
+G|8753|Elsendorf Niederbayern|00-9999999|
+G|8754|Volkenschwand|00-9999999|
+G|8756|Nandlstadt|00-9999999|
+G|8761|Moosburg an der Isar|00-9999999|
+G|8762|Wartenberg Oberbayern|00-9999999|
+G|8764|Mauern Kreis Freising|00-9999999|
+G|8765|Bruckberg Niederbayern|00-9999999|
+G|8766|Gammelsdorf|00-9999999|
+G|8771|Ergoldsbach|00-9999999|
+G|8772|Mallersdorf-Pfaffenberg|00-9999999|
+G|8773|Neufahrn in Niederbayern|00-9999999|
+G|8774|Bayerbach bei Ergoldsbach|00-9999999|
+G|8781|Rottenburg an der Laaber|00-9999999|
+G|8782|Pfeffenhausen|00-9999999|
+G|8783|Rohr in Niederbayern|00-9999999|
+G|8784|Hohenthann|00-9999999|
+G|8785|Rottenburg-Oberroning|00-9999999|
+G|8801|Seeshaupt|00-9999999|
+G|8802|Huglfing|00-9999999|
+G|8803|Peissenberg|00-9999999|
+G|8805|Hohenpeissenberg|00-9999999|
+G|8806|Utting am Ammersee|00-9999999|
+G|8807|Dießen am Ammersee|00-9999999|
+G|8808|Pähl|00-9999999|
+G|8809|Wessobrunn|00-9999999|
+G|881|Weilheim in Oberbayern|000-99999999|
+G|8821|Garmisch-Partenkirchen|00-9999999|
+G|8822|Oberammergau|00-9999999|
+G|8823|Mittenwald|00-9999999|
+G|8824|Oberau Loisach|00-9999999|
+G|8825|Krün|00-9999999|
+G|8841|Murnau am Staffelsee|00-9999999|
+G|8845|Bad Kohlgrub|00-9999999|
+G|8846|Uffing am Staffelsee|00-9999999|
+G|8847|Obersöchering|00-9999999|
+G|8851|Kochel am See|00-9999999|
+G|8856|Penzberg|00-9999999|
+G|8857|Benediktbeuern|00-9999999|
+G|8858|Kochel-Walchensee|00-9999999|
+G|8860|Bernbeuren|00-9999999|
+G|8861|Schongau|00-9999999|
+G|8862|Steingaden Oberbayern|00-9999999|
+G|8867|Rottenbuch Oberbayern|00-9999999|
+G|8868|Schwabsoien|00-9999999|
+G|8869|Kinsau|00-9999999|
+G|89|München|000-999999999|
+N|9001||000000-999999|R
+N|9003||000000-999999|R
+N|9005||000000-999999|R
+N|9009||0000000-9999999|R
+G|906|Donauwörth|000-99999999|
+G|9070|Tapfheim|00-9999999|
+G|9071|Dillingen an der Donau|00-9999999|
+G|9072|Lauingen Donau|00-9999999|
+G|9073|Gundelfingen an der Donau|00-9999999|
+G|9074|Höchstädt an der Donau|00-9999999|
+G|9075|Glött|00-9999999|
+G|9076|Wittislingen|00-9999999|
+G|9077|Bachhagel|00-9999999|
+G|9078|Mertingen|00-9999999|
+G|9080|Harburg Schwaben|00-9999999|
+G|9081|Nördlingen|00-9999999|
+G|9082|Oettingen in Bayern|00-9999999|
+G|9083|Möttingen|00-9999999|
+G|9084|Bissingen Schwaben|00-9999999|
+G|9085|Alerheim|00-9999999|
+G|9086|Fremdingen|00-9999999|
+G|9087|Marktoffingen|00-9999999|
+G|9088|Mönchsdeggingen|00-9999999|
+G|9089|Bissingen-Unterringingen|00-9999999|
+G|9090|Rain Lech|00-9999999|
+G|9091|Monheim Schwaben|00-9999999|
+G|9092|Wemding|00-9999999|
+G|9093|Polsingen|00-9999999|
+G|9094|Tagmersheim|00-9999999|
+G|9097|Marxheim|00-9999999|
+G|9099|Kaisheim|00-9999999|
+G|9101|Langenzenn|00-9999999|
+G|9102|Wilhermsdorf|00-9999999|
+G|9103|Cadolzburg|00-9999999|
+G|9104|Emskirchen|00-9999999|
+G|9105|Grosshabersdorf|00-9999999|
+G|9106|Markt Erlbach|00-9999999|
+G|9107|Trautskirchen|00-9999999|
+G|911|Nürnberg|000-99999999|
+G|9120|Leinburg|00-9999999|
+G|9122|Schwabach|00-9999999|
+G|9123|Lauf an der Pegnitz|00-9999999|
+G|9126|Eckental|00-9999999|
+G|9127|Rosstal Mittelfrankenanken|00-9999999|
+G|9128|Feucht|00-9999999|
+G|9129|Wendelstein|00-9999999|
+G|9131|Erlangen|00-9999999|
+G|9132|Herzogenaurach|00-9999999|
+G|9133|Baiersdorf Mittelfrankenanken|00-9999999|
+G|9134|Neunkirchen am Brand|00-9999999|
+G|9135|Heßdorf Mittelfrankenanken|00-9999999|
+G|9141|Weißenburg in Bayern|00-9999999|
+G|9142|Treuchtlingen|00-9999999|
+G|9143|Pappenheim Mittelfranken|00-9999999|
+G|9144|Pleinfeld|00-9999999|
+G|9145|Solnhofen|00-9999999|
+G|9146|Markt Berolzheim|00-9999999|
+G|9147|Nennslingen|00-9999999|
+G|9148|Ettenstatt|00-9999999|
+G|9149|Weissenburg-Suffersheim|00-9999999|
+G|9151|Hersbruck|00-9999999|
+G|9152|Hartenstein Mittelfranken|00-9999999|
+G|9153|Schnaittach|00-9999999|
+G|9154|Pommelsbrunn|00-9999999|
+G|9155|Simmelsdorf|00-9999999|
+G|9156|Neuhaus an der Pegnitz|00-9999999|
+G|9157|Alfeld Mittelfranken|00-9999999|
+G|9158|Offenhausen Mittelfranken|00-9999999|
+G|9161|Neustadt an der Aisch|00-9999999|
+G|9162|Scheinfeld|00-9999999|
+G|9163|Dachsbach|00-9999999|
+G|9164|Langenfeld Mittelfranken|00-9999999|
+G|9165|Sugenheim|00-9999999|
+G|9166|Münchsteinach|00-9999999|
+G|9167|Oberscheinfeld|00-9999999|
+G|9170|Schwanstetten|00-9999999|
+G|9171|Roth Mittelfranken|00-9999999|
+G|9172|Georgensgmünd|00-9999999|
+G|9173|Thalmässing|00-9999999|
+G|9174|Hilpoltstein|00-9999999|
+G|9175|Spalt|00-9999999|
+G|9176|Allersberg|00-9999999|
+G|9177|Heideck|00-9999999|
+G|9178|Abenberg Mittelfranken|00-9999999|
+G|9179|Freystadt|00-9999999|
+G|9180|Pyrbaum|00-9999999|
+G|9181|Neumarkt in der Oberpfalz|00-9999999|
+G|9182|Velburg|00-9999999|
+G|9183|Burgthann|00-9999999|
+G|9184|Deining Oberpfalz|00-9999999|
+G|9185|Mühlhausen Oberpfalz|00-9999999|
+G|9186|Lauterhofen Oberpfalz|00-9999999|
+G|9187|Altdorf bei Nürnberg|00-9999999|
+G|9188|Postbauer-Heng|00-9999999|
+G|9189|Berg bei Neumarkt in der Oberpfalz|00-9999999|
+G|9190|Heroldsbach|00-9999999|
+G|9191|Forchheim Oberfranken|00-9999999|
+G|9192|Gräfenberg|00-9999999|
+G|9193|Höchstadt an der Aisch|00-9999999|
+G|9194|Ebermannstadt|00-9999999|
+G|9195|Adelsdorf Mittelfranken|00-9999999|
+G|9196|Wiesenttal|00-9999999|
+G|9197|Egloffstein|00-9999999|
+G|9198|Heiligenstadt in Oberfranken|00-9999999|
+G|9199|Kunreuth|00-9999999|
+G|9201|Gesees|00-9999999|
+G|9202|Waischenfeld|00-9999999|
+G|9203|Neudrossenfeld|00-9999999|
+G|9204|Plankenfels|00-9999999|
+G|9205|Vorbach|00-9999999|
+G|9206|Mistelgau-Obernsees|00-9999999|
+G|9207|Königsfeld Oberfranken|00-9999999|
+G|9208|Bindlach|00-9999999|
+G|9209|Emtmannsberg|00-9999999|
+G|921|Bayreuth|000-99999999|
+G|9220|Kasendorf-Azendorf|00-9999999|
+G|9221|Kulmbach|00-9999999|
+G|9222|Presseck|00-9999999|
+G|9223|Rugendorf|00-9999999|
+G|9225|Stadtsteinach|00-9999999|
+G|9227|Neuenmarkt|00-9999999|
+G|9228|Thurnau|00-9999999|
+G|9229|Mainleus|00-9999999|
+G|9231|Marktredwitz|00-9999999|
+G|9232|Wunsiedel|00-9999999|
+G|9233|Arzberg Oberfranken|00-9999999|
+G|9234|Neusorg|00-9999999|
+G|9235|Thierstein|00-9999999|
+G|9236|Nagel|00-9999999|
+G|9238|Röslau|00-9999999|
+G|9241|Pegnitz|00-9999999|
+G|9242|Gößweinstein|00-9999999|
+G|9243|Pottenstein|00-9999999|
+G|9244|Betzenstein|00-9999999|
+G|9245|Obertrubach|00-9999999|
+G|9246|Pegnitz-Trockau|00-9999999|
+G|9251|Münchberg|00-9999999|
+G|9252|Helmbrechts|00-9999999|
+G|9253|Weissenstadt|00-9999999|
+G|9254|Gefrees|00-9999999|
+G|9255|Marktleugast|00-9999999|
+G|9256|Stammbach|00-9999999|
+G|9257|Zell Oberfranken|00-9999999|
+G|9260|Wilhelmsthal Oberfranken|00-9999999|
+G|9261|Kronach|00-9999999|
+G|9262|Wallenfels|00-9999999|
+G|9263|Ludwigsstadt|00-9999999|
+G|9264|Küps|00-9999999|
+G|9265|Pressig|00-9999999|
+G|9266|Mitwitz|00-9999999|
+G|9267|Nordhalben|00-9999999|
+G|9268|Teuschnitz|00-9999999|
+G|9269|Tettau Kreis Kronach|00-9999999|
+G|9270|Creussen|00-9999999|
+G|9271|Thurnau-Alladorf|00-9999999|
+G|9272|Fichtelberg|00-9999999|
+G|9273|Bad Berneck im Fichtelgebirge|00-9999999|
+G|9274|Hollfeld|00-9999999|
+G|9275|Speichersdorf|00-9999999|
+G|9276|Bischofsgrün|00-9999999|
+G|9277|Warmensteinach|00-9999999|
+G|9278|Weidenberg|00-9999999|
+G|9279|Mistelgau|00-9999999|
+G|9280|Selbitz Oberfranken|00-9999999|
+G|9281|Hof Saale|00-9999999|
+G|9282|Naila|00-9999999|
+G|9283|Rehau|00-9999999|
+G|9284|Schwarzenbach an der Saale|00-9999999|
+G|9285|Kirchenlamitz|00-9999999|
+G|9286|Oberkotzau|00-9999999|
+G|9287|Selb|00-9999999|
+G|9288|Bad Steben|00-9999999|
+G|9289|Schwarzenbach am Wald|00-9999999|
+G|9292|Konradsreuth|00-9999999|
+G|9293|Berg Oberfranken|00-9999999|
+G|9294|Regnitzlosau|00-9999999|
+G|9295|Töpen|00-9999999|
+G|9302|Rottendorf Unterfranken|00-9999999|
+G|9303|Eibelstadt|00-9999999|
+G|9305|Estenfeld|00-9999999|
+G|9306|Kist|00-9999999|
+G|9307|Altertheim|00-9999999|
+G|931|Würzburg|000-99999999|
+G|9321|Kitzingen|00-9999999|
+G|9323|Iphofen|00-9999999|
+G|9324|Dettelbach|00-9999999|
+G|9325|Kleinlangheim|00-9999999|
+G|9326|Markt Einersheim|00-9999999|
+G|9331|Ochsenfurt|00-9999999|
+G|9332|Marktbreit|00-9999999|
+G|9333|Sommerhausen|00-9999999|
+G|9334|Giebelstadt|00-9999999|
+G|9335|Aub Kreis Würzburg|00-9999999|
+G|9336|Bütthard|00-9999999|
+G|9337|Gaukönigshofen|00-9999999|
+G|9338|Röttingen Unterfranken|00-9999999|
+G|9339|Ippesheim|00-9999999|
+G|9340|Königheim-Brehmen|00-9999999|
+G|9341|Tauberbischofsheim|00-9999999|
+G|9342|Wertheim|00-9999999|
+G|9343|Lauda-Königshofen|00-9999999|
+G|9344|Gerchsheim|00-9999999|
+G|9345|Külsheim Baden|00-9999999|
+G|9346|Grünsfeld|00-9999999|
+G|9347|Wittighausen|00-9999999|
+G|9348|Werbach-Gamburg|00-9999999|
+G|9349|Werbach-Wenkheim|00-9999999|
+G|9350|Eussenheim-Hundsbach|00-9999999|
+G|9351|Gemünden am Main|00-9999999|
+G|9352|Lohr am Main|00-9999999|
+G|9353|Karlstadt|00-9999999|
+G|9354|Rieneck|00-9999999|
+G|9355|Frammersbach|00-9999999|
+G|9356|Burgsinn|00-9999999|
+G|9357|Gräfendorf Bayern|00-9999999|
+G|9358|Gössenheim|00-9999999|
+G|9359|Karlstadt-Wiesenfeld|00-9999999|
+G|9360|Thüngen|00-9999999|
+G|9363|Arnstein Unterfranken|00-9999999|
+G|9364|Zellingen|00-9999999|
+G|9365|Rimpar|00-9999999|
+G|9366|Geroldshausen Unterfranken|00-9999999|
+G|9367|Unterpleichfeld|00-9999999|
+G|9369|Uettingen|00-9999999|
+G|9371|Miltenberg|00-9999999|
+G|9372|Klingenberg am Main|00-9999999|
+G|9373|Amorbach|00-9999999|
+G|9374|Eschau|00-9999999|
+G|9375|Freudenberg Baden|00-9999999|
+G|9376|Collenberg|00-9999999|
+G|9377|Freudenberg-Boxtal|00-9999999|
+G|9378|Eichenbühl-Riedern|00-9999999|
+G|9381|Volkach|00-9999999|
+G|9382|Gerolzhofen|00-9999999|
+G|9383|Wiesentheid|00-9999999|
+G|9384|Schwanfeld|00-9999999|
+G|9385|Kolitzheim|00-9999999|
+G|9386|Prosselsheim|00-9999999|
+G|9391|Marktheidenfeld|00-9999999|
+G|9392|Faulbach Unterfranken|00-9999999|
+G|9393|Rothenfels Unterfranken|00-9999999|
+G|9394|Esselbach|00-9999999|
+G|9395|Triefenstein|00-9999999|
+G|9396|Urspringen bei Lohr|00-9999999|
+G|9397|Wertheim-Dertingen|00-9999999|
+G|9398|Birkenfeld bei Würzburg|00-9999999|
+G|9401|Neutraubling|00-9999999|
+G|9402|Regenstauf|00-9999999|
+G|9403|Donaustauf|00-9999999|
+G|9404|Nittendorf|00-9999999|
+G|9405|Bad Abbach|00-9999999|
+G|9406|Mintraching|00-9999999|
+G|9407|Wenzenbach|00-9999999|
+G|9408|Altenthann|00-9999999|
+G|9409|Pielenhofen|00-9999999|
+G|941|Regensburg|000-99999999|
+G|9420|Feldkirchen Niederbayern|00-9999999|
+G|9421|Straubing|00-9999999|
+G|9422|Bogen Niederbayern|00-9999999|
+G|9423|Geiselhöring|00-9999999|
+G|9424|Strasskirchen|00-9999999|
+G|9426|Oberschneiding|00-9999999|
+G|9427|Leiblfing|00-9999999|
+G|9428|Kirchroth|00-9999999|
+G|9429|Rain Niederbayern|00-9999999|
+G|9431|Schwandorf|00-9999999|
+G|9433|Nabburg|00-9999999|
+G|9434|Bodenwöhr|00-9999999|
+G|9435|Schwarzenfeld|00-9999999|
+G|9436|Nittenau|00-9999999|
+G|9438|Fensterbach|00-9999999|
+G|9439|Neunburg-Kemnath|00-9999999|
+G|9441|Kelheim|00-9999999|
+G|9442|Riedenburg|00-9999999|
+G|9443|Abensberg|00-9999999|
+G|9444|Siegenburg|00-9999999|
+G|9445|Neustadt an der Donau|00-9999999|
+G|9446|Altmannstein|00-9999999|
+G|9447|Essing|00-9999999|
+G|9448|Hausen Niederbayern|00-9999999|
+G|9451|Schierling|00-9999999|
+G|9452|Langquaid|00-9999999|
+G|9453|Thalmassing|00-9999999|
+G|9454|Aufhausen Oberpfalz|00-9999999|
+G|9461|Roding|00-9999999|
+G|9462|Falkenstein Oberpfalz|00-9999999|
+G|9463|Wald Oberpfalz|00-9999999|
+G|9464|Walderbach|00-9999999|
+G|9465|Neukirchen-Balbini|00-9999999|
+G|9466|Stamsried|00-9999999|
+G|9467|Michelsneukirchen|00-9999999|
+G|9468|Zell Oberpfalz|00-9999999|
+G|9469|Roding-Neubäu|00-9999999|
+G|9471|Burglengenfeld|00-9999999|
+G|9472|Hohenfels Oberpfalz|00-9999999|
+G|9473|Kallmünz|00-9999999|
+G|9474|Schmidmühlen|00-9999999|
+G|9480|Sünching|00-9999999|
+G|9481|Pfatter|00-9999999|
+G|9482|Wörth an der Donau|00-9999999|
+G|9484|Brennberg|00-9999999|
+G|9491|Hemau|00-9999999|
+G|9492|Parsberg|00-9999999|
+G|9493|Beratzhausen|00-9999999|
+G|9495|Breitenbrunn Oberpfalz|00-9999999|
+G|9497|Seubersdorf in der Oberpfalz|00-9999999|
+G|9498|Laaber|00-9999999|
+G|9499|Painten|00-9999999|
+G|9502|Frensdorf|00-9999999|
+G|9503|Oberhaid Oberfranken|00-9999999|
+G|9504|Stadelhofen|00-9999999|
+G|9505|Litzendorf|00-9999999|
+G|951|Bamberg|000-99999999|
+G|9521|Hassfurt|00-9999999|
+G|9522|Eltmann|00-9999999|
+G|9523|Hofheim in Unterfranken|00-9999999|
+G|9524|Zeil am Main|00-9999999|
+G|9525|Königsberg in Bayern|00-9999999|
+G|9526|Riedbach|00-9999999|
+G|9527|Knetzgau|00-9999999|
+G|9528|Donnersdorf|00-9999999|
+G|9529|Oberaurach|00-9999999|
+G|9531|Ebern|00-9999999|
+G|9532|Maroldsweisach|00-9999999|
+G|9533|Untermerzbach|00-9999999|
+G|9534|Burgpreppach|00-9999999|
+G|9535|Pfarrweisach|00-9999999|
+G|9536|Kirchlauter|00-9999999|
+G|9542|Schesslitz|00-9999999|
+G|9543|Hirschaid|00-9999999|
+G|9544|Baunach|00-9999999|
+G|9545|Buttenheim|00-9999999|
+G|9546|Burgebrach|00-9999999|
+G|9547|Zapfendorf|00-9999999|
+G|9548|Mühlhausen Mittelfranken|00-9999999|
+G|9549|Lisberg|00-9999999|
+G|9551|Burgwindheim|00-9999999|
+G|9552|Burghaslach|00-9999999|
+G|9553|Ebrach Oberfranken|00-9999999|
+G|9554|Untersteinbach Unterfranken|00-9999999|
+G|9555|Schlüsselfeld-Aschbach|00-9999999|
+G|9556|Geiselwind|00-9999999|
+G|9560|Grub am Forst|00-9999999|
+G|9561|Coburg|00-9999999|
+G|9562|Sonnefeld|00-9999999|
+G|9563|Rödental|00-9999999|
+G|9564|Bad Rodach|00-9999999|
+G|9565|Untersiemau|00-9999999|
+G|9566|Meeder|00-9999999|
+G|9567|Seßlach-Gemünda|00-9999999|
+G|9568|Neustadt bei Coburg|00-9999999|
+G|9569|Sesslach|00-9999999|
+G|9571|Lichtenfels Bayern|00-9999999|
+G|9572|Burgkunstadt|00-9999999|
+G|9573|Staffelstein Oberfranken|00-9999999|
+G|9574|Marktzeuln|00-9999999|
+G|9575|Weismain|00-9999999|
+G|9576|Lichtenfels-Isling|00-9999999|
+G|9602|Neustadt an der Waldnaab|00-9999999|
+G|9603|Floss|00-9999999|
+G|9604|Wernberg-Köblitz|00-9999999|
+G|9605|Weiherhammer|00-9999999|
+G|9606|Pfreimd|00-9999999|
+G|9607|Luhe-Wildenau|00-9999999|
+G|9608|Kohlberg Oberpfalz|00-9999999|
+G|961|Weiden in der Oberpfalz|000-99999999|
+G|9621|Amberg Oberpfalz|00-9999999|
+G|9622|Hirschau Oberpfalz|00-9999999|
+G|9624|Ensdorf Oberpfalz|00-9999999|
+G|9625|Kastl bei Amberg|00-9999999|
+G|9626|Hohenburg|00-9999999|
+G|9627|Freudenberg Oberpfalz|00-9999999|
+G|9628|Ursensollen|00-9999999|
+G|9631|Tirschenreuth|00-9999999|
+G|9632|Waldsassen|00-9999999|
+G|9633|Mitterteich|00-9999999|
+G|9634|Wiesau|00-9999999|
+G|9635|Bärnau|00-9999999|
+G|9636|Plößberg|00-9999999|
+G|9637|Falkenberg Oberpfalz|00-9999999|
+G|9638|Neualbenreuth|00-9999999|
+G|9639|Mähring|00-9999999|
+G|9641|Grafenwöhr|00-9999999|
+G|9642|Kemnath Stadt|00-9999999|
+G|9643|Auerbach in der Oberpfalz|00-9999999|
+G|9644|Pressath|00-9999999|
+G|9645|Eschenbach in der Oberpfalz|00-9999999|
+G|9646|Freihung|00-9999999|
+G|9647|Kirchenthumbach|00-9999999|
+G|9648|Neustadt am Kulm|00-9999999|
+G|9651|Vohenstrauss|00-9999999|
+G|9652|Waidhaus|00-9999999|
+G|9653|Eslarn|00-9999999|
+G|9654|Pleystein|00-9999999|
+G|9655|Tännesberg|00-9999999|
+G|9656|Moosbach bei Vohenstrauß|00-9999999|
+G|9657|Waldthurn|00-9999999|
+G|9658|Georgenberg|00-9999999|
+G|9659|Leuchtenberg|00-9999999|
+G|9661|Sulzbach-Rosenberg|00-9999999|
+G|9662|Vilseck|00-9999999|
+G|9663|Neukirchen bei Sulzbach-Rosenberg|00-9999999|
+G|9664|Hahnbach|00-9999999|
+G|9665|Königstein Oberpfalz|00-9999999|
+G|9666|Illschwang|00-9999999|
+G|9671|Oberviechtach|00-9999999|
+G|9672|Neunburg vorm Wald|00-9999999|
+G|9673|Tiefenbach Oberpfalz|00-9999999|
+G|9674|Schönsee|00-9999999|
+G|9675|Altendorf am Nabburg|00-9999999|
+G|9676|Winklarn|00-9999999|
+G|9677|Oberviechtach-Pullenried|00-9999999|
+G|9681|Windischeschenbach|00-9999999|
+G|9682|Erbendorf|00-9999999|
+G|9683|Friedenfels|00-9999999|
+G|9701|Sandberg Unterfranken|00-9999999|
+G|9704|Euerdorf|00-9999999|
+G|9708|Bad Bocklet|00-9999999|
+G|971|Bad Kissingen|000-99999999|
+G|9720|Üchtelhausen|00-9999999|
+G|9721|Schweinfurt|00-9999999|
+G|9722|Werneck|00-9999999|
+G|9723|Röthlein|00-9999999|
+G|9724|Stadtlauringen|00-9999999|
+G|9725|Poppenhausen Unterfranken|00-9999999|
+G|9726|Euerbach|00-9999999|
+G|9727|Schonungen-Marktsteinach|00-9999999|
+G|9728|Wülfershausen Unterfranken|00-9999999|
+G|9729|Grettstadt|00-9999999|
+G|9732|Hammelburg|00-9999999|
+G|9733|Münnerstadt|00-9999999|
+G|9734|Burkardroth|00-9999999|
+G|9735|Massbach|00-9999999|
+G|9736|Oberthulba|00-9999999|
+G|9737|Wartmannsroth|00-9999999|
+G|9738|Rottershausen|00-9999999|
+G|9741|Bad Brückenau|00-9999999|
+G|9742|Kalbach Rhön|00-9999999|
+G|9744|Zeitlofs-Detter|00-9999999|
+G|9745|Wildflecken|00-9999999|
+G|9746|Zeitlofs|00-9999999|
+G|9747|Geroda Bayern|00-9999999|
+G|9748|Motten|00-9999999|
+G|9749|Oberbach Unterfranken|00-9999999|
+G|9761|Bad Königshofen im Grabfeld|00-9999999|
+G|9762|Saal an der Saale|00-9999999|
+G|9763|Sulzdorf an der Lederhecke|00-9999999|
+G|9764|Höchheim|00-9999999|
+G|9765|Trappstadt|00-9999999|
+G|9766|Grosswenkheim|00-9999999|
+G|9771|Bad Neustadt an der Saale|00-9999999|
+G|9772|Bischofsheim an der Rhön|00-9999999|
+G|9773|Unsleben|00-9999999|
+G|9774|Oberelsbach|00-9999999|
+G|9775|Schönau an der Brend|00-9999999|
+G|9776|Mellrichstadt|00-9999999|
+G|9777|Ostheim von der Rhön|00-9999999|
+G|9778|Fladungen|00-9999999|
+G|9779|Nordheim von der Rhön|00-9999999|
+G|9802|Ansbach-Katterbach|00-9999999|
+G|9803|Colmberg|00-9999999|
+G|9804|Aurach|00-9999999|
+G|9805|Burgoberbach|00-9999999|
+G|981|Ansbach|000-99999999|
+G|9820|Lehrberg|00-9999999|
+G|9822|Bechhofen an der Heide|00-9999999|
+G|9823|Leutershausen|00-9999999|
+G|9824|Dietenhofen|00-9999999|
+G|9825|Herrieden|00-9999999|
+G|9826|Weidenbach Mittelfranken|00-9999999|
+G|9827|Lichtenau Mittelfranken|00-9999999|
+G|9828|Rügland|00-9999999|
+G|9829|Flachslanden|00-9999999|
+G|9831|Gunzenhausen|00-9999999|
+G|9832|Wassertrüdingen|00-9999999|
+G|9833|Heidenheim Mittelfranken|00-9999999|
+G|9834|Theilenhofen|00-9999999|
+G|9835|Ehingen Mittelfranken|00-9999999|
+G|9836|Gunzenhausen-Cronheim|00-9999999|
+G|9837|Haundorf|00-9999999|
+G|9841|Bad Windsheim|00-9999999|
+G|9842|Uffenheim|00-9999999|
+G|9843|Burgbernheim|00-9999999|
+G|9844|Obernzenn|00-9999999|
+G|9845|Oberdachstetten|00-9999999|
+G|9846|Ipsheim|00-9999999|
+G|9847|Ergersheim|00-9999999|
+G|9848|Simmershofen|00-9999999|
+G|9851|Dinkelsbühl|00-9999999|
+G|9852|Feuchtwangen|00-9999999|
+G|9853|Wilburgstetten|00-9999999|
+G|9854|Wittelshofen|00-9999999|
+G|9855|Dentlein am Forst|00-9999999|
+G|9856|Dürrwangen|00-9999999|
+G|9857|Schopfloch Mittelfranken|00-9999999|
+G|9861|Rothenburg ob der Tauber|00-9999999|
+G|9865|Adelshofen Mittelfranken|00-9999999|
+G|9867|Geslau|00-9999999|
+G|9868|Schillingsfürst|00-9999999|
+G|9869|Wettringen Mittelfranken|00-9999999|
+G|9871|Windsbach|00-9999999|
+G|9872|Heilsbronn|00-9999999|
+G|9873|Abenberg-Wassermungenau|00-9999999|
+G|9874|Neuendettelsau|00-9999999|
+G|9875|Wolframs-Eschenbach|00-9999999|
+G|9876|Rohr Mittelfranken|00-9999999|
+G|9901|Hengersberg Bayern|00-9999999|
+G|9903|Schöllnach|00-9999999|
+G|9904|Lalling|00-9999999|
+G|9905|Bernried Niederbayern|00-9999999|
+G|9906|Mariaposching|00-9999999|
+G|9907|Zenting|00-9999999|
+G|9908|Schöfweg|00-9999999|
+G|991|Deggendorf|000-99999999|
+G|9920|Bischofsmais|00-9999999|
+G|9921|Regen|00-9999999|
+G|9922|Zwiesel|00-9999999|
+G|9923|Teisnach|00-9999999|
+G|9924|Bodenmais|00-9999999|
+G|9925|Bayerisch Eisenstein|00-9999999|
+G|9926|Frauenau|00-9999999|
+G|9927|Kirchberg Wald|00-9999999|
+G|9928|Kirchdorf im Wald|00-9999999|
+G|9929|Ruhmannsfelden|00-9999999|
+G|9931|Plattling|00-9999999|
+G|9932|Osterhofen|00-9999999|
+G|9933|Wallersdorf|00-9999999|
+G|9935|Stephansposching|00-9999999|
+G|9936|Wallerfing|00-9999999|
+G|9937|Oberpöring|00-9999999|
+G|9938|Moos Niederbayern|00-9999999|
+G|9941|Kötzting|00-9999999|
+G|9942|Viechtach|00-9999999|
+G|9943|Lam Oberpfalz|00-9999999|
+G|9944|Miltach|00-9999999|
+G|9945|Arnbruck|00-9999999|
+G|9946|Hohenwarth bei Kötzing|00-9999999|
+G|9947|Neukirchen bei Hl Blut|00-9999999|
+G|9948|Eschlkam|00-9999999|
+G|9951|Landau an der Isar|00-9999999|
+G|9952|Eichendorf|00-9999999|
+G|9953|Pilsting|00-9999999|
+G|9954|Simbach Niederbayern|00-9999999|
+G|9955|Mamming|00-9999999|
+G|9956|Eichendorf-Aufhausen|00-9999999|
+G|9961|Mitterfels|00-9999999|
+G|9962|Schwarzach Niederbayern|00-9999999|
+G|9963|Konzell|00-9999999|
+G|9964|Stallwang|00-9999999|
+G|9965|Sankt Englmar|00-9999999|
+G|9966|Wiesenfelden|00-9999999|
+G|9971|Cham|00-9999999|
+G|9972|Waldmünchen|00-9999999|
+G|9973|Furth im Wald|00-9999999|
+G|9974|Traitsching|00-9999999|
+G|9975|Waldmünchen-Geigant|00-9999999|
+G|9976|Rötz|00-9999999|
+G|9977|Arnschwang|00-9999999|
+G|9978|Schönthal Oberpfalz|00-9999999|
