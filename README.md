@@ -239,7 +239,7 @@ These were used as the references for the phone number data for each country.
 
 ### Singapore
 
-- https://www.imda.gov.sg/-/media/Imda/Files/Regulation-Licensing-and-Consultations/Frameworks-and-Policies/Numbering/National-Numbering-Plan-and-Allocation-Process/IMDA-National-Numbering-Plan-12-Aug-2019.pdf?la=en
+- https://www.imda.gov.sg/-/media/Imda/Files/Regulation-Licensing-and-Consultations/Frameworks-and-Policies/Numbering/National-Numbering-Plan-and-Allocation-Process/IMDA-National-Numbering-Plan.pdf
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Singapore
 
 ### Slovakia
