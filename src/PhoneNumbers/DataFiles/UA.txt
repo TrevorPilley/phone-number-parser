@@ -1,1 +1,31 @@
-
+G|31|Zakarpattia region|0000000-9999999|
+G|32|Lviv region|0000000-9999999|
+G|33|Volyn region|0000000-9999999|
+G|34|Ivano-Frankivsk region|0000000-9999999|
+G|35|Ternopil region|0000000-9999999|
+G|36|Rivne region|0000000-9999999|
+G|37|Chernivtsi region|0000000-9999999|
+G|38|Khmelnytskyi region|0000000-9999999|
+G|41|Zhytomyr region|0000000-9999999|
+G|43|Vinnytsia region|0000000-9999999|
+G|44|Kyiv city|0000000-9999999|
+G|45|Kyiv region|0000000-9999999|
+G|46|Chernihiv region|0000000-9999999|
+G|47|Cherkasy region|0000000-9999999|
+G|48|Odesa region|0000000-9999999|
+M|50,63,66-68,73,91-99||0000000-9999999|
+G|51|Mykolayiv region|0000000-9999999|
+G|52|Kirovohrad region|0000000-9999999|
+G|53|Poltava region|0000000-9999999|
+G|54|Sumy region|0000000-9999999|
+G|55|Kherson region|0000000-9999999|
+G|56|Dnipropetrovsk region|0000000-9999999|
+G|57|Kharkiv region|0000000-9999999|
+G|61|Zaporizhzhia region|0000000-9999999|
+G|62|Donetsk region|0000000-9999999|
+G|64|Luhansk region|0000000-9999999|
+G|65|Crimea region|0000000-9999999|
+G|69|Sevastopol region|0000000-9999999|
+N|800||100000-899999|F
+N|891-894,897,899||000000-999999|
+N|900||200000-399999,900000-999999|R
