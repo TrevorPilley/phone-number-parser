@@ -345,6 +345,25 @@ public class CountryInfo_Countries_Tests
     }
 
     [Fact]
+    public void CountryInfo_Romania()
+    {
+        Assert.Same(CountryInfo.Romania, CountryInfo.Romania);
+
+        var countryInfo = CountryInfo.Romania;
+
+        Assert.Equal("+40", countryInfo.CallingCode);
+        Assert.True(countryInfo.HasNationalDestinationCodes);
+        Assert.Equal("00", countryInfo.InternationalCallPrefix);
+        Assert.Equal("RO", countryInfo.Iso3166Code);
+        Assert.Equal("Romania", countryInfo.Name);
+        Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 6, 7, 8, 9 }, countryInfo.NsnLengths);
+        Assert.True(countryInfo.RequireNdcForLocalDialling);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Equal("0", countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_SanMarino()
     {
         Assert.Same(CountryInfo.SanMarino, CountryInfo.SanMarino);
