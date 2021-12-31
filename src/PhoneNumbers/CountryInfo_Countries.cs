@@ -239,6 +239,19 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Romania.
+    /// </summary>
+    public static CountryInfo Romania { get; } = new()
+    {
+        CallingCode = "+40",
+        Iso3166Code = "RO",
+        Name = "Romania",
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8, 9 }),
+        TrunkPrefix = "0",
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for San Marino.
     /// </summary>
     public static CountryInfo SanMarino { get; } = new()
