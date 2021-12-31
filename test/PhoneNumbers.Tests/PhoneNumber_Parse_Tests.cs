@@ -147,6 +147,14 @@ public class PhoneNumber_Parse_Tests
     }
 
     [Fact]
+    public void Parse_Value_With_Romania_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+40372845414");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Romania, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_With_SanMarino_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+3780549882555");
