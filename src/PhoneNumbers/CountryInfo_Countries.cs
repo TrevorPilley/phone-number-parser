@@ -300,6 +300,19 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Ukraine.
+    /// </summary>
+    public static CountryInfo Ukraine { get; } = new()
+    {
+        CallingCode = "+380",
+        Iso3166Code = "UA",
+        Name = "Ukraine",
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 9, 10 }),
+        TrunkPrefix = "0",
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for the United Kingdom.
     /// </summary>
     /// <remarks>Covers England, Scotland, Wales and Northern Ireland.</remarks>
