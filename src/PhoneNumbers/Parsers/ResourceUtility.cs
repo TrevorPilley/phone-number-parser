@@ -30,6 +30,7 @@ namespace PhoneNumbers.Parsers
                 'F' => PhoneNumberHint.Freephone,
                 'P' => PhoneNumberHint.Pager,
                 'R' => PhoneNumberHint.PremiumRate,
+                'S' => PhoneNumberHint.SharedCost,
                 'V' => PhoneNumberHint.Virtual,
                 _ => throw new NotSupportedException(value.ToString()),
             };

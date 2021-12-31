@@ -84,6 +84,13 @@ namespace PhoneNumbers.Tests.Parsers
                         Kind = PhoneNumberKind.NonGeographicPhoneNumber,
                         Hint = PhoneNumberHint.PremiumRate,
                     },
+                    new CountryNumber
+                    {
+                        NationalDestinationCodeRanges = new[] { NumberRange.Create("80") },
+                        SubscriberNumberRanges = new[] { NumberRange.Create("28000-28999") },
+                        Kind = PhoneNumberKind.NonGeographicPhoneNumber,
+                        Hint = PhoneNumberHint.SharedCost,
+                    },
                 });
 
         [Fact]
@@ -200,6 +207,7 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.Equal(_countryInfo, nonGeographicPhoneNumber.Country);
             Assert.False(nonGeographicPhoneNumber.IsFreephone);
             Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
+            Assert.False(nonGeographicPhoneNumber.IsSharedCost);
             Assert.Equal("20000", nonGeographicPhoneNumber.SubscriberNumber);
             Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, nonGeographicPhoneNumber.PhoneNumberKind);
         }
@@ -216,6 +224,7 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.Equal(_countryInfo, nonGeographicPhoneNumber.Country);
             Assert.True(nonGeographicPhoneNumber.IsFreephone);
             Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
+            Assert.False(nonGeographicPhoneNumber.IsSharedCost);
             Assert.Equal("28000", nonGeographicPhoneNumber.SubscriberNumber);
             Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, nonGeographicPhoneNumber.PhoneNumberKind);
         }
@@ -232,6 +241,24 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.Equal(_countryInfo, nonGeographicPhoneNumber.Country);
             Assert.False(nonGeographicPhoneNumber.IsFreephone);
             Assert.True(nonGeographicPhoneNumber.IsPremiumRate);
+            Assert.False(nonGeographicPhoneNumber.IsSharedCost);
+            Assert.Equal("28000", nonGeographicPhoneNumber.SubscriberNumber);
+            Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, nonGeographicPhoneNumber.PhoneNumberKind);
+        }
+
+        [Fact]
+        public void Parse_NonGeographicPhoneNumber_SharedCost()
+        {
+            var phoneNumber = _parser.Parse("8028000").PhoneNumber;
+            Assert.NotNull(phoneNumber);
+            Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
+
+            var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
+            Assert.Equal("80", nonGeographicPhoneNumber.NationalDestinationCode);
+            Assert.Equal(_countryInfo, nonGeographicPhoneNumber.Country);
+            Assert.False(nonGeographicPhoneNumber.IsFreephone);
+            Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
+            Assert.True(nonGeographicPhoneNumber.IsSharedCost);
             Assert.Equal("28000", nonGeographicPhoneNumber.SubscriberNumber);
             Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, nonGeographicPhoneNumber.PhoneNumberKind);
         }

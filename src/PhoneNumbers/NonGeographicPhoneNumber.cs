@@ -39,6 +39,13 @@ namespace PhoneNumbers
         public bool IsPremiumRate =>
             Hint == PhoneNumberHint.PremiumRate;
 
+        /// <summary>
+        /// The number is a shared cost number.
+        /// </summary>
+        /// <remarks>This is an indication only based upon the data available for each country.</remarks>
+        public bool IsSharedCost =>
+            Hint == PhoneNumberHint.SharedCost;
+
         /// <inheritdoc/>
         public override PhoneNumberKind PhoneNumberKind =>
             PhoneNumberKind.NonGeographicPhoneNumber;

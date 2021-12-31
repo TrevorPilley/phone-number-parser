@@ -34,5 +34,10 @@ namespace PhoneNumbers
         /// The number is a premium rate number.
         /// </summary>
         PremiumRate,
+
+        /// <summary>
+        /// The number is a shared cost number.
+        /// </summary>
+        SharedCost,
     }
 }
