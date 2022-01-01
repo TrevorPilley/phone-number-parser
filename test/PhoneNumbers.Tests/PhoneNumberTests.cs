@@ -15,6 +15,10 @@ namespace PhoneNumbers.Tests
             Assert.NotNull(PhoneNumber.Parse("(0114) 272 6444", "GB"));
 
         [Fact]
+        public void Parse_Value_CountryCode_Ignores_Periods() =>
+            Assert.NotNull(PhoneNumber.Parse("0114.272.6444", "GB"));
+
+        [Fact]
         public void Parse_Value_CountryCode_Ignores_Spaces() =>
             Assert.NotNull(PhoneNumber.Parse("0114 272 6444", "GB"));
 
@@ -101,6 +105,13 @@ namespace PhoneNumbers.Tests
         public void TryParse_Value_CountryCode_Ignores_Parenthesis()
         {
             Assert.True(PhoneNumber.TryParse("(0114) 272 6444", "GB", out var phoneNumber));
+            Assert.NotNull(phoneNumber);
+        }
+
+        [Fact]
+        public void TryParse_Value_CountryCode_Ignores_Periods()
+        {
+            Assert.True(PhoneNumber.TryParse("0114.272.6444", "GB", out var phoneNumber));
             Assert.NotNull(phoneNumber);
         }
 
