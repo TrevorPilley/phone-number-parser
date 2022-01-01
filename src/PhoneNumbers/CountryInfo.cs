@@ -129,7 +129,7 @@ namespace PhoneNumbers
                 }
             }
 
-            return ReadNsnStringFrom(startPos, value);
+            return ReadNationalSignificantNumber(value, startPos);
         }
 
         /// <remarks>Char.IsDigit returns true for more than 0-9 so use a more restricted version.</remarks>
@@ -157,7 +157,7 @@ namespace PhoneNumbers
         private string GetDebuggerDisplay() =>
             $"{Iso3166Code} {CallingCode}";
 
-        private string ReadNsnStringFrom(int startPos, string value)
+        private string ReadNationalSignificantNumber(string value, int startPos)
         {
             var digits = CountDigitsAfter(startPos, value);
 
