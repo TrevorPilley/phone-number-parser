@@ -35,6 +35,7 @@ namespace PhoneNumbers.Tests
         [InlineData("+422(0)12345678")]
         [InlineData("+422 (0) 123 456 78")]
         [InlineData("+422 (0) 123-456-78")]
+        [InlineData("+422 (0) 123.456.78")]
         public void IsInternationalNumber_True(string value) =>
             Assert.True(TestHelper.CreateCountryInfo().IsInternationalNumber(value));
 
@@ -51,9 +52,11 @@ namespace PhoneNumbers.Tests
         [InlineData("+422(0)12345678")]
         [InlineData("+422 (0) 123 456 78")]
         [InlineData("+422 (0) 123-456-78")]
+        [InlineData("+422 (0) 123.456.78")]
         [InlineData("012345678")]
         [InlineData("(0) 123 456 78")]
         [InlineData("(0) 123-456-78")]
+        [InlineData("(0) 123.456.78")]
         public void ReadNationalSignificantNumber_With_TrunkPrefix(string value) =>
             Assert.Equal("12345678", TestHelper.CreateCountryInfo(trunkPrefix: "0").ReadNationalSignificantNumber(value));
 
@@ -61,9 +64,11 @@ namespace PhoneNumbers.Tests
         [InlineData("+42212345678")]
         [InlineData("+422 123 456 78")]
         [InlineData("+422 123-456-78")]
+        [InlineData("+422 123.456.78")]
         [InlineData("12345678")]
         [InlineData("123 456 78")]
         [InlineData("123-456-78")]
+        [InlineData("123.456.78")]
         public void ReadNationalSignificantNumber_Without_TrunkPrefix(string value) =>
             Assert.Equal("12345678", TestHelper.CreateCountryInfo(trunkPrefix: null).ReadNationalSignificantNumber(value));
 
