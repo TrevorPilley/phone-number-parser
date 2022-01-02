@@ -75,6 +75,14 @@ public class PhoneNumber_TryParse_Tests
     }
 
     [Fact]
+    public void TryParse_Value_With_Greece_CallingCode()
+    {
+        Assert.True(PhoneNumber.TryParse("+302106151000", out var phoneNumber));
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Greece, phoneNumber.Country);
+    }
+
+    [Fact]
     public void TryParse_Value_With_Guernsey_CallingCode()
     {
         Assert.True(PhoneNumber.TryParse("+441481717000", out var phoneNumber));

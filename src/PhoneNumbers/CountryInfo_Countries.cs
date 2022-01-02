@@ -120,6 +120,18 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Greece.
+    /// </summary>
+    public static CountryInfo Greece { get; } = new()
+    {
+        CallingCode = "+30",
+        Iso3166Code = "GR",
+        Name = "Greece",
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Guernsey.
     /// </summary>
     public static CountryInfo Guernsey { get; } = new()

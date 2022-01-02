@@ -44,6 +44,10 @@ public class PhoneNumberParserFactoryTests
         Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Gibraltar));
 
     [Fact]
+    public void GetParser_For_CountryInfo_Greece_Returns_DefaultPhoneNumberParser() =>
+        Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Greece));
+
+    [Fact]
     public void GetParser_For_CountryInfo_Guernsey_Returns_DefaultPhoneNumberParser() =>
         Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Guernsey));
 

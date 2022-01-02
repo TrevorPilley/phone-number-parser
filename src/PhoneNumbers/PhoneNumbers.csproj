@@ -82,6 +82,7 @@
     <None Remove="DataFiles\FR.txt"/>
     <None Remove="DataFiles\GB.txt"/>
     <None Remove="DataFiles\GG.txt"/>
+    <None Remove="DataFiles\GR.txt"/>
     <None Remove="DataFiles\GI.txt"/>
     <None Remove="DataFiles\HK.txt"/>
     <None Remove="DataFiles\HR.txt"/>
@@ -113,6 +114,7 @@
     <EmbeddedResource Include="DataFiles\FR.txt"/>
     <EmbeddedResource Include="DataFiles\GB.txt"/>
     <EmbeddedResource Include="DataFiles\GG.txt"/>
+    <EmbeddedResource Include="DataFiles\GR.txt"/>
     <EmbeddedResource Include="DataFiles\GI.txt"/>
     <EmbeddedResource Include="DataFiles\HK.txt"/>
     <EmbeddedResource Include="DataFiles\HR.txt"/>
