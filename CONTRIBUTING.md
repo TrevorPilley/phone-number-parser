@@ -82,6 +82,7 @@ Optional but can be one of:
 - `F` _a Freephone number, where Kind is N_
 - `P` _a Pager, where Kind is M_
 - `R` _a Premium rate number, where Kind is N_
+- `S` _a Shared cost number, where Kind is N_
 - `V` _a Virtual number (e.g. personal number), where Kind is M_
 
 #### Comments

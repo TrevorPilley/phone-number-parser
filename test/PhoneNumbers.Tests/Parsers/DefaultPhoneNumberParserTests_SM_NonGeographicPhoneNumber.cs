@@ -45,6 +45,7 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.Equal(CountryInfo.SanMarino, nonGeographicPhoneNumber.Country);
             Assert.False(nonGeographicPhoneNumber.IsFreephone);
             Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
+            Assert.False(nonGeographicPhoneNumber.IsSharedCost);
             Assert.Null(nonGeographicPhoneNumber.NationalDestinationCode);
             Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
         }
@@ -74,6 +75,7 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.Equal(CountryInfo.SanMarino, nonGeographicPhoneNumber.Country);
             Assert.False(nonGeographicPhoneNumber.IsFreephone);
             Assert.True(nonGeographicPhoneNumber.IsPremiumRate);
+            Assert.False(nonGeographicPhoneNumber.IsSharedCost);
             Assert.Null(nonGeographicPhoneNumber.NationalDestinationCode);
             Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
         }
