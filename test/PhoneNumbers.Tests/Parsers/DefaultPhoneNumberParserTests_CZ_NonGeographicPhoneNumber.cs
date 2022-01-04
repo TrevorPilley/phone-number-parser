@@ -11,10 +11,8 @@ namespace PhoneNumbers.Tests.Parsers
         private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.CzechRepublic);
 
         [Theory]
-        [InlineData("810000000", "81", "0000000")]
-        [InlineData("819999999", "81", "9999999")]
-        [InlineData("840000000", "84", "0000000")]
-        [InlineData("849999999", "84", "9999999")]
+        [InlineData("820000000", "82", "0000000")]
+        [InlineData("829999999", "82", "9999999")]
         public void Parse_Known_NonGeographicPhoneNumber_8X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
         {
             var parseResult = s_parser.Parse(value);
@@ -29,6 +27,7 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.Equal(CountryInfo.CzechRepublic, nonGeographicPhoneNumber.Country);
             Assert.False(nonGeographicPhoneNumber.IsFreephone);
             Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
+            Assert.False(nonGeographicPhoneNumber.IsSharedCost);
             Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
             Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
         }
@@ -50,6 +49,7 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.Equal(CountryInfo.CzechRepublic, nonGeographicPhoneNumber.Country);
             Assert.True(nonGeographicPhoneNumber.IsFreephone);
             Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
+            Assert.False(nonGeographicPhoneNumber.IsSharedCost);
             Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
             Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
         }
@@ -79,6 +79,33 @@ namespace PhoneNumbers.Tests.Parsers
             Assert.Equal(CountryInfo.CzechRepublic, nonGeographicPhoneNumber.Country);
             Assert.False(nonGeographicPhoneNumber.IsFreephone);
             Assert.True(nonGeographicPhoneNumber.IsPremiumRate);
+            Assert.False(nonGeographicPhoneNumber.IsSharedCost);
+            Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
+            Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
+        }
+
+        [Theory]
+        [InlineData("810000000", "81", "0000000")]
+        [InlineData("819999999", "81", "9999999")]
+        [InlineData("830000000", "83", "0000000")]
+        [InlineData("839999999", "83", "9999999")]
+        [InlineData("840000000", "84", "0000000")]
+        [InlineData("849999999", "84", "9999999")]
+        public void Parse_Known_NonGeographicPhoneNumber_SharedCost(string value, string NationalDestinationCode, string subscriberNumber)
+        {
+            var parseResult = s_parser.Parse(value);
+            parseResult.ThrowIfFailure();
+
+            var phoneNumber = parseResult.PhoneNumber;
+
+            Assert.NotNull(phoneNumber);
+            Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
+
+            var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
+            Assert.Equal(CountryInfo.CzechRepublic, nonGeographicPhoneNumber.Country);
+            Assert.False(nonGeographicPhoneNumber.IsFreephone);
+            Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
+            Assert.True(nonGeographicPhoneNumber.IsSharedCost);
             Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
             Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
         }

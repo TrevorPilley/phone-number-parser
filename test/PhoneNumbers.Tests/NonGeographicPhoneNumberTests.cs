@@ -14,6 +14,7 @@ namespace PhoneNumbers.Tests
             Assert.Equal(countryInfo, phoneNumber.Country);
             Assert.True(phoneNumber.IsFreephone);
             Assert.False(phoneNumber.IsPremiumRate);
+            Assert.False(phoneNumber.IsSharedCost);
             Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, phoneNumber.PhoneNumberKind);
             Assert.Equal("12345", phoneNumber.NationalDestinationCode);
             Assert.Equal("12345667788", phoneNumber.NationalSignificantNumber);
@@ -29,6 +30,23 @@ namespace PhoneNumbers.Tests
             Assert.Equal(countryInfo, phoneNumber.Country);
             Assert.False(phoneNumber.IsFreephone);
             Assert.True(phoneNumber.IsPremiumRate);
+            Assert.False(phoneNumber.IsSharedCost);
+            Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, phoneNumber.PhoneNumberKind);
+            Assert.Equal("12345", phoneNumber.NationalDestinationCode);
+            Assert.Equal("12345667788", phoneNumber.NationalSignificantNumber);
+            Assert.Equal("667788", phoneNumber.SubscriberNumber);
+        }
+
+        [Fact]
+        public void Constructor_Sets_Properties_SharedCost()
+        {
+            var countryInfo = TestHelper.CreateCountryInfo();
+            var phoneNumber = new NonGeographicPhoneNumber(countryInfo, PhoneNumberHint.SharedCost, "12345667788", "12345", "667788");
+
+            Assert.Equal(countryInfo, phoneNumber.Country);
+            Assert.False(phoneNumber.IsFreephone);
+            Assert.False(phoneNumber.IsPremiumRate);
+            Assert.True(phoneNumber.IsSharedCost);
             Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, phoneNumber.PhoneNumberKind);
             Assert.Equal("12345", phoneNumber.NationalDestinationCode);
             Assert.Equal("12345667788", phoneNumber.NationalSignificantNumber);
