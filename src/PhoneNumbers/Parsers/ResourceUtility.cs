@@ -9,7 +9,7 @@ namespace PhoneNumbers.Parsers
     internal static class ResourceUtility
     {
         // The file format is as follows (spaces for readability, not present in the file):
-        // Kind | NDC Ranges | Geographic Area | SN Ranges | Hint
+        // Kind | NDC Range(s) | Geographic Area | SN Range(s) | Hint
         internal static IEnumerable<CountryNumber> ReadCountryNumbers(string name) =>
             ReadLines(name)
                 .Select(x => x.Split('|'))

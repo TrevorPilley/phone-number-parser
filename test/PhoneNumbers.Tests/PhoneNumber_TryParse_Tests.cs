@@ -189,7 +189,7 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
-        public void TryParse_UnitedKingdom_CallingCode()
+        public void TryParse_Value_With_UnitedKingdom_CallingCode()
         {
             Assert.True(PhoneNumber.TryParse("+442079813000", out var phoneNumber));
             Assert.NotNull(phoneNumber);
