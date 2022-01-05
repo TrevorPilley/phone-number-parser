@@ -98,6 +98,25 @@ public class CountryInfo_Countries_Tests
     }
 
     [Fact]
+    public void CountryInfo_Estonia()
+    {
+        Assert.Same(CountryInfo.Estonia, CountryInfo.Estonia);
+
+        var countryInfo = CountryInfo.Estonia;
+
+        Assert.Equal("+372", countryInfo.CallingCode);
+        Assert.True(countryInfo.HasNationalDestinationCodes);
+        Assert.Equal("00", countryInfo.InternationalCallPrefix);
+        Assert.Equal("EE", countryInfo.Iso3166Code);
+        Assert.Equal("Estonia", countryInfo.Name);
+        Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 7 }, countryInfo.NsnLengths);
+        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Null(countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_France()
     {
         Assert.Same(CountryInfo.France, CountryInfo.France);
