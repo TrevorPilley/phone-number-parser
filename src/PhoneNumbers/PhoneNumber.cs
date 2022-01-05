@@ -1,4 +1,3 @@
-using System;
 using PhoneNumbers.Formatters;
 
 namespace PhoneNumbers
