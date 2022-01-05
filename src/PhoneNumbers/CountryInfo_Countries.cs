@@ -78,8 +78,8 @@ public partial class CountryInfo
         CallingCode = "+372",
         Iso3166Code = "EE",
         Name = "Estonia",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 7 }),
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8 }),
     };
 
     /// <summary>
