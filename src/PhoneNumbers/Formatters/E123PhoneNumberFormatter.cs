@@ -1,5 +1,3 @@
-using System;
-
 namespace PhoneNumbers.Formatters
 {
     /// <summary>

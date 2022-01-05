@@ -9,6 +9,7 @@
     <AnalysisMode>AllEnabledByDefault</AnalysisMode>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\..\PhoneNumbers.snk</AssemblyOriginatorKeyFile>
+    <ImplicitUsings>enable</ImplicitUsings>
     <PackageId>PhoneNumberParser</PackageId>
     <Version>1.0.0</Version>
     <Authors>Trevor Pilley and Project Contributors</Authors>
