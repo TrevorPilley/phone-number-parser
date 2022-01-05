@@ -22,15 +22,13 @@ namespace PhoneNumbers
         /// Initialises a new instance of the <see cref="CountryInfo"/> class.
         /// </summary>
         /// <remarks>The constructor is internal for unit tests only.</remarks>
-        internal CountryInfo()
-        {
+        internal CountryInfo() =>
             _formatters = new(new[]
             {
                 E164PhoneNumberFormatter.Instance,
                 E123PhoneNumberFormatter.Instance,
                 NationalPhoneNumberFormatter.Instance,
             });
-        }
 
         /// <summary>
         /// Gets the calling code for the country (e.g. '+XX').

@@ -68,7 +68,7 @@ namespace PhoneNumbers.Parsers
                 return value.Equals(From, StringComparison.Ordinal);
             }
 
-            // short circuit since all values are significant then '000' is not within '0000' to '9999'
+            // Short circuit, since all values are significant, '000' is not within '0000' to '9999'.
             if (value.Length < From.Length || value.Length > To.Length)
             {
                 return false;

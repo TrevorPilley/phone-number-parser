@@ -131,7 +131,7 @@ namespace PhoneNumbers.Tests
             Assert.Equal("GI", countryInfo.Iso3166Code);
             Assert.Equal("Gibraltar", countryInfo.Name);
             Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
-            Assert.Equal(new[] { 4,8 }, countryInfo.NsnLengths);
+            Assert.Equal(new[] { 4, 8 }, countryInfo.NsnLengths);
             Assert.True(countryInfo.RequireNdcForLocalDialling);
             Assert.False(countryInfo.SharesCallingCode);
             Assert.Null(countryInfo.TrunkPrefix);

@@ -25,18 +25,6 @@ namespace PhoneNumbers.Tests
         }
 
         [Fact]
-        public void Remove_Country()
-        {
-            var parseOptions = new ParseOptions();
-
-            Assert.Contains(CountryInfo.UnitedKingdom, parseOptions.Countries);
-
-            parseOptions.Countries.Remove(CountryInfo.UnitedKingdom);
-
-            Assert.DoesNotContain(CountryInfo.UnitedKingdom, parseOptions.Countries);
-        }
-
-        [Fact]
         public void GetCountryInfo_Does_Not_Exist() =>
             Assert.Null(ParseOptions.Default.GetCountryInfo("ZZ"));
 
@@ -62,6 +50,18 @@ namespace PhoneNumbers.Tests
             var countryInfos = ParseOptions.Default.GetCountryInfos("+35340226969");
             Assert.Single(countryInfos);
             Assert.Same(CountryInfo.Ireland, countryInfos.Single());
+        }
+
+        [Fact]
+        public void Remove_Country()
+        {
+            var parseOptions = new ParseOptions();
+
+            Assert.Contains(CountryInfo.UnitedKingdom, parseOptions.Countries);
+
+            parseOptions.Countries.Remove(CountryInfo.UnitedKingdom);
+
+            Assert.DoesNotContain(CountryInfo.UnitedKingdom, parseOptions.Countries);
         }
     }
 }
