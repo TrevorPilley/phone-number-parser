@@ -80,9 +80,9 @@ namespace PhoneNumbers
         internal ReadOnlyCollection<int> NsnLengths { get; init; } = s_emptyIntArray;
 
         /// <summary>
-        /// Gets a value indicating whether national dialling codes are required for local dialling.
+        /// Gets a value indicating whether national dialling codes are required for local dialling within a geographic NDC.
         /// </summary>
-        internal bool RequireNdcForLocalDialling { get; init; } = true;
+        internal bool RequireNdcForLocalGeographicDialling { get; init; } = true;
 
         internal PhoneNumberFormatter GetFormatter(string format) =>
             _formatters.SingleOrDefault(x => x.CanFormat(format)) ?? throw new FormatException($"{format} is not a supported format");
