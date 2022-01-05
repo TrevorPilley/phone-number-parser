@@ -40,7 +40,7 @@ namespace PhoneNumbers
             Name = "Bulgaria",
             NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
             NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9 }),
-            RequireNdcForLocalDialling = false,
+            RequireNdcForLocalGeographicDialling = false,
             TrunkPrefix = "0",
         };
 
@@ -54,7 +54,7 @@ namespace PhoneNumbers
             Name = "Croatia",
             NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
             NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8, 9, 10 }),
-            RequireNdcForLocalDialling = false,
+            RequireNdcForLocalGeographicDialling = false,
             TrunkPrefix = "0",
         };
 
@@ -104,7 +104,7 @@ namespace PhoneNumbers
             Name = "Guernsey",
             NdcLengths = new ReadOnlyCollection<int>(new[] { 4 }),
             NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
-            RequireNdcForLocalDialling = false,
+            RequireNdcForLocalGeographicDialling = false,
             SharesCallingCode = true,
             TrunkPrefix = "0",
         };
@@ -132,7 +132,7 @@ namespace PhoneNumbers
             Name = "Ireland",
             NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
             NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8, 9 }),
-            RequireNdcForLocalDialling = false,
+            RequireNdcForLocalGeographicDialling = false,
             TrunkPrefix = "0",
         };
 
@@ -146,7 +146,7 @@ namespace PhoneNumbers
             Name = "Isle of Man",
             NdcLengths = new ReadOnlyCollection<int>(new[] { 4 }),
             NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
-            RequireNdcForLocalDialling = false,
+            RequireNdcForLocalGeographicDialling = false,
             SharesCallingCode = true,
             TrunkPrefix = "0",
         };
@@ -174,7 +174,7 @@ namespace PhoneNumbers
             Name = "Jersey",
             NdcLengths = new ReadOnlyCollection<int>(new[] { 4 }),
             NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
-            RequireNdcForLocalDialling = false,
+            RequireNdcForLocalGeographicDialling = false,
             SharesCallingCode = true,
             TrunkPrefix = "0",
         };
@@ -310,7 +310,7 @@ namespace PhoneNumbers
             Name = "United Kingdom",
             NdcLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2 }),
             NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 9, 10 }),
-            RequireNdcForLocalDialling = false,
+            RequireNdcForLocalGeographicDialling = false,
             TrunkPrefix = "0",
         };
     }
