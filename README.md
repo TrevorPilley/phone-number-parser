@@ -140,6 +140,7 @@ Monaco         | MC            | +377         |              |            | Yes 
 Netherlands    | NL            | +31          | 0            | Yes        | Yes    |                        | Yes                |                      | Yes            | Yes                            | Yes                              |
 Poland         | PL            | +48          |              | Yes        | Yes    |                        | Yes                |                      | Yes            |                                |                                  |
 Portugal       | PT            | +351         |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                              | Yes
+Romania        | RO            | +40          | 0            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                              | Yes
 San Marino     | SM            | +378         |              | Yes        |        |                        |                    |                      | Yes            |                                | Yes                              |
 Singapore      | SG            | +65          |              |            | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                              |
 Spain          | ES            | +34          |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                              |
@@ -240,6 +241,11 @@ These were used as the references for the phone number data for each country.
 ### Portugal
 
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Portugal
+
+### Romania
+
+- https://www.ancom.ro/en/presentation-of-romanian-national-numbering-plan-according-to-itu-t-recommendation-e129-_5523
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Romania
 
 ### San Marino
 
