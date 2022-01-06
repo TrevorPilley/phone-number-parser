@@ -1,7 +1,4 @@
 using System.Reflection;
-using Moq;
-using PhoneNumbers.Parsers;
-using Xunit;
 
 namespace PhoneNumbers.Tests.Parsers
 {

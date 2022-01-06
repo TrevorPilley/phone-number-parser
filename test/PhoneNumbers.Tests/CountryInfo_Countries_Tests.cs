@@ -1,5 +1,3 @@
-using Xunit;
-
 namespace PhoneNumbers.Tests
 {
     public class CountryInfo_Countries_Tests

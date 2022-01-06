@@ -1,6 +1,4 @@
 using System.Collections.ObjectModel;
-using PhoneNumbers.Parsers;
-using Xunit;
 
 namespace PhoneNumbers.Tests.Parsers
 {
