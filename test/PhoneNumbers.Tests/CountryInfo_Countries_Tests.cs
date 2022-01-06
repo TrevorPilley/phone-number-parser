@@ -110,7 +110,7 @@ public class CountryInfo_Countries_Tests
         Assert.Equal("EE", countryInfo.Iso3166Code);
         Assert.Equal("Estonia", countryInfo.Name);
         Assert.Equal(new[] { 4, 3, 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 7, 8 }, countryInfo.NsnLengths);
+        Assert.Equal(new[] { 7, 8, 10 }, countryInfo.NsnLengths);
         Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);

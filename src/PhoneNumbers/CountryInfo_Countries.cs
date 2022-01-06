@@ -79,7 +79,7 @@ public partial class CountryInfo
         Iso3166Code = "EE",
         Name = "Estonia",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8, 10 }),
     };
 
     /// <summary>
