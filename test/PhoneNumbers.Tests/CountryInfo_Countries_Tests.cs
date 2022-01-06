@@ -176,17 +176,17 @@ public class CountryInfo_Countries_Tests
     [Fact]
     public void CountryInfo_Greece()
     {
-        Assert.Same(CountryInfo.Gibraltar, CountryInfo.Gibraltar);
+        Assert.Same(CountryInfo.Greece, CountryInfo.Greece);
 
-        var countryInfo = CountryInfo.Gibraltar;
+        var countryInfo = CountryInfo.Greece;
 
-        Assert.Equal("+350", countryInfo.CallingCode);
+        Assert.Equal("+30", countryInfo.CallingCode);
         Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
-        Assert.Equal("GI", countryInfo.Iso3166Code);
-        Assert.Equal("Gibraltar", countryInfo.Name);
-        Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 4, 8 }, countryInfo.NsnLengths);
+        Assert.Equal("GR", countryInfo.Iso3166Code);
+        Assert.Equal("Greece", countryInfo.Name);
+        Assert.Equal(new[] { 4, 3, 2 }, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
         Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
