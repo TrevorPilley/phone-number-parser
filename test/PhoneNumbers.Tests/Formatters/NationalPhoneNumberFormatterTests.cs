@@ -1,5 +1,4 @@
 using PhoneNumbers.Formatters;
-using Xunit;
 
 namespace PhoneNumbers.Tests.Formatters
 {
