@@ -8,8 +8,6 @@ public class DefaultPhoneNumberParserTests_DE_MobilePhoneNumber
     private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Germany);
 
     [Theory]
-    [InlineData("015020000000", "15020", "000000")]
-    [InlineData("015020999999", "15020", "999999")]
     [InlineData("015050000000", "15050", "000000")]
     [InlineData("015050999999", "15050", "999999")]
     [InlineData("015080000000", "15080", "000000")]
