@@ -459,6 +459,25 @@ public class CountryInfo_Countries_Tests
     }
 
     [Fact]
+    public void CountryInfo_Ukraine()
+    {
+        Assert.Same(CountryInfo.Ukraine, CountryInfo.Ukraine);
+
+        var countryInfo = CountryInfo.Ukraine;
+
+        Assert.Equal("+380", countryInfo.CallingCode);
+        Assert.True(countryInfo.HasNationalDestinationCodes);
+        Assert.Equal("00", countryInfo.InternationalCallPrefix);
+        Assert.Equal("UA", countryInfo.Iso3166Code);
+        Assert.Equal("Ukraine", countryInfo.Name);
+        Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 9, 10 }, countryInfo.NsnLengths);
+        Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Equal("0", countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_UnitedKingdom()
     {
         Assert.Same(CountryInfo.UnitedKingdom, CountryInfo.UnitedKingdom);
