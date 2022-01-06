@@ -1,23 +1,22 @@
-namespace PhoneNumbers
+namespace PhoneNumbers;
+
+/// <summary>
+/// The kinds of <see cref="PhoneNumber"/>.
+/// </summary>
+public enum PhoneNumberKind
 {
     /// <summary>
-    /// The kinds of <see cref="PhoneNumber"/>.
+    /// The phone number represents a geographically assigned phone number.
     /// </summary>
-    public enum PhoneNumberKind
-    {
-        /// <summary>
-        /// The phone number represents a geographically assigned phone number.
-        /// </summary>
-        GeographicPhoneNumber,
+    GeographicPhoneNumber,
 
-        /// <summary>
-        /// The phone number represents a mobile phone.
-        /// </summary>
-        MobilePhoneNumber,
+    /// <summary>
+    /// The phone number represents a mobile phone.
+    /// </summary>
+    MobilePhoneNumber,
 
-        /// <summary>
-        /// The phone number is not assigned to a geographic area.
-        /// </summary>
-        NonGeographicPhoneNumber,
-    }
+    /// <summary>
+    /// The phone number is not assigned to a geographic area.
+    /// </summary>
+    NonGeographicPhoneNumber,
 }
