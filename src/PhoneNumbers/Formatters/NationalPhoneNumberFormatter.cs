@@ -1,40 +1,39 @@
-namespace PhoneNumbers.Formatters
+namespace PhoneNumbers.Formatters;
+
+/// <summary>
+/// A <see cref="PhoneNumberFormatter"/> which returns the national dialling format.
+/// </summary>
+internal sealed class NationalPhoneNumberFormatter : PhoneNumberFormatter
 {
     /// <summary>
-    /// A <see cref="PhoneNumberFormatter"/> which returns the national dialling format.
+    /// Initialises a new instance of the <see cref="NationalPhoneNumberFormatter"/> class.
     /// </summary>
-    internal sealed class NationalPhoneNumberFormatter : PhoneNumberFormatter
+    private NationalPhoneNumberFormatter()
     {
-        /// <summary>
-        /// Initialises a new instance of the <see cref="NationalPhoneNumberFormatter"/> class.
-        /// </summary>
-        private NationalPhoneNumberFormatter()
+    }
+
+    /// <summary>
+    /// Gets the <see cref="NationalPhoneNumberFormatter"/> instance.
+    /// </summary>
+    internal static PhoneNumberFormatter Instance { get; } = new NationalPhoneNumberFormatter();
+
+    /// <inheritdoc/>
+    public override bool CanFormat(string format) =>
+        format?.Equals("N", StringComparison.Ordinal) == true;
+
+    /// <inheritdoc/>
+    public override string Format(PhoneNumber phoneNumber)
+    {
+        if (phoneNumber!.NationalDestinationCode is null)
         {
+            return $"{phoneNumber!.Country.TrunkPrefix}{phoneNumber.SubscriberNumber}";
         }
 
-        /// <summary>
-        /// Gets the <see cref="NationalPhoneNumberFormatter"/> instance.
-        /// </summary>
-        internal static PhoneNumberFormatter Instance { get; } = new NationalPhoneNumberFormatter();
-
-        /// <inheritdoc/>
-        public override bool CanFormat(string format) =>
-            format?.Equals("N", StringComparison.Ordinal) == true;
-
-        /// <inheritdoc/>
-        public override string Format(PhoneNumber phoneNumber)
+        if (phoneNumber.PhoneNumberKind == PhoneNumberKind.GeographicPhoneNumber && !phoneNumber.Country.RequireNdcForLocalGeographicDialling)
         {
-            if (phoneNumber!.NationalDestinationCode is null)
-            {
-                return $"{phoneNumber!.Country.TrunkPrefix}{phoneNumber.SubscriberNumber}";
-            }
-
-            if (phoneNumber.PhoneNumberKind == PhoneNumberKind.GeographicPhoneNumber && !phoneNumber.Country.RequireNdcForLocalGeographicDialling)
-            {
-                return $"({phoneNumber!.Country.TrunkPrefix}{phoneNumber.NationalDestinationCode}) {phoneNumber.SubscriberNumber}";
-            }
-
-            return $"{phoneNumber!.Country.TrunkPrefix}{phoneNumber.NationalDestinationCode} {phoneNumber.SubscriberNumber}".Trim();
+            return $"({phoneNumber!.Country.TrunkPrefix}{phoneNumber.NationalDestinationCode}) {phoneNumber.SubscriberNumber}";
         }
+
+        return $"{phoneNumber!.Country.TrunkPrefix}{phoneNumber.NationalDestinationCode} {phoneNumber.SubscriberNumber}".Trim();
     }
 }
