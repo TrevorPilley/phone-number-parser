@@ -145,6 +145,7 @@ Singapore      | SG            | +65          |              |            | Yes 
 Spain          | ES            | +34          |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                              |
 Slovakia       | SK            | +421         | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                              | Yes
 Switzerland    | CH            | +41          | 0            | Yes        | Yes    |                        |                    |                      | Yes            |                                | Yes                              |
+Ukraine        | UA            | +380         | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                              |
 United Kingdom | GB            | +44          | 0            | Yes        | Yes    | Yes                    | Yes                | Yes                  | Yes            | Yes                            | Yes                              |
 
 ### Notes
@@ -265,6 +266,11 @@ These were used as the references for the phone number data for each country.
 
 - https://www.bakom.admin.ch/bakom/en/homepage/telecommunication/numbering-and-telephony/number-blocks-and-codes.html
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Switzerland
+
+### Ukraine
+
+- https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000DB0007PDFE.pdf
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Ukraine
 
 ### United Kingdom, Guernsey, Jersey, Isle of Man
 
