@@ -127,6 +127,7 @@ Bulgaria       | BG            | +359         | 0            | Yes        | Yes 
 Croatia        | HR            | +385         | 0            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                              |
 Czech Republic | CZ            | +420         |              | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                              | Yes
 France         | FR            | +33          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                              |
+Germany        | DE            | +49          | 0            | Yes        | Yes    |                        | Yes                | Yes                  | Yes            | Yes                            | Yes                              |
 Gibraltar      | GI            | +350         |              | Yes        | Yes    |                        |                    |                      |                | Yes                            | Yes                              |
 Guernsey       | GG            | +44          | 0            | Yes        | Yes    |                        |                    |                      |                |                                |                                  |
 Hong Kong      | HK            | +852         |              |            | Yes    |                        |                    | Yes                  | Yes            | Yes                            |                                  |
@@ -187,6 +188,11 @@ These were used as the references for the phone number data for each country.
 - https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200004A0002PDFE.pdf
 - https://fr.wikipedia.org/wiki/Liste_des_indicatifs_téléphoniques_en_France
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_France
+
+### Germany
+
+- https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000510005PDFE.pdf
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Germany
 
 ### Gibraltar
 
