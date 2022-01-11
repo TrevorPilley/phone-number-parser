@@ -14,8 +14,8 @@ public class DefaultPhoneNumberParserTests_EE_MobilePhoneNumber
     [InlineData("59999999", "59", "999999")]
     [InlineData("81000000", "81", "000000")]
     [InlineData("81999999", "81", "999999")]
-    [InlineData("86000000", "86", "000000")]
-    [InlineData("86999999", "86", "999999")]
+    [InlineData("84000000", "84", "000000")]
+    [InlineData("84999999", "84", "999999")]
     [InlineData("89000000", "89", "000000")]
     [InlineData("89999999", "89", "999999")]
     public void Parse_Known_MobilePhoneNumber(string value, string NationalDestinationCode, string subscriberNumber)
