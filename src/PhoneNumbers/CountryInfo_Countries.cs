@@ -71,6 +71,18 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Estonia.
+    /// </summary>
+    public static CountryInfo Estonia { get; } = new()
+    {
+        CallingCode = "+372",
+        Iso3166Code = "EE",
+        Name = "Estonia",
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8, 10 }),
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for France.
     /// </summary>
     public static CountryInfo France { get; } = new()
