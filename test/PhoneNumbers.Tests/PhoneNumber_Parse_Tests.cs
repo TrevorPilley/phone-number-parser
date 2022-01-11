@@ -43,6 +43,14 @@ public class PhoneNumber_Parse_Tests
     }
 
     [Fact]
+    public void Parse_Value_With_Estonia_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+3726672072");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Estonia, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_With_France_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+33140477283");
