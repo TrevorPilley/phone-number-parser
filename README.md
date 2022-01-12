@@ -130,7 +130,7 @@ Estonia        | EE            | +372         |              |            | Yes 
 France         | FR            | +33          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                              |
 Germany        | DE            | +49          | 0            | Yes        | Yes    |                        | Yes                | Yes                  | Yes            | Yes                            | Yes                              |
 Gibraltar      | GI            | +350         |              | Yes        | Yes    |                        |                    |                      |                | Yes                            | Yes                              |
-Greece         | GR            | +30          |              |            |        |                        |                    |                      |                |                                |                                  |
+Greece         | GR            | +30          |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                              | Yes
 Guernsey       | GG            | +44          | 0            | Yes        | Yes    |                        |                    |                      |                |                                |                                  |
 Hong Kong      | HK            | +852         |              |            | Yes    |                        |                    | Yes                  | Yes            | Yes                            |                                  |
 Ireland        | IE            | +353         | 0            | Yes        | Yes    |                        | Yes                | Yes                  | Yes            | Yes                            | Yes                              | Yes
@@ -197,6 +197,11 @@ These were used as the references for the phone number data for each country.
 - https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200004A0002PDFE.pdf
 - https://fr.wikipedia.org/wiki/Liste_des_indicatifs_téléphoniques_en_France
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_France
+
+### Greece
+
+- https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000550002PDFE.pdf
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Greece
 
 ### Germany
 
