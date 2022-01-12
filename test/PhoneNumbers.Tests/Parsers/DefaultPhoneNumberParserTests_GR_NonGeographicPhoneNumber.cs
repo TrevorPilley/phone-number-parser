@@ -42,7 +42,7 @@ public class DefaultPhoneNumberParserTests_GR_NonGeographicPhoneNumber
     [Theory]
     [InlineData("9000000000", "90", "00000000")]
     [InlineData("9099999999", "90", "99999999")]
-    public void Parse_Known_NonGeographicPhoneNumber_9X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
+    public void Parse_Known_NonGeographicPhoneNumber_PremiumRate(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
         parseResult.ThrowIfFailure();
@@ -55,7 +55,7 @@ public class DefaultPhoneNumberParserTests_GR_NonGeographicPhoneNumber
         var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
         Assert.Equal(CountryInfo.Greece, nonGeographicPhoneNumber.Country);
         Assert.False(nonGeographicPhoneNumber.IsFreephone);
-        Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
+        Assert.True(nonGeographicPhoneNumber.IsPremiumRate);
         Assert.False(nonGeographicPhoneNumber.IsSharedCost);
         Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
         Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
