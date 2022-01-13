@@ -378,6 +378,19 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Sweden.
+    /// </summary>
+    public static CountryInfo Sweden { get; } = new()
+    {
+        CallingCode = "+46",
+        Iso3166Code = "SE",
+        Name = "Sweden",
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 2, 1 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8, 9 }),
+        TrunkPrefix = "0",
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Switzerland.
     /// </summary>
     public static CountryInfo Switzerland { get; } = new()

@@ -299,6 +299,11 @@ These were used as the references for the phone number data for each country.
 - https://numeracionyoperadores.cnmc.es/numeracion
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Spain
 
+### Sweden
+
+- https://www.pts.se/contentassets/156d4de72d0e403cb5be0bcc29e0c4f3/the-swedish-numbering-plan-for-telephony-accordning-to-itu---2022-01-04.pdf
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Sweden
+
 ### Switzerland
 
 - https://www.bakom.admin.ch/bakom/en/homepage/telecommunication/numbering-and-telephony/number-blocks-and-codes.html
