@@ -4,12 +4,12 @@ A library for parsing phone numbers, built for .NET 6.0, .NET 5.0, .NET Standard
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/TrevorPilley/PhoneNumbers/blob/main/LICENSE) ![GitHub last commit](https://img.shields.io/github/last-commit/TrevorPilley/PhoneNumbers/main) ![Build Status](https://github.com/TrevorPilley/PhoneNumbers/workflows/CI/badge.svg?branch=main) [![NuGet](https://img.shields.io/nuget/v/PhoneNumberParser.svg)](https://www.nuget.org/packages/PhoneNumberParser/) [![PhoneNumberParser on fuget.org](https://www.fuget.org/packages/PhoneNumberParser/badge.svg)](https://www.fuget.org/packages/PhoneNumberParser) ![GitHub Release Date](https://img.shields.io/github/release-date/TrevorPilley/PhoneNumbers) [![NuGet](https://img.shields.io/nuget/dt/PhoneNumberParser.svg)](https://www.nuget.org/packages/PhoneNumberParser/)
 
-The library provides a number of improvements over a regular expression, for example greater validity of phone numbers including the validity of national destination codes (area codes) and subscriber numbers. Additional attributes such as the kind of phone number (Mobile, Geographic or Non-Geographic). All parsing is performed locally within the library using embedded in-memory data files.
+This library provides a number of benefits over a regular expression, for example greater validity of phone numbers including national destination codes (area codes) and subscriber numbers based upon published numbering plans for each country. Additional attributes such as the kind of phone number (Mobile, Geographic or Non-Geographic) are also included, and all parsing is performed locally within the library using embedded in-memory data files.
 
 The library **does not**:
 
 - Provide certainty that a phone number is assigned and in use
-- Provide the carrier for mobile phone numbers (due to number portability in most countries the accuracy of this is uncertain)
+- Include the original carrier for mobile phone numbers due to number portability in most countries
 - Support extension numbers
 
 ## Install
@@ -46,19 +46,18 @@ The resulting `PhoneNumber` has the following properties:
 ```csharp
 // PhoneNumber properties:
 phoneNumber.Country.CallingCode;                // +44
+phoneNumber.Country.HasNationalDestinationCodes // true
 phoneNumber.Country.InternationalCallPrefix;    // 00
 phoneNumber.Country.Iso3166Code;                // GB
 phoneNumber.Country.Name;                       // United Kingdom
+phoneNumber.Country.SharesCallingCode           // true
 phoneNumber.Country.TrunkPrefix;                // 0
 phoneNumber.NationalDestinationCode;            // 114
 phoneNumber.NationalSignificantNumber           // 1142726444
-phoneNumber.SubscriberNumber                    // 2726444
 phoneNumber.PhoneNumberKind;                    // PhoneNumberKind.GeographicPhoneNumber
+phoneNumber.SubscriberNumber                    // 2726444
 
-// PhoneNumberKind - can be used to determine the type of PhoneNumber to cast to
-GeographicPhoneNumber,
-MobilePhoneNumber,
-NonGeographicPhoneNumber,
+// By inspecting the phoneNumber.PhoneNumberKind, the type of PhoneNumber to cast to can be determined.
 
 // If PhoneNumberKind.GeographicPhoneNumber
 var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
@@ -88,7 +87,7 @@ phoneNumber.ToString("N");                      // (0114) 2726444  (format for E
 
 ### ParseOptions
 
-The `ParseOptions` class can be used to control parsing, the defaults can be configured via.
+The `ParseOptions` class can be used to control parsing, the defaults can be configured via:
 
 ```csharp
 ParseOptions.Default
@@ -117,7 +116,7 @@ ParseOptions.Default.Countries.Remove(CountryInfo.X);
 
 ## Country support
 
-The library currently supports parsing phone numbers for the following countries and although best endeavours are made to adhere to published telephone numbering plans, depending on the accessibility of data there may be discrepancies. If you happen to find any, please raise a bug.
+The library currently supports parsing phone numbers for the following countries and although best endeavours are made to adhere to published telephone numbering plans, depending on the accessibility of data there may be discrepancies. If you happen to find any, please raise an issue.
 
 Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate)| Non-Geographic<br/>(Shared Cost)
 ---            | ---           | ---          | ---          | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:                            | :-:                              | :-:
