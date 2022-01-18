@@ -22,6 +22,8 @@
     <NeutralLanguage>en-GB</NeutralLanguage>
     <PackageTags>Phone Number Parser</PackageTags>
     <PackageReleaseNotes>See https://github.com/TrevorPilley/phone-number-parser/releases for a summary of changes made in this release of the package.</PackageReleaseNotes>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0|AnyCPU'">
