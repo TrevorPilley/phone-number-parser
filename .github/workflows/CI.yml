@@ -48,3 +48,6 @@ jobs:
 
     - name: dotnet test
       run: dotnet test --no-restore --verbosity minimal
+
+    - name: dotnet pack
+      run: dotnet pack --no-build --configuration ${{ env.PROJECT_CONFIGURATION }}
