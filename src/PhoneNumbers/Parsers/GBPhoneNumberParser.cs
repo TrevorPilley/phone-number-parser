@@ -22,15 +22,8 @@ internal sealed class GBPhoneNumberParser : DefaultPhoneNumberParser
     /// Creates an instance of the <see cref="GBPhoneNumberParser"/> class.
     /// </summary>
     /// <returns>The created <see cref="PhoneNumberParser"/>.</returns>
-    public static PhoneNumberParser Create()
-    {
-        var countryNumbers = ResourceUtility
-            .ReadCountryNumbers("GB.txt")
-            .ToList()
-            .AsReadOnly();
-
-        return new GBPhoneNumberParser(countryNumbers);
-    }
+    public static PhoneNumberParser Create() =>
+        new GBPhoneNumberParser(ResourceUtility.ReadCountryNumbers("GB.txt"));
 
     /// <inheritdoc/>
     /// <remarks>By the time this method is called, nsnValue will have been validated against the <see cref="CountryInfo"/>.NsnLengths and contain digits only.</remarks>
