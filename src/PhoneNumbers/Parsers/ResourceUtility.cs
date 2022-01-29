@@ -6,7 +6,7 @@ internal static class ResourceUtility
 {
     // The file format is as follows (spaces for readability, not present in the file):
     // Kind | NDC Range(s) | Geographic Area | SN Range(s) | Hint
-    internal static IEnumerable<CountryNumber> ReadCountryNumbers(string name) =>
+    internal static IReadOnlyList<CountryNumber> ReadCountryNumbers(string name) =>
         ReadLines(name)
             .Select(x => x.Split('|'))
             .Select(x => new CountryNumber
@@ -16,7 +16,9 @@ internal static class ResourceUtility
                 Kind = ParseNumberKind(x[0][0]),
                 NationalDestinationCodeRanges = x[1].Length > 0 ? ParseNumberRanges(x[1]) : null,
                 SubscriberNumberRanges = ParseNumberRanges(x[3]),
-            });
+            })
+            .ToList()
+            .AsReadOnly();
 
     private static PhoneNumberHint ParseNumberHint(char value) =>
         value switch
@@ -44,7 +46,8 @@ internal static class ResourceUtility
         value
             .Split(',')
             .Select(NumberRange.Create)
-            .ToList();
+            .ToList()
+            .AsReadOnly();
 
     private static IEnumerable<string> ReadLines(string name)
     {

@@ -28,15 +28,8 @@ internal class DefaultPhoneNumberParser : PhoneNumberParser
     /// Creates an instance of the <see cref="DefaultPhoneNumberParser"/> class.
     /// </summary>
     /// <returns>The created <see cref="PhoneNumberParser"/>.</returns>
-    internal static PhoneNumberParser Create(CountryInfo countryInfo)
-    {
-        var countryNumbers = ResourceUtility
-            .ReadCountryNumbers($"{countryInfo.Iso3166Code}.txt")
-            .ToList()
-            .AsReadOnly();
-
-        return new DefaultPhoneNumberParser(countryInfo, countryNumbers);
-    }
+    internal static PhoneNumberParser Create(CountryInfo countryInfo) =>
+        new DefaultPhoneNumberParser(countryInfo, ResourceUtility.ReadCountryNumbers($"{countryInfo.Iso3166Code}.txt"));
 
     /// <summary>
     /// Parses the national destination code, subscriber number and respective <see cref="CountryNumber"/>.
