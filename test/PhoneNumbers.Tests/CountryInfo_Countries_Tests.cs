@@ -556,7 +556,7 @@ public class CountryInfo_Countries_Tests
         Assert.Equal("Sweden", countryInfo.Name);
         Assert.Equal(new[] { 2, 1 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 7, 8, 9 }, countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }

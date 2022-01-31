@@ -385,8 +385,9 @@ public partial class CountryInfo
         CallingCode = "+46",
         Iso3166Code = "SE",
         Name = "Sweden",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 2, 1 }),
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8, 9 }),
+        RequireNdcForLocalGeographicDialling = false,
         TrunkPrefix = "0",
     };
 
