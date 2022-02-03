@@ -11,7 +11,6 @@ namespace PhoneNumbers;
 public sealed partial class CountryInfo
 {
     private const char PlusSign = '+';
-    private static readonly char[] s_digits1To9 = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
     private static readonly ReadOnlyCollection<int> s_emptyIntArray = new(Array.Empty<int>());
     private readonly List<PhoneNumberFormatter> _formatters;
 
@@ -95,7 +94,7 @@ public sealed partial class CountryInfo
     /// </summary>
     /// <param name="value">A string containing a phone number.</param>
     /// <returns>The national significant number (NSN).</returns>
-    /// <remarks>This excludes the CallingCode and TrunkPrefix.</remarks>
+    /// <remarks>This excludes the CallingCode, TrunkPrefix and any non digit characters.</remarks>
     internal string ReadNationalSignificantNumber(string value)
     {
         if (string.IsNullOrWhiteSpace(value))
@@ -114,24 +113,11 @@ public sealed partial class CountryInfo
 
             startPos = CallingCode.Length;
         }
-        else if (TrunkPrefix is not null)
-        {
-            startPos = value.IndexOf(TrunkPrefix, StringComparison.Ordinal) + 1;
-
-            if (startPos == 0 || startPos > value.IndexOfAny(s_digits1To9))
-            {
-                return string.Empty;
-            }
-        }
 
         return ReadNationalSignificantNumber(value, startPos);
     }
 
-    /// <remarks>Char.IsDigit returns true for more than 0-9 so use a more restricted version.</remarks>
-    private static bool IsDigit(char charVal) =>
-        charVal is >= '0' and <= '9';
-
-    private int CountDigitsAfter(int startPos, string value)
+    private static int CountDigitsAfter(string value, int startPos)
     {
         var digits = 0;
 
@@ -139,7 +125,7 @@ public sealed partial class CountryInfo
         {
             var charVal = value[i];
 
-            if (IsDigit(charVal) && !(digits == 0 && TrunkPrefix?[0] == charVal))
+            if (IsDigit(charVal))
             {
                 digits++;
             }
@@ -148,18 +134,17 @@ public sealed partial class CountryInfo
         return digits;
     }
 
+    /// <remarks>Char.IsDigit returns true for more than 0-9 so use a more restricted version.</remarks>
+    private static bool IsDigit(char charVal) =>
+        charVal is >= '0' and <= '9';
+
     [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
     private string GetDebuggerDisplay() =>
         $"{Iso3166Code} {CallingCode}";
 
     private string ReadNationalSignificantNumber(string value, int startPos)
     {
-        var digits = CountDigitsAfter(startPos, value);
-
-        if (startPos + digits == value.Length)
-        {
-            return value.Substring(startPos);
-        }
+        var digits = CountDigitsAfter(value, startPos);
 
         var chars = new char[digits];
         var charPos = 0;
@@ -168,9 +153,28 @@ public sealed partial class CountryInfo
         {
             var charVal = value[i];
 
-            if (IsDigit(charVal) && !(charPos == 0 && TrunkPrefix?[0] == charVal))
+            if (IsDigit(charVal))
             {
                 chars[charPos++] = charVal;
+            }
+        }
+
+        if (TrunkPrefix is not null)
+        {
+            var startsWithTrunkPrefix = true;
+
+            for (int i = 0; i < TrunkPrefix.Length; i++)
+            {
+                if (chars[i] != TrunkPrefix[i])
+                {
+                    startsWithTrunkPrefix = false;
+                    break;
+                }
+            }
+
+            if (startsWithTrunkPrefix)
+            {
+                return chars.AsSpan().Slice(TrunkPrefix.Length).ToString();
             }
         }
 
