@@ -194,7 +194,7 @@ public partial class CountryInfo
         Iso3166Code = "HU",
         Name = "Hungary",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 2, 1 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9, 12 }),
         RequireNdcForLocalGeographicDialling = false,
         TrunkPrefix = "06",
     };

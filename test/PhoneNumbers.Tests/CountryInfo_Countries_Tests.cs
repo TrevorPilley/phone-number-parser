@@ -275,7 +275,7 @@ public class CountryInfo_Countries_Tests
         Assert.Equal("HU", countryInfo.Iso3166Code);
         Assert.Equal("Hungary", countryInfo.Name);
         Assert.Equal(new[] { 2, 1 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 8, 9 }, countryInfo.NsnLengths);
+        Assert.Equal(new[] { 8, 9, 12 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("06", countryInfo.TrunkPrefix);
