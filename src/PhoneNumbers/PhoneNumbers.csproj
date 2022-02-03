@@ -89,6 +89,7 @@
     <None Remove="DataFiles\GR.txt"/>
     <None Remove="DataFiles\HK.txt"/>
     <None Remove="DataFiles\HR.txt"/>
+    <None Remove="DataFiles\HU.txt"/>
     <None Remove="DataFiles\IE.txt"/>
     <None Remove="DataFiles\IM.txt"/>
     <None Remove="DataFiles\IT.txt"/>
@@ -123,6 +124,7 @@
     <EmbeddedResource Include="DataFiles\GR.txt"/>
     <EmbeddedResource Include="DataFiles\HK.txt"/>
     <EmbeddedResource Include="DataFiles\HR.txt"/>
+    <EmbeddedResource Include="DataFiles\HU.txt"/>
     <EmbeddedResource Include="DataFiles\IE.txt"/>
     <EmbeddedResource Include="DataFiles\IM.txt"/>
     <EmbeddedResource Include="DataFiles\IT.txt"/>

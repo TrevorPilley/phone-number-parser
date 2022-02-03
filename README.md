@@ -240,6 +240,11 @@ These were used as the references for the phone number data for each country.
 - https://www.ofca.gov.hk/mobile/en/consumer_focus/education_corner/guide/advice_lfs/ipts/
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Hong_Kong
 
+### Hungary
+
+- https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000610004PDFE.pdf
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Hungary
+
 ### Ireland
 
 - https://www.comreg.ie/media/dlm_uploads/2015/12/ComReg1119.pdf
