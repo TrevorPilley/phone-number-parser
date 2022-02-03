@@ -11,7 +11,6 @@ namespace PhoneNumbers;
 public sealed partial class CountryInfo
 {
     private const char PlusSign = '+';
-    private static readonly char[] s_digits1To9 = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
     private static readonly ReadOnlyCollection<int> s_emptyIntArray = new(Array.Empty<int>());
     private readonly List<PhoneNumberFormatter> _formatters;
 
@@ -116,9 +115,9 @@ public sealed partial class CountryInfo
         }
         else if (TrunkPrefix is not null)
         {
-            startPos = value.IndexOf(TrunkPrefix, StringComparison.Ordinal) + 1;
+            startPos = value.IndexOf(TrunkPrefix, StringComparison.Ordinal) + TrunkPrefix.Length;
 
-            if (startPos == 0 || startPos > value.IndexOfAny(s_digits1To9))
+            if (startPos == 0 || startPos > TrunkPrefix.Length + 1)
             {
                 return string.Empty;
             }
