@@ -266,11 +266,11 @@ public class CountryInfo_Countries_Tests
     public void CountryInfo_Hungary()
     {
         Assert.Same(CountryInfo.Hungary, CountryInfo.Hungary);
-
+fix test
         var countryInfo = CountryInfo.Hungary;
 
         Assert.Equal("+36", countryInfo.CallingCode);
-        Assert.False(countryInfo.HasNationalDestinationCodes);
+        Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("HU", countryInfo.Iso3166Code);
         Assert.Equal("Hungary", countryInfo.Name);
