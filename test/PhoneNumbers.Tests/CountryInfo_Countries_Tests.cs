@@ -266,7 +266,7 @@ public class CountryInfo_Countries_Tests
     public void CountryInfo_Hungary()
     {
         Assert.Same(CountryInfo.Hungary, CountryInfo.Hungary);
-fix test
+
         var countryInfo = CountryInfo.Hungary;
 
         Assert.Equal("+36", countryInfo.CallingCode);
