@@ -39,4 +39,9 @@ public enum PhoneNumberHint
     /// The number is a shared cost number.
     /// </summary>
     SharedCost,
+
+    /// <summary>
+    /// The number is a machine-to-machine (M2M) number.
+    /// </summary>
+    MachineToMachine,
 }
