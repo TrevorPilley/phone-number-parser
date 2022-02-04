@@ -74,6 +74,7 @@ mobilePhoneNumber.IsVirtual;                    // true/false
 // If PhoneNumberKind.NonGeographicPhoneNumber
 var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
 nonGeographicPhoneNumber.IsFreephone;           // true/false
+nonGeographicPhoneNumber.IsMachineToMachine;    // true/false
 nonGeographicPhoneNumber.IsPremiumRate;         // true/false
 nonGeographicPhoneNumber.IsSharedCost;          // true/false
 ```
@@ -130,37 +131,37 @@ ParseOptions.Default.Countries.Remove(CountryInfo.X);
 
 The library currently supports parsing phone numbers for the following countries and although best endeavours are made to adhere to published telephone numbering plans, depending on the accessibility of data there may be discrepancies. If you happen to find any, please raise an issue.
 
-Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate)| Non-Geographic<br/>(Shared Cost)
----            | ---           | ---          | ---          | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:                            | :-:                              | :-:
-Austria        | AT            | +43          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                              |
-Belgium        | BE            | +32          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                              |
-Bulgaria       | BG            | +359         | 0            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                              |
-Croatia        | HR            | +385         | 0            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                              |
-Czech Republic | CZ            | +420         |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                              | Yes
-Estonia        | EE            | +372         |              |            | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                              |
-France         | FR            | +33          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                              |
-Germany        | DE            | +49          | 0            | Yes        | Yes    |                        | Yes                | Yes                  | Yes            | Yes                            | Yes                              |
-Gibraltar      | GI            | +350         |              | Yes        | Yes    |                        |                    |                      |                | Yes                            | Yes                              |
-Greece         | GR            | +30          |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                              | Yes
-Guernsey       | GG            | +44          | 0            | Yes        | Yes    |                        |                    |                      |                |                                |                                  |
-Hong Kong      | HK            | +852         |              |            | Yes    |                        |                    | Yes                  | Yes            | Yes                            |                                  |
-Ireland        | IE            | +353         | 0            | Yes        | Yes    |                        | Yes                | Yes                  | Yes            | Yes                            | Yes                              | Yes
-Isle of Man    | IM            | +44          | 0            | Yes        | Yes    |                        |                    |                      |                |                                |                                  |
-Italy          | IT            | +39          |              | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                              | Yes
-Jersey         | JE            | +44          | 0            | Yes        | Yes    |                        |                    |                      |                |                                |                                  |
-Macau          | MO            | +853         |              |            | Yes    |                        |                    |                      | Yes            |                                |                                  |
-Monaco         | MC            | +377         |              |            | Yes    |                        |                    |                      | Yes            |                                |                                  |
-Netherlands    | NL            | +31          | 0            | Yes        | Yes    |                        | Yes                |                      | Yes            | Yes                            | Yes                              |
-Poland         | PL            | +48          |              | Yes        | Yes    |                        | Yes                |                      | Yes            |                                |                                  |
-Portugal       | PT            | +351         |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                              | Yes
-Romania        | RO            | +40          | 0            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                              | Yes
-San Marino     | SM            | +378         |              | Yes        |        |                        |                    |                      | Yes            |                                | Yes                              |
-Singapore      | SG            | +65          |              |            | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                              |
-Spain          | ES            | +34          |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                              |
-Slovakia       | SK            | +421         | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                              | Yes
-Switzerland    | CH            | +41          | 0            | Yes        | Yes    |                        |                    |                      | Yes            |                                | Yes                              |
-Ukraine        | UA            | +380         | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                              |
-United Kingdom | GB            | +44          | 0            | Yes        | Yes    | Yes                    | Yes                | Yes                  | Yes            | Yes                            | Yes                              |
+Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
+---            | ---           | ---          | ---          | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
+Austria        | AT            | +43          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  |
+Belgium        | BE            | +32          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
+Bulgaria       | BG            | +359         | 0            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               |                                  | Yes
+Croatia        | HR            | +385         | 0            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               |                                  | Yes
+Czech Republic | CZ            | +420         |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               | Yes                              |
+Estonia        | EE            | +372         |              |            | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               |                                  | Yes
+France         | FR            | +33          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
+Germany        | DE            | +49          | 0            | Yes        | Yes    |                        | Yes                | Yes                  | Yes            | Yes                            | Yes                               |                                  | Yes
+Gibraltar      | GI            | +350         |              | Yes        | Yes    |                        |                    |                      |                | Yes                            | Yes                               |                                  |
+Greece         | GR            | +30          |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               | Yes                              | Yes
+Guernsey       | GG            | +44          | 0            | Yes        | Yes    |                        |                    |                      |                |                                |                                   |                                  |
+Hong Kong      | HK            | +852         |              |            | Yes    |                        |                    | Yes                  | Yes            | Yes                            |                                   |                                  | Yes
+Ireland        | IE            | +353         | 0            | Yes        | Yes    |                        | Yes                | Yes                  | Yes            | Yes                            | Yes                               | Yes                              | Yes
+Isle of Man    | IM            | +44          | 0            | Yes        | Yes    |                        |                    |                      |                |                                |                                   |                                  |
+Italy          | IT            | +39          |              | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               | Yes                              |
+Jersey         | JE            | +44          | 0            | Yes        | Yes    |                        |                    |                      |                |                                |                                   |                                  |
+Macau          | MO            | +853         |              |            | Yes    |                        |                    |                      | Yes            |                                |                                   |                                  |
+Monaco         | MC            | +377         |              |            | Yes    |                        |                    |                      | Yes            |                                |                                   |                                  |
+Netherlands    | NL            | +31          | 0            | Yes        | Yes    |                        | Yes                |                      | Yes            | Yes                            | Yes                               |                                  | Yes
+Poland         | PL            | +48          |              | Yes        | Yes    |                        | Yes                |                      | Yes            |                                |                                   |                                  |
+Portugal       | PT            | +351         |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               | Yes                              |
+Romania        | RO            | +40          | 0            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               | Yes                              |
+San Marino     | SM            | +378         |              | Yes        |        |                        |                    |                      | Yes            |                                | Yes                               |                                  |
+Singapore      | SG            | +65          |              |            | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  |
+Spain          | ES            | +34          |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               |                                  |
+Slovakia       | SK            | +421         | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               | Yes                              |
+Switzerland    | CH            | +41          | 0            | Yes        | Yes    |                        |                    |                      | Yes            |                                | Yes                               |                                  |
+Ukraine        | UA            | +380         | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  |
+United Kingdom | GB            | +44          | 0            | Yes        | Yes    | Yes                    | Yes                | Yes                  | Yes            | Yes                            | Yes                               |                                  |
 
 ### Notes
 
@@ -234,9 +235,9 @@ These were used as the references for the phone number data for each country.
 
 ### Ireland
 
+- https://www.comreg.ie/media/dlm_uploads/2015/12/ComReg1119.pdf
 - https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000680001PDFE.pdf
 - https://www.comreg.ie/industry/licensing/numbering/area-code-maps-2/
-- https://www.comreg.ie/csv/downloads/ComReg0804.pdf
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_the_Republic_of_Ireland
 
 ### Italy
