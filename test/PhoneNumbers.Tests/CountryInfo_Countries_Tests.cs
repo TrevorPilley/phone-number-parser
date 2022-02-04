@@ -35,7 +35,7 @@ public class CountryInfo_Countries_Tests
         Assert.Equal("BY", countryInfo.Iso3166Code);
         Assert.Equal("Belarus", countryInfo.Name);
         Assert.Equal(new[] { 4, 3, 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 9 }, countryInfo.NsnLengths);
+        Assert.Equal(new[] { 6, 9, 10 }, countryInfo.NsnLengths);
         Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);

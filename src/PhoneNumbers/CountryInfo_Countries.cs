@@ -27,7 +27,7 @@ public partial class CountryInfo
         Iso3166Code = "BY",
         Name = "Belarus",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 9, 10 }),
         TrunkPrefix = "0",
     };
 
