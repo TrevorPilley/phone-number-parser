@@ -10,6 +10,24 @@ public class NonGeographicPhoneNumberTests
 
         Assert.Equal(countryInfo, phoneNumber.Country);
         Assert.True(phoneNumber.IsFreephone);
+        Assert.False(phoneNumber.IsMachineToMachine);
+        Assert.False(phoneNumber.IsPremiumRate);
+        Assert.False(phoneNumber.IsSharedCost);
+        Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, phoneNumber.PhoneNumberKind);
+        Assert.Equal("12345", phoneNumber.NationalDestinationCode);
+        Assert.Equal("12345667788", phoneNumber.NationalSignificantNumber);
+        Assert.Equal("667788", phoneNumber.SubscriberNumber);
+    }
+
+    [Fact]
+    public void Constructor_Sets_Properties_MachineToMachine()
+    {
+        var countryInfo = TestHelper.CreateCountryInfo();
+        var phoneNumber = new NonGeographicPhoneNumber(countryInfo, PhoneNumberHint.MachineToMachine, "12345667788", "12345", "667788");
+
+        Assert.Equal(countryInfo, phoneNumber.Country);
+        Assert.False(phoneNumber.IsFreephone);
+        Assert.True(phoneNumber.IsMachineToMachine);
         Assert.False(phoneNumber.IsPremiumRate);
         Assert.False(phoneNumber.IsSharedCost);
         Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, phoneNumber.PhoneNumberKind);
@@ -26,6 +44,7 @@ public class NonGeographicPhoneNumberTests
 
         Assert.Equal(countryInfo, phoneNumber.Country);
         Assert.False(phoneNumber.IsFreephone);
+        Assert.False(phoneNumber.IsMachineToMachine);
         Assert.True(phoneNumber.IsPremiumRate);
         Assert.False(phoneNumber.IsSharedCost);
         Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, phoneNumber.PhoneNumberKind);
@@ -42,6 +61,7 @@ public class NonGeographicPhoneNumberTests
 
         Assert.Equal(countryInfo, phoneNumber.Country);
         Assert.False(phoneNumber.IsFreephone);
+        Assert.False(phoneNumber.IsMachineToMachine);
         Assert.False(phoneNumber.IsPremiumRate);
         Assert.True(phoneNumber.IsSharedCost);
         Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, phoneNumber.PhoneNumberKind);

@@ -26,6 +26,7 @@ internal static class ResourceUtility
             '\0' => PhoneNumberHint.None,
             'D' => PhoneNumberHint.Data,
             'F' => PhoneNumberHint.Freephone,
+            'M' => PhoneNumberHint.MachineToMachine,
             'P' => PhoneNumberHint.Pager,
             'R' => PhoneNumberHint.PremiumRate,
             'S' => PhoneNumberHint.SharedCost,

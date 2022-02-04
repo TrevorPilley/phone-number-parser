@@ -80,6 +80,7 @@ Optional but can be one of:
 
 - `D` _data only (such as a 4G tablet), where Kind is M_
 - `F` _a Freephone number, where Kind is N_
+- `M` _a Machine-to-Machine (M2M) number, where Kind is N_
 - `P` _a Pager, where Kind is M_
 - `R` _a Premium rate number, where Kind is N_
 - `S` _a Shared cost number, where Kind is N_
