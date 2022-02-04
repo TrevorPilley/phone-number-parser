@@ -31,6 +31,13 @@ public sealed class NonGeographicPhoneNumber : PhoneNumber, IEquatable<NonGeogra
         Hint == PhoneNumberHint.Freephone;
 
     /// <summary>
+    /// The number is a machine-to-machine (M2M) number.
+    /// </summary>
+    /// <remarks>This is an indication only based upon the data available for each country.</remarks>
+    public bool IsMachineToMachine =>
+        Hint == PhoneNumberHint.MachineToMachine;
+
+    /// <summary>
     /// The number is a premium rate number.
     /// </summary>
     /// <remarks>This is an indication only based upon the data available for each country.</remarks>

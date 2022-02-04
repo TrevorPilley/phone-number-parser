@@ -42,7 +42,7 @@ public partial class CountryInfo
         Iso3166Code = "BG",
         Name = "Bulgaria",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9, 12 }),
         RequireNdcForLocalGeographicDialling = false,
         TrunkPrefix = "0",
     };
@@ -56,7 +56,7 @@ public partial class CountryInfo
         Continent = Europe,
         Iso3166Code = "HR",
         Name = "Croatia",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2, 1 }),
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2, 1 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8, 9, 10 }),
         RequireNdcForLocalGeographicDialling = false,
         TrunkPrefix = "0",
@@ -85,7 +85,7 @@ public partial class CountryInfo
         Iso3166Code = "EE",
         Name = "Estonia",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8, 10 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8, 10, 12 }),
     };
 
     /// <summary>
@@ -97,7 +97,7 @@ public partial class CountryInfo
         Continent = Europe,
         Iso3166Code = "FR",
         Name = "France",
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 9, 13 }),
         TrunkPrefix = "0",
     };
 
@@ -167,7 +167,7 @@ public partial class CountryInfo
         InternationalCallPrefix = "001",
         Iso3166Code = "HK",
         Name = "Hong Kong",
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9, 12 }),
     };
 
     /// <summary>
@@ -181,7 +181,7 @@ public partial class CountryInfo
         Iso3166Code = "IE",
         Name = "Ireland",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8, 9 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8, 9, 12 }),
         RequireNdcForLocalGeographicDialling = false,
         TrunkPrefix = "0",
     };
