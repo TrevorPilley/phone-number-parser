@@ -58,7 +58,7 @@ phoneNumber.NationalSignificantNumber           // 1142726444
 phoneNumber.PhoneNumberKind;                    // PhoneNumberKind.GeographicPhoneNumber
 phoneNumber.SubscriberNumber                    // 2726444
 
-// There are 3 subclasses of PhoneNumber, the correct type to cast to 
+// There are 3 subclasses of PhoneNumber, the correct type to cast to
 // can be determined by inspecting the phoneNumber.PhoneNumberKind property.
 
 // If PhoneNumberKind.GeographicPhoneNumber
@@ -134,6 +134,7 @@ The library currently supports parsing phone numbers for the following countries
 Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
 ---            | ---           | ---          | ---          | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
 Austria        | AT            | +43          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  |
+Belarus        | BY            | +375         | 0            |            |        |                        |                    |                      |                |                                |                                   |                                  |
 Belgium        | BE            | +32          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
 Bulgaria       | BG            | +359         | 0            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               |                                  | Yes
 Croatia        | HR            | +385         | 0            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               |                                  | Yes
@@ -178,6 +179,11 @@ These were used as the references for the phone number data for each country.
 - https://www.rtr.at/TKP/was_wir_tun/telekommunikation/nummerierung/Austrian_Numbering_Plan_2011-03-30.pdf
 - https://www.rtr.at/TKP/was_wir_tun/telekommunikation/nummerierung/rechtlicheGrundlagen/KEM-V2009/KEMV.en.html
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Austria
+
+### Belarus
+
+- https://www.beltelecom.by/en/private/telephony/phone-codes
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Belarus
 
 ### Belgium
 
