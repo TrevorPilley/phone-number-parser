@@ -59,6 +59,7 @@ public class CountryInfo_Tests
         Assert.Equal("12345678", TestHelper.CreateCountryInfo(trunkPrefix: "0").ReadNationalSignificantNumber(value));
 
     [Theory]
+    [InlineData("+4220614680666")]
     [InlineData("0614680666")]
     public void ReadNationalSignificantNumber_With_TrunkPrefix_MultiDigit(string value) =>
         Assert.Equal("14680666", TestHelper.CreateCountryInfo(trunkPrefix: "06").ReadNationalSignificantNumber(value));
