@@ -42,5 +42,5 @@ internal abstract class PhoneNumberParser
     /// <returns>A <see cref="PhoneNumber"/> instance representing the specified string.</returns>
     /// <remarks>By the time this method is called, nsnValue will have been validated against the <see cref="CountryInfo"/>.NsnLengths and contain digits only.</remarks>
     protected virtual ParseResult ParseNsn(string nsnValue) =>
-        ParseResult.Failure($"The national significant number {nsnValue} is not valid for a {Country.Name} phone number.");
+        ParseResult.Failure($"The national significant number {nsnValue} is not a valid {Country.Name} phone number.");
 }

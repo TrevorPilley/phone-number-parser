@@ -122,7 +122,7 @@ public class DefaultPhoneNumberParserTests_CountryNumbers_WithNationalDestinatio
 
     [Fact]
     public void Parse_Invalid_Number() =>
-        Assert.Equal("The national significant number 9005500 is not valid for a Zulu phone number.", _parser.Parse("9005500").ParseError);
+        Assert.Equal("The national significant number 9005500 is not a valid Zulu phone number.", _parser.Parse("9005500").ParseError);
 
     [Fact]
     public void Parse_MobilePhoneNumber()
