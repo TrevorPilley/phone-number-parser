@@ -8,12 +8,12 @@ updates:
   - package-ecosystem: "nuget"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
       time: "07:00"
       timezone: "Europe/London"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
       time: "07:00"
       timezone: "Europe/London"
