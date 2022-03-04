@@ -21,6 +21,16 @@ public class ParseOptionsTests
         Assert.True(countryInfos.Count > 0);
         Assert.Equal(countryInfos, ParseOptions.Default.Countries);
     }
+    
+    [Fact]
+    public void Europe()
+    {
+        Assert.NotNull(ParseOptions.Europe);
+        Assert.Same(ParseOptions.Europe, ParseOptions.Europe);
+
+        Assert.True(ParseOptions.Europe.Countries.Count > 0);
+        Assert.True(ParseOptions.Europe.Countries.All(x => x.Continent == CountryInfo.Europe));
+    }
 
     [Fact]
     public void GetCountryInfo_Does_Not_Exist() =>
