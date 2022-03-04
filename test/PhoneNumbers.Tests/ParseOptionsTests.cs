@@ -5,16 +5,6 @@ namespace PhoneNumbers.Tests;
 public class ParseOptionsTests
 {
     [Fact]
-    public void Asia()
-    {
-        Assert.NotNull(ParseOptions.Asia);
-        Assert.Same(ParseOptions.Asia, ParseOptions.Asia);
-
-        Assert.True(ParseOptions.Asia.Countries.Count > 0);
-        Assert.True(ParseOptions.Asia.Countries.All(x => x.Continent == CountryInfo.Asia));
-    }
-
-    [Fact]
     public void Default()
     {
         Assert.NotNull(ParseOptions.Default);
@@ -30,16 +20,6 @@ public class ParseOptionsTests
 
         Assert.True(countryInfos.Count > 0);
         Assert.Equal(countryInfos, ParseOptions.Default.Countries);
-    }
-
-    [Fact]
-    public void Europe()
-    {
-        Assert.NotNull(ParseOptions.Europe);
-        Assert.Same(ParseOptions.Europe, ParseOptions.Europe);
-
-        Assert.True(ParseOptions.Europe.Countries.Count > 0);
-        Assert.True(ParseOptions.Europe.Countries.All(x => x.Continent == CountryInfo.Europe));
     }
 
     [Fact]
