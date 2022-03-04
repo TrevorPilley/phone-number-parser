@@ -10,6 +10,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.Austria;
 
         Assert.Equal("+43", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("AT", countryInfo.Iso3166Code);
@@ -29,6 +30,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.Belgium;
 
         Assert.Equal("+32", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("BE", countryInfo.Iso3166Code);
@@ -48,6 +50,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.Bulgaria;
 
         Assert.Equal("+359", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("BG", countryInfo.Iso3166Code);
@@ -67,6 +70,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.Croatia;
 
         Assert.Equal("+385", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("HR", countryInfo.Iso3166Code);
@@ -86,6 +90,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.CzechRepublic;
 
         Assert.Equal("+420", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("CZ", countryInfo.Iso3166Code);
@@ -105,6 +110,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.Estonia;
 
         Assert.Equal("+372", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("EE", countryInfo.Iso3166Code);
@@ -124,6 +130,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.France;
 
         Assert.Equal("+33", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.False(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("FR", countryInfo.Iso3166Code);
@@ -143,6 +150,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.Germany;
 
         Assert.Equal("+49", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("DE", countryInfo.Iso3166Code);
@@ -162,6 +170,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.Gibraltar;
 
         Assert.Equal("+350", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("GI", countryInfo.Iso3166Code);
@@ -181,6 +190,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.Greece;
 
         Assert.Equal("+30", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("GR", countryInfo.Iso3166Code);
@@ -200,6 +210,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.Guernsey;
 
         Assert.Equal("+44", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("GG", countryInfo.Iso3166Code);
@@ -219,6 +230,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.HongKong;
 
         Assert.Equal("+852", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
         Assert.False(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("001", countryInfo.InternationalCallPrefix);
         Assert.Equal("HK", countryInfo.Iso3166Code);
@@ -238,6 +250,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.Ireland;
 
         Assert.Equal("+353", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("IE", countryInfo.Iso3166Code);
@@ -257,6 +270,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.IsleOfMan;
 
         Assert.Equal("+44", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("IM", countryInfo.Iso3166Code);
@@ -276,6 +290,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.Italy;
 
         Assert.Equal("+39", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("IT", countryInfo.Iso3166Code);
@@ -295,6 +310,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.Jersey;
 
         Assert.Equal("+44", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("JE", countryInfo.Iso3166Code);
@@ -314,6 +330,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.Macau;
 
         Assert.Equal("+853", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
         Assert.False(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("MO", countryInfo.Iso3166Code);
@@ -333,6 +350,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.Monaco;
 
         Assert.Equal("+377", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.False(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("MC", countryInfo.Iso3166Code);
@@ -352,6 +370,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.Netherlands;
 
         Assert.Equal("+31", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("NL", countryInfo.Iso3166Code);
@@ -371,6 +390,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.Poland;
 
         Assert.Equal("+48", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("PL", countryInfo.Iso3166Code);
@@ -390,6 +410,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.Portugal;
 
         Assert.Equal("+351", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("PT", countryInfo.Iso3166Code);
@@ -409,6 +430,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.Romania;
 
         Assert.Equal("+40", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("RO", countryInfo.Iso3166Code);
@@ -428,6 +450,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.SanMarino;
 
         Assert.Equal("+378", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.False(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("SM", countryInfo.Iso3166Code);
@@ -447,6 +470,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.Singapore;
 
         Assert.Equal("+65", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
         Assert.False(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("001", countryInfo.InternationalCallPrefix);
         Assert.Equal("SG", countryInfo.Iso3166Code);
@@ -466,6 +490,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.Slovakia;
 
         Assert.Equal("+421", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("SK", countryInfo.Iso3166Code);
@@ -485,6 +510,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.Spain;
 
         Assert.Equal("+34", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("ES", countryInfo.Iso3166Code);
@@ -504,6 +530,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.Switzerland;
 
         Assert.Equal("+41", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("CH", countryInfo.Iso3166Code);
@@ -523,6 +550,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.Ukraine;
 
         Assert.Equal("+380", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("UA", countryInfo.Iso3166Code);
@@ -542,6 +570,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.UnitedKingdom;
 
         Assert.Equal("+44", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("GB", countryInfo.Iso3166Code);

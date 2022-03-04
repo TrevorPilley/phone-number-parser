@@ -51,6 +51,28 @@ public class ParseOptionsTests
     }
 
     [Fact]
+    public void AllowAsianCountries()
+    {
+        var parseOptions = new ParseOptions();
+        parseOptions.Countries.Clear();
+        parseOptions.AllowAsianCountries();
+
+        Assert.True(parseOptions.Countries.Count > 0);
+        Assert.All(parseOptions.Countries, x => Assert.Equal(x.Continent, CountryInfo.Asia));
+    }
+
+    [Fact]
+    public void AllowEuropeanCountries()
+    {
+        var parseOptions = new ParseOptions();
+        parseOptions.Countries.Clear();
+        parseOptions.AllowEuropeanCountries();
+
+        Assert.True(parseOptions.Countries.Count > 0);
+        Assert.All(parseOptions.Countries, x => Assert.Equal(x.Continent, CountryInfo.Europe));
+    }
+
+    [Fact]
     public void Remove_Country()
     {
         var parseOptions = new ParseOptions();
