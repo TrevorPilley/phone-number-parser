@@ -1,5 +1,6 @@
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Reflection;
 using PhoneNumbers.Formatters;
 
 namespace PhoneNumbers;
@@ -10,6 +11,12 @@ namespace PhoneNumbers;
 [DebuggerDisplay("{" + nameof(GetDebuggerDisplay) + "(),nq}")]
 public sealed partial class CountryInfo
 {
+    internal const string Africa = "Africa";
+    internal const string Asia = "Asia";
+    internal const string Europe = "Europe";
+    internal const string Oceania = "Oceania";
+    internal const string NorthAmerica = "North America";
+    internal const string SouthAmerica = "South America";
     private const char PlusSign = '+';
     private static readonly ReadOnlyCollection<int> s_emptyIntArray = new(Array.Empty<int>());
     private readonly List<PhoneNumberFormatter> _formatters;
@@ -31,6 +38,11 @@ public sealed partial class CountryInfo
     /// </summary>
     /// <remarks>See https://en.wikipedia.org/wiki/List_of_country_calling_codes.</remarks>
     public string CallingCode { get; init; } = null!;
+
+    /// <summary>
+    /// Gets the name of the continent the country is part of.
+    /// </summary>
+    public string Continent { get; init; } = null!;
 
     /// <summary>
     /// Gets a value indicating whether the country has national destination codes.
@@ -116,6 +128,16 @@ public sealed partial class CountryInfo
 
         return ReadNationalSignificantNumber(value, startPos);
     }
+
+    internal static ICollection<CountryInfo> GetCountries(Func<CountryInfo, bool> predicate) =>
+        typeof(CountryInfo)
+            .GetProperties(BindingFlags.Public | BindingFlags.Static)
+            .Where(x => x.PropertyType == typeof(CountryInfo))
+            .Select(x => x.GetValue(null))
+            .Cast<CountryInfo>()
+            .Where(predicate)
+            .OrderBy(x => x.SharesCallingCode)
+            .ToList();
 
     private static int CountDigitsAfter(string value, int startPos)
     {
