@@ -98,6 +98,7 @@ public class CountryInfo_Tests
         var countryInfo = new CountryInfo();
 
         Assert.Null(countryInfo.CallingCode);
+        Assert.Null(countryInfo.Continent);
         Assert.False(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Null(countryInfo.Iso3166Code);
