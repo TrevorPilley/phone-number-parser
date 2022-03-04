@@ -10,6 +10,7 @@ public partial class CountryInfo
     public static CountryInfo Austria { get; } = new()
     {
         CallingCode = "+43",
+        Continent = Europe,
         Iso3166Code = "AT",
         Name = "Austria",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 1 }),
@@ -23,6 +24,7 @@ public partial class CountryInfo
     public static CountryInfo Belgium { get; } = new()
     {
         CallingCode = "+32",
+        Continent = Europe,
         Iso3166Code = "BE",
         Name = "Belgium",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
@@ -36,6 +38,7 @@ public partial class CountryInfo
     public static CountryInfo Bulgaria { get; } = new()
     {
         CallingCode = "+359",
+        Continent = Europe,
         Iso3166Code = "BG",
         Name = "Bulgaria",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
@@ -50,6 +53,7 @@ public partial class CountryInfo
     public static CountryInfo Croatia { get; } = new()
     {
         CallingCode = "+385",
+        Continent = Europe,
         Iso3166Code = "HR",
         Name = "Croatia",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
@@ -64,6 +68,7 @@ public partial class CountryInfo
     public static CountryInfo CzechRepublic { get; } = new()
     {
         CallingCode = "+420",
+        Continent = Europe,
         Iso3166Code = "CZ",
         Name = "Czech Republic",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
@@ -76,6 +81,7 @@ public partial class CountryInfo
     public static CountryInfo Estonia { get; } = new()
     {
         CallingCode = "+372",
+        Continent = Europe,
         Iso3166Code = "EE",
         Name = "Estonia",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2 }),
@@ -88,6 +94,7 @@ public partial class CountryInfo
     public static CountryInfo France { get; } = new()
     {
         CallingCode = "+33",
+        Continent = Europe,
         Iso3166Code = "FR",
         Name = "France",
         NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
@@ -100,6 +107,7 @@ public partial class CountryInfo
     public static CountryInfo Germany { get; } = new()
     {
         CallingCode = "+49",
+        Continent = Europe,
         Iso3166Code = "DE",
         Name = "Germany",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2 }),
@@ -113,6 +121,7 @@ public partial class CountryInfo
     public static CountryInfo Gibraltar { get; } = new()
     {
         CallingCode = "+350",
+        Continent = Europe,
         Iso3166Code = "GI",
         Name = "Gibraltar",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
@@ -125,6 +134,7 @@ public partial class CountryInfo
     public static CountryInfo Greece { get; } = new()
     {
         CallingCode = "+30",
+        Continent = Europe,
         Iso3166Code = "GR",
         Name = "Greece",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2 }),
@@ -137,6 +147,7 @@ public partial class CountryInfo
     public static CountryInfo Guernsey { get; } = new()
     {
         CallingCode = "+44",
+        Continent = Europe,
         Iso3166Code = "GG",
         Name = "Guernsey",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4 }),
@@ -152,6 +163,7 @@ public partial class CountryInfo
     public static CountryInfo HongKong { get; } = new()
     {
         CallingCode = "+852",
+        Continent = Asia,
         InternationalCallPrefix = "001",
         Iso3166Code = "HK",
         Name = "Hong Kong",
@@ -165,6 +177,7 @@ public partial class CountryInfo
     public static CountryInfo Ireland { get; } = new()
     {
         CallingCode = "+353",
+        Continent = Europe,
         Iso3166Code = "IE",
         Name = "Ireland",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
@@ -179,6 +192,7 @@ public partial class CountryInfo
     public static CountryInfo IsleOfMan { get; } = new()
     {
         CallingCode = "+44",
+        Continent = Europe,
         Iso3166Code = "IM",
         Name = "Isle of Man",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4 }),
@@ -195,6 +209,7 @@ public partial class CountryInfo
     public static CountryInfo Italy { get; } = new()
     {
         CallingCode = "+39",
+        Continent = Europe,
         Iso3166Code = "IT",
         Name = "Italy",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2 }),
@@ -207,6 +222,7 @@ public partial class CountryInfo
     public static CountryInfo Jersey { get; } = new()
     {
         CallingCode = "+44",
+        Continent = Europe,
         Iso3166Code = "JE",
         Name = "Jersey",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4 }),
@@ -222,6 +238,7 @@ public partial class CountryInfo
     public static CountryInfo Macau { get; } = new()
     {
         CallingCode = "+853",
+        Continent = Asia,
         Iso3166Code = "MO",
         Name = "Macau",
         NsnLengths = new ReadOnlyCollection<int>(new[] { 8 }),
@@ -233,6 +250,7 @@ public partial class CountryInfo
     public static CountryInfo Monaco { get; } = new()
     {
         CallingCode = "+377",
+        Continent = Europe,
         Iso3166Code = "MC",
         Name = "Monaco",
         NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9 }),
@@ -244,6 +262,7 @@ public partial class CountryInfo
     public static CountryInfo Netherlands { get; } = new()
     {
         CallingCode = "+31",
+        Continent = Europe,
         Iso3166Code = "NL",
         Name = "Netherlands",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
@@ -257,6 +276,7 @@ public partial class CountryInfo
     public static CountryInfo Poland { get; } = new()
     {
         CallingCode = "+48",
+        Continent = Europe,
         Iso3166Code = "PL",
         Name = "Poland",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 2 }),
@@ -269,6 +289,7 @@ public partial class CountryInfo
     public static CountryInfo Portugal { get; } = new()
     {
         CallingCode = "+351",
+        Continent = Europe,
         Iso3166Code = "PT",
         Name = "Portugal",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3 }),
@@ -281,6 +302,7 @@ public partial class CountryInfo
     public static CountryInfo Romania { get; } = new()
     {
         CallingCode = "+40",
+        Continent = Europe,
         Iso3166Code = "RO",
         Name = "Romania",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
@@ -294,6 +316,7 @@ public partial class CountryInfo
     public static CountryInfo SanMarino { get; } = new()
     {
         CallingCode = "+378",
+        Continent = Europe,
         Iso3166Code = "SM",
         Name = "San Marino",
         NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8, 9, 10 }),
@@ -305,6 +328,7 @@ public partial class CountryInfo
     public static CountryInfo Singapore { get; } = new()
     {
         CallingCode = "+65",
+        Continent = Asia,
         InternationalCallPrefix = "001",
         Iso3166Code = "SG",
         Name = "Singapore",
@@ -317,6 +341,7 @@ public partial class CountryInfo
     public static CountryInfo Slovakia { get; } = new()
     {
         CallingCode = "+421",
+        Continent = Europe,
         Iso3166Code = "SK",
         Name = "Slovakia",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2, 1 }),
@@ -330,6 +355,7 @@ public partial class CountryInfo
     public static CountryInfo Spain { get; } = new()
     {
         CallingCode = "+34",
+        Continent = Europe,
         Iso3166Code = "ES",
         Name = "Spain",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
@@ -342,6 +368,7 @@ public partial class CountryInfo
     public static CountryInfo Switzerland { get; } = new()
     {
         CallingCode = "+41",
+        Continent = Europe,
         Iso3166Code = "CH",
         Name = "Switzerland",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
@@ -355,6 +382,7 @@ public partial class CountryInfo
     public static CountryInfo Ukraine { get; } = new()
     {
         CallingCode = "+380",
+        Continent = Europe,
         Iso3166Code = "UA",
         Name = "Ukraine",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
@@ -370,6 +398,7 @@ public partial class CountryInfo
     public static CountryInfo UnitedKingdom { get; } = new()
     {
         CallingCode = "+44",
+        Continent = Europe,
         Iso3166Code = "GB",
         Name = "United Kingdom",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2 }),
