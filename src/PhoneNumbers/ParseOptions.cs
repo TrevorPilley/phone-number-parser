@@ -8,6 +8,15 @@ namespace PhoneNumbers;
 /// </summary>
 public sealed class ParseOptions
 {
+    private readonly Func<ParseOptions, bool> _filter;
+    
+    public ParseOptions()
+        : this(x => x != null)
+    {
+    }
+    
+    private ParseOptions(Func<ParseOptions, bool> filter) => _filter = filter;
+    
     /// <summary>
     /// Gets the default parse options.
     /// </summary>
@@ -16,7 +25,7 @@ public sealed class ParseOptions
     /// <summary>
     /// Gets the parse options limited to countries in Europe.
     /// </summary>
-    public static ParseOptions Europe { get; } = new();
+    public static ParseOptions Europe { get; } = new(x => x.Continent == CountryInfo.Europe);
 
     /// <summary>
     /// Gets the supported <see cref="CountryInfo"/>s.
@@ -27,6 +36,7 @@ public sealed class ParseOptions
         .Where(x => x.PropertyType == typeof(CountryInfo))
         .Select(x => x.GetValue(null))
         .Cast<CountryInfo>()
+        .Where(_filter)
         .OrderBy(x => x.SharesCallingCode)
         .ToList();
 
