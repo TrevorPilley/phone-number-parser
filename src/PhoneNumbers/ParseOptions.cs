@@ -8,19 +8,31 @@ namespace PhoneNumbers;
 /// </summary>
 public sealed class ParseOptions
 {
-    private readonly Func<CountryInfo, bool> _filter = x => x != null;
-    
+    /// <summary>
+    /// Initialises a new instance of the <see cref="ParseOptions"/> class.
+    /// </summary>
     public ParseOptions()
+       : this( x => x != null)
     {
     }
-    
-    private ParseOptions(Func<CountryInfo, bool> filter) => _filter = filter;
-    
+
+    private ParseOptions(Func<CountryInfo, bool> filter)
+    {
+        Countries = typeof(CountryInfo)
+            .GetProperties(BindingFlags.Public | BindingFlags.Static)
+            .Where(x => x.PropertyType == typeof(CountryInfo))
+            .Select(x => x.GetValue(null))
+            .Cast<CountryInfo>()
+            .Where(filter)
+            .OrderBy(x => x.SharesCallingCode)
+            .ToList();
+    }
+
     /// <summary>
     /// Gets the default parse options.
     /// </summary>
     public static ParseOptions Default { get; } = new();
-    
+
     /// <summary>
     /// Gets the parse options limited to countries in Europe.
     /// </summary>
@@ -30,14 +42,7 @@ public sealed class ParseOptions
     /// Gets the supported <see cref="CountryInfo"/>s.
     /// </summary>
     /// <remarks>By default, this will contain all <see cref="CountryInfo"/> static properties.</remarks>
-    public ICollection<CountryInfo> Countries { get; } = typeof(CountryInfo)
-        .GetProperties(BindingFlags.Public | BindingFlags.Static)
-        .Where(x => x.PropertyType == typeof(CountryInfo))
-        .Select(x => x.GetValue(null))
-        .Cast<CountryInfo>()
-        .Where(_filter)
-        .OrderBy(x => x.SharesCallingCode)
-        .ToList();
+    public ICollection<CountryInfo> Countries { get; }
 
     /// <summary>
     /// Gets the <see cref="PhoneNumberParserFactory"/>.
