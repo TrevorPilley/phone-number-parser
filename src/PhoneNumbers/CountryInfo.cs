@@ -1,5 +1,6 @@
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Reflection;
 using PhoneNumbers.Formatters;
 
 namespace PhoneNumbers;
@@ -127,6 +128,16 @@ public sealed partial class CountryInfo
 
         return ReadNationalSignificantNumber(value, startPos);
     }
+
+    internal static ICollection<CountryInfo> GetCountries(Func<CountryInfo,bool> predicate) =>
+        typeof(CountryInfo)
+            .GetProperties(BindingFlags.Public | BindingFlags.Static)
+            .Where(x => x.PropertyType == typeof(CountryInfo))
+            .Select(x => x.GetValue(null))
+            .Cast<CountryInfo>()
+            .Where(predicate)
+            .OrderBy(x => x.SharesCallingCode)
+            .ToList();
 
     private static int CountDigitsAfter(string value, int startPos)
     {
