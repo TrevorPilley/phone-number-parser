@@ -12,6 +12,11 @@ public sealed class ParseOptions
     /// Gets the default parse options.
     /// </summary>
     public static ParseOptions Default { get; } = new();
+    
+    /// <summary>
+    /// Gets the parse options limited to countries in Europe.
+    /// </summary>
+    public static ParseOptions Europe { get; } = new();
 
     /// <summary>
     /// Gets the supported <see cref="CountryInfo"/>s.
