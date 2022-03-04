@@ -34,7 +34,12 @@ public sealed class ParseOptions
     public static ParseOptions Default { get; } = new();
 
     /// <summary>
-    /// Gets the parse options limited to countries in Europe.
+    /// Gets the parse options, limited to countries in Asia.
+    /// </summary>
+    public static ParseOptions Asia { get; } = new(x => x.Continent == CountryInfo.Asia);
+
+    /// <summary>
+    /// Gets the parse options, limited to countries in Europe.
     /// </summary>
     public static ParseOptions Europe { get; } = new(x => x.Continent == CountryInfo.Europe);
 
