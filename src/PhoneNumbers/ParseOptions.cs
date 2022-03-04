@@ -8,14 +8,14 @@ namespace PhoneNumbers;
 /// </summary>
 public sealed class ParseOptions
 {
-    private readonly Func<ParseOptions, bool> _filter;
+    private readonly Func<CountryInfo, bool> _filter;
     
     public ParseOptions()
         : this(x => x != null)
     {
     }
     
-    private ParseOptions(Func<ParseOptions, bool> filter) => _filter = filter;
+    private ParseOptions(Func<CountryInfo, bool> filter) => _filter = filter;
     
     /// <summary>
     /// Gets the default parse options.
