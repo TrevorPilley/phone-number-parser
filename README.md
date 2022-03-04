@@ -46,6 +46,7 @@ The resulting `PhoneNumber` has the following properties:
 ```csharp
 // PhoneNumber properties:
 phoneNumber.Country.CallingCode;                // +44
+phoneNumber.Country.Continent;                  // Europe
 phoneNumber.Country.HasNationalDestinationCodes // true
 phoneNumber.Country.InternationalCallPrefix;    // 00
 phoneNumber.Country.Iso3166Code;                // GB
@@ -105,6 +106,16 @@ To opt in to specific countries and ignore any new ones added in future versions
 ```csharp
 ParseOptions.Default.Countries.Clear():
 ParseOptions.Default.Countries.Add(CountryInfo.X);
+```
+
+To opt in to all countries supported by the library within a continent:
+
+```csharp
+ParseOptions.Default.Countries.Clear():
+
+// One or more continent can be added.
+ParseOptions.Default.AllowAsianCountries():
+ParseOptions.Default.AllowEuropeanCountries():
 ```
 
 #### Opt-out
