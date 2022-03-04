@@ -8,10 +8,9 @@ namespace PhoneNumbers;
 /// </summary>
 public sealed class ParseOptions
 {
-    private readonly Func<CountryInfo, bool> _filter;
+    private readonly Func<CountryInfo, bool> _filter = x => x != null;
     
     public ParseOptions()
-        : this(x => x != null)
     {
     }
     
@@ -25,7 +24,7 @@ public sealed class ParseOptions
     /// <summary>
     /// Gets the parse options limited to countries in Europe.
     /// </summary>
-    public static ParseOptions Europe { get; } = new(x => x.Continent == CountryInfo.Europe);
+    public static ParseOptions Europe { get; } = new ParseOptions(x => x.Continent == CountryInfo.Europe);
 
     /// <summary>
     /// Gets the supported <see cref="CountryInfo"/>s.
