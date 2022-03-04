@@ -42,7 +42,7 @@ public sealed partial class CountryInfo
     /// Gets the name of the continent the country is part of.
     /// </summary>
     public string Continent { get; init; } = null!;
-    
+
     /// <summary>
     /// Gets a value indicating whether the country has national destination codes.
     /// </summary>
