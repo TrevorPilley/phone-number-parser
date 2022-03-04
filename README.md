@@ -108,6 +108,16 @@ ParseOptions.Default.Countries.Clear():
 ParseOptions.Default.Countries.Add(CountryInfo.X);
 ```
 
+To opt in to all countries supported by the library within a continent:
+
+```csharp
+ParseOptions.Default.Countries.Clear():
+
+// One or more continent can be added.
+ParseOptions.Default.AllowAsianCountries():
+ParseOptions.Default.AllowEuropeanCountries():
+```
+
 #### Opt-out
 
 To out out of specific countries but still use any new ones added in future versions of the library:

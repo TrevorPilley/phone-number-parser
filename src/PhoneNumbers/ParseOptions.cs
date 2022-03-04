@@ -26,12 +26,14 @@ public sealed class ParseOptions
     /// <summary>
     /// Gets the supported <see cref="CountryInfo"/> with the specified ISO 3166 Alpha-2 code.
     /// </summary>
+    /// <param name="countryCode">A string containing an ISO 3166 Alpha-2 code.</param>
     internal CountryInfo? GetCountryInfo(string countryCode) =>
         Countries.SingleOrDefault(x => x.Iso3166Code == countryCode);
 
     /// <summary>
     /// Gets the supported <see cref="CountryInfo"/>s for which the specified value is potentially an international number.
     /// </summary>
+    /// <param name="value">A string containing a phone number.</param>
     internal IEnumerable<CountryInfo> GetCountryInfos(string value) =>
         Countries.Where(x => x.IsInternationalNumber(value));
 }
