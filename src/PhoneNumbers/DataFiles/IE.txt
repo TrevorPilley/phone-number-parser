@@ -45,7 +45,7 @@ G|71|Sligo, Manorhamilton, Carrick-on- Shannon|2000000-9989999|
 G|74|Letterkenny, Donegal, Dungloe, Buncrana|2000000-9989999|
 N|800||000000-999999|F
 M|822||000000-999999|P
-M|83,84,85,86,87,88,89||0000000-9999999|
+M|83-87,89||0000000-9999999|
 G|90|Athlone, Roscommon, Ballinasloe, Portumna|2000000-9989999|
 G|91|Galway, Loughrea, Gort|200000-998999|
 G|93|Tuam|20000-99899|
