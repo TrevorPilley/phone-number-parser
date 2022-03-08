@@ -104,6 +104,20 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Finland.
+    /// </summary>
+    public static CountryInfo Finland { get; } = new()
+    {
+        CallingCode = "+358",
+        Iso3166Code = "FI",
+        Name = "Finland",
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 5, 6, 7, 8, 9, 10, 11, 12 }),
+        RequireNdcForLocalGeographicDialling = false,
+        TrunkPrefix = "0",
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for France.
     /// </summary>
     public static CountryInfo France { get; } = new()
