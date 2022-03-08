@@ -25,15 +25,16 @@ G|57|Dobrich region|200000-999999|
 G|58|Dobrich|200000-999999|
 G|59|Burgas region|200000-999999|
 G|60|Targovishte and Targovishte region|200000-999999|
-G|61,63|Veliko Tarnovo region|200000-999999|
+G|61|Veliko Tarnovo region|200000-999999|
 G|62|Veliko Tarnovo|200000-999999|
+G|63|Veliko Tarnovo region and Pleven region|200000-999999|
 G|64|Pleven|200000-999999|
 G|65|Pleven region|200000-999999|
 G|66|Gabrovo|200000-999999|
 G|67|Gabrovo region and Lovech region|200000-999999|
 G|68|Lovech|200000-999999|
 G|69|Lovech region|200000-999999|
-N|700||00000-99999|V
+M|700||00000-99999|V
 G|701-707|Kyustendil region|20000-99999|
 G|71,72|Sofia region|200000-999999|
 G|73|Blagoevgrad|200000-999999|
@@ -57,4 +58,5 @@ G|94|Vidin|200000-999999|
 G|95|Montana region|200000-999999|
 G|96|Montana|200000-999999|
 G|97|Montana region and Vratsa region|200000-999999|
+N|980-983||000000-999999|
 M|984-989,990-999||000000-999999|

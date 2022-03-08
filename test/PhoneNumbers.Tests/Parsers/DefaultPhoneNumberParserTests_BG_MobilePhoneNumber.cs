@@ -42,4 +42,26 @@ public class DefaultPhoneNumberParserTests_BG_MobilePhoneNumber
         Assert.Equal(NationalDestinationCode, mobilePhoneNumber.NationalDestinationCode);
         Assert.Equal(subscriberNumber, mobilePhoneNumber.SubscriberNumber);
     }
+
+    [Theory]
+    [InlineData("070000000", "700", "00000")]
+    [InlineData("070099999", "700", "99999")]
+    public void Parse_Known_MobilePhoneNumber_Virtual(string value, string NationalDestinationCode, string subscriberNumber)
+    {
+        var parseResult = s_parser.Parse(value);
+        parseResult.ThrowIfFailure();
+
+        var phoneNumber = parseResult.PhoneNumber;
+
+        Assert.NotNull(phoneNumber);
+        Assert.IsType<MobilePhoneNumber>(phoneNumber);
+
+        var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
+        Assert.Equal(CountryInfo.Bulgaria, mobilePhoneNumber.Country);
+        Assert.False(mobilePhoneNumber.IsDataOnly);
+        Assert.False(mobilePhoneNumber.IsPager);
+        Assert.True(mobilePhoneNumber.IsVirtual);
+        Assert.Equal(NationalDestinationCode, mobilePhoneNumber.NationalDestinationCode);
+        Assert.Equal(subscriberNumber, mobilePhoneNumber.SubscriberNumber);
+    }
 }
