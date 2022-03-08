@@ -1,4 +1,4 @@
-G|1|Wien|00000-999999999999|
+G|1|Wien|000-999999999999|
 G|2142|Gattendorf|000-999999999|
 G|2143|Kittsee|000-999999999|
 G|2144|Deutsch Jahrndorf|000-999999999|
@@ -46,14 +46,14 @@ G|2249|Groß-Enzersdorf|000-999999999|
 G|2252|Baden|000-999999999|
 G|2253|Oberwaltersdorf|000-999999999|
 G|2254|Ebreichsdorf|000-999999999|
-G|2255|Deutsch-Brodersdorf|000-999999999|
+G|2255|Deutsch Brodersdorf|000-999999999|
 G|2256|Leobersdorf|000-999999999|
 G|2257|Klausen-Leopoldsdorf|000-999999999|
 G|2258|Alland|000-999999999|
 G|2259|Münchendorf|000-999999999|
 G|2262|Korneuburg|000-999999999|
 G|2263|Großrußbach|000-999999999|
-G|2264|Rückersdorf|000-999999999|
+G|2264|Rückersdorf (Harmannsdorf)|000-999999999|
 G|2265|Hausleiten|000-999999999|
 G|2266|Stockerau|000-999999999|
 G|2267|Sierndorf|000-999999999|
@@ -65,7 +65,7 @@ G|2273|Tulbing|000-999999999|
 G|2274|Sieghartskirchen|000-999999999|
 G|2275|Atzenbrugg|000-999999999|
 G|2276|Reidling|000-999999999|
-G|2277|Zwentendorf an der Donau|000-999999999|
+G|2277|Zwentendorf|000-999999999|
 G|2278|Absdorf|000-999999999|
 G|2279|Kirchberg am Wagram|000-999999999|
 G|2282|Gänserndorf|000-999999999|
@@ -75,9 +75,9 @@ G|2285|Marchegg|000-999999999|
 G|2286|Obersiebenbrunn|000-999999999|
 G|2287|Strasshof an der Nordbahn|000-999999999|
 G|2288|Auersthal|000-999999999|
-G|2289|Matzen-Raggendorf|000-999999999|
+G|2289|Matzen|000-999999999|
 G|2522|Laa an der Thaya|000-999999999|
-G|2523|Kirchstetten|000-999999999|
+G|2523|Kirchstetten (Neudorf bei Staatz)|000-999999999|
 G|2524|Kautendorf|000-999999999|
 G|2525|Gnadendorf|000-999999999|
 G|2526|Stronsdorf|000-999999999|
@@ -93,7 +93,7 @@ G|2554|Stützenhofen|000-999999999|
 G|2555|Herrnbaumgarten|000-999999999|
 G|2556|Großkrut|000-999999999|
 G|2557|Bernhardsthal|000-999999999|
-G|2572|Mistelbach an der Zaya|000-999999999|
+G|2572|Mistelbach|000-999999999|
 G|2573|Wilfersdorf|000-999999999|
 G|2574|Gaweinstal|000-999999999|
 G|2575|Ladendorf|000-999999999|
@@ -118,7 +118,7 @@ G|2625|Bad Sauerbrunn|000-999999999|
 G|2626|Mattersburg|000-999999999|
 G|2627|Pitten|000-999999999|
 G|2628|Felixdorf|000-999999999|
-G|2629|Warth|000-999999999|
+G|2629|Warth (Niederösterreich)|000-999999999|
 G|2630|Ternitz|000-999999999|
 G|2631|Pöttsching|000-999999999|
 G|2632|Pernitz|000-999999999|
@@ -142,11 +142,11 @@ G|2662|Gloggnitz|000-999999999|
 G|2663|Schottwien|000-999999999|
 G|2664|Semmering|000-999999999|
 G|2665|Prein an der Rax|000-999999999|
-G|2666|Reichenau an der Rax|000-999999999|
+G|2666|Reichenau|000-999999999|
 G|2667|Schwarzau im Gebirge|000-999999999|
 G|2672|Berndorf|000-999999999|
 G|2673|Altenmarkt an der Triesting|000-999999999|
-G|2674|Weissenbach an der Triesting|000-999999999|
+G|2674|Weißenbach an der Triesting|000-999999999|
 G|2680|Sankt Margarethen im Burgenland|000-999999999|
 G|2682|Eisenstadt|000-999999999|
 G|2683|Purbach am Neusiedler See|000-999999999|
@@ -205,7 +205,7 @@ G|2768|Sankt Aegyd am Neuwalde|000-999999999|
 G|2769|Türnitz|000-999999999|
 G|2772|Neulengbach|000-999999999|
 G|2773|Eichgraben|000-999999999|
-G|2774|Neustift-Innermanzing|000-999999999|
+G|2774|Innermanzing|000-999999999|
 G|2782|Herzogenburg|000-999999999|
 G|2783|Traismauer|000-999999999|
 G|2784|Perschling|000-999999999|
@@ -227,10 +227,10 @@ G|2841|Vitis|000-999999999|
 G|2842|Waidhofen an der Thaya|000-999999999|
 G|2843|Dobersberg|000-999999999|
 G|2844|Karlstein an der Thaya|000-999999999|
-G|2845|Weikertschlag an der Thaya|000-999999999|
+G|2845|Weikertschlag an der Thaya (Raabs an der Thaya)|000-999999999|
 G|2846|Raabs an der Thaya|000-999999999|
 G|2847|Groß-Siegharts|000-999999999|
-G|2848|Pfaffenschlag bei Waidhofen an der Thaya|000-999999999|
+G|2848|Pfaffenschlag bei Waidhofen a.d.Thaya|000-999999999|
 G|2849|Schwarzenau|000-999999999|
 G|2852|Gmünd|000-999999999|
 G|2853|Schrems|000-999999999|
@@ -250,12 +250,12 @@ G|2874|Martinsberg|000-999999999|
 G|2875|Grafenschlag|000-999999999|
 G|2876|Els|000-999999999|
 G|2877|Grainbrunn|000-999999999|
-G|2878|Bad Traunstein|000-999999999|
+G|2878|Traunstein|000-999999999|
 G|2912|Geras|000-999999999|
 G|2913|Hötzelsdorf|000-999999999|
 G|2914|Japons|000-999999999|
 G|2915|Drosendorf-Zissersdorf|000-999999999|
-G|2916|Hardegg|000-999999999|
+G|2916|Riegersburg (Hardegg)|000-999999999|
 G|2942|Retz|000-999999999|
 G|2943|Obritz|000-999999999|
 G|2944|Haugsdorf|000-999999999|
@@ -270,7 +270,7 @@ G|2953|Nappersdorf|000-999999999|
 G|2954|Göllersdorf|000-999999999|
 G|2955|Großweikersdorf|000-999999999|
 G|2956|Ziersdorf|000-999999999|
-G|2957|Hohenwarth-Mühlbach am Manhartsberg|000-999999999|
+G|2957|Hohenwarth|000-999999999|
 G|2958|Maissau|000-999999999|
 G|2959|Sitzendorf an der Schmida|000-999999999|
 G|2982|Horn|000-999999999|
@@ -285,7 +285,7 @@ G|3112|Gleisdorf|000-999999999|
 G|3113|Pischelsdorf in der Steiermark|000-999999999|
 G|3114|Markt Hartmannsdorf|000-999999999|
 G|3115|Studenzen|000-999999999|
-G|3116|Kirchbach in der Steiermark|000-999999999|
+G|3116|Kirchbach in Steiermark|000-999999999|
 G|3117|Eggersdorf bei Graz|000-999999999|
 G|3118|Sinabelkirchen|000-999999999|
 G|3119|Sankt Marein bei Graz|000-999999999|
@@ -295,7 +295,7 @@ G|3125|Übelbach|000-999999999|
 G|3126|Frohnleiten|000-999999999|
 G|3127|Peggau|000-999999999|
 G|3132|Kumberg|000-999999999|
-G|3133|Nestelbach bei Graz|000-999999999|
+G|3133|Nestelbach|000-999999999|
 G|3134|Heiligenkreuz am Waasen|000-999999999|
 G|3135|Kalsdorf bei Graz|000-999999999|
 G|3136|Dobl|000-999999999|
@@ -303,7 +303,7 @@ G|3137|Söding|000-999999999|
 G|3140|Sankt Martin am Wöllmißberg|000-999999999|
 G|3141|Hirschegg|000-999999999|
 G|3142|Voitsberg|000-999999999|
-G|3143|Krottendorf-Gaisfeld|000-999999999|
+G|3143|Krottendorf|000-999999999|
 G|3144|Köflach|000-999999999|
 G|3145|Edelschrott|000-999999999|
 G|3146|Modriach|000-999999999|
@@ -318,7 +318,7 @@ G|3155|Fehring|000-999999999|
 G|3157|Kapfenstein|000-999999999|
 G|3158|Sankt Anna am Aigen|000-999999999|
 G|3159|Bad Gleichenberg|000-999999999|
-G|316|Graz|0000-9999999999|
+G|316|Graz|000-9999999999|
 G|3170|Fischbach|000-999999999|
 G|3171|Gasen|000-999999999|
 G|3172|Weiz|000-999999999|
@@ -352,7 +352,7 @@ G|3338|Lafnitz|000-999999999|
 G|3339|Friedberg|000-999999999|
 G|3352|Oberwart|000-999999999|
 G|3353|Oberschützen|000-999999999|
-G|3354|Bernstein im Burgenland|000-999999999|
+G|3354|Bernstein|000-999999999|
 G|3355|Stadtschlaining|000-999999999|
 G|3356|Markt Allhau|000-999999999|
 G|3357|Pinkafeld|000-999999999|
@@ -383,7 +383,7 @@ G|3465|Pölfing-Brunn|000-999999999|
 G|3466|Eibiswald|000-999999999|
 G|3467|Schwanberg|000-999999999|
 G|3468|Sankt Oswald ob Eibiswald|000-999999999|
-G|3469|Sankt Oswald in Freiland|000-999999999|
+G|3469|Sankt Oswald im Freiland|000-999999999|
 G|3472|Mureck|000-999999999|
 G|3473|Straden|000-999999999|
 G|3474|Deutsch Goritz|000-999999999|
@@ -412,7 +412,7 @@ G|3578|Obdach|000-999999999|
 G|3579|Pöls|000-999999999|
 G|3581|Oberwölz|000-999999999|
 G|3582|Scheifling|000-999999999|
-G|3583|Unzmarkt-Frauenburg|000-999999999|
+G|3583|Unzmarkt|000-999999999|
 G|3584|Neumarkt in Steiermark|000-999999999|
 G|3585|Sankt Lambrecht|000-999999999|
 G|3586|Mühlen|000-999999999|
@@ -492,7 +492,7 @@ G|4225|Grafenstein|000-999999999|
 G|4226|Sankt Margareten im Rosental|000-999999999|
 G|4227|Ferlach|000-999999999|
 G|4228|Feistritz im Rosental|000-999999999|
-G|4229|Krumpendorf am Wörthersee|000-999999999|
+G|4229|Krumpendorf am Wörther See|000-999999999|
 G|4230|Globasnitz|000-999999999|
 G|4231|Mittertrixen|000-999999999|
 G|4232|Völkermarkt|000-999999999|
@@ -503,14 +503,14 @@ G|4236|Eberndorf|000-999999999|
 G|4237|Miklauzhof|000-999999999|
 G|4238|Eisenkappel-Vellach|000-999999999|
 G|4239|Sankt Kanzian am Klopeiner See|000-999999999|
-G|4240|Bad Kleinkirchheim|000-199999999|
+G|4240|Bad Kleinkirchheim|000-999999999|
 G|4242|Villach|000-999999999|
 G|4243|Bodensdorf|000-999999999|
 G|4244|Bad Bleiberg|000-999999999|
 G|4245|Feistritz an der Drau|000-999999999|
 G|4246|Radenthein|000-999999999|
-G|4247|Afritz am See|000-999999999|
-G|4248|Treffen am Ossiacher See|000-999999999|
+G|4247|Afritz|000-999999999|
+G|4248|Treffen|000-999999999|
 G|4252|Wernberg|000-999999999|
 G|4253|Sankt Jakob im Rosental|000-999999999|
 G|4254|Faak am See|000-999999999|
@@ -535,7 +535,7 @@ G|4276|Feldkirchen in Kärnten|000-999999999|
 G|4277|Glanegg|000-999999999|
 G|4278|Gnesau|000-999999999|
 G|4279|Sirnitz|000-999999999|
-G|4282|Hermagor-Pressegger See|000-999999999|
+G|4282|Hermagor|000-999999999|
 G|4283|Sankt Stefan im Gailtal|000-999999999|
 G|4284|Kirchbach|000-999999999|
 G|4285|Tröpolach|000-999999999|
@@ -549,7 +549,7 @@ G|4356|Lavamünd|000-999999999|
 G|4357|Sankt Paul im Lavanttal|000-999999999|
 G|4358|Sankt Andrä|000-999999999|
 G|4359|Reichenfels|000-999999999|
-G|463|Klagenfurt am Wörthersee|0000-9999999999|
+G|463|Klagenfurt|000-9999999999|
 G|4710|Oberdrauburg|000-999999999|
 G|4712|Greifenburg|000-999999999|
 G|4713|Techendorf|000-999999999|
@@ -557,15 +557,15 @@ G|4714|Dellach im Drautal|000-999999999|
 G|4715|Kötschach-Mauthen|000-999999999|
 G|4716|Lesachtal|000-999999999|
 G|4717|Steinfeld|000-999999999|
-G|4718|Dellach (Gailtal)|000-999999999|
+G|4718|Dellach|000-999999999|
 G|4732|Gmünd in Kärnten|000-999999999|
 G|4733|Malta|000-999999999|
-G|4734|Rennweg am Katschberg|000-999999999|
+G|4734|Rennweg|000-999999999|
 G|4735|Kremsbrücke|000-999999999|
 G|4736|Innerkrems|000-999999999|
 G|4761|Stockenboi|000-999999999|
 G|4762|Spittal an der Drau|000-999999999|
-G|4766|Millstatt am See|000-999999999|
+G|4766|Millstatt|000-999999999|
 G|4767|Rothenthurn|000-999999999|
 G|4768|Kleblach-Lind|000-999999999|
 G|4769|Möllbrücke|000-999999999|
@@ -573,8 +573,9 @@ G|4782|Obervellach|000-999999999|
 G|4783|Reißeck|000-999999999|
 G|4784|Mallnitz|000-999999999|
 G|4785|Außerfragant|000-999999999|
-G|4823|Tresdorf|000-999999999|
-G|4824|Heiligenblut am Großglockner|000-999999999|
+G|4822|Winklern|000-999999999|
+G|4823|Tresdorf (Rangersdorf)|000-999999999|
+G|4824|Heiligenblut|000-999999999|
 G|4825|Großkirchheim|000-999999999|
 G|4826|Mörtschach|000-999999999|
 G|4842|Sillian|000-999999999|
@@ -593,7 +594,7 @@ G|4875|Matrei in Osttirol|000-999999999|
 G|4876|Kals am Großglockner|000-999999999|
 G|4877|Prägraten am Großvenediger|000-999999999|
 G|4879|Sankt Veit in Defereggen|000-999999999|
-G|512|Innsbruck|0000-9999999999|
+G|512|Innsbruck|000-9999999999|
 G|5212|Seefeld in Tirol|000-999999999|
 G|5213|Scharnitz|000-999999999|
 G|5214|Leutasch|000-999999999|
@@ -763,7 +764,7 @@ G|6247|Großgmain|000-999999999|
 G|6272|Oberndorf bei Salzburg|000-999999999|
 G|6274|Lamprechtshausen|000-999999999|
 G|6276|Nußdorf am Haunsberg|000-999999999|
-G|6277|St. Pantaleon|000-999999999|
+G|6277|Sankt Pantaleon|000-999999999|
 G|6278|Ostermiething|000-999999999|
 G|6412|Sankt Johann im Pongau|000-999999999|
 G|6413|Wagrain|000-999999999|
@@ -788,7 +789,7 @@ G|6463|Annaberg-Lungötz|000-999999999|
 G|6466|Werfenweng|000-999999999|
 G|6467|Mühlbach am Hochkönig|000-999999999|
 G|6468|Werfen|000-999999999|
-G|6470|Tamsweg|000-999999999|
+G|6470|Atzmannsdorf|000-999999999|
 G|6471|Tweng|000-999999999|
 G|6472|Mauterndorf|000-999999999|
 G|6473|Mariapfarr|000-999999999|
@@ -800,8 +801,8 @@ G|6478|Zederhaus|000-999999999|
 G|6479|Muhr|000-999999999|
 G|6483|Göriach|000-999999999|
 G|6484|Lessach|000-999999999|
-M|650,660,664-665,676-677,670,680-681,688,690,699||0000-9999999999|
-G|6541|Saalbach-Hinterglemm|000-999999999|
+M|650-653,655,657,659-661,663-669||0000-9999999999|
+G|6541|Saalbach|000-999999999|
 G|6542|Zell am See|000-999999999|
 G|6543|Taxenbach|000-999999999|
 G|6544|Rauris|000-999999999|
@@ -820,9 +821,9 @@ G|6583|Leogang|000-999999999|
 G|6584|Maria Alm am Steinernen Meer|000-999999999|
 G|6588|Lofer|000-999999999|
 G|6589|Unken|000-999999999|
-G|662|Salzburg|0000-9999999999|
-M|6998||000-999999999|
-N|720||0000-9999999999|
+G|662|Salzburg|000-9999999999|
+M|67-69||00000-99999999999|
+N|711,718,780,804,810,820-821||000000-9999999999|
 G|7211|Reichenau im Mühlkreis|000-999999999|
 G|7212|Zwettl an der Rodl|000-999999999|
 G|7213|Bad Leonfelden|000-999999999|
@@ -870,7 +871,7 @@ G|7256|Ternberg|000-999999999|
 G|7257|Grünburg|000-999999999|
 G|7258|Bad Hall|000-999999999|
 G|7259|Sierning|000-999999999|
-G|7260|Waldhausen im Strudengau|000-999999999|
+G|7260|Waldhausen|000-999999999|
 G|7261|Schönau im Mühlkreis|000-999999999|
 G|7262|Perg|000-999999999|
 G|7263|Bad Zell|000-999999999|
@@ -897,17 +898,17 @@ G|7286|Lembach im Mühlkreis|000-999999999|
 G|7287|Peilstein im Mühlviertel|000-999999999|
 G|7288|Ulrichsberg|000-999999999|
 G|7289|Rohrbach in Oberösterreich|000-999999999|
-G|732|Linz|0000-9999999999|
+G|732|Linz|000-9999999999|
 G|7353|Gaflenz|000-999999999|
 G|7355|Weyer|000-999999999|
 G|7357|Kleinreifling|000-999999999|
 G|7412|Ybbs an der Donau|000-999999999|
 G|7413|Marbach an der Donau|000-999999999|
 G|7414|Weins-Isperdorf|000-999999999|
-G|7415|Yspertal|000-999999999|
+G|7415|Altenmarkt (Yspertal)|000-999999999|
 G|7416|Wieselburg|000-999999999|
 G|7432|Strengberg|000-999999999|
-G|7433|Wallsee-Sindelburg|000-999999999|
+G|7433|Wallsee|000-999999999|
 G|7434|Haag|000-999999999|
 G|7435|Sankt Valentin|000-999999999|
 G|7442|Waidhofen an der Ybbs|000-999999999|
@@ -919,12 +920,12 @@ G|7471|Neustadtl an der Donau|000-999999999|
 G|7472|Amstetten|000-999999999|
 G|7473|Blindenmarkt|000-999999999|
 G|7474|Euratsfeld|000-999999999|
-G|7475|Hausmening|000-999999999|
+G|7475|Hausmening (Neuhofen an der Ybbs)|000-999999999|
 G|7476|Aschbach-Markt|000-999999999|
 G|7477|Sankt Peter in der Au|000-999999999|
 G|7478|Oed-Oehling|000-999999999|
 G|7479|Ardagger|000-999999999|
-G|7480|Langau|000-999999999|
+G|7480|Langau (Gaming)|000-999999999|
 G|7482|Scheibbs|000-999999999|
 G|7483|Oberndorf an der Melk|000-999999999|
 G|7484|Göstling an der Ybbs|000-999999999|
@@ -936,7 +937,7 @@ G|7489|Purgstall an der Erlauf|000-999999999|
 G|7562|Windischgarsten|000-999999999|
 G|7563|Spital am Pyhrn|000-999999999|
 G|7564|Hinterstoder|000-999999999|
-G|7565|St. Pankraz|000-999999999|
+G|7565|Sankt Pankraz|000-999999999|
 G|7566|Rosenau am Hengstpaß|000-999999999|
 G|7582|Kirchdorf an der Krems|000-999999999|
 G|7583|Kremsmünster|000-999999999|
@@ -957,7 +958,7 @@ G|7662|Seewalchen am Attersee|000-999999999|
 G|7663|Steinbach am Attersee|000-999999999|
 G|7664|Weyregg am Attersee|000-999999999|
 G|7665|Unterach am Attersee|000-999999999|
-G|7666|Attersee am Attersee|000-999999999|
+G|7666|Attersee|000-999999999|
 G|7667|Sankt Georgen im Attergau|000-999999999|
 G|7672|Vöcklabruck|000-999999999|
 G|7673|Schwanenstadt|000-999999999|
@@ -978,7 +979,7 @@ G|7719|Taufkirchen an der Pram|000-999999999|
 G|7722|Braunau am Inn|000-999999999|
 G|7723|Altheim|000-999999999|
 G|7724|Mauerkirchen|000-999999999|
-G|7727|Hochburg-Ach|000-999999999|
+G|7727|Ach|000-999999999|
 G|7728|Schwand im Innkreis|000-999999999|
 G|7729|Neukirchen an der Enknach|000-999999999|
 G|7732|Haag am Hausruck|000-999999999|
@@ -989,7 +990,7 @@ G|7736|Pram|000-999999999|
 G|7742|Mattighofen|000-999999999|
 G|7743|Maria Schmolln|000-999999999|
 G|7744|Munderfing|000-999999999|
-G|7745|Lochen am See|000-999999999|
+G|7745|Lochen|000-999999999|
 G|7746|Friedburg|000-999999999|
 G|7747|Kirchberg bei Mattighofen|000-999999999|
 G|7748|Eggelsberg|000-999999999|
@@ -1022,5 +1023,6 @@ G|7953|Liebenau|000-999999999|
 G|7954|Sankt Georgen am Walde|000-999999999|
 G|7955|Königswiesen|000-999999999|
 G|7956|Unterweißenbach|000-999999999|
-N|800,802||0000-9999999999|F
-N|900-901,930-931||0000-9999999999|R
+N|800||000000-9999999999|F
+N|828||00000-9999999999|
+N|900-901,930-931,939||000000-9999999999|R

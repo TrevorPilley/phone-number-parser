@@ -162,6 +162,7 @@ These were used as the references for the phone number data for each country.
 
 ### Austria
 
+- https://www.rtr.at/TKP/was_wir_tun/telekommunikation/nummerierung/Austrian_Numbering_Plan_2011-03-30.pdf
 - https://www.rtr.at/TKP/was_wir_tun/telekommunikation/nummerierung/rechtlicheGrundlagen/KEM-V2009/KEMV.en.html
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Austria
 
