@@ -301,6 +301,18 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Norway.
+    /// </summary>
+    public static CountryInfo Norway { get; } = new()
+    {
+        CallingCode = "+47",
+        Iso3166Code = "NO",
+        Name = "Norway",
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 2 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 8 }),
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Poland.
     /// </summary>
     public static CountryInfo Poland { get; } = new()
