@@ -143,6 +143,25 @@ public class CountryInfo_Countries_Tests
     }
 
     [Fact]
+    public void CountryInfo_Finland()
+    {
+        Assert.Same(CountryInfo.Finland, CountryInfo.Finland);
+
+        var countryInfo = CountryInfo.Finland;
+
+        Assert.Equal("+358", countryInfo.CallingCode);
+        Assert.True(countryInfo.HasNationalDestinationCodes);
+        Assert.Equal("00", countryInfo.InternationalCallPrefix);
+        Assert.Equal("FI", countryInfo.Iso3166Code);
+        Assert.Equal("Finland", countryInfo.Name);
+        Assert.Equal(new[] { 4, 3, 2 }, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 5, 6, 7, 8, 9, 10, 11, 12 }, countryInfo.NsnLengths);
+        Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Equal("0", countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_France()
     {
         Assert.Same(CountryInfo.France, CountryInfo.France);
