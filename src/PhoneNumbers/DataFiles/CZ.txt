@@ -1,21 +1,32 @@
-G|2|Capital Praha and Region Stredocesky|20000000-99999999|
-G|31-32|Capital Praha and Region Stredocesky|2000000-9999999|
-G|35|Region Karlovarsky|2000000-9999999|
-G|37|Region Plzensky|2000000-9999999|
-G|38-39|Region Jihocesky|2000000-9999999|
-G|41|Region Ustecky|2000000-9999999|
-G|46|Region Pardubicky|2000000-9999999|
-G|47|Region Ustecky|2000000-9999999|
-G|48|Region Liberecky|2000000-9999999|
-G|49|Region Kralovehradecky|2000000-9999999|
-G|51-53|Region Jihomoravsky|2000000-9999999|
-G|55,59|Region Moravskoslezsky|2000000-9999999|
-G|56|Region Vysocina|2000000-9999999|
-G|57|Region Zlinsky|2000000-9999999|
-G|58|Region Olomoucky|2000000-9999999|
+G|2|Capital Praha and Region Stredocesky|00000000-99999999|
+G|31|Capital Praha and Region Stredocesky|0000000-9999999|
+G|32|Capital Praha and Region Stredocesky|0000000-9999999|
+G|35|Region Karlovarsky|0000000-9999999|
+G|37|Region Plzensky|0000000-9999999|
+G|38|Region Jihocesky|0000000-9999999|
+G|39|Region Jihocesky|0000000-9999999|
+G|41|Region Ustecky|0000000-9999999|
+G|46|Region Pardubicky|0000000-9999999|
+G|47|Region Ustecky|0000000-9999999|
+G|48|Region Liberecky|0000000-9999999|
+G|49|Region Kralovehradecky|0000000-9999999|
+G|51|Region Jihomoravsky|0000000-9999999|
+G|53|Region Jihomoravsky|0000000-9999999|
+G|54|Region Jihomoravsky|0000000-9999999|
+G|55|Region Moravskoslezsky|0000000-9999999|
+G|56|Region Vysocina|0000000-9999999|
+G|57|Region Zlinsky|0000000-9999999|
+G|58|Region Olomoucky|0000000-9999999|
+G|59|Region Moravskoslezsky|0000000-9999999|
 M|601-608,702-705||000000-999999|
+M|700-701||000000-999999|V
 M|72-73,77,79||0000000-9999999|
 N|800||000000-999999|F
 N|81,83-84||0000000-9999999|S
-N|82||0000000-9999999|
+N|82,95||0000000-9999999|
 N|900,905-906,908-909||000000-999999|R
+N|910,971,972-974,976-977,989||000000-999999|
+N|93||000000000-999999999|
+N|960-969||000000-999999999|
+N|980||000000-999999999|
+N|983||0000-9999|
