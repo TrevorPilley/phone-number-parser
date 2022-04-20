@@ -8,6 +8,8 @@ public class DefaultPhoneNumberParserTests_IT_NonGeographicPhoneNumber
     private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Italy);
 
     [Theory]
+    [InlineData("7000000000", "700", "0000000")]
+    [InlineData("7009999999", "700", "9999999")]
     [InlineData("800000000", "800", "000000")]
     [InlineData("800999999", "800", "999999")]
     [InlineData("803000", "803", "000")]
@@ -32,6 +34,14 @@ public class DefaultPhoneNumberParserTests_IT_NonGeographicPhoneNumber
     }
 
     [Theory]
+    [InlineData("44000", "440", "00")]
+    [InlineData("44099", "440", "99")]
+    [InlineData("44400", "444", "00")]
+    [InlineData("44499", "444", "99")]
+    [InlineData("4450000", "445", "0000")]
+    [InlineData("4459999", "445", "9999")]
+    [InlineData("4490000", "449", "0000")]
+    [InlineData("4499999", "449", "9999")]
     [InlineData("45500", "455", "00")]
     [InlineData("45599", "455", "99")]
     [InlineData("47000", "470", "00")]
@@ -52,8 +62,6 @@ public class DefaultPhoneNumberParserTests_IT_NonGeographicPhoneNumber
     [InlineData("4899999", "489", "9999")]
     [InlineData("8911100000", "89111", "00000")]
     [InlineData("8911199999", "89111", "99999")]
-    [InlineData("892000", "892", "000")]
-    [InlineData("892999", "892", "999")]
     [InlineData("894000", "8940", "00")]
     [InlineData("894099", "8940", "99")]
     [InlineData("894400", "8944", "00")]
