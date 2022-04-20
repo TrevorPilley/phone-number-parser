@@ -12,8 +12,8 @@ public partial class CountryInfo
         CallingCode = "+43",
         Iso3166Code = "AT",
         Name = "Austria",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 1 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8, 9, 10, 11, 12, 13 }),
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2, 1 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 }),
         TrunkPrefix = "0",
     };
 
@@ -52,7 +52,7 @@ public partial class CountryInfo
         CallingCode = "+385",
         Iso3166Code = "HR",
         Name = "Croatia",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2, 1 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8, 9, 10 }),
         RequireNdcForLocalGeographicDialling = false,
         TrunkPrefix = "0",
@@ -67,7 +67,7 @@ public partial class CountryInfo
         Iso3166Code = "CZ",
         Name = "Czech Republic",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 9, 10, 11, 12 }),
     };
 
     /// <summary>

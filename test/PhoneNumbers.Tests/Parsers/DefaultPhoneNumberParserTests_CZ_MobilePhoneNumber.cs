@@ -42,4 +42,28 @@ public class DefaultPhoneNumberParserTests_CZ_MobilePhoneNumber
         Assert.Equal(NationalDestinationCode, mobilePhoneNumber.NationalDestinationCode);
         Assert.Equal(subscriberNumber, mobilePhoneNumber.SubscriberNumber);
     }
+
+    [Theory]
+    [InlineData("700000000", "700", "000000")]
+    [InlineData("700999999", "700", "999999")]
+    [InlineData("701000000", "701", "000000")]
+    [InlineData("701999999", "701", "999999")]
+    public void Parse_Known_MobilePhoneNumber_Virtual(string value, string NationalDestinationCode, string subscriberNumber)
+    {
+        var parseResult = s_parser.Parse(value);
+        parseResult.ThrowIfFailure();
+
+        var phoneNumber = parseResult.PhoneNumber;
+
+        Assert.NotNull(phoneNumber);
+        Assert.IsType<MobilePhoneNumber>(phoneNumber);
+
+        var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
+        Assert.Equal(CountryInfo.CzechRepublic, mobilePhoneNumber.Country);
+        Assert.False(mobilePhoneNumber.IsDataOnly);
+        Assert.False(mobilePhoneNumber.IsPager);
+        Assert.True(mobilePhoneNumber.IsVirtual);
+        Assert.Equal(NationalDestinationCode, mobilePhoneNumber.NationalDestinationCode);
+        Assert.Equal(subscriberNumber, mobilePhoneNumber.SubscriberNumber);
+    }
 }

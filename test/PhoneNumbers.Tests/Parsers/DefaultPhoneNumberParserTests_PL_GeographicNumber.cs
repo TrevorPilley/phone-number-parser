@@ -48,8 +48,6 @@ public class DefaultPhoneNumberParserTests_PL_GeographicNumber
     [InlineData("249999999", "24", "9999999", "Plock")]
     [InlineData("250000000", "25", "0000000", "Siedlce")]
     [InlineData("259999999", "25", "9999999", "Siedlce")]
-    [InlineData("260000000", "26", "0000000", "Ministry of National Defence")]
-    [InlineData("269999999", "26", "9999999", "Ministry of National Defence")]
     [InlineData("290000000", "29", "0000000", "Ostroleka")]
     [InlineData("299999999", "29", "9999999", "Ostroleka")]
     public void Parse_Known_GeographicPhoneNumber_2X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
