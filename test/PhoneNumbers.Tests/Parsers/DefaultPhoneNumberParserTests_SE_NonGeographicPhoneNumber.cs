@@ -23,52 +23,7 @@ public class DefaultPhoneNumberParserTests_SE_NonGeographicPhoneNumber
         var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
         Assert.Equal(CountryInfo.Sweden, nonGeographicPhoneNumber.Country);
         Assert.False(nonGeographicPhoneNumber.IsFreephone);
-        Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
-        Assert.False(nonGeographicPhoneNumber.IsSharedCost);
-        Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
-        Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
-    }
-
-    [Theory]
-    [InlineData("03781000000", "378", "1000000")]
-    [InlineData("03782999999", "378", "2999999")]
-    public void Parse_Known_NonGeographicPhoneNumber_3XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
-    {
-        var parseResult = s_parser.Parse(value);
-        parseResult.ThrowIfFailure();
-
-        var phoneNumber = parseResult.PhoneNumber;
-
-        Assert.NotNull(phoneNumber);
-        Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
-
-        var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.Sweden, nonGeographicPhoneNumber.Country);
-        Assert.False(nonGeographicPhoneNumber.IsFreephone);
-        Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
-        Assert.False(nonGeographicPhoneNumber.IsSharedCost);
-        Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
-        Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
-    }
-
-    [Theory]
-    [InlineData("07100000000000", "71", "00000000000")]
-    [InlineData("07109999999999", "71", "09999999999")]
-    [InlineData("07190000000000", "71", "90000000000")]
-    [InlineData("07199999999999", "71", "99999999999")]
-    public void Parse_Known_NonGeographicPhoneNumber_7X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
-    {
-        var parseResult = s_parser.Parse(value);
-        parseResult.ThrowIfFailure();
-
-        var phoneNumber = parseResult.PhoneNumber;
-
-        Assert.NotNull(phoneNumber);
-        Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
-
-        var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.Sweden, nonGeographicPhoneNumber.Country);
-        Assert.False(nonGeographicPhoneNumber.IsFreephone);
+        Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
         Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
         Assert.False(nonGeographicPhoneNumber.IsSharedCost);
         Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
@@ -93,6 +48,7 @@ public class DefaultPhoneNumberParserTests_SE_NonGeographicPhoneNumber
         var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
         Assert.Equal(CountryInfo.Sweden, nonGeographicPhoneNumber.Country);
         Assert.False(nonGeographicPhoneNumber.IsFreephone);
+        Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
         Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
         Assert.False(nonGeographicPhoneNumber.IsSharedCost);
         Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
@@ -115,6 +71,34 @@ public class DefaultPhoneNumberParserTests_SE_NonGeographicPhoneNumber
         var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
         Assert.Equal(CountryInfo.Sweden, nonGeographicPhoneNumber.Country);
         Assert.True(nonGeographicPhoneNumber.IsFreephone);
+        Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
+        Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
+        Assert.False(nonGeographicPhoneNumber.IsSharedCost);
+        Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
+        Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
+    }
+
+    [Theory]
+    [InlineData("03781000000", "378", "1000000")]
+    [InlineData("03782999999", "378", "2999999")]
+    [InlineData("07100000000000", "71", "00000000000")]
+    [InlineData("07109999999999", "71", "09999999999")]
+    [InlineData("07190000000000", "71", "90000000000")]
+    [InlineData("07199999999999", "71", "99999999999")]
+    public void Parse_Known_NonGeographicPhoneNumber_MachineToMachine(string value, string NationalDestinationCode, string subscriberNumber)
+    {
+        var parseResult = s_parser.Parse(value);
+        parseResult.ThrowIfFailure();
+
+        var phoneNumber = parseResult.PhoneNumber;
+
+        Assert.NotNull(phoneNumber);
+        Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
+
+        var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
+        Assert.Equal(CountryInfo.Sweden, nonGeographicPhoneNumber.Country);
+        Assert.False(nonGeographicPhoneNumber.IsFreephone);
+        Assert.True(nonGeographicPhoneNumber.IsMachineToMachine);
         Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
         Assert.False(nonGeographicPhoneNumber.IsSharedCost);
         Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
@@ -141,6 +125,7 @@ public class DefaultPhoneNumberParserTests_SE_NonGeographicPhoneNumber
         var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
         Assert.Equal(CountryInfo.Sweden, nonGeographicPhoneNumber.Country);
         Assert.False(nonGeographicPhoneNumber.IsFreephone);
+        Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
         Assert.True(nonGeographicPhoneNumber.IsPremiumRate);
         Assert.False(nonGeographicPhoneNumber.IsSharedCost);
         Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
@@ -163,6 +148,7 @@ public class DefaultPhoneNumberParserTests_SE_NonGeographicPhoneNumber
         var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
         Assert.Equal(CountryInfo.Sweden, nonGeographicPhoneNumber.Country);
         Assert.False(nonGeographicPhoneNumber.IsFreephone);
+        Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
         Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
         Assert.True(nonGeographicPhoneNumber.IsSharedCost);
         Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
