@@ -191,6 +191,7 @@ public partial class CountryInfo
     public static CountryInfo Hungary { get; } = new()
     {
         CallingCode = "+36",
+        Continent = Europe,
         Iso3166Code = "HU",
         Name = "Hungary",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 2, 1 }),

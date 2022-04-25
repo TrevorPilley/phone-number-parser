@@ -270,6 +270,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.Hungary;
 
         Assert.Equal("+36", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("HU", countryInfo.Iso3166Code);
