@@ -383,6 +383,7 @@ public partial class CountryInfo
     public static CountryInfo Sweden { get; } = new()
     {
         CallingCode = "+46",
+        Continent = Europe,
         Iso3166Code = "SE",
         Name = "Sweden",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),

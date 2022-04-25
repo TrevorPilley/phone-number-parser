@@ -550,6 +550,7 @@ public class CountryInfo_Countries_Tests
         var countryInfo = CountryInfo.Sweden;
 
         Assert.Equal("+46", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("SE", countryInfo.Iso3166Code);
