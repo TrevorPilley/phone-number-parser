@@ -161,6 +161,7 @@ Italy          | IT            | +39          |              | Yes        | Yes 
 Jersey         | JE            | +44          | 0            | Yes        | Yes    |                        |                    |                      |                |                                |                                   |                                  |
 Monaco         | MC            | +377         |              |            | Yes    |                        |                    |                      | Yes            |                                |                                   |                                  |
 Netherlands    | NL            | +31          | 0            | Yes        | Yes    |                        | Yes                |                      | Yes            | Yes                            | Yes                               |                                  | Yes
+Norway         | NO            | +47          |              |            |        |                        |                    |                      |                |                                |                                   |                                  |
 Poland         | PL            | +48          |              | Yes        | Yes    |                        | Yes                |                      | Yes            |                                |                                   |                                  |
 Portugal       | PT            | +351         |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               | Yes                              |
 Romania        | RO            | +40          | 0            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               | Yes                              |
@@ -276,6 +277,10 @@ These were used as the references for the phone number data for each country.
 
 - https://www.government.nl/documents/annual-reports/2016/02/16/numbering-plan-telephony-and-isdn-services
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_the_Netherlands
+
+### Norway
+
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Norway
 
 ### Poland
 

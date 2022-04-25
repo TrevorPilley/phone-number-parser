@@ -306,6 +306,7 @@ public partial class CountryInfo
     public static CountryInfo Norway { get; } = new()
     {
         CallingCode = "+47",
+        Continent = Europe,
         Iso3166Code = "NO",
         Name = "Norway",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 2 }),
