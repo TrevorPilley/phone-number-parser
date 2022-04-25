@@ -109,6 +109,7 @@ public partial class CountryInfo
     public static CountryInfo Finland { get; } = new()
     {
         CallingCode = "+358",
+        Continent = Europe,
         Iso3166Code = "FI",
         Name = "Finland",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2, 1 }),
