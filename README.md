@@ -28,7 +28,7 @@ using PhoneNumbers;
 
 ## Parsing
 
-Parsing a phone number is achieved via the `PhoneNumber.Parse` method (or alternatively or `PhoneNumber.TryParse`). Any spaces, hyphens or other formatting in the input string is ignored.
+Parsing a phone number is achieved via the `PhoneNumber.Parse` method (or alternatively via `PhoneNumber.TryParse`). Any spaces, hyphens or other formatting in the input string is ignored.
 
 There are 2 overloads:
 
@@ -57,7 +57,8 @@ phoneNumber.NationalSignificantNumber           // 1142726444
 phoneNumber.PhoneNumberKind;                    // PhoneNumberKind.GeographicPhoneNumber
 phoneNumber.SubscriberNumber                    // 2726444
 
-// By inspecting the phoneNumber.PhoneNumberKind, the type of PhoneNumber to cast to can be determined.
+// There are 3 subclasses of PhoneNumber, the correct type to cast to 
+// can be determined by inspecting the phoneNumber.PhoneNumberKind property.
 
 // If PhoneNumberKind.GeographicPhoneNumber
 var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
