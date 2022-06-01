@@ -24,6 +24,7 @@ public partial class CountryInfo
     public static CountryInfo Belarus { get; } = new()
     {
         CallingCode = "+375",
+        Continent = Europe,
         Iso3166Code = "BY",
         Name = "Belarus",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2 }),
