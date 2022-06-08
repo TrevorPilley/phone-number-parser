@@ -19,6 +19,21 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Belarus.
+    /// </summary>
+    public static CountryInfo Belarus { get; } = new()
+    {
+        CallingCode = "+375",
+        Continent = Europe,
+        InternationalCallPrefix = "810",
+        Iso3166Code = "BY",
+        Name = "Belarus",
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 9, 10, 11 }),
+        TrunkPrefix = "8",
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Belgium.
     /// </summary>
     public static CountryInfo Belgium { get; } = new()
