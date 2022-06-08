@@ -39,7 +39,7 @@ public class CountryInfo_Countries_Tests
         Assert.Equal(new[] { 6, 9, 10, 11 }, countryInfo.NsnLengths);
         Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
         Assert.False(countryInfo.SharesCallingCode);
-        Assert.Equal("0", countryInfo.TrunkPrefix);
+        Assert.Equal("8", countryInfo.TrunkPrefix);
     }
 
     [Fact]

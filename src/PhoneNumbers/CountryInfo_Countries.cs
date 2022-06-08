@@ -29,7 +29,7 @@ public partial class CountryInfo
         Name = "Belarus",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 9, 10, 11 }),
-        TrunkPrefix = "0",
+        TrunkPrefix = "8",
     };
 
     /// <summary>
