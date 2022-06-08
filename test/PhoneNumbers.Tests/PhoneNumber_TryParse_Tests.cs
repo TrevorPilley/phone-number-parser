@@ -11,6 +11,14 @@ public class PhoneNumber_TryParse_Tests
     }
 
     [Fact]
+    public void TryParse_Value_With_Belarus_CallingCode()
+    {
+        Assert.True(PhoneNumber.TryParse("+375172171185", out var phoneNumber));
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Belarus, phoneNumber.Country);
+    }
+
+    [Fact]
     public void TryParse_Value_With_Belgium_CallingCode()
     {
         Assert.True(PhoneNumber.TryParse("+3250444646", out var phoneNumber));
