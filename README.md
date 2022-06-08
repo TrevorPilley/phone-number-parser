@@ -146,6 +146,7 @@ Gibraltar      | GI            | +350         |              | Yes        | Yes 
 Greece         | GR            | +30          |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               | Yes                              | Yes
 Guernsey       | GG            | +44          | 0            | Yes        | Yes    |                        |                    |                      |                |                                |                                   |                                  |
 Hong Kong      | HK            | +852         |              |            | Yes    |                        |                    | Yes                  | Yes            | Yes                            |                                   |                                  | Yes
+Hungary        | HU            | HU           | 06           | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
 Ireland        | IE            | +353         | 0            | Yes        | Yes    |                        | Yes                | Yes                  | Yes            | Yes                            | Yes                               | Yes                              | Yes
 Isle of Man    | IM            | +44          | 0            | Yes        | Yes    |                        |                    |                      |                |                                |                                   |                                  |
 Italy          | IT            | +39          |              | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               | Yes                              |
@@ -239,6 +240,11 @@ These were used as the references for the phone number data for each country.
 - https://www.ofca.gov.hk/filemanager/ofca/tc/content_311/no_plan.pdf
 - https://www.ofca.gov.hk/mobile/en/consumer_focus/education_corner/guide/advice_lfs/ipts/
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Hong_Kong
+
+### Hungary
+
+- https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000610004PDFE.pdf
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Hungary
 
 ### Ireland
 

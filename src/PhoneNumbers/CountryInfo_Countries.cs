@@ -186,6 +186,21 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Hungary.
+    /// </summary>
+    public static CountryInfo Hungary { get; } = new()
+    {
+        CallingCode = "+36",
+        Continent = Europe,
+        Iso3166Code = "HU",
+        Name = "Hungary",
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 2, 1 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9, 12 }),
+        RequireNdcForLocalGeographicDialling = false,
+        TrunkPrefix = "06",
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Ireland.
     /// </summary>
     /// <remarks>Covers the Republic of Ireland, Northern Ireland is part of the United Kingdom.</remarks>

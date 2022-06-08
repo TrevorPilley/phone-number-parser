@@ -107,6 +107,14 @@ public class PhoneNumber_Parse_Tests
     }
 
     [Fact]
+    public void Parse_Value_With_Hungary_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+3614680666");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Hungary, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_With_Ireland_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+35318049600");
