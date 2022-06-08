@@ -24,7 +24,7 @@ public sealed class MobilePhoneNumber : PhoneNumber, IEquatable<MobilePhoneNumbe
     }
 
     /// <summary>
-    /// The mobile number is likely for a data only plan (e.g. a 3G/LTE laptop or tablet).
+    /// The mobile number is likely for a data only plan (e.g. a 3G/LTE laptop or tablet, or mobile broadband).
     /// </summary>
     /// <remarks>This is an indication only based upon the data available for each country.</remarks>
     public bool IsDataOnly =>

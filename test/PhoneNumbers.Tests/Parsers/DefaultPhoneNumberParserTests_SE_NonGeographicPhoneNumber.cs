@@ -81,8 +81,6 @@ public class DefaultPhoneNumberParserTests_SE_NonGeographicPhoneNumber
     [Theory]
     [InlineData("03781000000", "378", "1000000")]
     [InlineData("03782999999", "378", "2999999")]
-    [InlineData("07100000000000", "71", "00000000000")]
-    [InlineData("07109999999999", "71", "09999999999")]
     [InlineData("07190000000000", "71", "90000000000")]
     [InlineData("07199999999999", "71", "99999999999")]
     public void Parse_Known_NonGeographicPhoneNumber_MachineToMachine(string value, string NationalDestinationCode, string subscriberNumber)

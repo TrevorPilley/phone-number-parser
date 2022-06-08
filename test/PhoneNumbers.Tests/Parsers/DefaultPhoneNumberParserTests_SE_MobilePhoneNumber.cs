@@ -38,6 +38,28 @@ public class DefaultPhoneNumberParserTests_SE_MobilePhoneNumber
     }
 
     [Theory]
+    [InlineData("07100000000000", "71", "00000000000")]
+    [InlineData("07109999999999", "71", "09999999999")]
+    public void Parse_Known_MobilePhoneNumber_DataOnly(string value, string NationalDestinationCode, string subscriberNumber)
+    {
+        var parseResult = s_parser.Parse(value);
+        parseResult.ThrowIfFailure();
+
+        var phoneNumber = parseResult.PhoneNumber;
+
+        Assert.NotNull(phoneNumber);
+        Assert.IsType<MobilePhoneNumber>(phoneNumber);
+
+        var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
+        Assert.Equal(CountryInfo.Sweden, mobilePhoneNumber.Country);
+        Assert.True(mobilePhoneNumber.IsDataOnly);
+        Assert.False(mobilePhoneNumber.IsPager);
+        Assert.False(mobilePhoneNumber.IsVirtual);
+        Assert.Equal(NationalDestinationCode, mobilePhoneNumber.NationalDestinationCode);
+        Assert.Equal(subscriberNumber, mobilePhoneNumber.SubscriberNumber);
+    }
+
+    [Theory]
     [InlineData("0740000000", "74", "0000000")]
     [InlineData("0740999999", "74", "0999999")]
     [InlineData("0742000000", "74", "2000000")]
