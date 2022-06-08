@@ -160,6 +160,7 @@ San Marino     | SM            | +378         |              | Yes        |     
 Singapore      | SG            | +65          |              |            | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  |
 Spain          | ES            | +34          |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               |                                  |
 Slovakia       | SK            | +421         | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               | Yes                              |
+Sweden         | SE            | +46          | 0            | Yes        | Yes    | Yes                    | Yes                | Yes                  | Yes            | Yes                            | Yes                               | Yes                              | Yes
 Switzerland    | CH            | +41          | 0            | Yes        | Yes    |                        |                    |                      | Yes            |                                | Yes                               |                                  |
 Ukraine        | UA            | +380         | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  |
 United Kingdom | GB            | +44          | 0            | Yes        | Yes    | Yes                    | Yes                | Yes                  | Yes            | Yes                            | Yes                               |                                  |
@@ -298,6 +299,11 @@ These were used as the references for the phone number data for each country.
 - https://avancedigital.mineco.gob.es/es-ES/Servicios/Numeracion/Documents/Presentation_NNP_Spain.pdf
 - https://numeracionyoperadores.cnmc.es/numeracion
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Spain
+
+### Sweden
+
+- https://www.pts.se/contentassets/156d4de72d0e403cb5be0bcc29e0c4f3/the-swedish-numbering-plan-for-telephony-accordning-to-itu---2022-01-04.pdf
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Sweden
 
 ### Switzerland
 
