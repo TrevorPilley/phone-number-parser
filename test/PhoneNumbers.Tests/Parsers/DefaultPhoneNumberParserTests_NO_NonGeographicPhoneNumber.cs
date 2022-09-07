@@ -8,13 +8,13 @@ public class DefaultPhoneNumberParserTests_NO_NonGeographicPhoneNumber
     private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Norway);
 
     [Theory]
-    [InlineData("8000000", "8000000")]
     [InlineData("20000000", "20000000")]
     [InlineData("39999999", "39999999")]
     [InlineData("50000000", "50000000")]
     [InlineData("57999999", "57999999")]
     [InlineData("60000000", "60000000")]
     [InlineData("79999999", "79999999")]
+    [InlineData("80000000", "80000000")]
     [InlineData("80999999", "80999999")]
     public void Parse_Known_NonGeographicPhoneNumber(string value, string subscriberNumber)
     {
