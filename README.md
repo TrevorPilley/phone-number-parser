@@ -280,6 +280,7 @@ These were used as the references for the phone number data for each country.
 
 ### Norway
 
+- https://www.nkom.no/english/numbering-resources#the_norwegian_numbering_plan_for_telephony_etc_e164
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Norway
 
 ### Poland

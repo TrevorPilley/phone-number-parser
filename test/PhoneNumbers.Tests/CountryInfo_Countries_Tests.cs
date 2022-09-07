@@ -431,12 +431,12 @@ public class CountryInfo_Countries_Tests
 
         Assert.Equal("+47", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
-        Assert.True(countryInfo.HasNationalDestinationCodes);
+        Assert.False(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("NO", countryInfo.Iso3166Code);
         Assert.Equal("Norway", countryInfo.Name);
-        Assert.Equal(new[] { 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 8 }, countryInfo.NsnLengths);
+        Assert.Empty(countryInfo.NdcLengths);
+        Assert.Equal(new[] { 8, 12 }, countryInfo.NsnLengths);
         Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);

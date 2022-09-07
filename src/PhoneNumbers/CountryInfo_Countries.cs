@@ -309,8 +309,7 @@ public partial class CountryInfo
         Continent = Europe,
         Iso3166Code = "NO",
         Name = "Norway",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 8 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 12 }),
     };
 
     /// <summary>
