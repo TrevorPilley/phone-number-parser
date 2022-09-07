@@ -58,7 +58,7 @@ public class ParseOptionsTests
         parseOptions.AllowAsianCountries();
 
         Assert.True(parseOptions.Countries.Count > 0);
-        Assert.All(parseOptions.Countries, x => Assert.Equal(x.Continent, CountryInfo.Asia));
+        Assert.All(parseOptions.Countries, x => Assert.Equal(CountryInfo.Asia, x.Continent));
     }
 
     [Fact]
@@ -69,7 +69,7 @@ public class ParseOptionsTests
         parseOptions.AllowEuropeanCountries();
 
         Assert.True(parseOptions.Countries.Count > 0);
-        Assert.All(parseOptions.Countries, x => Assert.Equal(x.Continent, CountryInfo.Europe));
+        Assert.All(parseOptions.Countries, x => Assert.Equal(CountryInfo.Europe, x.Continent));
     }
 
     [Fact]
