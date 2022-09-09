@@ -59,6 +59,14 @@ public class PhoneNumber_Parse_Tests
     }
 
     [Fact]
+    public void Parse_Value_With_Finland_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+358295390361");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Finland, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_With_France_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+33140477283");
