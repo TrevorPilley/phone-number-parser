@@ -563,6 +563,26 @@ public class CountryInfo_Countries_Tests
     }
 
     [Fact]
+    public void CountryInfo_Serbia()
+    {
+        Assert.Same(CountryInfo.Serbia, CountryInfo.Serbia);
+
+        var countryInfo = CountryInfo.Serbia;
+
+        Assert.Equal("+381", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
+        Assert.True(countryInfo.HasNationalDestinationCodes);
+        Assert.Equal("00", countryInfo.InternationalCallPrefix);
+        Assert.Equal("RS", countryInfo.Iso3166Code);
+        Assert.Equal("Serbia", countryInfo.Name);
+        Assert.Equal(new[] { 2, 3 }, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 8, 9, 10, 11, 12 }, countryInfo.NsnLengths);
+        Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Equal("0", countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_Singapore()
     {
         Assert.Same(CountryInfo.Singapore, CountryInfo.Singapore);

@@ -120,6 +120,10 @@ public class PhoneNumberParserFactoryTests
         Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.SanMarino));
 
     [Fact]
+    public void GetParser_For_CountryInfo_Serbia_Returns_GBPhoneNumberParser() =>
+        Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Serbia));
+
+    [Fact]
     public void GetParser_For_CountryInfo_Singapore_Returns_DefaultPhoneNumberParser() =>
         Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Singapore));
 

@@ -227,6 +227,14 @@ public class PhoneNumber_TryParse_Tests
     }
 
     [Fact]
+    public void TryParse_Value_With_Serbia_CallingCode()
+    {
+        Assert.True(PhoneNumber.TryParse("+381112026828", out var phoneNumber));
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Serbia, phoneNumber.Country);
+    }
+
+    [Fact]
     public void TryParse_Value_With_Singapore_CallingCode()
     {
         Assert.True(PhoneNumber.TryParse("+6563773800", out var phoneNumber));

@@ -393,6 +393,21 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Serbia.
+    /// </summary>
+    public static CountryInfo Serbia { get; } = new()
+    {
+        CallingCode = "+381",
+        Continent = Europe,
+        Iso3166Code = "RS",
+        Name = "Serbia",
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 2, 3 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9, 10, 11, 12 }),
+        RequireNdcForLocalGeographicDialling = false,
+        TrunkPrefix = "0",
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Singapore.
     /// </summary>
     public static CountryInfo Singapore { get; } = new()
