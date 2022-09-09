@@ -148,6 +148,7 @@ Belgium        | BE            | +32          | 0            | Yes        | Yes 
 Bulgaria       | BG            | +359         | 0            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               |                                  | Yes
 Croatia        | HR            | +385         | 0            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               |                                  | Yes
 Czech Republic | CZ            | +420         |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               | Yes                              |
+Denmark        | DK            | +45          |              |            | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
 Estonia        | EE            | +372         |              |            | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               |                                  | Yes
 France         | FR            | +33          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
 Finland        | FI            | +358         | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            |                                   |                                  | Yes
@@ -215,6 +216,11 @@ These were used as the references for the phone number data for each country.
 
 - https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000350001PDFE.pdf
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_the_Czech_Republic
+
+### Denmark
+
+- https://ens.dk/sites/ens.dk/files/Tele/nummerplanen_2016_november.pdf
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Denmark
 
 ### Estonia
 

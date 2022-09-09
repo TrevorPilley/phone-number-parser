@@ -91,6 +91,19 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Denmark.
+    /// </summary>
+    public static CountryInfo Denmark { get; } = new()
+    {
+        CallingCode = "+45",
+        Continent = Europe,
+        Iso3166Code = "DK",
+        Name = "Denmark",
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 8 }),
+        RequireNdcForLocalGeographicDialling = false,
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Estonia.
     /// </summary>
     public static CountryInfo Estonia { get; } = new()
