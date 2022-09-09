@@ -401,7 +401,7 @@ public partial class CountryInfo
         Continent = Europe,
         Iso3166Code = "RS",
         Name = "Serbia",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 2, 3 }),
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9, 10, 11, 12 }),
         RequireNdcForLocalGeographicDialling = false,
         TrunkPrefix = "0",

@@ -575,7 +575,7 @@ public class CountryInfo_Countries_Tests
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("RS", countryInfo.Iso3166Code);
         Assert.Equal("Serbia", countryInfo.Name);
-        Assert.Equal(new[] { 2, 3 }, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 8, 9, 10, 11, 12 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
         Assert.False(countryInfo.SharesCallingCode);
