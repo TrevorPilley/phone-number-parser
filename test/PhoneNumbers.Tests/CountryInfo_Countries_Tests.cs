@@ -431,7 +431,7 @@ public class CountryInfo_Countries_Tests
 
         Assert.Equal("+373", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
-        Assert.False(countryInfo.HasNationalDestinationCodes);
+        Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("MD", countryInfo.Iso3166Code);
         Assert.Equal("Moldova", countryInfo.Name);
