@@ -287,6 +287,11 @@ These were used as the references for the phone number data for each country.
 
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Macau
 
+### Moldova
+
+- https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200008C0003PDFE.pdf
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Moldova
+
 ### Monaco
 
 - https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200008D0008PDFE.pdf

@@ -92,6 +92,10 @@ public class PhoneNumberParserFactoryTests
         Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Macau));
 
     [Fact]
+    public void GetParser_For_CountryInfo_Moldova_Returns_DefaultPhoneNumberParser() =>
+        Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Moldova));
+
+    [Fact]
     public void GetParser_For_CountryInfo_Monaco_Returns_DefaultPhoneNumberParser() =>
         Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Monaco));
 

@@ -423,6 +423,26 @@ public class CountryInfo_Countries_Tests
     }
 
     [Fact]
+    public void CountryInfo_Moldova()
+    {
+        Assert.Same(CountryInfo.Moldova, CountryInfo.Moldova);
+
+        var countryInfo = CountryInfo.Moldova;
+
+        Assert.Equal("+373", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
+        Assert.False(countryInfo.HasNationalDestinationCodes);
+        Assert.Equal("00", countryInfo.InternationalCallPrefix);
+        Assert.Equal("MD", countryInfo.Iso3166Code);
+        Assert.Equal("Moldova", countryInfo.Name);
+        Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 8 }, countryInfo.NsnLengths);
+        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Equal("0", countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_Monaco()
     {
         Assert.Same(CountryInfo.Monaco, CountryInfo.Monaco);
