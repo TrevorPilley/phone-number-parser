@@ -290,6 +290,7 @@ These were used as the references for the phone number data for each country.
 ### Moldova
 
 - https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200008C0003PDFE.pdf
+- https://en.anrceti.md/node/81
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Moldova
 
 ### Monaco
