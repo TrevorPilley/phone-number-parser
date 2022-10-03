@@ -417,7 +417,7 @@ public class CountryInfo_Countries_Tests
         Assert.Equal("Kosovo", countryInfo.Name);
         Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 8, 9 }, countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }

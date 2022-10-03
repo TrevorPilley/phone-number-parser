@@ -301,6 +301,7 @@ public partial class CountryInfo
         Name = "Kosovo",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9 }),
+        RequireNdcForLocalGeographicDialling = false,
         TrunkPrefix = "0",
     };
 
