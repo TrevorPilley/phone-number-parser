@@ -1,6 +1,11 @@
 # Phone Number Parser
 
-A library for parsing phone numbers, built for .NET 6.0, .NET 5.0, .NET Standard 2.1 and .NET Standard 2.0 using [nullable reference type](https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references) annotations.
+A library for parsing phone numbers with [nullable reference type](https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references) annotations, built for:
+
+- .NET 6.0
+- .NET 5.0
+- .NET Standard 2.1
+- .NET Standard 2.0
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/TrevorPilley/PhoneNumbers/blob/main/LICENSE) ![GitHub last commit](https://img.shields.io/github/last-commit/TrevorPilley/PhoneNumbers/main) ![Build Status](https://github.com/TrevorPilley/PhoneNumbers/workflows/CI/badge.svg?branch=main) [![NuGet](https://img.shields.io/nuget/v/PhoneNumberParser.svg)](https://www.nuget.org/packages/PhoneNumberParser/) ![GitHub Release Date](https://img.shields.io/github/release-date/TrevorPilley/PhoneNumbers) [![NuGet](https://img.shields.io/nuget/dt/PhoneNumberParser.svg)](https://www.nuget.org/packages/PhoneNumberParser/)
 
@@ -83,9 +88,9 @@ The phone number can be formatted in the following ways, the default format outp
 
 ```csharp
 phoneNumber.ToString();                         // +441142726444   (defaults to E.164 format)
-phoneNumber.ToString("E.164");                  // +441142726444   (format for E.164 format)
-phoneNumber.ToString("E.123");                  // +44 114 2726444 (format for E.123 international format)
-phoneNumber.ToString("N");                      // (0114) 2726444  (format for E.123 national notation format)
+phoneNumber.ToString("E.164");                  // +441142726444   (E.164 format)
+phoneNumber.ToString("E.123");                  // +44 114 2726444 (E.123 international format)
+phoneNumber.ToString("N");                      // (0114) 2726444  (E.123 national notation format)
 ```
 
 ### ParseOptions
@@ -132,6 +137,7 @@ ParseOptions.Default.Countries.Remove(CountryInfo.X);
 The library currently supports parsing phone numbers for the following countries and although best endeavours are made to adhere to published telephone numbering plans, depending on the accessibility of data there may be discrepancies. If you happen to find any, please raise an issue.
 
 ### Asia
+
 Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
 ---            | ---           | ---          | ---          | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
 Hong Kong      | HK            | +852         |              |            | Yes    |                        |                    | Yes                  | Yes            | Yes                            |                                   |                                  | Yes
