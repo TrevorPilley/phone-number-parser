@@ -14,9 +14,38 @@ public class DefaultPhoneNumberParserTests_RS_NonGeographicPhoneNumber
     [InlineData("0719999999", "719", "999999")]
     [InlineData("0730000000", "730", "000000")]
     [InlineData("0730999999", "730", "999999")]
+    [InlineData("0759000000", "759", "000000")]
+    [InlineData("0759999999", "759", "999999")]
+    [InlineData("0760000000", "76", "0000000")]
+    [InlineData("0769999999", "76", "9999999")]
+    [InlineData("0770000000", "770", "000000")]
+    [InlineData("0770999999", "770", "999999")]
     [InlineData("0799000000", "799", "000000")]
     [InlineData("0799999999", "799", "999999")]
     public void Parse_Known_NonGeographicPhoneNumber_7XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
+    {
+        var parseResult = s_parser.Parse(value);
+        parseResult.ThrowIfFailure();
+
+        var phoneNumber = parseResult.PhoneNumber;
+
+        Assert.NotNull(phoneNumber);
+        Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
+
+        var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
+        Assert.Equal(CountryInfo.Serbia, nonGeographicPhoneNumber.Country);
+        Assert.False(nonGeographicPhoneNumber.IsFreephone);
+        Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
+        Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
+        Assert.False(nonGeographicPhoneNumber.IsSharedCost);
+        Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
+        Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
+    }
+
+    [Theory]
+    [InlineData("0808000000", "808", "000000")]
+    [InlineData("0808999999", "808", "999999")]
+    public void Parse_Known_NonGeographicPhoneNumber_8XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
         parseResult.ThrowIfFailure();
@@ -60,10 +89,8 @@ public class DefaultPhoneNumberParserTests_RS_NonGeographicPhoneNumber
     }
 
     [Theory]
-    [InlineData("0720000000", "720", "000000")]
-    [InlineData("0720999999", "720", "999999")]
-    [InlineData("0729000000", "729", "000000")]
-    [InlineData("0729999999", "729", "999999")]
+    [InlineData("0720000000", "72", "0000000")]
+    [InlineData("0729999999", "72", "9999999")]
     public void Parse_Known_NonGeographicPhoneNumber_MachineToMachine(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
