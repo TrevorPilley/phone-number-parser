@@ -104,6 +104,7 @@
     <None Remove="DataFiles\PL.txt"/>
     <None Remove="DataFiles\PT.txt"/>
     <None Remove="DataFiles\RO.txt"/>
+    <None Remove="DataFiles\RS.txt"/>
     <None Remove="DataFiles\SE.txt"/>
     <None Remove="DataFiles\SG.txt"/>
     <None Remove="DataFiles\SK.txt"/>
@@ -143,6 +144,7 @@
     <EmbeddedResource Include="DataFiles\PL.txt"/>
     <EmbeddedResource Include="DataFiles\PT.txt"/>
     <EmbeddedResource Include="DataFiles\RO.txt"/>
+    <EmbeddedResource Include="DataFiles\RS.txt"/>
     <EmbeddedResource Include="DataFiles\SE.txt"/>
     <EmbeddedResource Include="DataFiles\SG.txt"/>
     <EmbeddedResource Include="DataFiles\SK.txt"/>

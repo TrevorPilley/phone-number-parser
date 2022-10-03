@@ -175,6 +175,7 @@ Poland         | PL            | +48          |              | Yes        | Yes 
 Portugal       | PT            | +351         |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               | Yes                              |
 Romania        | RO            | +40          | 0            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               | Yes                              |
 San Marino     | SM            | +378         |              | Yes        |        |                        |                    |                      | Yes            |                                | Yes                               |                                  |
+Serbia         | RS            | +381         | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
 Spain          | ES            | +34          |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               |                                  |
 Slovakia       | SK            | +421         | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               | Yes                              |
 Sweden         | SE            | +46          | 0            | Yes        | Yes    | Yes                    | Yes                | Yes                  | Yes            | Yes                            | Yes                               | Yes                              | Yes
@@ -325,6 +326,12 @@ These were used as the references for the phone number data for each country.
 ### San Marino
 
 - https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000B50001PDFE.pdf
+
+### Serbia
+
+- https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000B90001PDFE.pdf
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Serbia
+
 
 ### Singapore
 
