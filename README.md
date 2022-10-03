@@ -167,6 +167,7 @@ Ireland        | IE            | +353         | 0            | Yes        | Yes 
 Isle of Man    | IM            | +44          | 0            | Yes        | Yes    |                        |                    |                      |                |                                |                                   |                                  |
 Italy          | IT            | +39          |              | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               | Yes                              |
 Jersey         | JE            | +44          | 0            | Yes        | Yes    |                        |                    |                      |                |                                |                                   |                                  |
+Moldova        | MD            | +373         | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               | Yes                              |
 Monaco         | MC            | +377         |              |            | Yes    |                        |                    |                      | Yes            |                                |                                   |                                  |
 Netherlands    | NL            | +31          | 0            | Yes        | Yes    |                        | Yes                |                      | Yes            | Yes                            | Yes                               |                                  | Yes
 Norway         | NO            | +47          |              |            | Yes    |                        |                    |                      | Yes            |                                |                                   |                                  | Yes
@@ -286,6 +287,12 @@ These were used as the references for the phone number data for each country.
 ### Macau
 
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Macau
+
+### Moldova
+
+- https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200008C0003PDFE.pdf
+- https://en.anrceti.md/node/81
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Moldova
 
 ### Monaco
 

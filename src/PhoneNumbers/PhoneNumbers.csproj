@@ -97,6 +97,7 @@
     <None Remove="DataFiles\IT.txt"/>
     <None Remove="DataFiles\JE.txt"/>
     <None Remove="DataFiles\MC.txt"/>
+    <None Remove="DataFiles\MD.txt"/>
     <None Remove="DataFiles\MO.txt"/>
     <None Remove="DataFiles\NL.txt"/>
     <None Remove="DataFiles\NO.txt"/>
@@ -135,6 +136,7 @@
     <EmbeddedResource Include="DataFiles\IT.txt"/>
     <EmbeddedResource Include="DataFiles\JE.txt"/>
     <EmbeddedResource Include="DataFiles\MC.txt"/>
+    <EmbeddedResource Include="DataFiles\MD.txt"/>
     <EmbeddedResource Include="DataFiles\MO.txt"/>
     <EmbeddedResource Include="DataFiles\NL.txt"/>
     <EmbeddedResource Include="DataFiles\NO.txt"/>
