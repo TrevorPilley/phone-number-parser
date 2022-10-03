@@ -31,9 +31,9 @@ public class DefaultPhoneNumberParserTests_XK_GeographicNumber
 
     [Theory]
     [InlineData("028000000", "280", "00000", "Gjilani")]
-    [InlineData("028099999", "280", "99999", "Gjilani")]
+    [InlineData("0280999999", "280", "999999", "Gjilani")]
     [InlineData("029000000", "290", "00000", "Ferizaj")]
-    [InlineData("029099999", "290", "99999", "Ferizaj")]
+    [InlineData("0290999999", "290", "999999", "Ferizaj")]
     public void Parse_Known_GeographicPhoneNumber_2XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
     {
         var parseResult = s_parser.Parse(value);
@@ -75,7 +75,7 @@ public class DefaultPhoneNumberParserTests_XK_GeographicNumber
 
     [Theory]
     [InlineData("039000000", "390", "00000", "Gjakova")]
-    [InlineData("039099999", "390", "99999", "Gjakova")]
+    [InlineData("0390999999", "390", "999999", "Gjakova")]
     public void Parse_Known_GeographicPhoneNumber_3XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
     {
         var parseResult = s_parser.Parse(value);
