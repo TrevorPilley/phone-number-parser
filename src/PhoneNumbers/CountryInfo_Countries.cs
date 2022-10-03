@@ -303,6 +303,20 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Moldova.
+    /// </summary>
+    public static CountryInfo Moldova { get; } = new()
+    {
+        CallingCode = "+373",
+        Continent = Europe,
+        Iso3166Code = "MD",
+        Name = "Moldova",
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 5, 6, 7, 8 }),
+        TrunkPrefix = "0",
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Monaco.
     /// </summary>
     public static CountryInfo Monaco { get; } = new()

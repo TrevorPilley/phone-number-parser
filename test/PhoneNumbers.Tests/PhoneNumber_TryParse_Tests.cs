@@ -171,6 +171,14 @@ public class PhoneNumber_TryParse_Tests
     }
 
     [Fact]
+    public void TryParse_Value_With_Moldova_CallingCode()
+    {
+        Assert.True(PhoneNumber.TryParse("+37322251317", out var phoneNumber));
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Moldova, phoneNumber.Country);
+    }
+
+    [Fact]
     public void TryParse_Value_With_Monaco_CallingCode()
     {
         Assert.True(PhoneNumber.TryParse("+37798988800", out var phoneNumber));
