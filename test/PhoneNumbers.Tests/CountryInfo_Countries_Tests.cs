@@ -403,6 +403,26 @@ public class CountryInfo_Countries_Tests
     }
 
     [Fact]
+    public void CountryInfo_Kosovo()
+    {
+        Assert.Same(CountryInfo.Kosovo, CountryInfo.Kosovo);
+
+        var countryInfo = CountryInfo.Kosovo;
+
+        Assert.Equal("+383", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
+        Assert.True(countryInfo.HasNationalDestinationCodes);
+        Assert.Equal("00", countryInfo.InternationalCallPrefix);
+        Assert.Equal("XK", countryInfo.Iso3166Code);
+        Assert.Equal("Kosovo", countryInfo.Name);
+        Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 8, 9 }, countryInfo.NsnLengths);
+        Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Equal("0", countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_Macau()
     {
         Assert.Same(CountryInfo.Macau, CountryInfo.Macau);
