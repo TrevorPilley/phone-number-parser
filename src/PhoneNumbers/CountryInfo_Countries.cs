@@ -312,7 +312,7 @@ public partial class CountryInfo
         Iso3166Code = "MD",
         Name = "Moldova",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 8 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 5, 6, 7, 8 }),
         TrunkPrefix = "0",
     };
 
