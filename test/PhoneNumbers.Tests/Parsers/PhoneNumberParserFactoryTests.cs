@@ -140,6 +140,10 @@ public class PhoneNumberParserFactoryTests
         Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Slovakia));
 
     [Fact]
+    public void GetParser_For_CountryInfo_SouthAfrica_Returns_DefaultPhoneNumberParser() =>
+        Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.SouthAfrica));
+
+    [Fact]
     public void GetParser_For_CountryInfo_Spain_Returns_DefaultPhoneNumberParser() =>
         Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Spain));
 
