@@ -167,6 +167,7 @@ Ireland        | IE            | +353         | 0            | Yes        | Yes 
 Isle of Man    | IM            | +44          | 0            | Yes        | Yes    |                        |                    |                      |                |                                |                                   |                                  |
 Italy          | IT            | +39          |              | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               | Yes                              |
 Jersey         | JE            | +44          | 0            | Yes        | Yes    |                        |                    |                      |                |                                |                                   |                                  |
+Kosovo         | XK            | +383         | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               | Yes                              |
 Moldova        | MD            | +373         | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               | Yes                              |
 Monaco         | MC            | +377         |              |            | Yes    |                        |                    |                      | Yes            |                                |                                   |                                  |
 Netherlands    | NL            | +31          | 0            | Yes        | Yes    |                        | Yes                |                      | Yes            | Yes                            | Yes                               |                                  | Yes
@@ -284,6 +285,12 @@ These were used as the references for the phone number data for each country.
 
 - https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200006B0001PDFE.pdf
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Italy
+
+### Kosovo
+
+- https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000FD0002PDFE.pdf
+- http://www.arkep-rks.org/repository/docs/Reg%20Nr%2026%20-%20Regulation%20on%20National%20Numbering%20Plan.pdf
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Kosovo
 
 ### Macau
 
