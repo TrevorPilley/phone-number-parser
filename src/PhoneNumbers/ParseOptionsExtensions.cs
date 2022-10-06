@@ -6,6 +6,13 @@ namespace PhoneNumbers;
 public static class ParseOptionsExtensions
 {
     /// <summary>
+    /// Allows the <see cref="ParseOptions"/> instance to include countries in Africa.
+    /// </summary>
+    /// <param name="parseOptions">The <see cref="ParseOptions"/> instance to update.</param>
+    public static void AllowAfricanCountries(this ParseOptions parseOptions)
+        => AllowCountries(parseOptions, CountryInfo.Africa);
+
+    /// <summary>
     /// Allows the <see cref="ParseOptions"/> instance to include countries in Asia.
     /// </summary>
     /// <param name="parseOptions">The <see cref="ParseOptions"/> instance to update.</param>

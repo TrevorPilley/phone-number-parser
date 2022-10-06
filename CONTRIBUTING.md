@@ -24,12 +24,13 @@ If you are adding a new country, please do the following.
 
 ### Add the CountryInfo
 
-1. Add a new static `CountryInfo` property in the `CountryInfo_Countries.cs` file with the country name as the name, for example:
+1. Add a new static `CountryInfo` property in the relevant `CountryInfo_{Continent}.cs` file with the country name as the name, for example:
 
 ```csharp
 public static CountryInfo CountryName { get; } = new()
 {
     CallingCode = "+NN",
+    Continent = Africa/Asia/Europe/Oceania/NorthAmerica/SouthAmerica, // as appropriate
     Iso3166Code = "ZZ",
     Name = "CountryName",
     NsnLengths = new ReadOnlyCollection<int>(new[] { N }),
@@ -39,7 +40,8 @@ public static CountryInfo CountryName { get; } = new()
 2. If the country uses national destination codes (aka. area codes), set the `NdcLengths` property as appropriate and declare in descending order.
 3. If the country doesn't use the ITU default `InternationalCallPrefix` of `00`, set the property appropriately.
 4. If the country uses a trunk prefix, set the `TrunkPrefix` appropriately.
-5. Add a new `CountryInfo_CountryName` test in the `CountryInfo_Countries_Tests.cs` file asserting the property values (see an existing implementation).
+5. If the country uses an open dialling plan, where within a geographic area local dialling can be done without including the trunk code or area code, set `RequireNdcForLocalGeographicDialling = false`
+6. Add a new `CountryInfo_CountryName` test in the `CountryInfo_{Continent}_Tests.cs` file asserting the property values (see an existing implementation).
 
 ### Add the data file
 
