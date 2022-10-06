@@ -8,9 +8,9 @@ public class DefaultPhoneNumberParserTests_XK_MobilePhoneNumber
     private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Kosovo);
 
     [Theory]
-    [InlineData("043000000", "43", "000000")]
+    [InlineData("043200000", "43", "200000")]
     [InlineData("043999999", "43", "999999")]
-    [InlineData("049000000", "49", "000000")]
+    [InlineData("049200000", "49", "200000")]
     [InlineData("049999999", "49", "999999")]
     public void Parse_Known_MobilePhoneNumber(string value, string NationalDestinationCode, string subscriberNumber)
     {
