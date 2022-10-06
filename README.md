@@ -71,7 +71,7 @@ geographicPhoneNumber.GeographicArea;           // Sheffield
 
 // If PhoneNumberKind.MobilePhoneNumber
 var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
-mobilePhoneNumber.IsDataOnly;                   // true/false
+mobilePhoneNumber.IsDataOnly;                   // true/false (obsolete)
 mobilePhoneNumber.IsPager;                      // true/false
 mobilePhoneNumber.IsVirtual;                    // true/false
 
