@@ -110,6 +110,7 @@
     <None Remove="DataFiles\SK.txt"/>
     <None Remove="DataFiles\SM.txt"/>
     <None Remove="DataFiles\UA.txt"/>
+    <None Remove="DataFiles\XK.txt"/>
   </ItemGroup>
 
   <ItemGroup>
@@ -150,5 +151,6 @@
     <EmbeddedResource Include="DataFiles\SK.txt"/>
     <EmbeddedResource Include="DataFiles\SM.txt"/>
     <EmbeddedResource Include="DataFiles\UA.txt"/>
+    <EmbeddedResource Include="DataFiles\XK.txt"/>
   </ItemGroup>
 </Project>

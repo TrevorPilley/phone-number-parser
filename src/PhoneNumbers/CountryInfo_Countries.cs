@@ -291,6 +291,21 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Kosovo.
+    /// </summary>
+    public static CountryInfo Kosovo { get; } = new()
+    {
+        CallingCode = "+383",
+        Continent = Europe,
+        Iso3166Code = "XK",
+        Name = "Kosovo",
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9 }),
+        RequireNdcForLocalGeographicDialling = false,
+        TrunkPrefix = "0",
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Macau.
     /// </summary>
     public static CountryInfo Macau { get; } = new()

@@ -163,6 +163,14 @@ public class PhoneNumber_TryParse_Tests
     }
 
     [Fact]
+    public void TryParse_Value_With_Kosovo_CallingCode()
+    {
+        Assert.True(PhoneNumber.TryParse("+38338212345", out var phoneNumber));
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Kosovo, phoneNumber.Country);
+    }
+
+    [Fact]
     public void TryParse_Value_With_Macau_CallingCode()
     {
         Assert.True(PhoneNumber.TryParse("+85328000000", out var phoneNumber));
