@@ -31,8 +31,10 @@ public class DefaultPhoneNumberParserTests_ZA_NonGeographicPhoneNumber
     }
 
     [Theory]
-    [InlineData("09689200000000000", "96892", "00000000000")]
-    [InlineData("09689299999999999", "96892", "99999999999")]
+    [InlineData("09600000000000", "96", "00000000000")]
+    [InlineData("09699999999999", "96", "99999999999")]
+    [InlineData("09800000000000", "98", "00000000000")]
+    [InlineData("09899999999999", "98", "99999999999")]
     public void Parse_Known_NonGeographicPhoneNumber_MachineToMachine(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
