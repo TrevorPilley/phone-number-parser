@@ -358,8 +358,8 @@ These were used as the references for the phone number data for each country.
 
 ### South Africa
 
-- https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000C10001PDFE.pdf
-- https://en.wikipedia.org/wiki/South_Africa
+- https://www.icasa.org.za/uploads/files/NumberingPlanReg.pdf
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_South_Africa
 
 ### Spain
 
