@@ -269,7 +269,7 @@ public class PhoneNumber_Parse_Tests
     [Fact]
     public void Parse_Value_With_SouthAfrica_CallingCode()
     {
-        var phoneNumber = PhoneNumber.Parse("+27123344508");
+        var phoneNumber = PhoneNumber.Parse("+27215616800");
         Assert.NotNull(phoneNumber);
         Assert.Equal(CountryInfo.SouthAfrica, phoneNumber.Country);
     }

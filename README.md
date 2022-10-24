@@ -140,7 +140,7 @@ The library currently supports parsing phone numbers for the following countries
 
 Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
 ---            | ---           | ---          | ---          | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
-South Africa   | Za            | +27          | 0            |            |        |                        |                    |                      |                |                                |                                   |                                  |
+South Africa   | Za            | +27          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
 
 ### Asia
 

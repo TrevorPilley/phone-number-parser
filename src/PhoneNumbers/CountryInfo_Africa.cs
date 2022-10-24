@@ -14,7 +14,7 @@ public partial class CountryInfo
         Iso3166Code = "ZA",
         Name = "South Africa",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 9, 13 }),
         TrunkPrefix = "0",
     };
 }
