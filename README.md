@@ -140,6 +140,7 @@ The library currently supports parsing phone numbers for the following countries
 
 Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
 ---            | ---           | ---          | ---          | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
+Egypt          | EG            | +20          | 0            | Yes        | Yes    |                        |                    |                      |                | Yes                            | Yes                               |                                  |
 Nigeria        | NG            | +234         | 0            | Yes        | Yes    |                        |                    |                      |                |                                |                                   |                                  |
 South Africa   | Za            | +27          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               | Yes                              | Yes
 
@@ -237,6 +238,11 @@ These were used as the references for the phone number data for each country.
 
 - https://ens.dk/sites/ens.dk/files/Tele/nummerplanen_2016_november.pdf
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Denmark
+
+### Egypt
+
+- https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200003E0004PDFE.pdf
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Egypt
 
 ### Estonia
 
