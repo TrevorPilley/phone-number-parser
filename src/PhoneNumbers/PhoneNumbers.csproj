@@ -74,6 +74,7 @@
     <None Remove="DataFiles\DE.txt"/>
     <None Remove="DataFiles\DK.txt"/>
     <None Remove="DataFiles\EE.txt"/>
+    <None Remove="DataFiles\EG.txt"/>
     <None Remove="DataFiles\ES.txt"/>
     <None Remove="DataFiles\FI.txt"/>
     <None Remove="DataFiles\FR.txt"/>
@@ -117,6 +118,7 @@
     <EmbeddedResource Include="DataFiles\DE.txt"/>
     <EmbeddedResource Include="DataFiles\DK.txt"/>
     <EmbeddedResource Include="DataFiles\EE.txt"/>
+    <EmbeddedResource Include="DataFiles\EG.txt"/>
     <EmbeddedResource Include="DataFiles\ES.txt"/>
     <EmbeddedResource Include="DataFiles\FI.txt"/>
     <EmbeddedResource Include="DataFiles\FR.txt"/>

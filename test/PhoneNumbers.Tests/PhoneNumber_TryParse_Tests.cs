@@ -59,6 +59,14 @@ public class PhoneNumber_TryParse_Tests
     }
 
     [Fact]
+    public void TryParse_Value_With_Egypt_CallingCode()
+    {
+        Assert.True(PhoneNumber.TryParse("+20235344239", out var phoneNumber));
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Egypt, phoneNumber.Country);
+    }
+
+    [Fact]
     public void TryParse_Value_With_Estonia_CallingCode()
     {
         Assert.True(PhoneNumber.TryParse("+3726672072", out var phoneNumber));
