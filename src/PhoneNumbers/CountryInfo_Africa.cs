@@ -13,7 +13,7 @@ public partial class CountryInfo
         Continent = Asia,
         Iso3166Code = "EG",
         Name = "Egypt",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 2, 1 }),
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9, 10, 11 }),
         TrunkPrefix = "0",
     };

@@ -15,7 +15,7 @@ public class CountryInfo_Africa_Tests
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("EG", countryInfo.Iso3166Code);
         Assert.Equal("Egypt", countryInfo.Name);
-        Assert.Equal(new[] { 2, 1 }, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 8, 9, 10, 11 }, countryInfo.NsnLengths);
         Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
         Assert.False(countryInfo.SharesCallingCode);
