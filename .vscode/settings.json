@@ -6,7 +6,8 @@
         "Xunit",
         "cref",
         "fuget",
-        "nuget"
+        "nuget",
+        "inheritdoc"
     ],
     "cSpell.enabledLanguageIds": [
       "csharp",
