@@ -3,7 +3,6 @@
 A library for parsing phone numbers with [nullable reference type](https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references) annotations, built for:
 
 - .NET 6.0
-- .NET 5.0
 - .NET Standard 2.1
 - .NET Standard 2.0
 
