@@ -13,7 +13,7 @@ public partial class CountryInfo
         InternationalCallPrefix = "009",
         Iso3166Code = "NG",
         Name = "Nigeria",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 2, 1 }),
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 5, 6, 7, 8 }),
         RequireNdcForLocalGeographicDialling = false,
         TrunkPrefix = "0",

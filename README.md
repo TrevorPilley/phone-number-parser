@@ -320,7 +320,7 @@ These were used as the references for the phone number data for each country.
 
 ### Nigeria
 
-- https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200009C0001PDFE.pdf
+- https://www.ncc.gov.ng/accessible/documents/1023-national-numbering-plan-2022-april/file
 - https://en.m.wikipedia.org/wiki/Telephone_numbers_in_Nigeria
 
 ### Norway
