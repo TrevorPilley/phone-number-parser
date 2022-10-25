@@ -10,7 +10,7 @@ public class CountryInfo_Africa_Tests
         var countryInfo = CountryInfo.Egypt;
 
         Assert.Equal("+20", countryInfo.CallingCode);
-        Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
+        Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
         Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("EG", countryInfo.Iso3166Code);
