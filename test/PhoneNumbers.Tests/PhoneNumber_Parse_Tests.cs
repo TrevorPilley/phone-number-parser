@@ -203,6 +203,14 @@ public class PhoneNumber_Parse_Tests
     }
 
     [Fact]
+    public void Parse_Value_With_Nigeria_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+23494617000");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Nigeria, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_With_Norway_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+4722824600");
