@@ -10,7 +10,7 @@ public partial class CountryInfo
     public static CountryInfo Egypt { get; } = new()
     {
         CallingCode = "+20",
-        Continent = Asia,
+        Continent = Africa,
         Iso3166Code = "EG",
         Name = "Egypt",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
