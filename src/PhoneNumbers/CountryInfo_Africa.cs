@@ -18,6 +18,7 @@ public partial class CountryInfo
         TrunkPrefix = "0",
     };
 
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Nigeria.
     /// </summary>
     public static CountryInfo Nigeria { get; } = new()
