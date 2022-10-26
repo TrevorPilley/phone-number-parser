@@ -4,6 +4,21 @@ namespace PhoneNumbers;
 
 public partial class CountryInfo
 {
+    /// Gets the <see cref="CountryInfo"/> for Nigeria.
+    /// </summary>
+    public static CountryInfo Nigeria { get; } = new()
+    {
+        CallingCode = "+234",
+        Continent = Africa,
+        InternationalCallPrefix = "009",
+        Iso3166Code = "NG",
+        Name = "Nigeria",
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 10 }),
+        RequireNdcForLocalGeographicDialling = false,
+        TrunkPrefix = "0",
+    };
+
     /// <summary>
     /// Gets the <see cref="CountryInfo"/> for SouthAfrica.
     /// </summary>
