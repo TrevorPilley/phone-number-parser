@@ -103,6 +103,7 @@
     <None Remove="DataFiles\SM.txt"/>
     <None Remove="DataFiles\UA.txt"/>
     <None Remove="DataFiles\XK.txt"/>
+    <None Remove="DataFiles\ZA.txt"/>
   </ItemGroup>
 
   <ItemGroup>
@@ -144,5 +145,6 @@
     <EmbeddedResource Include="DataFiles\SM.txt"/>
     <EmbeddedResource Include="DataFiles\UA.txt"/>
     <EmbeddedResource Include="DataFiles\XK.txt"/>
+    <EmbeddedResource Include="DataFiles\ZA.txt"/>
   </ItemGroup>
 </Project>
