@@ -22,6 +22,7 @@ public class CountryInfo_Africa_Tests
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
 
+    [Fact]
     public void CountryInfo_Nigeria()
     {
         Assert.Same(CountryInfo.Nigeria, CountryInfo.Nigeria);
