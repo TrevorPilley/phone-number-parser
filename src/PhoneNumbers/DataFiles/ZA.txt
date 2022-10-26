@@ -1,0 +1,42 @@
+G|10-11|Johannesburg|0000000-9999999|
+G|12|Tshwane region|0000000-9999999|
+G|13|Northern and western parts of Mpumalanga|0000000-9999999|
+G|14|Northern part of North West and southern and western parts of Limpopo|0000000-9999999|
+G|15|Northern and eastern parts of Limpopo|0000000-9999999|
+G|16|Vaal Triangle|0000000-9999999|
+G|17|Southern part of Mpumalanga|0000000-9999999|
+G|18|Southern part of North West|0000000-9999999|
+G|21|Cape Town Region|0000000-9999999|
+G|22|Western coast of Western Cape and Boland|0000000-9999999|
+G|23|Karoo|0000000-9999999|
+G|27|Namaqualand|0000000-9999999|
+G|28|Southern coast of Western Cape|0000000-9999999|
+G|31|Durban region|0000000-9999999|
+G|32|KwaZulu Natal central coast|0000000-9999999|
+G|33|KwaZulu Natal Midlands|0000000-9999999|
+G|34|Northern KwaZulu Natal|0000000-9999999|
+G|35|Zululand|0000000-9999999|
+G|36|Drakensberg|0000000-9999999|
+G|39|Eastern Pondoland and southern coast of KwaZulu Natal|0000000-9999999|
+G|40|Bhisho region|0000000-9999999|
+G|41|Port Elizabeth region|0000000-9999999|
+G|42|Southern and central parts of Eastern Cape|0000000-9999999|
+G|43|East London region|0000000-9999999|
+G|44|Garden Route|0000000-9999999|
+G|45|Northern and eastern parts of Eastern Cape|0000000-9999999|
+G|46|Southern and eastern parts of Eastern Cape|0000000-9999999|
+G|47|Eastern part of Eastern Cape|0000000-9999999|
+G|48|Northern part of Eastern Cape|0000000-9999999|
+G|49|Western part of Eastern Cape|0000000-9999999|
+G|51|Southern and central parts of Free State and far eastern part of Eastern Cape|0000000-9999999|
+G|53|Eastern part of Northern Cape and far western part of North West|0000000-9999999|
+G|54|Gordonia|0000000-9999999|
+G|56|Northern part of Free State|0000000-9999999|
+G|57|Free State Goldfields|0000000-9999999|
+G|58|Eastern part of Free State|0000000-9999999|
+M|60-74,76-79,81-84||0000000-9999999|
+N|80||0000000-9999999|F
+N|86||0000000-9999999|S
+N|87-89||0000000-9999999|
+N|90-92||0000000-9999999|R
+N|96-98||00000000000-99999999999|M
