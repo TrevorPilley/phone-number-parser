@@ -173,7 +173,7 @@ public class DefaultPhoneNumberParserTests_NG_GeographicNumber
     [InlineData("052290000", "52", "290000", "Benin")]
     [InlineData("052299999", "52", "299999", "Benin")]
     [InlineData("052930000", "52", "930000", "Benin")]
-    [InlineData("052930000", "52", "930000", "Benin")]
+    [InlineData("052969999", "52", "969999", "Benin")]
     [InlineData("053270000", "53", "270000", "Warri")]
     [InlineData("053270999", "53", "270999", "Warri")]
     [InlineData("053290000", "53", "290000", "Warri")]
