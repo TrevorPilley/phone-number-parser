@@ -119,9 +119,9 @@ To opt in to all countries supported by the library within a continent:
 ParseOptions.Default.Countries.Clear():
 
 // One or more continent can be added.
-ParseOptions.Default.AllowAfricanCountries():
-ParseOptions.Default.AllowAsianCountries():
-ParseOptions.Default.AllowEuropeanCountries():
+ParseOptions.Default.AllowAfricanCountries();
+ParseOptions.Default.AllowAsianCountries();
+ParseOptions.Default.AllowEuropeanCountries();
 ```
 
 #### Opt-out
