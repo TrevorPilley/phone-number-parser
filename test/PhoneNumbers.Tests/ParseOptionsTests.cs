@@ -84,6 +84,17 @@ public class ParseOptionsTests
     }
 
     [Fact]
+    public void AllowOceanianCountries()
+    {
+        var parseOptions = new ParseOptions();
+        parseOptions.Countries.Clear();
+        parseOptions.AllowOceanianCountries();
+
+        Assert.True(parseOptions.Countries.Count > 0);
+        Assert.All(parseOptions.Countries, x => Assert.Equal(CountryInfo.Oceania, x.Continent));
+    }
+
+    [Fact]
     public void Remove_Country()
     {
         var parseOptions = new ParseOptions();
