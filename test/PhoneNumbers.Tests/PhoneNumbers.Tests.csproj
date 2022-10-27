@@ -28,6 +28,10 @@
     </PackageReference>
   </ItemGroup>
 
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+    <NoWarn>612,618</NoWarn>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Remove="TestResults\**" />
   </ItemGroup>
