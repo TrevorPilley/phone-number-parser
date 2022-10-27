@@ -24,23 +24,6 @@ public class CountryInfo_Tests
     [InlineData(default(string))]
     [InlineData("")]
     [InlineData(" ")]
-    [InlineData("+35312222222")]
-    public void IsInternationalNumber_False(string value) =>
-        Assert.False(TestHelper.CreateCountryInfo().IsInternationalNumber(value));
-
-    [Theory]
-    [InlineData("+422012345678")]
-    [InlineData("+422(0)12345678")]
-    [InlineData("+422 (0) 123 456 78")]
-    [InlineData("+422 (0) 123-456-78")]
-    [InlineData("+422 (0) 123.456.78")]
-    public void IsInternationalNumber_True(string value) =>
-        Assert.True(TestHelper.CreateCountryInfo().IsInternationalNumber(value));
-
-    [Theory]
-    [InlineData(default(string))]
-    [InlineData("")]
-    [InlineData(" ")]
     [InlineData(@"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@£$%^&*()_+-={}[]:;""\\'|?/>.<,±`~ėęēêèéëūùûüúìįíîïīõøōœòôöóāãåæâàáäšßśłżžźčçćŵñń'¡¿…")]
     public void ReadNationalSignificantNumber_Not_A_Valid_Value(string value) =>
         Assert.Equal(string.Empty, TestHelper.CreateCountryInfo().ReadNationalSignificantNumber(value));
@@ -91,6 +74,23 @@ public class CountryInfo_Tests
     [InlineData("123.456.78")]
     public void ReadNationalSignificantNumber_Without_TrunkPrefix(string value) =>
         Assert.Equal("12345678", TestHelper.CreateCountryInfo(trunkPrefix: null).ReadNationalSignificantNumber(value));
+
+    [Theory]
+    [InlineData(default(string))]
+    [InlineData("")]
+    [InlineData(" ")]
+    [InlineData("+35312222222")]
+    public void StartsWithCallingCode_False(string value) =>
+        Assert.False(TestHelper.CreateCountryInfo().StartsWithCallingCode(value));
+
+    [Theory]
+    [InlineData("+422012345678")]
+    [InlineData("+422(0)12345678")]
+    [InlineData("+422 (0) 123 456 78")]
+    [InlineData("+422 (0) 123-456-78")]
+    [InlineData("+422 (0) 123.456.78")]
+    public void StartsWithCallingCode_True(string value) =>
+        Assert.True(TestHelper.CreateCountryInfo().StartsWithCallingCode(value));
 
     [Fact]
     public void When_Constructed()
