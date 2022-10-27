@@ -108,35 +108,35 @@ public class PhoneNumberParserFactoryTests
         Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Monaco));
 
     [Fact]
-    public void GetParser_For_CountryInfo_Netherlands_Returns_GBPhoneNumberParser() =>
+    public void GetParser_For_CountryInfo_Netherlands_Returns_DefaultPhoneNumberParser() =>
         Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Netherlands));
 
     [Fact]
-    public void GetParser_For_CountryInfo_Nigeria_Returns_GBPhoneNumberParser() =>
+    public void GetParser_For_CountryInfo_Nigeria_Returns_DefaultPhoneNumberParser() =>
         Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Nigeria));
 
     [Fact]
-    public void GetParser_For_CountryInfo_Norway_Returns_GBPhoneNumberParser() =>
+    public void GetParser_For_CountryInfo_Norway_Returns_DefaultPhoneNumberParser() =>
         Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Norway));
 
     [Fact]
-    public void GetParser_For_CountryInfo_Poland_Returns_GBPhoneNumberParser() =>
+    public void GetParser_For_CountryInfo_Poland_Returns_DefaultPhoneNumberParser() =>
         Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Poland));
 
     [Fact]
-    public void GetParser_For_CountryInfo_Portugal_Returns_GBPhoneNumberParser() =>
+    public void GetParser_For_CountryInfo_Portugal_Returns_DefaultPhoneNumberParser() =>
         Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Portugal));
 
     [Fact]
-    public void GetParser_For_CountryInfo_Romania_Returns_GBPhoneNumberParser() =>
+    public void GetParser_For_CountryInfo_Romania_Returns_DefaultPhoneNumberParser() =>
         Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Romania));
 
     [Fact]
-    public void GetParser_For_CountryInfo_SanMarino_Returns_GBPhoneNumberParser() =>
+    public void GetParser_For_CountryInfo_SanMarino_Returns_DefaultPhoneNumberParser() =>
         Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.SanMarino));
 
     [Fact]
-    public void GetParser_For_CountryInfo_Serbia_Returns_GBPhoneNumberParser() =>
+    public void GetParser_For_CountryInfo_Serbia_Returns_DefaultPhoneNumberParser() =>
         Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Serbia));
 
     [Fact]
