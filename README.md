@@ -138,6 +138,7 @@ ParseOptions.Default.Countries.Clear():
 ParseOptions.Default.AllowAfricanCountries();
 ParseOptions.Default.AllowAsianCountries();
 ParseOptions.Default.AllowEuropeanCountries();
+ParseOptions.Default.AllowOceanianCountries();
 ```
 
 #### Opt-out
@@ -207,6 +208,11 @@ Sweden         | SE            | +46          | 0            | Yes        | Yes 
 Switzerland    | CH            | +41          | 0            | Yes        | Yes    |                        |                    |                      | Yes            |                                | Yes                               |                                  |
 Ukraine        | UA            | +380         | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  |
 United Kingdom | GB            | +44          | 0            | Yes        | Yes    | Yes                    | Yes                | Yes                  | Yes            | Yes                            | Yes                               |                                  |
+
+### Oceania
+
+Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
+---            | ---           | ---          | ---          | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
 
 ### Notes
 
