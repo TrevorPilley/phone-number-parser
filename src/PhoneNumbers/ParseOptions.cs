@@ -35,5 +35,5 @@ public sealed class ParseOptions
     /// </summary>
     /// <param name="value">A string containing a phone number.</param>
     internal IEnumerable<CountryInfo> GetCountryInfos(string value) =>
-        Countries.Where(x => x.IsInternationalNumber(value));
+        Countries.Where(x => x.StartsWithCallingCode(value));
 }
