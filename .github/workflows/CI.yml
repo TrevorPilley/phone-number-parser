@@ -14,8 +14,9 @@ on:
       - '*.*.*'
   pull_request:
 
-concurrency: ci-${{ github.ref }}
-cancel-in-progress: true
+concurrency: 
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
 
 env:
   # Disable sending usage data to Microsoft
