@@ -27,7 +27,7 @@ internal sealed class NumberRange
 
         if (to.Length < from.Length)
         {
-            throw new ArgumentOutOfRangeException(nameof(to), $"The value To ({to}) must be greater than or equal to the value From ({from})");
+            throw new ArgumentOutOfRangeException(nameof(to), $"The length of the value To ({to}) must be greater than or equal to the length of the value From ({from})");
         }
 
         (From, To) = (from, to);
