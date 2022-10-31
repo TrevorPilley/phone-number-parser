@@ -32,12 +32,16 @@ internal sealed class NumberRange
 
         (From, To) = (from, to);
         _isSingleNumber = From.Equals(To, StringComparison.Ordinal);
-        _fromIntValue = long.Parse(From, CultureInfo.InvariantCulture);
-        _toIntValue = long.Parse(To, CultureInfo.InvariantCulture);
 
-        if (_toIntValue < _fromIntValue)
+        if (!_isSingleNumber)
         {
-            throw new ArgumentOutOfRangeException(nameof(to), $"The value To ({to}) must be greater than or equal to the value From ({from})");
+            _fromIntValue = long.Parse(From, CultureInfo.InvariantCulture);
+            _toIntValue = long.Parse(To, CultureInfo.InvariantCulture);
+
+            if (_toIntValue < _fromIntValue)
+            {
+                throw new ArgumentOutOfRangeException(nameof(to), $"The value To ({to}) must be greater than or equal to the value From ({from})");
+            }
         }
     }
 
