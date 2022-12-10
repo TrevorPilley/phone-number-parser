@@ -38,11 +38,11 @@ There are 2 overloads:
 
 ```csharp
 // If the phone number string is in international format (e.g. +XX):
-PhoneNumber phoneNumber = PhoneNumber.Parse("+441142726444");
+var phoneNumber = PhoneNumber.Parse("+441142726444");
 
 // If the phone number string is not in international format:
 // Specify the ISO 3166 Alpha-2 code for the country as the second parameter.
-PhoneNumber phoneNumber = PhoneNumber.Parse("01142726444", "GB");
+var phoneNumber = PhoneNumber.Parse("01142726444", "GB");
 ```
 
 The resulting `PhoneNumber` has the following properties:
@@ -63,7 +63,7 @@ phoneNumber.PhoneNumberKind;                    // PhoneNumberKind.GeographicPho
 phoneNumber.SubscriberNumber                    // 2726444
 
 // There are 3 subclasses of PhoneNumber, the correct type to cast to
-// can be determined by inspecting the phoneNumber.PhoneNumberKind property.
+// can be determined by inspecting the PhoneNumberKind property.
 
 // If PhoneNumberKind.GeographicPhoneNumber
 var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
