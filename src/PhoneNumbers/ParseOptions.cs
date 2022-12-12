@@ -16,7 +16,7 @@ public sealed class ParseOptions
     /// Gets the supported <see cref="CountryInfo"/>s.
     /// </summary>
     /// <remarks>By default, this will contain all <see cref="CountryInfo"/> static properties.</remarks>
-    public ICollection<CountryInfo> Countries { get; } = CountryInfo.GetCountries(x => x != null);
+    public ICollection<CountryInfo> Countries { get; } = CountryInfo.GetCountries().ToList();
 
     /// <summary>
     /// Gets the <see cref="PhoneNumberParserFactory"/>.

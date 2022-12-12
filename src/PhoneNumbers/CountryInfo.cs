@@ -135,15 +135,17 @@ public sealed partial class CountryInfo
     internal bool StartsWithCallingCode(string value) =>
         value?.StartsWith(CallingCode, StringComparison.Ordinal) == true;
 
-    internal static ICollection<CountryInfo> GetCountries(Func<CountryInfo, bool> predicate) =>
+    internal static IEnumerable<CountryInfo> GetCountries() =>
         typeof(CountryInfo)
             .GetProperties(BindingFlags.Public | BindingFlags.Static)
             .Where(x => x.PropertyType == typeof(CountryInfo))
             .Select(x => x.GetValue(null))
             .Cast<CountryInfo>()
-            .Where(predicate)
-            .OrderBy(x => x.SharesCallingCode)
-            .ToList();
+            .OrderBy(x => x.SharesCallingCode);
+
+    internal static IEnumerable<CountryInfo> GetCountries(Func<CountryInfo, bool> predicate) =>
+        GetCountries()
+        .Where(predicate);
 
     private static int CountDigitsAfter(string value, int startPos)
     {
