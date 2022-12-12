@@ -102,11 +102,11 @@ ParseOptions.Default
 
 At present, the only options available are which countries are parsed.
 
-By default all countries supported by the library can be parsed and any future supported ones will be included.
+By default all countries supported by the library can be parsed and any future supported ones will be automatically included.
 
 #### Opt-in
 
-To opt in to specific countries and ignore any new ones added in future versions of the library:
+To support parsing specific countries only, and ignore by defaly any new ones added in future versions of the library:
 
 ```csharp
 ParseOptions.Default.Countries.Clear():

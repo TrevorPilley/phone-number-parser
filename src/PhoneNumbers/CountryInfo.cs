@@ -130,7 +130,7 @@ public sealed partial class CountryInfo
     /// <summary>
     /// Gets a value indicating whether the specified value starts with the calling code for this country.
     /// </summary>
-    /// <param name="value">A string containing a phone number.</param>
+    /// <param name="value">A string containing a phone number in international format (e.g. +XX).</param>
     /// <returns>True if the value starts with the calling code for this country, otherwise false.</returns>
     internal bool StartsWithCallingCode(string value) =>
         value?.StartsWith(CallingCode, StringComparison.Ordinal) == true;
