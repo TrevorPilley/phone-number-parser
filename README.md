@@ -120,7 +120,7 @@ By default all countries supported by the library can be parsed and any future s
 
 #### Opt-in
 
-To support parsing specific countries only, and ignore by defaly any new ones added in future versions of the library:
+To support parsing specific countries only, and ignore by default any new ones added in future versions of the library:
 
 ```csharp
 ParseOptions.Default.Countries.Clear():
