@@ -60,7 +60,7 @@ public class PhoneNumberTests
     [Fact]
     public void TryParse_Invalid_Value()
     {
-        Assert.False(PhoneNumber.TryParse("+441110000000", out var phoneNumber));
+        Assert.False(PhoneNumber.TryParse("+441110000000", out PhoneNumber phoneNumber));
         Assert.Null(phoneNumber);
     }
 
@@ -121,30 +121,30 @@ public class PhoneNumberTests
     }
 
     [Fact]
-    public void TryParse_Value_False_If_ParseOptions_Null()
+    public void TryParse_Value_To_PhoneNumber_False_If_ParseOptions_Null()
     {
-        Assert.False(PhoneNumber.TryParse("0123456789", default(ParseOptions), out var phoneNumber));
+        Assert.False(PhoneNumber.TryParse("0123456789", default(ParseOptions), out PhoneNumber phoneNumber));
         Assert.Null(phoneNumber);
     }
 
     [Fact]
-    public void TryParse_Value_False_If_Value_Does_Not_Start_With_Plus()
+    public void TryParse_Value_To_PhoneNumber_False_If_Value_Does_Not_Start_With_Plus()
     {
-        Assert.False(PhoneNumber.TryParse("441142726444", out var phoneNumber));
+        Assert.False(PhoneNumber.TryParse("441142726444", out PhoneNumber phoneNumber));
         Assert.Null(phoneNumber);
     }
 
     [Fact]
-    public void TryParse_Value_False_If_Value_Empty()
+    public void TryParse_Value_To_PhoneNumber_False_If_Value_Empty()
     {
-        Assert.False(PhoneNumber.TryParse(" ", out var phoneNumber));
+        Assert.False(PhoneNumber.TryParse(" ", out PhoneNumber phoneNumber));
         Assert.Null(phoneNumber);
     }
 
     [Fact]
-    public void TryParse_Value_False_If_Value_Null()
+    public void TryParse_Value_To_PhoneNumber_False_If_Value_Null()
     {
-        Assert.False(PhoneNumber.TryParse(null, out var phoneNumber));
+        Assert.False(PhoneNumber.TryParse(null, out PhoneNumber phoneNumber));
         Assert.Null(phoneNumber);
     }
 }
