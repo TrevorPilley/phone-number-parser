@@ -4,7 +4,7 @@ Contributions are welcome, however, please file an issue first and let's have a 
 
 ## Building the project
 
-The project multi targets .NET Standard 2.0 + 2.1 and .NET 6.0 so you will need to have the relevant SDK's installed in order to build the solution locally. It also uses some C# 10 language features so you will need an IDE that supports C# 10.
+The project multi targets .NET 7.0 in addition to .NET Standard 2.1 & 2.0 so you will need to have the relevant SDK's installed in order to build the solution locally. It also utilises C# 11 language features so you will need an IDE that supports it.
 
 Firstly clone or fork the repository.
 

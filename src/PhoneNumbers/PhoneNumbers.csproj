@@ -3,8 +3,8 @@
   <PropertyGroup>
     <AssemblyName>PhoneNumbers</AssemblyName>
     <RootNamespace>PhoneNumbers</RootNamespace>
-    <TargetFrameworks>net6.0;netstandard2.1;netstandard2.0</TargetFrameworks>
-    <LangVersion>10.0</LangVersion>
+    <TargetFrameworks>net7.0;netstandard2.1;netstandard2.0</TargetFrameworks>
+    <LangVersion>11.0</LangVersion>
     <Nullable>enable</Nullable>
     <AnalysisMode>AllEnabledByDefault</AnalysisMode>
     <SignAssembly>true</SignAssembly>
@@ -13,7 +13,7 @@
     <PackageId>PhoneNumberParser</PackageId>
     <Version>1.0.0</Version>
     <Authors>Trevor Pilley and Project Contributors</Authors>
-    <Description>A library for parsing phone numbers, built for .NET 6.0, .NET Standard 2.1 and .NET Standard 2.0.</Description>
+    <Description>A library for parsing phone numbers, built for .NET 7.0, .NET Standard 2.1 and .NET Standard 2.0.</Description>
     <Copyright>Copyright 2021 Project Contributors</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/TrevorPilley/phone-number-parser</PackageProjectUrl>
@@ -34,7 +34,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="6.0.0">
+    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="7.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -50,90 +50,90 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="DataFiles\AT.txt"/>
-    <None Remove="DataFiles\BE.txt"/>
-    <None Remove="DataFiles\BG.txt"/>
-    <None Remove="DataFiles\BY.txt"/>
-    <None Remove="DataFiles\CH.txt"/>
-    <None Remove="DataFiles\CZ.txt"/>
-    <None Remove="DataFiles\DE.txt"/>
-    <None Remove="DataFiles\DK.txt"/>
-    <None Remove="DataFiles\EE.txt"/>
-    <None Remove="DataFiles\EG.txt"/>
-    <None Remove="DataFiles\ES.txt"/>
-    <None Remove="DataFiles\FI.txt"/>
-    <None Remove="DataFiles\FR.txt"/>
-    <None Remove="DataFiles\GB.txt"/>
-    <None Remove="DataFiles\GG.txt"/>
-    <None Remove="DataFiles\GI.txt"/>
-    <None Remove="DataFiles\GR.txt"/>
-    <None Remove="DataFiles\HK.txt"/>
-    <None Remove="DataFiles\HR.txt"/>
-    <None Remove="DataFiles\HU.txt"/>
-    <None Remove="DataFiles\IE.txt"/>
-    <None Remove="DataFiles\IM.txt"/>
-    <None Remove="DataFiles\IT.txt"/>
-    <None Remove="DataFiles\JE.txt"/>
-    <None Remove="DataFiles\MC.txt"/>
-    <None Remove="DataFiles\MD.txt"/>
-    <None Remove="DataFiles\MO.txt"/>
-    <None Remove="DataFiles\NG.txt"/>
-    <None Remove="DataFiles\NL.txt"/>
-    <None Remove="DataFiles\NO.txt"/>
-    <None Remove="DataFiles\PL.txt"/>
-    <None Remove="DataFiles\PT.txt"/>
-    <None Remove="DataFiles\RO.txt"/>
-    <None Remove="DataFiles\RS.txt"/>
-    <None Remove="DataFiles\SE.txt"/>
-    <None Remove="DataFiles\SG.txt"/>
-    <None Remove="DataFiles\SK.txt"/>
-    <None Remove="DataFiles\SM.txt"/>
-    <None Remove="DataFiles\UA.txt"/>
-    <None Remove="DataFiles\XK.txt"/>
-    <None Remove="DataFiles\ZA.txt"/>
+    <None Remove="DataFiles\AT.txt" />
+    <None Remove="DataFiles\BE.txt" />
+    <None Remove="DataFiles\BG.txt" />
+    <None Remove="DataFiles\BY.txt" />
+    <None Remove="DataFiles\CH.txt" />
+    <None Remove="DataFiles\CZ.txt" />
+    <None Remove="DataFiles\DE.txt" />
+    <None Remove="DataFiles\DK.txt" />
+    <None Remove="DataFiles\EE.txt" />
+    <None Remove="DataFiles\EG.txt" />
+    <None Remove="DataFiles\ES.txt" />
+    <None Remove="DataFiles\FI.txt" />
+    <None Remove="DataFiles\FR.txt" />
+    <None Remove="DataFiles\GB.txt" />
+    <None Remove="DataFiles\GG.txt" />
+    <None Remove="DataFiles\GI.txt" />
+    <None Remove="DataFiles\GR.txt" />
+    <None Remove="DataFiles\HK.txt" />
+    <None Remove="DataFiles\HR.txt" />
+    <None Remove="DataFiles\HU.txt" />
+    <None Remove="DataFiles\IE.txt" />
+    <None Remove="DataFiles\IM.txt" />
+    <None Remove="DataFiles\IT.txt" />
+    <None Remove="DataFiles\JE.txt" />
+    <None Remove="DataFiles\MC.txt" />
+    <None Remove="DataFiles\MD.txt" />
+    <None Remove="DataFiles\MO.txt" />
+    <None Remove="DataFiles\NG.txt" />
+    <None Remove="DataFiles\NL.txt" />
+    <None Remove="DataFiles\NO.txt" />
+    <None Remove="DataFiles\PL.txt" />
+    <None Remove="DataFiles\PT.txt" />
+    <None Remove="DataFiles\RO.txt" />
+    <None Remove="DataFiles\RS.txt" />
+    <None Remove="DataFiles\SE.txt" />
+    <None Remove="DataFiles\SG.txt" />
+    <None Remove="DataFiles\SK.txt" />
+    <None Remove="DataFiles\SM.txt" />
+    <None Remove="DataFiles\UA.txt" />
+    <None Remove="DataFiles\XK.txt" />
+    <None Remove="DataFiles\ZA.txt" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="DataFiles\AT.txt"/>
-    <EmbeddedResource Include="DataFiles\BE.txt"/>
-    <EmbeddedResource Include="DataFiles\BG.txt"/>
-    <EmbeddedResource Include="DataFiles\BY.txt"/>
-    <EmbeddedResource Include="DataFiles\CH.txt"/>
-    <EmbeddedResource Include="DataFiles\CZ.txt"/>
-    <EmbeddedResource Include="DataFiles\DE.txt"/>
-    <EmbeddedResource Include="DataFiles\DK.txt"/>
-    <EmbeddedResource Include="DataFiles\EE.txt"/>
-    <EmbeddedResource Include="DataFiles\EG.txt"/>
-    <EmbeddedResource Include="DataFiles\ES.txt"/>
-    <EmbeddedResource Include="DataFiles\FI.txt"/>
-    <EmbeddedResource Include="DataFiles\FR.txt"/>
-    <EmbeddedResource Include="DataFiles\GB.txt"/>
-    <EmbeddedResource Include="DataFiles\GG.txt"/>
-    <EmbeddedResource Include="DataFiles\GI.txt"/>
-    <EmbeddedResource Include="DataFiles\GR.txt"/>
-    <EmbeddedResource Include="DataFiles\HK.txt"/>
-    <EmbeddedResource Include="DataFiles\HR.txt"/>
-    <EmbeddedResource Include="DataFiles\HU.txt"/>
-    <EmbeddedResource Include="DataFiles\IE.txt"/>
-    <EmbeddedResource Include="DataFiles\IM.txt"/>
-    <EmbeddedResource Include="DataFiles\IT.txt"/>
-    <EmbeddedResource Include="DataFiles\JE.txt"/>
-    <EmbeddedResource Include="DataFiles\MC.txt"/>
-    <EmbeddedResource Include="DataFiles\MD.txt"/>
-    <EmbeddedResource Include="DataFiles\MO.txt"/>
-    <EmbeddedResource Include="DataFiles\NG.txt"/>
-    <EmbeddedResource Include="DataFiles\NL.txt"/>
-    <EmbeddedResource Include="DataFiles\NO.txt"/>
-    <EmbeddedResource Include="DataFiles\PL.txt"/>
-    <EmbeddedResource Include="DataFiles\PT.txt"/>
-    <EmbeddedResource Include="DataFiles\RO.txt"/>
-    <EmbeddedResource Include="DataFiles\RS.txt"/>
-    <EmbeddedResource Include="DataFiles\SE.txt"/>
-    <EmbeddedResource Include="DataFiles\SG.txt"/>
-    <EmbeddedResource Include="DataFiles\SK.txt"/>
-    <EmbeddedResource Include="DataFiles\SM.txt"/>
-    <EmbeddedResource Include="DataFiles\UA.txt"/>
-    <EmbeddedResource Include="DataFiles\XK.txt"/>
-    <EmbeddedResource Include="DataFiles\ZA.txt"/>
+    <EmbeddedResource Include="DataFiles\AT.txt" />
+    <EmbeddedResource Include="DataFiles\BE.txt" />
+    <EmbeddedResource Include="DataFiles\BG.txt" />
+    <EmbeddedResource Include="DataFiles\BY.txt" />
+    <EmbeddedResource Include="DataFiles\CH.txt" />
+    <EmbeddedResource Include="DataFiles\CZ.txt" />
+    <EmbeddedResource Include="DataFiles\DE.txt" />
+    <EmbeddedResource Include="DataFiles\DK.txt" />
+    <EmbeddedResource Include="DataFiles\EE.txt" />
+    <EmbeddedResource Include="DataFiles\EG.txt" />
+    <EmbeddedResource Include="DataFiles\ES.txt" />
+    <EmbeddedResource Include="DataFiles\FI.txt" />
+    <EmbeddedResource Include="DataFiles\FR.txt" />
+    <EmbeddedResource Include="DataFiles\GB.txt" />
+    <EmbeddedResource Include="DataFiles\GG.txt" />
+    <EmbeddedResource Include="DataFiles\GI.txt" />
+    <EmbeddedResource Include="DataFiles\GR.txt" />
+    <EmbeddedResource Include="DataFiles\HK.txt" />
+    <EmbeddedResource Include="DataFiles\HR.txt" />
+    <EmbeddedResource Include="DataFiles\HU.txt" />
+    <EmbeddedResource Include="DataFiles\IE.txt" />
+    <EmbeddedResource Include="DataFiles\IM.txt" />
+    <EmbeddedResource Include="DataFiles\IT.txt" />
+    <EmbeddedResource Include="DataFiles\JE.txt" />
+    <EmbeddedResource Include="DataFiles\MC.txt" />
+    <EmbeddedResource Include="DataFiles\MD.txt" />
+    <EmbeddedResource Include="DataFiles\MO.txt" />
+    <EmbeddedResource Include="DataFiles\NG.txt" />
+    <EmbeddedResource Include="DataFiles\NL.txt" />
+    <EmbeddedResource Include="DataFiles\NO.txt" />
+    <EmbeddedResource Include="DataFiles\PL.txt" />
+    <EmbeddedResource Include="DataFiles\PT.txt" />
+    <EmbeddedResource Include="DataFiles\RO.txt" />
+    <EmbeddedResource Include="DataFiles\RS.txt" />
+    <EmbeddedResource Include="DataFiles\SE.txt" />
+    <EmbeddedResource Include="DataFiles\SG.txt" />
+    <EmbeddedResource Include="DataFiles\SK.txt" />
+    <EmbeddedResource Include="DataFiles\SM.txt" />
+    <EmbeddedResource Include="DataFiles\UA.txt" />
+    <EmbeddedResource Include="DataFiles\XK.txt" />
+    <EmbeddedResource Include="DataFiles\ZA.txt" />
   </ItemGroup>
 </Project>
