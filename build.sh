@@ -1,12 +1,16 @@
 #!/bin/sh
 
+export CollectCoverage='true'
+export CoverletOutputFormat='cobertura'
+export CoverletOutput='./TestResults/'
+
 rm -r test/PhoneNumbers.Tests/TestResults/
 
 dotnet tool update --global dotnet-reportgenerator-globaltool
 
 dotnet clean --verbosity minimal
 dotnet build --verbosity minimal
-dotnet test --no-restore --verbosity minimal /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=./TestResults/
+dotnet test --no-restore --verbosity minimal
 dotnet pack --no-build
 
 cd test/PhoneNumbers.Tests
