@@ -75,19 +75,19 @@ public abstract class PhoneNumber
     protected PhoneNumberHint Hint { get; }
 
     /// <summary>
-    /// Parses the specified phone number value into a <see cref="PhoneNumber"/> instance based upon the calling code.
+    /// Parses the specified phone number value into a <see cref="PhoneNumber"/> instance based upon its calling code using the default <see cref="ParseOptions"/>.
     /// </summary>
-    /// <param name="value">A string containing a phone number.</param>
-    /// <returns>A <see cref="PhoneNumber"/> instance representing the specified string.</returns>
+    /// <param name="value">A string containing a phone number in international format (e.g. +XX).</param>
+    /// <returns>A <see cref="PhoneNumber"/> instance representing the specified phone number string value.</returns>
     public static PhoneNumber Parse(string value) =>
         Parse(value, ParseOptions.Default);
 
     /// <summary>
-    /// Parses the specified phone number value into a <see cref="PhoneNumber"/> instance based upon the calling code.
+    /// Parses the specified phone number value into a <see cref="PhoneNumber"/> instance based upon its calling code using the specified <see cref="ParseOptions"/>.
     /// </summary>
-    /// <param name="value">A string containing a phone number.</param>
-    /// <param name="options">The options for parsing phone numbers.</param>
-    /// <returns>A <see cref="PhoneNumber"/> instance representing the specified string.</returns>
+    /// <param name="value">A string containing a phone number in international format (e.g. +XX).</param>
+    /// <param name="options">The options for parsing the phone number.</param>
+    /// <returns>A <see cref="PhoneNumber"/> instance representing the specified phone number string value.</returns>
     public static PhoneNumber Parse(string value, ParseOptions options)
     {
         if (options is null)
@@ -109,21 +109,21 @@ public abstract class PhoneNumber
     }
 
     /// <summary>
-    /// Parses the specified phone number value into a <see cref="PhoneNumber"/> instance for the given ISO 3166 Alpha-2 country code.
+    /// Parses the specified phone number value into a <see cref="PhoneNumber"/> instance for the given ISO 3166 Alpha-2 country code using the default <see cref="ParseOptions"/>.
     /// </summary>
     /// <param name="value">A string containing a phone number.</param>
     /// <param name="countryCode">The ISO 3166 Alpha-2 country code of the country for the phone number.</param>
-    /// <returns>A <see cref="PhoneNumber"/> instance representing the specified string.</returns>
+    /// <returns>A <see cref="PhoneNumber"/> instance representing the specified phone number string value.</returns>
     public static PhoneNumber Parse(string value, string countryCode) =>
         Parse(value, countryCode, ParseOptions.Default);
 
     /// <summary>
-    /// Parses the specified phone number value into a <see cref="PhoneNumber"/> instance for the given ISO 3166 Alpha-2 country code.
+    /// Parses the specified phone number value into a <see cref="PhoneNumber"/> instance for the given ISO 3166 Alpha-2 country code using the specified <see cref="ParseOptions"/>.
     /// </summary>
     /// <param name="value">A string containing a phone number.</param>
     /// <param name="countryCode">The ISO 3166 Alpha-2 country code of the country for the phone number.</param>
-    /// <param name="options">The options for parsing phone numbers.</param>
-    /// <returns>A <see cref="PhoneNumber"/> instance representing the specified string.</returns>
+    /// <param name="options">The options for parsing the phone number.</param>
+    /// <returns>A <see cref="PhoneNumber"/> instance representing the specified phone number string value.</returns>
     public static PhoneNumber Parse(string value, string countryCode, ParseOptions options)
     {
         if (options is null)
@@ -145,19 +145,19 @@ public abstract class PhoneNumber
     }
 
     /// <summary>
-    /// Converts the string representation of a phone number to its <see cref="PhoneNumber"/> equivalent. A return value indicates whether the conversion succeeded.
+    /// Converts the string representation of a phone number to its <see cref="PhoneNumber"/> equivalent using the default <see cref="ParseOptions"/>. A return value indicates whether the conversion succeeded.
     /// </summary>
-    /// <param name="value">A string containing a phone number.</param>
+    /// <param name="value">A string containing a phone number in international format (e.g. +XX).</param>
     /// <param name="phoneNumber">The <see cref="PhoneNumber"/> equivalent if the conversion succeeds, otherwise null.</param>
     /// <returns><c>true</c> if value was converted successfully; otherwise, <c>false</c>.</returns>
     public static bool TryParse(string value, out PhoneNumber? phoneNumber) =>
         TryParse(value, ParseOptions.Default, out phoneNumber);
 
     /// <summary>
-    /// Converts the string representation of a phone number to its <see cref="PhoneNumber"/> equivalent. A return value indicates whether the conversion succeeded.
+    /// Converts the string representation of a phone number to its <see cref="PhoneNumber"/> equivalent using the specified <see cref="ParseOptions"/>. A return value indicates whether the conversion succeeded.
     /// </summary>
-    /// <param name="value">A string containing a phone number.</param>
-    /// <param name="options">The options for parsing phone numbers.</param>
+    /// <param name="value">A string containing a phone number in international format (e.g. +XX).</param>
+    /// <param name="options">The options for parsing the phone number.</param>
     /// <param name="phoneNumber">The <see cref="PhoneNumber"/> equivalent if the conversion succeeds, otherwise null.</param>
     /// <returns><c>true</c> if value was converted successfully; otherwise, <c>false</c>.</returns>
     public static bool TryParse(string value, ParseOptions options, out PhoneNumber? phoneNumber)
@@ -182,7 +182,7 @@ public abstract class PhoneNumber
     }
 
     /// <summary>
-    /// Converts the string representation of a phone number to its <see cref="PhoneNumber"/> equivalent. A return value indicates whether the conversion succeeded.
+    /// Converts the string representation of a phone number to its <see cref="PhoneNumber"/> equivalent using the default <see cref="ParseOptions"/>. A return value indicates whether the conversion succeeded.
     /// </summary>
     /// <param name="value">A string containing a phone number.</param>
     /// <param name="countryCode">The ISO 3166 Alpha-2 country code of the country for the phone number.</param>
@@ -192,7 +192,7 @@ public abstract class PhoneNumber
         TryParse(value, countryCode, ParseOptions.Default, out phoneNumber);
 
     /// <summary>
-    /// Converts the string representation of a phone number to its <see cref="PhoneNumber"/> equivalent. A return value indicates whether the conversion succeeded.
+    /// Converts the string representation of a phone number to its <see cref="PhoneNumber"/> equivalent using the specified <see cref="ParseOptions"/>. A return value indicates whether the conversion succeeded.
     /// </summary>
     /// <param name="value">A string containing a phone number.</param>
     /// <param name="countryCode">The ISO 3166 Alpha-2 country code of the country for the phone number.</param>

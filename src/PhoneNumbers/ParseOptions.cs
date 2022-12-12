@@ -33,7 +33,7 @@ public sealed class ParseOptions
     /// <summary>
     /// Gets the supported <see cref="CountryInfo"/>s for which the specified value is potentially an international number.
     /// </summary>
-    /// <param name="value">A string containing a phone number.</param>
+    /// <param name="value">A string containing a phone number in international format (e.g. +XX).</param>
     internal IEnumerable<CountryInfo> GetCountryInfos(string value) =>
         Countries.Where(x => x.StartsWithCallingCode(value));
 }
