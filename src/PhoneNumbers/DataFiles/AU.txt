@@ -31,9 +31,9 @@ G|3|Geelong, Colac|42000000-42999999,52000000-52999999|
 G|3|Ararat, Ballarat, Horsham, Kyneton, Nhill|43000000-43999999,53000000-53999999|
 G|3|Bendigo, Charlton, Echuca, Kerang, Kyneton, Maryborough|44000000-44999999,54000000-54999999|
 G|3|Camperdown, Casterton, Edenhope, Hamilton, Portland, Warrnambool|45000000-45999999,55000000-55999999|
-G|3|Foster, Korumburra, Warragul|46000000-46999999|
+G|3|Foster, Korumburra, Warragul|56000000-56999999|
 G|3|Alexandra, Myrtleford, Seymour, Wangaratta, Deniliquin, Numurkah, Shepparton|47000000-47999999,57000000-57999999|
-G|3|Deniliquin, Numurkah, Shepparton|48000000-48999999|
+G|3|Deniliquin, Numurkah, Shepparton|58000000-58999999|
 G|3|Mornington, Warragul|49000000-49999999,59000000-59999999|
 G|3|Hobart, Geeveston, Oatlands, Ouse|61000000-62999999|
 G|3|Deloraine, Flinders Island, Launceston, Scottsdale, St Mary’s|63000000-63999999,67000000-67999999|
