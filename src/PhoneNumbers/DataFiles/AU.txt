@@ -24,7 +24,7 @@ G|2|Armidale, Barraba, Gunnedah, Inverell, Moree, Narrabri, Glen Innes, Tamworth
 G|2|Bourke, Condoblin, Coonamble, Dubbo, Forbes, Moree, Nyngan, Parkes, Wellington|58000000-58999999,68000000-68999999|
 G|2|Adelong, Griffith, Hay, Narrandera, Temora, Wagga Wagga, West Wyalong|59000000-59999999,69000000-69999999|
 G|2|Sydney|70000000-99999999|
-G|2|Central East Region (New South Wales, the Australian Capital Territory and parts of northern Victoria)|00000000-99999999|
+G|2|Central East Region (New South Wales, the Australian Capital Territory and parts of northern Victoria)|20000000-69999999|
 G|3|Balranald, Hopetoun, Mildura, Ouyen, Swan Hill|40000000-40999999,50000000-50999999|
 G|3|Bairnsdale, Morwell, Sale|41000000-41999999,51000000-51999999|
 G|3|Geelong, Colac|42000000-42999999,52000000-52999999|
@@ -39,7 +39,7 @@ G|3|Hobart, Geeveston, Oatlands, Ouse|61000000-62999999|
 G|3|Deloraine, Flinders Island, Launceston, Scottsdale, St Mary’s|63000000-63999999,67000000-67999999|
 G|3|Burnie, Devonport, King Island, Queenstown, Smithton|64000000-65999999|
 G|3|Melbourne|70000000-99999999|
-G|3|South East Region (Tasmania, most of Victoria and parts of southern New South Wales)|20000000-99999999|
+G|3|South East Region (Tasmania, most of Victoria and parts of southern New South Wales)|20000000-69999999|
 M|4||00000000-99999999|
 M|50||0000000-9999999|V
 N|55||0000000-9999999|
@@ -51,7 +51,7 @@ G|7|Charleville, Dalby, Dirranbandi, Goondiwindi, Inglewood, Longreach, Miles, R
 G|7|Biloela, Emerald, Gladstone, Mackay, Rockhampton|48000000-49999999|
 G|7|Caboolture, Esk, Gatton, Gympie, Nambour|52000000-54999999|
 G|7|Beaudesert, Southport, Tweed Heads|55000000-57999999|
-G|7|North East Region (Queensland)|0000000-99999999|
+G|7|North East Region (Queensland)|20000000-99999999|
 G|8|Bruce Rock, Great Victoria, Kalgoorlie, Merredin|60000000-60999999,90000000-90999999|
 G|8|Perth|52000000-54999999,61000000-65999999,92000000-94999999|
 G|8|Christmas Island, Cocos (Keeling) Islands, Derby, Great Sandy, Port Hedland|51000000-51999999,91000000-91999999|
@@ -67,4 +67,4 @@ G|8|Clare, Kadina, Port Lincoln, Burra, Balaklava, Maitland, Gawler, Yorketown|7
 G|8|Alice Springs, Darwin|79000000-79999999,89000000-89999999|
 G|8|Broken Hill|80000000-80999999|
 G|8|Carnamah, Carnarvon, Geraldton, Meekatharra, Morawa, Mullewa, Wongan Hills|99000000-99999999|
-G|8|Central and West Region (Western Australia, South Australia, the Northern Territory and parts of New South Wales)|00000000-99999999|
+G|8|Central and West Region (Western Australia, South Australia, the Northern Territory and parts of New South Wales)|20000000-98999999|
