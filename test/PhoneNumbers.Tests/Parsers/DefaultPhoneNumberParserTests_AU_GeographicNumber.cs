@@ -188,4 +188,78 @@ public class DefaultPhoneNumberParserTests_AU_GeographicNumber
         Assert.Equal(NationalDestinationCode, geographicPhoneNumber.NationalDestinationCode);
         Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
     }
+
+    [Theory]
+    [InlineData("0851000000", "8", "51000000", "Christmas Island, Cocos (Keeling) Islands, Derby, Great Sandy, Port Hedland")]
+    [InlineData("0851999999", "8", "51999999", "Christmas Island, Cocos (Keeling) Islands, Derby, Great Sandy, Port Hedland")]
+    [InlineData("0852000000", "8", "52000000", "Perth")]
+    [InlineData("0854999999", "8", "54999999", "Perth")]
+    [InlineData("0860000000", "8", "60000000", "Bruce Rock, Great Victoria, Kalgoorlie, Merredin")]
+    [InlineData("0861000000", "8", "61000000", "Perth")]
+    [InlineData("0865999999", "8", "65999999", "Perth")]
+    [InlineData("0866000000", "8", "66000000", "Moora, Northam, Wongan Hills, Wyalkatchem, York")]
+    [InlineData("0866999999", "8", "66999999", "Moora, Northam, Wongan Hills, Wyalkatchem, York")]
+    [InlineData("0867000000", "8", "67000000", "Bridgetown, Bunbury, Busselton, Pinjarra")]
+    [InlineData("0867999999", "8", "67999999", "Bridgetown, Bunbury, Busselton, Pinjarra")]
+    [InlineData("0868000000", "8", "68000000", "Albany, Katanning, Kondinin, Narrogin, Wagin")]
+    [InlineData("0868999999", "8", "68999999", "Albany, Katanning, Kondinin, Narrogin, Wagin")]
+    [InlineData("0869999999", "8", "69999999", "Bruce Rock, Great Victoria, Kalgoorlie, Merredin")]
+    [InlineData("0870000000", "8", "70000000", "Adelaide")]
+    [InlineData("0874999999", "8", "74999999", "Adelaide")]
+    [InlineData("0875000000", "8", "75000000", "Berri, Gawler, Kangaroo Island, Malalla, Murray Bridge, Nurioopta, Tailem Bend, Victor Harbour, Waikerie")]
+    [InlineData("0875999999", "8", "75999999", "Berri, Gawler, Kangaroo Island, Malalla, Murray Bridge, Nurioopta, Tailem Bend, Victor Harbour, Waikerie")]
+    [InlineData("0876000000", "8", "76000000", "Ceduna, Port Augusta, Port Pirie, Port Lincoln, Gladstone, Peterborough, Cook, Woomera")]
+    [InlineData("0876999999", "8", "76999999", "Ceduna, Port Augusta, Port Pirie, Port Lincoln, Gladstone, Peterborough, Cook, Woomera")]
+    [InlineData("0877000000", "8", "77000000", "Bordertown, Mount Gambier, Naracoorte")]
+    [InlineData("0877999999", "8", "77999999", "Bordertown, Mount Gambier, Naracoorte")]
+    [InlineData("0878000000", "8", "78000000", "Clare, Kadina, Port Lincoln, Burra, Balaklava, Maitland, Gawler, Yorketown")]
+    [InlineData("0878999999", "8", "78999999", "Clare, Kadina, Port Lincoln, Burra, Balaklava, Maitland, Gawler, Yorketown")]
+    [InlineData("0879000000", "8", "79000000", "Alice Springs, Darwin")]
+    [InlineData("0879999999", "8", "79999999", "Alice Springs, Darwin")]
+    [InlineData("0880000000", "8", "80000000", "Broken Hill")]
+    [InlineData("0880999999", "8", "80999999", "Broken Hill")]
+    [InlineData("0881000000", "8", "81000000", "Adelaide")]
+    [InlineData("0884999999", "8", "84999999", "Adelaide")]
+    [InlineData("0885000000", "8", "85000000", "Berri, Gawler, Kangaroo Island, Malalla, Murray Bridge, Nurioopta, Tailem Bend, Victor Harbour, Waikerie")]
+    [InlineData("0885999999", "8", "85999999", "Berri, Gawler, Kangaroo Island, Malalla, Murray Bridge, Nurioopta, Tailem Bend, Victor Harbour, Waikerie")]
+    [InlineData("0886000000", "8", "86000000", "Ceduna, Port Augusta, Port Pirie, Port Lincoln, Gladstone, Peterborough, Cook, Woomera")]
+    [InlineData("0886999999", "8", "86999999", "Ceduna, Port Augusta, Port Pirie, Port Lincoln, Gladstone, Peterborough, Cook, Woomera")]
+    [InlineData("0887000000", "8", "87000000", "Bordertown, Mount Gambier, Naracoorte")]
+    [InlineData("0887999999", "8", "87999999", "Bordertown, Mount Gambier, Naracoorte")]
+    [InlineData("0888000000", "8", "88000000", "Clare, Kadina, Port Lincoln, Burra, Balaklava, Maitland, Gawler, Yorketown")]
+    [InlineData("0888999999", "8", "88999999", "Clare, Kadina, Port Lincoln, Burra, Balaklava, Maitland, Gawler, Yorketown")]
+    [InlineData("0889000000", "8", "89000000", "Alice Springs, Darwin")]
+    [InlineData("0889999999", "8", "89999999", "Alice Springs, Darwin")]
+    [InlineData("0890000000", "8", "90000000", "Bruce Rock, Great Victoria, Kalgoorlie, Merredin")]
+    [InlineData("0891000000", "8", "91000000", "Christmas Island, Cocos (Keeling) Islands, Derby, Great Sandy, Port Hedland")]
+    [InlineData("0891999999", "8", "91999999", "Christmas Island, Cocos (Keeling) Islands, Derby, Great Sandy, Port Hedland")]
+    [InlineData("0892000000", "8", "92000000", "Perth")]
+    [InlineData("0894999999", "8", "94999999", "Perth")]
+    [InlineData("0895000000", "8", "95000000", "Bullsbrook East, Northam, Pinjarra")]
+    [InlineData("0895999999", "8", "95999999", "Bullsbrook East, Northam, Pinjarra")]
+    [InlineData("0896000000", "8", "96000000", "Moora, Northam, Wongan Hills, Wyalkatchem, York")]
+    [InlineData("0896999999", "8", "96999999", "Moora, Northam, Wongan Hills, Wyalkatchem, York")]
+    [InlineData("0897000000", "8", "97000000", "Bridgetown, Bunbury, Busselton, Pinjarra")]
+    [InlineData("0897999999", "8", "97999999", "Bridgetown, Bunbury, Busselton, Pinjarra")]
+    [InlineData("0898000000", "8", "98000000", "Albany, Katanning, Kondinin, Narrogin, Wagin")]
+    [InlineData("0898999999", "8", "98999999", "Albany, Katanning, Kondinin, Narrogin, Wagin")]
+    [InlineData("0899000000", "8", "99000000", "Carnamah, Carnarvon, Geraldton, Meekatharra, Morawa, Mullewa, Wongan Hills")]
+    [InlineData("0899999999", "8", "99999999", "Bruce Rock, Great Victoria, Kalgoorlie, Merredin")]
+    [InlineData("0899999999", "8", "99999999", "Carnamah, Carnarvon, Geraldton, Meekatharra, Morawa, Mullewa, Wongan Hills")]
+    public void Parse_Known_GeographicPhoneNumber_8_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
+    {
+        var parseResult = s_parser.Parse(value);
+        parseResult.ThrowIfFailure();
+
+        var phoneNumber = parseResult.PhoneNumber;
+
+        Assert.NotNull(phoneNumber);
+        Assert.IsType<GeographicPhoneNumber>(phoneNumber);
+
+        var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
+        Assert.Equal(CountryInfo.Australia, geographicPhoneNumber.Country);
+        Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
+        Assert.Equal(NationalDestinationCode, geographicPhoneNumber.NationalDestinationCode);
+        Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
+    }
 }

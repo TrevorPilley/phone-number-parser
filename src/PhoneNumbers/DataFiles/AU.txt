@@ -52,19 +52,19 @@ G|7|Biloela, Emerald, Gladstone, Mackay, Rockhampton|48000000-49999999|
 G|7|Caboolture, Esk, Gatton, Gympie, Nambour|52000000-54999999|
 G|7|Beaudesert, Southport, Tweed Heads|55000000-57999999|
 #G|7|North East Region (Queensland)|0000000-99999999|
-#G|860,890|Bruce Rock, Great Victoria, Kalgoorlie, Merredin|0000000-999999|
-#G|852-854,861-865,892-894|Perth|0000000-999999|
-#G|851,891|Christmas Island, Cocos (Keeling) Islands, Derby, Great Sandy, Port Hedland|0000000-999999|
-#G|895|Bullsbrook East, Northam, Pinjarra|0000000-999999|
-#G|866,896|Moora, Northam, Wongan Hills, Wyalkatchem, York|0000000-999999|
-#G|867,897|Bridgetown, Bunbury, Busselton, Pinjarra|0000000-999999|
-#G|868,898|Albany, Katanning, Kondinin, Narrogin, Wagin|0000000-999999|
-#G|870-874,881-884|Adelaide|0000000-999999|
-#G|875,885|Berri, Gawler, Kangaroo Island, Malalla, Murray Bridge, Nurioopta, Tailem Bend, Victor Harbour, Waikerie|0000000-999999|
-#G|876,886|Ceduna, Port Augusta, Port Pirie, Port Lincoln, Gladstone, Peterborough, Cook, Woomera|0000000-999999|
-#G|877,887|Bordertown, Mount Gambier, Naracoorte|0000000-999999|
-#G|878,888|Clare, Kadina, Port Lincoln, Burra, Balaklava, Maitland, Gawler, Yorketown|0000000-999999|
-#G|879,889|Alice Springs, Darwin|0000000-999999|
-#G|880|Broken Hill|0000000-999999|
-#G|899|Carnamah, Carnarvon, Geraldton, Meekatharra, Morawa, Mullewa, Wongan Hills|0000000-999999|
-#G|8|Central and West Region (Western Australia, South Australia, the Northern Territory and parts of New South Wales)|0000000-99999999|
+G|8|Bruce Rock, Great Victoria, Kalgoorlie, Merredin|60000000-69999999,90000000-99999999|
+G|8|Perth|52000000-54999999,61000000-65999999,92000000-94999999|
+G|8|Christmas Island, Cocos (Keeling) Islands, Derby, Great Sandy, Port Hedland|51000000-51999999,91000000-91999999|
+G|8|Bullsbrook East, Northam, Pinjarra|95000000-95999999|
+G|8|Moora, Northam, Wongan Hills, Wyalkatchem, York|66000000-66999999,96000000-96999999|
+G|8|Bridgetown, Bunbury, Busselton, Pinjarra|67000000-67999999,97000000-97999999|
+G|8|Albany, Katanning, Kondinin, Narrogin, Wagin|68000000-68999999,98000000-98999999|
+G|8|Adelaide|70000000-74999999,81000000-84999999|
+G|8|Berri, Gawler, Kangaroo Island, Malalla, Murray Bridge, Nurioopta, Tailem Bend, Victor Harbour, Waikerie|75000000-75999999,85000000-85999999|
+G|8|Ceduna, Port Augusta, Port Pirie, Port Lincoln, Gladstone, Peterborough, Cook, Woomera|76000000-76999999,86000000-86999999|
+G|8|Bordertown, Mount Gambier, Naracoorte|77000000-77999999,87000000-87999999|
+G|8|Clare, Kadina, Port Lincoln, Burra, Balaklava, Maitland, Gawler, Yorketown|78000000-78999999,88000000-88999999|
+G|8|Alice Springs, Darwin|79000000-79999999,89000000-89999999|
+G|8|Broken Hill|80000000-80999999|
+G|8|Carnamah, Carnarvon, Geraldton, Meekatharra, Morawa, Mullewa, Wongan Hills|99000000-99999999|
+#G|8|Central and West Region (Western Australia, South Australia, the Northern Territory and parts of New South Wales)|00000000-99999999|
