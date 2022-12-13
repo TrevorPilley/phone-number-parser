@@ -6,65 +6,65 @@ N|1802||000-999|F
 N|1900,1901-1902,1906||000000-999999|R
 N|191,193-195||000-999|R
 N|196-197,199||00000-99999|R
-#G|233,243|Gosford|200000-999999|
-#G|238,248|Bowral, Crookwell, Goulburn, Marulan|200000-999999|
-#G|240-241,249|Newcastle|200000-999999|
-#G|242|Wollongong|200000-999999|
-#G|244|Moruya, Nowra|200000-999999|
-#G|245|Windsor|200000-999999|
-#G|246|Campbelltown|200000-999999|
-#G|247|Penrith|200000-999999|
-#G|250,260|Albury, Corryong|200000-999999|
-#G|251-252,261-262|Canberra|200000-999999|
-#G|253,263|Bathurst, Cowra, Lithgow, Mudgee, Orange, Rylstone, Young|200000-999999|
-#G|264|Bega, Cooma|200000-999999|
-#G|255,265|Kempsey, Lord Howe Island, Muswellbrook, Singleton, Taree, Wauchope|200000-999999|
-#G|256,266|Casino, Coffs Harbour, Graton, Kyogle, Lismore, Murwillumbah|200000-999999|
-#G|257,267|Armidale, Barraba, Gunnedah, Inverell, Moree, Narrabri, Glen Innes, Tamworth|200000-999999|
-#G|258,268|Bourke, Condoblin, Coonamble, Dubbo, Forbes, Moree, Nyngan, Parkes, Wellington|200000-999999|
-#G|259,269|Adelong, Griffith, Hay, Narrandera, Temora, Wagga Wagga, West Wyalong|200000-999999|
-#G|27-29|Sydney|2000000-9999999|
-#G|2|Central East Region (New South Wales, the Australian Capital Territory and parts of northern Victoria)|20000000-69999999|
-#G|340,350|Balranald, Hopetoun, Mildura, Ouyen, Swan Hill|200000-999999|
-#G|341,351|Bairnsdale, Morwell, Sale|200000-999999|
-#G|342,352|Geelong, Colac|200000-999999|
-#G|343,353|Ararat, Ballarat, Horsham, Kyneton, Nhill|200000-999999|
-#G|344,354|Bendigo, Charlton, Echuca, Kerang, Kyneton, Maryborough|200000-999999|
-#G|345,355|Camperdown, Casterton, Edenhope, Hamilton, Portland, Warrnambool|200000-999999|
-#G|346|Foster, Korumburra, Warragul|200000-999999|
-#G|347,357|Alexandra, Myrtleford, Seymour, Wangaratta, Deniliquin, Numurkah, Shepparton|200000-999999|
-#G|348|Deniliquin, Numurkah, Shepparton|200000-999999|
-#G|349,359|Mornington, Warragul|200000-999999|
-#G|361-362|Hobart, Geeveston, Oatlands, Ouse|200000-999999|
-#G|363,367|Deloraine, Flinders Island, Launceston, Scottsdale, St Mary’s|200000-999999|
-#G|364-365|Burnie, Devonport, King Island, Queenstown, Smithton|200000-999999|
-#G|37-39|Melbourne|2000000-9999999|
+G|2|Gosford|33000000-33999999,43000000-43999999|
+G|2|Bowral, Crookwell, Goulburn, Marulan|38000000-38999999,48000000-48999999|
+G|2|Newcastle|40000000-41999999,49000000-49999999|
+G|2|Wollongong|42000000-42999999|
+G|2|Moruya, Nowra|44000000-44999999|
+G|2|Windsor|45000000-45999999|
+G|2|Campbelltown|46000000-46999999|
+G|2|Penrith|47000000-47999999|
+G|2|Albury, Corryong|50000000-50999999,60000000-60999999|
+G|2|Canberra|51000000-52999999,61000000-62999999|
+G|2|Bathurst, Cowra, Lithgow, Mudgee, Orange, Rylstone, Young|53000000-53999999,63000000-63999999|
+G|2|Bega, Cooma|64000000-64999999|
+G|2|Kempsey, Lord Howe Island, Muswellbrook, Singleton, Taree, Wauchope|55000000-55999999,65000000-65999999|
+G|2|Casino, Coffs Harbour, Graton, Kyogle, Lismore, Murwillumbah|56000000-56999999,66000000-66999999|
+G|2|Armidale, Barraba, Gunnedah, Inverell, Moree, Narrabri, Glen Innes, Tamworth|57000000-57999999,67000000-67999999|
+G|2|Bourke, Condoblin, Coonamble, Dubbo, Forbes, Moree, Nyngan, Parkes, Wellington|58000000-58999999,68000000-68999999|
+G|2|Adelong, Griffith, Hay, Narrandera, Temora, Wagga Wagga, West Wyalong|59000000-59999999,69000000-69999999|
+G|2|Sydney|70000000-99999999|
+#G|2|Central East Region (New South Wales, the Australian Capital Territory and parts of northern Victoria)|00000000-69999999|
+G|3|Balranald, Hopetoun, Mildura, Ouyen, Swan Hill|40000000-40999999,50000000-50999999|
+G|3|Bairnsdale, Morwell, Sale|41000000-41999999,51000000-51999999|
+G|3|Geelong, Colac|42000000-42999999,52000000-52999999|
+G|3|Ararat, Ballarat, Horsham, Kyneton, Nhill|43000000-43999999,53000000-53999999|
+G|3|Bendigo, Charlton, Echuca, Kerang, Kyneton, Maryborough|44000000-44999999,54000000-54999999|
+G|3|Camperdown, Casterton, Edenhope, Hamilton, Portland, Warrnambool|45000000-45999999,55000000-55999999|
+G|3|Foster, Korumburra, Warragul|46000000-46999999|
+G|3|Alexandra, Myrtleford, Seymour, Wangaratta, Deniliquin, Numurkah, Shepparton|47000000-47999999,57000000-57999999|
+G|3|Deniliquin, Numurkah, Shepparton|48000000-48999999|
+G|3|Mornington, Warragul|49000000-49999999,59000000-59999999|
+G|3|Hobart, Geeveston, Oatlands, Ouse|61000000-62999999|
+G|3|Deloraine, Flinders Island, Launceston, Scottsdale, St Mary’s|63000000-63999999,67000000-67999999|
+G|3|Burnie, Devonport, King Island, Queenstown, Smithton|64000000-65999999|
+G|3|Melbourne|70000000-99999999|
 #G|3|South East Region (Tasmania, most of Victoria and parts of southern New South Wales)|20000000-69999999|
 M|4||00000000-99999999|
 M|50||0000000-9999999|V
 N|55||0000000-9999999|
-#G|72-73|Brisbane Non-metro: Bribie Island, Esk|2000000-9999999|
-#G|740,742|Cairns|200000-999999|
-#G|741,743|Bundaberg, Gayndah, Kingaroy, Maryborough, Murgon|200000-999999|
-#G|744,747|Cloncurry, Hughenden, Townsville|200000-999999|
-#G|745-746,776|Charleville, Dalby, Dirranbandi, Goondiwindi, Inglewood, Longreach, Miles, Roma, Stanthorpe, Toowoomba, Warwick|200000-999999|
-#G|748-749|Biloela, Emerald, Gladstone, Mackay, Rockhampton|200000-999999|
-#G|752-754|Caboolture, Esk, Gatton, Gympie, Nambour|200000-999999|
-#G|755-757|Beaudesert, Southport, Tweed Heads|200000-999999|
-#G|7|North East Region (Queensland)|20000000-99999999|
-#G|860,890|Bruce Rock, Great Victoria, Kalgoorlie, Merredin|200000-999999|
-#G|852-854,861-865,892-894|Perth|200000-999999|
-#G|851,891|Christmas Island, Cocos (Keeling) Islands, Derby, Great Sandy, Port Hedland|200000-999999|
-#G|895|Bullsbrook East, Northam, Pinjarra|200000-999999|
-#G|866,896|Moora, Northam, Wongan Hills, Wyalkatchem, York|200000-999999|
-#G|867,897|Bridgetown, Bunbury, Busselton, Pinjarra|200000-999999|
-#G|868,898|Albany, Katanning, Kondinin, Narrogin, Wagin|200000-999999|
-#G|870-874,881-884|Adelaide|200000-999999|
-#G|875,885|Berri, Gawler, Kangaroo Island, Malalla, Murray Bridge, Nurioopta, Tailem Bend, Victor Harbour, Waikerie|200000-999999|
-#G|876,886|Ceduna, Port Augusta, Port Pirie, Port Lincoln, Gladstone, Peterborough, Cook, Woomera|200000-999999|
-#G|877,887|Bordertown, Mount Gambier, Naracoorte|200000-999999|
-#G|878,888|Clare, Kadina, Port Lincoln, Burra, Balaklava, Maitland, Gawler, Yorketown|200000-999999|
-#G|879,889|Alice Springs, Darwin|200000-999999|
-#G|880|Broken Hill|200000-999999|
-#G|899|Carnamah, Carnarvon, Geraldton, Meekatharra, Morawa, Mullewa, Wongan Hills|200000-999999|
-#G|8|Central and West Region (Western Australia, South Australia, the Northern Territory and parts of New South Wales)|20000000-99999999|
+G|7|Brisbane, Bribie Island, Esk|20000000-39999999|
+G|7|Cairns|40000000-40999999,42000000-42999999|
+G|7|Bundaberg, Gayndah, Kingaroy, Maryborough, Murgon|41000000-41999999,43000000-43999999|
+G|7|Cloncurry, Hughenden, Townsville|44000000-44999999,47000000-47999999|
+G|7|Charleville, Dalby, Dirranbandi, Goondiwindi, Inglewood, Longreach, Miles, Roma, Stanthorpe, Toowoomba, Warwick|45000000-46999999,76000000-76999999|
+G|7|Biloela, Emerald, Gladstone, Mackay, Rockhampton|48000000-49999999|
+G|7|Caboolture, Esk, Gatton, Gympie, Nambour|52000000-54999999|
+G|7|Beaudesert, Southport, Tweed Heads|55000000-57999999|
+#G|7|North East Region (Queensland)|0000000-99999999|
+#G|860,890|Bruce Rock, Great Victoria, Kalgoorlie, Merredin|0000000-999999|
+#G|852-854,861-865,892-894|Perth|0000000-999999|
+#G|851,891|Christmas Island, Cocos (Keeling) Islands, Derby, Great Sandy, Port Hedland|0000000-999999|
+#G|895|Bullsbrook East, Northam, Pinjarra|0000000-999999|
+#G|866,896|Moora, Northam, Wongan Hills, Wyalkatchem, York|0000000-999999|
+#G|867,897|Bridgetown, Bunbury, Busselton, Pinjarra|0000000-999999|
+#G|868,898|Albany, Katanning, Kondinin, Narrogin, Wagin|0000000-999999|
+#G|870-874,881-884|Adelaide|0000000-999999|
+#G|875,885|Berri, Gawler, Kangaroo Island, Malalla, Murray Bridge, Nurioopta, Tailem Bend, Victor Harbour, Waikerie|0000000-999999|
+#G|876,886|Ceduna, Port Augusta, Port Pirie, Port Lincoln, Gladstone, Peterborough, Cook, Woomera|0000000-999999|
+#G|877,887|Bordertown, Mount Gambier, Naracoorte|0000000-999999|
+#G|878,888|Clare, Kadina, Port Lincoln, Burra, Balaklava, Maitland, Gawler, Yorketown|0000000-999999|
+#G|879,889|Alice Springs, Darwin|0000000-999999|
+#G|880|Broken Hill|0000000-999999|
+#G|899|Carnamah, Carnarvon, Geraldton, Meekatharra, Morawa, Mullewa, Wongan Hills|0000000-999999|
+#G|8|Central and West Region (Western Australia, South Australia, the Northern Territory and parts of New South Wales)|0000000-99999999|
