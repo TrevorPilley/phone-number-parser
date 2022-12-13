@@ -16,7 +16,7 @@ public class CountryInfo_Oceania_Tests
         Assert.Equal("AU", countryInfo.Iso3166Code);
         Assert.Equal("Australia", countryInfo.Name);
         Assert.Equal(new[] { 4, 3, 2, 1 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 9 }, countryInfo.NsnLengths);
+        Assert.Equal(new[] { 6, 7, 8, 9, 10 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);

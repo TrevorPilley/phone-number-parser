@@ -14,7 +14,7 @@ public partial class CountryInfo
         Iso3166Code = "AU",
         Name = "Australia",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2, 1 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8, 9, 10 }),
         RequireNdcForLocalGeographicDialling = false,
         TrunkPrefix = "0",
     };
