@@ -52,7 +52,7 @@ G|7|Biloela, Emerald, Gladstone, Mackay, Rockhampton|48000000-49999999|
 G|7|Caboolture, Esk, Gatton, Gympie, Nambour|52000000-54999999|
 G|7|Beaudesert, Southport, Tweed Heads|55000000-57999999|
 #G|7|North East Region (Queensland)|0000000-99999999|
-G|8|Bruce Rock, Great Victoria, Kalgoorlie, Merredin|60000000-69999999,90000000-99999999|
+G|8|Bruce Rock, Great Victoria, Kalgoorlie, Merredin|60000000-60999999,90000000-90999999|
 G|8|Perth|52000000-54999999,61000000-65999999,92000000-94999999|
 G|8|Christmas Island, Cocos (Keeling) Islands, Derby, Great Sandy, Port Hedland|51000000-51999999,91000000-91999999|
 G|8|Bullsbrook East, Northam, Pinjarra|95000000-95999999|

@@ -195,6 +195,7 @@ public class DefaultPhoneNumberParserTests_AU_GeographicNumber
     [InlineData("0852000000", "8", "52000000", "Perth")]
     [InlineData("0854999999", "8", "54999999", "Perth")]
     [InlineData("0860000000", "8", "60000000", "Bruce Rock, Great Victoria, Kalgoorlie, Merredin")]
+    [InlineData("0860999999", "8", "60999999", "Bruce Rock, Great Victoria, Kalgoorlie, Merredin")]
     [InlineData("0861000000", "8", "61000000", "Perth")]
     [InlineData("0865999999", "8", "65999999", "Perth")]
     [InlineData("0866000000", "8", "66000000", "Moora, Northam, Wongan Hills, Wyalkatchem, York")]
@@ -203,7 +204,6 @@ public class DefaultPhoneNumberParserTests_AU_GeographicNumber
     [InlineData("0867999999", "8", "67999999", "Bridgetown, Bunbury, Busselton, Pinjarra")]
     [InlineData("0868000000", "8", "68000000", "Albany, Katanning, Kondinin, Narrogin, Wagin")]
     [InlineData("0868999999", "8", "68999999", "Albany, Katanning, Kondinin, Narrogin, Wagin")]
-    [InlineData("0869999999", "8", "69999999", "Bruce Rock, Great Victoria, Kalgoorlie, Merredin")]
     [InlineData("0870000000", "8", "70000000", "Adelaide")]
     [InlineData("0874999999", "8", "74999999", "Adelaide")]
     [InlineData("0875000000", "8", "75000000", "Berri, Gawler, Kangaroo Island, Malalla, Murray Bridge, Nurioopta, Tailem Bend, Victor Harbour, Waikerie")]
@@ -231,6 +231,7 @@ public class DefaultPhoneNumberParserTests_AU_GeographicNumber
     [InlineData("0889000000", "8", "89000000", "Alice Springs, Darwin")]
     [InlineData("0889999999", "8", "89999999", "Alice Springs, Darwin")]
     [InlineData("0890000000", "8", "90000000", "Bruce Rock, Great Victoria, Kalgoorlie, Merredin")]
+    [InlineData("0890999999", "8", "90999999", "Bruce Rock, Great Victoria, Kalgoorlie, Merredin")]
     [InlineData("0891000000", "8", "91000000", "Christmas Island, Cocos (Keeling) Islands, Derby, Great Sandy, Port Hedland")]
     [InlineData("0891999999", "8", "91999999", "Christmas Island, Cocos (Keeling) Islands, Derby, Great Sandy, Port Hedland")]
     [InlineData("0892000000", "8", "92000000", "Perth")]
@@ -244,7 +245,6 @@ public class DefaultPhoneNumberParserTests_AU_GeographicNumber
     [InlineData("0898000000", "8", "98000000", "Albany, Katanning, Kondinin, Narrogin, Wagin")]
     [InlineData("0898999999", "8", "98999999", "Albany, Katanning, Kondinin, Narrogin, Wagin")]
     [InlineData("0899000000", "8", "99000000", "Carnamah, Carnarvon, Geraldton, Meekatharra, Morawa, Mullewa, Wongan Hills")]
-    [InlineData("0899999999", "8", "99999999", "Bruce Rock, Great Victoria, Kalgoorlie, Merredin")]
     [InlineData("0899999999", "8", "99999999", "Carnamah, Carnarvon, Geraldton, Meekatharra, Morawa, Mullewa, Wongan Hills")]
     public void Parse_Known_GeographicPhoneNumber_8_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
     {
