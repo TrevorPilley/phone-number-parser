@@ -8,7 +8,6 @@ public class DefaultPhoneNumberParserTests_AU_GeographicNumber
     private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Australia);
 
     [Theory]
-    [InlineData("0220000000", "2", "20000000", "Central East Region (New South Wales, the Australian Capital Territory and parts of northern Victoria)")]
     [InlineData("0233000000", "2", "33000000", "Gosford")]
     [InlineData("0233999999", "2", "33999999", "Gosford")]
     [InlineData("0238000000", "2", "38000000", "Bowral, Crookwell, Goulburn, Marulan")]
@@ -65,7 +64,6 @@ public class DefaultPhoneNumberParserTests_AU_GeographicNumber
     [InlineData("0268999999", "2", "68999999", "Bourke, Condoblin, Coonamble, Dubbo, Forbes, Moree, Nyngan, Parkes, Wellington")]
     [InlineData("0269000000", "2", "69000000", "Adelong, Griffith, Hay, Narrandera, Temora, Wagga Wagga, West Wyalong")]
     [InlineData("0269999999", "2", "69999999", "Adelong, Griffith, Hay, Narrandera, Temora, Wagga Wagga, West Wyalong")]
-    [InlineData("0269999999", "2", "69999999", "Central East Region (New South Wales, the Australian Capital Territory and parts of northern Victoria)")]
     [InlineData("0270000000", "2", "70000000", "Sydney")]
     [InlineData("0299999999", "2", "99999999", "Sydney")]
     public void Parse_Known_GeographicPhoneNumber_2_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
@@ -86,7 +84,6 @@ public class DefaultPhoneNumberParserTests_AU_GeographicNumber
     }
 
     [Theory]
-    [InlineData("0320000000", "3", "20000000", "South East Region (Tasmania, most of Victoria and parts of southern New South Wales)")]
     [InlineData("0340000000", "3", "40000000", "Balranald, Hopetoun, Mildura, Ouyen, Swan Hill")]
     [InlineData("0340999999", "3", "40999999", "Balranald, Hopetoun, Mildura, Ouyen, Swan Hill")]
     [InlineData("0341000000", "3", "41000000", "Bairnsdale, Morwell, Sale")]
@@ -131,7 +128,6 @@ public class DefaultPhoneNumberParserTests_AU_GeographicNumber
     [InlineData("0365999999", "3", "65999999", "Burnie, Devonport, King Island, Queenstown, Smithton")]
     [InlineData("0367000000", "3", "67000000", "Deloraine, Flinders Island, Launceston, Scottsdale, St Mary’s")]
     [InlineData("0367999999", "3", "67999999", "Deloraine, Flinders Island, Launceston, Scottsdale, St Mary’s")]
-    [InlineData("0369999999", "3", "69999999", "South East Region (Tasmania, most of Victoria and parts of southern New South Wales)")]
     [InlineData("0370000000", "3", "70000000", "Melbourne")]
     [InlineData("0399999999", "3", "99999999", "Melbourne")]
     public void Parse_Known_GeographicPhoneNumber_3_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
@@ -153,7 +149,6 @@ public class DefaultPhoneNumberParserTests_AU_GeographicNumber
 
     [Theory]
     [InlineData("0720000000", "7", "20000000", "Brisbane, Bribie Island, Esk")]
-    [InlineData("0720000000", "7", "20000000", "North East Region (Queensland)")]
     [InlineData("0739999999", "7", "39999999", "Brisbane, Bribie Island, Esk")]
     [InlineData("0740000000", "7", "40000000", "Cairns")]
     [InlineData("0740999999", "7", "40999999", "Cairns")]
@@ -171,12 +166,19 @@ public class DefaultPhoneNumberParserTests_AU_GeographicNumber
     [InlineData("0747999999", "7", "47999999", "Cloncurry, Hughenden, Townsville")]
     [InlineData("0748000000", "7", "48000000", "Biloela, Emerald, Gladstone, Mackay, Rockhampton")]
     [InlineData("0749999999", "7", "49999999", "Biloela, Emerald, Gladstone, Mackay, Rockhampton")]
+    [InlineData("0750000000", "7", "50000000", "North East Region (Queensland)")]
+    [InlineData("0750000000", "7", "50000000", "North East Region (Queensland)")]
+    [InlineData("0751999999", "7", "51999999", "North East Region (Queensland)")]
+    [InlineData("0751999999", "7", "51999999", "North East Region (Queensland)")]
     [InlineData("0752000000", "7", "52000000", "Caboolture, Esk, Gatton, Gympie, Nambour")]
     [InlineData("0754999999", "7", "54999999", "Caboolture, Esk, Gatton, Gympie, Nambour")]
     [InlineData("0755000000", "7", "55000000", "Beaudesert, Southport, Tweed Heads")]
     [InlineData("0757999999", "7", "57999999", "Beaudesert, Southport, Tweed Heads")]
+    [InlineData("0758000000", "7", "58000000", "North East Region (Queensland)")]
+    [InlineData("0775999999", "7", "75999999", "North East Region (Queensland)")]
     [InlineData("0776000000", "7", "76000000", "Charleville, Dalby, Dirranbandi, Goondiwindi, Inglewood, Longreach, Miles, Roma, Stanthorpe, Toowoomba, Warwick")]
     [InlineData("0776999999", "7", "76999999", "Charleville, Dalby, Dirranbandi, Goondiwindi, Inglewood, Longreach, Miles, Roma, Stanthorpe, Toowoomba, Warwick")]
+    [InlineData("0777000000", "7", "77000000", "North East Region (Queensland)")]
     [InlineData("0799999999", "7", "99999999", "North East Region (Queensland)")]
     public void Parse_Known_GeographicPhoneNumber_7_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
     {
@@ -197,10 +199,13 @@ public class DefaultPhoneNumberParserTests_AU_GeographicNumber
 
     [Theory]
     [InlineData("0820000000", "8", "20000000", "Central and West Region (Western Australia, South Australia, the Northern Territory and parts of New South Wales)")]
+    [InlineData("0850999999", "8", "50999999", "Central and West Region (Western Australia, South Australia, the Northern Territory and parts of New South Wales)")]
     [InlineData("0851000000", "8", "51000000", "Christmas Island, Cocos (Keeling) Islands, Derby, Great Sandy, Port Hedland")]
     [InlineData("0851999999", "8", "51999999", "Christmas Island, Cocos (Keeling) Islands, Derby, Great Sandy, Port Hedland")]
     [InlineData("0852000000", "8", "52000000", "Perth")]
     [InlineData("0854999999", "8", "54999999", "Perth")]
+    [InlineData("0855000000", "8", "55000000", "Central and West Region (Western Australia, South Australia, the Northern Territory and parts of New South Wales)")]
+    [InlineData("0859999999", "8", "59999999", "Central and West Region (Western Australia, South Australia, the Northern Territory and parts of New South Wales)")]
     [InlineData("0860000000", "8", "60000000", "Bruce Rock, Great Victoria, Kalgoorlie, Merredin")]
     [InlineData("0860999999", "8", "60999999", "Bruce Rock, Great Victoria, Kalgoorlie, Merredin")]
     [InlineData("0861000000", "8", "61000000", "Perth")]
@@ -211,6 +216,8 @@ public class DefaultPhoneNumberParserTests_AU_GeographicNumber
     [InlineData("0867999999", "8", "67999999", "Bridgetown, Bunbury, Busselton, Pinjarra")]
     [InlineData("0868000000", "8", "68000000", "Albany, Katanning, Kondinin, Narrogin, Wagin")]
     [InlineData("0868999999", "8", "68999999", "Albany, Katanning, Kondinin, Narrogin, Wagin")]
+    [InlineData("0869000000", "8", "69000000", "Central and West Region (Western Australia, South Australia, the Northern Territory and parts of New South Wales)")]
+    [InlineData("0869999999", "8", "69999999", "Central and West Region (Western Australia, South Australia, the Northern Territory and parts of New South Wales)")]
     [InlineData("0870000000", "8", "70000000", "Adelaide")]
     [InlineData("0874999999", "8", "74999999", "Adelaide")]
     [InlineData("0875000000", "8", "75000000", "Berri, Gawler, Kangaroo Island, Malalla, Murray Bridge, Nurioopta, Tailem Bend, Victor Harbour, Waikerie")]
@@ -251,7 +258,6 @@ public class DefaultPhoneNumberParserTests_AU_GeographicNumber
     [InlineData("0897999999", "8", "97999999", "Bridgetown, Bunbury, Busselton, Pinjarra")]
     [InlineData("0898000000", "8", "98000000", "Albany, Katanning, Kondinin, Narrogin, Wagin")]
     [InlineData("0898999999", "8", "98999999", "Albany, Katanning, Kondinin, Narrogin, Wagin")]
-    [InlineData("0898999999", "8", "98999999", "Central and West Region (Western Australia, South Australia, the Northern Territory and parts of New South Wales)")]
     [InlineData("0899000000", "8", "99000000", "Carnamah, Carnarvon, Geraldton, Meekatharra, Morawa, Mullewa, Wongan Hills")]
     [InlineData("0899999999", "8", "99999999", "Carnamah, Carnarvon, Geraldton, Meekatharra, Morawa, Mullewa, Wongan Hills")]
     public void Parse_Known_GeographicPhoneNumber_8_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
