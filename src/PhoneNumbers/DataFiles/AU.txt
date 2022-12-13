@@ -6,7 +6,6 @@ N|1802||000-999|F
 N|1900,1901-1902,1906||000000-999999|R
 N|191,193-195||000-999|R
 N|196-197,199||00000-99999|R
-G|2|Central East Region (New South Wales, the Australian Capital Territory and parts of northern Victoria)|20000000-99999999|
 G|233,243|Gosford|200000-999999|
 G|238,248|Bowral, Crookwell, Goulburn, Marulan|200000-999999|
 G|240-241,249|Newcastle|200000-999999|
@@ -25,7 +24,7 @@ G|257,267|Armidale, Barraba, Gunnedah, Inverell, Moree, Narrabri, Glen Innes, Ta
 G|258,268|Bourke, Condoblin, Coonamble, Dubbo, Forbes, Moree, Nyngan, Parkes, Wellington|200000-999999|
 G|259,269|Adelong, Griffith, Hay, Narrandera, Temora, Wagga Wagga, West Wyalong|200000-999999|
 G|27-29|Sydney|2000000-9999999|
-G|3|South East Region (Tasmania, most of Victoria and parts of southern New South Wales)|20000000-99999999|
+G|2|Central East Region (New South Wales, the Australian Capital Territory and parts of northern Victoria)|20000000-99999999|
 G|340,350|Balranald, Hopetoun, Mildura, Ouyen, Swan Hill|200000-999999|
 G|341,351|Bairnsdale, Morwell, Sale|200000-999999|
 G|342,352|Geelong, Colac|200000-999999|
@@ -40,6 +39,7 @@ G|361-362|Hobart, Geeveston, Oatlands, Ouse|200000-999999|
 G|363,367|Deloraine, Flinders Island, Launceston, Scottsdale, St Mary’s|200000-999999|
 G|364-365|Burnie, Devonport, King Island, Queenstown, Smithton|200000-999999|
 G|37-39|Melbourne|2000000-9999999|
+G|3|South East Region (Tasmania, most of Victoria and parts of southern New South Wales)|20000000-99999999|
 M|4||00000000-99999999|
 M|50||0000000-9999999|V
 N|55||0000000-9999999|
