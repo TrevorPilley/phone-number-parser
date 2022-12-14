@@ -21,4 +21,24 @@ public class CountryInfo_Oceania_Tests
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
+
+    [Fact]
+    public void CountryInfo_PapuaNewGuinea()
+    {
+        Assert.Same(CountryInfo.PapuaNewGuinea, CountryInfo.PapuaNewGuinea);
+
+        var countryInfo = CountryInfo.PapuaNewGuinea;
+
+        Assert.Equal("+675", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Oceania, countryInfo.Continent);
+        Assert.True(countryInfo.HasNationalDestinationCodes);
+        Assert.Equal("00", countryInfo.InternationalCallPrefix);
+        Assert.Equal("PG", countryInfo.Iso3166Code);
+        Assert.Equal("Papua New Guinea", countryInfo.Name);
+        Assert.Equal(new[] { 2 }, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 7, 8 }, countryInfo.NsnLengths);
+        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Null(countryInfo.TrunkPrefix);
+    }
 }

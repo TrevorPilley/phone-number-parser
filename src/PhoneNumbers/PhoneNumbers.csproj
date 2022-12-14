@@ -81,6 +81,7 @@
     <None Remove="DataFiles\NG.txt" />
     <None Remove="DataFiles\NL.txt" />
     <None Remove="DataFiles\NO.txt" />
+    <None Remove="DataFiles\PG.txt" />
     <None Remove="DataFiles\PL.txt" />
     <None Remove="DataFiles\PT.txt" />
     <None Remove="DataFiles\RO.txt" />
@@ -126,6 +127,7 @@
     <EmbeddedResource Include="DataFiles\NG.txt" />
     <EmbeddedResource Include="DataFiles\NL.txt" />
     <EmbeddedResource Include="DataFiles\NO.txt" />
+    <EmbeddedResource Include="DataFiles\PG.txt" />
     <EmbeddedResource Include="DataFiles\PL.txt" />
     <EmbeddedResource Include="DataFiles\PT.txt" />
     <EmbeddedResource Include="DataFiles\RO.txt" />
