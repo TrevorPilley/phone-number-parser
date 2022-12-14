@@ -27,7 +27,7 @@ public partial class CountryInfo
         Continent = Oceania,
         Iso3166Code = "PG",
         Name = "Papua New Guinea",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 2 }),
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8 }),
     };
 }

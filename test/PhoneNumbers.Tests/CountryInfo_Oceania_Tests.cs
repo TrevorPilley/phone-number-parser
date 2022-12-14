@@ -35,7 +35,7 @@ public class CountryInfo_Oceania_Tests
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("PG", countryInfo.Iso3166Code);
         Assert.Equal("Papua New Guinea", countryInfo.Name);
-        Assert.Equal(new[] { 2 }, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 7, 8 }, countryInfo.NsnLengths);
         Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
         Assert.False(countryInfo.SharesCallingCode);
