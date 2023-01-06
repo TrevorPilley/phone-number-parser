@@ -60,10 +60,10 @@ public class DefaultPhoneNumberParserTests_AU_NonGeographicPhoneNumber
     }
 
     [Theory]
-    [InlineData("01800000000", "1800", "000000")]
-    [InlineData("01800999999", "1800", "999999")]
-    [InlineData("01802000", "1802", "000")]
-    [InlineData("01802999", "1802", "999")]
+    [InlineData("01802000", "18", "02000")]
+    [InlineData("01802999", "18", "02999")]
+    [InlineData("01800000000", "18", "00000000")]
+    [InlineData("01800999999", "18", "00999999")]
     public void Parse_Known_NonGeographicPhoneNumber_Freephone(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
@@ -85,14 +85,12 @@ public class DefaultPhoneNumberParserTests_AU_NonGeographicPhoneNumber
     }
 
     [Theory]
-    [InlineData("01900000000", "1900", "000000")]
-    [InlineData("01900999999", "1900", "999999")]
-    [InlineData("01901000000", "1901", "000000")]
-    [InlineData("01901999999", "1901", "999999")]
-    [InlineData("01902000000", "1902", "000000")]
-    [InlineData("01902999999", "1902", "999999")]
-    [InlineData("01906000000", "1906", "000000")]
-    [InlineData("01906999999", "1906", "999999")]
+    [InlineData("01900000000", "19", "00000000")]
+    [InlineData("01900999999", "19", "00999999")]
+    [InlineData("01901000000", "19", "01000000")]
+    [InlineData("01902999999", "19", "02999999")]
+    [InlineData("01906000000", "19", "06000000")]
+    [InlineData("01906999999", "19", "06999999")]
     [InlineData("0191000", "191", "000")]
     [InlineData("0191999", "191", "999")]
     [InlineData("0193000", "193", "000")]
