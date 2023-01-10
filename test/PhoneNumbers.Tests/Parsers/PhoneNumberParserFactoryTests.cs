@@ -8,6 +8,10 @@ public class PhoneNumberParserFactoryTests
     private readonly PhoneNumberParserFactory _factory = new();
 
     [Fact]
+    public void GetParser_For_CountryInfo_Australia_Returns_DefaultPhoneNumberParser() =>
+        Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Australia));
+
+    [Fact]
     public void GetParser_For_CountryInfo_Austria_Returns_DefaultPhoneNumberParser() =>
         Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.Austria));
 
