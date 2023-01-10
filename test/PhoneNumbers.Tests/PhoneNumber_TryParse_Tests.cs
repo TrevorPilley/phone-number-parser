@@ -3,6 +3,22 @@ namespace PhoneNumbers.Tests;
 public class PhoneNumber_TryParse_Tests
 {
     [Fact]
+    public void TryParse_Value_For_Australia_CallingCode()
+    {
+        Assert.True(PhoneNumber.TryParse("+61399636800", out PhoneNumber phoneNumber));
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Australia, phoneNumber.Country);
+    }
+
+    [Fact]
+    public void TryParse_Value_CountryCode_For_Australia_CallingCode()
+    {
+        Assert.True(PhoneNumber.TryParse("0399636800", CountryInfo.Australia.Iso3166Code, out var phoneNumber));
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Australia, phoneNumber.Country);
+    }
+
+    [Fact]
     public void TryParse_Value_For_Austria_CallingCode()
     {
         Assert.True(PhoneNumber.TryParse("+43171100", out PhoneNumber phoneNumber));
