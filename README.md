@@ -211,6 +211,7 @@ United Kingdom | GB            | +44          | 0            | Yes        | Yes 
 
 Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
 ---            | ---           | ---          | ---          | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
+Australia      | AU            | +61          | 0            | Yes        | Yes    |                        | Yes                | Yes                  | Yes            | Yes                            | Yes                               |                                  |
 
 ### Notes
 
@@ -221,6 +222,11 @@ Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobi
 ## References for number data
 
 These were used as the references for the phone number data for each country.
+
+### Australia
+
+- https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200000D0001PDFE.pdf
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Australia
 
 ### Austria
 
