@@ -19,6 +19,7 @@ public partial class CountryInfo
         TrunkPrefix = "0",
     };
 
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Papua New Guinea.
     /// </summary>
     public static CountryInfo PapuaNewGuinea { get; } = new()
