@@ -202,10 +202,9 @@ public abstract class PhoneNumber
             {
                 var result = options.Factory.GetParser(countryInfo).Parse(value);
 
-                phoneNumber = result.PhoneNumber;
-
                 if (result.PhoneNumber is not null)
                 {
+                    phoneNumber = result.PhoneNumber;
                     return true;
                 }
             }
