@@ -1,4 +1,4 @@
-#if !NET5_0_OR_GREATER
+#if NETSTANDARD2_0
 namespace System.Diagnostics.CodeAnalysis
 {
     /// <summary>Specifies that when a method returns <see cref="ReturnValue"/>, the parameter will not be null even if the corresponding type allows it.</summary>
