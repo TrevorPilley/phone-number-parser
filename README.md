@@ -74,7 +74,7 @@ phoneNumber.Country.TrunkPrefix;                // 0
 phoneNumber.NationalDestinationCode;            // 114
 phoneNumber.NationalSignificantNumber           // 1142726444
 phoneNumber.PhoneNumberKind;                    // PhoneNumberKind.GeographicPhoneNumber
-phoneNumber.SubscriberNumber                    // 2726444
+phoneNumber.SubscriberNumber;                   // 2726444
 
 // There are 3 subclasses of PhoneNumber, the correct type to cast to
 // can be determined by inspecting the PhoneNumberKind property.
