@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using PhoneNumbers.Formatters;
 
 namespace PhoneNumbers;
@@ -183,7 +184,7 @@ public abstract class PhoneNumber
     /// <param name="value">A string containing a phone number in international format (e.g. +XX).</param>
     /// <param name="phoneNumber">The <see cref="PhoneNumber"/> equivalent if the conversion succeeds, otherwise null.</param>
     /// <returns><c>true</c> if value was converted successfully; otherwise, <c>false</c>.</returns>
-    public static bool TryParse(string value, out PhoneNumber? phoneNumber) =>
+    public static bool TryParse(string value, [NotNullWhen(true)] out PhoneNumber? phoneNumber) =>
         TryParse(value, ParseOptions.Default, out phoneNumber);
 
     /// <summary>
@@ -193,7 +194,7 @@ public abstract class PhoneNumber
     /// <param name="options">The options for parsing the phone number.</param>
     /// <param name="phoneNumber">The <see cref="PhoneNumber"/> equivalent if the conversion succeeds, otherwise null.</param>
     /// <returns><c>true</c> if value was converted successfully; otherwise, <c>false</c>.</returns>
-    public static bool TryParse(string value, ParseOptions options, out PhoneNumber? phoneNumber)
+    public static bool TryParse(string value, ParseOptions options, [NotNullWhen(true)] out PhoneNumber? phoneNumber)
     {
         if (options is not null)
         {
@@ -201,10 +202,9 @@ public abstract class PhoneNumber
             {
                 var result = options.Factory.GetParser(countryInfo).Parse(value);
 
-                phoneNumber = result.PhoneNumber;
-
                 if (result.PhoneNumber is not null)
                 {
+                    phoneNumber = result.PhoneNumber;
                     return true;
                 }
             }
@@ -221,7 +221,7 @@ public abstract class PhoneNumber
     /// <param name="countryCode">The ISO 3166 Alpha-2 country code of the country for the phone number.</param>
     /// <param name="phoneNumber">The <see cref="PhoneNumber"/> equivalent if the conversion succeeds, otherwise null.</param>
     /// <returns><c>true</c> if value was converted successfully; otherwise, <c>false</c>.</returns>
-    public static bool TryParse(string value, string countryCode, out PhoneNumber? phoneNumber) =>
+    public static bool TryParse(string value, string countryCode, [NotNullWhen(true)] out PhoneNumber? phoneNumber) =>
         TryParse(value, countryCode, ParseOptions.Default, out phoneNumber);
 
     /// <summary>
@@ -232,7 +232,7 @@ public abstract class PhoneNumber
     /// <param name="options">The options for parsing phone numbers.</param>
     /// <param name="phoneNumber">The <see cref="PhoneNumber"/> equivalent if the conversion succeeds, otherwise null.</param>
     /// <returns><c>true</c> if value was converted successfully; otherwise, <c>false</c>.</returns>
-    public static bool TryParse(string value, string countryCode, ParseOptions options, out PhoneNumber? phoneNumber)
+    public static bool TryParse(string value, string countryCode, ParseOptions options, [NotNullWhen(true)] out PhoneNumber? phoneNumber)
     {
         var countryInfo = options?.GetCountryInfo(countryCode);
 
