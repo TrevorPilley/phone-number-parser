@@ -18,4 +18,17 @@ public partial class CountryInfo
         RequireNdcForLocalGeographicDialling = false,
         TrunkPrefix = "0",
     };
+
+    /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Papua New Guinea.
+    /// </summary>
+    public static CountryInfo PapuaNewGuinea { get; } = new()
+    {
+        CallingCode = "+675",
+        Continent = Oceania,
+        Iso3166Code = "PG",
+        Name = "Papua New Guinea",
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8 }),
+    };
 }
