@@ -24,16 +24,21 @@ internal sealed class NationalPhoneNumberFormatter : PhoneNumberFormatter
     /// <inheritdoc/>
     public override string Format(PhoneNumber phoneNumber)
     {
-        if (phoneNumber!.NationalDestinationCode is null)
+        if (phoneNumber is null)
         {
-            return $"{phoneNumber!.Country.TrunkPrefix}{phoneNumber.SubscriberNumber}";
+            throw new ArgumentNullException(nameof(phoneNumber));
+        }
+
+        if (phoneNumber.NationalDestinationCode is null)
+        {
+            return $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.SubscriberNumber}";
         }
 
         if (phoneNumber.PhoneNumberKind == PhoneNumberKind.GeographicPhoneNumber && !phoneNumber.Country.RequireNdcForLocalGeographicDialling)
         {
-            return $"({phoneNumber!.Country.TrunkPrefix}{phoneNumber.NationalDestinationCode}) {phoneNumber.SubscriberNumber}";
+            return $"({phoneNumber.Country.TrunkPrefix}{phoneNumber.NationalDestinationCode}) {phoneNumber.SubscriberNumber}";
         }
 
-        return $"{phoneNumber!.Country.TrunkPrefix}{phoneNumber.NationalDestinationCode} {phoneNumber.SubscriberNumber}".Trim();
+        return $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.NationalDestinationCode} {phoneNumber.SubscriberNumber}".Trim();
     }
 }

@@ -22,6 +22,13 @@ internal sealed class E164PhoneNumberFormatter : PhoneNumberFormatter
         format?.Equals(DefaultFormat, StringComparison.Ordinal) == true;
 
     /// <inheritdoc/>
-    public override string Format(PhoneNumber phoneNumber) =>
-        $"{phoneNumber!.Country.CallingCode}{phoneNumber.NationalSignificantNumber}";
+    public override string Format(PhoneNumber phoneNumber)
+    {
+        if (phoneNumber is null)
+        {
+            throw new ArgumentNullException(nameof(phoneNumber));
+        }
+
+        return $"{phoneNumber.Country.CallingCode}{phoneNumber.NationalSignificantNumber}";
+    }
 }
