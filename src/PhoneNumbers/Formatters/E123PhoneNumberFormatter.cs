@@ -22,8 +22,15 @@ internal sealed class E123PhoneNumberFormatter : PhoneNumberFormatter
         format?.Equals("E.123", StringComparison.Ordinal) == true;
 
     /// <inheritdoc/>
-    public override string Format(PhoneNumber phoneNumber) =>
-        phoneNumber!.NationalDestinationCode is not null
+    public override string Format(PhoneNumber phoneNumber)
+    {
+        if (phoneNumber is null)
+        {
+            throw new ArgumentNullException(nameof(phoneNumber));
+        }
+
+        return phoneNumber.NationalDestinationCode is not null
             ? $"{phoneNumber.Country.CallingCode} {phoneNumber.NationalDestinationCode} {phoneNumber.SubscriberNumber}"
             : $"{phoneNumber.Country.CallingCode} {phoneNumber.SubscriberNumber}";
+    }
 }

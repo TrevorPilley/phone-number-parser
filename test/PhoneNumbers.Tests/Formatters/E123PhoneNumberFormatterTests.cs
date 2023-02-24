@@ -32,6 +32,10 @@ public class E123PhoneNumberFormatterTests
             E123PhoneNumberFormatter.Instance.Format(TestHelper.CreateNonGeographicPhoneNumber("0", null, "667788")));
 
     [Fact]
+    public void Format_Throws_If_PhoneNumber_Null() =>
+        Assert.Throws<ArgumentNullException>(() => E123PhoneNumberFormatter.Instance.Format(null));
+
+    [Fact]
     public void Instance()
     {
         Assert.NotNull(E123PhoneNumberFormatter.Instance);
