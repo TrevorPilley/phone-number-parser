@@ -2,8 +2,14 @@ name: Publish
 
 on:
   push:
+    branches:
+     - 'build/**'
     tags:
-      - '*.*.*'
+     - '*.*.*'
+
+concurrency:
+  group: publish-${{ github.ref }}
+  cancel-in-progress: true
 
 env:
   # Disable sending usage data to Microsoft
@@ -32,8 +38,13 @@ jobs:
        with:
         dotnet-version: 7.0.x
 
-     - name: Set release version from tag name
+     - name: Set release version
+       if: github.ref_type == 'tag'
        run: echo "RELEASE_VERSION=$(echo ${GITHUB_REF:10})" >> $GITHUB_ENV
+
+     - name: Set release version (preview build)
+       if: github.ref_type == 'branch'
+       run: echo "RELEASE_VERSION=$(echo ${GITHUB_REF:17})" >> $GITHUB_ENV
 
      - name: update project version value to release version
        run: |
@@ -55,7 +66,16 @@ jobs:
        run: dotnet test --no-restore --verbosity minimal
 
      - name: dotnet pack
+       if: github.ref_type == 'tag'
        run: dotnet pack --no-build --configuration ${{ env.PROJECT_CONFIGURATION }}
+
+     - name: dotnet pack (preview build)
+       if: github.ref_type == 'branch'
+       run: |
+         $date = Get-Date -Format "yyyyMMdd"
+         $projVersion = ([xml](Get-Content ${{ env.PROJECT_PATH }})) | Select-Xml -XPath "//Project/PropertyGroup[1]/Version"
+         dotnet pack --no-build --configuration ${{ env.PROJECT_CONFIGURATION }} -p:PackageVersion="${{ env.RELEASE_VERSION }}-preview$date.${{ github.run_number }}"
+       shell: pwsh
 
      - name: dotnet nuget push
        run: dotnet nuget push '/home/runner/work/**/*.nupkg' --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ env.NUGET_SOURCE }}
