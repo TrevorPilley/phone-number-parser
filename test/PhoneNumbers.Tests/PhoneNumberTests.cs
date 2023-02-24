@@ -132,6 +132,13 @@ public class PhoneNumberTests
     }
 
     [Fact]
+    public void TryParse_Value_PhoneNumbers_False_If_ParseOptions_Null()
+    {
+        Assert.False(PhoneNumber.TryParse("0123456789", default, out IEnumerable<PhoneNumber> phoneNumbers));
+        Assert.Empty(phoneNumbers);
+    }
+
+    [Fact]
     public void TryParse_Value_To_PhoneNumber_False_If_ParseOptions_Null()
     {
         Assert.False(PhoneNumber.TryParse("0123456789", default(ParseOptions), out PhoneNumber phoneNumber));
