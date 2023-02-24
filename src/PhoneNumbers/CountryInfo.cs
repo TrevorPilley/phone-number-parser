@@ -97,7 +97,7 @@ public sealed partial class CountryInfo
         s_formatters.SingleOrDefault(x => x.CanFormat(format)) ?? throw new FormatException($"{format} is not a supported format");
 
     internal bool IsValidNsnLength(string value) =>
-        NsnLengths.Contains(value!.Length);
+        NsnLengths.Contains(value.Length);
 
     /// <summary>
     /// Reads the national significant number (NSN) from the specified phone number value.
