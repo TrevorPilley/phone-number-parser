@@ -40,6 +40,12 @@ public class DefaultPhoneNumberParserTests_PG_MobilePhoneNumber
     [InlineData("2709999", "270", "9999")]
     [InlineData("2710000", "271", "0000")]
     [InlineData("2719999", "271", "9999")]
+    [InlineData("2750000", "275", "0000")]
+    [InlineData("2759999", "275", "9999")]
+    [InlineData("2760000", "276", "0000")]
+    [InlineData("2769999", "276", "9999")]
+    [InlineData("2780000", "278", "0000")]
+    [InlineData("2789999", "278", "9999")]
     public void Parse_Known_MobilePhoneNumber_Pager(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);

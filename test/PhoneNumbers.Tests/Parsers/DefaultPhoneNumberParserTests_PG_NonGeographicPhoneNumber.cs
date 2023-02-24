@@ -37,12 +37,6 @@ public class DefaultPhoneNumberParserTests_PG_NonGeographicPhoneNumber
     [InlineData("2059999", "205", "9999")]
     [InlineData("2070000", "207", "0000")]
     [InlineData("2079999", "207", "9999")]
-    [InlineData("2750000", "275", "0000")]
-    [InlineData("2759999", "275", "9999")]
-    [InlineData("2760000", "276", "0000")]
-    [InlineData("2769999", "276", "9999")]
-    [InlineData("2780000", "278", "0000")]
-    [InlineData("2789999", "278", "9999")]
     public void Parse_Known_NonGeographicPhoneNumber_2XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
