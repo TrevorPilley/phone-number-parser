@@ -19,19 +19,19 @@ public sealed partial class CountryInfo
     internal const string SouthAmerica = "South America";
     private const char PlusSign = '+';
     private static readonly ReadOnlyCollection<int> s_emptyIntArray = new(Array.Empty<int>());
-    private readonly List<PhoneNumberFormatter> _formatters;
-
-    /// <summary>
-    /// Initialises a new instance of the <see cref="CountryInfo"/> class.
-    /// </summary>
-    /// <remarks>The constructor is internal for unit tests only.</remarks>
-    internal CountryInfo() =>
-        _formatters = new(new[]
+    private static readonly ReadOnlyCollection<PhoneNumberFormatter> s_formatters = new(new[]
         {
             E164PhoneNumberFormatter.Instance,
             E123PhoneNumberFormatter.Instance,
             NationalPhoneNumberFormatter.Instance,
         });
+
+    /// <summary>
+    /// Initialises a new instance of the <see cref="CountryInfo"/> class.
+    /// </summary>
+    /// <remarks>The constructor is internal for unit tests only.</remarks>
+    internal CountryInfo() {
+    }
 
     /// <summary>
     /// Gets the calling code for the country (e.g. '+XX').
@@ -94,7 +94,7 @@ public sealed partial class CountryInfo
     internal bool RequireNdcForLocalGeographicDialling { get; init; } = true;
 
     internal PhoneNumberFormatter GetFormatter(string format) =>
-        _formatters.SingleOrDefault(x => x.CanFormat(format)) ?? throw new FormatException($"{format} is not a supported format");
+        s_formatters.SingleOrDefault(x => x.CanFormat(format)) ?? throw new FormatException($"{format} is not a supported format");
 
     internal bool IsValidNsnLength(string value) =>
         NsnLengths.Contains(value.Length);

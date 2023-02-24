@@ -138,6 +138,7 @@ ParseOptions.Default.Countries.Clear():
 ParseOptions.Default.AllowAfricanCountries();
 ParseOptions.Default.AllowAsianCountries();
 ParseOptions.Default.AllowEuropeanCountries();
+ParseOptions.Default.AllowOceanianCountries();
 ```
 
 #### Opt-out
@@ -208,6 +209,12 @@ Switzerland    | CH            | +41          | 0            | Yes        | Yes 
 Ukraine        | UA            | +380         | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  |
 United Kingdom | GB            | +44          | 0            | Yes        | Yes    | Yes                    | Yes                | Yes                  | Yes            | Yes                            | Yes                               |                                  |
 
+### Oceania
+
+Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
+---            | ---           | ---          | ---          | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
+Australia      | AU            | +61          | 0            | Yes        | Yes    |                        | Yes                | Yes                  | Yes            | Yes                            | Yes                               |                                  |
+
 ### Notes
 
 - The ISO code for the United Kingdom is 'GB' rather than 'UK'.
@@ -217,6 +224,11 @@ United Kingdom | GB            | +44          | 0            | Yes        | Yes 
 ## References for number data
 
 These were used as the references for the phone number data for each country.
+
+### Australia
+
+- https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200000D0001PDFE.pdf
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Australia
 
 ### Austria
 
@@ -278,12 +290,12 @@ These were used as the references for the phone number data for each country.
 
 ### Germany
 
-- https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000510005PDFE.pdf
+- https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000510006PDFE.pdf
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Germany
 
 ### Gibraltar
 
-- https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000530004PDFE.pdf
+- https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000530005PDFE.pdf
 - https://www.gra.gi/communications/numbering-plan
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Gibraltar
 
@@ -413,8 +425,6 @@ These were used as the references for the phone number data for each country.
 
 ### United Kingdom, Guernsey, Jersey, Isle of Man
 
-- https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000DD0001PDFE.pdf
+- https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000DD0002PDFE.pdf
 - https://www.ofcom.org.uk/__data/assets/pdf_file/0013/102613/national-numbering-plan.pdf
-- http://static.ofcom.org.uk/static/numbering/index.htm
-- https://www.area-codes.org.uk/
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_the_United_Kingdom
