@@ -1,20 +1,22 @@
 # Phone Number Parser
 
-A library for parsing phone numbers with [nullable reference type](https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references) annotations, built for:
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/TrevorPilley/PhoneNumbers/blob/main/LICENSE) ![GitHub last commit](https://img.shields.io/github/last-commit/TrevorPilley/PhoneNumbers/main) ![Build Status](https://github.com/TrevorPilley/PhoneNumbers/workflows/CI/badge.svg?branch=main) [![NuGet](https://img.shields.io/nuget/v/PhoneNumberParser.svg)](https://www.nuget.org/packages/PhoneNumberParser/) ![GitHub Release Date](https://img.shields.io/github/release-date/TrevorPilley/PhoneNumbers) [![NuGet](https://img.shields.io/nuget/dt/PhoneNumberParser.svg)](https://www.nuget.org/packages/PhoneNumberParser/)
+
+A library for parsing phone numbers, with builds for:
 
 - .NET 7.0
 - .NET Standard 2.1
 - .NET Standard 2.0
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/TrevorPilley/PhoneNumbers/blob/main/LICENSE) ![GitHub last commit](https://img.shields.io/github/last-commit/TrevorPilley/PhoneNumbers/main) ![Build Status](https://github.com/TrevorPilley/PhoneNumbers/workflows/CI/badge.svg?branch=main) [![NuGet](https://img.shields.io/nuget/v/PhoneNumberParser.svg)](https://www.nuget.org/packages/PhoneNumberParser/) ![GitHub Release Date](https://img.shields.io/github/release-date/TrevorPilley/PhoneNumbers) [![NuGet](https://img.shields.io/nuget/dt/PhoneNumberParser.svg)](https://www.nuget.org/packages/PhoneNumberParser/)
-
-This library provides a number of benefits over a regular expression, for example greater validity of phone numbers including national destination codes (area codes) and subscriber numbers based upon published numbering plans for each country. Additional attributes such as the kind of phone number (Mobile, Geographic or Non-Geographic) are also included, and all parsing is performed locally within the library using embedded in-memory data files.
+This library provides a number of benefits over a regular expression, for example greater validity of phone numbers including national destination codes (area codes) and subscriber numbers based upon published numbering plans for each country. Additional attributes such as the kind of phone number (Mobile, Geographic or Non-Geographic) are also included. All parsing is performed locally within the library using embedded in-memory data files.
 
 The library **does not**:
 
 - Provide certainty that a phone number is assigned and in use
 - Include the original carrier for mobile phone numbers due to number portability in most countries
 - Support extension numbers
+
+The library also uses [nullable reference type](https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references) annotations.
 
 ## Install
 
