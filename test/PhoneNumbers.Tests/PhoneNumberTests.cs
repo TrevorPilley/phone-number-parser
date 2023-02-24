@@ -21,6 +21,10 @@ public class PhoneNumberTests
         Assert.NotNull(PhoneNumber.Parse("0114 272 6444", "GB"));
 
     [Fact]
+    public void Parse_Value_CountryCode_Succeeds_If_Value_In_Correct_International_Format_For_CountryCode() =>
+        Assert.NotNull(PhoneNumber.Parse("+441142726444", "GB"));
+
+    [Fact]
     public void Parse_Value_CountryCode_Throws_If_CountryCode_Not_Supported()
     {
         var exception = Assert.Throws<ParseException>(() => PhoneNumber.Parse("0123456789", "ZZ"));
@@ -30,6 +34,13 @@ public class PhoneNumberTests
     [Fact]
     public void Parse_Value_CountryCode_Throws_If_ParseOptions_Null() =>
         Assert.Throws<ArgumentNullException>(() => PhoneNumber.Parse("0123456789", "GB", default));
+
+    [Fact]
+    public void Parse_Value_CountryCode_Throws_If_Value_In_Incorrect_International_Format_For_CountryCode()
+    {
+        var exception = Assert.Throws<ParseException>(() => PhoneNumber.Parse("+441142726444", "FR"));
+        Assert.Equal("The value must be a France phone number starting +33 or 0 and the national significant number of the phone number must be 9 or 13 digits in length.", exception.Message);
+    }
 
     [Fact]
     public void Parse_Value_Throws_If_ParseOptions_Null() =>
