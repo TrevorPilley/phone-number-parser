@@ -98,7 +98,7 @@ public abstract class PhoneNumber
 
         foreach (var countryInfo in options.GetCountryInfos(value))
         {
-            var result = options!.Factory.GetParser(countryInfo).Parse(value);
+            var result = options.Factory.GetParser(countryInfo).Parse(value);
 
             if (result.PhoneNumber is not null)
             {
