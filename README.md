@@ -211,9 +211,10 @@ United Kingdom | GB            | +44          | 0            | Yes        | Yes 
 
 ### Oceania
 
-Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
----            | ---           | ---          | ---          | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
-Australia      | AU            | +61          | 0            | Yes        | Yes    |                        | Yes                | Yes                  | Yes            | Yes                            | Yes                               |                                  |
+Country          | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
+---              | ---           | ---          | ---          | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
+Australia        | AU            | +61          | 0            | Yes        | Yes    |                        | Yes                | Yes                  | Yes            | Yes                            | Yes                               |                                  |
+Papua New Guinea | PG            | +675         |              | Yes        | Yes    |                        | Yes                |                      | Yes            | Yes                            |                                   |                                  |
 
 ### Notes
 
@@ -361,6 +362,11 @@ These were used as the references for the phone number data for each country.
 
 - https://www.nkom.no/english/numbering-resources#the_norwegian_numbering_plan_for_telephony_etc_e164
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Norway
+
+### Papua New Guinea
+
+- https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000A40009PDFE.pdf
+- https://en.wikipedia.org/wiki/Telephone_numbers_in_Papua_New_Guinea
 
 ### Poland
 
