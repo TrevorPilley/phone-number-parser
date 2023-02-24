@@ -466,6 +466,22 @@ public class PhoneNumber_TryParse_Tests
     }
 
     [Fact]
+    public void TryParse_Value_For_PapuaNewGuinea_CallingCode()
+    {
+        Assert.True(PhoneNumber.TryParse("+6753033201", out PhoneNumber phoneNumber));
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.PapuaNewGuinea, phoneNumber.Country);
+    }
+
+    [Fact]
+    public void TryParse_Value_CountryCode_For_PapuaNewGuinea_CallingCode()
+    {
+        Assert.True(PhoneNumber.TryParse("3033201", CountryInfo.PapuaNewGuinea.Iso3166Code, out var phoneNumber));
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.PapuaNewGuinea, phoneNumber.Country);
+    }
+
+    [Fact]
     public void TryParse_Value_For_Poland_CallingCode()
     {
         Assert.True(PhoneNumber.TryParse("+48222455856", out PhoneNumber phoneNumber));
