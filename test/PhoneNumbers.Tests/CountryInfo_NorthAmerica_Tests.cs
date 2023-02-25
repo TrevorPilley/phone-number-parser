@@ -12,7 +12,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal("+1", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.True(countryInfo.HasNationalDestinationCodes);
-        Assert.Equal("00", countryInfo.InternationalCallPrefix);
+        Assert.Equal("011", countryInfo.InternationalCallPrefix);
         Assert.Equal("CA", countryInfo.Iso3166Code);
         Assert.Equal("Canada", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);

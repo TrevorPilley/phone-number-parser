@@ -11,6 +11,7 @@ public partial class CountryInfo
     {
         CallingCode = "+1",
         Continent = NorthAmerica,
+        InternationalCallPrefix = "011",
         Iso3166Code = "CA",
         Name = "Canada",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3 }),
