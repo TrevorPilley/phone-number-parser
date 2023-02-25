@@ -450,3 +450,8 @@ These were used as the references for the phone number data for each country.
 - https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000DD0002PDFE.pdf
 - https://www.ofcom.org.uk/__data/assets/pdf_file/0013/102613/national-numbering-plan.pdf
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_the_United_Kingdom
+
+### United States
+
+- https://www.nationalnanpa.com/nanp1/npa_report.csv
+- https://en.wikipedia.org/wiki/North_American_Numbering_Plan
