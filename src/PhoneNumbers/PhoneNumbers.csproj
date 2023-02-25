@@ -55,6 +55,7 @@
     <None Remove="DataFiles\BE.txt" />
     <None Remove="DataFiles\BG.txt" />
     <None Remove="DataFiles\BY.txt" />
+    <None Remove="DataFiles\CA.txt" />
     <None Remove="DataFiles\CH.txt" />
     <None Remove="DataFiles\CZ.txt" />
     <None Remove="DataFiles\DE.txt" />
@@ -101,6 +102,7 @@
     <EmbeddedResource Include="DataFiles\BE.txt" />
     <EmbeddedResource Include="DataFiles\BG.txt" />
     <EmbeddedResource Include="DataFiles\BY.txt" />
+    <EmbeddedResource Include="DataFiles\CA.txt" />
     <EmbeddedResource Include="DataFiles\CH.txt" />
     <EmbeddedResource Include="DataFiles\CZ.txt" />
     <EmbeddedResource Include="DataFiles\DE.txt" />

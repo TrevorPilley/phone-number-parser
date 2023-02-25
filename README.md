@@ -261,6 +261,11 @@ These were used as the references for the phone number data for each country.
 - https://crc.bg/files/_en/bulgarian_NNP-en-2014(ver..2016).pdf
 - https://en.wikipedia.org/wiki/Telephone_numbers_in_Bulgaria
 
+### Canada
+
+- https://cnac.ca/canadian_dial_plan/Canadian_Dial_Plan_Table.pdf
+- https://en.m.wikipedia.org/wiki/Telephone_numbers_in_Canada
+
 ### Croatia
 
 - https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000320003PDFE.pdf
