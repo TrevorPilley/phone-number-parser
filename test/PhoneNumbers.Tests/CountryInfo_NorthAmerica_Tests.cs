@@ -1,5 +1,5 @@
 namespace PhoneNumbers.Tests;
 
-public class CountryInfo_Africa_Tests
+public class CountryInfo_NorthAmerica_Tests
 {
 }
