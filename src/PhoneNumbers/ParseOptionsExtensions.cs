@@ -30,6 +30,14 @@ public static class ParseOptionsExtensions
         => AllowCountries(parseOptions, CountryInfo.Europe);
 
     /// <summary>
+    /// Allows the <see cref="ParseOptions"/> instance to include countries in North America.
+    /// </summary>
+    /// <param name="parseOptions">The <see cref="ParseOptions"/> instance to update.</param>
+    /// <returns>The updated <see cref="ParseOptions"/>.</returns>
+    public static ParseOptions AllowNorthAmericanCountries(this ParseOptions parseOptions)
+        => AllowCountries(parseOptions, CountryInfo.NorthAmerica);
+
+    /// <summary>
     /// Allows the <see cref="ParseOptions"/> instance to include countries in Oceania.
     /// </summary>
     /// <param name="parseOptions">The <see cref="ParseOptions"/> instance to update.</param>
