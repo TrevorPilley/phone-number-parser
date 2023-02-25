@@ -15,6 +15,7 @@ public partial class CountryInfo
         Name = "Canada",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
+        RequireNdcForLocalGeographicDialling = false,
         SharesCallingCode = true,
         TrunkPrefix = "1",
     };
