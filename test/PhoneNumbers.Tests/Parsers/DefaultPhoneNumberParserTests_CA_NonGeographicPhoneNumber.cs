@@ -33,6 +33,53 @@ public class DefaultPhoneNumberParserTests_CA_NonGeographicPhoneNumber
     }
 
     [Theory]
+    [InlineData("18000000000", "800", "0000000")]
+    [InlineData("18002709999", "800", "2709999")]
+    [InlineData("18002720000", "800", "2720000")]
+    [InlineData("18003889999", "800", "3889999")]
+    [InlineData("18003900000", "800", "3900000")]
+    [InlineData("18004149999", "800", "4149999")]
+    [InlineData("18004160000", "800", "4160000")]
+    [InlineData("18004839999", "800", "4839999")]
+    [InlineData("18004850000", "800", "4850000")]
+    [InlineData("18005339999", "800", "5339999")]
+    [InlineData("18005350000", "800", "5350000")]
+    [InlineData("18006229999", "800", "6229999")]
+    [InlineData("18006240000", "800", "6240000")]
+    [InlineData("18007029999", "800", "7029999")]
+    [InlineData("18007040000", "800", "7040000")]
+    [InlineData("18007439999", "800", "7439999")]
+    [InlineData("18007450000", "800", "7450000")]
+    [InlineData("18007509999", "800", "7509999")]
+    [InlineData("18007520000", "800", "7520000")]
+    [InlineData("18009039999", "800", "9039999")]
+    [InlineData("18009050000", "800", "9050000")]
+    [InlineData("18009069999", "800", "9069999")]
+    [InlineData("18009080000", "800", "9080000")]
+    [InlineData("18009109999", "800", "9109999")]
+    [InlineData("18009129999", "800", "9129999")]
+    [InlineData("18009999999", "800", "9999999")]
+    public void Parse_Known_NonGeographicPhoneNumber_Freephone(string value, string NationalDestinationCode, string subscriberNumber)
+    {
+        var parseResult = s_parser.Parse(value);
+        parseResult.ThrowIfFailure();
+
+        var phoneNumber = parseResult.PhoneNumber;
+
+        Assert.NotNull(phoneNumber);
+        Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
+
+        var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
+        Assert.Equal(CountryInfo.Canada, nonGeographicPhoneNumber.Country);
+        Assert.True(nonGeographicPhoneNumber.IsFreephone);
+        Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
+        Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
+        Assert.False(nonGeographicPhoneNumber.IsSharedCost);
+        Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
+        Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
+    }
+
+    [Theory]
     [InlineData("19003230000", "900", "3230000")]
     [InlineData("19003239999", "900", "3239999")]
     [InlineData("19004160000", "900", "4160000")]
