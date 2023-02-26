@@ -28,7 +28,7 @@ public class Rfc3966PhoneNumberFormatterTests
     [Fact]
     public void Format_With_Sn() =>
         Assert.Equal(
-            "+422-667788",
+            "tel:+422-667788",
             Rfc3966PhoneNumberFormatter.Instance.Format(TestHelper.CreateNonGeographicPhoneNumber("0", null, "667788")));
 
      [Fact]
