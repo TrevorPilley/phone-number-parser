@@ -17,7 +17,6 @@ public sealed partial class CountryInfo
     internal const string Oceania = "Oceania";
     internal const string NorthAmerica = "North America";
     internal const string SouthAmerica = "South America";
-    private const char PlusSign = '+';
     private static readonly ReadOnlyCollection<int> s_emptyIntArray = new(Array.Empty<int>());
     private static readonly ReadOnlyCollection<PhoneNumberFormatter> s_formatters = new(new[]
         {
@@ -97,6 +96,14 @@ public sealed partial class CountryInfo
     internal PhoneNumberFormatter GetFormatter(string format) =>
         s_formatters.SingleOrDefault(x => x.CanFormat(format)) ?? throw new FormatException($"{format} is not a supported format");
 
+    /// <summary>
+    /// Gets a value indicating whether the specified value has the calling code for this country.
+    /// </summary>
+    /// <param name="value">A string containing a phone number in international format (e.g. +XX).</param>
+    /// <returns>True if the value has the calling code for this country, otherwise false.</returns>
+    internal bool HasCallingCode(string value) =>
+        value?.IndexOf(CallingCode, StringComparison.Ordinal) >= 0;
+
     internal bool IsValidNsnLength(string value) =>
         NsnLengths.Contains(value.Length);
 
@@ -115,26 +122,13 @@ public sealed partial class CountryInfo
 
         var startPos = 0;
 
-        if (value[0] == PlusSign)
+        if (HasCallingCode(value))
         {
-            if (!StartsWithCallingCode(value))
-            {
-                return string.Empty;
-            }
-
-            startPos = CallingCode.Length;
+            startPos = value.IndexOf(CallingCode, StringComparison.Ordinal) + CallingCode.Length;
         }
 
         return ReadNationalSignificantNumber(value, startPos);
     }
-
-    /// <summary>
-    /// Gets a value indicating whether the specified value starts with the calling code for this country.
-    /// </summary>
-    /// <param name="value">A string containing a phone number in international format (e.g. +XX).</param>
-    /// <returns>True if the value starts with the calling code for this country, otherwise false.</returns>
-    internal bool StartsWithCallingCode(string value) =>
-        value?.StartsWith(CallingCode, StringComparison.Ordinal) == true;
 
     internal static IEnumerable<CountryInfo> GetCountries() =>
         typeof(CountryInfo)
