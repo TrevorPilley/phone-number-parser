@@ -33,6 +33,45 @@ public class DefaultPhoneNumberParserTests_CA_NonGeographicPhoneNumber
     }
 
     [Theory]
+    [InlineData("17102000000", "710", "2000000")]
+    [InlineData("17102109999", "710", "2109999")]
+    [InlineData("17102120000", "710", "2120000")]
+    [InlineData("17103109999", "710", "3109999")]
+    [InlineData("17103120000", "710", "3120000")]
+    [InlineData("17104109999", "710", "4109999")]
+    [InlineData("17104120000", "710", "4120000")]
+    [InlineData("17105109999", "710", "5109999")]
+    [InlineData("17105120000", "710", "5120000")]
+    [InlineData("17106109999", "710", "6109999")]
+    [InlineData("17106120000", "710", "6120000")]
+    [InlineData("17107109999", "710", "7109999")]
+    [InlineData("17107120000", "710", "7120000")]
+    [InlineData("17108109999", "710", "8109999")]
+    [InlineData("17108120000", "710", "8120000")]
+    [InlineData("17109109999", "710", "9109999")]
+    [InlineData("17109120000", "710", "9120000")]
+    [InlineData("17109999999", "710", "9999999")]
+    public void Parse_Known_NonGeographicPhoneNumber_7XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
+    {
+        var parseResult = s_parser.Parse(value);
+        parseResult.ThrowIfFailure();
+
+        var phoneNumber = parseResult.PhoneNumber;
+
+        Assert.NotNull(phoneNumber);
+        Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
+
+        var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
+        Assert.Equal(CountryInfo.Canada, nonGeographicPhoneNumber.Country);
+        Assert.False(nonGeographicPhoneNumber.IsFreephone);
+        Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
+        Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
+        Assert.False(nonGeographicPhoneNumber.IsSharedCost);
+        Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
+        Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
+    }
+
+    [Theory]
     [InlineData("18000000000", "800", "0000000")]
     [InlineData("18002709999", "800", "2709999")]
     [InlineData("18002720000", "800", "2720000")]
@@ -59,6 +98,30 @@ public class DefaultPhoneNumberParserTests_CA_NonGeographicPhoneNumber
     [InlineData("18009109999", "800", "9109999")]
     [InlineData("18009129999", "800", "9129999")]
     [InlineData("18009999999", "800", "9999999")]
+    [InlineData("18330000000", "833", "0000000")]
+    [InlineData("18339109999", "833", "9109999")]
+    [InlineData("18339120000", "833", "9120000")]
+    [InlineData("18339999999", "833", "9999999")]
+    [InlineData("18440000000", "844", "0000000")]
+    [InlineData("18449109999", "844", "9109999")]
+    [InlineData("18449120000", "844", "9120000")]
+    [InlineData("18449999999", "844", "9999999")]
+    [InlineData("18550000000", "855", "0000000")]
+    [InlineData("18559109999", "855", "9109999")]
+    [InlineData("18559120000", "855", "9120000")]
+    [InlineData("18559999999", "855", "9999999")]
+    [InlineData("18660000000", "866", "0000000")]
+    [InlineData("18669109999", "866", "9109999")]
+    [InlineData("18669120000", "866", "9120000")]
+    [InlineData("18669999999", "866", "9999999")]
+    [InlineData("18770000000", "877", "0000000")]
+    [InlineData("18779109999", "877", "9109999")]
+    [InlineData("18779120000", "877", "9120000")]
+    [InlineData("18779999999", "877", "9999999")]
+    [InlineData("18880000000", "888", "0000000")]
+    [InlineData("18889109999", "888", "9109999")]
+    [InlineData("18889120000", "888", "9120000")]
+    [InlineData("18889999999", "888", "9999999")]
     public void Parse_Known_NonGeographicPhoneNumber_Freephone(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
