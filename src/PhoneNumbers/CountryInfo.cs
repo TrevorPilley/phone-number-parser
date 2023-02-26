@@ -24,6 +24,7 @@ public sealed partial class CountryInfo
             E164PhoneNumberFormatter.Instance,
             E123PhoneNumberFormatter.Instance,
             NationalPhoneNumberFormatter.Instance,
+            Rfc3966PhoneNumberFormatter.Instance,
         });
 
     /// <summary>
