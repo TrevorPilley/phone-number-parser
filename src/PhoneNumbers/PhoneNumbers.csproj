@@ -20,7 +20,7 @@
     <RepositoryUrl>https://github.com/TrevorPilley/phone-number-parser</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <NeutralLanguage>en-GB</NeutralLanguage>
-    <PackageTags>Phone Number Parser</PackageTags>
+    <PackageTags>Phone Number Parser PhoneNumber E123 E.123 E164 E.164 RFC3966</PackageTags>
     <PackageReleaseNotes>See https://github.com/TrevorPilley/phone-number-parser/releases for a summary of changes made in this release of the package.</PackageReleaseNotes>
   </PropertyGroup>
 
