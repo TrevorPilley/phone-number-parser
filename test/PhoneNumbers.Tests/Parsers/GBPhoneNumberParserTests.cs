@@ -39,7 +39,7 @@ public class GBPhoneNumberParserTests
     public void Parse_Returns_Failure_If_CallingCode_Invalid()
     {
         var result = _parser.Parse("+1111111111");
-        Assert.Equal($"The value must be a United Kingdom phone number starting +44 or 0 and the national significant number of the phone number must be {string.Join(" or ", CountryInfo.UnitedKingdom.NsnLengths)} digits in length.", result.ParseError);
+        Assert.Equal("The national significant number 1111111111 is not a valid United Kingdom phone number.", result.ParseError);
     }
 
     [Theory]
