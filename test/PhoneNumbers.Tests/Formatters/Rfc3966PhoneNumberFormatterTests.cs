@@ -23,7 +23,7 @@ public class Rfc3966PhoneNumberFormatterTests
     public void Format_With_Ndc_And_Sn() =>
         Assert.Equal(
             "tel:+422-12345-667788",
-            RFC3966PhoneNumberFormatter.Instance.Format(TestHelper.CreateNonGeographicPhoneNumber("0", "12345", "667788")));
+            Rfc3966PhoneNumberFormatter.Instance.Format(TestHelper.CreateNonGeographicPhoneNumber("0", "12345", "667788")));
 
     [Fact]
     public void Format_With_Sn() =>
