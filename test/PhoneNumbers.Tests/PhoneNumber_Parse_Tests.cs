@@ -83,6 +83,22 @@ public class PhoneNumber_Parse_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_Canada_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+16137020016");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Canada, phoneNumber.Country);
+    }
+
+    [Fact]
+    public void Parse_Value_CountryCode_For_Canada_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("16137020016", CountryInfo.Canada.Iso3166Code);
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Canada, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_Croatia_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+38517007007");
