@@ -29,6 +29,12 @@ internal sealed class Rfc3966PhoneNumberFormatter : PhoneNumberFormatter
             throw new ArgumentNullException(nameof(phoneNumber));
         }
 
-        return $"tel:{phoneNumber.Country.CallingCode}-{phoneNumber.NationalDestinationCode}-{phoneNumber.SubscriberNumber}";
+        if (phoneNumber.NationalDestinationCode is not null)
+        {
+            return $"tel:{phoneNumber.Country.CallingCode}-{phoneNumber.NationalDestinationCode}-{phoneNumber.SubscriberNumber}";
+        }
+
+        return $"tel:{phoneNumber.Country.CallingCode}-{phoneNumber.SubscriberNumber}";
+
     }
 }
