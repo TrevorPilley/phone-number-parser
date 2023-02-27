@@ -16,6 +16,8 @@ public abstract class PhoneNumber
     /// <param name="nationalSignificantNumber">The national significant number of the phone number.</param>
     /// <param name="nationalDestinationCode">The national destination code of the phone number.</param>
     /// <param name="subscriberNumber">The subscriber number of the phone number.</param>
+    /// <exception cref="ArgumentException">Thrown if the <paramref name="nationalSignificantNumber"/> or <paramref name="subscriberNumber"/> are null or whitespace.</exception>
+    /// <exception cref="ArgumentNullException">Thrown if the <paramref name="countryInfo"/> is null.</exception>
     protected PhoneNumber(
         CountryInfo countryInfo,
         PhoneNumberHint phoneNumberHint,
@@ -79,6 +81,7 @@ public abstract class PhoneNumber
     /// Parses the specified phone number value into a <see cref="PhoneNumber"/> instance based upon its calling code using the default <see cref="ParseOptions"/>.
     /// </summary>
     /// <param name="value">A string containing a phone number in international format (e.g. +XX).</param>
+    /// <exception cref="ParseException">Thrown if the value cannot be successfully parsed into a <see cref="PhoneNumber"/>.</exception>
     /// <returns>A <see cref="PhoneNumber"/> instance representing the specified phone number string value.</returns>
     public static PhoneNumber Parse(string value) =>
         Parse(value, ParseOptions.Default);
@@ -88,6 +91,8 @@ public abstract class PhoneNumber
     /// </summary>
     /// <param name="value">A string containing a phone number in international format (e.g. +XX).</param>
     /// <param name="options">The options for parsing the phone number.</param>
+    /// <exception cref="ArgumentNullException">Thrown if the specified <paramref name="options"/> is null.</exception>
+    /// <exception cref="ParseException">Thrown if the value cannot be successfully parsed into a <see cref="PhoneNumber"/>.</exception>
     /// <returns>A <see cref="PhoneNumber"/> instance representing the specified phone number string value.</returns>
     public static PhoneNumber Parse(string value, ParseOptions options)
     {
@@ -114,6 +119,7 @@ public abstract class PhoneNumber
     /// </summary>
     /// <param name="value">A string containing a phone number.</param>
     /// <param name="countryCode">The ISO 3166 Alpha-2 country code of the country for the phone number.</param>
+    /// <exception cref="ParseException">Thrown if the value cannot be successfully parsed into a <see cref="PhoneNumber"/>.</exception>
     /// <returns>A <see cref="PhoneNumber"/> instance representing the specified phone number string value.</returns>
     public static PhoneNumber Parse(string value, string countryCode) =>
         Parse(value, countryCode, ParseOptions.Default);
@@ -124,6 +130,8 @@ public abstract class PhoneNumber
     /// <param name="value">A string containing a phone number.</param>
     /// <param name="countryCode">The ISO 3166 Alpha-2 country code of the country for the phone number.</param>
     /// <param name="options">The options for parsing the phone number.</param>
+    /// <exception cref="ArgumentNullException">Thrown if the specified <paramref name="options"/> is null.</exception>
+    /// <exception cref="ParseException">Thrown if the value cannot be successfully parsed into a <see cref="PhoneNumber"/>.</exception>
     /// <returns>A <see cref="PhoneNumber"/> instance representing the specified phone number string value.</returns>
     public static PhoneNumber Parse(string value, string countryCode, ParseOptions options)
     {
