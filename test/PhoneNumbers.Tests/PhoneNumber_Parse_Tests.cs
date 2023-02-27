@@ -704,4 +704,20 @@ public class PhoneNumber_Parse_Tests
         Assert.NotNull(phoneNumber);
         Assert.Equal(CountryInfo.UnitedKingdom, phoneNumber.Country);
     }
+
+    [Fact]
+    public void Parse_Value_For_UnitedStates_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+12124841200");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.UnitedStates, phoneNumber.Country);
+    }
+
+    [Fact]
+    public void Parse_Value_CountryCode_For_UnitedStates_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("12124841200", CountryInfo.UnitedStates.Iso3166Code);
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.UnitedStates, phoneNumber.Country);
+    }    
 }
