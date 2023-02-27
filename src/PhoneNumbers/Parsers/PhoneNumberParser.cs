@@ -9,6 +9,7 @@ internal abstract class PhoneNumberParser
     /// Initialises a new instance of the <see cref="PhoneNumberParser"/> class.
     /// </summary>
     /// <param name="countryInfo">The <see cref="CountryInfo"/> of the country for the parser.</param>
+    /// <exception cref="ArgumentNullException">Thrown if <paramref name="countryInfo"/> is null.</exception>
     protected PhoneNumberParser(CountryInfo countryInfo) =>
         Country = countryInfo ?? throw new ArgumentNullException(nameof(countryInfo));
 
