@@ -233,7 +233,7 @@ Papua New Guinea | PG            | +675         |              | Yes        | Ye
 - Within the North American Numbering Plan (covering all countries with the calling code +1):
   - Mobile numbers are geographically assigned and cannot be determined separately from landlines.
   - Freephone numbers (with a few exceptions) are issued from a shared pool. This could mean a Canadian freephone number look up shows as belonging to a different country if parsed from the E.164 format (parsing from the national number format and country code will work as expected).
-  - Phone numbers using the alphabetic mnemonic system (e.g. 123-PHONEME) are not currently supported.
+  - Phone numbers using the alphabetic mnemonic system/alphabetic phone-words (e.g. 123-PHONEME) are not supported.
 
 ## References for number data
 
