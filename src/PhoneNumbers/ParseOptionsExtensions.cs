@@ -9,6 +9,7 @@ public static class ParseOptionsExtensions
     /// Allows the <see cref="ParseOptions"/> instance to include countries in Africa.
     /// </summary>
     /// <param name="parseOptions">The <see cref="ParseOptions"/> instance to update.</param>
+    /// <exception cref="ArgumentNullException">Thrown if the specified <paramref name="parseOptions"/> is null.</exception>
     /// <returns>The updated <see cref="ParseOptions"/>.</returns>
     public static ParseOptions AllowAfricanCountries(this ParseOptions parseOptions)
         => AllowCountries(parseOptions, CountryInfo.Africa);
@@ -17,6 +18,7 @@ public static class ParseOptionsExtensions
     /// Allows the <see cref="ParseOptions"/> instance to include countries in Asia.
     /// </summary>
     /// <param name="parseOptions">The <see cref="ParseOptions"/> instance to update.</param>
+    /// <exception cref="ArgumentNullException">Thrown if the specified <paramref name="parseOptions"/> is null.</exception>
     /// <returns>The updated <see cref="ParseOptions"/>.</returns>
     public static ParseOptions AllowAsianCountries(this ParseOptions parseOptions)
         => AllowCountries(parseOptions, CountryInfo.Asia);
@@ -25,6 +27,7 @@ public static class ParseOptionsExtensions
     /// Allows the <see cref="ParseOptions"/> instance to include countries in Europe.
     /// </summary>
     /// <param name="parseOptions">The <see cref="ParseOptions"/> instance to update.</param>
+    /// <exception cref="ArgumentNullException">Thrown if the specified <paramref name="parseOptions"/> is null.</exception>
     /// <returns>The updated <see cref="ParseOptions"/>.</returns>
     public static ParseOptions AllowEuropeanCountries(this ParseOptions parseOptions)
         => AllowCountries(parseOptions, CountryInfo.Europe);
@@ -33,6 +36,7 @@ public static class ParseOptionsExtensions
     /// Allows the <see cref="ParseOptions"/> instance to include countries in North America.
     /// </summary>
     /// <param name="parseOptions">The <see cref="ParseOptions"/> instance to update.</param>
+    /// <exception cref="ArgumentNullException">Thrown if the specified <paramref name="parseOptions"/> is null.</exception>
     /// <returns>The updated <see cref="ParseOptions"/>.</returns>
     public static ParseOptions AllowNorthAmericanCountries(this ParseOptions parseOptions)
         => AllowCountries(parseOptions, CountryInfo.NorthAmerica);
@@ -41,6 +45,7 @@ public static class ParseOptionsExtensions
     /// Allows the <see cref="ParseOptions"/> instance to include countries in Oceania.
     /// </summary>
     /// <param name="parseOptions">The <see cref="ParseOptions"/> instance to update.</param>
+    /// <exception cref="ArgumentNullException">Thrown if the specified <paramref name="parseOptions"/> is null.</exception>
     /// <returns>The updated <see cref="ParseOptions"/>.</returns>
     public static ParseOptions AllowOceanianCountries(this ParseOptions parseOptions)
         => AllowCountries(parseOptions, CountryInfo.Oceania);

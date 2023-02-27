@@ -93,6 +93,11 @@ public sealed partial class CountryInfo
     /// </summary>
     internal bool RequireNdcForLocalGeographicDialling { get; init; } = true;
 
+    /// <summary>
+    /// Gets the <see cref="PhoneNumberFormatter"/> for the specified format.
+    /// </summary>
+    /// <exception cref="FormatException">Thrown if the format string is not valid.</exception>
+    /// <returns>The <see cref="PhoneNumberFormatter"/>.</returns>
     internal PhoneNumberFormatter GetFormatter(string format) =>
         s_formatters.SingleOrDefault(x => x.CanFormat(format)) ?? throw new FormatException($"{format} is not a supported format");
 
@@ -104,6 +109,11 @@ public sealed partial class CountryInfo
     internal bool HasCallingCode(string value) =>
         value?.IndexOf(CallingCode, StringComparison.Ordinal) >= 0;
 
+    /// <summary>
+    /// Gets a value indicating whether the specified value has a length equal to a valid national significant number (NSN) for this country.
+    /// </summary>
+    /// <param name="value">A string containing a phone number.</param>
+    /// <returns>True if the value has a valid length for this country, otherwise false.</returns>
     internal bool IsValidNsnLength(string value) =>
         NsnLengths.Contains(value.Length);
 
