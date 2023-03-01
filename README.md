@@ -5,8 +5,8 @@
 A library for parsing phone numbers, with builds for:
 
 - .NET 7.0
-- .NET Standard 2.1
-- .NET Standard 2.0
+- .NET Standard 2.1 - _supports .NET Core 3.0 or later and .NET 5.0 or later_
+- .NET Standard 2.0 - _supports .NET Framework 4.6.2 or later (.NET Framework projects will need to be built with C# 9.0 or later)_
 
 This library provides a number of benefits over a regular expression, for example greater validity of phone numbers including national destination codes (area codes) and subscriber numbers based upon published numbering plans for each country. Additional attributes such as the kind of phone number (Mobile, Geographic or Non-Geographic) are also included. All parsing is performed locally within the library using embedded in-memory data files.
 
