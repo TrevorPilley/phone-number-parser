@@ -8,6 +8,82 @@ public class DefaultPhoneNumberParserTests_US_NonGeographicPhoneNumber
     private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.UnitedStates);
 
     [Theory]
+    [InlineData("15002000000", "500", "2000000")]
+    [InlineData("15009999999", "500", "9999999")]
+    [InlineData("15212000000", "521", "2000000")]
+    [InlineData("15219999999", "521", "9999999")]
+    [InlineData("15292000000", "529", "2000000")]
+    [InlineData("15299999999", "529", "9999999")]
+    [InlineData("15332000000", "533", "2000000")]
+    [InlineData("15339999999", "533", "9999999")]
+    [InlineData("15442000000", "544", "2000000")]
+    [InlineData("15449999999", "544", "9999999")]
+    [InlineData("15662000000", "566", "2000000")]
+    [InlineData("15669999999", "566", "9999999")]
+    [InlineData("15772000000", "577", "2000000")]
+    [InlineData("15779999999", "577", "9999999")]
+    [InlineData("15882000000", "588", "2000000")]
+    [InlineData("15889999999", "588", "9999999")]
+    public void Parse_Known_NonGeographicPhoneNumber_5XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
+    {
+        var parseResult = s_parser.Parse(value);
+        parseResult.ThrowIfFailure();
+
+        var phoneNumber = parseResult.PhoneNumber;
+
+        Assert.NotNull(phoneNumber);
+        Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
+
+        var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
+        Assert.Equal(CountryInfo.UnitedStates, nonGeographicPhoneNumber.Country);
+        Assert.False(nonGeographicPhoneNumber.IsFreephone);
+        Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
+        Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
+        Assert.False(nonGeographicPhoneNumber.IsSharedCost);
+        Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
+        Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
+    }
+
+    [Theory]
+    [InlineData("17102000000", "710", "2000000")]
+    [InlineData("17102109999", "710", "2109999")]
+    [InlineData("17102120000", "710", "2120000")]
+    [InlineData("17103109999", "710", "3109999")]
+    [InlineData("17103120000", "710", "3120000")]
+    [InlineData("17104109999", "710", "4109999")]
+    [InlineData("17104120000", "710", "4120000")]
+    [InlineData("17105109999", "710", "5109999")]
+    [InlineData("17105120000", "710", "5120000")]
+    [InlineData("17106109999", "710", "6109999")]
+    [InlineData("17106120000", "710", "6120000")]
+    [InlineData("17107109999", "710", "7109999")]
+    [InlineData("17107120000", "710", "7120000")]
+    [InlineData("17108109999", "710", "8109999")]
+    [InlineData("17108120000", "710", "8120000")]
+    [InlineData("17109109999", "710", "9109999")]
+    [InlineData("17109120000", "710", "9120000")]
+    [InlineData("17109999999", "710", "9999999")]
+    public void Parse_Known_NonGeographicPhoneNumber_7XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
+    {
+        var parseResult = s_parser.Parse(value);
+        parseResult.ThrowIfFailure();
+
+        var phoneNumber = parseResult.PhoneNumber;
+
+        Assert.NotNull(phoneNumber);
+        Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
+
+        var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
+        Assert.Equal(CountryInfo.UnitedStates, nonGeographicPhoneNumber.Country);
+        Assert.False(nonGeographicPhoneNumber.IsFreephone);
+        Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
+        Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
+        Assert.False(nonGeographicPhoneNumber.IsSharedCost);
+        Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
+        Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
+    }
+
+    [Theory]
     [InlineData("18000000000", "800", "0000000")]
     [InlineData("18002709999", "800", "2709999")]
     [InlineData("18002720000", "800", "2720000")]
