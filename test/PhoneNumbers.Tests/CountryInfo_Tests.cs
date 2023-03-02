@@ -34,6 +34,7 @@ public class CountryInfo_Tests
     [InlineData("+422 (0) 123 456 78")]
     [InlineData("+422 (0) 123-456-78")]
     [InlineData("+422 (0) 123.456.78")]
+    [InlineData("+422 (0) 123/456/78")]
     [InlineData("tel:+422-123-456-78")]
     public void HasCallingCode_True(string value) =>
         Assert.True(TestHelper.CreateCountryInfo().HasCallingCode(value));
@@ -59,6 +60,9 @@ public class CountryInfo_Tests
     [InlineData("(0) 123 456 78")]
     [InlineData("(0) 123-456-78")]
     [InlineData("(0) 123.456.78")]
+    [InlineData("(0) 123/456/78")]
+    [InlineData("A sentence containing a valid international formatted number +42212345678 within it.")]
+    [InlineData("A sentence containing a valid national formatted number (0123) 45678 within it.")]
     public void ReadNationalSignificantNumber_With_TrunkPrefix(string value) =>
         Assert.Equal("12345678", TestHelper.CreateCountryInfo(trunkPrefix: "0").ReadNationalSignificantNumber(value));
 
@@ -76,6 +80,9 @@ public class CountryInfo_Tests
     [InlineData("(06) 166 80666")]
     [InlineData("(06) 166-80666")]
     [InlineData("(06) 166.80666")]
+    [InlineData("(06) 166/80666")]
+    [InlineData("A sentence containing a valid international formatted number +42216680666 within it.")]
+    [InlineData("A sentence containing a valid national formatted number (06166) 80666 within it.")]
     public void ReadNationalSignificantNumber_With_TrunkPrefix_MultiDigit(string value) =>
         Assert.Equal("16680666", TestHelper.CreateCountryInfo(trunkPrefix: "06").ReadNationalSignificantNumber(value));
 
@@ -90,6 +97,9 @@ public class CountryInfo_Tests
     [InlineData("123 456 78")]
     [InlineData("123-456-78")]
     [InlineData("123.456.78")]
+    [InlineData("123/456/78")]
+    [InlineData("A sentence containing a valid international formatted number +42212345678 within it.")]
+    [InlineData("A sentence containing a valid national formatted number 123 45678 within it.")]
     public void ReadNationalSignificantNumber_Without_TrunkPrefix(string value) =>
         Assert.Equal("12345678", TestHelper.CreateCountryInfo(trunkPrefix: null).ReadNationalSignificantNumber(value));
 
