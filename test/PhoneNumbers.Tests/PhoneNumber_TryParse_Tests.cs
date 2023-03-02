@@ -706,6 +706,22 @@ public class PhoneNumber_TryParse_Tests
     }
 
     [Fact]
+    public void TryParse_Value_For_UnitedStates_CallingCode()
+    {
+        Assert.True(PhoneNumber.TryParse("+12124841200", out PhoneNumber phoneNumber));
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.UnitedStates, phoneNumber.Country);
+    }
+
+    [Fact]
+    public void TryParse_Value_CountryCode_For_UnitedStates_CallingCode()
+    {
+        Assert.True(PhoneNumber.TryParse("12124841200", CountryInfo.UnitedStates.Iso3166Code, out var phoneNumber));
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.UnitedStates, phoneNumber.Country);
+    }
+
+    [Fact]
     public void TryParse_Value_With_CallingCode_Any_Country()
     {
         Assert.True(PhoneNumber.TryParse("+442079813000", out IEnumerable<PhoneNumber> phoneNumbers));

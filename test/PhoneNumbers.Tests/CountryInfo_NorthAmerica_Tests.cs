@@ -21,4 +21,23 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.True(countryInfo.SharesCallingCode);
         Assert.Equal("1", countryInfo.TrunkPrefix);
     }
+
+    [Fact]
+    public void CountryInfo_UnitedStates()
+    {
+        Assert.Same(CountryInfo.UnitedStates, CountryInfo.UnitedStates);
+
+        var countryInfo = CountryInfo.UnitedStates;
+
+        Assert.Equal("+1", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
+        Assert.True(countryInfo.HasNationalDestinationCodes);
+        Assert.Equal("011", countryInfo.InternationalCallPrefix);
+        Assert.Equal("US", countryInfo.Iso3166Code);
+        Assert.Equal("United States", countryInfo.Name);
+        Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
+        Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.False(countryInfo.SharesCallingCode);
+    }
 }

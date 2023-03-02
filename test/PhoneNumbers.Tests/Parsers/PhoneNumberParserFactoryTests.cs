@@ -184,6 +184,10 @@ public class PhoneNumberParserFactoryTests
         Assert.IsType<GBPhoneNumberParser>(_factory.GetParser(CountryInfo.UnitedKingdom));
 
     [Fact]
+    public void GetParser_For_CountryInfo_UnitedStates_Returns_DefaultPhoneNumberParser() =>
+        Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(CountryInfo.UnitedStates));
+
+    [Fact]
     public void GetParser_Returns_Same_Instance() =>
         Assert.Same(_factory.GetParser(CountryInfo.UnitedKingdom), _factory.GetParser(CountryInfo.UnitedKingdom));
 }
