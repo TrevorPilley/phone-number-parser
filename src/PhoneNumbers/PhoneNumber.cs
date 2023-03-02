@@ -111,7 +111,7 @@ public abstract class PhoneNumber
             }
         }
 
-        throw new ParseException("Parse(value) only supports a value starting with a supported calling code, otherwise Parse(value, countryCode) must be used.");
+        throw new ParseException("Parse(value) only supports a value starting with a supported international calling code (e.g. +44), otherwise Parse(value, countryCode) must be used.");
     }
 
     /// <summary>
