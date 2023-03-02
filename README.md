@@ -216,6 +216,7 @@ United Kingdom | GB            | +44          | 0            | Yes        | Yes 
 Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
 ---            | ---           | ---          | ---          | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
 Canada         | CA            | +1           | 1            | Yes        |        |                        |                    |                      | Yes            | Yes *                          | Yes                               |                                  |
+United States  | US            | +1           | 1            | Yes        |        |                        |                    |                      | Yes            | Yes *                          | Yes                               |                                  |
 
 ### Oceania
 
@@ -232,3 +233,5 @@ Papua New Guinea | PG            | +675         |              | Yes        | Ye
 - Within the North American Numbering Plan (covering all countries with the calling code +1):
   - Mobile numbers are geographically assigned and cannot be determined separately from landlines.
   - Freephone numbers (with a few exceptions) are issued from a shared pool. This could mean a Canadian freephone number look up shows as belonging to a different country if parsed from the E.164 format (parsing from the national number format and country code will work as expected).
+  - Phone numbers using the alphabetic mnemonic system/alphabetic phone-words (e.g. 123-PHONEME) are not supported.
+  - The area name for geographic numbers is resolved at the state/region level, not at city level.
