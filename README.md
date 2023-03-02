@@ -57,7 +57,7 @@ PhoneNumber.TryParse("+442079813000", out PhoneNumber phoneNumber);
 // Specify the ISO 3166 Alpha-2 code for the country as the second parameter.
 PhoneNumber.TryParse("01142726444", "GB", out PhoneNumber phoneNumber);
 
-// The phone number string is not in international format but the country code is not known:
+// The phone number string is not in international format and the country code is not known:
 PhoneNumber.TryParse("02079813000", out IEnumerable<PhoneNumber> phoneNumbers);
 ```
 
