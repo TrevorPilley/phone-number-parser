@@ -88,7 +88,6 @@ geographicPhoneNumber.GeographicArea;           // Sheffield
 
 // If PhoneNumberKind.MobilePhoneNumber
 var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
-mobilePhoneNumber.IsDataOnly;                   // true/false (obsolete)
 mobilePhoneNumber.IsPager;                      // true/false
 mobilePhoneNumber.IsVirtual;                    // true/false
 
@@ -162,19 +161,19 @@ The library currently supports parsing phone numbers for the following countries
 
 ### Africa
 
-Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
----            | ---           | ---          | ---          | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
-Egypt          | EG            | +20          | 0            | Yes        | Yes    |                        |                    |                      |                | Yes                            | Yes                               |                                  |
-Nigeria        | NG            | +234         | 0            | Yes        | Yes    |                        |                    |                      |                |                                |                                   |                                  |
-South Africa   | Za            | +27          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               | Yes                              | Yes
+Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
+---            | ---           | ---          | ---          | :-:        | :-:    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
+Egypt          | EG            | +20          | 0            | Yes        | Yes    |                    |                      |                | Yes                            | Yes                               |                                  |
+Nigeria        | NG            | +234         | 0            | Yes        | Yes    |                    |                      |                |                                |                                   |                                  |
+South Africa   | Za            | +27          | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               | Yes                              | Yes
 
 ### Asia
 
-Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
----            | ---           | ---          | ---          | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
-Hong Kong      | HK            | +852         |              |            | Yes    |                        |                    | Yes                  | Yes            | Yes                            |                                   |                                  | Yes
-Macau          | MO            | +853         |              |            | Yes    |                        |                    |                      | Yes            |                                |                                   |                                  |
-Singapore      | SG            | +65          |              |            | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  |
+Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
+---            | ---           | ---          | ---          | :-:        | :-:    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
+Hong Kong      | HK            | +852         |              |            | Yes    |                    | Yes                  | Yes            | Yes                            |                                   |                                  | Yes
+Macau          | MO            | +853         |              |            | Yes    |                    |                      | Yes            |                                |                                   |                                  |
+Singapore      | SG            | +65          |              |            | Yes    |                    |                      | Yes            | Yes                            | Yes                               |                                  |
 
 ### Europe
 

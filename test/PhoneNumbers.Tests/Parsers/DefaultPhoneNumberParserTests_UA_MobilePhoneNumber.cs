@@ -34,7 +34,6 @@ public class DefaultPhoneNumberParserTests_UA_MobilePhoneNumber
 
         var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
         Assert.Equal(CountryInfo.Ukraine, mobilePhoneNumber.Country);
-        Assert.False(mobilePhoneNumber.IsDataOnly);
         Assert.False(mobilePhoneNumber.IsPager);
         Assert.False(mobilePhoneNumber.IsVirtual);
         Assert.Equal(NationalDestinationCode, mobilePhoneNumber.NationalDestinationCode);

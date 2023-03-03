@@ -30,7 +30,6 @@ public class DefaultPhoneNumberParserTests_SM_MobilePhoneNumber
 
         var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
         Assert.Equal(CountryInfo.SanMarino, mobilePhoneNumber.Country);
-        Assert.False(mobilePhoneNumber.IsDataOnly);
         Assert.False(mobilePhoneNumber.IsPager);
         Assert.False(mobilePhoneNumber.IsVirtual);
         Assert.Null(mobilePhoneNumber.NationalDestinationCode);
