@@ -41,13 +41,6 @@ public class DefaultPhoneNumberParserTests_CountryNumbers_WithNationalDestinatio
                 },
                 new CountryNumber
                 {
-                    NationalDestinationCodeRanges = new[] { NumberRange.Create("70") },
-                    SubscriberNumberRanges = new[] { NumberRange.Create("11000-11999") },
-                    Kind = PhoneNumberKind.MobilePhoneNumber,
-                    Hint = PhoneNumberHint.Data,
-                },
-                new CountryNumber
-                {
                     NationalDestinationCodeRanges = new[] { NumberRange.Create("71") },
                     SubscriberNumberRanges = new[] { NumberRange.Create("12000-12999") },
                     Kind = PhoneNumberKind.MobilePhoneNumber,
@@ -141,27 +134,9 @@ public class DefaultPhoneNumberParserTests_CountryNumbers_WithNationalDestinatio
         var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
         Assert.Equal("70", mobilePhoneNumber.NationalDestinationCode);
         Assert.Equal(_countryInfo, mobilePhoneNumber.Country);
-        Assert.False(mobilePhoneNumber.IsDataOnly);
         Assert.False(mobilePhoneNumber.IsPager);
         Assert.False(mobilePhoneNumber.IsVirtual);
         Assert.Equal("10000", mobilePhoneNumber.SubscriberNumber);
-        Assert.Equal(PhoneNumberKind.MobilePhoneNumber, mobilePhoneNumber.PhoneNumberKind);
-    }
-
-    [Fact]
-    public void Parse_MobilePhoneNumber_Data()
-    {
-        var phoneNumber = _parser.Parse("7011000").PhoneNumber;
-        Assert.NotNull(phoneNumber);
-        Assert.IsType<MobilePhoneNumber>(phoneNumber);
-
-        var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
-        Assert.Equal("70", mobilePhoneNumber.NationalDestinationCode);
-        Assert.Equal(_countryInfo, mobilePhoneNumber.Country);
-        Assert.True(mobilePhoneNumber.IsDataOnly);
-        Assert.False(mobilePhoneNumber.IsPager);
-        Assert.False(mobilePhoneNumber.IsVirtual);
-        Assert.Equal("11000", mobilePhoneNumber.SubscriberNumber);
         Assert.Equal(PhoneNumberKind.MobilePhoneNumber, mobilePhoneNumber.PhoneNumberKind);
     }
 
@@ -175,7 +150,6 @@ public class DefaultPhoneNumberParserTests_CountryNumbers_WithNationalDestinatio
         var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
         Assert.Equal("71", mobilePhoneNumber.NationalDestinationCode);
         Assert.Equal(_countryInfo, mobilePhoneNumber.Country);
-        Assert.False(mobilePhoneNumber.IsDataOnly);
         Assert.True(mobilePhoneNumber.IsPager);
         Assert.False(mobilePhoneNumber.IsVirtual);
         Assert.Equal("12000", mobilePhoneNumber.SubscriberNumber);
@@ -192,7 +166,6 @@ public class DefaultPhoneNumberParserTests_CountryNumbers_WithNationalDestinatio
         var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
         Assert.Equal("72", mobilePhoneNumber.NationalDestinationCode);
         Assert.Equal(_countryInfo, mobilePhoneNumber.Country);
-        Assert.False(mobilePhoneNumber.IsDataOnly);
         Assert.False(mobilePhoneNumber.IsPager);
         Assert.True(mobilePhoneNumber.IsVirtual);
         Assert.Equal("13000", mobilePhoneNumber.SubscriberNumber);
