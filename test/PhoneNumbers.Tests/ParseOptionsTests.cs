@@ -59,6 +59,18 @@ public class ParseOptionsTests
         Assert.True(parseOptions.Countries.Count > 0);
         Assert.All(parseOptions.Countries, x => Assert.Equal(CountryInfo.Oceania, x.Continent));
     }
+
+    [Fact]
+    public void AllowSouthAmericanCountries()
+    {
+        var parseOptions = new ParseOptions();
+        parseOptions.Countries.Clear();
+        parseOptions.AllowSouthAmericanCountries();
+
+        Assert.True(parseOptions.Countries.Count > 0);
+        Assert.All(parseOptions.Countries, x => Assert.Equal(CountryInfo.SouthAmerica, x.Continent));
+    }
+
     [Fact]
     public void Default()
     {
