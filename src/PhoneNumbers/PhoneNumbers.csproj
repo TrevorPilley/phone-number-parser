@@ -23,6 +23,7 @@
     <PackageTags>Phone Number Parser PhoneNumber E123 E.123 E164 E.164 RFC3966</PackageTags>
     <PackageReleaseNotes>See https://github.com/TrevorPilley/phone-number-parser/releases for a summary of changes made in this release of the package.</PackageReleaseNotes>
     <PackageIcon>icon.png</PackageIcon>
+    <PackageReadmeFile>NuGet.md</PackageReadmeFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)'=='Debug'">
@@ -144,5 +145,9 @@
     <EmbeddedResource Include="DataFiles\US.txt" />
     <EmbeddedResource Include="DataFiles\XK.txt" />
     <EmbeddedResource Include="DataFiles\ZA.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="NuGet.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 </Project>
