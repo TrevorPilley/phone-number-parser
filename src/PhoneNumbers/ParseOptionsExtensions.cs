@@ -50,6 +50,15 @@ public static class ParseOptionsExtensions
     public static ParseOptions AllowOceanianCountries(this ParseOptions parseOptions)
         => AllowCountries(parseOptions, CountryInfo.Oceania);
 
+    /// <summary>
+    /// Allows the <see cref="ParseOptions"/> instance to include countries in South America.
+    /// </summary>
+    /// <param name="parseOptions">The <see cref="ParseOptions"/> instance to update.</param>
+    /// <exception cref="ArgumentNullException">Thrown if the specified <paramref name="parseOptions"/> is null.</exception>
+    /// <returns>The updated <see cref="ParseOptions"/>.</returns>
+    public static ParseOptions AllowSouthAmericanCountries(this ParseOptions parseOptions)
+        => AllowCountries(parseOptions, CountryInfo.SouthAmerica);
+
     private static ParseOptions AllowCountries(ParseOptions parseOptions, string continent)
     {
         if (parseOptions is null)
