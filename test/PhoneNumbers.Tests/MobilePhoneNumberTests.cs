@@ -3,29 +3,12 @@ namespace PhoneNumbers.Tests;
 public class MobilePhoneNumberTests
 {
     [Fact]
-    public void Constructor_Sets_Properties_Data()
-    {
-        var countryInfo = TestHelper.CreateCountryInfo();
-        var phoneNumber = new MobilePhoneNumber(countryInfo, PhoneNumberHint.Data, "7654112233", "7654", "112233");
-
-        Assert.Equal(countryInfo, phoneNumber.Country);
-        Assert.True(phoneNumber.IsDataOnly);
-        Assert.False(phoneNumber.IsPager);
-        Assert.False(phoneNumber.IsVirtual);
-        Assert.Equal(PhoneNumberKind.MobilePhoneNumber, phoneNumber.PhoneNumberKind);
-        Assert.Equal("7654", phoneNumber.NationalDestinationCode);
-        Assert.Equal("7654112233", phoneNumber.NationalSignificantNumber);
-        Assert.Equal("112233", phoneNumber.SubscriberNumber);
-    }
-
-    [Fact]
     public void Constructor_Sets_Properties_Pager()
     {
         var countryInfo = TestHelper.CreateCountryInfo();
         var phoneNumber = new MobilePhoneNumber(countryInfo, PhoneNumberHint.Pager, "7654112233", "7654", "112233");
 
         Assert.Equal(countryInfo, phoneNumber.Country);
-        Assert.False(phoneNumber.IsDataOnly);
         Assert.True(phoneNumber.IsPager);
         Assert.False(phoneNumber.IsVirtual);
         Assert.Equal(PhoneNumberKind.MobilePhoneNumber, phoneNumber.PhoneNumberKind);
@@ -40,7 +23,6 @@ public class MobilePhoneNumberTests
         var phoneNumber = new MobilePhoneNumber(countryInfo, PhoneNumberHint.Virtual, "7654112233", "7654", "112233");
 
         Assert.Equal(countryInfo, phoneNumber.Country);
-        Assert.False(phoneNumber.IsDataOnly);
         Assert.False(phoneNumber.IsPager);
         Assert.True(phoneNumber.IsVirtual);
         Assert.Equal(PhoneNumberKind.MobilePhoneNumber, phoneNumber.PhoneNumberKind);
@@ -171,13 +153,5 @@ public class MobilePhoneNumberTests
         Assert.False(phoneNumber1.Equals(phoneNumber4));
         Assert.False(phoneNumber1 == phoneNumber4);
         Assert.True(phoneNumber1 != phoneNumber4);
-
-        // change hint
-        var phoneNumber5 = new MobilePhoneNumber(CountryInfo.UnitedKingdom, PhoneNumberHint.Data, "7654112233", "7654", "112233");
-
-        Assert.NotEqual(phoneNumber1, phoneNumber5);
-        Assert.False(phoneNumber1.Equals(phoneNumber5));
-        Assert.False(phoneNumber1 == phoneNumber5);
-        Assert.True(phoneNumber1 != phoneNumber5);
     }
 }
