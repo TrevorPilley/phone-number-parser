@@ -36,7 +36,6 @@ public class DefaultPhoneNumberParserTests_IM_MobilePhoneNumber
 
         var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
         Assert.Equal(CountryInfo.IsleOfMan, mobilePhoneNumber.Country);
-        Assert.False(mobilePhoneNumber.IsDataOnly);
         Assert.False(mobilePhoneNumber.IsPager);
         Assert.False(mobilePhoneNumber.IsVirtual);
         Assert.Equal(NationalDestinationCode, mobilePhoneNumber.NationalDestinationCode);
