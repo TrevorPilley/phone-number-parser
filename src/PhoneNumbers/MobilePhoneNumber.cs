@@ -24,14 +24,6 @@ public sealed class MobilePhoneNumber : PhoneNumber, IEquatable<MobilePhoneNumbe
     }
 
     /// <summary>
-    /// The mobile number is likely for a data only plan (e.g. a 3G/LTE laptop or tablet, or mobile broadband).
-    /// </summary>
-    /// <remarks>This is an indication only based upon the data available for each country.</remarks>
-    [Obsolete("This property is no longer supported and will be removed in version 3.0 of the library")]
-    public bool IsDataOnly =>
-        Hint == PhoneNumberHint.Data;
-
-    /// <summary>
     /// The mobile number is likely for a pager.
     /// </summary>
     /// <remarks>This is an indication only based upon the data available for each country.</remarks>

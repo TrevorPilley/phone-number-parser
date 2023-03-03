@@ -25,7 +25,6 @@ internal static class ResourceUtility
         {
             '\0' => PhoneNumberHint.None,
             'C' => PhoneNumberHint.ClosedDialling,
-            'D' => PhoneNumberHint.Data,
             'F' => PhoneNumberHint.Freephone,
             'M' => PhoneNumberHint.MachineToMachine,
             'P' => PhoneNumberHint.Pager,

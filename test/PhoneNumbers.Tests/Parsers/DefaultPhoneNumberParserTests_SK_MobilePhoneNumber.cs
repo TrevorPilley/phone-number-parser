@@ -40,7 +40,6 @@ public class DefaultPhoneNumberParserTests_SK_MobilePhoneNumber
 
         var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
         Assert.Equal(CountryInfo.Slovakia, mobilePhoneNumber.Country);
-        Assert.False(mobilePhoneNumber.IsDataOnly);
         Assert.False(mobilePhoneNumber.IsPager);
         Assert.False(mobilePhoneNumber.IsVirtual);
         Assert.Equal(NationalDestinationCode, mobilePhoneNumber.NationalDestinationCode);
@@ -62,7 +61,6 @@ public class DefaultPhoneNumberParserTests_SK_MobilePhoneNumber
 
         var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
         Assert.Equal(CountryInfo.Slovakia, mobilePhoneNumber.Country);
-        Assert.False(mobilePhoneNumber.IsDataOnly);
         Assert.True(mobilePhoneNumber.IsPager);
         Assert.False(mobilePhoneNumber.IsVirtual);
         Assert.Equal(NationalDestinationCode, mobilePhoneNumber.NationalDestinationCode);

@@ -17,11 +17,6 @@ public enum PhoneNumberHint
     ClosedDialling,
 
     /// <summary>
-    /// The number is likely for a data only plan (e.g. a 3G/LTE laptop or tablet).
-    /// </summary>
-    Data,
-
-    /// <summary>
     /// The number is likely a virtual number.
     /// </summary>
     Virtual,
