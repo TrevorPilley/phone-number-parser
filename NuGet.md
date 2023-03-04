@@ -1,6 +1,6 @@
 # Phone Number Parser
 
-A library for parsing phone numbers providing a number of benefits over a regular expression. For example greater validity of phone numbers including national destination codes (area codes) and subscriber numbers based upon published numbering plans for each country. Additional attributes such as the kind of phone number (Mobile, Geographic or Non-Geographic) are also included, and all parsing is performed locally within the library using embedded in-memory data files.
+A library for parsing phone numbers, providing a number of benefits over a regular expression. For example greater validity of phone numbers including national destination codes (area codes) and subscriber numbers based upon published numbering plans for each country. Additional attributes such as the kind of phone number (Mobile, Geographic or Non-Geographic) are also included, and all parsing is performed locally within the library using embedded in-memory data files.
 
 ```csharp
 using PhoneNumbers;
