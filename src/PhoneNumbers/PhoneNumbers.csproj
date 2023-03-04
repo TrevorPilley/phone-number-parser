@@ -148,6 +148,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="NuGet.md" Pack="true" PackagePath="\"/>
+    <None Include="../../icon.png" Pack="true" PackagePath="\"/>
+    <None Include="../../NuGet.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 </Project>
