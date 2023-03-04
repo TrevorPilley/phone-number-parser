@@ -98,7 +98,7 @@ public sealed partial class CountryInfo
     /// </summary>
     /// <exception cref="FormatException">Thrown if the format string is not valid.</exception>
     /// <returns>The <see cref="PhoneNumberFormatter"/>.</returns>
-    internal PhoneNumberFormatter GetFormatter(string format) =>
+    internal static PhoneNumberFormatter GetFormatter(string format) =>
         s_formatters.SingleOrDefault(x => x.CanFormat(format)) ?? throw new FormatException($"{format} is not a supported format");
 
     /// <summary>
