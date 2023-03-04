@@ -57,4 +57,4 @@ jobs:
 
       - name: dotnet pack
         if: github.ref_name == 'main'
-        run: dotnet pack --no-build --configuration ${{ env.PROJECT_CONFIGURATION }}
+        run: dotnet pack --no-build --configuration ${{ env.PROJECT_CONFIGURATION }} /p:ContinuousIntegrationBuild=true
