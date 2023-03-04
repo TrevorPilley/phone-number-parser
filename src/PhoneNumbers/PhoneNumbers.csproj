@@ -24,6 +24,7 @@
     <PackageReleaseNotes>See https://github.com/TrevorPilley/phone-number-parser/releases for a summary of changes made in this release of the package.</PackageReleaseNotes>
     <PackageIcon>icon.png</PackageIcon>
     <PackageReadmeFile>NuGet.md</PackageReadmeFile>
+    <RepositoryCommit>/<RepositoryCommit>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)'=='Debug'">
