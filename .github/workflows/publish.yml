@@ -85,7 +85,7 @@ jobs:
        run: |
          $date = Get-Date -Format "yyyyMMdd"
          $projVersion = ([xml](Get-Content ${{ env.PROJECT_PATH }})) | Select-Xml -XPath "//Project/PropertyGroup[1]/Version"
-         dotnet pack --no-build --configuration ${{ env.PROJECT_CONFIGURATION }} -p:PackageVersion="${{ env.RELEASE_VERSION }}-preview$date.${{ github.run_number }}"
+         dotnet pack --no-build --configuration ${{ env.PROJECT_CONFIGURATION }} /p:ContinuousIntegrationBuild=true -p:PackageVersion="${{ env.RELEASE_VERSION }}-preview$date.${{ github.run_number }}"
        shell: pwsh
 
      - name: dotnet nuget push
