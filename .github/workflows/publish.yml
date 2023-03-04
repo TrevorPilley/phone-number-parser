@@ -45,7 +45,7 @@ jobs:
        uses: actions/setup-dotnet@v3
        with:
         dotnet-version: 7.0.x
-
+    
      - name: Set release version
        if: github.ref_type == 'tag'
        run: echo "RELEASE_VERSION=$(echo ${GITHUB_REF:10})" >> $GITHUB_ENV
@@ -59,6 +59,9 @@ jobs:
          $xml = [xml](Get-Content '${{ env.PROJECT_PATH }}')
          $xml.SelectNodes("//Project/PropertyGroup[1]/Version") | % {
            $_."#text" = $_."#text".Replace("1.0.0", "${{ env.RELEASE_VERSION }}")
+         }
+         $xml.SelectNodes("//Project/PropertyGroup[1]/RepositoryCommit") | % {
+           $_."#text" = $_."#text".Replace("", "${{ github.sha }}")
          }
 
          $xml.Save('${{ env.PROJECT_PATH }}')
