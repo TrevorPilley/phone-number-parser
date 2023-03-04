@@ -50,11 +50,10 @@ jobs:
         run: dotnet restore
 
       - name: dotnet build
-        run: dotnet build --configuration ${{ env.PROJECT_CONFIGURATION }} --no-restore
+        run: dotnet build --configuration ${{ env.PROJECT_CONFIGURATION }} --no-restore /p:ContinuousIntegrationBuild=true
 
       - name: dotnet test
         run: dotnet test --no-restore --verbosity minimal
 
       - name: dotnet pack
-        if: github.ref_name == 'main'
         run: dotnet pack --no-build --configuration ${{ env.PROJECT_CONFIGURATION }}

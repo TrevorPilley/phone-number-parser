@@ -60,6 +60,9 @@ jobs:
          $xml.SelectNodes("//Project/PropertyGroup[1]/Version") | % {
            $_."#text" = $_."#text".Replace("1.0.0", "${{ env.RELEASE_VERSION }}")
          }
+         $xml.SelectNodes("//Project/PropertyGroup[1]/RepositoryCommit") | % {
+           $_."#text" = $_."#text".Replace("sha", "${{ github.sha }}")
+         }
 
          $xml.Save('${{ env.PROJECT_PATH }}')
        shell: pwsh
@@ -68,7 +71,7 @@ jobs:
        run: dotnet restore
 
      - name: dotnet build
-       run: dotnet build --configuration ${{ env.PROJECT_CONFIGURATION }} --no-restore
+       run: dotnet build --configuration ${{ env.PROJECT_CONFIGURATION }} --no-restore /p:ContinuousIntegrationBuild=true
 
      - name: dotnet test
        run: dotnet test --no-restore --verbosity minimal
