@@ -267,5 +267,5 @@ public abstract class PhoneNumber
     /// <exception cref="FormatException">Thrown if the format string is not valid.</exception>
     /// <returns>The string representation of the value of this instance as specified by the format.</returns>
     public string ToString(string format) =>
-        Country.GetFormatter(format).Format(this);
+        CountryInfo.GetFormatter(format).Format(this);
 }

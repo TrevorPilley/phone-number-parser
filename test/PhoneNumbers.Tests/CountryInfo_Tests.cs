@@ -6,19 +6,23 @@ public class CountryInfo_Tests
 {
     [Fact]
     public void GetFormatter_E123_Returns_E123PhoneNumberFormatter() =>
-        Assert.IsType<E123PhoneNumberFormatter>(TestHelper.CreateCountryInfo().GetFormatter("E.123"));
+        Assert.IsType<E123PhoneNumberFormatter>(CountryInfo.GetFormatter("E.123"));
 
     [Fact]
     public void GetFormatter_E164_Returns_E164PhoneNumberFormatter() =>
-        Assert.IsType<E164PhoneNumberFormatter>(TestHelper.CreateCountryInfo().GetFormatter("E.164"));
+        Assert.IsType<E164PhoneNumberFormatter>(CountryInfo.GetFormatter("E.164"));
 
     [Fact]
     public void GetFormatter_N_Returns_NationalPhoneNumberFormatter() =>
-        Assert.IsType<NationalPhoneNumberFormatter>(TestHelper.CreateCountryInfo().GetFormatter("N"));
+        Assert.IsType<NationalPhoneNumberFormatter>(CountryInfo.GetFormatter("N"));
+
+    [Fact]
+    public void GetFormatter_RFC3966_Returns_E164PhoneNumberFormatter() =>
+        Assert.IsType<Rfc3966PhoneNumberFormatter>(CountryInfo.GetFormatter("RFC3966"));
 
     [Fact]
     public void GetFormatter_Throws_For_Invalid_Format() =>
-        Assert.Throws<FormatException>(() => TestHelper.CreateCountryInfo().GetFormatter("X"));
+        Assert.Throws<FormatException>(() => CountryInfo.GetFormatter("X"));
 
     [Theory]
     [InlineData(default(string))]
