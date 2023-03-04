@@ -45,7 +45,7 @@ jobs:
        uses: actions/setup-dotnet@v3
        with:
         dotnet-version: 7.0.x
-    
+
      - name: Set release version
        if: github.ref_type == 'tag'
        run: echo "RELEASE_VERSION=$(echo ${GITHUB_REF:10})" >> $GITHUB_ENV
