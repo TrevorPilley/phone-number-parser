@@ -12,11 +12,14 @@ public class PhoneNumberParserFactoryTests
     {
         foreach (var countryInfo in CountryInfo.GetCountries())
         {
-            countryInfo switch
+            if (countryInfo = CountryInfo.UnitedKingdom)
             {
-                CountryInfo.UnitedKingdom => Assert.IsType<GBPhoneNumberParser>(_factory.GetParser(countryInfo)),
-                _ => Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(countryInfo)),
-            };
+                Assert.IsType<GBPhoneNumberParser>(_factory.GetParser(countryInfo));
+            }
+            else
+            {
+                Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(countryInfo));
+            }
         }
     }
 
