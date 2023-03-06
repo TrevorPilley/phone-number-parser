@@ -12,7 +12,7 @@ public class PhoneNumberParserFactoryTests
     {
         foreach (var countryInfo in CountryInfo.GetCountries())
         {
-            if (countryInfo = CountryInfo.UnitedKingdom)
+            if (countryInfo == CountryInfo.UnitedKingdom)
             {
                 Assert.IsType<GBPhoneNumberParser>(_factory.GetParser(countryInfo));
             }
