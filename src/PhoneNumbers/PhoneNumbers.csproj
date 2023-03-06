@@ -58,6 +58,7 @@
 
   <ItemGroup>
     <None Include="../../icon.png" Pack="true" PackagePath="\"/>
+    <None Include="../../LICENSE.md" Pack="true" PackagePath="LICENSE.md" />
     <None Include="../../NuGet.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 </Project>
