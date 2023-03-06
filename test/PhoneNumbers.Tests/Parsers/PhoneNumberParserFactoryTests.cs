@@ -14,8 +14,8 @@ public class PhoneNumberParserFactoryTests
         {
             countryInfo switch
             {
-                CountryInfo.UnitedKingdom => Assert.IsType<GBPhoneNumberParser>(_factory.GetParser(countryInfo));
-                _ => Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(countryInfo));
+                CountryInfo.UnitedKingdom => Assert.IsType<GBPhoneNumberParser>(_factory.GetParser(countryInfo)),
+                _ => Assert.IsType<DefaultPhoneNumberParser>(_factory.GetParser(countryInfo)),
             }
         }
     }
