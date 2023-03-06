@@ -8,6 +8,7 @@ on:
       - '.vscode/settings.json'
       - '.editorconfig'
       - 'CONTRIBUTING.md'
+      - 'NuGet.md'
       - 'README.md'
       - 'build.ps1'
       - 'build.sh'
