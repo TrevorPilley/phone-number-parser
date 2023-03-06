@@ -9,6 +9,7 @@ on:
       - '.vscode/settings.json'
       - '.editorconfig'
       - 'CONTRIBUTING.md'
+      - 'NuGet.md'
       - 'README.md'
       - 'build.ps1'
       - 'build.sh'
@@ -50,7 +51,7 @@ jobs:
         run: dotnet restore
 
       - name: dotnet build
-        run: dotnet build --configuration ${{ env.PROJECT_CONFIGURATION }} --no-restore /p:ContinuousIntegrationBuild=true
+        run: dotnet build --configuration ${{ env.PROJECT_CONFIGURATION }} --no-restore
 
       - name: dotnet test
         run: dotnet test --no-restore --verbosity minimal
