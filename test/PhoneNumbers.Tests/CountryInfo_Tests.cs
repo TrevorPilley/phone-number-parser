@@ -17,7 +17,7 @@ public class CountryInfo_Tests
         Assert.IsType<NationalPhoneNumberFormatter>(CountryInfo.GetFormatter("N"));
 
     [Fact]
-    public void GetFormatter_RFC3966_Returns_E164PhoneNumberFormatter() =>
+    public void GetFormatter_RFC3966_Returns_Rfc3966PhoneNumberFormatter() =>
         Assert.IsType<Rfc3966PhoneNumberFormatter>(CountryInfo.GetFormatter("RFC3966"));
 
     [Fact]
