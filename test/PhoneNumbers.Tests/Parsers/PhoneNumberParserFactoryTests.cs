@@ -8,7 +8,7 @@ public class PhoneNumberParserFactoryTests
     private readonly PhoneNumberParserFactory _factory = new();
 
     [Fact]
-    public void GetParser_Rerurns_Correct_Parser()
+    public void GetParser_Returns_Correct_Parser()
     {
         foreach (var countryInfo in CountryInfo.GetCountries())
         {
