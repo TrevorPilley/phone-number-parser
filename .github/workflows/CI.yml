@@ -6,6 +6,7 @@ on:
     branches-ignore:
       - main
     paths-ignore:
+      - '.devcontainer/**'
       - '.vscode/settings.json'
       - '.editorconfig'
       - 'CONTRIBUTING.md'
