@@ -213,10 +213,14 @@ United Kingdom | GB            | +44          | 0            | Yes        | Yes 
 
 ### North America
 
-Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
----            | ---           | ---          | ---          | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
-Canada         | CA            | +1           | 1            | Yes        |        |                        |                    |                      | Yes            | Yes *                          | Yes                               |                                  |
-United States  | US            | +1           | 1            | Yes        |        |                        |                    |                      | Yes            | Yes *                          | Yes                               |                                  |
+Country                       | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
+---                           | ---           | ---          | ---          | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
+American Samoa                | AS            | +1           | 1            | Yes        | Yes    |                        |                    |                      | Yes            |                                |                                   |                                  |
+Canada                        | CA            | +1           | 1            | Yes        |        |                        |                    |                      | Yes            | Yes *                          | Yes                               |                                  |
+Guam                          | GU            | +1           | 1            | Yes        |        |                        |                    |                      |                |                                |                                   |                                  |
+Puerto Rico                   | PR            | +1           | 1            | Yes        |        |                        |                    |                      |                |                                |                                   |                                  |
+United States                 | US            | +1           | 1            | Yes        |        |                        |                    |                      | Yes            | Yes *                          | Yes                               |                                  |
+United States Virgin Islands  | VI            | +1           | 1            | Yes        |        |                        |                    |                      |                |                                |                                   |                                  |
 
 ### Oceania
 
