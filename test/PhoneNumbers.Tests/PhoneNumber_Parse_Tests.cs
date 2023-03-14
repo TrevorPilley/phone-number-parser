@@ -3,6 +3,22 @@ namespace PhoneNumbers.Tests;
 public class PhoneNumber_Parse_Tests
 {
     [Fact]
+    public void Parse_Value_For_AmericanSamoa_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+16846339805");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.AmericanSamoa, phoneNumber.Country);
+    }
+
+    [Fact]
+    public void Parse_Value_CountryCode_For_AmericanSamoa_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("16846339805", CountryInfo.AmericanSamoa.Iso3166Code);
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.AmericanSamoa, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_Australia_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+61399636800");
@@ -256,6 +272,22 @@ public class PhoneNumber_Parse_Tests
         var phoneNumber = PhoneNumber.Parse("2106151000", CountryInfo.Greece.Iso3166Code);
         Assert.NotNull(phoneNumber);
         Assert.Equal(CountryInfo.Greece, phoneNumber.Country);
+    }
+
+    [Fact]
+    public void Parse_Value_For_Guam_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+16716323365");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Guam, phoneNumber.Country);
+    }
+
+    [Fact]
+    public void Parse_Value_CountryCode_For_Guam_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("16716323365", CountryInfo.Guam.Iso3166Code);
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Guam, phoneNumber.Country);
     }
 
     [Fact]
@@ -530,6 +562,22 @@ public class PhoneNumber_Parse_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_PuertoRico_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+17877222977");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.PuertoRico, phoneNumber.Country);
+    }
+
+    [Fact]
+    public void Parse_Value_CountryCode_For_PuertoRico_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("17877222977", CountryInfo.PuertoRico.Iso3166Code);
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.PuertoRico, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_Romania_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+40372845414");
@@ -719,5 +767,21 @@ public class PhoneNumber_Parse_Tests
         var phoneNumber = PhoneNumber.Parse("12124841200", CountryInfo.UnitedStates.Iso3166Code);
         Assert.NotNull(phoneNumber);
         Assert.Equal(CountryInfo.UnitedStates, phoneNumber.Country);
-    }    
+    }
+
+    [Fact]
+    public void Parse_Value_For_UnitedStatesVirginIslands_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+13407731404");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.UnitedStatesVirginIslands, phoneNumber.Country);
+    }
+
+    [Fact]
+    public void Parse_Value_CountryCode_For_UnitedStatesVirginIslands_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("13407731404", CountryInfo.UnitedStatesVirginIslands.Iso3166Code);
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.UnitedStatesVirginIslands, phoneNumber.Country);
+    }
 }
