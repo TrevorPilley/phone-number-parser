@@ -15,7 +15,7 @@ public partial class CountryInfo
         Name = "Australia",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 5, 6, 7, 8, 9, 10 }),
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         TrunkPrefix = "0",
     };
 

@@ -58,7 +58,7 @@ public partial class CountryInfo
         Name = "Bulgaria",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9, 12 }),
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         TrunkPrefix = "0",
     };
 
@@ -73,7 +73,7 @@ public partial class CountryInfo
         Name = "Croatia",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2, 1 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8, 9, 10 }),
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         TrunkPrefix = "0",
     };
 
@@ -100,7 +100,7 @@ public partial class CountryInfo
         Iso3166Code = "DK",
         Name = "Denmark",
         NsnLengths = new ReadOnlyCollection<int>(new[] { 8 }),
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
     };
 
     /// <summary>
@@ -127,7 +127,7 @@ public partial class CountryInfo
         Name = "Finland",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2, 1 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 5, 6, 7, 8, 9, 10, 11, 12 }),
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         TrunkPrefix = "0",
     };
 
@@ -195,7 +195,7 @@ public partial class CountryInfo
         Name = "Guernsey",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         SharesCallingCode = true,
         TrunkPrefix = "0",
     };
@@ -211,7 +211,7 @@ public partial class CountryInfo
         Name = "Hungary",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 2, 1 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9, 12 }),
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         TrunkPrefix = "06",
     };
 
@@ -227,7 +227,7 @@ public partial class CountryInfo
         Name = "Ireland",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8, 9, 12 }),
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         TrunkPrefix = "0",
     };
 
@@ -242,7 +242,7 @@ public partial class CountryInfo
         Name = "Isle of Man",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         SharesCallingCode = true,
         TrunkPrefix = "0",
     };
@@ -272,7 +272,7 @@ public partial class CountryInfo
         Name = "Jersey",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         SharesCallingCode = true,
         TrunkPrefix = "0",
     };
@@ -288,7 +288,7 @@ public partial class CountryInfo
         Name = "Kosovo",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9 }),
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         TrunkPrefix = "0",
     };
 
@@ -407,7 +407,7 @@ public partial class CountryInfo
         Name = "Serbia",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9, 10, 11, 12 }),
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         TrunkPrefix = "0",
     };
 
@@ -449,7 +449,7 @@ public partial class CountryInfo
         Name = "Sweden",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8, 9, 10, 13 }),
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         TrunkPrefix = "0",
     };
 
@@ -478,7 +478,7 @@ public partial class CountryInfo
         Name = "Ukraine",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 9, 10 }),
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         TrunkPrefix = "0",
     };
 
@@ -494,7 +494,7 @@ public partial class CountryInfo
         Name = "United Kingdom",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 9, 10 }),
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         TrunkPrefix = "0",
     };
 }

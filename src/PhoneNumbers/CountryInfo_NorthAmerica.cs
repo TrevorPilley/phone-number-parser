@@ -21,7 +21,7 @@ public partial class CountryInfo
         Name = "American Samoa",
         NdcLengths = s_nanpNdcLengths,
         NsnLengths = s_nanpNsnLengths,
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         SharesCallingCode = true,
     };
 
@@ -37,7 +37,7 @@ public partial class CountryInfo
         Name = "Canada",
         NdcLengths = s_nanpNdcLengths,
         NsnLengths = s_nanpNsnLengths,
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         SharesCallingCode = true,
     };
 
@@ -53,7 +53,7 @@ public partial class CountryInfo
         Name = "Guam",
         NdcLengths = s_nanpNdcLengths,
         NsnLengths = s_nanpNsnLengths,
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         SharesCallingCode = true,
     };
 
@@ -69,7 +69,7 @@ public partial class CountryInfo
         Name = "Puerto Rico",
         NdcLengths = s_nanpNdcLengths,
         NsnLengths = s_nanpNsnLengths,
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         SharesCallingCode = true,
     };
 
@@ -85,7 +85,7 @@ public partial class CountryInfo
         Name = "United States",
         NdcLengths = s_nanpNdcLengths,
         NsnLengths = s_nanpNsnLengths,
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
     };
 
     /// <summary>
@@ -100,7 +100,7 @@ public partial class CountryInfo
         Name = "United States Virgin Islands",
         NdcLengths = s_nanpNdcLengths,
         NsnLengths = s_nanpNsnLengths,
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         SharesCallingCode = true,
     };
 }
