@@ -42,6 +42,13 @@ public sealed class GeographicPhoneNumber : PhoneNumber, IEquatable<GeographicPh
     public override PhoneNumberKind PhoneNumberKind =>
         PhoneNumberKind.GeographicPhoneNumber;
 
+    /// <summary>
+    /// The country operates an open numbering plan, however due to number shortages within
+    /// the national destination code the full national significant number must always be dialled.
+    /// </summary>
+    internal bool ClosedDiallingInOpenPlan =>
+        Hint == PhoneNumberHint.ClosedDialling && Country.NumberingPlanType == NumberingPlanType.Open;
+
     /// <inheritdoc/>
     public static bool operator !=(GeographicPhoneNumber? phoneNumber1, GeographicPhoneNumber? phoneNumber2) =>
         !(phoneNumber1 == phoneNumber2);

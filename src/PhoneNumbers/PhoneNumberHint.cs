@@ -11,6 +11,12 @@ public enum PhoneNumberHint
     None = 0,
 
     /// <summary>
+    /// Although the country uses an open numbering plan, the national destination code is closed
+    /// and requires the full national number to be dialled due to number shortages.
+    /// </summary>
+    ClosedDialling,
+
+    /// <summary>
     /// The number is likely for a data only plan (e.g. a 3G/LTE laptop or tablet).
     /// </summary>
     Data,
