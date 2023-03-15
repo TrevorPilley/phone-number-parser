@@ -14,8 +14,8 @@ public sealed partial class CountryInfo
     internal const string Africa = "Africa";
     internal const string Asia = "Asia";
     internal const string Europe = "Europe";
-    internal const string Oceania = "Oceania";
     internal const string NorthAmerica = "North America";
+    internal const string Oceania = "Oceania";
     internal const string SouthAmerica = "South America";
     private static readonly ReadOnlyCollection<int> s_emptyIntArray = new(Array.Empty<int>());
     private static readonly ReadOnlyCollection<PhoneNumberFormatter> s_formatters = new(new[]
@@ -30,7 +30,8 @@ public sealed partial class CountryInfo
     /// Initialises a new instance of the <see cref="CountryInfo"/> class.
     /// </summary>
     /// <remarks>The constructor is internal for unit tests only.</remarks>
-    internal CountryInfo() {
+    internal CountryInfo()
+    {
     }
 
     /// <summary>
@@ -93,6 +94,18 @@ public sealed partial class CountryInfo
     /// </summary>
     internal bool RequireNdcForLocalGeographicDialling { get; init; } = true;
 
+    internal static IEnumerable<CountryInfo> GetCountries() =>
+        typeof(CountryInfo)
+            .GetProperties(BindingFlags.Public | BindingFlags.Static)
+            .Where(x => x.PropertyType == typeof(CountryInfo))
+            .Select(x => x.GetValue(null))
+            .Cast<CountryInfo>()
+            .OrderBy(x => x.SharesCallingCode);
+
+    internal static IEnumerable<CountryInfo> GetCountries(Func<CountryInfo, bool> predicate) =>
+        GetCountries()
+        .Where(predicate);
+
     /// <summary>
     /// Gets the <see cref="PhoneNumberFormatter"/> for the specified format.
     /// </summary>
@@ -139,18 +152,6 @@ public sealed partial class CountryInfo
 
         return ReadNationalSignificantNumber(value, startPos);
     }
-
-    internal static IEnumerable<CountryInfo> GetCountries() =>
-        typeof(CountryInfo)
-            .GetProperties(BindingFlags.Public | BindingFlags.Static)
-            .Where(x => x.PropertyType == typeof(CountryInfo))
-            .Select(x => x.GetValue(null))
-            .Cast<CountryInfo>()
-            .OrderBy(x => x.SharesCallingCode);
-
-    internal static IEnumerable<CountryInfo> GetCountries(Func<CountryInfo, bool> predicate) =>
-        GetCountries()
-        .Where(predicate);
 
     private static int CountDigitsAfter(string value, int startPos)
     {

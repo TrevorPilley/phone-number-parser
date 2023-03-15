@@ -21,7 +21,7 @@ public class PhoneNumberTests
         Assert.NotNull(PhoneNumber.Parse("0114 272 6444", "GB"));
 
     [Fact]
-     public void Parse_Value_CountryCode_Succeeds_If_Value_In_Correct_International_Format_For_CountryCode() =>
+    public void Parse_Value_CountryCode_Succeeds_If_Value_In_Correct_International_Format_For_CountryCode() =>
         Assert.NotNull(PhoneNumber.Parse("+441142726444", "GB"));
 
     [Fact]
@@ -43,7 +43,7 @@ public class PhoneNumberTests
     }
 
     [Fact]
-     public void Parse_Value_From_Rfc3966_Format() =>
+    public void Parse_Value_From_Rfc3966_Format() =>
         Assert.NotNull(PhoneNumber.Parse("tel:+44-114-2726444"));
 
     [Fact]
@@ -136,13 +136,6 @@ public class PhoneNumberTests
     }
 
     [Fact]
-    public void TryParse_Value_To_PhoneNumber_From_Rfc3966_Format()
-    {
-        Assert.True(PhoneNumber.TryParse("tel:+44-114-2726444", out PhoneNumber phoneNumber));
-        Assert.NotNull(phoneNumber);
-    }
-
-    [Fact]
     public void TryParse_Value_PhoneNumbers_False_If_ParseOptions_Null()
     {
         Assert.False(PhoneNumber.TryParse("0123456789", default, out IEnumerable<PhoneNumber> phoneNumbers));
@@ -175,5 +168,12 @@ public class PhoneNumberTests
     {
         Assert.False(PhoneNumber.TryParse(null, out PhoneNumber phoneNumber));
         Assert.Null(phoneNumber);
+    }
+
+    [Fact]
+    public void TryParse_Value_To_PhoneNumber_From_Rfc3966_Format()
+    {
+        Assert.True(PhoneNumber.TryParse("tel:+44-114-2726444", out PhoneNumber phoneNumber));
+        Assert.NotNull(phoneNumber);
     }
 }

@@ -721,7 +721,7 @@ public class PhoneNumber_TryParse_Tests
     }
 
     [Fact]
-    public void TryParse_Ukraine_CallingCode()
+    public void TryParse_Value_For_Ukraine_CallingCode()
     {
         Assert.True(PhoneNumber.TryParse("+380442819196", out PhoneNumber phoneNumber));
         Assert.NotNull(phoneNumber);
@@ -729,7 +729,7 @@ public class PhoneNumber_TryParse_Tests
     }
 
     [Fact]
-    public void TryParse_Ukraine_CountryCode_CallingCode()
+    public void TryParse_Value_CountryCode_For_Ukraine_CallingCode()
     {
         Assert.True(PhoneNumber.TryParse("0442819196", CountryInfo.Ukraine.Iso3166Code, out var phoneNumber));
         Assert.NotNull(phoneNumber);
