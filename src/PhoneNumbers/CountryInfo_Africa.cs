@@ -30,7 +30,7 @@ public partial class CountryInfo
         Name = "Nigeria",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 10 }),
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         TrunkPrefix = "0",
     };
 

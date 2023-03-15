@@ -21,7 +21,7 @@ public partial class CountryInfo
         Name = "Canada",
         NdcLengths = NanpNdcLengths,
         NsnLengths = NanpNsnLengths,
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         SharesCallingCode = true,
     };
 
@@ -37,7 +37,7 @@ public partial class CountryInfo
         Name = "Puerto Rico",
         NdcLengths = NanpNdcLengths,
         NsnLengths = NanpNsnLengths,
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         SharesCallingCode = true,
     };
 
@@ -53,7 +53,7 @@ public partial class CountryInfo
         Name = "United States",
         NdcLengths = NanpNdcLengths,
         NsnLengths = NanpNsnLengths,
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
     };
 
     /// <summary>
@@ -68,7 +68,7 @@ public partial class CountryInfo
         Name = "United States Virgin Islands",
         NdcLengths = NanpNdcLengths,
         NsnLengths = NanpNsnLengths,
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         SharesCallingCode = true,
     };
 }
