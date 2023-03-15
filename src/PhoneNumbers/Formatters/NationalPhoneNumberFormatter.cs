@@ -31,7 +31,7 @@ internal sealed class NationalPhoneNumberFormatter : PhoneNumberFormatter
 
         if (phoneNumber.NationalDestinationCode is null)
         {
-            return phoneNumber.Country.TrunkPrefix is not null
+            return phoneNumber.Country.HasTrunkPrefix
                 ? $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.SubscriberNumber}"
                 : phoneNumber.SubscriberNumber;
         }

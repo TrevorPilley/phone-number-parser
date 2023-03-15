@@ -43,6 +43,14 @@ public class CountryInfo_Tests
     public void HasCallingCode_True(string value) =>
         Assert.True(TestHelper.CreateCountryInfo().HasCallingCode(value));
 
+    [Fact]
+    public void HasTrunkPrefix_False() =>
+        Assert.False(TestHelper.CreateCountryInfo(trunkPrefix: null).HasTrunkPrefix);
+
+    [Fact]
+    public void HasTrunkPrefix_True() =>
+        Assert.True(TestHelper.CreateCountryInfo(trunkPrefix: "0").HasTrunkPrefix);
+
     [Theory]
     [InlineData(default(string))]
     [InlineData("")]
@@ -115,6 +123,7 @@ public class CountryInfo_Tests
         Assert.Null(countryInfo.CallingCode);
         Assert.Null(countryInfo.Continent);
         Assert.False(countryInfo.HasNationalDestinationCodes);
+        Assert.False(countryInfo.HasTrunkPrefix);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Null(countryInfo.Iso3166Code);
         Assert.Null(countryInfo.Name);
