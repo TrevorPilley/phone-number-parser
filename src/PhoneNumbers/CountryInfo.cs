@@ -94,6 +94,13 @@ public sealed partial class CountryInfo
     /// </summary>
     internal ReadOnlyCollection<int> NsnLengths { get; init; } = s_emptyIntArray;
 
+    /// <summary>
+    /// Gets a value indicting whether this <see cref="CountryInfo"/> shares a calling code with the specified <see cref="CountryInfo"/>.
+    /// </summary>
+    /// <returns>True if the both countries share a calling code, otherwise false.</returns>
+    public bool SharesCallingCodeWith(CountryInfo countryInfo) =>
+        countryInfo?.CallingCode == CallingCode;
+
     internal static IEnumerable<CountryInfo> GetCountries() =>
         typeof(CountryInfo)
             .GetProperties(BindingFlags.Public | BindingFlags.Static)
