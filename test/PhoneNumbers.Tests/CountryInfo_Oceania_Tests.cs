@@ -17,7 +17,7 @@ public class CountryInfo_Oceania_Tests
         Assert.Equal("Australia", countryInfo.Name);
         Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 5, 6, 7, 8, 9, 10 }, countryInfo.NsnLengths);
-        Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Open, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -37,7 +37,7 @@ public class CountryInfo_Oceania_Tests
         Assert.Equal("Papua New Guinea", countryInfo.Name);
         Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 7, 8 }, countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }

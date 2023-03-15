@@ -17,7 +17,7 @@ public class CountryInfo_Africa_Tests
         Assert.Equal("Egypt", countryInfo.Name);
         Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 8, 9, 10, 11 }, countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -37,7 +37,7 @@ public class CountryInfo_Africa_Tests
         Assert.Equal("Nigeria", countryInfo.Name);
         Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 8, 10 }, countryInfo.NsnLengths);
-        Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Open, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -57,7 +57,7 @@ public class CountryInfo_Africa_Tests
         Assert.Equal("South Africa", countryInfo.Name);
         Assert.Equal(new[] { 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 9, 13 }, countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }

@@ -120,7 +120,7 @@ public class CountryInfo_Tests
         Assert.Null(countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
         Assert.Empty(countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }

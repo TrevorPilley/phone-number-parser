@@ -17,7 +17,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Austria", countryInfo.Name);
         Assert.Equal(new[] { 4, 3, 2, 1 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 }, countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -37,7 +37,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Belarus", countryInfo.Name);
         Assert.Equal(new[] { 4, 3, 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 6, 9, 10, 11 }, countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("8", countryInfo.TrunkPrefix);
     }
@@ -57,7 +57,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Belgium", countryInfo.Name);
         Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 8, 9 }, countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -77,7 +77,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Bulgaria", countryInfo.Name);
         Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 8, 9, 12 }, countryInfo.NsnLengths);
-        Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Open, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -97,7 +97,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Croatia", countryInfo.Name);
         Assert.Equal(new[] { 5, 4, 3, 2, 1 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 6, 7, 8, 9, 10 }, countryInfo.NsnLengths);
-        Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Open, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -117,7 +117,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Czech Republic", countryInfo.Name);
         Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 7, 9, 10, 11, 12 }, countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -137,7 +137,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Denmark", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
         Assert.Equal(new[] { 8 }, countryInfo.NsnLengths);
-        Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Open, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -157,7 +157,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Estonia", countryInfo.Name);
         Assert.Equal(new[] { 4, 3, 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 7, 8, 10, 12 }, countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -177,7 +177,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Finland", countryInfo.Name);
         Assert.Equal(new[] { 4, 3, 2, 1 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 5, 6, 7, 8, 9, 10, 11, 12 }, countryInfo.NsnLengths);
-        Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Open, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -197,7 +197,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("France", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
         Assert.Equal(new[] { 9, 13 }, countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -217,7 +217,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Germany", countryInfo.Name);
         Assert.Equal(new[] { 5, 4, 3, 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 }, countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -237,7 +237,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Gibraltar", countryInfo.Name);
         Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 4, 8 }, countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -257,7 +257,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Greece", countryInfo.Name);
         Assert.Equal(new[] { 4, 3, 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -277,7 +277,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Guernsey", countryInfo.Name);
         Assert.Equal(new[] { 4 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
-        Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Open, countryInfo.NumberingPlanType);
         Assert.True(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -297,7 +297,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Hungary", countryInfo.Name);
         Assert.Equal(new[] { 2, 1 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 8, 9, 12 }, countryInfo.NsnLengths);
-        Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Open, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("06", countryInfo.TrunkPrefix);
     }
@@ -317,7 +317,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Ireland", countryInfo.Name);
         Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 7, 8, 9, 12 }, countryInfo.NsnLengths);
-        Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Open, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -337,7 +337,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Isle of Man", countryInfo.Name);
         Assert.Equal(new[] { 4 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
-        Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Open, countryInfo.NumberingPlanType);
         Assert.True(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -357,7 +357,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Italy", countryInfo.Name);
         Assert.Equal(new[] { 5, 4, 3, 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 5, 6, 7, 8, 9, 10, 11 }, countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -377,7 +377,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Jersey", countryInfo.Name);
         Assert.Equal(new[] { 4 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
-        Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Open, countryInfo.NumberingPlanType);
         Assert.True(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -397,7 +397,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Kosovo", countryInfo.Name);
         Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 8, 9 }, countryInfo.NsnLengths);
-        Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Open, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -417,7 +417,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Moldova", countryInfo.Name);
         Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 5, 6, 7, 8 }, countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -437,7 +437,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Monaco", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
         Assert.Equal(new[] { 8, 9 }, countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -457,7 +457,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Netherlands", countryInfo.Name);
         Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 9 }, countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -477,7 +477,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Norway", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
         Assert.Equal(new[] { 8, 12 }, countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -497,7 +497,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Poland", countryInfo.Name);
         Assert.Equal(new[] { 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 6, 7, 8, 9 }, countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -517,7 +517,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Portugal", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 9 }, countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -537,7 +537,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Romania", countryInfo.Name);
         Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 6, 7, 8, 9 }, countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -557,7 +557,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("San Marino", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
         Assert.Equal(new[] { 6, 7, 8, 9, 10 }, countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -577,7 +577,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Serbia", countryInfo.Name);
         Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 8, 9, 10, 11, 12 }, countryInfo.NsnLengths);
-        Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Open, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -597,7 +597,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Slovakia", countryInfo.Name);
         Assert.Equal(new[] { 4, 3, 2, 1 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 7, 9 }, countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -617,7 +617,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Spain", countryInfo.Name);
         Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 9 }, countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -637,7 +637,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Sweden", countryInfo.Name);
         Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 6, 7, 8, 9, 10, 13 }, countryInfo.NsnLengths);
-        Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Open, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -657,7 +657,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Switzerland", countryInfo.Name);
         Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 9 }, countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -677,7 +677,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Ukraine", countryInfo.Name);
         Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 9, 10 }, countryInfo.NsnLengths);
-        Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Open, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -697,7 +697,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("United Kingdom", countryInfo.Name);
         Assert.Equal(new[] { 5, 4, 3, 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 7, 9, 10 }, countryInfo.NsnLengths);
-        Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Open, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }

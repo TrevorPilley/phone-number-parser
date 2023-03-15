@@ -16,7 +16,7 @@ public partial class CountryInfo
         Name = "American Samoa",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         SharesCallingCode = true,
         TrunkPrefix = "1",
     };
@@ -33,7 +33,7 @@ public partial class CountryInfo
         Name = "Canada",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         SharesCallingCode = true,
         TrunkPrefix = "1",
     };
@@ -50,7 +50,7 @@ public partial class CountryInfo
         Name = "Guam",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         SharesCallingCode = true,
         TrunkPrefix = "1",
     };
@@ -67,7 +67,7 @@ public partial class CountryInfo
         Name = "Puerto Rico",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         SharesCallingCode = true,
         TrunkPrefix = "1",
     };
@@ -84,7 +84,7 @@ public partial class CountryInfo
         Name = "United States",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         TrunkPrefix = "1",
     };
 
@@ -100,7 +100,7 @@ public partial class CountryInfo
         Name = "United States Virgin Islands",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         SharesCallingCode = true,
         TrunkPrefix = "1",
     };

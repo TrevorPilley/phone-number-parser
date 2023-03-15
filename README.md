@@ -71,6 +71,7 @@ phoneNumber.Country.HasNationalDestinationCodes // true
 phoneNumber.Country.InternationalCallPrefix;    // 00 (obsolete)
 phoneNumber.Country.Iso3166Code;                // GB
 phoneNumber.Country.Name;                       // United Kingdom
+phoneNumber.Country.NumberingPlanType;          // NumberingPlanType.Open
 phoneNumber.Country.SharesCallingCode           // true
 phoneNumber.Country.TrunkPrefix;                // 0
 phoneNumber.NationalDestinationCode;            // 114
