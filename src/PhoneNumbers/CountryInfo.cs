@@ -51,6 +51,11 @@ public sealed partial class CountryInfo
     public bool HasNationalDestinationCodes => NdcLengths.Count > 0;
 
     /// <summary>
+    /// Gets a value indicating whether the country has a trunk prefix.
+    /// </summary>
+    public bool HasTrunkPrefix => TrunkPrefix is not null;
+
+    /// <summary>
     /// Gets the international call prefix.
     /// </summary>
     /// <remarks>Default to the ITU recommended '00', see https://en.wikipedia.org/wiki/List_of_international_call_prefixes.</remarks>
