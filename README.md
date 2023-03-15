@@ -109,6 +109,23 @@ phoneNumber.ToString("N");                      // (0114) 2726444     (E.123 nat
 phoneNumber.ToString("RFC3966");                // tel:+44-114-272644 (RFC3966 format)
 ```
 
+## Number to dial
+
+Determine the correct number to dial for another number:
+
+```csharp
+var callingFromNumber = PhoneNumber.Parse("+441142726444");
+
+callingFromNumber.NumberToDialFor(
+    PhoneNumber.Parse("+441146548866"));        // 6548866
+
+callingFromNumber.NumberToDialFor(
+    PhoneNumber.Parse("+441202653887"));        // 01202653887
+
+callingFromNumber.NumberToDialFor(
+    PhoneNumber.Parse("+33140477283"));         // 0033140477283
+```
+
 ### ParseOptions
 
 The `ParseOptions` class can be used to control parsing, the defaults can be configured via:
@@ -149,16 +166,6 @@ To out out of specific countries but still use any new ones added in future vers
 
 ```csharp
 ParseOptions.Default.Countries.Remove(CountryInfo.X);
-```
-
-## Number to dial
-
-Determine the correct number to dial for another number:
-
-```csharp
-var callingFromNumber = PhoneNumber.Parse("+441142726444");
-var destinationNumber = PhoneNumber.Parse("+441202653887");
-var numberToDial = callingFromNumber.NumberToDialFor(destinationNumber); // 01202653887
 ```
 
 ## Country support
