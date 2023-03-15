@@ -31,7 +31,9 @@ internal sealed class NationalPhoneNumberFormatter : PhoneNumberFormatter
 
         if (phoneNumber.NationalDestinationCode is null)
         {
-            return $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.SubscriberNumber}";
+            return phoneNumber.Country.TrunkPrefix is not null
+                ? $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.SubscriberNumber}"
+                : phoneNumber.SubscriberNumber;
         }
 
         if (phoneNumber.PhoneNumberKind == PhoneNumberKind.GeographicPhoneNumber && !phoneNumber.Country.RequireNdcForLocalGeographicDialling)
@@ -39,6 +41,6 @@ internal sealed class NationalPhoneNumberFormatter : PhoneNumberFormatter
             return $"({phoneNumber.Country.TrunkPrefix}{phoneNumber.NationalDestinationCode}) {phoneNumber.SubscriberNumber}";
         }
 
-        return $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.NationalDestinationCode} {phoneNumber.SubscriberNumber}".Trim();
+        return $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.NationalDestinationCode} {phoneNumber.SubscriberNumber}";
     }
 }
