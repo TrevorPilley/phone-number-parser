@@ -44,6 +44,14 @@ public class CountryInfo_Tests
         Assert.True(TestHelper.CreateCountryInfo().HasCallingCode(value));
 
     [Fact]
+    public void HasNationalDestinationCodes_False() =>
+        Assert.False(TestHelper.CreateCountryInfo(ndcLengths: null).HasNationalDestinationCodes);
+
+    [Fact]
+    public void HasNationalDestinationCodes_True() =>
+        Assert.True(TestHelper.CreateCountryInfo(ndcLengths: new[] { 2 }).HasNationalDestinationCodes);
+
+    [Fact]
     public void HasTrunkPrefix_False() =>
         Assert.False(TestHelper.CreateCountryInfo(trunkPrefix: null).HasTrunkPrefix);
 
