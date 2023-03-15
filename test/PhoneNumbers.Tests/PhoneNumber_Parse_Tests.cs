@@ -722,7 +722,7 @@ public class PhoneNumber_Parse_Tests
     }
 
     [Fact]
-    public void Parse_Ukraine_CallingCode()
+    public void Parse_Value_For_Ukraine_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+380442819196");
         Assert.NotNull(phoneNumber);
@@ -730,7 +730,7 @@ public class PhoneNumber_Parse_Tests
     }
 
     [Fact]
-    public void Parse_Ukraine_CountryCode_CallingCode()
+    public void Parse_Value_CountryCode_For_Ukraine_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("0442819196", CountryInfo.Ukraine.Iso3166Code);
         Assert.NotNull(phoneNumber);

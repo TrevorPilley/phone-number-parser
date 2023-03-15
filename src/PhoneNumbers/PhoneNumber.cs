@@ -175,7 +175,7 @@ public abstract class PhoneNumber
         {
             phoneNumbers = options.Countries
                 .Select(x => options.Factory.GetParser(x).Parse(value))
-                .Where(x=> x.PhoneNumber is not null)
+                .Where(x => x.PhoneNumber is not null)
                 .Select(x => x.PhoneNumber)
                 .Cast<PhoneNumber>();
 

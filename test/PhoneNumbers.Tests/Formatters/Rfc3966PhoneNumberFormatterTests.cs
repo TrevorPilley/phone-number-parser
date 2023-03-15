@@ -20,6 +20,10 @@ public class Rfc3966PhoneNumberFormatterTests
         Assert.True(Rfc3966PhoneNumberFormatter.Instance.CanFormat("RFC3966"));
 
     [Fact]
+    public void Format_Throws_If_PhoneNumber_Null() =>
+        Assert.Throws<ArgumentNullException>(() => Rfc3966PhoneNumberFormatter.Instance.Format(null));
+
+    [Fact]
     public void Format_With_Ndc_And_Sn() =>
         Assert.Equal(
             "tel:+422-12345-667788",
@@ -30,10 +34,6 @@ public class Rfc3966PhoneNumberFormatterTests
         Assert.Equal(
             "tel:+422-667788",
             Rfc3966PhoneNumberFormatter.Instance.Format(TestHelper.CreateNonGeographicPhoneNumber("0", null, "667788")));
-
-     [Fact]
-     public void Format_Throws_If_PhoneNumber_Null() =>
-         Assert.Throws<ArgumentNullException>(() => Rfc3966PhoneNumberFormatter.Instance.Format(null));
 
     [Fact]
     public void Instance()

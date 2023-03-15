@@ -26,40 +26,10 @@ public class NationalPhoneNumberFormatterTests
             NationalPhoneNumberFormatter.Instance.Format(TestHelper.CreateGeographicPhoneNumber("0", "12345", "667788")));
 
     [Fact]
-    public void Format_Mobile_With_Ndc_And_Sn_With_TrunkPrefix() =>
-        Assert.Equal(
-            "012345 667788",
-            NationalPhoneNumberFormatter.Instance.Format(TestHelper.CreateMobilePhoneNumber("0", "12345", "667788")));
-
-    [Fact]
-    public void Format_NonGeographic_With_Ndc_And_Sn_With_TrunkPrefix() =>
-        Assert.Equal(
-            "012345 667788",
-            NationalPhoneNumberFormatter.Instance.Format(TestHelper.CreateNonGeographicPhoneNumber("0", "12345", "667788")));
-
-    [Fact]
     public void Format_Geographic_With_Ndc_And_Sn_With_TrunkPrefix_Ndc_Not_Required_For_Local_Dialling() =>
         Assert.Equal(
             "(012345) 667788",
             NationalPhoneNumberFormatter.Instance.Format(TestHelper.CreateGeographicPhoneNumber("0", "12345", "667788", false)));
-
-    [Fact]
-    public void Format_Mobile_With_Ndc_And_Sn_With_TrunkPrefix_Ndc_Not_Required_For_Local_Dialling() =>
-        Assert.Equal(
-            "012345 667788",
-            NationalPhoneNumberFormatter.Instance.Format(TestHelper.CreateMobilePhoneNumber("0", "12345", "667788", false)));
-
-    [Fact]
-    public void Format_NonGeographic_With_Ndc_And_Sn_With_TrunkPrefix_Ndc_Not_Required_For_Local_Dialling() =>
-        Assert.Equal(
-            "012345 667788",
-            NationalPhoneNumberFormatter.Instance.Format(TestHelper.CreateNonGeographicPhoneNumber("0", "12345", "667788", false)));
-
-    [Fact]
-    public void Format_NonGeographic_With_Sn_With_TrunkPrefix() =>
-        Assert.Equal(
-            "0667788",
-            NationalPhoneNumberFormatter.Instance.Format(TestHelper.CreateNonGeographicPhoneNumber("0", null, "667788")));
 
     [Fact]
     public void Format_Geographic_With_Ndc_And_Sn_Without_TrunkPrefix() =>
@@ -68,22 +38,28 @@ public class NationalPhoneNumberFormatterTests
             NationalPhoneNumberFormatter.Instance.Format(TestHelper.CreateGeographicPhoneNumber(null, "12345", "667788")));
 
     [Fact]
-    public void Format_Mobile_With_Ndc_And_Sn_Without_TrunkPrefix() =>
-        Assert.Equal(
-            "12345 667788",
-            NationalPhoneNumberFormatter.Instance.Format(TestHelper.CreateMobilePhoneNumber(null, "12345", "667788")));
-
-    [Fact]
-    public void Format_NonGeographic_With_Ndc_And_Sn_Without_TrunkPrefix() =>
-        Assert.Equal(
-            "12345 667788",
-            NationalPhoneNumberFormatter.Instance.Format(TestHelper.CreateNonGeographicPhoneNumber(null, "12345", "667788")));
-
-    [Fact]
     public void Format_Geographic_With_Ndc_And_Sn_Without_TrunkPrefix_Ndc_Not_Required_For_Local_Dialling() =>
         Assert.Equal(
             "(12345) 667788",
             NationalPhoneNumberFormatter.Instance.Format(TestHelper.CreateGeographicPhoneNumber(null, "12345", "667788", false)));
+
+    [Fact]
+    public void Format_Mobile_With_Ndc_And_Sn_With_TrunkPrefix() =>
+        Assert.Equal(
+            "012345 667788",
+            NationalPhoneNumberFormatter.Instance.Format(TestHelper.CreateMobilePhoneNumber("0", "12345", "667788")));
+
+    [Fact]
+    public void Format_Mobile_With_Ndc_And_Sn_With_TrunkPrefix_Ndc_Not_Required_For_Local_Dialling() =>
+        Assert.Equal(
+            "012345 667788",
+            NationalPhoneNumberFormatter.Instance.Format(TestHelper.CreateMobilePhoneNumber("0", "12345", "667788", false)));
+
+    [Fact]
+    public void Format_Mobile_With_Ndc_And_Sn_Without_TrunkPrefix() =>
+        Assert.Equal(
+            "12345 667788",
+            NationalPhoneNumberFormatter.Instance.Format(TestHelper.CreateMobilePhoneNumber(null, "12345", "667788")));
 
     [Fact]
     public void Format_Mobile_With_Ndc_And_Sn_Without_TrunkPrefix_Ndc_Not_Required_For_Local_Dialling() =>
@@ -92,10 +68,34 @@ public class NationalPhoneNumberFormatterTests
             NationalPhoneNumberFormatter.Instance.Format(TestHelper.CreateMobilePhoneNumber(null, "12345", "667788", false)));
 
     [Fact]
+    public void Format_NonGeographic_With_Ndc_And_Sn_With_TrunkPrefix() =>
+        Assert.Equal(
+            "012345 667788",
+            NationalPhoneNumberFormatter.Instance.Format(TestHelper.CreateNonGeographicPhoneNumber("0", "12345", "667788")));
+
+    [Fact]
+    public void Format_NonGeographic_With_Ndc_And_Sn_With_TrunkPrefix_Ndc_Not_Required_For_Local_Dialling() =>
+        Assert.Equal(
+            "012345 667788",
+            NationalPhoneNumberFormatter.Instance.Format(TestHelper.CreateNonGeographicPhoneNumber("0", "12345", "667788", false)));
+
+    [Fact]
+    public void Format_NonGeographic_With_Ndc_And_Sn_Without_TrunkPrefix() =>
+        Assert.Equal(
+            "12345 667788",
+            NationalPhoneNumberFormatter.Instance.Format(TestHelper.CreateNonGeographicPhoneNumber(null, "12345", "667788")));
+
+    [Fact]
     public void Format_NonGeographic_With_Ndc_And_Sn_Without_TrunkPrefix_Ndc_Not_Required_For_Local_Dialling() =>
         Assert.Equal(
             "12345 667788",
             NationalPhoneNumberFormatter.Instance.Format(TestHelper.CreateNonGeographicPhoneNumber(null, "12345", "667788", false)));
+
+    [Fact]
+    public void Format_NonGeographic_With_Sn_With_TrunkPrefix() =>
+        Assert.Equal(
+            "0667788",
+            NationalPhoneNumberFormatter.Instance.Format(TestHelper.CreateNonGeographicPhoneNumber("0", null, "667788")));
 
     [Fact]
     public void Format_NonGeographic_With_Sn_Without_TrunkPrefix() =>
@@ -103,9 +103,9 @@ public class NationalPhoneNumberFormatterTests
             "667788",
             NationalPhoneNumberFormatter.Instance.Format(TestHelper.CreateNonGeographicPhoneNumber(null, null, "667788")));
 
-     [Fact]
-     public void Format_Throws_If_PhoneNumber_Null() =>
-         Assert.Throws<ArgumentNullException>(() => NationalPhoneNumberFormatter.Instance.Format(null));
+    [Fact]
+    public void Format_Throws_If_PhoneNumber_Null() =>
+        Assert.Throws<ArgumentNullException>(() => NationalPhoneNumberFormatter.Instance.Format(null));
 
     [Fact]
     public void Instance()
