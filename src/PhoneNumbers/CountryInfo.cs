@@ -54,7 +54,6 @@ public sealed partial class CountryInfo
     /// Gets the international call prefix.
     /// </summary>
     /// <remarks>Default to the ITU recommended '00', see https://en.wikipedia.org/wiki/List_of_international_call_prefixes.</remarks>
-    [Obsolete("This property is no longer supported and will be removed in version 3.0 of the library")]
     public string InternationalCallPrefix { get; init; } = "00";
 
     /// <summary>

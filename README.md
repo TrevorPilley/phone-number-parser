@@ -68,7 +68,7 @@ The resulting `PhoneNumber` has the following properties:
 phoneNumber.Country.CallingCode;                // +44
 phoneNumber.Country.Continent;                  // Europe
 phoneNumber.Country.HasNationalDestinationCodes // true
-phoneNumber.Country.InternationalCallPrefix;    // 00 (obsolete)
+phoneNumber.Country.InternationalCallPrefix;    // 00
 phoneNumber.Country.Iso3166Code;                // GB
 phoneNumber.Country.Name;                       // United Kingdom
 phoneNumber.Country.NumberingPlanType;          // NumberingPlanType.Open

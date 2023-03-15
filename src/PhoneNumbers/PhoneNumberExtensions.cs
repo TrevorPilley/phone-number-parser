@@ -41,6 +41,6 @@ public static class PhoneNumberExtensions
                 : destination.NationalSignificantNumber;
         }
 
-        return string.Empty;
+        return $"{source.Country.InternationalCallPrefix}{destination.Country.CallingCode.Substring(1)}{destination.NationalSignificantNumber}";
     }
 }
