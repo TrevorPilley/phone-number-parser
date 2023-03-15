@@ -32,6 +32,12 @@ public class NationalPhoneNumberFormatterTests
             NationalPhoneNumberFormatter.Instance.Format(TestHelper.CreateGeographicPhoneNumber("0", "12345", "667788", NumberingPlanType.Open)));
 
     [Fact]
+    public void Format_Geographic_With_Ndc_And_Sn_With_TrunkPrefix_Open_Numbering_Plan_Where_Ndc_Is_Closed_Dialling() =>
+        Assert.Equal(
+            "012345 667788",
+            NationalPhoneNumberFormatter.Instance.Format(TestHelper.CreateGeographicPhoneNumber("0", "12345", "667788", NumberingPlanType.Open, PhoneNumberHint.ClosedDialling)));
+
+    [Fact]
     public void Format_Geographic_With_Ndc_And_Sn_Without_TrunkPrefix() =>
         Assert.Equal(
             "12345 667788",
