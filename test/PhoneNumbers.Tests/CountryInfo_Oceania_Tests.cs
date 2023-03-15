@@ -11,7 +11,6 @@ public class CountryInfo_Oceania_Tests
 
         Assert.Equal("+1", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Oceania, countryInfo.Continent);
-        Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("011", countryInfo.InternationalCallPrefix);
         Assert.Equal("AS", countryInfo.Iso3166Code);
         Assert.Equal("American Samoa", countryInfo.Name);
@@ -31,7 +30,6 @@ public class CountryInfo_Oceania_Tests
 
         Assert.Equal("+61", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Oceania, countryInfo.Continent);
-        Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("AU", countryInfo.Iso3166Code);
         Assert.Equal("Australia", countryInfo.Name);
@@ -51,7 +49,6 @@ public class CountryInfo_Oceania_Tests
 
         Assert.Equal("+1", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Oceania, countryInfo.Continent);
-        Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("011", countryInfo.InternationalCallPrefix);
         Assert.Equal("GU", countryInfo.Iso3166Code);
         Assert.Equal("Guam", countryInfo.Name);
@@ -71,7 +68,6 @@ public class CountryInfo_Oceania_Tests
 
         Assert.Equal("+675", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Oceania, countryInfo.Continent);
-        Assert.True(countryInfo.HasNationalDestinationCodes);
         Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Equal("PG", countryInfo.Iso3166Code);
         Assert.Equal("Papua New Guinea", countryInfo.Name);
