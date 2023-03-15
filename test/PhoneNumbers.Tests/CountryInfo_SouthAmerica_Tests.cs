@@ -16,7 +16,7 @@ public class CountryInfo_SouthAmerica_Tests
         Assert.Equal("Brazil", countryInfo.Name);
         Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 10, 11 }, countryInfo.NsnLengths);
-        Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Open, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }

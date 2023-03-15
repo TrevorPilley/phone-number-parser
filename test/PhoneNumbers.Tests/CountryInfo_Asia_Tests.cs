@@ -16,7 +16,7 @@ public class CountryInfo_Asia_Tests
         Assert.Equal("Hong Kong", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
         Assert.Equal(new[] { 8, 9, 12 }, countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -35,7 +35,7 @@ public class CountryInfo_Asia_Tests
         Assert.Equal("Macau", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
         Assert.Equal(new[] { 8 }, countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -54,7 +54,7 @@ public class CountryInfo_Asia_Tests
         Assert.Equal("Singapore", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
         Assert.Equal(new[] { 8, 10, 11 }, countryInfo.NsnLengths);
-        Assert.True(countryInfo.RequireNdcForLocalGeographicDialling);
+        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }

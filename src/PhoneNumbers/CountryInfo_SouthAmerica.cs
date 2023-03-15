@@ -15,7 +15,7 @@ public partial class CountryInfo
         Name = "Brazil",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 10, 11 }),
-        RequireNdcForLocalGeographicDialling = false,
+        NumberingPlanType = NumberingPlanType.Open,
         TrunkPrefix = "0",
     };
 }
