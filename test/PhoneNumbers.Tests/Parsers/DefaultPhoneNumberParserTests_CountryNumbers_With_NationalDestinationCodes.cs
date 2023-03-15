@@ -6,7 +6,7 @@ namespace PhoneNumbers.Tests.Parsers;
 public class DefaultPhoneNumberParserTests_CountryNumbers_WithNationalDestinationCodes
 {
     private readonly CountryInfo _countryInfo = TestHelper.CreateCountryInfo(
-        areaCodeLengths: new[] { 3, 2 },
+        ndcLengths: new[] { 3, 2 },
         nsnLengths: new[] { 7 });
 
     private readonly PhoneNumberParser _parser;

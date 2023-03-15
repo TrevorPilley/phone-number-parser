@@ -10,7 +10,7 @@ internal static class TestHelper
     /// </summary>
     internal static CountryInfo CreateCountryInfo(
         string trunkPrefix = default,
-        int[] areaCodeLengths = default,
+        int[] ndcLengths = default,
         int[] nsnLengths = default,
         bool requireNdcForLocalGeographicDialling = true) =>
         new()
@@ -18,7 +18,7 @@ internal static class TestHelper
             CallingCode = "+422", // +422 isn't a used calling code.
             Iso3166Code = "ZZ", // ZZ isn't a used ISO 3166 code.
             Name = "Zulu",
-            NdcLengths = new ReadOnlyCollection<int>(areaCodeLengths ?? Array.Empty<int>()),
+            NdcLengths = new ReadOnlyCollection<int>(ndcLengths ?? Array.Empty<int>()),
             NsnLengths = new ReadOnlyCollection<int>(nsnLengths ?? Array.Empty<int>()),
             RequireNdcForLocalGeographicDialling = requireNdcForLocalGeographicDialling,
             TrunkPrefix = trunkPrefix,
