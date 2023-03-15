@@ -151,6 +151,16 @@ To out out of specific countries but still use any new ones added in future vers
 ParseOptions.Default.Countries.Remove(CountryInfo.X);
 ```
 
+## Number to dial
+
+Determine the correct number to dial for another number:
+
+```csharp
+var callingFromNumber = PhoneNumber.Parse("+441142726444");
+var destinationNumber = PhoneNumber.Parse("+441202653887");
+var numberToDial = callingFromNumber.NumberToDialFor(destinationNumber); // 01202653887
+```
+
 ## Country support
 
 The library currently supports parsing phone numbers for the following countries and although best endeavours are made to adhere to published telephone numbering plans, depending on the accessibility of data there may be discrepancies. If you happen to find any, please raise an issue.
