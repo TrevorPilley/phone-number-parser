@@ -24,6 +24,7 @@ internal static class ResourceUtility
         value switch
         {
             '\0' => PhoneNumberHint.None,
+            'C' => PhoneNumberHint.ClosedDialling,
             'F' => PhoneNumberHint.Freephone,
             'M' => PhoneNumberHint.MachineToMachine,
             'P' => PhoneNumberHint.Pager,

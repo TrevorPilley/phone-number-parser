@@ -28,10 +28,11 @@ internal static class TestHelper
         string trunkPrefix,
         string ndc,
         string sn,
-        NumberingPlanType numberingPlanType = NumberingPlanType.Closed) =>
+        NumberingPlanType numberingPlanType = NumberingPlanType.Closed,
+        PhoneNumberHint phoneNumberHint = PhoneNumberHint.None) =>
         new GeographicPhoneNumber(
             CreateCountryInfo(trunkPrefix: trunkPrefix, numberingPlanType: numberingPlanType),
-            PhoneNumberHint.None,
+            phoneNumberHint,
             $"{ndc}{sn}",
             ndc,
             sn,
@@ -41,10 +42,11 @@ internal static class TestHelper
         string trunkPrefix,
         string ndc,
         string sn,
-        NumberingPlanType numberingPlanType = NumberingPlanType.Closed) =>
+        NumberingPlanType numberingPlanType = NumberingPlanType.Closed,
+        PhoneNumberHint phoneNumberHint = PhoneNumberHint.None) =>
         new MobilePhoneNumber(
             CreateCountryInfo(trunkPrefix: trunkPrefix, numberingPlanType: numberingPlanType),
-            PhoneNumberHint.None,
+            phoneNumberHint,
             $"{ndc}{sn}",
             ndc,
             sn);
@@ -53,10 +55,11 @@ internal static class TestHelper
         string trunkPrefix,
         string ndc,
         string sn,
-        NumberingPlanType numberingPlanType = NumberingPlanType.Closed) =>
+        NumberingPlanType numberingPlanType = NumberingPlanType.Closed,
+        PhoneNumberHint phoneNumberHint = PhoneNumberHint.None) =>
         new NonGeographicPhoneNumber(
             CreateCountryInfo(trunkPrefix: trunkPrefix, numberingPlanType: numberingPlanType),
-            PhoneNumberHint.None,
+            phoneNumberHint,
             $"{ndc}{sn}",
             ndc,
             sn);

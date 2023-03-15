@@ -35,7 +35,8 @@ internal sealed class NationalPhoneNumberFormatter : PhoneNumberFormatter
         }
 
         if (phoneNumber.PhoneNumberKind == PhoneNumberKind.GeographicPhoneNumber &&
-            phoneNumber.Country.NumberingPlanType == NumberingPlanType.Open)
+            phoneNumber.Country.NumberingPlanType == NumberingPlanType.Open &&
+            !((GeographicPhoneNumber)phoneNumber).ClosedDiallingInOpenPlan)
         {
             return $"({phoneNumber.Country.TrunkPrefix}{phoneNumber.NationalDestinationCode}) {phoneNumber.SubscriberNumber}";
         }
