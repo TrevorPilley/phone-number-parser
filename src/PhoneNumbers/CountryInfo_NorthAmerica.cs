@@ -4,6 +4,11 @@ namespace PhoneNumbers;
 
 public partial class CountryInfo
 {
+    private const string nanpCallingCode = "+1";
+    private const string nanpInternationalCallPrefix = "011";
+    private static readonly ReadOnlyCollection<int> s_nanpNdcLengths = new ReadOnlyCollection<int>(new[] { 3 });
+    private static readonly ReadOnlyCollection<int> s_nanpNsnLengths = new ReadOnlyCollection<int>(new[] { 10 });
+
     /// <summary>
     /// Gets the <see cref="CountryInfo"/> for American Samoa.
     /// </summary>
@@ -14,11 +19,10 @@ public partial class CountryInfo
         InternationalCallPrefix = "011",
         Iso3166Code = "AS",
         Name = "American Samoa",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
+        NdcLengths = s_nanpNdcLengths,
+        NsnLengths = s_nanpNsnLengths,
         RequireNdcForLocalGeographicDialling = false,
         SharesCallingCode = true,
-        TrunkPrefix = "1",
     };
 
     /// <summary>
@@ -31,11 +35,10 @@ public partial class CountryInfo
         InternationalCallPrefix = "011",
         Iso3166Code = "CA",
         Name = "Canada",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
+        NdcLengths = s_nanpNdcLengths,
+        NsnLengths = s_nanpNsnLengths,
         RequireNdcForLocalGeographicDialling = false,
         SharesCallingCode = true,
-        TrunkPrefix = "1",
     };
 
     /// <summary>
@@ -48,11 +51,10 @@ public partial class CountryInfo
         InternationalCallPrefix = "011",
         Iso3166Code = "GU",
         Name = "Guam",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
+        NdcLengths = s_nanpNdcLengths,
+        NsnLengths = s_nanpNsnLengths,
         RequireNdcForLocalGeographicDialling = false,
         SharesCallingCode = true,
-        TrunkPrefix = "1",
     };
 
     /// <summary>
@@ -65,11 +67,10 @@ public partial class CountryInfo
         InternationalCallPrefix = "011",
         Iso3166Code = "PR",
         Name = "Puerto Rico",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
+        NdcLengths = s_nanpNdcLengths,
+        NsnLengths = s_nanpNsnLengths,
         RequireNdcForLocalGeographicDialling = false,
         SharesCallingCode = true,
-        TrunkPrefix = "1",
     };
 
     /// <summary>
@@ -82,10 +83,9 @@ public partial class CountryInfo
         InternationalCallPrefix = "011",
         Iso3166Code = "US",
         Name = "United States",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
+        NdcLengths = s_nanpNdcLengths,
+        NsnLengths = s_nanpNsnLengths,
         RequireNdcForLocalGeographicDialling = false,
-        TrunkPrefix = "1",
     };
 
     /// <summary>
@@ -98,10 +98,9 @@ public partial class CountryInfo
         InternationalCallPrefix = "011",
         Iso3166Code = "VI",
         Name = "United States Virgin Islands",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
+        NdcLengths = s_nanpNdcLengths,
+        NsnLengths = s_nanpNsnLengths,
         RequireNdcForLocalGeographicDialling = false,
         SharesCallingCode = true,
-        TrunkPrefix = "1",
     };
 }

@@ -8,8 +8,8 @@ public class DefaultPhoneNumberParserTests_AS_MobilePhoneNumber
     private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.AmericanSamoa);
 
     [Theory]
-    [InlineData("16847330000", "684", "7330000")]
-    [InlineData("16847339999", "684", "7339999")]
+    [InlineData("6847330000", "684", "7330000")]
+    [InlineData("6847339999", "684", "7339999")]
     public void Parse_Known_MobilePhoneNumber(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);

@@ -8,8 +8,8 @@ public class DefaultPhoneNumberParserTests_AS_NonGeographicPhoneNumber
     private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.AmericanSamoa);
 
     [Theory]
-    [InlineData("16842580000", "684", "2580000")]
-    [InlineData("16842589999", "684", "2589999")]
+    [InlineData("6842580000", "684", "2580000")]
+    [InlineData("6842589999", "684", "2589999")]
     public void Parse_Known_NonGeographicPhoneNumber_6XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);

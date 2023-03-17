@@ -1,13 +1,14 @@
 {
     "cSpell.language": "en-GB",
     "cSpell.words": [
-        "Freephone",
-        "Pilley",
-        "Xunit",
-        "cref",
-        "fuget",
-        "nuget",
-        "inheritdoc"
+      "cref",
+      "Freephone",
+      "fuget",
+      "inheritdoc",
+      "nanp",
+      "nuget",
+      "Pilley",
+      "Xunit"
     ],
     "cSpell.enabledLanguageIds": [
       "csharp",
