@@ -59,7 +59,6 @@ public sealed partial class CountryInfo
     /// Gets the international call prefix.
     /// </summary>
     /// <remarks>Default to the ITU recommended '00', see https://en.wikipedia.org/wiki/List_of_international_call_prefixes.</remarks>
-    [Obsolete("This property is no longer supported and will be removed in version 3.0 of the library")]
     public string InternationalCallPrefix { get; init; } = "00";
 
     /// <summary>
@@ -98,6 +97,13 @@ public sealed partial class CountryInfo
     /// Gets the permitted lengths of the national significant number.
     /// </summary>
     internal ReadOnlyCollection<int> NsnLengths { get; init; } = s_emptyIntArray;
+
+    /// <summary>
+    /// Gets a value indicting whether this <see cref="CountryInfo"/> shares a calling code with the specified <see cref="CountryInfo"/>.
+    /// </summary>
+    /// <returns>True if the both countries share a calling code, otherwise false.</returns>
+    public bool SharesCallingCodeWith(CountryInfo countryInfo) =>
+        countryInfo?.CallingCode == CallingCode;
 
     internal static IEnumerable<CountryInfo> GetCountries() =>
         typeof(CountryInfo)

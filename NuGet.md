@@ -33,4 +33,8 @@ phoneNumber.ToString("E.164");           // +441142726444      (E.164 format)
 phoneNumber.ToString("E.123");           // +44 114 2726444    (E.123 international format)
 phoneNumber.ToString("N");               // (0114) 2726444     (E.123 national notation format)
 phoneNumber.ToString("RFC3966");         // tel:+44-114-272644 (RFC3966 format)
+
+// Determine the correct number to dial for another number:
+phoneNumber.NumberToDialFor(
+     PhoneNumber.Parse("+441202653887")); // 01202653887
 ```

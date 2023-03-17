@@ -68,7 +68,7 @@ The resulting `PhoneNumber` has the following properties:
 phoneNumber.Country.CallingCode;                // +44
 phoneNumber.Country.Continent;                  // Europe
 phoneNumber.Country.HasNationalDestinationCodes // true
-phoneNumber.Country.InternationalCallPrefix;    // 00 (obsolete)
+phoneNumber.Country.InternationalCallPrefix;    // 00
 phoneNumber.Country.Iso3166Code;                // GB
 phoneNumber.Country.Name;                       // United Kingdom
 phoneNumber.Country.NumberingPlanType;          // NumberingPlanType.Open
@@ -108,6 +108,23 @@ phoneNumber.ToString("E.123");                  // +44 114 2726444    (E.123 int
 phoneNumber.ToString("N");                      // (0114) 2726444     (E.123 national notation format)
 phoneNumber.ToString("RFC3966");                // tel:+44-114-272644 (RFC3966 format)
 ```
+
+## Number to dial
+
+ Determine the correct number to dial for another number:
+
+ ```csharp
+ var callingFromNumber = PhoneNumber.Parse("+441142726444");
+
+ callingFromNumber.NumberToDialFor(
+     PhoneNumber.Parse("+441146548866"));        // 6548866
+
+ callingFromNumber.NumberToDialFor(
+     PhoneNumber.Parse("+441202653887"));        // 01202653887
+
+ callingFromNumber.NumberToDialFor(
+     PhoneNumber.Parse("+33140477283"));         // 0033140477283
+ ```
 
 ### ParseOptions
 
