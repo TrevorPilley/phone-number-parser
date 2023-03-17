@@ -19,7 +19,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
         Assert.True(countryInfo.SharesCallingCode);
-        Assert.Equal("1", countryInfo.TrunkPrefix);
+        Assert.Null(countryInfo.TrunkPrefix);
     }
 
     [Fact]
@@ -39,7 +39,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
         Assert.True(countryInfo.SharesCallingCode);
-        Assert.Equal("1", countryInfo.TrunkPrefix);
+        Assert.Null(countryInfo.TrunkPrefix);
     }
 
     [Fact]
@@ -59,7 +59,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
         Assert.True(countryInfo.SharesCallingCode);
-        Assert.Equal("1", countryInfo.TrunkPrefix);
+        Assert.Null(countryInfo.TrunkPrefix);
     }
 
     [Fact]
@@ -79,7 +79,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
         Assert.True(countryInfo.SharesCallingCode);
-        Assert.Equal("1", countryInfo.TrunkPrefix);
+        Assert.Null(countryInfo.TrunkPrefix);
     }
 
     [Fact]
@@ -99,6 +99,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
         Assert.False(countryInfo.SharesCallingCode);
+        Assert.Null(countryInfo.TrunkPrefix);
     }
 
     [Fact]
@@ -118,6 +119,6 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.RequireNdcForLocalGeographicDialling);
         Assert.True(countryInfo.SharesCallingCode);
-        Assert.Equal("1", countryInfo.TrunkPrefix);
+        Assert.Null(countryInfo.TrunkPrefix);
     }
 }
