@@ -232,10 +232,10 @@ Papua New Guinea | PG            | +675         |              | Yes        | Ye
 ### Notes
 
 - The ISO code for the United Kingdom is 'GB' rather than 'UK'.
-- Geographically assigned numbers in France are currently only within the top level geographic zones (01 Île-de-France, 02 Nord-Ouest, 03 Nord-Est, 04 Sud-Est and 05 Sud-Ouest).
+- Geographically assigned numbers in France are currently only resolved within the top level geographic zones (01 Île-de-France, 02 Nord-Ouest, 03 Nord-Est, 04 Sud-Est and 05 Sud-Ouest).
 - Where possible, the geographic area name is in the language/locality of the country for the phone number (e.g. for an Italian phone number assigned to Florence, the geographic area will be set to `Firenze`.
 - Within the North American Numbering Plan (covering all countries with the calling code +1):
+  - Geographically assigned numbers are currently only resolved within the country or state/region level, not at city level.
   - Mobile numbers are geographically assigned and cannot be determined separately from landlines.
   - Freephone numbers (with a few exceptions) are issued from a shared pool. This could mean a Canadian freephone number look up shows as belonging to a different country if parsed from the E.164 format (parsing from the national number format and country code will work as expected).
   - Phone numbers using the alphabetic mnemonic system/alphabetic phone-words (e.g. 123-PHONEME) are not supported.
-  - The area name for geographic numbers is resolved at the state/region level, not at city level.
