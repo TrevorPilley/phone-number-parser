@@ -5,6 +5,22 @@ namespace PhoneNumbers;
 public partial class CountryInfo
 {
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for American Samoa.
+    /// </summary>
+    public static CountryInfo AmericanSamoa { get; } = new()
+    {
+        CallingCode = nanpCallingCode,
+        Continent = Oceania,
+        InternationalCallPrefix = nanpInternationalCallPrefix,
+        Iso3166Code = "AS",
+        Name = "American Samoa",
+        NdcLengths = s_nanpNdcLengths,
+        NsnLengths = s_nanpNsnLengths,
+        RequireNdcForLocalGeographicDialling = false,
+        SharesCallingCode = true,
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Australia.
     /// </summary>
     public static CountryInfo Australia { get; } = new()
@@ -17,6 +33,22 @@ public partial class CountryInfo
         NsnLengths = new ReadOnlyCollection<int>(new[] { 5, 6, 7, 8, 9, 10 }),
         RequireNdcForLocalGeographicDialling = false,
         TrunkPrefix = "0",
+    };
+
+    /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Guam.
+    /// </summary>
+    public static CountryInfo Guam { get; } = new()
+    {
+        CallingCode = nanpCallingCode,
+        Continent = Oceania,
+        InternationalCallPrefix = nanpInternationalCallPrefix,
+        Iso3166Code = "GU",
+        Name = "Guam",
+        NdcLengths = s_nanpNdcLengths,
+        NsnLengths = s_nanpNsnLengths,
+        RequireNdcForLocalGeographicDialling = false,
+        SharesCallingCode = true,
     };
 
     /// <summary>
