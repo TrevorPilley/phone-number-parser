@@ -4,26 +4,10 @@ namespace PhoneNumbers;
 
 public partial class CountryInfo
 {
-    private const string nanpCallingCode = "+1";
-    private const string nanpInternationalCallPrefix = "011";
-    private static readonly ReadOnlyCollection<int> s_nanpNdcLengths = new ReadOnlyCollection<int>(new[] { 3 });
-    private static readonly ReadOnlyCollection<int> s_nanpNsnLengths = new ReadOnlyCollection<int>(new[] { 10 });
-
-    /// <summary>
-    /// Gets the <see cref="CountryInfo"/> for American Samoa.
-    /// </summary>
-    public static CountryInfo AmericanSamoa { get; } = new()
-    {
-        CallingCode = nanpCallingCode,
-        Continent = NorthAmerica,
-        InternationalCallPrefix = nanpInternationalCallPrefix,
-        Iso3166Code = "AS",
-        Name = "American Samoa",
-        NdcLengths = s_nanpNdcLengths,
-        NsnLengths = s_nanpNsnLengths,
-        RequireNdcForLocalGeographicDialling = false,
-        SharesCallingCode = true,
-    };
+    internal const string nanpCallingCode = "+1";
+    internal const string nanpInternationalCallPrefix = "011";
+    internal static readonly ReadOnlyCollection<int> s_nanpNdcLengths = new ReadOnlyCollection<int>(new[] { 3 });
+    internal static readonly ReadOnlyCollection<int> s_nanpNsnLengths = new ReadOnlyCollection<int>(new[] { 10 });
 
     /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Canada.
@@ -35,22 +19,6 @@ public partial class CountryInfo
         InternationalCallPrefix = nanpInternationalCallPrefix,
         Iso3166Code = "CA",
         Name = "Canada",
-        NdcLengths = s_nanpNdcLengths,
-        NsnLengths = s_nanpNsnLengths,
-        RequireNdcForLocalGeographicDialling = false,
-        SharesCallingCode = true,
-    };
-
-    /// <summary>
-    /// Gets the <see cref="CountryInfo"/> for Guam.
-    /// </summary>
-    public static CountryInfo Guam { get; } = new()
-    {
-        CallingCode = nanpCallingCode,
-        Continent = NorthAmerica,
-        InternationalCallPrefix = nanpInternationalCallPrefix,
-        Iso3166Code = "GU",
-        Name = "Guam",
         NdcLengths = s_nanpNdcLengths,
         NsnLengths = s_nanpNsnLengths,
         RequireNdcForLocalGeographicDialling = false,
