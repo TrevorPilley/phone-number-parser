@@ -14,9 +14,9 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo AmericanSamoa { get; } = new()
     {
-        CallingCode = "+1",
+        CallingCode = nanpCallingCode,
         Continent = NorthAmerica,
-        InternationalCallPrefix = "011",
+        InternationalCallPrefix = nanpInternationalCallPrefix,
         Iso3166Code = "AS",
         Name = "American Samoa",
         NdcLengths = s_nanpNdcLengths,
@@ -30,9 +30,9 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Canada { get; } = new()
     {
-        CallingCode = "+1",
+        CallingCode = nanpCallingCode,
         Continent = NorthAmerica,
-        InternationalCallPrefix = "011",
+        InternationalCallPrefix = nanpInternationalCallPrefix,
         Iso3166Code = "CA",
         Name = "Canada",
         NdcLengths = s_nanpNdcLengths,
@@ -46,9 +46,9 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Guam { get; } = new()
     {
-        CallingCode = "+1",
+        CallingCode = nanpCallingCode,
         Continent = NorthAmerica,
-        InternationalCallPrefix = "011",
+        InternationalCallPrefix = nanpInternationalCallPrefix,
         Iso3166Code = "GU",
         Name = "Guam",
         NdcLengths = s_nanpNdcLengths,
@@ -62,9 +62,9 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo PuertoRico { get; } = new()
     {
-        CallingCode = "+1",
+        CallingCode = nanpCallingCode,
         Continent = NorthAmerica,
-        InternationalCallPrefix = "011",
+        InternationalCallPrefix = nanpInternationalCallPrefix,
         Iso3166Code = "PR",
         Name = "Puerto Rico",
         NdcLengths = s_nanpNdcLengths,
@@ -78,9 +78,9 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo UnitedStates { get; } = new()
     {
-        CallingCode = "+1",
+        CallingCode = nanpCallingCode,
         Continent = NorthAmerica,
-        InternationalCallPrefix = "011",
+        InternationalCallPrefix = nanpInternationalCallPrefix,
         Iso3166Code = "US",
         Name = "United States",
         NdcLengths = s_nanpNdcLengths,
@@ -93,9 +93,9 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo UnitedStatesVirginIslands { get; } = new()
     {
-        CallingCode = "+1",
+        CallingCode = nanpCallingCode,
         Continent = NorthAmerica,
-        InternationalCallPrefix = "011",
+        InternationalCallPrefix = nanpInternationalCallPrefix,
         Iso3166Code = "VI",
         Name = "United States Virgin Islands",
         NdcLengths = s_nanpNdcLengths,
