@@ -83,6 +83,22 @@ public class PhoneNumber_TryParse_Tests
     }
 
     [Fact]
+    public void TryParse_Value_For_Brazil_CallingCode()
+    {
+        Assert.True(PhoneNumber.TryParse("+556123122026", out PhoneNumber phoneNumber));
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Brazil, phoneNumber.Country);
+    }
+
+    [Fact]
+    public void TryParse_Value_CountryCode_For_Brazil_CallingCode()
+    {
+        Assert.True(PhoneNumber.TryParse("06123122026", CountryInfo.Brazil.Iso3166Code, out var phoneNumber));
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Brazil, phoneNumber.Country);
+    }
+
+    [Fact]
     public void TryParse_Value_For_Bulgaria_CallingCode()
     {
         Assert.True(PhoneNumber.TryParse("+35929492760", out PhoneNumber phoneNumber));
