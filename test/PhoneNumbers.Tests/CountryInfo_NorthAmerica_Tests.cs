@@ -9,9 +9,9 @@ public class CountryInfo_NorthAmerica_Tests
 
         var countryInfo = CountryInfo.Canada;
 
-        Assert.Equal("+1", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
-        Assert.Equal("011", countryInfo.InternationalCallPrefix);
+        Assert.Equal(CountryInfo.NanpInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Equal("CA", countryInfo.Iso3166Code);
         Assert.Equal("Canada", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
@@ -28,9 +28,9 @@ public class CountryInfo_NorthAmerica_Tests
 
         var countryInfo = CountryInfo.PuertoRico;
 
-        Assert.Equal("+1", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
-        Assert.Equal("011", countryInfo.InternationalCallPrefix);
+        Assert.Equal(CountryInfo.NanpInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Equal("PR", countryInfo.Iso3166Code);
         Assert.Equal("Puerto Rico", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
@@ -47,9 +47,9 @@ public class CountryInfo_NorthAmerica_Tests
 
         var countryInfo = CountryInfo.UnitedStates;
 
-        Assert.Equal("+1", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
-        Assert.Equal("011", countryInfo.InternationalCallPrefix);
+        Assert.Equal(CountryInfo.NanpInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Equal("US", countryInfo.Iso3166Code);
         Assert.Equal("United States", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
@@ -66,9 +66,9 @@ public class CountryInfo_NorthAmerica_Tests
 
         var countryInfo = CountryInfo.UnitedStatesVirginIslands;
 
-        Assert.Equal("+1", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
-        Assert.Equal("011", countryInfo.InternationalCallPrefix);
+        Assert.Equal(CountryInfo.NanpInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Equal("VI", countryInfo.Iso3166Code);
         Assert.Equal("United States Virgin Islands", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);

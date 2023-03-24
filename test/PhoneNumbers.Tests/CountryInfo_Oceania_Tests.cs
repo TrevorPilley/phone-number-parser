@@ -9,9 +9,9 @@ public class CountryInfo_Oceania_Tests
 
         var countryInfo = CountryInfo.AmericanSamoa;
 
-        Assert.Equal("+1", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Oceania, countryInfo.Continent);
-        Assert.Equal("011", countryInfo.InternationalCallPrefix);
+        Assert.Equal(CountryInfo.NanpInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Equal("AS", countryInfo.Iso3166Code);
         Assert.Equal("American Samoa", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
@@ -47,9 +47,9 @@ public class CountryInfo_Oceania_Tests
 
         var countryInfo = CountryInfo.Guam;
 
-        Assert.Equal("+1", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Oceania, countryInfo.Continent);
-        Assert.Equal("011", countryInfo.InternationalCallPrefix);
+        Assert.Equal(CountryInfo.NanpInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Equal("GU", countryInfo.Iso3166Code);
         Assert.Equal("Guam", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
