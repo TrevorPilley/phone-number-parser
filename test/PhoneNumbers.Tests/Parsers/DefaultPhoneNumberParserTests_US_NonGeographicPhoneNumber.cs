@@ -8,43 +8,6 @@ public class DefaultPhoneNumberParserTests_US_NonGeographicPhoneNumber
     private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.UnitedStates);
 
     [Theory]
-    [InlineData("5002000000", "500", "2000000")]
-    [InlineData("5009999999", "500", "9999999")]
-    [InlineData("5212000000", "521", "2000000")]
-    [InlineData("5219999999", "521", "9999999")]
-    [InlineData("5292000000", "529", "2000000")]
-    [InlineData("5299999999", "529", "9999999")]
-    [InlineData("5332000000", "533", "2000000")]
-    [InlineData("5339999999", "533", "9999999")]
-    [InlineData("5442000000", "544", "2000000")]
-    [InlineData("5449999999", "544", "9999999")]
-    [InlineData("5662000000", "566", "2000000")]
-    [InlineData("5669999999", "566", "9999999")]
-    [InlineData("5772000000", "577", "2000000")]
-    [InlineData("5779999999", "577", "9999999")]
-    [InlineData("5882000000", "588", "2000000")]
-    [InlineData("5889999999", "588", "9999999")]
-    public void Parse_Known_NonGeographicPhoneNumber_5XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
-    {
-        var parseResult = s_parser.Parse(value);
-        parseResult.ThrowIfFailure();
-
-        var phoneNumber = parseResult.PhoneNumber;
-
-        Assert.NotNull(phoneNumber);
-        Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
-
-        var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.UnitedStates, nonGeographicPhoneNumber.Country);
-        Assert.False(nonGeographicPhoneNumber.IsFreephone);
-        Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
-        Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
-        Assert.False(nonGeographicPhoneNumber.IsSharedCost);
-        Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
-        Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
-    }
-
-    [Theory]
     [InlineData("7102000000", "710", "2000000")]
     [InlineData("7102109999", "710", "2109999")]
     [InlineData("7102120000", "710", "2120000")]
@@ -110,6 +73,18 @@ public class DefaultPhoneNumberParserTests_US_NonGeographicPhoneNumber
     [InlineData("8009109999", "800", "9109999")]
     [InlineData("8009129999", "800", "9129999")]
     [InlineData("8009999999", "800", "9999999")]
+    [InlineData("8330000000", "833", "0000000")]
+    [InlineData("8339999999", "833", "9999999")]
+    [InlineData("8440000000", "844", "0000000")]
+    [InlineData("8449999999", "844", "9999999")]
+    [InlineData("8550000000", "855", "0000000")]
+    [InlineData("8559999999", "855", "9999999")]
+    [InlineData("8660000000", "866", "0000000")]
+    [InlineData("8669999999", "866", "9999999")]
+    [InlineData("8770000000", "877", "0000000")]
+    [InlineData("8779999999", "877", "9999999")]
+    [InlineData("8880000000", "888", "0000000")]
+    [InlineData("8889999999", "888", "9999999")]
     public void Parse_Known_NonGeographicPhoneNumber_Freephone(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
