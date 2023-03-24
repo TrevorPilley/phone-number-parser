@@ -215,10 +215,10 @@ United Kingdom | GB            | +44          | 0            | Yes        | Yes 
 
 Country                       | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
 ---                           | ---           | ---          | ---          | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
-Canada                        | CA            | +1           |              | Yes        |        |                        |                    |                      | Yes            | Yes *                          | Yes                               |                                  |
-Puerto Rico                   | PR            | +1           |              | Yes        |        |                        |                    |                      |                |                                |                                   |                                  |
-United States                 | US            | +1           |              | Yes        |        |                        |                    |                      | Yes            | Yes *                          | Yes                               |                                  |
-United States Virgin Islands  | VI            | +1           |              | Yes        |        |                        |                    |                      |                |                                |                                   |                                  |
+Canada                        | CA            | +1 _(NANP)_  |              | Yes        |        |                        |                    |                      | Yes            | Yes *                          | Yes                               |                                  |
+Puerto Rico                   | PR            | +1 _(NANP)_  |              | Yes        |        |                        |                    |                      |                |                                |                                   |                                  |
+United States                 | US            | +1 _(NANP)_  |              | Yes        |        |                        |                    | Yes *                | Yes            | Yes *                          | Yes                               |                                  |
+United States Virgin Islands  | VI            | +1 _(NANP)_  |              | Yes        |        |                        |                    |                      |                |                                |                                   |                                  |
 
 ### Oceania
 
@@ -238,4 +238,5 @@ Papua New Guinea | PG            | +675         |              | Yes        | Ye
   - Geographically assigned numbers are currently only resolved within the country or state/region level, not at city level.
   - Mobile numbers are geographically assigned and cannot be determined separately from landlines.
   - Freephone numbers (with a few exceptions) are issued from a shared pool. This could mean a Canadian freephone number look up shows as belonging to a different country if parsed from the E.164 format (parsing from the national number format and country code will work as expected).
+  - Virtual (aka personal numbers) are issued from a shared pool and always show as belonging to the United States.
   - Phone numbers using the alphabetic mnemonic system/alphabetic phone-words (e.g. 123-PHONEME) are not supported.
