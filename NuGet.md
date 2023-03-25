@@ -1,12 +1,12 @@
 # Phone Number Parser
 
-A library for parsing phone numbers, providing a number of benefits over a regular expression. For example greater validity of phone numbers including national destination codes (aka area codes) and subscriber numbers (aka line numbers) based upon published numbering plans for each country. Additional attributes such as the kind of phone number (Mobile, Geographic or Non-Geographic) are also included, and all parsing is performed locally within the library using embedded in-memory data files.
+A library for parsing phone numbers, providing validity of phone numbers including national destination codes (aka area codes) and subscriber numbers (aka line numbers) based upon published numbering plans for each country. Additional attributes such as the kind of phone number (Mobile, Geographic or Non-Geographic) are also included, and all parsing is performed locally within the library using embedded in-memory data files.
 
 Builds for:
 
 - .NET 7.0
-- .NET Standard 2.1 - _supports .NET Core 3.0 or later and .NET 5.0 or later_
-- .NET Standard 2.0 - _supports .NET Framework 4.6.2 or later (.NET Framework projects will need to be built with C# 9.0 or later)_
+- .NET Standard 2.1 - _supports .NET Core 3.0 or newer and .NET 5.0 or newer_
+- .NET Standard 2.0 - _supports .NET Framework 4.6.2 or newer, although projects will need to be built with a minimum C# language version of 9.0 due to use of init only properties_
 
 ```csharp
 using PhoneNumbers;
@@ -14,7 +14,7 @@ using PhoneNumbers;
 // Parsing a phone number is achieved via the `PhoneNumber.Parse` method (or alternatively via `PhoneNumber.TryParse`). Any spaces, hyphens or other formatting in the input string is ignored.
 var phoneNumber = PhoneNumber.Parse("+441142726444"); // or Parse("01142726444", "GB")
 
-phoneNumber.NationalDestinationCode;     // 114 (aka area code)
+phoneNumber.NationalDestinationCode;     // 114     (aka area code)
 phoneNumber.SubscriberNumber;            // 2726444 (aka line number)
 
 // Country specific information is accessible via the Country property, for example:
