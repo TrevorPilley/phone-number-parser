@@ -50,6 +50,17 @@ public class ParseOptionsTests
     }
 
     [Fact]
+    public void AllowNorthAmericanNumberingPlanCountries()
+    {
+        var parseOptions = new ParseOptions();
+        parseOptions.Countries.Clear();
+        parseOptions.AllowNorthAmericanNumberingPlanCountries();
+
+        Assert.True(parseOptions.Countries.Count > 0);
+        Assert.All(parseOptions.Countries, x => Assert.Equal(CountryInfo.NanpCallingCode, x.CallingCode));
+    }
+
+    [Fact]
     public void AllowOceanianCountries()
     {
         var parseOptions = new ParseOptions();
