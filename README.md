@@ -140,6 +140,7 @@ ParseOptions.Default.AllowAfricanCountries();
 ParseOptions.Default.AllowAsianCountries();
 ParseOptions.Default.AllowEuropeanCountries();
 ParseOptions.Default.AllowNorthAmericanCountries();
+ParseOptions.Default.AllowNorthAmericanNumberingPlanCountries();
 ParseOptions.Default.AllowOceanianCountries();
 ParseOptions.Default.AllowSouthAmericanCountries();
 ```
