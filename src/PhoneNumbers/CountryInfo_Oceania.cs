@@ -9,13 +9,13 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo AmericanSamoa { get; } = new()
     {
-        CallingCode = nanpCallingCode,
+        CallingCode = NanpCallingCode,
         Continent = Oceania,
-        InternationalCallPrefix = nanpInternationalCallPrefix,
+        InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "AS",
         Name = "American Samoa",
-        NdcLengths = s_nanpNdcLengths,
-        NsnLengths = s_nanpNsnLengths,
+        NdcLengths = NanpNdcLengths,
+        NsnLengths = NanpNsnLengths,
         RequireNdcForLocalGeographicDialling = false,
         SharesCallingCode = true,
     };
@@ -40,13 +40,13 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Guam { get; } = new()
     {
-        CallingCode = nanpCallingCode,
+        CallingCode = NanpCallingCode,
         Continent = Oceania,
-        InternationalCallPrefix = nanpInternationalCallPrefix,
+        InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "GU",
         Name = "Guam",
-        NdcLengths = s_nanpNdcLengths,
-        NsnLengths = s_nanpNsnLengths,
+        NdcLengths = NanpNdcLengths,
+        NsnLengths = NanpNsnLengths,
         RequireNdcForLocalGeographicDialling = false,
         SharesCallingCode = true,
     };
