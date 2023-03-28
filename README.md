@@ -140,9 +140,11 @@ ParseOptions.Default.AllowAfricanCountries();
 ParseOptions.Default.AllowAsianCountries();
 ParseOptions.Default.AllowEuropeanCountries();
 ParseOptions.Default.AllowNorthAmericanCountries();
-ParseOptions.Default.AllowNorthAmericanNumberingPlanCountries();
 ParseOptions.Default.AllowOceanianCountries();
 ParseOptions.Default.AllowSouthAmericanCountries();
+
+// Alternatively all countries using the same numbering plan.
+ParseOptions.Default.AllowNorthAmericanNumberingPlanCountries();
 ```
 
 #### Opt-out
