@@ -9,7 +9,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Brazil { get; } = new()
     {
-        CallingCode = "+55",
+        CallingCode = "55",
         Continent = SouthAmerica,
         Iso3166Code = "BR",
         Name = "Brazil",

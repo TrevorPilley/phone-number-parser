@@ -29,7 +29,7 @@ If you are adding a new country, please do the following.
 ```csharp
 public static CountryInfo CountryName { get; } = new()
 {
-    CallingCode = "+NN",
+    CallingCode = "NN",
     Continent = Africa/Asia/Europe/Oceania/NorthAmerica/SouthAmerica, // as appropriate
     Iso3166Code = "ZZ",
     Name = "CountryName",

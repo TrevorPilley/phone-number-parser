@@ -29,6 +29,7 @@ public class CountryInfo_Tests
     [InlineData("")]
     [InlineData(" ")]
     [InlineData("+35312222222")]
+    [InlineData("+35342222222")] // NDC is actually the dummy calling code but since it isn't immediately after the + it doesn't match
     public void HasCallingCode_False(string value) =>
         Assert.False(TestHelper.CreateCountryInfo().HasCallingCode(value));
 

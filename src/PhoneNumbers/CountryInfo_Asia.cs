@@ -9,7 +9,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo HongKong { get; } = new()
     {
-        CallingCode = "+852",
+        CallingCode = "852",
         Continent = Asia,
         Iso3166Code = "HK",
         Name = "Hong Kong",
@@ -21,7 +21,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Macau { get; } = new()
     {
-        CallingCode = "+853",
+        CallingCode = "853",
         Continent = Asia,
         Iso3166Code = "MO",
         Name = "Macau",
@@ -33,7 +33,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Singapore { get; } = new()
     {
-        CallingCode = "+65",
+        CallingCode = "65",
         Continent = Asia,
         Iso3166Code = "SG",
         Name = "Singapore",
