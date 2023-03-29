@@ -4,7 +4,7 @@ namespace PhoneNumbers;
 
 public partial class CountryInfo
 {
-    internal const string NanpCallingCode = "+1";
+    internal const string NanpCallingCode = "1";
     internal static ReadOnlyCollection<int> NanpNdcLengths { get; } = new ReadOnlyCollection<int>(new[] { 3 });
     internal static ReadOnlyCollection<int> NanpNsnLengths { get; } = new ReadOnlyCollection<int>(new[] { 10 });
 

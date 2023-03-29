@@ -30,7 +30,7 @@ internal sealed class Rfc3966PhoneNumberFormatter : PhoneNumberFormatter
         }
 
         return phoneNumber.NationalDestinationCode is not null
-            ? $"tel:{phoneNumber.Country.CallingCode}-{phoneNumber.NationalDestinationCode}-{phoneNumber.SubscriberNumber}"
-            : $"tel:{phoneNumber.Country.CallingCode}-{phoneNumber.SubscriberNumber}";
+            ? $"tel:{Chars.Plus}{phoneNumber.Country.CallingCode}-{phoneNumber.NationalDestinationCode}-{phoneNumber.SubscriberNumber}"
+            : $"tel:{Chars.Plus}{phoneNumber.Country.CallingCode}-{phoneNumber.SubscriberNumber}";
     }
 }

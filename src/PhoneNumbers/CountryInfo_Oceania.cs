@@ -24,7 +24,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Australia { get; } = new()
     {
-        CallingCode = "+61",
+        CallingCode = "61",
         Continent = Oceania,
         Iso3166Code = "AU",
         Name = "Australia",
@@ -54,7 +54,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo PapuaNewGuinea { get; } = new()
     {
-        CallingCode = "+675",
+        CallingCode = "675",
         Continent = Oceania,
         Iso3166Code = "PG",
         Name = "Papua New Guinea",

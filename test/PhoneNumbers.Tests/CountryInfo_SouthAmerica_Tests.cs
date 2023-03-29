@@ -9,7 +9,7 @@ public class CountryInfo_SouthAmerica_Tests
 
         var countryInfo = CountryInfo.Brazil;
 
-        Assert.Equal("+55", countryInfo.CallingCode);
+        Assert.Equal("55", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.SouthAmerica, countryInfo.Continent);
         Assert.Equal("BR", countryInfo.Iso3166Code);
         Assert.Equal("Brazil", countryInfo.Name);

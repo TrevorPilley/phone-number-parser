@@ -9,7 +9,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Austria { get; } = new()
     {
-        CallingCode = "+43",
+        CallingCode = "43",
         Continent = Europe,
         Iso3166Code = "AT",
         Name = "Austria",
@@ -23,7 +23,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Belarus { get; } = new()
     {
-        CallingCode = "+375",
+        CallingCode = "375",
         Continent = Europe,
         Iso3166Code = "BY",
         Name = "Belarus",
@@ -37,7 +37,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Belgium { get; } = new()
     {
-        CallingCode = "+32",
+        CallingCode = "32",
         Continent = Europe,
         Iso3166Code = "BE",
         Name = "Belgium",
@@ -51,7 +51,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Bulgaria { get; } = new()
     {
-        CallingCode = "+359",
+        CallingCode = "359",
         Continent = Europe,
         Iso3166Code = "BG",
         Name = "Bulgaria",
@@ -66,7 +66,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Croatia { get; } = new()
     {
-        CallingCode = "+385",
+        CallingCode = "385",
         Continent = Europe,
         Iso3166Code = "HR",
         Name = "Croatia",
@@ -81,7 +81,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo CzechRepublic { get; } = new()
     {
-        CallingCode = "+420",
+        CallingCode = "420",
         Continent = Europe,
         Iso3166Code = "CZ",
         Name = "Czech Republic",
@@ -94,7 +94,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Denmark { get; } = new()
     {
-        CallingCode = "+45",
+        CallingCode = "45",
         Continent = Europe,
         Iso3166Code = "DK",
         Name = "Denmark",
@@ -107,7 +107,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Estonia { get; } = new()
     {
-        CallingCode = "+372",
+        CallingCode = "372",
         Continent = Europe,
         Iso3166Code = "EE",
         Name = "Estonia",
@@ -120,7 +120,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Finland { get; } = new()
     {
-        CallingCode = "+358",
+        CallingCode = "358",
         Continent = Europe,
         Iso3166Code = "FI",
         Name = "Finland",
@@ -135,7 +135,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo France { get; } = new()
     {
-        CallingCode = "+33",
+        CallingCode = "33",
         Continent = Europe,
         Iso3166Code = "FR",
         Name = "France",
@@ -148,7 +148,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Germany { get; } = new()
     {
-        CallingCode = "+49",
+        CallingCode = "49",
         Continent = Europe,
         Iso3166Code = "DE",
         Name = "Germany",
@@ -162,7 +162,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Gibraltar { get; } = new()
     {
-        CallingCode = "+350",
+        CallingCode = "350",
         Continent = Europe,
         Iso3166Code = "GI",
         Name = "Gibraltar",
@@ -175,7 +175,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Greece { get; } = new()
     {
-        CallingCode = "+30",
+        CallingCode = "30",
         Continent = Europe,
         Iso3166Code = "GR",
         Name = "Greece",
@@ -188,7 +188,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Guernsey { get; } = new()
     {
-        CallingCode = "+44",
+        CallingCode = "44",
         Continent = Europe,
         Iso3166Code = "GG",
         Name = "Guernsey",
@@ -204,7 +204,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Hungary { get; } = new()
     {
-        CallingCode = "+36",
+        CallingCode = "36",
         Continent = Europe,
         Iso3166Code = "HU",
         Name = "Hungary",
@@ -220,7 +220,7 @@ public partial class CountryInfo
     /// <remarks>Covers the Republic of Ireland, Northern Ireland is part of the United Kingdom.</remarks>
     public static CountryInfo Ireland { get; } = new()
     {
-        CallingCode = "+353",
+        CallingCode = "353",
         Continent = Europe,
         Iso3166Code = "IE",
         Name = "Ireland",
@@ -235,7 +235,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo IsleOfMan { get; } = new()
     {
-        CallingCode = "+44",
+        CallingCode = "44",
         Continent = Europe,
         Iso3166Code = "IM",
         Name = "Isle of Man",
@@ -252,7 +252,7 @@ public partial class CountryInfo
     /// <remarks>Covers Italy (includes the islands of Sardinia and Sicily), and Vatican City.</remarks>
     public static CountryInfo Italy { get; } = new()
     {
-        CallingCode = "+39",
+        CallingCode = "39",
         Continent = Europe,
         Iso3166Code = "IT",
         Name = "Italy",
@@ -265,7 +265,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Jersey { get; } = new()
     {
-        CallingCode = "+44",
+        CallingCode = "44",
         Continent = Europe,
         Iso3166Code = "JE",
         Name = "Jersey",
@@ -281,7 +281,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Kosovo { get; } = new()
     {
-        CallingCode = "+383",
+        CallingCode = "383",
         Continent = Europe,
         Iso3166Code = "XK",
         Name = "Kosovo",
@@ -296,7 +296,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Moldova { get; } = new()
     {
-        CallingCode = "+373",
+        CallingCode = "373",
         Continent = Europe,
         Iso3166Code = "MD",
         Name = "Moldova",
@@ -310,7 +310,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Monaco { get; } = new()
     {
-        CallingCode = "+377",
+        CallingCode = "377",
         Continent = Europe,
         Iso3166Code = "MC",
         Name = "Monaco",
@@ -322,7 +322,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Netherlands { get; } = new()
     {
-        CallingCode = "+31",
+        CallingCode = "31",
         Continent = Europe,
         Iso3166Code = "NL",
         Name = "Netherlands",
@@ -336,7 +336,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Norway { get; } = new()
     {
-        CallingCode = "+47",
+        CallingCode = "47",
         Continent = Europe,
         Iso3166Code = "NO",
         Name = "Norway",
@@ -348,7 +348,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Poland { get; } = new()
     {
-        CallingCode = "+48",
+        CallingCode = "48",
         Continent = Europe,
         Iso3166Code = "PL",
         Name = "Poland",
@@ -361,7 +361,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Portugal { get; } = new()
     {
-        CallingCode = "+351",
+        CallingCode = "351",
         Continent = Europe,
         Iso3166Code = "PT",
         Name = "Portugal",
@@ -374,7 +374,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Romania { get; } = new()
     {
-        CallingCode = "+40",
+        CallingCode = "40",
         Continent = Europe,
         Iso3166Code = "RO",
         Name = "Romania",
@@ -388,7 +388,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo SanMarino { get; } = new()
     {
-        CallingCode = "+378",
+        CallingCode = "378",
         Continent = Europe,
         Iso3166Code = "SM",
         Name = "San Marino",
@@ -400,7 +400,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Serbia { get; } = new()
     {
-        CallingCode = "+381",
+        CallingCode = "381",
         Continent = Europe,
         Iso3166Code = "RS",
         Name = "Serbia",
@@ -415,7 +415,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Slovakia { get; } = new()
     {
-        CallingCode = "+421",
+        CallingCode = "421",
         Continent = Europe,
         Iso3166Code = "SK",
         Name = "Slovakia",
@@ -429,7 +429,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Spain { get; } = new()
     {
-        CallingCode = "+34",
+        CallingCode = "34",
         Continent = Europe,
         Iso3166Code = "ES",
         Name = "Spain",
@@ -442,7 +442,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Sweden { get; } = new()
     {
-        CallingCode = "+46",
+        CallingCode = "46",
         Continent = Europe,
         Iso3166Code = "SE",
         Name = "Sweden",
@@ -457,7 +457,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Switzerland { get; } = new()
     {
-        CallingCode = "+41",
+        CallingCode = "41",
         Continent = Europe,
         Iso3166Code = "CH",
         Name = "Switzerland",
@@ -471,7 +471,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Ukraine { get; } = new()
     {
-        CallingCode = "+380",
+        CallingCode = "380",
         Continent = Europe,
         Iso3166Code = "UA",
         Name = "Ukraine",
@@ -487,7 +487,7 @@ public partial class CountryInfo
     /// <remarks>Covers England, Scotland, Wales and Northern Ireland.</remarks>
     public static CountryInfo UnitedKingdom { get; } = new()
     {
-        CallingCode = "+44",
+        CallingCode = "44",
         Continent = Europe,
         Iso3166Code = "GB",
         Name = "United Kingdom",

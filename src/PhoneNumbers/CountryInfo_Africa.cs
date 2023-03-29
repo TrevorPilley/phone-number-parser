@@ -9,7 +9,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Egypt { get; } = new()
     {
-        CallingCode = "+20",
+        CallingCode = "20",
         Continent = Africa,
         Iso3166Code = "EG",
         Name = "Egypt",
@@ -23,7 +23,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Nigeria { get; } = new()
     {
-        CallingCode = "+234",
+        CallingCode = "234",
         Continent = Africa,
         Iso3166Code = "NG",
         Name = "Nigeria",
@@ -38,7 +38,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo SouthAfrica { get; } = new()
     {
-        CallingCode = "+27",
+        CallingCode = "27",
         Continent = Africa,
         Iso3166Code = "ZA",
         Name = "South Africa",

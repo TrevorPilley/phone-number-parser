@@ -15,7 +15,7 @@ internal static class TestHelper
         NumberingPlanType numberingPlanType = NumberingPlanType.Closed) =>
         new()
         {
-            CallingCode = "+422", // +422 isn't a used calling code.
+            CallingCode = "422", // 422 isn't a used calling code.
             Continent = "Pangea",
             Iso3166Code = "ZZ", // ZZ isn't a used ISO 3166 code.
             Name = "Zulu",

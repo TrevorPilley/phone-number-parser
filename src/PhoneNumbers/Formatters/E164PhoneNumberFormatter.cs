@@ -29,6 +29,6 @@ internal sealed class E164PhoneNumberFormatter : PhoneNumberFormatter
             throw new ArgumentNullException(nameof(phoneNumber));
         }
 
-        return $"{phoneNumber.Country.CallingCode}{phoneNumber.NationalSignificantNumber}";
+        return $"{Chars.Plus}{phoneNumber.Country.CallingCode}{phoneNumber.NationalSignificantNumber}";
     }
 }

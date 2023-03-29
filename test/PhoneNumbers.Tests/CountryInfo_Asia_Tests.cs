@@ -9,7 +9,7 @@ public class CountryInfo_Asia_Tests
 
         var countryInfo = CountryInfo.HongKong;
 
-        Assert.Equal("+852", countryInfo.CallingCode);
+        Assert.Equal("852", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
         Assert.Equal("HK", countryInfo.Iso3166Code);
         Assert.Equal("Hong Kong", countryInfo.Name);
@@ -27,7 +27,7 @@ public class CountryInfo_Asia_Tests
 
         var countryInfo = CountryInfo.Macau;
 
-        Assert.Equal("+853", countryInfo.CallingCode);
+        Assert.Equal("853", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
         Assert.Equal("MO", countryInfo.Iso3166Code);
         Assert.Equal("Macau", countryInfo.Name);
@@ -45,7 +45,7 @@ public class CountryInfo_Asia_Tests
 
         var countryInfo = CountryInfo.Singapore;
 
-        Assert.Equal("+65", countryInfo.CallingCode);
+        Assert.Equal("65", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
         Assert.Equal("SG", countryInfo.Iso3166Code);
         Assert.Equal("Singapore", countryInfo.Name);

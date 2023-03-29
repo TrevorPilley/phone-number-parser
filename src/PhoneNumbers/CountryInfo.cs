@@ -35,9 +35,9 @@ public sealed partial class CountryInfo
     }
 
     /// <summary>
-    /// Gets the calling code for the country (e.g. '+XX').
+    /// Gets the calling code for the country.
     /// </summary>
-    /// <remarks>See https://en.wikipedia.org/wiki/List_of_country_calling_codes.</remarks>
+    /// <remarks>See https://en.wikipedia.org/wiki/List_of_country_calling_codes, this property does not contain the + character.</remarks>
     public required string CallingCode { get; init; } = null!;
 
     /// <summary>
@@ -117,8 +117,20 @@ public sealed partial class CountryInfo
     /// </summary>
     /// <param name="value">A string containing a phone number in international format (e.g. +XX).</param>
     /// <returns>True if the value has the calling code for this country, otherwise false.</returns>
-    internal bool HasCallingCode(string value) =>
-        value?.IndexOf(CallingCode, StringComparison.Ordinal) >= 0;
+    internal bool HasCallingCode(string value)
+    {
+#pragma warning disable CA1307 // Specify StringComparison for clarity
+        var plusIdx = value?.IndexOf(Chars.Plus);
+#pragma warning restore CA1307 // Specify StringComparison for clarity
+
+        if (plusIdx >= 0)
+        {
+            return value?.IndexOf(CallingCode, StringComparison.Ordinal) == plusIdx + 1;
+        }
+
+        return false;
+    }
+
 
     /// <summary>
     /// Gets a value indicating whether the specified value has a length equal to a valid national significant number (NSN) for this country.
