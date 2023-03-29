@@ -117,7 +117,7 @@ public class ParseOptionsTests
     {
         var countryInfos = ParseOptions.Default.GetCountryInfos("+441624696300");
         Assert.Equal(4, countryInfos.Count());
-        Assert.All(countryInfos, x => Assert.Equal("+44", x.CallingCode));
+        Assert.All(countryInfos, x => Assert.Equal("44", x.CallingCode));
     }
 
     [Fact]

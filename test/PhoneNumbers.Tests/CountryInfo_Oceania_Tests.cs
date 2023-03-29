@@ -27,7 +27,7 @@ public class CountryInfo_Oceania_Tests
 
         var countryInfo = CountryInfo.Australia;
 
-        Assert.Equal("+61", countryInfo.CallingCode);
+        Assert.Equal("61", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Oceania, countryInfo.Continent);
         Assert.Equal("AU", countryInfo.Iso3166Code);
         Assert.Equal("Australia", countryInfo.Name);
@@ -63,7 +63,7 @@ public class CountryInfo_Oceania_Tests
 
         var countryInfo = CountryInfo.PapuaNewGuinea;
 
-        Assert.Equal("+675", countryInfo.CallingCode);
+        Assert.Equal("675", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Oceania, countryInfo.Continent);
         Assert.Equal("PG", countryInfo.Iso3166Code);
         Assert.Equal("Papua New Guinea", countryInfo.Name);

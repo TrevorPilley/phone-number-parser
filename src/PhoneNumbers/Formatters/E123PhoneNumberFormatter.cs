@@ -30,7 +30,7 @@ internal sealed class E123PhoneNumberFormatter : PhoneNumberFormatter
         }
 
         return phoneNumber.NationalDestinationCode is not null
-            ? $"{phoneNumber.Country.CallingCode} {phoneNumber.NationalDestinationCode} {phoneNumber.SubscriberNumber}"
-            : $"{phoneNumber.Country.CallingCode} {phoneNumber.SubscriberNumber}";
+            ? $"{Chars.Plus}{phoneNumber.Country.CallingCode} {phoneNumber.NationalDestinationCode} {phoneNumber.SubscriberNumber}"
+            : $"{Chars.Plus}{phoneNumber.Country.CallingCode} {phoneNumber.SubscriberNumber}";
     }
 }

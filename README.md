@@ -65,7 +65,7 @@ The resulting `PhoneNumber` has the following properties:
 
 ```csharp
 // PhoneNumber properties:
-phoneNumber.Country.CallingCode;                // +44
+phoneNumber.Country.CallingCode;                // 44
 phoneNumber.Country.Continent;                  // Europe
 phoneNumber.Country.HasNationalDestinationCodes // true
 phoneNumber.Country.Iso3166Code;                // GB
