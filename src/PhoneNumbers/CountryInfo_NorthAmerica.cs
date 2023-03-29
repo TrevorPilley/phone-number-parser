@@ -5,7 +5,6 @@ namespace PhoneNumbers;
 public partial class CountryInfo
 {
     internal const string NanpCallingCode = "+1";
-    internal const string NanpInternationalCallPrefix = "011";
     internal static ReadOnlyCollection<int> NanpNdcLengths { get; } = new ReadOnlyCollection<int>(new[] { 3 });
     internal static ReadOnlyCollection<int> NanpNsnLengths { get; } = new ReadOnlyCollection<int>(new[] { 10 });
 
@@ -16,7 +15,6 @@ public partial class CountryInfo
     {
         CallingCode = NanpCallingCode,
         Continent = NorthAmerica,
-        InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "CA",
         Name = "Canada",
         NdcLengths = NanpNdcLengths,
@@ -32,7 +30,6 @@ public partial class CountryInfo
     {
         CallingCode = NanpCallingCode,
         Continent = NorthAmerica,
-        InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "PR",
         Name = "Puerto Rico",
         NdcLengths = NanpNdcLengths,
@@ -48,7 +45,6 @@ public partial class CountryInfo
     {
         CallingCode = NanpCallingCode,
         Continent = NorthAmerica,
-        InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "US",
         Name = "United States",
         NdcLengths = NanpNdcLengths,
@@ -63,7 +59,6 @@ public partial class CountryInfo
     {
         CallingCode = NanpCallingCode,
         Continent = NorthAmerica,
-        InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "VI",
         Name = "United States Virgin Islands",
         NdcLengths = NanpNdcLengths,

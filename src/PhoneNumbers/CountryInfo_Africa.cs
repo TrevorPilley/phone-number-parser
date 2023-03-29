@@ -25,7 +25,6 @@ public partial class CountryInfo
     {
         CallingCode = "+234",
         Continent = Africa,
-        InternationalCallPrefix = "009",
         Iso3166Code = "NG",
         Name = "Nigeria",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),

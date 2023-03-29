@@ -11,7 +11,6 @@ public partial class CountryInfo
     {
         CallingCode = NanpCallingCode,
         Continent = Oceania,
-        InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "AS",
         Name = "American Samoa",
         NdcLengths = NanpNdcLengths,
@@ -42,7 +41,6 @@ public partial class CountryInfo
     {
         CallingCode = NanpCallingCode,
         Continent = Oceania,
-        InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "GU",
         Name = "Guam",
         NdcLengths = NanpNdcLengths,
