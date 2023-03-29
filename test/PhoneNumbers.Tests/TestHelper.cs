@@ -16,6 +16,7 @@ internal static class TestHelper
         new()
         {
             CallingCode = "+422", // +422 isn't a used calling code.
+            Continent = "Pangea",
             Iso3166Code = "ZZ", // ZZ isn't a used ISO 3166 code.
             Name = "Zulu",
             NdcLengths = new ReadOnlyCollection<int>(ndcLengths ?? Array.Empty<int>()),
@@ -30,13 +31,14 @@ internal static class TestHelper
         string sn,
         NumberingPlanType numberingPlanType = NumberingPlanType.Closed,
         PhoneNumberHint phoneNumberHint = PhoneNumberHint.None) =>
-        new GeographicPhoneNumber(
-            CreateCountryInfo(trunkPrefix: trunkPrefix, numberingPlanType: numberingPlanType),
-            phoneNumberHint,
-            $"{ndc}{sn}",
-            ndc,
-            sn,
-            "AreaName");
+        new GeographicPhoneNumber(phoneNumberHint)
+        {
+            Country = CreateCountryInfo(trunkPrefix: trunkPrefix, numberingPlanType: numberingPlanType),
+            GeographicArea = "AreaName",
+            NationalDestinationCode = ndc,
+            NationalSignificantNumber = $"{ndc}{sn}",
+            SubscriberNumber = sn,
+        };
 
     internal static PhoneNumber CreateMobilePhoneNumber(
         string trunkPrefix,
@@ -44,12 +46,13 @@ internal static class TestHelper
         string sn,
         NumberingPlanType numberingPlanType = NumberingPlanType.Closed,
         PhoneNumberHint phoneNumberHint = PhoneNumberHint.None) =>
-        new MobilePhoneNumber(
-            CreateCountryInfo(trunkPrefix: trunkPrefix, numberingPlanType: numberingPlanType),
-            phoneNumberHint,
-            $"{ndc}{sn}",
-            ndc,
-            sn);
+        new MobilePhoneNumber(phoneNumberHint)
+        {
+            Country = CreateCountryInfo(trunkPrefix: trunkPrefix, numberingPlanType: numberingPlanType),
+            NationalDestinationCode = ndc,
+            NationalSignificantNumber = $"{ndc}{sn}",
+            SubscriberNumber = sn,
+        };
 
     internal static PhoneNumber CreateNonGeographicPhoneNumber(
         string trunkPrefix,
@@ -57,10 +60,11 @@ internal static class TestHelper
         string sn,
         NumberingPlanType numberingPlanType = NumberingPlanType.Closed,
         PhoneNumberHint phoneNumberHint = PhoneNumberHint.None) =>
-        new NonGeographicPhoneNumber(
-            CreateCountryInfo(trunkPrefix: trunkPrefix, numberingPlanType: numberingPlanType),
-            phoneNumberHint,
-            $"{ndc}{sn}",
-            ndc,
-            sn);
+        new NonGeographicPhoneNumber(phoneNumberHint)
+        {
+            Country = CreateCountryInfo(trunkPrefix: trunkPrefix, numberingPlanType: numberingPlanType),
+            NationalDestinationCode = ndc,
+            NationalSignificantNumber = $"{ndc}{sn}",
+            SubscriberNumber = sn,
+        };
 }

@@ -19,12 +19,12 @@ public sealed partial class CountryInfo
     internal const string SouthAmerica = "South America";
     private static readonly ReadOnlyCollection<int> s_emptyIntArray = new(Array.Empty<int>());
     private static readonly ReadOnlyCollection<PhoneNumberFormatter> s_formatters = new(new[]
-        {
-            E164PhoneNumberFormatter.Instance,
-            E123PhoneNumberFormatter.Instance,
-            NationalPhoneNumberFormatter.Instance,
-            Rfc3966PhoneNumberFormatter.Instance,
-        });
+    {
+        E164PhoneNumberFormatter.Instance,
+        E123PhoneNumberFormatter.Instance,
+        NationalPhoneNumberFormatter.Instance,
+        Rfc3966PhoneNumberFormatter.Instance,
+    });
 
     /// <summary>
     /// Initialises a new instance of the <see cref="CountryInfo"/> class.
@@ -38,12 +38,12 @@ public sealed partial class CountryInfo
     /// Gets the calling code for the country (e.g. '+XX').
     /// </summary>
     /// <remarks>See https://en.wikipedia.org/wiki/List_of_country_calling_codes.</remarks>
-    public string CallingCode { get; init; } = null!;
+    public required string CallingCode { get; init; } = null!;
 
     /// <summary>
     /// Gets the name of the continent the country is part of.
     /// </summary>
-    public string Continent { get; init; } = null!;
+    public required string Continent { get; init; } = null!;
 
     /// <summary>
     /// Gets a value indicating whether the country has national destination codes.
@@ -59,12 +59,12 @@ public sealed partial class CountryInfo
     /// Gets the ISO 3166 Alpha-2 code for the country.
     /// </summary>
     /// <remarks>See https://www.iso.org/iso-3166-country-codes.html</remarks>
-    public string Iso3166Code { get; init; } = null!;
+    public required string Iso3166Code { get; init; } = null!;
 
     /// <summary>
     /// Gets the name of the country.
     /// </summary>
-    public string Name { get; init; } = null!;
+    public required string Name { get; init; } = null!;
 
     /// <summary>
     /// Gets the type of numbering plan used.

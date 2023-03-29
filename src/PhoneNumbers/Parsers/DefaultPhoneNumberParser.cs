@@ -90,31 +90,34 @@ internal class DefaultPhoneNumberParser : PhoneNumberParser
         {
             PhoneNumberKind.GeographicPhoneNumber =>
                 ParseResult.Success(
-                    new GeographicPhoneNumber(
-                        Country,
-                        ndcAndSn.CountryNumber.Hint,
-                        nsnValue,
-                        ndcAndSn.NationalDestinationCode!,
-                        ndcAndSn.SubscriberNumber!,
-                        ndcAndSn.CountryNumber.GeographicArea!)),
+                    new GeographicPhoneNumber(ndcAndSn.CountryNumber.Hint)
+                    {
+                        Country = Country,
+                        GeographicArea = ndcAndSn.CountryNumber.GeographicArea!,
+                        NationalDestinationCode = ndcAndSn.NationalDestinationCode!,
+                        NationalSignificantNumber = nsnValue,
+                        SubscriberNumber = ndcAndSn.SubscriberNumber!,
+                    }),
 
             PhoneNumberKind.MobilePhoneNumber =>
                 ParseResult.Success(
-                    new MobilePhoneNumber(
-                        Country,
-                        ndcAndSn.CountryNumber.Hint,
-                        nsnValue,
-                        ndcAndSn.NationalDestinationCode,
-                        ndcAndSn.SubscriberNumber!)),
+                    new MobilePhoneNumber(ndcAndSn.CountryNumber.Hint)
+                    {
+                        Country = Country,
+                        NationalDestinationCode = ndcAndSn.NationalDestinationCode!,
+                        NationalSignificantNumber = nsnValue,
+                        SubscriberNumber = ndcAndSn.SubscriberNumber!,
+                    }),
 
             PhoneNumberKind.NonGeographicPhoneNumber =>
                 ParseResult.Success(
-                    new NonGeographicPhoneNumber(
-                        Country,
-                        ndcAndSn.CountryNumber.Hint,
-                        nsnValue,
-                        ndcAndSn.NationalDestinationCode,
-                        ndcAndSn.SubscriberNumber!)),
+                    new NonGeographicPhoneNumber(ndcAndSn.CountryNumber.Hint)
+                    {
+                        Country = Country,
+                        NationalDestinationCode = ndcAndSn.NationalDestinationCode!,
+                        NationalSignificantNumber = nsnValue,
+                        SubscriberNumber = ndcAndSn.SubscriberNumber!,
+                    }),
 
             _ => base.ParseNsn(nsnValue),
         };
