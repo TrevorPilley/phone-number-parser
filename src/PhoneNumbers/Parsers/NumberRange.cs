@@ -55,7 +55,7 @@ internal sealed class NumberRange
             x =>
             {
 #pragma warning disable CA1307 // Specify StringComparison for clarity
-                var separatorIndex = x.IndexOf('-');
+                var separatorIndex = x.IndexOf(Chars.Hyphen);
 #pragma warning restore CA1307 // Specify StringComparison for clarity
 
                 if (separatorIndex == -1)
@@ -63,7 +63,7 @@ internal sealed class NumberRange
                     return new NumberRange(x, x);
                 }
 
-                if (separatorIndex != x.LastIndexOf('-'))
+                if (separatorIndex != x.LastIndexOf(Chars.Hyphen))
                 {
                     throw new InvalidOperationException("A number range must be expressed as either X or X-X.");
                 }

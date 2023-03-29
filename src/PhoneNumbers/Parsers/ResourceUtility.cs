@@ -8,11 +8,11 @@ internal static class ResourceUtility
     // Kind | NDC Range(s) | Geographic Area | SN Range(s) | Hint
     internal static IReadOnlyList<CountryNumber> ReadCountryNumbers(string name) =>
         ReadLines(name)
-            .Select(x => x.Split('|'))
+            .Select(x => x.Split(Chars.Pipe))
             .Select(x => new CountryNumber
             {
                 GeographicArea = x[2].Length > 0 ? x[2] : null,
-                Hint = ParseNumberHint(x[4].Length > 0 ? x[4][0] : '\0'),
+                Hint = ParseNumberHint(x[4].Length > 0 ? x[4][0] : Chars.Null),
                 Kind = ParseNumberKind(x[0][0]),
                 NationalDestinationCodeRanges = x[1].Length > 0 ? ParseNumberRanges(x[1]) : null,
                 SubscriberNumberRanges = ParseNumberRanges(x[3]),
@@ -23,7 +23,7 @@ internal static class ResourceUtility
     private static PhoneNumberHint ParseNumberHint(char value) =>
         value switch
         {
-            '\0' => PhoneNumberHint.None,
+            Chars.Null => PhoneNumberHint.None,
             'C' => PhoneNumberHint.ClosedDialling,
             'F' => PhoneNumberHint.Freephone,
             'M' => PhoneNumberHint.MachineToMachine,
@@ -45,7 +45,7 @@ internal static class ResourceUtility
 
     private static IReadOnlyList<NumberRange> ParseNumberRanges(string value) =>
         value
-            .Split(',')
+            .Split(Chars.Comma)
             .Select(NumberRange.Create)
             .ToList()
             .AsReadOnly();
@@ -63,7 +63,7 @@ internal static class ResourceUtility
 
         while ((line = reader.ReadLine()) is not null)
         {
-            if (line.Length > 0 && line[0] != '#')
+            if (line.Length > 0 && line[0] != Chars.Hash)
             {
                 yield return line;
             }
