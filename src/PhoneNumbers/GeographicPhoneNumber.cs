@@ -8,27 +8,10 @@ public sealed class GeographicPhoneNumber : PhoneNumber, IEquatable<GeographicPh
     /// <summary>
     /// Initialises a new instance of the <see cref="GeographicPhoneNumber"/> class.
     /// </summary>
-    /// <param name="countryInfo">The <see cref="CountryInfo"/> for the phone number.</param>
     /// <param name="phoneNumberHint">The <see cref="PhoneNumberHint"/> for the phone number.</param>
-    /// <param name="nationalSignificantNumber">The national significant number of the phone number.</param>
-    /// <param name="nationalDestinationCode">The national destination code of the phone number.</param>
-    /// <param name="subscriberNumber">The subscriber number of the phone number.</param>
-    /// <param name="geographicArea">The name of the geographic area the phone number the area code is allocated to.</param>
-    internal GeographicPhoneNumber(
-        CountryInfo countryInfo,
-        PhoneNumberHint phoneNumberHint,
-        string nationalSignificantNumber,
-        string nationalDestinationCode,
-        string subscriberNumber,
-        string geographicArea)
-        : base(countryInfo, phoneNumberHint, nationalSignificantNumber, nationalDestinationCode, subscriberNumber)
+    internal GeographicPhoneNumber(PhoneNumberHint phoneNumberHint)
+        :base(phoneNumberHint)
     {
-        if (string.IsNullOrWhiteSpace(geographicArea))
-        {
-            throw new ArgumentException($"'{nameof(geographicArea)}' cannot be null or whitespace.", nameof(geographicArea));
-        }
-
-        GeographicArea = geographicArea;
     }
 
     /// <summary>
@@ -36,7 +19,7 @@ public sealed class GeographicPhoneNumber : PhoneNumber, IEquatable<GeographicPh
     /// Depending on the country, this could be an individual city or larger region such as a county.
     /// </summary>
     /// <remarks>This is an indication based upon the data available for each country.</remarks>
-    public string GeographicArea { get; }
+    public required string GeographicArea { get; init; }
 
     /// <inheritdoc/>
     public override PhoneNumberKind PhoneNumberKind =>

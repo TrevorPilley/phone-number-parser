@@ -126,7 +126,7 @@ public class CountryInfo_Tests
     [Fact]
     public void When_Constructed()
     {
-        var countryInfo = new CountryInfo();
+        var countryInfo = (CountryInfo)Activator.CreateInstance(typeof(CountryInfo), true);
 
         Assert.Null(countryInfo.CallingCode);
         Assert.Null(countryInfo.Continent);

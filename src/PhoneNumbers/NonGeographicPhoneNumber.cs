@@ -8,18 +8,9 @@ public sealed class NonGeographicPhoneNumber : PhoneNumber, IEquatable<NonGeogra
     /// <summary>
     /// Initialises a new instance of the <see cref="NonGeographicPhoneNumber"/> class.
     /// </summary>
-    /// <param name="countryInfo">The <see cref="CountryInfo"/> for the phone number.</param>
     /// <param name="phoneNumberHint">The <see cref="PhoneNumberHint"/> for the phone number.</param>
-    /// <param name="nationalSignificantNumber">The national significant number of the phone number.</param>
-    /// <param name="nationalDestinationCode">The national destination code of the phone number.</param>
-    /// <param name="subscriberNumber">The subscriber number of the phone number.</param>
-    internal NonGeographicPhoneNumber(
-        CountryInfo countryInfo,
-        PhoneNumberHint phoneNumberHint,
-        string nationalSignificantNumber,
-        string? nationalDestinationCode,
-        string subscriberNumber)
-        : base(countryInfo, phoneNumberHint, nationalSignificantNumber, nationalDestinationCode, subscriberNumber)
+    internal NonGeographicPhoneNumber(PhoneNumberHint phoneNumberHint)
+        :base(phoneNumberHint)
     {
     }
 
