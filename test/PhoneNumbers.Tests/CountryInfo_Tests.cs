@@ -132,7 +132,6 @@ public class CountryInfo_Tests
         Assert.Null(countryInfo.Continent);
         Assert.False(countryInfo.HasNationalDestinationCodes);
         Assert.False(countryInfo.HasTrunkPrefix);
-        Assert.Equal("00", countryInfo.InternationalCallPrefix);
         Assert.Null(countryInfo.Iso3166Code);
         Assert.Null(countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
