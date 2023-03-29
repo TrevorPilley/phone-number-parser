@@ -11,54 +11,28 @@ public abstract class PhoneNumber
     /// <summary>
     /// Initialises a new instance of the <see cref="PhoneNumber"/> class.
     /// </summary>
-    /// <param name="countryInfo">The <see cref="CountryInfo"/> for the phone number.</param>
     /// <param name="phoneNumberHint">The <see cref="PhoneNumberHint"/> for the phone number.</param>
-    /// <param name="nationalSignificantNumber">The national significant number of the phone number.</param>
-    /// <param name="nationalDestinationCode">The national destination code of the phone number.</param>
-    /// <param name="subscriberNumber">The subscriber number of the phone number.</param>
-    /// <exception cref="ArgumentException">Thrown if the <paramref name="nationalSignificantNumber"/> or <paramref name="subscriberNumber"/> are null or whitespace.</exception>
-    /// <exception cref="ArgumentNullException">Thrown if the <paramref name="countryInfo"/> is null.</exception>
-    protected PhoneNumber(
-        CountryInfo countryInfo,
-        PhoneNumberHint phoneNumberHint,
-        string nationalSignificantNumber,
-        string? nationalDestinationCode,
-        string subscriberNumber)
+    protected PhoneNumber(PhoneNumberHint phoneNumberHint)
     {
-        if (countryInfo is null)
-        {
-            throw new ArgumentNullException(nameof(countryInfo));
-        }
-
-        if (string.IsNullOrWhiteSpace(nationalSignificantNumber))
-        {
-            throw new ArgumentException($"'{nameof(nationalSignificantNumber)}' cannot be null or whitespace.", nameof(nationalSignificantNumber));
-        }
-
-        if (string.IsNullOrWhiteSpace(subscriberNumber))
-        {
-            throw new ArgumentException($"'{nameof(subscriberNumber)}' cannot be null or whitespace.", nameof(subscriberNumber));
-        }
-
-        (Country, Hint, NationalSignificantNumber, NationalDestinationCode, SubscriberNumber) = (countryInfo, phoneNumberHint, nationalSignificantNumber, nationalDestinationCode, subscriberNumber);
+        Hint = phoneNumberHint;
     }
 
     /// <summary>
     /// Gets the <see cref="CountryInfo"/> for the phone number.
     /// </summary>
-    public CountryInfo Country { get; }
+    public required CountryInfo Country { get; init; }
 
     /// <summary>
     /// Gets the national destination code of the phone number.
     /// </summary>
     /// <remarks>May also be referred to as area code or mobile network code.</remarks>
-    public string? NationalDestinationCode { get; }
+    public string? NationalDestinationCode { get; init; }
 
     /// <summary>
     /// Gets the national significant number of the phone number.
     /// </summary>
     /// <remarks>Typically this is the number excluding the country code or trunk prefix.</remarks>
-    public string NationalSignificantNumber { get; }
+    public required string NationalSignificantNumber { get; init; }
 
     /// <summary>
     /// Gets the <see cref="PhoneNumberKind"/>.
@@ -70,7 +44,7 @@ public abstract class PhoneNumber
     /// Gets the subscriber number of the phone number.
     /// </summary>
     /// <remarks>May also be referred to as local number.</remarks>
-    public string SubscriberNumber { get; }
+    public required string SubscriberNumber { get; init; }
 
     /// <summary>
     /// Gets the <see cref="PhoneNumberHint"/>.

@@ -38,10 +38,9 @@ public static CountryInfo CountryName { get; } = new()
 ```
 
 2. If the country uses national destination codes (aka. area codes), set the `NdcLengths` property as appropriate and declare in descending order.
-3. If the country doesn't use the ITU default `InternationalCallPrefix` of `00`, set the property appropriately.
-4. If the country uses a trunk prefix, set the `TrunkPrefix` appropriately.
-5. If the country uses an open dialling plan, where within a geographic area local dialling can be done without including the trunk code or area code, set `NumberingPlanType = NumberingPlanType.Open`
-6. Add a new `CountryInfo_CountryName` test in the `CountryInfo_{Continent}_Tests.cs` file asserting the property values (see an existing implementation).
+3. If the country uses a trunk prefix, set the `TrunkPrefix` appropriately.
+4. If the country uses an open dialling plan, where within a geographic area local dialling can be done without including the trunk code or area code, set `NumberingPlanType = NumberingPlanType.Open`
+5. Add a new `CountryInfo_CountryName` test in the `CountryInfo_{Continent}_Tests.cs` file asserting the property values (see an existing implementation).
 
 ### Add the data file
 
