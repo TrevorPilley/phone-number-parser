@@ -8,18 +8,9 @@ public sealed class MobilePhoneNumber : PhoneNumber, IEquatable<MobilePhoneNumbe
     /// <summary>
     /// Initialises a new instance of the <see cref="MobilePhoneNumber"/> class.
     /// </summary>
-    /// <param name="countryInfo">The <see cref="CountryInfo"/> for the phone number.</param>
     /// <param name="phoneNumberHint">The <see cref="PhoneNumberHint"/> for the phone number.</param>
-    /// <param name="nationalSignificantNumber">The national significant number of the phone number.</param>
-    /// <param name="nationalDestinationCode">The national destination code of the phone number.</param>
-    /// <param name="subscriberNumber">The subscriber number of the phone number.</param>
-    internal MobilePhoneNumber(
-        CountryInfo countryInfo,
-        PhoneNumberHint phoneNumberHint,
-        string nationalSignificantNumber,
-        string? nationalDestinationCode,
-        string subscriberNumber)
-        : base(countryInfo, phoneNumberHint, nationalSignificantNumber, nationalDestinationCode, subscriberNumber)
+    internal MobilePhoneNumber(PhoneNumberHint phoneNumberHint)
+        :base(phoneNumberHint)
     {
     }
 

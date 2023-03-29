@@ -13,12 +13,12 @@ internal sealed class CountryNumber
     /// <summary>
     /// Gets the <see cref="PhoneNumberHint"/>.
     /// </summary>
-    internal PhoneNumberHint Hint { get; init; }
+    internal required PhoneNumberHint Hint { get; init; }
 
     /// <summary>
     /// Gets the <see cref="PhoneNumberParser"/>.
     /// </summary>
-    internal PhoneNumberKind Kind { get; init; }
+    internal required PhoneNumberKind Kind { get; init; }
 
     /// <summary>
     /// Gets the <see cref="NumberRange"/>s of the national destination codes.
@@ -28,5 +28,5 @@ internal sealed class CountryNumber
     /// <summary>
     /// Gets the <see cref="NumberRange"/>s of the subscriber numbers.
     /// </summary>
-    internal IReadOnlyList<NumberRange> SubscriberNumberRanges { get; init; } = null!;
+    internal required IReadOnlyList<NumberRange> SubscriberNumberRanges { get; init; } = null!;
 }
