@@ -25,7 +25,6 @@ public partial class CountryInfo
     {
         CallingCode = "+375",
         Continent = Europe,
-        InternationalCallPrefix = "810",
         Iso3166Code = "BY",
         Name = "Belarus",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2 }),
