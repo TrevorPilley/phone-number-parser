@@ -18,19 +18,12 @@ internal sealed class Rfc3966PhoneNumberFormatter : PhoneNumberFormatter
     internal static PhoneNumberFormatter Instance { get; } = new Rfc3966PhoneNumberFormatter();
 
     /// <inheritdoc/>
-    public override bool CanFormat(string format) =>
+    internal override bool CanFormat(string format) =>
         format?.Equals("RFC3966", StringComparison.Ordinal) == true;
 
     /// <inheritdoc/>
-    public override string Format(PhoneNumber phoneNumber)
-    {
-        if (phoneNumber is null)
-        {
-            throw new ArgumentNullException(nameof(phoneNumber));
-        }
-
-        return phoneNumber.NationalDestinationCode is not null
+    internal override string Format(PhoneNumber phoneNumber) =>
+        phoneNumber.NationalDestinationCode is not null
             ? $"tel:{Chars.Plus}{phoneNumber.Country.CallingCode}-{phoneNumber.NationalDestinationCode}-{phoneNumber.SubscriberNumber}"
             : $"tel:{Chars.Plus}{phoneNumber.Country.CallingCode}-{phoneNumber.SubscriberNumber}";
-    }
 }

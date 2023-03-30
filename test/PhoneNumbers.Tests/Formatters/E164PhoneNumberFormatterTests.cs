@@ -20,10 +20,6 @@ public class E164PhoneNumberFormatterTests
         Assert.True(E164PhoneNumberFormatter.Instance.CanFormat("E.164"));
 
     [Fact]
-    public void Format_Throws_If_PhoneNumber_Null() =>
-        Assert.Throws<ArgumentNullException>(() => E164PhoneNumberFormatter.Instance.Format(null));
-
-    [Fact]
     public void Format_With_Ndc_And_Sn() =>
         Assert.Equal(
             "+42212345667788",

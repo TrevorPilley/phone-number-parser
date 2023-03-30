@@ -110,10 +110,6 @@ public class NationalPhoneNumberFormatterTests
             NationalPhoneNumberFormatter.Instance.Format(TestHelper.CreateNonGeographicPhoneNumber(null, null, "667788")));
 
     [Fact]
-    public void Format_Throws_If_PhoneNumber_Null() =>
-        Assert.Throws<ArgumentNullException>(() => NationalPhoneNumberFormatter.Instance.Format(null));
-
-    [Fact]
     public void Instance()
     {
         Assert.NotNull(NationalPhoneNumberFormatter.Instance);

@@ -18,17 +18,12 @@ internal sealed class E123PhoneNumberFormatter : PhoneNumberFormatter
     internal static PhoneNumberFormatter Instance { get; } = new E123PhoneNumberFormatter();
 
     /// <inheritdoc/>
-    public override bool CanFormat(string format) =>
+    internal override bool CanFormat(string format) =>
         format?.Equals("E.123", StringComparison.Ordinal) == true;
 
     /// <inheritdoc/>
-    public override string Format(PhoneNumber phoneNumber)
+    internal override string Format(PhoneNumber phoneNumber)
     {
-        if (phoneNumber is null)
-        {
-            throw new ArgumentNullException(nameof(phoneNumber));
-        }
-
         return phoneNumber.NationalDestinationCode is not null
             ? $"{Chars.Plus}{phoneNumber.Country.CallingCode} {phoneNumber.NationalDestinationCode} {phoneNumber.SubscriberNumber}"
             : $"{Chars.Plus}{phoneNumber.Country.CallingCode} {phoneNumber.SubscriberNumber}";
