@@ -80,6 +80,7 @@ public class GBPhoneNumberParserTests_NonGeographicPhoneNumber
     }
 
     [Theory]
+    [InlineData("08001111", "800", "1111")]
     [InlineData("0800000000", "800", "000000")]
     [InlineData("0800999999", "800", "999999")]
     [InlineData("08080000000", "808", "0000000")]
