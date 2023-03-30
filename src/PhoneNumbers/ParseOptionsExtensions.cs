@@ -70,14 +70,9 @@ public static class ParseOptionsExtensions
 
     private static ParseOptions Allow(ParseOptions parseOptions, Func<CountryInfo, bool> predicate)
     {
-        if (parseOptions is null)
-        {
-            throw new ArgumentNullException(nameof(parseOptions));
-        }
-
         foreach (var countryInfo in CountryInfo.GetCountries(predicate))
         {
-            parseOptions.Countries.Add(countryInfo);
+            parseOptions?.Countries.Add(countryInfo);
         }
 
         return parseOptions;

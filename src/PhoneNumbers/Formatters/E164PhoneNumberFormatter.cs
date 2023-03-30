@@ -18,17 +18,10 @@ internal sealed class E164PhoneNumberFormatter : PhoneNumberFormatter
     internal static PhoneNumberFormatter Instance { get; } = new E164PhoneNumberFormatter();
 
     /// <inheritdoc/>
-    public override bool CanFormat(string format) =>
+    internal override bool CanFormat(string format) =>
         format?.Equals(DefaultFormat, StringComparison.Ordinal) == true;
 
     /// <inheritdoc/>
-    public override string Format(PhoneNumber phoneNumber)
-    {
-        if (phoneNumber is null)
-        {
-            throw new ArgumentNullException(nameof(phoneNumber));
-        }
-
-        return $"{Chars.Plus}{phoneNumber.Country.CallingCode}{phoneNumber.NationalSignificantNumber}";
-    }
+    internal override string Format(PhoneNumber phoneNumber) =>
+        $"{Chars.Plus}{phoneNumber.Country.CallingCode}{phoneNumber.NationalSignificantNumber}";
 }
