@@ -10,10 +10,10 @@ internal abstract class PhoneNumberFormatter
     /// <summary>
     /// Gets a value indicating whether the format can format based upon the specified format string.
     /// </summary>
-    public abstract bool CanFormat(string format);
+    internal abstract bool CanFormat(string format);
 
     /// <summary>
     /// Formats the <see cref="PhoneNumber"/>.
     /// </summary>
-    public abstract string Format(PhoneNumber phoneNumber);
+    internal abstract string Format(PhoneNumber phoneNumber);
 }

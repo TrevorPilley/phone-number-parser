@@ -23,7 +23,7 @@ internal abstract class PhoneNumberParser
     /// </summary>
     /// <param name="value">A string containing a phone number.</param>
     /// <returns>A <see cref="PhoneNumber"/> instance representing the specified string.</returns>
-    public ParseResult Parse(string value)
+    internal ParseResult Parse(string value)
     {
         var nsnValue = Country.ReadNationalSignificantNumber(value);
 

@@ -18,17 +18,12 @@ internal sealed class NationalPhoneNumberFormatter : PhoneNumberFormatter
     internal static PhoneNumberFormatter Instance { get; } = new NationalPhoneNumberFormatter();
 
     /// <inheritdoc/>
-    public override bool CanFormat(string format) =>
+    internal override bool CanFormat(string format) =>
         format?.Equals("N", StringComparison.Ordinal) == true;
 
     /// <inheritdoc/>
-    public override string Format(PhoneNumber phoneNumber)
+    internal override string Format(PhoneNumber phoneNumber)
     {
-        if (phoneNumber is null)
-        {
-            throw new ArgumentNullException(nameof(phoneNumber));
-        }
-
         if (phoneNumber.NationalDestinationCode is null)
         {
             return phoneNumber.Country.HasTrunkPrefix
