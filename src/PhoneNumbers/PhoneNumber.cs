@@ -23,6 +23,12 @@ public abstract class PhoneNumber
     public required CountryInfo Country { get; init; }
 
     /// <summary>
+    /// Gets the <see cref="PhoneNumberKind"/> of the phone number.
+    /// </summary>
+    /// <remarks>This instance can be cast to the appropriate type based upon the value.</remarks>
+    public abstract PhoneNumberKind Kind { get; }
+
+    /// <summary>
     /// Gets the national destination code of the phone number.
     /// </summary>
     /// <remarks>May also be referred to as area code or mobile network code.</remarks>
@@ -33,12 +39,6 @@ public abstract class PhoneNumber
     /// </summary>
     /// <remarks>Typically this is the number excluding the country code or trunk prefix.</remarks>
     public required string NationalSignificantNumber { get; init; }
-
-    /// <summary>
-    /// Gets the <see cref="PhoneNumberKind"/>.
-    /// </summary>
-    /// <remarks>The instance can be cast to the appropriate type based upon this value.</remarks>
-    public abstract PhoneNumberKind PhoneNumberKind { get; }
 
     /// <summary>
     /// Gets the subscriber number of the phone number.

@@ -73,24 +73,24 @@ phoneNumber.Country.Name;                       // United Kingdom
 phoneNumber.Country.NumberingPlanType;          // NumberingPlanType.Open
 phoneNumber.Country.SharesCallingCode           // true
 phoneNumber.Country.TrunkPrefix;                // 0
+phoneNumber.Kind;                               // PhoneNumberKind.GeographicPhoneNumber
 phoneNumber.NationalDestinationCode;            // 114
 phoneNumber.NationalSignificantNumber           // 1142726444
-phoneNumber.PhoneNumberKind;                    // PhoneNumberKind.GeographicPhoneNumber
 phoneNumber.SubscriberNumber;                   // 2726444
 
 // There are 3 subclasses of PhoneNumber, the correct type to cast to
-// can be determined by inspecting the PhoneNumberKind property.
+// can be determined by inspecting the phoneNumber.Kind property.
 
-// If PhoneNumberKind.GeographicPhoneNumber
+// if (phoneNumber.Kind == PhoneNumberKind.GeographicPhoneNumber)
 var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
 geographicPhoneNumber.GeographicArea;           // Sheffield
 
-// If PhoneNumberKind.MobilePhoneNumber
+// if (phoneNumber.Kind == PhoneNumberKind.MobilePhoneNumber)
 var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
 mobilePhoneNumber.IsPager;                      // true/false
 mobilePhoneNumber.IsVirtual;                    // true/false
 
-// If PhoneNumberKind.NonGeographicPhoneNumber
+// if (phoneNumber.Kind == PhoneNumberKind.NonGeographicPhoneNumber)
 var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
 nonGeographicPhoneNumber.IsFreephone;           // true/false
 nonGeographicPhoneNumber.IsMachineToMachine;    // true/false

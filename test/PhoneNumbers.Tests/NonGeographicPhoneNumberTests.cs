@@ -19,7 +19,7 @@ public class NonGeographicPhoneNumberTests
         Assert.False(phoneNumber.IsMachineToMachine);
         Assert.False(phoneNumber.IsPremiumRate);
         Assert.False(phoneNumber.IsSharedCost);
-        Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, phoneNumber.PhoneNumberKind);
+        Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, phoneNumber.Kind);
         Assert.Equal("12345", phoneNumber.NationalDestinationCode);
         Assert.Equal("12345667788", phoneNumber.NationalSignificantNumber);
         Assert.Equal("667788", phoneNumber.SubscriberNumber);
@@ -42,7 +42,7 @@ public class NonGeographicPhoneNumberTests
         Assert.True(phoneNumber.IsMachineToMachine);
         Assert.False(phoneNumber.IsPremiumRate);
         Assert.False(phoneNumber.IsSharedCost);
-        Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, phoneNumber.PhoneNumberKind);
+        Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, phoneNumber.Kind);
         Assert.Equal("12345", phoneNumber.NationalDestinationCode);
         Assert.Equal("12345667788", phoneNumber.NationalSignificantNumber);
         Assert.Equal("667788", phoneNumber.SubscriberNumber);
@@ -65,7 +65,7 @@ public class NonGeographicPhoneNumberTests
         Assert.False(phoneNumber.IsMachineToMachine);
         Assert.True(phoneNumber.IsPremiumRate);
         Assert.False(phoneNumber.IsSharedCost);
-        Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, phoneNumber.PhoneNumberKind);
+        Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, phoneNumber.Kind);
         Assert.Equal("12345", phoneNumber.NationalDestinationCode);
         Assert.Equal("12345667788", phoneNumber.NationalSignificantNumber);
         Assert.Equal("667788", phoneNumber.SubscriberNumber);
@@ -88,7 +88,7 @@ public class NonGeographicPhoneNumberTests
         Assert.False(phoneNumber.IsMachineToMachine);
         Assert.False(phoneNumber.IsPremiumRate);
         Assert.True(phoneNumber.IsSharedCost);
-        Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, phoneNumber.PhoneNumberKind);
+        Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, phoneNumber.Kind);
         Assert.Equal("12345", phoneNumber.NationalDestinationCode);
         Assert.Equal("12345667788", phoneNumber.NationalSignificantNumber);
         Assert.Equal("667788", phoneNumber.SubscriberNumber);

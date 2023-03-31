@@ -31,7 +31,7 @@ internal sealed class NationalPhoneNumberFormatter : PhoneNumberFormatter
                 : phoneNumber.SubscriberNumber;
         }
 
-        if (phoneNumber.PhoneNumberKind == PhoneNumberKind.GeographicPhoneNumber &&
+        if (phoneNumber.Kind == PhoneNumberKind.GeographicPhoneNumber &&
             phoneNumber.Country.NumberingPlanType == NumberingPlanType.Open &&
             !((GeographicPhoneNumber)phoneNumber).ClosedDiallingInOpenPlan)
         {

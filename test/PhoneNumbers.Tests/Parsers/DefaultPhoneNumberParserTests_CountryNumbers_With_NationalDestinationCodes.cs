@@ -102,7 +102,7 @@ public class DefaultPhoneNumberParserTests_CountryNumbers_WithNationalDestinatio
         Assert.Equal(_countryInfo, geographicPhoneNumber.Country);
         Assert.Equal("Springfield", geographicPhoneNumber.GeographicArea);
         Assert.Equal("10000", geographicPhoneNumber.SubscriberNumber);
-        Assert.Equal(PhoneNumberKind.GeographicPhoneNumber, geographicPhoneNumber.PhoneNumberKind);
+        Assert.Equal(PhoneNumberKind.GeographicPhoneNumber, geographicPhoneNumber.Kind);
     }
 
     [Fact]
@@ -117,7 +117,7 @@ public class DefaultPhoneNumberParserTests_CountryNumbers_WithNationalDestinatio
         Assert.Equal(_countryInfo, geographicPhoneNumber.Country);
         Assert.Equal("Springfield B", geographicPhoneNumber.GeographicArea);
         Assert.Equal("1000", geographicPhoneNumber.SubscriberNumber);
-        Assert.Equal(PhoneNumberKind.GeographicPhoneNumber, geographicPhoneNumber.PhoneNumberKind);
+        Assert.Equal(PhoneNumberKind.GeographicPhoneNumber, geographicPhoneNumber.Kind);
     }
 
     [Fact]
@@ -137,7 +137,7 @@ public class DefaultPhoneNumberParserTests_CountryNumbers_WithNationalDestinatio
         Assert.False(mobilePhoneNumber.IsPager);
         Assert.False(mobilePhoneNumber.IsVirtual);
         Assert.Equal("10000", mobilePhoneNumber.SubscriberNumber);
-        Assert.Equal(PhoneNumberKind.MobilePhoneNumber, mobilePhoneNumber.PhoneNumberKind);
+        Assert.Equal(PhoneNumberKind.MobilePhoneNumber, mobilePhoneNumber.Kind);
     }
 
     [Fact]
@@ -153,7 +153,7 @@ public class DefaultPhoneNumberParserTests_CountryNumbers_WithNationalDestinatio
         Assert.True(mobilePhoneNumber.IsPager);
         Assert.False(mobilePhoneNumber.IsVirtual);
         Assert.Equal("12000", mobilePhoneNumber.SubscriberNumber);
-        Assert.Equal(PhoneNumberKind.MobilePhoneNumber, mobilePhoneNumber.PhoneNumberKind);
+        Assert.Equal(PhoneNumberKind.MobilePhoneNumber, mobilePhoneNumber.Kind);
     }
 
     [Fact]
@@ -169,7 +169,7 @@ public class DefaultPhoneNumberParserTests_CountryNumbers_WithNationalDestinatio
         Assert.False(mobilePhoneNumber.IsPager);
         Assert.True(mobilePhoneNumber.IsVirtual);
         Assert.Equal("13000", mobilePhoneNumber.SubscriberNumber);
-        Assert.Equal(PhoneNumberKind.MobilePhoneNumber, mobilePhoneNumber.PhoneNumberKind);
+        Assert.Equal(PhoneNumberKind.MobilePhoneNumber, mobilePhoneNumber.Kind);
     }
 
     [Fact]
@@ -187,7 +187,7 @@ public class DefaultPhoneNumberParserTests_CountryNumbers_WithNationalDestinatio
         Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
         Assert.False(nonGeographicPhoneNumber.IsSharedCost);
         Assert.Equal("20000", nonGeographicPhoneNumber.SubscriberNumber);
-        Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, nonGeographicPhoneNumber.PhoneNumberKind);
+        Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, nonGeographicPhoneNumber.Kind);
     }
 
     [Fact]
@@ -205,7 +205,7 @@ public class DefaultPhoneNumberParserTests_CountryNumbers_WithNationalDestinatio
         Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
         Assert.False(nonGeographicPhoneNumber.IsSharedCost);
         Assert.Equal("28000", nonGeographicPhoneNumber.SubscriberNumber);
-        Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, nonGeographicPhoneNumber.PhoneNumberKind);
+        Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, nonGeographicPhoneNumber.Kind);
     }
 
     [Fact]
@@ -223,7 +223,7 @@ public class DefaultPhoneNumberParserTests_CountryNumbers_WithNationalDestinatio
         Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
         Assert.False(nonGeographicPhoneNumber.IsSharedCost);
         Assert.Equal("28000", nonGeographicPhoneNumber.SubscriberNumber);
-        Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, nonGeographicPhoneNumber.PhoneNumberKind);
+        Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, nonGeographicPhoneNumber.Kind);
     }
 
     [Fact]
@@ -241,7 +241,7 @@ public class DefaultPhoneNumberParserTests_CountryNumbers_WithNationalDestinatio
         Assert.True(nonGeographicPhoneNumber.IsPremiumRate);
         Assert.False(nonGeographicPhoneNumber.IsSharedCost);
         Assert.Equal("28000", nonGeographicPhoneNumber.SubscriberNumber);
-        Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, nonGeographicPhoneNumber.PhoneNumberKind);
+        Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, nonGeographicPhoneNumber.Kind);
     }
 
     [Fact]
@@ -259,6 +259,6 @@ public class DefaultPhoneNumberParserTests_CountryNumbers_WithNationalDestinatio
         Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
         Assert.True(nonGeographicPhoneNumber.IsSharedCost);
         Assert.Equal("28000", nonGeographicPhoneNumber.SubscriberNumber);
-        Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, nonGeographicPhoneNumber.PhoneNumberKind);
+        Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, nonGeographicPhoneNumber.Kind);
     }
 }

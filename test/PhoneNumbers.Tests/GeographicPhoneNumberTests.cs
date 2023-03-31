@@ -17,7 +17,7 @@ public class GeographicPhoneNumberTests
 
         Assert.Equal(countryInfo, phoneNumber.Country);
         Assert.Equal("N/A", phoneNumber.GeographicArea);
-        Assert.Equal(PhoneNumberKind.GeographicPhoneNumber, phoneNumber.PhoneNumberKind);
+        Assert.Equal(PhoneNumberKind.GeographicPhoneNumber, phoneNumber.Kind);
         Assert.Equal("12345", phoneNumber.NationalDestinationCode);
         Assert.Equal("12345667788", phoneNumber.NationalSignificantNumber);
         Assert.Equal("667788", phoneNumber.SubscriberNumber);
