@@ -29,7 +29,7 @@ public sealed class MobilePhoneNumber : PhoneNumber, IEquatable<MobilePhoneNumbe
         Hint == PhoneNumberHint.Virtual;
 
     /// <inheritdoc/>
-    public override PhoneNumberKind PhoneNumberKind =>
+    public override PhoneNumberKind Kind =>
         PhoneNumberKind.MobilePhoneNumber;
 
     /// <inheritdoc/>
@@ -66,7 +66,7 @@ public sealed class MobilePhoneNumber : PhoneNumber, IEquatable<MobilePhoneNumbe
 
         return Hint.Equals(other.Hint) &&
             Country.Equals(other.Country) &&
-            PhoneNumberKind.Equals(other.PhoneNumberKind) &&
+            Kind.Equals(other.Kind) &&
             (NationalDestinationCode is null && other.NationalDestinationCode is null || NationalDestinationCode!.Equals(other.NationalDestinationCode, StringComparison.Ordinal)) &&
             NationalSignificantNumber.Equals(other.NationalSignificantNumber, StringComparison.Ordinal) &&
             SubscriberNumber.Equals(other.SubscriberNumber, StringComparison.Ordinal);
@@ -75,5 +75,5 @@ public sealed class MobilePhoneNumber : PhoneNumber, IEquatable<MobilePhoneNumbe
     /// <inheritdoc/>
     [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
     public override int GetHashCode() =>
-        HashCode.Combine(Hint, Country, PhoneNumberKind, NationalSignificantNumber, NationalDestinationCode, SubscriberNumber);
+        HashCode.Combine(Hint, Country, Kind, NationalSignificantNumber, NationalDestinationCode, SubscriberNumber);
 }

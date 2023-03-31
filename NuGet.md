@@ -23,7 +23,7 @@ phoneNumber.Country.Iso3166Code;         // GB
 phoneNumber.Country.Name;                // United Kingdom
 phoneNumber.Country.TrunkPrefix;         // 0
 
-// There are 3 subclasses of PhoneNumber, the correct type to cast to can be determined by inspecting the PhoneNumberKind property. Cast as appropriate to access additional properties.
+// There are 3 subclasses of PhoneNumber, the correct type to cast to can be determined by inspecting the phoneNumber.Kind property. Cast as appropriate to access additional properties.
 var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
 geographicPhoneNumber.GeographicArea;    // Sheffield
 

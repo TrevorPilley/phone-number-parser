@@ -22,7 +22,7 @@ public sealed class GeographicPhoneNumber : PhoneNumber, IEquatable<GeographicPh
     public required string GeographicArea { get; init; }
 
     /// <inheritdoc/>
-    public override PhoneNumberKind PhoneNumberKind =>
+    public override PhoneNumberKind Kind =>
         PhoneNumberKind.GeographicPhoneNumber;
 
     /// <summary>
@@ -67,7 +67,7 @@ public sealed class GeographicPhoneNumber : PhoneNumber, IEquatable<GeographicPh
         return Hint.Equals(other.Hint) &&
             Country.Equals(other.Country) &&
             GeographicArea.Equals(other.GeographicArea, StringComparison.Ordinal) &&
-            PhoneNumberKind.Equals(other.PhoneNumberKind) &&
+            Kind.Equals(other.Kind) &&
             (NationalDestinationCode is null && other.NationalDestinationCode is null || NationalDestinationCode!.Equals(other.NationalDestinationCode, StringComparison.Ordinal)) &&
             NationalSignificantNumber.Equals(other.NationalSignificantNumber, StringComparison.Ordinal) &&
             SubscriberNumber.Equals(other.SubscriberNumber, StringComparison.Ordinal);
@@ -76,5 +76,5 @@ public sealed class GeographicPhoneNumber : PhoneNumber, IEquatable<GeographicPh
     /// <inheritdoc/>
     [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
     public override int GetHashCode() =>
-        HashCode.Combine(Hint, Country, GeographicArea, PhoneNumberKind, NationalSignificantNumber, NationalDestinationCode, SubscriberNumber);
+        HashCode.Combine(Hint, Country, GeographicArea, Kind, NationalSignificantNumber, NationalDestinationCode, SubscriberNumber);
 }
