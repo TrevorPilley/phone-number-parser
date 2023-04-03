@@ -11,6 +11,7 @@ public partial class CountryInfo
     {
         CallingCode = "43",
         Continent = Europe,
+        IsEuropeanUnionMember = true,
         Iso3166Code = "AT",
         Name = "Austria",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2, 1 }),
@@ -39,6 +40,7 @@ public partial class CountryInfo
     {
         CallingCode = "32",
         Continent = Europe,
+        IsEuropeanUnionMember = true,
         Iso3166Code = "BE",
         Name = "Belgium",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
@@ -53,6 +55,7 @@ public partial class CountryInfo
     {
         CallingCode = "359",
         Continent = Europe,
+        IsEuropeanUnionMember = true,
         Iso3166Code = "BG",
         Name = "Bulgaria",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
@@ -68,6 +71,7 @@ public partial class CountryInfo
     {
         CallingCode = "385",
         Continent = Europe,
+        IsEuropeanUnionMember = true,
         Iso3166Code = "HR",
         Name = "Croatia",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2, 1 }),
@@ -83,6 +87,7 @@ public partial class CountryInfo
     {
         CallingCode = "420",
         Continent = Europe,
+        IsEuropeanUnionMember = true,
         Iso3166Code = "CZ",
         Name = "Czech Republic",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
@@ -96,6 +101,7 @@ public partial class CountryInfo
     {
         CallingCode = "45",
         Continent = Europe,
+        IsEuropeanUnionMember = true,
         Iso3166Code = "DK",
         Name = "Denmark",
         NsnLengths = new ReadOnlyCollection<int>(new[] { 8 }),
@@ -109,6 +115,7 @@ public partial class CountryInfo
     {
         CallingCode = "372",
         Continent = Europe,
+        IsEuropeanUnionMember = true,
         Iso3166Code = "EE",
         Name = "Estonia",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2 }),
@@ -122,6 +129,7 @@ public partial class CountryInfo
     {
         CallingCode = "358",
         Continent = Europe,
+        IsEuropeanUnionMember = true,
         Iso3166Code = "FI",
         Name = "Finland",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2, 1 }),
@@ -137,6 +145,7 @@ public partial class CountryInfo
     {
         CallingCode = "33",
         Continent = Europe,
+        IsEuropeanUnionMember = true,
         Iso3166Code = "FR",
         Name = "France",
         NsnLengths = new ReadOnlyCollection<int>(new[] { 9, 13 }),
@@ -150,6 +159,7 @@ public partial class CountryInfo
     {
         CallingCode = "49",
         Continent = Europe,
+        IsEuropeanUnionMember = true,
         Iso3166Code = "DE",
         Name = "Germany",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2 }),
@@ -177,6 +187,7 @@ public partial class CountryInfo
     {
         CallingCode = "30",
         Continent = Europe,
+        IsEuropeanUnionMember = true,
         Iso3166Code = "GR",
         Name = "Greece",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2 }),
@@ -206,6 +217,7 @@ public partial class CountryInfo
     {
         CallingCode = "36",
         Continent = Europe,
+        IsEuropeanUnionMember = true,
         Iso3166Code = "HU",
         Name = "Hungary",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 2, 1 }),
@@ -222,6 +234,7 @@ public partial class CountryInfo
     {
         CallingCode = "353",
         Continent = Europe,
+        IsEuropeanUnionMember = true,
         Iso3166Code = "IE",
         Name = "Ireland",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
@@ -254,6 +267,7 @@ public partial class CountryInfo
     {
         CallingCode = "39",
         Continent = Europe,
+        IsEuropeanUnionMember = true,
         Iso3166Code = "IT",
         Name = "Italy",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2 }),
@@ -324,6 +338,7 @@ public partial class CountryInfo
     {
         CallingCode = "31",
         Continent = Europe,
+        IsEuropeanUnionMember = true,
         Iso3166Code = "NL",
         Name = "Netherlands",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
@@ -350,6 +365,7 @@ public partial class CountryInfo
     {
         CallingCode = "48",
         Continent = Europe,
+        IsEuropeanUnionMember = true,
         Iso3166Code = "PL",
         Name = "Poland",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 2 }),
@@ -363,6 +379,7 @@ public partial class CountryInfo
     {
         CallingCode = "351",
         Continent = Europe,
+        IsEuropeanUnionMember = true,
         Iso3166Code = "PT",
         Name = "Portugal",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3 }),
@@ -376,6 +393,7 @@ public partial class CountryInfo
     {
         CallingCode = "40",
         Continent = Europe,
+        IsEuropeanUnionMember = true,
         Iso3166Code = "RO",
         Name = "Romania",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
@@ -417,6 +435,7 @@ public partial class CountryInfo
     {
         CallingCode = "421",
         Continent = Europe,
+        IsEuropeanUnionMember = true,
         Iso3166Code = "SK",
         Name = "Slovakia",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2, 1 }),
@@ -431,6 +450,7 @@ public partial class CountryInfo
     {
         CallingCode = "34",
         Continent = Europe,
+        IsEuropeanUnionMember = true,
         Iso3166Code = "ES",
         Name = "Spain",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
@@ -444,6 +464,7 @@ public partial class CountryInfo
     {
         CallingCode = "46",
         Continent = Europe,
+        IsEuropeanUnionMember = true,
         Iso3166Code = "SE",
         Name = "Sweden",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),

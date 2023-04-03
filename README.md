@@ -142,6 +142,9 @@ ParseOptions.Default.AllowNorthAmericanCountries();
 ParseOptions.Default.AllowOceanianCountries();
 ParseOptions.Default.AllowSouthAmericanCountries();
 
+// Alternatively all countries who are members of the same union.
+ParseOptions.Default.AllowEuropeanUnionCountries();
+
 // Alternatively all countries using the same numbering plan.
 ParseOptions.Default.AllowNorthAmericanNumberingPlanCountries();
 ```

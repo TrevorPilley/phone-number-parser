@@ -11,6 +11,7 @@ public class CountryInfo_Africa_Tests
 
         Assert.Equal("20", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("EG", countryInfo.Iso3166Code);
         Assert.Equal("Egypt", countryInfo.Name);
         Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
@@ -29,6 +30,7 @@ public class CountryInfo_Africa_Tests
 
         Assert.Equal("234", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("NG", countryInfo.Iso3166Code);
         Assert.Equal("Nigeria", countryInfo.Name);
         Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
@@ -47,6 +49,7 @@ public class CountryInfo_Africa_Tests
 
         Assert.Equal("27", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("ZA", countryInfo.Iso3166Code);
         Assert.Equal("South Africa", countryInfo.Name);
         Assert.Equal(new[] { 2 }, countryInfo.NdcLengths);

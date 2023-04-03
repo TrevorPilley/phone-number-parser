@@ -39,6 +39,17 @@ public class ParseOptionsTests
     }
 
     [Fact]
+    public void AllowEuropeanUnionCountries()
+    {
+        var parseOptions = new ParseOptions();
+        parseOptions.Countries.Clear();
+        parseOptions.AllowEuropeanUnionCountries();
+
+        Assert.True(parseOptions.Countries.Count > 0);
+        Assert.All(parseOptions.Countries, x => Assert.True(x.IsEuropeanUnionMember));
+    }
+
+    [Fact]
     public void AllowNorthAmericanCountries()
     {
         var parseOptions = new ParseOptions();
