@@ -66,6 +66,17 @@ jobs:
          $xml.Save('${{ env.PROJECT_PATH }}')
        shell: pwsh
 
+     - name: update release URL value to release version
+       if: github.ref_type == 'tag'
+       run: |
+         $xml = [xml](Get-Content '${{ env.PROJECT_PATH }}')
+         $xml.SelectNodes("//Project/PropertyGroup[1]/Version") | % {
+           $_."#text" = $_."#text".Replace("/releases", "/releases/tag/${{ env.RELEASE_VERSION }}")
+         }
+
+         $xml.Save('${{ env.PROJECT_PATH }}')
+       shell: pwsh
+
      - name: dotnet restore
        run: dotnet restore
 
