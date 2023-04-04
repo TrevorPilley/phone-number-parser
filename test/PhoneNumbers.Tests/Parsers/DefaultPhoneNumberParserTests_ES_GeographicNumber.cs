@@ -8,50 +8,26 @@ public class DefaultPhoneNumberParserTests_ES_GeographicNumber
     private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Spain);
 
     [Theory]
-    [InlineData("810030000", "810", "030000", "Madrid")]
-    [InlineData("810040999", "810", "040999", "Madrid")]
-    [InlineData("810060000", "810", "060000", "Madrid")]
-    [InlineData("810060999", "810", "060999", "Madrid")]
-    [InlineData("810081000", "810", "081000", "Madrid")]
-    [InlineData("810090999", "810", "090999", "Madrid")]
-    [InlineData("810100000", "810", "100000", "Madrid")]
-    [InlineData("810101999", "810", "101999", "Madrid")]
-    [InlineData("810200000", "810", "200000", "Madrid")]
-    [InlineData("810200999", "810", "200999", "Madrid")]
-    [InlineData("810222000", "810", "222000", "Madrid")]
-    [InlineData("810222999", "810", "222999", "Madrid")]
-    [InlineData("810300000", "810", "300000", "Madrid")]
-    [InlineData("810300999", "810", "300999", "Madrid")]
-    [InlineData("810400000", "810", "400000", "Madrid")]
-    [InlineData("810400999", "810", "400999", "Madrid")]
-    [InlineData("810444000", "810", "444000", "Madrid")]
-    [InlineData("810444999", "810", "444999", "Madrid")]
-    [InlineData("810500000", "810", "500000", "Madrid")]
-    [InlineData("810500999", "810", "500999", "Madrid")]
-    [InlineData("810510000", "810", "510000", "Madrid")]
-    [InlineData("810516999", "810", "516999", "Madrid")]
-    [InlineData("810520000", "810", "520000", "Madrid")]
-    [InlineData("810529999", "810", "529999", "Madrid")]
-    [InlineData("810582000", "810", "582000", "Madrid")]
-    [InlineData("810583999", "810", "583999", "Madrid")]
-    [InlineData("810600000", "810", "600000", "Madrid")]
-    [InlineData("810600999", "810", "600999", "Madrid")]
-    [InlineData("810625000", "810", "625000", "Madrid")]
-    [InlineData("810625999", "810", "625999", "Madrid")]
-    [InlineData("810650000", "810", "650000", "Madrid")]
-    [InlineData("810650999", "810", "650999", "Madrid")]
-    [InlineData("810700000", "810", "700000", "Madrid")]
-    [InlineData("810700999", "810", "700999", "Madrid")]
-    [InlineData("810800000", "810", "800000", "Madrid")]
-    [InlineData("810800999", "810", "800999", "Madrid")]
-    [InlineData("810803000", "810", "803000", "Madrid")]
-    [InlineData("810811999", "810", "811999", "Madrid")]
-    [InlineData("810820000", "810", "820000", "Madrid")]
-    [InlineData("810833999", "810", "833999", "Madrid")]
-    [InlineData("810900000", "810", "900000", "Madrid")]
-    [InlineData("810900999", "810", "900999", "Madrid")]
-    [InlineData("810910000", "810", "910000", "Madrid")]
-    [InlineData("810910999", "810", "910999", "Madrid")]
+    [InlineData("810000000", "81", "0000000", "Madrid")]
+    [InlineData("819999999", "81", "9999999", "Madrid")]
+    public void Parse_Known_GeographicPhoneNumber_8X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
+    {
+        var parseResult = s_parser.Parse(value);
+        parseResult.ThrowIfFailure();
+
+        var phoneNumber = parseResult.PhoneNumber;
+
+        Assert.NotNull(phoneNumber);
+        Assert.IsType<GeographicPhoneNumber>(phoneNumber);
+
+        var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
+        Assert.Equal(CountryInfo.Spain, geographicPhoneNumber.Country);
+        Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
+        Assert.Equal(NationalDestinationCode, geographicPhoneNumber.NationalDestinationCode);
+        Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
+    }
+
+    [Theory]
     [InlineData("820000000", "820", "000000", "Ávila")]
     [InlineData("820000999", "820", "000999", "Ávila")]
     [InlineData("820028000", "820", "028000", "Ávila")]
@@ -1022,26 +998,26 @@ public class DefaultPhoneNumberParserTests_ES_GeographicNumber
     }
 
     [Theory]
-    [InlineData("910000000", "910", "000000", "Madrid")]
-    [InlineData("910999999", "910", "999999", "Madrid")]
-    [InlineData("918000000", "918", "000000", "Madrid")]
-    [InlineData("918999999", "918", "999999", "Madrid")]
-    [InlineData("919010000", "919", "010000", "Madrid")]
-    [InlineData("919379999", "919", "379999", "Madrid")]
-    [InlineData("919390000", "919", "390000", "Madrid")]
-    [InlineData("919429999", "919", "429999", "Madrid")]
-    [InlineData("919490000", "919", "490000", "Madrid")]
-    [InlineData("919509999", "919", "509999", "Madrid")]
-    [InlineData("919550000", "919", "550000", "Madrid")]
-    [InlineData("919559999", "919", "559999", "Madrid")]
-    [InlineData("919700000", "919", "700000", "Madrid")]
-    [InlineData("919709999", "919", "709999", "Madrid")]
-    [InlineData("919770000", "919", "770000", "Madrid")]
-    [InlineData("919779999", "919", "779999", "Madrid")]
-    [InlineData("919890000", "919", "890000", "Madrid")]
-    [InlineData("919949999", "919", "949999", "Madrid")]
-    [InlineData("919990000", "919", "990000", "Madrid")]
-    [InlineData("919999999", "919", "999999", "Madrid")]
+    [InlineData("910000000", "91", "0000000", "Madrid")]
+    [InlineData("919999999", "91", "9999999", "Madrid")]
+    public void Parse_Known_GeographicPhoneNumber_9X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
+    {
+        var parseResult = s_parser.Parse(value);
+        parseResult.ThrowIfFailure();
+
+        var phoneNumber = parseResult.PhoneNumber;
+
+        Assert.NotNull(phoneNumber);
+        Assert.IsType<GeographicPhoneNumber>(phoneNumber);
+
+        var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
+        Assert.Equal(CountryInfo.Spain, geographicPhoneNumber.Country);
+        Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
+        Assert.Equal(NationalDestinationCode, geographicPhoneNumber.NationalDestinationCode);
+        Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
+    }
+
+    [Theory]
     [InlineData("920000000", "920", "000000", "Ávila")]
     [InlineData("920129999", "920", "129999", "Ávila")]
     [InlineData("920180000", "920", "180000", "Ávila")]
