@@ -8,6 +8,8 @@ public class DefaultPhoneNumberParserTests_ES_NonGeographicPhoneNumber
     private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Spain);
 
     [Theory]
+    [InlineData("905000000", "905", "000000")]
+    [InlineData("905999999", "905", "999999")]
     [InlineData("908000000", "908", "000000")]
     [InlineData("908999999", "908", "999999")]
     [InlineData("909000000", "909", "000000")]
@@ -111,6 +113,31 @@ public class DefaultPhoneNumberParserTests_ES_NonGeographicPhoneNumber
         Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
         Assert.True(nonGeographicPhoneNumber.IsPremiumRate);
         Assert.False(nonGeographicPhoneNumber.IsSharedCost);
+        Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
+        Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
+    }
+
+    [Theory]
+    [InlineData("901000000", "901", "000000")]
+    [InlineData("901999999", "901", "999999")]
+    [InlineData("902000000", "902", "000000")]
+    [InlineData("902999999", "902", "999999")]
+    public void Parse_Known_NonGeographicPhoneNumber_SharedCost(string value, string NationalDestinationCode, string subscriberNumber)
+    {
+        var parseResult = s_parser.Parse(value);
+        parseResult.ThrowIfFailure();
+
+        var phoneNumber = parseResult.PhoneNumber;
+
+        Assert.NotNull(phoneNumber);
+        Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
+
+        var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
+        Assert.Equal(CountryInfo.Spain, nonGeographicPhoneNumber.Country);
+        Assert.False(nonGeographicPhoneNumber.IsFreephone);
+        Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
+        Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
+        Assert.True(nonGeographicPhoneNumber.IsSharedCost);
         Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
         Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
     }
