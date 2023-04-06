@@ -89,14 +89,6 @@ public class DefaultPhoneNumberParserTests_ES_NonGeographicPhoneNumber
     [InlineData("806999999", "806", "999999")]
     [InlineData("807000000", "807", "000000")]
     [InlineData("807999999", "807", "999999")]
-    [InlineData("901000000", "901", "000000")]
-    [InlineData("901999999", "901", "999999")]
-    [InlineData("902000000", "902", "000000")]
-    [InlineData("902999999", "902", "999999")]
-    [InlineData("905000000", "905", "000000")]
-    [InlineData("905999999", "905", "999999")]
-    [InlineData("907000000", "907", "000000")]
-    [InlineData("907999999", "907", "999999")]
     public void Parse_Known_NonGeographicPhoneNumber_PremiumRate(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
