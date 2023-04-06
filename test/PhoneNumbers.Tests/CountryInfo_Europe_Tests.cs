@@ -554,7 +554,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("ES", countryInfo.Iso3166Code);
         Assert.Equal("Spain", countryInfo.Name);
         Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 9 }, countryInfo.NsnLengths);
+        Assert.Equal(new[] { 9,13  }, countryInfo.NsnLengths);
         Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);

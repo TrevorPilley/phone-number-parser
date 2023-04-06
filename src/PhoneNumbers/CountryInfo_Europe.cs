@@ -434,7 +434,7 @@ public partial class CountryInfo
         Iso3166Code = "ES",
         Name = "Spain",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 9, 13 }),
     };
 
     /// <summary>

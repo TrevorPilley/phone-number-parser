@@ -14,8 +14,8 @@ public class DefaultPhoneNumberParserTests_ES_MobilePhoneNumber
     [InlineData("699999999", "699", "999999")]
     [InlineData("710000000", "710", "000000")]
     [InlineData("710999999", "710", "999999")]
-    [InlineData("799000000", "799", "000000")]
-    [InlineData("799999999", "799", "999999")]
+    [InlineData("749000000", "749", "000000")]
+    [InlineData("749999999", "749", "999999")]
     public void Parse_Known_MobilePhoneNumber(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
