@@ -56,6 +56,11 @@ public sealed partial class CountryInfo
     public bool HasTrunkPrefix => TrunkPrefix is not null;
 
     /// <summary>
+    /// Gets a value indicating whether the country is a member of the European Union.
+    /// </summary>
+    public bool IsEuropeanUnionMember { get; init; }
+
+    /// <summary>
     /// Gets the ISO 3166 Alpha-2 code for the country.
     /// </summary>
     /// <remarks>See https://www.iso.org/iso-3166-country-codes.html</remarks>

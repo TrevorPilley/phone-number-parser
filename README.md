@@ -68,6 +68,7 @@ The resulting `PhoneNumber` has the following properties:
 phoneNumber.Country.CallingCode;                // 44
 phoneNumber.Country.Continent;                  // Europe
 phoneNumber.Country.HasNationalDestinationCodes // true
+phoneNumber.Country.IsEuropeanUnionMember;      // true
 phoneNumber.Country.Iso3166Code;                // GB
 phoneNumber.Country.Name;                       // United Kingdom
 phoneNumber.Country.NumberingPlanType;          // NumberingPlanType.Open
@@ -141,6 +142,9 @@ ParseOptions.Default.AllowEuropeanCountries();
 ParseOptions.Default.AllowNorthAmericanCountries();
 ParseOptions.Default.AllowOceanianCountries();
 ParseOptions.Default.AllowSouthAmericanCountries();
+
+// Alternatively all countries who are members of the same union.
+ParseOptions.Default.AllowEuropeanUnionCountries();
 
 // Alternatively all countries using the same numbering plan.
 ParseOptions.Default.AllowNorthAmericanNumberingPlanCountries();

@@ -11,6 +11,7 @@ public class CountryInfo_SouthAmerica_Tests
 
         Assert.Equal("55", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.SouthAmerica, countryInfo.Continent);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("BR", countryInfo.Iso3166Code);
         Assert.Equal("Brazil", countryInfo.Name);
         Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
