@@ -48,7 +48,7 @@ internal sealed class GBPhoneNumberParser : DefaultPhoneNumberParser
                         .Any(x => x.SubscriberNumberRanges.Any(x => x.Contains(nsnValue.Substring(5)))))
             {
                 // There are some 5 digit area codes which use a subset of numbers from the "parent" 4 digit area code:
-                // e.g. 1339 (Aboyne / Ballater) has 200000-719999 and 13397 (Ballater) has 20000-99899
+                // e.g. Langholm (13873) uses the 32XXXX-39XXXX range from Dumfries (1387) meaning Dumfries can only use 2XXXXX and 4XXXXX-9XXXXX
                 // Since geographic area codes are for a single value only, we can just check against From.
                 ndcLength = 5;
             }
