@@ -37,7 +37,7 @@ public class PhoneNumber_Parse_Tests
     [Fact]
     public void Parse_Value_For_Austria_CallingCode()
     {
-        var phoneNumber = PhoneNumber.Parse("+43171100");
+        var phoneNumber = PhoneNumber.Parse("+431580580");
         Assert.NotNull(phoneNumber);
         Assert.Equal(CountryInfo.Austria, phoneNumber.Country);
     }
@@ -45,7 +45,7 @@ public class PhoneNumber_Parse_Tests
     [Fact]
     public void Parse_Value_CountryCode_For_Austria_CallingCode()
     {
-        var phoneNumber = PhoneNumber.Parse("0171100", CountryInfo.Austria);
+        var phoneNumber = PhoneNumber.Parse("01580580", CountryInfo.Austria);
         Assert.NotNull(phoneNumber);
         Assert.Equal(CountryInfo.Austria, phoneNumber.Country);
     }

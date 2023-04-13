@@ -1,3 +1,5 @@
+using PhoneNumbers.Formatters.FormatProviders;
+
 namespace PhoneNumbers.Tests;
 
 public class CountryInfo_NorthAmerica_Tests
@@ -11,6 +13,7 @@ public class CountryInfo_NorthAmerica_Tests
 
         Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
+        Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("CA", countryInfo.Iso3166Code);
         Assert.Equal("Canada", countryInfo.Name);
@@ -30,6 +33,7 @@ public class CountryInfo_NorthAmerica_Tests
 
         Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
+        Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("PR", countryInfo.Iso3166Code);
         Assert.Equal("Puerto Rico", countryInfo.Name);
@@ -49,6 +53,7 @@ public class CountryInfo_NorthAmerica_Tests
 
         Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
+        Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("US", countryInfo.Iso3166Code);
         Assert.Equal("United States", countryInfo.Name);
@@ -68,6 +73,7 @@ public class CountryInfo_NorthAmerica_Tests
 
         Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
+        Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("VI", countryInfo.Iso3166Code);
         Assert.Equal("United States Virgin Islands", countryInfo.Name);

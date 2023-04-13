@@ -24,20 +24,26 @@ internal sealed class NationalPhoneNumberFormatter : PhoneNumberFormatter
     /// <inheritdoc/>
     internal override string Format(PhoneNumber phoneNumber)
     {
-        if (phoneNumber.NationalDestinationCode is null)
+        var nsnMask = phoneNumber.Country.FormatProvider.GetFormat(phoneNumber, international: false);
+
+        var arSize = nsnMask.Length;
+
+        Span<char> ar = stackalloc char[arSize];
+        var arPos = 0;
+
+        var nsnPos = 0;
+        for (int i = 0; i < nsnMask.Length; i++)
         {
-            return phoneNumber.Country.HasTrunkPrefix
-                ? $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.SubscriberNumber}"
-                : phoneNumber.SubscriberNumber;
+            if (nsnMask[i] == Chars.Hash)
+            {
+                ar[arPos++] = phoneNumber.NationalSignificantNumber[nsnPos++];
+            }
+            else
+            {
+                ar[arPos++] = nsnMask[i];
+            }
         }
 
-        if (phoneNumber.Kind == PhoneNumberKind.GeographicPhoneNumber &&
-            phoneNumber.Country.NumberingPlanType == NumberingPlanType.Open &&
-            !((GeographicPhoneNumber)phoneNumber).ClosedDiallingInOpenPlan)
-        {
-            return $"({phoneNumber.Country.TrunkPrefix}{phoneNumber.NationalDestinationCode}) {phoneNumber.SubscriberNumber}";
-        }
-
-        return $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.NationalDestinationCode} {phoneNumber.SubscriberNumber}";
+        return ar.ToString();
     }
 }

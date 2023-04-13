@@ -1,4 +1,5 @@
 using System.Collections.ObjectModel;
+using PhoneNumbers.Formatters.FormatProviders;
 
 namespace PhoneNumbers;
 
@@ -27,6 +28,7 @@ public partial class CountryInfo
         CallingCode = "375",
         Continent = Europe,
         Iso3166Code = "BY",
+        FormatProvider = SimplePhoneNumberFormatProvider.Default,
         Name = "Belarus",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 9, 10, 11 }),
@@ -40,6 +42,7 @@ public partial class CountryInfo
     {
         CallingCode = "32",
         Continent = Europe,
+        FormatProvider = BEPhoneNumberFormatProvider.Instance,
         IsEuropeanUnionMember = true,
         Iso3166Code = "BE",
         Name = "Belgium",
@@ -87,6 +90,7 @@ public partial class CountryInfo
     {
         CallingCode = "420",
         Continent = Europe,
+        FormatProvider = CZPhoneNumberFormatProvider.Instance,
         IsEuropeanUnionMember = true,
         Iso3166Code = "CZ",
         Name = "Czech Republic",
@@ -115,6 +119,7 @@ public partial class CountryInfo
     {
         CallingCode = "372",
         Continent = Europe,
+        FormatProvider = BasicPhoneNumberFormatProvider.Instance,
         IsEuropeanUnionMember = true,
         Iso3166Code = "EE",
         Name = "Estonia",
@@ -145,6 +150,7 @@ public partial class CountryInfo
     {
         CallingCode = "33",
         Continent = Europe,
+        FormatProvider = FRPhoneNumberFormatProvider.Instance,
         IsEuropeanUnionMember = true,
         Iso3166Code = "FR",
         Name = "France",
@@ -159,6 +165,7 @@ public partial class CountryInfo
     {
         CallingCode = "49",
         Continent = Europe,
+        FormatProvider = SimplePhoneNumberFormatProvider.Default,
         IsEuropeanUnionMember = true,
         Iso3166Code = "DE",
         Name = "Germany",
@@ -174,6 +181,7 @@ public partial class CountryInfo
     {
         CallingCode = "350",
         Continent = Europe,
+        FormatProvider = BasicPhoneNumberFormatProvider.Instance,
         Iso3166Code = "GI",
         Name = "Gibraltar",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
@@ -187,6 +195,7 @@ public partial class CountryInfo
     {
         CallingCode = "30",
         Continent = Europe,
+        FormatProvider = GRPhoneNumberFormatProvider.Instance,
         IsEuropeanUnionMember = true,
         Iso3166Code = "GR",
         Name = "Greece",
@@ -201,6 +210,7 @@ public partial class CountryInfo
     {
         CallingCode = "44",
         Continent = Europe,
+        FormatProvider = GBPhoneNumberFormatProvider.Instance,
         Iso3166Code = "GG",
         Name = "Guernsey",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4 }),
@@ -250,6 +260,7 @@ public partial class CountryInfo
     {
         CallingCode = "44",
         Continent = Europe,
+        FormatProvider = GBPhoneNumberFormatProvider.Instance,
         Iso3166Code = "IM",
         Name = "Isle of Man",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4 }),
@@ -281,6 +292,7 @@ public partial class CountryInfo
     {
         CallingCode = "44",
         Continent = Europe,
+        FormatProvider = GBPhoneNumberFormatProvider.Instance,
         Iso3166Code = "JE",
         Name = "Jersey",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4 }),
@@ -326,6 +338,7 @@ public partial class CountryInfo
     {
         CallingCode = "377",
         Continent = Europe,
+        FormatProvider = MCPhoneNumberFormatProvider.Instance,
         Iso3166Code = "MC",
         Name = "Monaco",
         NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9 }),
@@ -353,6 +366,7 @@ public partial class CountryInfo
     {
         CallingCode = "47",
         Continent = Europe,
+        FormatProvider = NOPhoneNumberFormatProvider.Instance,
         Iso3166Code = "NO",
         Name = "Norway",
         NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 12 }),
@@ -365,6 +379,7 @@ public partial class CountryInfo
     {
         CallingCode = "48",
         Continent = Europe,
+        FormatProvider = PLPhoneNumberFormatProvider.Instance,
         IsEuropeanUnionMember = true,
         Iso3166Code = "PL",
         Name = "Poland",
@@ -450,6 +465,7 @@ public partial class CountryInfo
     {
         CallingCode = "34",
         Continent = Europe,
+        FormatProvider = ESPhoneNumberFormatProvider.Instance,
         IsEuropeanUnionMember = true,
         Iso3166Code = "ES",
         Name = "Spain",
@@ -510,6 +526,7 @@ public partial class CountryInfo
     {
         CallingCode = "44",
         Continent = Europe,
+        FormatProvider = GBPhoneNumberFormatProvider.Instance,
         Iso3166Code = "GB",
         Name = "United Kingdom",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2 }),
