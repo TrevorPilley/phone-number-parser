@@ -118,7 +118,7 @@ ParseOptions.Default
 
 At present, the only options available are which countries are parsed.
 
-By default all countries supported by the library can be parsed and any future supported ones will be automatically included.
+By default all countries supported by the library can be parsed and any future supported countries will be automatically included.
 
 #### Opt-in
 
@@ -126,15 +126,13 @@ To support parsing specific countries only, and ignore by default any new ones a
 
 ```csharp
 ParseOptions.Default.Countries.Clear():
-ParseOptions.Default.Countries.Add(CountryInfo.X);
+ParseOptions.Default.Countries.Add(CountryInfo.X); // repeat per country
 ```
 
-To opt in to all countries supported by the library within a continent:
+Alternatively there are additional country sets which can be allowed (any combination may be used):
 
 ```csharp
-ParseOptions.Default.Countries.Clear():
-
-// One or more continent can be added.
+// Add all supported countries in one or more continents:
 ParseOptions.Default.AllowAfricanCountries();
 ParseOptions.Default.AllowAsianCountries();
 ParseOptions.Default.AllowEuropeanCountries();
@@ -142,12 +140,12 @@ ParseOptions.Default.AllowNorthAmericanCountries();
 ParseOptions.Default.AllowOceanianCountries();
 ParseOptions.Default.AllowSouthAmericanCountries();
 
-// Alternatively all countries who are members of the same union.
+// Add all supported countries who are members of the same union:
 ParseOptions.Default.AllowEuropeanUnionCountries();
 
-// Alternatively all countries using the same numbering plan.
+// Add all supported countries using the same numbering plan:
 ParseOptions.Default.AllowNorthAmericanNumberingPlanCountries();
-ParseOptions.Default.AllowUnitedKingdomNumberingPlanCountries();
+ParseOptions.Default.AllowUnitedKingdomNumberingPlanCountries(); // Countries.Add(CountryInfo.UnitedKingdom) won't include Guernsey, Isle of Man and Jersey which also use the same numbering plan, this saves adding them specifically.
 ```
 
 #### Opt-out
@@ -166,88 +164,92 @@ The library currently supports parsing phone numbers for the following countries
 
 Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
 ---            | ---           | ---          | ---          | :-:        | :-:    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
-Egypt          | EG            | +20          | 0            | Yes        | Yes    |                    |                      |                | Yes                            | Yes                               |                                  |
-Nigeria        | NG            | +234         | 0            | Yes        | Yes    |                    |                      |                |                                |                                   |                                  |
-South Africa   | Za            | +27          | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               | Yes                              | Yes
+Egypt          | EG            | 20           | 0            | Yes        | Yes    |                    |                      |                | Yes                            | Yes                               |                                  |
+Nigeria        | NG            | 234          | 0            | Yes        | Yes    |                    |                      |                |                                |                                   |                                  |
+South Africa   | Za            | 27           | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               | Yes                              | Yes
 
 ### Asia
 
 Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
 ---            | ---           | ---          | ---          | :-:        | :-:    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
-Hong Kong      | HK            | +852         |              |            | Yes    |                    | Yes                  | Yes            | Yes                            |                                   |                                  | Yes
-Macau          | MO            | +853         |              |            | Yes    |                    |                      | Yes            |                                |                                   |                                  |
-Singapore      | SG            | +65          |              |            | Yes    |                    |                      | Yes            | Yes                            | Yes                               |                                  |
+Hong Kong      | HK            | 852          |              |            | Yes    |                    | Yes                  | Yes            | Yes                            |                                   |                                  | Yes
+Macau          | MO            | 853          |              |            | Yes    |                    |                      | Yes            |                                |                                   |                                  |
+Singapore      | SG            | 65           |              |            | Yes    |                    |                      | Yes            | Yes                            | Yes                               |                                  |
 
 ### Europe
 
 Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
 ---            | ---           | ---          | ---          | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
-Austria        | AT            | +43          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  |
-Belarus        | BY            | +375         | 8            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  |
-Belgium        | BE            | +32          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
-Bulgaria       | BG            | +359         | 0            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               |                                  | Yes
-Croatia        | HR            | +385         | 0            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               |                                  | Yes
-Czech Republic | CZ            | +420         |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               | Yes                              |
-Denmark        | DK            | +45          |              |            | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
-Estonia        | EE            | +372         |              |            | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               |                                  | Yes
-France         | FR            | +33          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
-Finland        | FI            | +358         | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            |                                   |                                  | Yes
-Germany        | DE            | +49          | 0            | Yes        | Yes    |                        | Yes                | Yes                  | Yes            | Yes                            | Yes                               |                                  | Yes
-Gibraltar      | GI            | +350         |              | Yes        | Yes    |                        |                    |                      |                | Yes                            | Yes                               |                                  |
-Greece         | GR            | +30          |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               | Yes                              | Yes
-Guernsey       | GG            | +44          | 0            | Yes        | Yes    |                        |                    |                      |                |                                |                                   |                                  |
-Hungary        | HU            | +36          | 06           | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
-Ireland        | IE            | +353         | 0            | Yes        | Yes    |                        | Yes                | Yes                  | Yes            | Yes                            | Yes                               | Yes                              | Yes
-Isle of Man    | IM            | +44          | 0            | Yes        | Yes    |                        |                    |                      |                |                                |                                   |                                  |
-Italy          | IT            | +39          |              | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               | Yes                              |
-Jersey         | JE            | +44          | 0            | Yes        | Yes    |                        |                    |                      |                |                                |                                   |                                  |
-Kosovo         | XK            | +383         | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               | Yes                              |
-Moldova        | MD            | +373         | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               | Yes                              |
-Monaco         | MC            | +377         |              |            | Yes    |                        |                    |                      | Yes            |                                |                                   |                                  |
-Netherlands    | NL            | +31          | 0            | Yes        | Yes    |                        | Yes                |                      | Yes            | Yes                            | Yes                               |                                  | Yes
-Norway         | NO            | +47          |              |            | Yes    |                        |                    |                      | Yes            |                                |                                   |                                  | Yes
-Poland         | PL            | +48          |              | Yes        | Yes    |                        | Yes                |                      | Yes            |                                |                                   |                                  |
-Portugal       | PT            | +351         |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               | Yes                              |
-Romania        | RO            | +40          | 0            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               | Yes                              |
-San Marino     | SM            | +378         |              |            | Yes    |                        |                    |                      | Yes            |                                | Yes                               |                                  |
-Serbia         | RS            | +381         | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
-Spain          | ES            | +34          |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               | Yes                              | Yes
-Slovakia       | SK            | +421         | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               | Yes                              |
-Sweden         | SE            | +46          | 0            | Yes        | Yes    | Yes                    | Yes                | Yes                  | Yes            | Yes                            | Yes                               | Yes                              | Yes
-Switzerland    | CH            | +41          | 0            | Yes        | Yes    |                        |                    |                      | Yes            |                                | Yes                               |                                  |
-Ukraine        | UA            | +380         | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  |
-United Kingdom | GB            | +44          | 0            | Yes        | Yes    | Yes                    | Yes                | Yes                  | Yes            | Yes                            | Yes                               |                                  |
+Austria        | AT            | 43           | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  |
+Belarus        | BY            | 375          | 8            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  |
+Belgium        | BE            | 32           | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
+Bulgaria       | BG            | 359          | 0            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               |                                  | Yes
+Croatia        | HR            | 385          | 0            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               |                                  | Yes
+Czech Republic | CZ            | 420          |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               | Yes                              |
+Denmark        | DK            | 45           |              |            | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
+Estonia        | EE            | 372          |              |            | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               |                                  | Yes
+France         | FR            | 33           | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
+Finland        | FI            | 358          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            |                                   |                                  | Yes
+Germany        | DE            | 49           | 0            | Yes        | Yes    |                        | Yes                | Yes                  | Yes            | Yes                            | Yes                               |                                  | Yes
+Gibraltar      | GI            | 350          |              | Yes        | Yes    |                        |                    |                      |                | Yes                            | Yes                               |                                  |
+Greece         | GR            | 30           |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               | Yes                              | Yes
+Guernsey       | GG            | 44 _(UK)_    | 0            | Yes        | Yes    |                        |                    |                      |                |                                |                                   |                                  |
+Hungary        | HU            | 36           | 06           | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
+Ireland        | IE            | 353          | 0            | Yes        | Yes    |                        | Yes                | Yes                  | Yes            | Yes                            | Yes                               | Yes                              | Yes
+Isle of Man    | IM            | 44 _(UK)_    | 0            | Yes        | Yes    |                        |                    |                      |                |                                |                                   |                                  |
+Italy          | IT            | 39           |              | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               | Yes                              |
+Jersey         | JE            | 44 _(UK)_    | 0            | Yes        | Yes    |                        |                    |                      |                |                                |                                   |                                  |
+Kosovo         | XK            | 383          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               | Yes                              |
+Moldova        | MD            | 373          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               | Yes                              |
+Monaco         | MC            | 377          |              |            | Yes    |                        |                    |                      | Yes            |                                |                                   |                                  |
+Netherlands    | NL            | 31           | 0            | Yes        | Yes    |                        | Yes                |                      | Yes            | Yes                            | Yes                               |                                  | Yes
+Norway         | NO            | 47           |              |            | Yes    |                        |                    |                      | Yes            |                                |                                   |                                  | Yes
+Poland         | PL            | 48           |              | Yes        | Yes    |                        | Yes                |                      | Yes            |                                |                                   |                                  |
+Portugal       | PT            | 351          |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               | Yes                              |
+Romania        | RO            | 40           | 0            | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               | Yes                              |
+San Marino     | SM            | 378          |              |            | Yes    |                        |                    |                      | Yes            |                                | Yes                               |                                  |
+Serbia         | RS            | 381          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
+Spain          | ES            | 34           |              | Yes        | Yes    |                        |                    | Yes                  | Yes            | Yes                            | Yes                               | Yes                              | Yes
+Slovakia       | SK            | 421          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               | Yes                              |
+Sweden         | SE            | 46           | 0            | Yes        | Yes    | Yes                    | Yes                | Yes                  | Yes            | Yes                            | Yes                               | Yes                              | Yes
+Switzerland    | CH            | 41           | 0            | Yes        | Yes    |                        |                    |                      | Yes            |                                | Yes                               |                                  |
+Ukraine        | UA            | 380          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  |
+United Kingdom | GB            | 44           | 0            | Yes        | Yes    | Yes                    | Yes                | Yes                  | Yes            | Yes                            | Yes                               |                                  |
 
 ### North America
 
 Country                       | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
 ---                           | ---           | ---          | ---          | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
-Canada                        | CA            | +1 _(NANP)_  |              | Yes        |        |                        |                    |                      | Yes            | Yes *                          | Yes                               |                                  |
-Puerto Rico                   | PR            | +1 _(NANP)_  |              | Yes        |        |                        |                    |                      |                |                                |                                   |                                  |
-United States                 | US            | +1 _(NANP)_  |              | Yes        |        |                        |                    | Yes *                | Yes            | Yes *                          | Yes                               |                                  |
-United States Virgin Islands  | VI            | +1 _(NANP)_  |              | Yes        |        |                        |                    |                      |                |                                |                                   |                                  |
+Canada                        | CA            | 1 _(NANP)_   |              | Yes        |        |                        |                    |                      | Yes            | Yes *                          | Yes                               |                                  |
+Puerto Rico                   | PR            | 1 _(NANP)_   |              | Yes        |        |                        |                    |                      |                |                                |                                   |                                  |
+United States                 | US            | 1 _(NANP)_   |              | Yes        |        |                        |                    | Yes *                | Yes            | Yes *                          | Yes                               |                                  |
+United States Virgin Islands  | VI            | 1 _(NANP)_   |              | Yes        |        |                        |                    |                      |                |                                |                                   |                                  |
 
 ### Oceania
 
 Country          | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
 ---              | ---           | ---          | ---          | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
-American Samoa   | AS            | +1 _(NANP)_  |              | Yes        | Yes    |                        |                    |                      | Yes            |                                |                                   |                                  |
-Australia        | AU            | +61          | 0            | Yes        | Yes    |                        | Yes                | Yes                  | Yes            | Yes                            | Yes                               |                                  |
-Guam             | GU            | +1 _(NANP)_  |              | Yes        |        |                        |                    |                      |                |                                |                                   |                                  |
-Papua New Guinea | PG            | +675         |              | Yes        | Yes    |                        | Yes                |                      | Yes            | Yes                            |                                   |                                  |
+American Samoa   | AS            | 1 _(NANP)_   |              | Yes        | Yes    |                        |                    |                      | Yes            |                                |                                   |                                  |
+Australia        | AU            | 61           | 0            | Yes        | Yes    |                        | Yes                | Yes                  | Yes            | Yes                            | Yes                               |                                  |
+Guam             | GU            | 1 _(NANP)_   |              | Yes        |        |                        |                    |                      |                |                                |                                   |                                  |
+Papua New Guinea | PG            | 675          |              | Yes        | Yes    |                        | Yes                |                      | Yes            | Yes                            |                                   |                                  |
 
 ### South America
 
 Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Data Only) | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
 ---            | ---           | ---          | ---          | :-:        | :-:    | :-:                    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
-Brazil         | BR            | +55          | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  |
+Brazil         | BR            | 55           | 0            | Yes        | Yes    |                        |                    |                      | Yes            | Yes                            | Yes                               |                                  |
 
 ### Notes
 
-- The ISO code for the United Kingdom is 'GB' rather than 'UK'.
+- For the United Kingdom:
+    - The ISO code is 'GB' rather than 'UK'.
+    - Covers England, Scotland, Wales and Northern Ireland.
+    - The Crown Dependencies Guernsey, Isle of Man and Jersey also use the same numbering plan but are separate countries.
+    - To avoid a legitimate UK phone number from being rejected by the library, consider using `ParseOptions.Default.AllowUnitedKingdomNumberingPlanCountries()` if you are customising the countries used instead of `ParseOptions.Countries.Add(CountryInfo.UnitedKingdom)`.
 - Geographically assigned numbers in France are currently only resolved within the top level geographic zones (01 Île-de-France, 02 Nord-Ouest, 03 Nord-Est, 04 Sud-Est and 05 Sud-Ouest).
 - Where possible, the geographic area name is in the language/locality of the country for the phone number (e.g. for an Italian phone number assigned to Florence, the geographic area will be set to `Firenze`.
-- Within the North American Numbering Plan (covering all countries with the calling code +1):
+- Within the North American Numbering Plan (NANP), which covers all countries with the calling code +1:
   - Geographically assigned numbers are currently only resolved within the country or state/region level, not at city level.
   - Mobile numbers are geographically assigned and cannot be determined separately from landlines.
   - Freephone numbers (with a few exceptions) are issued from a shared pool. This could mean a Canadian freephone number look up shows as belonging to a different country if parsed from the E.164 format (parsing from the national number format and country code will work as expected).
