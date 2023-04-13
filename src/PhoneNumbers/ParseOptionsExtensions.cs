@@ -77,6 +77,16 @@ public static class ParseOptionsExtensions
     public static ParseOptions AllowSouthAmericanCountries(this ParseOptions parseOptions) =>
         Allow(parseOptions, x => x.Continent == CountryInfo.SouthAmerica);
 
+    /// <summary>
+    /// Allows the <see cref="ParseOptions"/> instance to include all supported countries using United Kingdom Numbering Plan.
+    /// </summary>
+    /// <param name="parseOptions">The <see cref="ParseOptions"/> instance to update.</param>
+    /// <exception cref="ArgumentNullException">Thrown if the specified <paramref name="parseOptions"/> is null.</exception>
+    /// <returns>The updated <see cref="ParseOptions"/>.</returns>
+    /// <remarks>Adds Guernsey, Jersey and Isle of Man in addition to the United Kingdom.</remarks>
+    public static ParseOptions AllowUnitedKingdomNumberingPlanCountries(this ParseOptions parseOptions) =>
+        Allow(parseOptions, x => x.CallingCode == CountryInfo.UnitedKingdom.CallingCode);
+
     private static ParseOptions Allow(ParseOptions parseOptions, Func<CountryInfo, bool> predicate)
     {
         foreach (var countryInfo in CountryInfo.GetCountries(predicate))

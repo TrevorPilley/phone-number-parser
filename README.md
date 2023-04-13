@@ -147,6 +147,7 @@ ParseOptions.Default.AllowEuropeanUnionCountries();
 
 // Alternatively all countries using the same numbering plan.
 ParseOptions.Default.AllowNorthAmericanNumberingPlanCountries();
+ParseOptions.Default.AllowUnitedKingdomNumberingPlanCountries();
 ```
 
 #### Opt-out
