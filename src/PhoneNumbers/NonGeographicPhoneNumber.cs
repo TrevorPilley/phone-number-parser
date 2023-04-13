@@ -10,7 +10,7 @@ public sealed class NonGeographicPhoneNumber : PhoneNumber, IEquatable<NonGeogra
     /// </summary>
     /// <param name="phoneNumberHint">The <see cref="PhoneNumberHint"/> for the phone number.</param>
     internal NonGeographicPhoneNumber(PhoneNumberHint phoneNumberHint)
-        :base(phoneNumberHint)
+        : base(phoneNumberHint)
     {
     }
 

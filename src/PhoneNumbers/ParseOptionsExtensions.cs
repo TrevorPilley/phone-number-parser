@@ -11,8 +11,8 @@ public static class ParseOptionsExtensions
     /// <param name="parseOptions">The <see cref="ParseOptions"/> instance to update.</param>
     /// <exception cref="ArgumentNullException">Thrown if the specified <paramref name="parseOptions"/> is null.</exception>
     /// <returns>The updated <see cref="ParseOptions"/>.</returns>
-    public static ParseOptions AllowAfricanCountries(this ParseOptions parseOptions)
-        => Allow(parseOptions, x => x.Continent == CountryInfo.Africa);
+    public static ParseOptions AllowAfricanCountries(this ParseOptions parseOptions) =>
+        Allow(parseOptions, x => x.Continent == CountryInfo.Africa);
 
     /// <summary>
     /// Allows the <see cref="ParseOptions"/> instance to include all supported countries in Asia.
@@ -20,8 +20,8 @@ public static class ParseOptionsExtensions
     /// <param name="parseOptions">The <see cref="ParseOptions"/> instance to update.</param>
     /// <exception cref="ArgumentNullException">Thrown if the specified <paramref name="parseOptions"/> is null.</exception>
     /// <returns>The updated <see cref="ParseOptions"/>.</returns>
-    public static ParseOptions AllowAsianCountries(this ParseOptions parseOptions)
-        => Allow(parseOptions, x => x.Continent == CountryInfo.Asia);
+    public static ParseOptions AllowAsianCountries(this ParseOptions parseOptions) =>
+        Allow(parseOptions, x => x.Continent == CountryInfo.Asia);
 
     /// <summary>
     /// Allows the <see cref="ParseOptions"/> instance to include all supported countries in Europe.
@@ -29,8 +29,8 @@ public static class ParseOptionsExtensions
     /// <param name="parseOptions">The <see cref="ParseOptions"/> instance to update.</param>
     /// <exception cref="ArgumentNullException">Thrown if the specified <paramref name="parseOptions"/> is null.</exception>
     /// <returns>The updated <see cref="ParseOptions"/>.</returns>
-    public static ParseOptions AllowEuropeanCountries(this ParseOptions parseOptions)
-        => Allow(parseOptions, x => x.Continent == CountryInfo.Europe);
+    public static ParseOptions AllowEuropeanCountries(this ParseOptions parseOptions) =>
+        Allow(parseOptions, x => x.Continent == CountryInfo.Europe);
 
     /// <summary>
     /// Allows the <see cref="ParseOptions"/> instance to include all supported countries who are members of the European Union.
@@ -38,8 +38,8 @@ public static class ParseOptionsExtensions
     /// <param name="parseOptions">The <see cref="ParseOptions"/> instance to update.</param>
     /// <exception cref="ArgumentNullException">Thrown if the specified <paramref name="parseOptions"/> is null.</exception>
     /// <returns>The updated <see cref="ParseOptions"/>.</returns>
-    public static ParseOptions AllowEuropeanUnionCountries(this ParseOptions parseOptions)
-        => Allow(parseOptions, x => x.IsEuropeanUnionMember);
+    public static ParseOptions AllowEuropeanUnionCountries(this ParseOptions parseOptions) =>
+        Allow(parseOptions, x => x.IsEuropeanUnionMember);
 
     /// <summary>
     /// Allows the <see cref="ParseOptions"/> instance to include all supported countries in North America.
@@ -47,8 +47,8 @@ public static class ParseOptionsExtensions
     /// <param name="parseOptions">The <see cref="ParseOptions"/> instance to update.</param>
     /// <exception cref="ArgumentNullException">Thrown if the specified <paramref name="parseOptions"/> is null.</exception>
     /// <returns>The updated <see cref="ParseOptions"/>.</returns>
-    public static ParseOptions AllowNorthAmericanCountries(this ParseOptions parseOptions)
-        => Allow(parseOptions, x => x.Continent == CountryInfo.NorthAmerica);
+    public static ParseOptions AllowNorthAmericanCountries(this ParseOptions parseOptions) =>
+        Allow(parseOptions, x => x.Continent == CountryInfo.NorthAmerica);
 
     /// <summary>
     /// Allows the <see cref="ParseOptions"/> instance to include all supported countries using North American Numbering Plan.
@@ -56,8 +56,8 @@ public static class ParseOptionsExtensions
     /// <param name="parseOptions">The <see cref="ParseOptions"/> instance to update.</param>
     /// <exception cref="ArgumentNullException">Thrown if the specified <paramref name="parseOptions"/> is null.</exception>
     /// <returns>The updated <see cref="ParseOptions"/>.</returns>
-    public static ParseOptions AllowNorthAmericanNumberingPlanCountries(this ParseOptions parseOptions)
-        => Allow(parseOptions, x => x.CallingCode == CountryInfo.NanpCallingCode);
+    public static ParseOptions AllowNorthAmericanNumberingPlanCountries(this ParseOptions parseOptions) =>
+        Allow(parseOptions, x => x.CallingCode == CountryInfo.NanpCallingCode);
 
     /// <summary>
     /// Allows the <see cref="ParseOptions"/> instance to include all supported countries in Oceania.
@@ -65,8 +65,8 @@ public static class ParseOptionsExtensions
     /// <param name="parseOptions">The <see cref="ParseOptions"/> instance to update.</param>
     /// <exception cref="ArgumentNullException">Thrown if the specified <paramref name="parseOptions"/> is null.</exception>
     /// <returns>The updated <see cref="ParseOptions"/>.</returns>
-    public static ParseOptions AllowOceanianCountries(this ParseOptions parseOptions)
-        => Allow(parseOptions, x => x.Continent == CountryInfo.Oceania);
+    public static ParseOptions AllowOceanianCountries(this ParseOptions parseOptions) =>
+        Allow(parseOptions, x => x.Continent == CountryInfo.Oceania);
 
     /// <summary>
     /// Allows the <see cref="ParseOptions"/> instance to include all supported countries in South America.
@@ -74,8 +74,8 @@ public static class ParseOptionsExtensions
     /// <param name="parseOptions">The <see cref="ParseOptions"/> instance to update.</param>
     /// <exception cref="ArgumentNullException">Thrown if the specified <paramref name="parseOptions"/> is null.</exception>
     /// <returns>The updated <see cref="ParseOptions"/>.</returns>
-    public static ParseOptions AllowSouthAmericanCountries(this ParseOptions parseOptions)
-        => Allow(parseOptions, x => x.Continent == CountryInfo.SouthAmerica);
+    public static ParseOptions AllowSouthAmericanCountries(this ParseOptions parseOptions) =>
+        Allow(parseOptions, x => x.Continent == CountryInfo.SouthAmerica);
 
     private static ParseOptions Allow(ParseOptions parseOptions, Func<CountryInfo, bool> predicate)
     {
