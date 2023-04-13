@@ -1,4 +1,5 @@
 using System.Collections.ObjectModel;
+using PhoneNumbers.Formatters.FormatProviders;
 
 namespace PhoneNumbers;
 
@@ -11,6 +12,7 @@ public partial class CountryInfo
     {
         CallingCode = "55",
         Continent = SouthAmerica,
+        FormatProvider = BRPhoneNumberFormatProvider.Instance,
         Iso3166Code = "BR",
         Name = "Brazil",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),

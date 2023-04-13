@@ -1,4 +1,5 @@
 using System.Collections.ObjectModel;
+using PhoneNumbers.Formatters.FormatProviders;
 
 namespace PhoneNumbers;
 
@@ -11,6 +12,7 @@ public partial class CountryInfo
     {
         CallingCode = NanpCallingCode,
         Continent = Oceania,
+        FormatProvider = NanpPhoneNumberFormatProvider.Instance,
         Iso3166Code = "AS",
         Name = "American Samoa",
         NdcLengths = NanpNdcLengths,
@@ -26,6 +28,7 @@ public partial class CountryInfo
     {
         CallingCode = "61",
         Continent = Oceania,
+        FormatProvider = AUPhoneNumberFormatProvider.Instance,
         Iso3166Code = "AU",
         Name = "Australia",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
@@ -41,6 +44,7 @@ public partial class CountryInfo
     {
         CallingCode = NanpCallingCode,
         Continent = Oceania,
+        FormatProvider = NanpPhoneNumberFormatProvider.Instance,
         Iso3166Code = "GU",
         Name = "Guam",
         NdcLengths = NanpNdcLengths,

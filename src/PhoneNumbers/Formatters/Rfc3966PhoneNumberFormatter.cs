@@ -3,7 +3,7 @@ namespace PhoneNumbers.Formatters;
 /// <summary>
 /// A <see cref="PhoneNumberFormatter"/> which returns the RFC3966 format.
 /// </summary>
-internal sealed class Rfc3966PhoneNumberFormatter : PhoneNumberFormatter
+internal sealed class Rfc3966PhoneNumberFormatter : InternationalPhoneNumberFormatter
 {
     /// <summary>
     /// Initialises a new instance of the <see cref="Rfc3966PhoneNumberFormatter"/> class.
@@ -23,7 +23,5 @@ internal sealed class Rfc3966PhoneNumberFormatter : PhoneNumberFormatter
 
     /// <inheritdoc/>
     internal override string Format(PhoneNumber phoneNumber) =>
-        phoneNumber.NationalDestinationCode is not null
-            ? $"tel:{Chars.Plus}{phoneNumber.Country.CallingCode}-{phoneNumber.NationalDestinationCode}-{phoneNumber.SubscriberNumber}"
-            : $"tel:{Chars.Plus}{phoneNumber.Country.CallingCode}-{phoneNumber.SubscriberNumber}";
+        Format(phoneNumber, outputPrefix: "tel:", charBetweenCallingCodeAndNsn: Chars.Hyphen, nonDigitSubstitute: Chars.Hyphen);
 }

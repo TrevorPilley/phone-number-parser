@@ -1,3 +1,5 @@
+using PhoneNumbers.Formatters.FormatProviders;
+
 namespace PhoneNumbers.Tests;
 
 public class CountryInfo_Africa_Tests
@@ -11,6 +13,7 @@ public class CountryInfo_Africa_Tests
 
         Assert.Equal("20", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
+        Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("EG", countryInfo.Iso3166Code);
         Assert.Equal("Egypt", countryInfo.Name);
@@ -30,6 +33,7 @@ public class CountryInfo_Africa_Tests
 
         Assert.Equal("234", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
+        Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("NG", countryInfo.Iso3166Code);
         Assert.Equal("Nigeria", countryInfo.Name);
@@ -49,6 +53,7 @@ public class CountryInfo_Africa_Tests
 
         Assert.Equal("27", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
+        Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("ZA", countryInfo.Iso3166Code);
         Assert.Equal("South Africa", countryInfo.Name);

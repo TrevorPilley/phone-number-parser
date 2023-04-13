@@ -23,6 +23,11 @@ public abstract class PhoneNumber
     public required CountryInfo Country { get; init; }
 
     /// <summary>
+    /// Gets a value indicating whether the phone number has a national destination code.
+    /// </summary>
+    public bool HasNationalDestinationCode => NationalDestinationCode is not null;
+
+    /// <summary>
     /// Gets the <see cref="PhoneNumberKind"/> of the phone number.
     /// </summary>
     /// <remarks>This instance can be cast to the appropriate type based upon the value.</remarks>
