@@ -94,6 +94,21 @@ public class ParseOptionsTests
     }
 
     [Fact]
+    public void AllowUnitedKingdomNumberingPlanCountries()
+    {
+        var parseOptions = new ParseOptions();
+        parseOptions.Countries.Clear();
+        parseOptions.AllowUnitedKingdomNumberingPlanCountries();
+
+        Assert.Equal(4, parseOptions.Countries.Count);
+        Assert.All(parseOptions.Countries, x => Assert.Equal(CountryInfo.UnitedKingdom.CallingCode, x.CallingCode));
+        Assert.Contains(CountryInfo.Guernsey, parseOptions.Countries);
+        Assert.Contains(CountryInfo.IsleOfMan, parseOptions.Countries);
+        Assert.Contains(CountryInfo.Jersey, parseOptions.Countries);
+        Assert.Contains(CountryInfo.UnitedKingdom, parseOptions.Countries);
+    }
+
+    [Fact]
     public void Default()
     {
         Assert.NotNull(ParseOptions.Default);
