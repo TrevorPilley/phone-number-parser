@@ -3,7 +3,7 @@ namespace PhoneNumbers.Tests;
 public class GeographicPhoneNumberTests
 {
     [Fact]
-    public void Constructor_Sets_Properties()
+    public void Constructor_Sets_Properties_With_NationalDestinationCode()
     {
         var countryInfo = TestHelper.CreateCountryInfo();
         var phoneNumber = new GeographicPhoneNumber(PhoneNumberHint.None)
@@ -18,10 +18,34 @@ public class GeographicPhoneNumberTests
         Assert.Equal(countryInfo, phoneNumber.Country);
         Assert.Equal("N/A", phoneNumber.GeographicArea);
         Assert.Equal(PhoneNumberKind.GeographicPhoneNumber, phoneNumber.Kind);
+        Assert.True(phoneNumber.HasNationalDestinationCode);
         Assert.Equal("12345", phoneNumber.NationalDestinationCode);
         Assert.Equal("12345667788", phoneNumber.NationalSignificantNumber);
         Assert.Equal("667788", phoneNumber.SubscriberNumber);
     }
+
+    [Fact]
+    public void Constructor_Sets_Properties_Without_NationalDestinationCode()
+    {
+        var countryInfo = TestHelper.CreateCountryInfo();
+        var phoneNumber = new GeographicPhoneNumber(PhoneNumberHint.None)
+        {
+            Country = countryInfo,
+            GeographicArea = "N/A",
+            NationalDestinationCode = null,
+            NationalSignificantNumber = "12345667788",
+            SubscriberNumber = "667788",
+        };
+
+        Assert.Equal(countryInfo, phoneNumber.Country);
+        Assert.Equal("N/A", phoneNumber.GeographicArea);
+        Assert.Equal(PhoneNumberKind.GeographicPhoneNumber, phoneNumber.Kind);
+        Assert.False(phoneNumber.HasNationalDestinationCode);
+        Assert.Null(phoneNumber.NationalDestinationCode);
+        Assert.Equal("12345667788", phoneNumber.NationalSignificantNumber);
+        Assert.Equal("667788", phoneNumber.SubscriberNumber);
+    }
+
     [Fact]
     public void Equality_Both_Null()
     {

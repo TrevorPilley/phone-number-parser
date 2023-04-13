@@ -67,7 +67,7 @@ public sealed class MobilePhoneNumber : PhoneNumber, IEquatable<MobilePhoneNumbe
         return Hint.Equals(other.Hint) &&
             Country.Equals(other.Country) &&
             Kind.Equals(other.Kind) &&
-            (NationalDestinationCode is null && other.NationalDestinationCode is null || NationalDestinationCode!.Equals(other.NationalDestinationCode, StringComparison.Ordinal)) &&
+            (!HasNationalDestinationCode && !other.HasNationalDestinationCode || NationalDestinationCode!.Equals(other.NationalDestinationCode, StringComparison.Ordinal)) &&
             NationalSignificantNumber.Equals(other.NationalSignificantNumber, StringComparison.Ordinal) &&
             SubscriberNumber.Equals(other.SubscriberNumber, StringComparison.Ordinal);
     }

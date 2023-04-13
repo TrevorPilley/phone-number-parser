@@ -3,7 +3,7 @@ namespace PhoneNumbers.Formatters;
 /// <summary>
 /// A <see cref="PhoneNumberFormatter"/> which returns the E.123 international format.
 /// </summary>
-internal sealed class E123PhoneNumberFormatter : PhoneNumberFormatter
+internal sealed class E123PhoneNumberFormatter : InternationalPhoneNumberFormatter
 {
     /// <summary>
     /// Initialises a new instance of the <see cref="E123PhoneNumberFormatter"/> class.
@@ -22,10 +22,6 @@ internal sealed class E123PhoneNumberFormatter : PhoneNumberFormatter
         format?.Equals("E.123", StringComparison.Ordinal) == true;
 
     /// <inheritdoc/>
-    internal override string Format(PhoneNumber phoneNumber)
-    {
-        return phoneNumber.NationalDestinationCode is not null
-            ? $"{Chars.Plus}{phoneNumber.Country.CallingCode} {phoneNumber.NationalDestinationCode} {phoneNumber.SubscriberNumber}"
-            : $"{Chars.Plus}{phoneNumber.Country.CallingCode} {phoneNumber.SubscriberNumber}";
-    }
+    internal override string Format(PhoneNumber phoneNumber) =>
+        Format(phoneNumber, charBetweenCallingCodeAndNsn: Chars.Space);
 }

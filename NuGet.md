@@ -28,9 +28,9 @@ var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
 geographicPhoneNumber.GeographicArea;    // Sheffield
 
 // The phone number can be formatted in the following ways, the default format output can be round tripped via `PhoneNumber.Parse()` to make database persistence straightforward.
-phoneNumber.ToString();                  // +441142726444      (defaults to E.164 format)
-phoneNumber.ToString("E.164");           // +441142726444      (E.164 format)
-phoneNumber.ToString("E.123");           // +44 114 2726444    (E.123 international format)
-phoneNumber.ToString("N");               // (0114) 2726444     (E.123 national notation format)
-phoneNumber.ToString("RFC3966");         // tel:+44-114-272644 (RFC3966 format)
+phoneNumber.ToString();                  // +441142726444       (defaults to E.164 format)
+phoneNumber.ToString("E.164");           // +441142726444       (E.164 format)
+phoneNumber.ToString("E.123");           // +44 114 272 6444    (E.123 international format)
+phoneNumber.ToString("N");               // (0114) 272 6444     (E.123 national notation format)
+phoneNumber.ToString("RFC3966");         // tel:+44-114-272-644 (RFC3966 format)
 ```

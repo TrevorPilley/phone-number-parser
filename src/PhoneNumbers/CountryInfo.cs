@@ -2,6 +2,7 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Reflection;
 using PhoneNumbers.Formatters;
+using PhoneNumbers.Formatters.FormatProviders;
 
 namespace PhoneNumbers;
 
@@ -86,6 +87,11 @@ public sealed partial class CountryInfo
     /// Gets the trunk prefix used by the country, if applicable.
     /// </summary>
     public string? TrunkPrefix { get; init; }
+
+    /// <summary>
+    /// Gets the <see cref="PhoneNumberFormatProvider"/> for the country.
+    /// </summary>
+    internal PhoneNumberFormatProvider FormatProvider { get; init; } = ComplexPhoneNumberFormatProvider.Default;
 
     /// <summary>
     /// Gets the possible lengths of the national destination code.
