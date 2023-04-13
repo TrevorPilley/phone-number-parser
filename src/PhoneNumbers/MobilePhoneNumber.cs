@@ -10,7 +10,7 @@ public sealed class MobilePhoneNumber : PhoneNumber, IEquatable<MobilePhoneNumbe
     /// </summary>
     /// <param name="phoneNumberHint">The <see cref="PhoneNumberHint"/> for the phone number.</param>
     internal MobilePhoneNumber(PhoneNumberHint phoneNumberHint)
-        :base(phoneNumberHint)
+        : base(phoneNumberHint)
     {
     }
 

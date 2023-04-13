@@ -10,7 +10,7 @@ public sealed class GeographicPhoneNumber : PhoneNumber, IEquatable<GeographicPh
     /// </summary>
     /// <param name="phoneNumberHint">The <see cref="PhoneNumberHint"/> for the phone number.</param>
     internal GeographicPhoneNumber(PhoneNumberHint phoneNumberHint)
-        :base(phoneNumberHint)
+        : base(phoneNumberHint)
     {
     }
 
