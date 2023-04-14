@@ -17,7 +17,7 @@
         "davidanson.cscode-markdownlint",
         "editorconfig.editorconfig",
         "ms-dotnettools.csharp",
-        "projektanker.code-butler",
+        //"projektanker.code-butler",
         "streetsidesoftware.code-spell-checker"
       ]
     }
