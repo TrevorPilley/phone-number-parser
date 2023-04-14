@@ -17,16 +17,16 @@ public class PhoneNumber_ToString_NorthAmerica_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
-    [InlineData("+12124841200", "E.123", "+1 212-484-1200")]
-    [InlineData("+12124841200", "N", "(212) 484-1200")]
-    [InlineData("+12124841200", "RFC3966", "tel:+1-212-484-1200")]
-    public void UnitedStates_Numbers(string input, string format, string expected) =>
-        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
-
-    [Theory]
     [InlineData("+13407731404", "E.123", "+1 340-773-1404")]
     [InlineData("+13407731404", "N", "(340) 773-1404")]
     [InlineData("+13407731404", "RFC3966", "tel:+1-340-773-1404")]
     public void UnitedStatesVirginIslands_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
+    [InlineData("+12124841200", "E.123", "+1 212-484-1200")]
+    [InlineData("+12124841200", "N", "(212) 484-1200")]
+    [InlineData("+12124841200", "RFC3966", "tel:+1-212-484-1200")]
+    public void UnitedStates_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 }

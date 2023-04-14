@@ -2,6 +2,12 @@
 
 Contributions are welcome, however, please file an issue first and let's have a discussion before you open a pull request.
 
+## Raising a bug
+
+Please raise bugs for any you might find, at some point I'll get an issue template sorted but if you could at least provide details so I can reproduce it that will help improve the chances of it being fixed.
+
+Before raising a bug, please check whether the issue still exists in the latest version and whether there is an existing issue already raised to avoid a duplicate.
+
 ## Building the project
 
 The project multi targets .NET 7.0 in addition to .NET Standard 2.1 & 2.0 so you will need to have the relevant SDK's installed in order to build the solution locally. It also utilises C# 11 language features so you will need an IDE that supports it.
@@ -9,12 +15,6 @@ The project multi targets .NET 7.0 in addition to .NET Standard 2.1 & 2.0 so you
 Firstly clone or fork the repository.
 
 There is a `build.ps1` to build, test, view code coverage and create a nuget package on Windows and a `build.sh` for those on macOS (not currently tested on Linux or Windows Subsystem for Linux but it may still work).
-
-## Raising a bug
-
-Please raise bugs for any you might find, at some point I'll get an issue template sorted but if you could at least provide details so I can reproduce it that will help improve the chances of it being fixed.
-
-Before raising a bug, please check whether the issue still exists in the latest version and whether there is an existing issue already raised to avoid a duplicate.
 
 ## Adding a new country
 
@@ -37,10 +37,10 @@ public static CountryInfo CountryName { get; } = new()
 };
 ```
 
-2. If the country uses national destination codes (aka. area codes), set the `NdcLengths` property as appropriate and declare in descending order.
+2. If the country uses national destination codes (aka. area codes), also set the `NdcLengths` property as appropriate and declare in descending order (this is important as the default parser tries to match for the longest NDC first).
 3. If the country uses a trunk prefix, set the `TrunkPrefix` appropriately.
-4. If the country uses an open dialling plan, where within a geographic area local dialling can be done without including the trunk code or area code, set `NumberingPlanType = NumberingPlanType.Open`
-5. By default, the `ComplexPhoneNumberFormatProvider` is used which has defined spacing rules for formatting the subscriber number (e.g. a 6 digit SN is formatted as XXX XXX and a 7 digit SN is formatted XXX XXXX), if the country convention is not to separate out the subscriber number but still separates the national destination code from the subscriber number, use the `SimplePhoneNumberFormatProvider` instead. If the country uses conventions the built in providers don't support, add a custom `{CountryCode}PhoneNumberFormatProvider` and override the base behaviour as appropriate and set as the `FormatProvider` property in the `CountryInfo` definition.
+4. The numbering plan is closed by default so if the country uses an open dialling plan (where within a geographic area local dialling can be done without including the trunk code or area code), set `NumberingPlanType = NumberingPlanType.Open`.
+5. By default, the `ComplexPhoneNumberFormatProvider` is used which has defined spacing rules for formatting the subscriber number (e.g. a 6 digit SN is formatted as XXX XXX and a 7 digit SN is formatted XXX XXXX). If the country convention is not to separate out the subscriber number but still separates the national destination code from the subscriber number, use the `SimplePhoneNumberFormatProvider` instead. If the country uses conventions the built in providers don't support, add a custom `{CountryCode}PhoneNumberFormatProvider` and override the base behaviour as appropriate and set as the `FormatProvider` property in the `CountryInfo` definition.
 6. Add a new `CountryInfo_CountryName` test in the `CountryInfo_{Continent}_Tests.cs` file asserting the property values (see an existing implementation).
 
 ### Add the data file
@@ -100,4 +100,4 @@ A single line comment can be added in a data file by starting the line with a `#
 
 1. If the `DefaultPhoneNumberParser` can parse the file, add tests for the country using the `DefaultPhoneNumberParser` as appropriate - typically the min and max permitted subscriber number(s) are tested within each national destination code/number kind.
 2. If country requires more complex logic to determine the national destination code, or the performance of the `DefaultPhoneNumberParser` is not acceptable then add a custom parser `{Iso3166Code}PhoneNumberParser` (see the GB one as an example) and add test cases based upon the data file.
-3. Add a unit test for `Parse` and `TryParse` methods in `PhoneNumber_Parse_Tests.cs` and `PhoneNumber_TryParse_Tests.cs` for the `{Iso3166Code}` to check the country code is assigned.
+3. Add a unit test for `Parse` in `PhoneNumber_Parse_{Continent}_Tests.cs` to check the number is parsed correctly and the country code is assigned.

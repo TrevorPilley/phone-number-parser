@@ -4,25 +4,21 @@ namespace PhoneNumbers.Tests;
 
 public class PhoneNumberTests
 {
-    [Fact]
-    public void Parse_Value_CountryCode_Ignores_Hyphens() =>
-        Assert.NotNull(PhoneNumber.Parse("0114-272-6444", "GB"));
+    [Theory]
+    [InlineData("+441142726444")]
+    [InlineData("tel:+44-114-2726444")]
+    public void Parse_Value(string input) =>
+        Assert.NotNull(PhoneNumber.Parse(input));
 
-    [Fact]
-    public void Parse_Value_CountryCode_Ignores_Parenthesis() =>
-        Assert.NotNull(PhoneNumber.Parse("(0114) 272 6444", "GB"));
-
-    [Fact]
-    public void Parse_Value_CountryCode_Ignores_Periods() =>
-        Assert.NotNull(PhoneNumber.Parse("0114.272.6444", "GB"));
-
-    [Fact]
-    public void Parse_Value_CountryCode_Ignores_Spaces() =>
-        Assert.NotNull(PhoneNumber.Parse("0114 272 6444", "GB"));
-
-    [Fact]
-    public void Parse_Value_CountryCode_Succeeds_If_Value_In_Correct_International_Format_For_CountryCode() =>
-        Assert.NotNull(PhoneNumber.Parse("+441142726444", "GB"));
+    [Theory]
+    [InlineData("0114 272 6444")]
+    [InlineData("0114-272-6444")]
+    [InlineData("0114.272.6444")]
+    [InlineData("(0114) 272 6444")]
+    [InlineData("+441142726444")]
+    [InlineData("tel:+44-114-2726444")]
+    public void Parse_Value_CountryCode(string input) =>
+        Assert.NotNull(PhoneNumber.Parse(input, "GB"));
 
     [Fact]
     public void Parse_Value_CountryCode_Throws_If_CountryCode_Not_Supported()
@@ -42,6 +38,24 @@ public class PhoneNumberTests
         Assert.Equal("The value must be a France phone number starting +33 or 0 and the national significant number of the phone number must be 9 or 13 digits in length.", exception.Message);
     }
 
+    [Theory]
+    [InlineData(default(string))]
+    [InlineData("")]
+    [InlineData(" ")]
+    [InlineData("441142726444")]
+    public void Parse_Value_CountryCode_Throws_If_Value_Invalid(string input) =>
+        Assert.Throws<ParseException>(() => PhoneNumber.Parse(input, "GB"));
+
+    [Theory]
+    [InlineData("0114 272 6444")]
+    [InlineData("0114-272-6444")]
+    [InlineData("0114.272.6444")]
+    [InlineData("(0114) 272 6444")]
+    [InlineData("+441142726444")]
+    [InlineData("tel:+44-114-2726444")]
+    public void Parse_Value_CountryInfo(string input) =>
+        Assert.NotNull(PhoneNumber.Parse(input, CountryInfo.UnitedKingdom));
+
     [Fact]
     public void Parse_Value_CountryInfo_Throws_If_CountryInfo_Not_Supported()
     {
@@ -50,24 +64,28 @@ public class PhoneNumberTests
     }
 
     [Fact]
-    public void Parse_Value_From_Rfc3966_Format() =>
-        Assert.NotNull(PhoneNumber.Parse("tel:+44-114-2726444"));
+    public void Parse_Value_CountryInfo_Throws_If_ParseOptions_Null() =>
+        Assert.Throws<ArgumentNullException>(() => PhoneNumber.Parse("0123456789", CountryInfo.UnitedKingdom, default));
+
+    [Theory]
+    [InlineData(default(string))]
+    [InlineData("")]
+    [InlineData(" ")]
+    [InlineData("441142726444")]
+    public void Parse_Value_CountryInfo_Throws_If_Value_Invalid(string input) =>
+        Assert.Throws<ParseException>(() => PhoneNumber.Parse(input, CountryInfo.UnitedKingdom));
 
     [Fact]
     public void Parse_Value_Throws_If_ParseOptions_Null() =>
         Assert.Throws<ArgumentNullException>(() => PhoneNumber.Parse("0123456789", default(ParseOptions)));
 
-    [Fact]
-    public void Parse_Value_Throws_If_Value_Does_Not_Start_With_Plus() =>
-        Assert.Throws<ParseException>(() => PhoneNumber.Parse("441142726444"));
-
-    [Fact]
-    public void Parse_Value_Throws_If_Value_Empty() =>
-        Assert.Throws<ParseException>(() => PhoneNumber.Parse(" "));
-
-    [Fact]
-    public void Parse_Value_Throws_If_Value_Null() =>
-        Assert.Throws<ParseException>(() => PhoneNumber.Parse(null));
+    [Theory]
+    [InlineData(default(string))]
+    [InlineData("")]
+    [InlineData(" ")]
+    [InlineData("441142726444")]
+    public void Parse_Value_Throws_If_Value_Invalid(string input) =>
+        Assert.Throws<ParseException>(() => PhoneNumber.Parse(input));
 
     [Fact]
     public void ToString_Returns_Default_Formatted_PhoneNumber()
@@ -84,6 +102,28 @@ public class PhoneNumberTests
     {
         Assert.False(PhoneNumber.TryParse("+441110000000", out PhoneNumber phoneNumber));
         Assert.Null(phoneNumber);
+    }
+
+    [Theory]
+    [InlineData("+441142726444")]
+    [InlineData("tel:+44-114-2726444")]
+    public void TryParse_Value(string input)
+    {
+        Assert.True(PhoneNumber.TryParse(input, out PhoneNumber phoneNumber));
+        Assert.NotNull(phoneNumber);
+    }
+
+    [Theory]
+    [InlineData("0114 272 6444")]
+    [InlineData("0114-272-6444")]
+    [InlineData("0114.272.6444")]
+    [InlineData("(0114) 272 6444")]
+    [InlineData("+441142726444")]
+    [InlineData("tel:+44-114-2726444")]
+    public void TryParse_Value_CountryCode(string input)
+    {
+        Assert.True(PhoneNumber.TryParse(input, "GB", out PhoneNumber phoneNumber));
+        Assert.NotNull(phoneNumber);
     }
 
     [Fact]
@@ -115,30 +155,33 @@ public class PhoneNumberTests
     }
 
     [Fact]
-    public void TryParse_Value_CountryCode_Ignores_Hyphens()
-    {
-        Assert.True(PhoneNumber.TryParse("0114-272-6444", "GB", out var phoneNumber));
-        Assert.NotNull(phoneNumber);
-    }
-
-    [Fact]
-    public void TryParse_Value_CountryCode_Ignores_Parenthesis()
-    {
-        Assert.True(PhoneNumber.TryParse("(0114) 272 6444", "GB", out var phoneNumber));
-        Assert.NotNull(phoneNumber);
-    }
-
-    [Fact]
-    public void TryParse_Value_CountryCode_Ignores_Periods()
-    {
-        Assert.True(PhoneNumber.TryParse("0114.272.6444", "GB", out var phoneNumber));
-        Assert.NotNull(phoneNumber);
-    }
-
-    [Fact]
     public void TryParse_Value_CountryCode_Ignores_Spaces()
     {
         Assert.True(PhoneNumber.TryParse("0114 272 6444", "GB", out var phoneNumber));
+        Assert.NotNull(phoneNumber);
+    }
+
+    [Theory]
+    [InlineData(default(string))]
+    [InlineData("")]
+    [InlineData(" ")]
+    [InlineData("441142726444")]
+    public void TryParse_Value_CountryCode_Throws_If_Value_Invalid(string input)
+    {
+        Assert.False(PhoneNumber.TryParse(input, "GB", out PhoneNumber phoneNumber));
+        Assert.Null(phoneNumber);
+    }
+
+    [Theory]
+    [InlineData("0114 272 6444")]
+    [InlineData("0114-272-6444")]
+    [InlineData("0114.272.6444")]
+    [InlineData("(0114) 272 6444")]
+    [InlineData("+441142726444")]
+    [InlineData("tel:+44-114-2726444")]
+    public void TryParse_Value_CountryInfo(string input)
+    {
+        Assert.True(PhoneNumber.TryParse(input, CountryInfo.UnitedKingdom, out PhoneNumber phoneNumber));
         Assert.NotNull(phoneNumber);
     }
 
@@ -149,6 +192,17 @@ public class PhoneNumberTests
         Assert.Null(phoneNumber);
     }
 
+    [Theory]
+    [InlineData(default(string))]
+    [InlineData("")]
+    [InlineData(" ")]
+    [InlineData("441142726444")]
+    public void TryParse_Value_CountryInfo_Throws_If_Value_Invalid(string input)
+    {
+        Assert.False(PhoneNumber.TryParse(input, CountryInfo.UnitedKingdom, out PhoneNumber phoneNumber));
+        Assert.Null(phoneNumber);
+    }
+
     [Fact]
     public void TryParse_Value_PhoneNumbers_False_If_ParseOptions_Null()
     {
@@ -156,38 +210,21 @@ public class PhoneNumberTests
         Assert.Empty(phoneNumbers);
     }
 
+    [Theory]
+    [InlineData(default(string))]
+    [InlineData("")]
+    [InlineData(" ")]
+    [InlineData("441142726444")]
+    public void TryParse_Value_Throws_If_Value_Invalid(string input)
+    {
+        Assert.False(PhoneNumber.TryParse(input, out PhoneNumber phoneNumber));
+        Assert.Null(phoneNumber);
+    }
+
     [Fact]
     public void TryParse_Value_To_PhoneNumber_False_If_ParseOptions_Null()
     {
         Assert.False(PhoneNumber.TryParse("0123456789", default(ParseOptions), out PhoneNumber phoneNumber));
         Assert.Null(phoneNumber);
-    }
-
-    [Fact]
-    public void TryParse_Value_To_PhoneNumber_False_If_Value_Does_Not_Start_With_Plus()
-    {
-        Assert.False(PhoneNumber.TryParse("441142726444", out PhoneNumber phoneNumber));
-        Assert.Null(phoneNumber);
-    }
-
-    [Fact]
-    public void TryParse_Value_To_PhoneNumber_False_If_Value_Empty()
-    {
-        Assert.False(PhoneNumber.TryParse(" ", out PhoneNumber phoneNumber));
-        Assert.Null(phoneNumber);
-    }
-
-    [Fact]
-    public void TryParse_Value_To_PhoneNumber_False_If_Value_Null()
-    {
-        Assert.False(PhoneNumber.TryParse(null, out PhoneNumber phoneNumber));
-        Assert.Null(phoneNumber);
-    }
-
-    [Fact]
-    public void TryParse_Value_To_PhoneNumber_From_Rfc3966_Format()
-    {
-        Assert.True(PhoneNumber.TryParse("tel:+44-114-2726444", out PhoneNumber phoneNumber));
-        Assert.NotNull(phoneNumber);
     }
 }
