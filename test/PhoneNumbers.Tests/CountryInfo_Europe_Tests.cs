@@ -105,6 +105,26 @@ public class CountryInfo_Europe_Tests
     }
 
     [Fact]
+    public void CountryInfo_Cyprus()
+    {
+        Assert.Same(CountryInfo.Cyprus, CountryInfo.Cyprus);
+
+        var countryInfo = CountryInfo.Cyprus;
+
+        Assert.Equal("357", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
+        Assert.IsType<CYPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.True(countryInfo.IsEuropeanUnionMember);
+        Assert.Equal("CY", countryInfo.Iso3166Code);
+        Assert.Equal("Cyprus", countryInfo.Name);
+        Assert.Equal(new[] { 2 }, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 8 }, countryInfo.NsnLengths);
+        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Null(countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_CzechRepublic()
     {
         Assert.Same(CountryInfo.CzechRepublic, CountryInfo.CzechRepublic);

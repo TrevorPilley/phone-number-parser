@@ -84,6 +84,21 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Cyprus.
+    /// </summary>
+    public static CountryInfo Cyprus { get; } = new()
+    {
+        CallingCode = "357",
+        Continent = Europe,
+        FormatProvider = CYPhoneNumberFormatProvider.Instance,
+        IsEuropeanUnionMember = true,
+        Iso3166Code = "CY",
+        Name = "Cyprus",
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 2 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 8 }),
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Czech Republic.
     /// </summary>
     public static CountryInfo CzechRepublic { get; } = new()
