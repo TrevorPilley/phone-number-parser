@@ -477,6 +477,23 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Slovenia.
+    /// </summary>
+    public static CountryInfo Slovenia { get; } = new()
+    {
+        AllowLocalGeographicDialling = true,
+        CallingCode = "386",
+        Continent = Europe,
+        FormatProvider = SLPhoneNumberFormatProvider.Instance,
+        IsEuropeanUnionMember = true,
+        Iso3166Code = "SL",
+        Name = "Slovenia",
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2, 1 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 12 }),
+        TrunkPrefix = "0",
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Spain.
     /// </summary>
     public static CountryInfo Spain { get; } = new()

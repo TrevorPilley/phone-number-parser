@@ -263,6 +263,13 @@ public class PhoneNumber_ToString_Europe_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+38615836300", "E.123", "+386 1 583 63 00")]
+    [InlineData("+38615836300", "N", "(01) 583 63 00")]
+    [InlineData("+38615836300", "RFC3966", "tel:+386-1-583-63-00")]
+    public void Slovenia_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+34912582852", "E.123", "+34 91 258 28 52")] // 2-3-2-2 where the NDC is 2 digits (applicable for Madrid & Barcelona)
     [InlineData("+34902189900", "E.123", "+34 902 189 900")] // 3-3-3 where the NDC is 3 digits
     [InlineData("+34912582852", "N", "91 258 28 52")] // 2-3-2-2 where the NDC is 2 digits (applicable for Madrid & Barcelona)
