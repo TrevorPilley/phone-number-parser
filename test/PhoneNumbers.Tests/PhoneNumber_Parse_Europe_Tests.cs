@@ -251,6 +251,14 @@ public class PhoneNumber_Parse_Europe_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_Slovenia_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+38615836300");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Slovenia, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_Spain_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+34912582852");

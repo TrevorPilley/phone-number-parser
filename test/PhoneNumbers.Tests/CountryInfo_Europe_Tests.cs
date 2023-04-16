@@ -625,6 +625,26 @@ public class CountryInfo_Europe_Tests
     }
 
     [Fact]
+    public void CountryInfo_Slovenia()
+    {
+        Assert.Same(CountryInfo.Slovenia, CountryInfo.Slovenia);
+
+        var countryInfo = CountryInfo.Slovenia;
+
+        Assert.True(countryInfo.AllowLocalGeographicDialling);
+        Assert.Equal("386", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
+        Assert.IsType<SLPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.True(countryInfo.IsEuropeanUnionMember);
+        Assert.Equal("SL", countryInfo.Iso3166Code);
+        Assert.Equal("Slovenia", countryInfo.Name);
+        Assert.Equal(new[] { 4, 3, 2, 1 }, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 8, 12 }, countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Equal("0", countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_Spain()
     {
         Assert.Same(CountryInfo.Spain, CountryInfo.Spain);
@@ -639,7 +659,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("ES", countryInfo.Iso3166Code);
         Assert.Equal("Spain", countryInfo.Name);
         Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 9,13  }, countryInfo.NsnLengths);
+        Assert.Equal(new[] { 9, 13  }, countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
