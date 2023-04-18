@@ -11,6 +11,14 @@ public class PhoneNumber_Parse_Africa_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_Kenya_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+25420424200");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Kenya, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_Nigeria_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+23494617000");

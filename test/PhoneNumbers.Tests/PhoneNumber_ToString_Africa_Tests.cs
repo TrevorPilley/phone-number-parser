@@ -10,6 +10,16 @@ public class PhoneNumber_ToString_Africa_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+25420424200", "E.123", "+254 20 424200")]
+    [InlineData("+254703042000", "E.123", "+254 703 042000")]
+    [InlineData("+25420424200", "N", "020 424200")]
+    [InlineData("+254703042000", "N", "0703 042000")]
+    [InlineData("+25420424200", "RFC3966", "tel:+254-20-424200")]
+    [InlineData("+254703042000", "RFC3966", "tel:+254-703-042000")]
+    public void Kenya_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+23494617000", "E.123", "+234 9 461 7000")]
     [InlineData("+23494617000", "N", "(09) 461 7000")]
     [InlineData("+23494617000", "RFC3966", "tel:+234-9-461-7000")]
