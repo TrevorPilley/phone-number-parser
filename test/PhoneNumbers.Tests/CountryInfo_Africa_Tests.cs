@@ -25,6 +25,26 @@ public class CountryInfo_Africa_Tests
     }
 
     [Fact]
+    public void CountryInfo_Kenya()
+    {
+        Assert.Same(CountryInfo.Kenya, CountryInfo.Kenya);
+
+        var countryInfo = CountryInfo.Kenya;
+
+        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.Equal("254", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
+        Assert.IsType<SimplePhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.Equal("KE", countryInfo.Iso3166Code);
+        Assert.Equal("Kenya", countryInfo.Name);
+        Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 7, 8, 9, 12 }, countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Equal("0", countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_Nigeria()
     {
         Assert.Same(CountryInfo.Nigeria, CountryInfo.Nigeria);

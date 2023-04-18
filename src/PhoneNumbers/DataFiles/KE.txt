@@ -1,0 +1,28 @@
+G|20|Nairobi|000000-9999999|
+N|30||0000000000-9999999999|M
+G|40|Kwale|000000-9999999|
+G|41|Mombasa|0000000-9999999|
+G|42|Malindi, Lamu and Garsen|00000-9999999|
+G|43|Voi|0000000-9999999|
+G|44|Machakos, Makueni and Kitui|00000-9999999|
+G|45|Athi-River, Kajiado and Loitokitok|00000-9999999|
+G|46|Garissa, Wajir and Mandera|0000000-9999999|
+G|50|Naivasha, Gilgil and Narok of Nakuru region|0000000-9999999|
+G|51|Nakuru, Njoro, Molo areas of Nakuru|000000-9999999|
+G|52|Kericho and Bomet|00000-9999999|
+G|53|Eldoret, Turbo, Kapsabet, Iten and Kabarnet|00000-9999999|
+G|54|Kitale, Moisbridge, Kapenguria and Lodwar|00000-9999999|
+G|55|Bungoma and Busia|00000-9999999|
+G|56|Kakamega and Vihiga regions|00000-9999999|
+G|57|Kisumu, and Siaya regions|00000-9999999|
+G|58|Kisii, Kilgoris, Oyugis and Nyamira|0000000-9999999|
+G|59|Homabay and Migori|00000-9999999|
+G|60|Muranga and Kirinyaga|00000-9999999|
+G|61|Nyeri|00000-9999999|
+G|62|Nanyuki|0000000-9999999|
+G|64|Meru, Maua and Chuka|00000-9999999|
+G|66|Thika and Ruiru|000000-9999999|
+G|67|Kiambu and Kikuyu towns|00000-9999999|
+G|68|Embu|0000000-9999999|
+G|69|Marsabit and Moyale|00000-9999999|
+M|100-106,110-115,120-121,124,700-799||000000-999999|
