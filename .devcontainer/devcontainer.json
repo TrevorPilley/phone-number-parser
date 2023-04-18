@@ -14,7 +14,7 @@
     "vscode": {
       "settings": {},
       "extensions": [
-        "davidanson.cscode-markdownlint",
+        "davidanson.vscode-markdownlint",
         "editorconfig.editorconfig",
         "ms-dotnettools.csharp",
         //"projektanker.code-butler",
