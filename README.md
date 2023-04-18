@@ -244,10 +244,10 @@ Brazil         | BR            | 55           | 0            | Yes        | Yes 
 ### Notes
 
 - For the United Kingdom:
-    - The ISO code is 'GB' rather than 'UK'.
-    - Covers England, Scotland, Wales and Northern Ireland.
-    - The Crown Dependencies Guernsey, Isle of Man and Jersey also use the same numbering plan but are separate countries.
-    - To avoid a legitimate UK phone number from being rejected by the library, consider using `ParseOptions.Default.AllowUnitedKingdomNumberingPlanCountries()` if you are customising the countries used instead of `ParseOptions.Countries.Add(CountryInfo.UnitedKingdom)`.
+  - The ISO code is 'GB' rather than 'UK'.
+  - Covers England, Scotland, Wales and Northern Ireland.
+  - The Crown Dependencies Guernsey, Isle of Man and Jersey also use the same numbering plan but are separate countries.
+  - To avoid a legitimate UK phone number from being rejected by the library, consider using `ParseOptions.Default.AllowUnitedKingdomNumberingPlanCountries()` if you are customising the countries used instead of `ParseOptions.Countries.Add(CountryInfo.UnitedKingdom)`.
 - Geographically assigned numbers in France are currently only resolved within the top level geographic zones (01 Île-de-France, 02 Nord-Ouest, 03 Nord-Est, 04 Sud-Est and 05 Sud-Ouest).
 - Where possible, the geographic area name is in the language/locality of the country for the phone number (e.g. for an Italian phone number assigned to Florence, the geographic area will be set to `Firenze`.
 - Within the North American Numbering Plan (NANP), which covers all countries with the calling code +1:
