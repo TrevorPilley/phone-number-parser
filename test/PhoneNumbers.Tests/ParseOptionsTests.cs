@@ -4,7 +4,6 @@ namespace PhoneNumbers.Tests;
 
 public class ParseOptionsTests
 {
-
     [Fact]
     public void AllowAfricanCountries()
     {

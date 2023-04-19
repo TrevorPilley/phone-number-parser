@@ -2,7 +2,7 @@ using PhoneNumbers.Formatters;
 
 namespace PhoneNumbers.Tests;
 
-public class CountryInfo_Tests
+public class CountryInfoTests
 {
     [Fact]
     public void GetFormatter_E123_Returns_E123PhoneNumberFormatter() =>
