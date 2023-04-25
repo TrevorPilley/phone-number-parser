@@ -11,6 +11,7 @@ public class CountryInfo_Africa_Tests
 
         var countryInfo = CountryInfo.Egypt;
 
+        Assert.False(countryInfo.AllowLocalGeographicDialling);
         Assert.Equal("20", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -19,7 +20,6 @@ public class CountryInfo_Africa_Tests
         Assert.Equal("Egypt", countryInfo.Name);
         Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 8, 9, 10, 11 }, countryInfo.NsnLengths);
-        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -31,6 +31,7 @@ public class CountryInfo_Africa_Tests
 
         var countryInfo = CountryInfo.Nigeria;
 
+        Assert.True(countryInfo.AllowLocalGeographicDialling);
         Assert.Equal("234", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -39,7 +40,6 @@ public class CountryInfo_Africa_Tests
         Assert.Equal("Nigeria", countryInfo.Name);
         Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 8, 10 }, countryInfo.NsnLengths);
-        Assert.Equal(NumberingPlanType.Open, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -51,6 +51,7 @@ public class CountryInfo_Africa_Tests
 
         var countryInfo = CountryInfo.SouthAfrica;
 
+        Assert.False(countryInfo.AllowLocalGeographicDialling);
         Assert.Equal("27", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -59,7 +60,6 @@ public class CountryInfo_Africa_Tests
         Assert.Equal("South Africa", countryInfo.Name);
         Assert.Equal(new[] { 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 9, 13 }, countryInfo.NsnLengths);
-        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }

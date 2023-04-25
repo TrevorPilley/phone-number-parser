@@ -26,11 +26,11 @@ public sealed class GeographicPhoneNumber : PhoneNumber, IEquatable<GeographicPh
         PhoneNumberKind.GeographicPhoneNumber;
 
     /// <summary>
-    /// The country operates an open numbering plan, however due to number shortages within
+    /// The country allows local dialling (subscriber number only), however due to number shortages within
     /// the national destination code the full national significant number must always be dialled.
     /// </summary>
-    internal bool ClosedDiallingInOpenPlan =>
-        Hint == PhoneNumberHint.ClosedDialling && Country.NumberingPlanType == NumberingPlanType.Open;
+    internal bool NationalDiallingOnly =>
+        Hint == PhoneNumberHint.NationalDiallingOnly && Country.AllowLocalGeographicDialling;
 
     /// <inheritdoc/>
     public static bool operator !=(GeographicPhoneNumber? phoneNumber1, GeographicPhoneNumber? phoneNumber2) =>

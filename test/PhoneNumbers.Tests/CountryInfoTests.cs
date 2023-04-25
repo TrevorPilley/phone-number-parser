@@ -129,6 +129,7 @@ public class CountryInfoTests
     {
         var countryInfo = (CountryInfo)Activator.CreateInstance(typeof(CountryInfo), true);
 
+        Assert.False(countryInfo.AllowLocalGeographicDialling);
         Assert.Null(countryInfo.CallingCode);
         Assert.Null(countryInfo.Continent);
         Assert.False(countryInfo.HasNationalDestinationCodes);
@@ -137,7 +138,6 @@ public class CountryInfoTests
         Assert.Null(countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
         Assert.Empty(countryInfo.NsnLengths);
-        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }

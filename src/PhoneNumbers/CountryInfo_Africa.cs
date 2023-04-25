@@ -23,13 +23,13 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Nigeria { get; } = new()
     {
+        AllowLocalGeographicDialling = true,
         CallingCode = "234",
         Continent = Africa,
         Iso3166Code = "NG",
         Name = "Nigeria",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 10 }),
-        NumberingPlanType = NumberingPlanType.Open,
         TrunkPrefix = "0",
     };
 

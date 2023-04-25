@@ -10,6 +10,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Brazil { get; } = new()
     {
+        AllowLocalGeographicDialling = true,
         CallingCode = "55",
         Continent = SouthAmerica,
         FormatProvider = BRPhoneNumberFormatProvider.Instance,
@@ -17,7 +18,6 @@ public partial class CountryInfo
         Name = "Brazil",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 10, 11 }),
-        NumberingPlanType = NumberingPlanType.Open,
         TrunkPrefix = "0",
     };
 }

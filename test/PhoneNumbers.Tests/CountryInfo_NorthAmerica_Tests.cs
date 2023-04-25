@@ -11,6 +11,7 @@ public class CountryInfo_NorthAmerica_Tests
 
         var countryInfo = CountryInfo.Canada;
 
+        Assert.True(countryInfo.AllowLocalGeographicDialling);
         Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -19,7 +20,6 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal("Canada", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
-        Assert.Equal(NumberingPlanType.Open, countryInfo.NumberingPlanType);
         Assert.True(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -31,6 +31,7 @@ public class CountryInfo_NorthAmerica_Tests
 
         var countryInfo = CountryInfo.PuertoRico;
 
+        Assert.True(countryInfo.AllowLocalGeographicDialling);
         Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -39,7 +40,6 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal("Puerto Rico", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
-        Assert.Equal(NumberingPlanType.Open, countryInfo.NumberingPlanType);
         Assert.True(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -51,6 +51,7 @@ public class CountryInfo_NorthAmerica_Tests
 
         var countryInfo = CountryInfo.UnitedStates;
 
+        Assert.True(countryInfo.AllowLocalGeographicDialling);
         Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -59,7 +60,6 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal("United States", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
-        Assert.Equal(NumberingPlanType.Open, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -71,6 +71,7 @@ public class CountryInfo_NorthAmerica_Tests
 
         var countryInfo = CountryInfo.UnitedStatesVirginIslands;
 
+        Assert.True(countryInfo.AllowLocalGeographicDialling);
         Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -79,7 +80,6 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal("United States Virgin Islands", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
-        Assert.Equal(NumberingPlanType.Open, countryInfo.NumberingPlanType);
         Assert.True(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }

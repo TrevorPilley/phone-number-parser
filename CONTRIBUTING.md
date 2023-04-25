@@ -39,7 +39,7 @@ public static CountryInfo CountryName { get; } = new()
 
 2. If the country uses national destination codes (aka. area codes), also set the `NdcLengths` property as appropriate and declare in descending order (this is important as the default parser tries to match for the longest NDC first).
 3. If the country uses a trunk prefix, set the `TrunkPrefix` appropriately.
-4. The numbering plan is closed by default so if the country uses an open dialling plan (where within a geographic area local dialling can be done without including the trunk code or area code), set `NumberingPlanType = NumberingPlanType.Open`.
+4. The country allows local dialling (subscriber number only) within a geographic national destination code, set `AllowLocalGeographicDialling = true,`.
 5. By default, the `ComplexPhoneNumberFormatProvider` is used which has defined spacing rules for formatting the subscriber number (e.g. a 6 digit SN is formatted as XXX XXX and a 7 digit SN is formatted XXX XXXX). If the country convention is not to separate out the subscriber number but still separates the national destination code from the subscriber number, use the `SimplePhoneNumberFormatProvider` instead. If the country uses conventions the built in providers don't support, add a custom `{CountryCode}PhoneNumberFormatProvider` and override the base behaviour as appropriate and set as the `FormatProvider` property in the `CountryInfo` definition.
 6. Add a new `CountryInfo_CountryName` test in the `CountryInfo_{Continent}_Tests.cs` file asserting the property values (see an existing implementation).
 
@@ -80,9 +80,9 @@ Can be specified in the same way as national destination code ranges.
 
 Optional but can be one of:
 
-- `C` _a closed dialling number restriction within an open dialling plan, where Kind is G_
 - `F` _a Freephone number, where Kind is N_
 - `M` _a Machine-to-Machine (M2M) number, where Kind is N_
+- `N` _a national dialling only restriction where local dialling is usually allowed, where Kind is G_
 - `P` _a Pager, where Kind is M_
 - `R` _a Premium rate number, where Kind is N_
 - `S` _a Shared cost number, where Kind is N_

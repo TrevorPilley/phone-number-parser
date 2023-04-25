@@ -10,6 +10,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo AmericanSamoa { get; } = new()
     {
+        AllowLocalGeographicDialling = true,
         CallingCode = NanpCallingCode,
         Continent = Oceania,
         FormatProvider = NanpPhoneNumberFormatProvider.Instance,
@@ -17,7 +18,6 @@ public partial class CountryInfo
         Name = "American Samoa",
         NdcLengths = NanpNdcLengths,
         NsnLengths = NanpNsnLengths,
-        NumberingPlanType = NumberingPlanType.Open,
         SharesCallingCode = true,
     };
 
@@ -26,6 +26,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Australia { get; } = new()
     {
+        AllowLocalGeographicDialling = true,
         CallingCode = "61",
         Continent = Oceania,
         FormatProvider = AUPhoneNumberFormatProvider.Instance,
@@ -33,7 +34,6 @@ public partial class CountryInfo
         Name = "Australia",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 5, 6, 7, 8, 9, 10 }),
-        NumberingPlanType = NumberingPlanType.Open,
         TrunkPrefix = "0",
     };
 
@@ -42,6 +42,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Guam { get; } = new()
     {
+        AllowLocalGeographicDialling = true,
         CallingCode = NanpCallingCode,
         Continent = Oceania,
         FormatProvider = NanpPhoneNumberFormatProvider.Instance,
@@ -49,7 +50,6 @@ public partial class CountryInfo
         Name = "Guam",
         NdcLengths = NanpNdcLengths,
         NsnLengths = NanpNsnLengths,
-        NumberingPlanType = NumberingPlanType.Open,
         SharesCallingCode = true,
     };
 
