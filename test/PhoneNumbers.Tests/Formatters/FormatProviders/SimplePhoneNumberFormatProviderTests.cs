@@ -210,7 +210,7 @@ public class SimplePhoneNumberFormatProviderTests
         Assert.Equal(
             expectedMask,
             SimplePhoneNumberFormatProvider.Default.GetFormat(
-                TestHelper.CreateGeographicPhoneNumber(null, ndc, sn, NumberingPlanType.Open), false));
+                TestHelper.CreateGeographicPhoneNumber(null, ndc, sn, true), false));
 
     [Theory]
     [InlineData("1", "1234", "# ####")]
@@ -252,7 +252,7 @@ public class SimplePhoneNumberFormatProviderTests
         Assert.Equal(
             expectedMask,
             SimplePhoneNumberFormatProvider.Default.GetFormat(
-                TestHelper.CreateNonGeographicPhoneNumber(null, ndc, sn, NumberingPlanType.Open), false));
+                TestHelper.CreateNonGeographicPhoneNumber(null, ndc, sn, true), false));
 
     [Theory]
     [InlineData("0", "1", "1234", "(0#) ####")]
@@ -294,7 +294,7 @@ public class SimplePhoneNumberFormatProviderTests
         Assert.Equal(
             expectedMask,
             SimplePhoneNumberFormatProvider.Default.GetFormat(
-                TestHelper.CreateGeographicPhoneNumber(trunkPrefix, ndc, sn, NumberingPlanType.Open), false));
+                TestHelper.CreateGeographicPhoneNumber(trunkPrefix, ndc, sn, true), false));
 
     [Theory]
     [InlineData("0", "1", "1234", "0# ####")]
@@ -336,5 +336,5 @@ public class SimplePhoneNumberFormatProviderTests
         Assert.Equal(
             expectedMask,
             SimplePhoneNumberFormatProvider.Default.GetFormat(
-                TestHelper.CreateNonGeographicPhoneNumber(trunkPrefix, ndc, sn, NumberingPlanType.Open), false));
+                TestHelper.CreateNonGeographicPhoneNumber(trunkPrefix, ndc, sn, true), false));
 }

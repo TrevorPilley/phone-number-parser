@@ -56,6 +56,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Bulgaria { get; } = new()
     {
+        AllowLocalGeographicDialling = true,
         CallingCode = "359",
         Continent = Europe,
         IsEuropeanUnionMember = true,
@@ -63,7 +64,6 @@ public partial class CountryInfo
         Name = "Bulgaria",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9, 12 }),
-        NumberingPlanType = NumberingPlanType.Open,
         TrunkPrefix = "0",
     };
 
@@ -72,6 +72,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Croatia { get; } = new()
     {
+        AllowLocalGeographicDialling = true,
         CallingCode = "385",
         Continent = Europe,
         IsEuropeanUnionMember = true,
@@ -79,7 +80,6 @@ public partial class CountryInfo
         Name = "Croatia",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2, 1 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8, 9, 10 }),
-        NumberingPlanType = NumberingPlanType.Open,
         TrunkPrefix = "0",
     };
 
@@ -124,7 +124,6 @@ public partial class CountryInfo
         Iso3166Code = "DK",
         Name = "Denmark",
         NsnLengths = new ReadOnlyCollection<int>(new[] { 8 }),
-        NumberingPlanType = NumberingPlanType.Open,
     };
 
     /// <summary>
@@ -147,6 +146,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Finland { get; } = new()
     {
+        AllowLocalGeographicDialling = true,
         CallingCode = "358",
         Continent = Europe,
         IsEuropeanUnionMember = true,
@@ -154,7 +154,6 @@ public partial class CountryInfo
         Name = "Finland",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2, 1 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 5, 6, 7, 8, 9, 10, 11, 12 }),
-        NumberingPlanType = NumberingPlanType.Open,
         TrunkPrefix = "0",
     };
 
@@ -223,6 +222,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Guernsey { get; } = new()
     {
+        AllowLocalGeographicDialling = true,
         CallingCode = "44",
         Continent = Europe,
         FormatProvider = GBPhoneNumberFormatProvider.Instance,
@@ -230,7 +230,6 @@ public partial class CountryInfo
         Name = "Guernsey",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
-        NumberingPlanType = NumberingPlanType.Open,
         SharesCallingCode = true,
         TrunkPrefix = "0",
     };
@@ -240,6 +239,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Hungary { get; } = new()
     {
+        AllowLocalGeographicDialling = true,
         CallingCode = "36",
         Continent = Europe,
         IsEuropeanUnionMember = true,
@@ -247,7 +247,6 @@ public partial class CountryInfo
         Name = "Hungary",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 2, 1 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9, 12 }),
-        NumberingPlanType = NumberingPlanType.Open,
         TrunkPrefix = "06",
     };
 
@@ -257,6 +256,7 @@ public partial class CountryInfo
     /// <remarks>Covers the Republic of Ireland, Northern Ireland is part of the United Kingdom.</remarks>
     public static CountryInfo Ireland { get; } = new()
     {
+        AllowLocalGeographicDialling = true,
         CallingCode = "353",
         Continent = Europe,
         IsEuropeanUnionMember = true,
@@ -264,7 +264,6 @@ public partial class CountryInfo
         Name = "Ireland",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8, 9, 12 }),
-        NumberingPlanType = NumberingPlanType.Open,
         TrunkPrefix = "0",
     };
 
@@ -273,6 +272,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo IsleOfMan { get; } = new()
     {
+        AllowLocalGeographicDialling = true,
         CallingCode = "44",
         Continent = Europe,
         FormatProvider = GBPhoneNumberFormatProvider.Instance,
@@ -280,7 +280,6 @@ public partial class CountryInfo
         Name = "Isle of Man",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
-        NumberingPlanType = NumberingPlanType.Open,
         SharesCallingCode = true,
         TrunkPrefix = "0",
     };
@@ -306,6 +305,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Jersey { get; } = new()
     {
+        AllowLocalGeographicDialling = true,
         CallingCode = "44",
         Continent = Europe,
         FormatProvider = GBPhoneNumberFormatProvider.Instance,
@@ -313,7 +313,6 @@ public partial class CountryInfo
         Name = "Jersey",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 4 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
-        NumberingPlanType = NumberingPlanType.Open,
         SharesCallingCode = true,
         TrunkPrefix = "0",
     };
@@ -323,13 +322,13 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Kosovo { get; } = new()
     {
+        AllowLocalGeographicDialling = true,
         CallingCode = "383",
         Continent = Europe,
         Iso3166Code = "XK",
         Name = "Kosovo",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9 }),
-        NumberingPlanType = NumberingPlanType.Open,
         TrunkPrefix = "0",
     };
 
@@ -452,13 +451,13 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Serbia { get; } = new()
     {
+        AllowLocalGeographicDialling = true,
         CallingCode = "381",
         Continent = Europe,
         Iso3166Code = "RS",
         Name = "Serbia",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9, 10, 11, 12 }),
-        NumberingPlanType = NumberingPlanType.Open,
         TrunkPrefix = "0",
     };
 
@@ -497,6 +496,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Sweden { get; } = new()
     {
+        AllowLocalGeographicDialling = true,
         CallingCode = "46",
         Continent = Europe,
         FormatProvider = SEPhoneNumberFormatProvider.Instance,
@@ -505,7 +505,6 @@ public partial class CountryInfo
         Name = "Sweden",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8, 9, 10, 13 }),
-        NumberingPlanType = NumberingPlanType.Open,
         TrunkPrefix = "0",
     };
 
@@ -529,6 +528,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Ukraine { get; } = new()
     {
+        AllowLocalGeographicDialling = true,
         CallingCode = "380",
         Continent = Europe,
         FormatProvider = UAPhoneNumberFormatProvider.Instance,
@@ -536,7 +536,6 @@ public partial class CountryInfo
         Name = "Ukraine",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 9, 10 }),
-        NumberingPlanType = NumberingPlanType.Open,
         TrunkPrefix = "0",
     };
 
@@ -546,6 +545,7 @@ public partial class CountryInfo
     /// <remarks>Covers England, Scotland, Wales and Northern Ireland.</remarks>
     public static CountryInfo UnitedKingdom { get; } = new()
     {
+        AllowLocalGeographicDialling = true,
         CallingCode = "44",
         Continent = Europe,
         FormatProvider = GBPhoneNumberFormatProvider.Instance,
@@ -553,7 +553,6 @@ public partial class CountryInfo
         Name = "United Kingdom",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 9, 10 }),
-        NumberingPlanType = NumberingPlanType.Open,
         TrunkPrefix = "0",
     };
 }

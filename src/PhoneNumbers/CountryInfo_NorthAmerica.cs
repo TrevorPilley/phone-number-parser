@@ -14,6 +14,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Canada { get; } = new()
     {
+        AllowLocalGeographicDialling = true,
         CallingCode = NanpCallingCode,
         Continent = NorthAmerica,
         FormatProvider = NanpPhoneNumberFormatProvider.Instance,
@@ -21,7 +22,6 @@ public partial class CountryInfo
         Name = "Canada",
         NdcLengths = NanpNdcLengths,
         NsnLengths = NanpNsnLengths,
-        NumberingPlanType = NumberingPlanType.Open,
         SharesCallingCode = true,
     };
 
@@ -30,6 +30,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo PuertoRico { get; } = new()
     {
+        AllowLocalGeographicDialling = true,
         CallingCode = NanpCallingCode,
         Continent = NorthAmerica,
         FormatProvider = NanpPhoneNumberFormatProvider.Instance,
@@ -37,7 +38,6 @@ public partial class CountryInfo
         Name = "Puerto Rico",
         NdcLengths = NanpNdcLengths,
         NsnLengths = NanpNsnLengths,
-        NumberingPlanType = NumberingPlanType.Open,
         SharesCallingCode = true,
     };
 
@@ -46,6 +46,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo UnitedStates { get; } = new()
     {
+        AllowLocalGeographicDialling = true,
         CallingCode = NanpCallingCode,
         Continent = NorthAmerica,
         FormatProvider = NanpPhoneNumberFormatProvider.Instance,
@@ -53,7 +54,6 @@ public partial class CountryInfo
         Name = "United States",
         NdcLengths = NanpNdcLengths,
         NsnLengths = NanpNsnLengths,
-        NumberingPlanType = NumberingPlanType.Open,
     };
 
     /// <summary>
@@ -61,6 +61,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo UnitedStatesVirginIslands { get; } = new()
     {
+        AllowLocalGeographicDialling = true,
         CallingCode = NanpCallingCode,
         Continent = NorthAmerica,
         FormatProvider = NanpPhoneNumberFormatProvider.Instance,
@@ -68,7 +69,6 @@ public partial class CountryInfo
         Name = "United States Virgin Islands",
         NdcLengths = NanpNdcLengths,
         NsnLengths = NanpNsnLengths,
-        NumberingPlanType = NumberingPlanType.Open,
         SharesCallingCode = true,
     };
 }

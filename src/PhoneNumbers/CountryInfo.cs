@@ -73,11 +73,6 @@ public sealed partial class CountryInfo
     public required string Name { get; init; } = null!;
 
     /// <summary>
-    /// Gets the type of numbering plan used.
-    /// </summary>
-    public NumberingPlanType NumberingPlanType { get; init; } = NumberingPlanType.Closed;
-
-    /// <summary>
     /// Gets a value indicating whether the calling code is shared with another country.
     /// </summary>
     /// <remarks>For example Guernsey, Jersey and the Isle of Man share the United Kingdom +44 calling code.</remarks>
@@ -87,6 +82,11 @@ public sealed partial class CountryInfo
     /// Gets the trunk prefix used by the country, if applicable.
     /// </summary>
     public string? TrunkPrefix { get; init; }
+
+    /// <summary>
+    /// Gets a value indicating whether local dialling (subscriber number only) is allowed within geographic national destination codes.
+    /// </summary>
+    internal bool AllowLocalGeographicDialling { get; init; }
 
     /// <summary>
     /// Gets the <see cref="PhoneNumberFormatProvider"/> for the country.

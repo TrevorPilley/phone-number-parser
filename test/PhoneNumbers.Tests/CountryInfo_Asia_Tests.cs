@@ -11,6 +11,7 @@ public class CountryInfo_Asia_Tests
 
         var countryInfo = CountryInfo.HongKong;
 
+        Assert.False(countryInfo.AllowLocalGeographicDialling);
         Assert.Equal("852", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -19,7 +20,6 @@ public class CountryInfo_Asia_Tests
         Assert.Equal("Hong Kong", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
         Assert.Equal(new[] { 8, 9, 12 }, countryInfo.NsnLengths);
-        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -31,6 +31,7 @@ public class CountryInfo_Asia_Tests
 
         var countryInfo = CountryInfo.Macau;
 
+        Assert.False(countryInfo.AllowLocalGeographicDialling);
         Assert.Equal("853", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -39,7 +40,6 @@ public class CountryInfo_Asia_Tests
         Assert.Equal("Macau", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
         Assert.Equal(new[] { 8 }, countryInfo.NsnLengths);
-        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -51,6 +51,7 @@ public class CountryInfo_Asia_Tests
 
         var countryInfo = CountryInfo.Singapore;
 
+        Assert.False(countryInfo.AllowLocalGeographicDialling);
         Assert.Equal("65", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -59,7 +60,6 @@ public class CountryInfo_Asia_Tests
         Assert.Equal("Singapore", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
         Assert.Equal(new[] { 8, 10, 11 }, countryInfo.NsnLengths);
-        Assert.Equal(NumberingPlanType.Closed, countryInfo.NumberingPlanType);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }

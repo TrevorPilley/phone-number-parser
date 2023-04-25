@@ -12,16 +12,16 @@ internal static class TestHelper
         string trunkPrefix = default,
         int[] ndcLengths = default,
         int[] nsnLengths = default,
-        NumberingPlanType numberingPlanType = NumberingPlanType.Closed) =>
+        bool allowLocalGeographicDialling = false) =>
         new()
         {
+            AllowLocalGeographicDialling = allowLocalGeographicDialling,
             CallingCode = "422", // 422 isn't a used calling code.
             Continent = "Pangea",
             Iso3166Code = "ZZ", // ZZ isn't a used ISO 3166 code.
             Name = "Zulu",
             NdcLengths = new ReadOnlyCollection<int>(ndcLengths ?? Array.Empty<int>()),
             NsnLengths = new ReadOnlyCollection<int>(nsnLengths ?? Array.Empty<int>()),
-            NumberingPlanType = numberingPlanType,
             TrunkPrefix = trunkPrefix,
         };
 
@@ -29,11 +29,11 @@ internal static class TestHelper
         string trunkPrefix,
         string ndc,
         string sn,
-        NumberingPlanType numberingPlanType = NumberingPlanType.Closed,
+        bool allowLocalGeographicDialling = false,
         PhoneNumberHint phoneNumberHint = PhoneNumberHint.None) =>
         new GeographicPhoneNumber(phoneNumberHint)
         {
-            Country = CreateCountryInfo(trunkPrefix: trunkPrefix, numberingPlanType: numberingPlanType),
+            Country = CreateCountryInfo(trunkPrefix: trunkPrefix, allowLocalGeographicDialling: allowLocalGeographicDialling),
             GeographicArea = "AreaName",
             NationalDestinationCode = ndc,
             NationalSignificantNumber = $"{ndc}{sn}",
@@ -44,11 +44,11 @@ internal static class TestHelper
         string trunkPrefix,
         string ndc,
         string sn,
-        NumberingPlanType numberingPlanType = NumberingPlanType.Closed,
+        bool allowLocalGeographicDialling = false,
         PhoneNumberHint phoneNumberHint = PhoneNumberHint.None) =>
         new MobilePhoneNumber(phoneNumberHint)
         {
-            Country = CreateCountryInfo(trunkPrefix: trunkPrefix, numberingPlanType: numberingPlanType),
+            Country = CreateCountryInfo(trunkPrefix: trunkPrefix, allowLocalGeographicDialling: allowLocalGeographicDialling),
             NationalDestinationCode = ndc,
             NationalSignificantNumber = $"{ndc}{sn}",
             SubscriberNumber = sn,
@@ -58,11 +58,11 @@ internal static class TestHelper
         string trunkPrefix,
         string ndc,
         string sn,
-        NumberingPlanType numberingPlanType = NumberingPlanType.Closed,
+        bool allowLocalGeographicDialling = false,
         PhoneNumberHint phoneNumberHint = PhoneNumberHint.None) =>
         new NonGeographicPhoneNumber(phoneNumberHint)
         {
-            Country = CreateCountryInfo(trunkPrefix: trunkPrefix, numberingPlanType: numberingPlanType),
+            Country = CreateCountryInfo(trunkPrefix: trunkPrefix, allowLocalGeographicDialling: allowLocalGeographicDialling),
             NationalDestinationCode = ndc,
             NationalSignificantNumber = $"{ndc}{sn}",
             SubscriberNumber = sn,
