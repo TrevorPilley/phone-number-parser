@@ -39,9 +39,10 @@ public static CountryInfo CountryName { get; } = new()
 
 2. If the country uses national destination codes (aka. area codes), also set the `NdcLengths` property as appropriate and declare in descending order (this is important as the default parser tries to match for the longest NDC first).
 3. If the country uses a trunk prefix, set the `TrunkPrefix` appropriately.
-4. The country allows local dialling (subscriber number only) within a geographic national destination code, set `AllowLocalGeographicDialling = true,`.
+4. If the country allows local dialling (subscriber number only) within a geographic national destination code, set `AllowLocalGeographicDialling = true,`.
 5. By default, the `ComplexPhoneNumberFormatProvider` is used which has defined spacing rules for formatting the subscriber number (e.g. a 6 digit SN is formatted as XXX XXX and a 7 digit SN is formatted XXX XXXX). If the country convention is not to separate out the subscriber number but still separates the national destination code from the subscriber number, use the `SimplePhoneNumberFormatProvider` instead. If the country uses conventions the built in providers don't support, add a custom `{CountryCode}PhoneNumberFormatProvider` and override the base behaviour as appropriate and set as the `FormatProvider` property in the `CountryInfo` definition.
 6. Add a new `CountryInfo_CountryName` test in the `CountryInfo_{Continent}_Tests.cs` file asserting the property values (see an existing implementation).
+7. Add a new set of tests in the `CountryInfo_{Continent}_ToString_Tests.cs` to cover the various number kinds and NDC/SN length combinations.
 
 ### Add the data file
 
@@ -82,7 +83,7 @@ Optional but can be one of:
 
 - `F` _a Freephone number, where Kind is N_
 - `M` _a Machine-to-Machine (M2M) number, where Kind is N_
-- `N` _a national dialling only restriction where local dialling is usually allowed, where Kind is G_
+- `N` _a National dialling only restriction where local dialling is usually allowed (AllowLocalGeographicDialling is set to true for the country), where Kind is G_
 - `P` _a Pager, where Kind is M_
 - `R` _a Premium rate number, where Kind is N_
 - `S` _a Shared cost number, where Kind is N_
@@ -99,5 +100,5 @@ A single line comment can be added in a data file by starting the line with a `#
 ### Add a parser
 
 1. If the `DefaultPhoneNumberParser` can parse the file, add tests for the country using the `DefaultPhoneNumberParser` as appropriate - typically the min and max permitted subscriber number(s) are tested within each national destination code/number kind.
-2. If country requires more complex logic to determine the national destination code, or the performance of the `DefaultPhoneNumberParser` is not acceptable then add a custom parser `{Iso3166Code}PhoneNumberParser` (see the GB one as an example) and add test cases based upon the data file.
+2. If country requires more complex logic to determine the national destination code, or the performance of the `DefaultPhoneNumberParser` is not acceptable then add a custom parser named `{Iso3166Code}PhoneNumberParser` (see the GB one as an example) and add test cases based upon the data file.
 3. Add a unit test for `Parse` in `PhoneNumber_Parse_{Continent}_Tests.cs` to check the number is parsed correctly and the country code is assigned.
