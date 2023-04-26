@@ -15,6 +15,7 @@ The library **does not**:
 - Provide certainty that a phone number is assigned and in use
 - Include the original carrier for mobile phone numbers due to number portability in most countries
 - Support extension numbers
+- Support alphabetic mnemonic system/alphabetic phone-words (e.g. 123-PHONEME)
 
 The library also uses [nullable reference type](https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references) annotations.
 
@@ -185,7 +186,7 @@ Belarus        | BY            | 375          | 8            | Yes        | Yes 
 Belgium        | BE            | 32           | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
 Bulgaria       | BG            | 359          | 0            | Yes        | Yes    |                    | Yes                  | Yes            | Yes                            | Yes                               |                                  | Yes
 Croatia        | HR            | 385          | 0            | Yes        | Yes    |                    | Yes                  | Yes            | Yes                            | Yes                               |                                  | Yes
-Cyprus         | CY            | +387         |              | Yes        | Yes    |                    | Yes                  | Yes            | Yes                            | Yes                               | Yes                              | Yes
+Cyprus         | CY            | 387          |              | Yes        | Yes    |                    | Yes                  | Yes            | Yes                            | Yes                               | Yes                              | Yes
 Czech Republic | CZ            | 420          |              | Yes        | Yes    |                    | Yes                  | Yes            | Yes                            | Yes                               | Yes                              |
 Denmark        | DK            | 45           |              |            | Yes    |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
 Estonia        | EE            | 372          |              |            | Yes    |                    | Yes                  | Yes            | Yes                            | Yes                               |                                  | Yes
@@ -256,4 +257,3 @@ Brazil         | BR            | 55           | 0            | Yes        | Yes 
   - Mobile numbers are geographically assigned and cannot be determined separately from landlines.
   - Freephone numbers (with a few exceptions) are issued from a shared pool. This could mean a Canadian freephone number look up shows as belonging to a different country if parsed from the E.164 format (parsing from the national number format and country code will work as expected).
   - Virtual (aka personal numbers) are issued from a shared pool and always show as belonging to the United States.
-  - Phone numbers using the alphabetic mnemonic system/alphabetic phone-words (e.g. 123-PHONEME) are not supported.
