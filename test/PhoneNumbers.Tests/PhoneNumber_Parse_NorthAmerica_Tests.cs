@@ -3,6 +3,14 @@ namespace PhoneNumbers.Tests;
 public class PhoneNumber_Parse_NorthAmerica_Tests
 {
     [Fact]
+    public void Parse_Value_For_Anguilla_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+12644972442");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Anguilla, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_AntiguaAndBarbuda_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+12684804405");

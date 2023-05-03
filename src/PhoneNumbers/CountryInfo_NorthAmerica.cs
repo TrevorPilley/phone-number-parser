@@ -10,6 +10,22 @@ public partial class CountryInfo
     private static readonly ReadOnlyCollection<int> s_nanpNsnLengths = new ReadOnlyCollection<int>(new[] { 10 });
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Anguilla.
+    /// </summary>
+    public static CountryInfo Anguilla { get; } = new()
+    {
+        AllowsLocalGeographicDialling = true,
+        CallingCode = NanpCallingCode,
+        Continent = NorthAmerica,
+        FormatProvider = NanpPhoneNumberFormatProvider.Instance,
+        Iso3166Code = "AI",
+        Name = "Anguilla",
+        NdcLengths = s_nanpNdcLengths,
+        NsnLengths = s_nanpNsnLengths,
+        SharesCallingCode = true,
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Antigua and Barbuda.
     /// </summary>
     public static CountryInfo AntiguaAndBarbuda { get; } = new()
