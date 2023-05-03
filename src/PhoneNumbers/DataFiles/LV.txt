@@ -1,0 +1,38 @@
+# References:
+# - https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000760002PDFE.pdf
+# - https://likumi.lv/ta/en/en/id/275393
+# - https://en.wikipedia.org/wiki/Telephone_numbers_in_Latvia
+M|||20000000-29999999|
+G||Jelgava District|63000000-63099999|
+G||Tukums District|63100000-63199999|
+G||Talsi District|63200000-63299999|
+G||Kuldiga District|63300000-63399999|
+G||Liepāja District|63400000-63499999|
+G||Ventspils District|63600000-63699999|
+G||Dobele District|63700000-63799999|
+G||Saldus District|63800000-63899999|
+G||Bauska District|63900000-63999999|
+G||Limbaži District|64000000-64099999|
+G||Cēsis District|64100000-64199999|
+G||Valmiera District|64200000-64299999|
+G||Alūksne District|64300000-64399999|
+G||Gulbene District|64400000-64499999|
+G||Balvi District|64500000-64599999|
+G||Rēzekne District|64600000-64699999|
+G||Valka District|64700000-64799999|
+G||Madona District|64800000-64899999|
+G||Aizkraukle District|64900000-64999999|
+G||Ogre District|65000000-65099999|
+G||Aizkraukle District|65100000-65199999|
+G||Jēkabpils District|65200000-65299999|
+G||Preiļi District|65300000-65399999|
+G||Daugavpils District|65400000-65499999|
+G||Krāslava District|65600000-65699999|
+G||Ludza District|65700000-65799999|
+G||Daugavpils District|65800000-65899999|
+G||Riga District|66000000-67999999,69000000-69999999|
+N|||68500000-68599999|
+N|||78000000-78999999|
+N|||80000000-80999999|F
+N|||81000000-81999999|S
+N|||90000000-90999999|R
