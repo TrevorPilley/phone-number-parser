@@ -3,6 +3,13 @@ namespace PhoneNumbers.Tests;
 public class PhoneNumber_ToString_NorthAmerica_Tests
 {
     [Theory]
+    [InlineData("+12644972442", "E.123", "+1 264-497-2442")]
+    [InlineData("+12644972442", "N", "(264) 497-2442")]
+    [InlineData("+12644972442", "RFC3966", "tel:+1-264-497-2442")]
+    public void Anguilla_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+12684804405", "E.123", "+1 268-480-4405")]
     [InlineData("+12684804405", "N", "(268) 480-4405")]
     [InlineData("+12684804405", "RFC3966", "tel:+1-268-480-4405")]
