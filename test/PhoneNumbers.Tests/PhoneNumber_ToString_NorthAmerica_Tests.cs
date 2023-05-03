@@ -3,6 +3,13 @@ namespace PhoneNumbers.Tests;
 public class PhoneNumber_ToString_NorthAmerica_Tests
 {
     [Theory]
+    [InlineData("+12684804405", "E.123", "+1 268-480-4405")]
+    [InlineData("+12684804405", "N", "(268) 480-4405")]
+    [InlineData("+12684804405", "RFC3966", "tel:+1-268-480-4405")]
+    public void AntiguaAndBarbuda_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+16137020016", "E.123", "+1 613-702-0016")]
     [InlineData("+16137020016", "N", "(613) 702-0016")]
     [InlineData("+16137020016", "RFC3966", "tel:+1-613-702-0016")]
