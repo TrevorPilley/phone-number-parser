@@ -221,21 +221,21 @@ United Kingdom | GB            | 44           | 0            | Yes        | Yes 
 
 ### North America
 
-Country                       | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
----                           | ---           | ---          | ---          | :-:        | :-:    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
-Canada                        | CA            | 1 _(NANP)_   |              | Yes        |        |                    |                      | Yes            | Yes *                          | Yes                               |                                  |
-Puerto Rico                   | PR            | 1 _(NANP)_   |              | Yes        |        |                    |                      |                |                                |                                   |                                  |
-United States                 | US            | 1 _(NANP)_   |              | Yes        |        |                    | Yes *                | Yes            | Yes *                          | Yes                               |                                  |
-United States Virgin Islands  | VI            | 1 _(NANP)_   |              | Yes        |        |                    |                      |                |                                |                                   |                                  |
+Country                       | ISO 3166 Code | Calling Code           | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
+---                           | ---           | ---                    | ---          | :-:        | :-:    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
+Canada                        | CA            | 1 (NANP)_              |              | Yes        |        |                    |                      | Yes            | Yes *                          | Yes                               |                                  |
+Puerto Rico                   | PR            | 1 787 / 1 939 _(NANP)_ |              | Yes        |        |                    |                      |                |                                |                                   |                                  |
+United States                 | US            | 1 _(NANP)_             |              | Yes        |        |                    | Yes *                | Yes            | Yes *                          | Yes                               |                                  |
+United States Virgin Islands  | VI            | 1 340 _(NANP)_         |              | Yes        |        |                    |                      |                |                                |                                   |                                  |
 
 ### Oceania
 
-Country          | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
----              | ---           | ---          | ---          | :-:        | :-:    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
-American Samoa   | AS            | 1 _(NANP)_   |              | Yes        | Yes    |                    |                      | Yes            |                                |                                   |                                  |
-Australia        | AU            | 61           | 0            | Yes        | Yes    | Yes                | Yes                  | Yes            | Yes                            | Yes                               |                                  |
-Guam             | GU            | 1 _(NANP)_   |              | Yes        |        |                    |                      |                |                                |                                   |                                  |
-Papua New Guinea | PG            | 675          |              | Yes        | Yes    | Yes                |                      | Yes            | Yes                            |                                   |                                  |
+Country          | ISO 3166 Code | Calling Code   | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
+---              | ---           | ---            | ---          | :-:        | :-:    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
+American Samoa   | AS            | 1 684 _(NANP)_ |              | Yes        | Yes    |                    |                      | Yes            |                                |                                   |                                  |
+Australia        | AU            | 61             | 0            | Yes        | Yes    | Yes                | Yes                  | Yes            | Yes                            | Yes                               |                                  |
+Guam             | GU            | 1 671 _(NANP)_ |              | Yes        |        |                    |                      |                |                                |                                   |                                  |
+Papua New Guinea | PG            | 675            |              | Yes        | Yes    | Yes                |                      | Yes            | Yes                            |                                   |                                  |
 
 ### South America
 
@@ -252,7 +252,7 @@ Brazil         | BR            | 55           | 0            | Yes        | Yes 
   - To avoid a legitimate UK phone number from being rejected by the library, consider using `ParseOptions.Default.AllowUnitedKingdomNumberingPlanCountries()` if you are customising the countries used instead of `ParseOptions.Countries.Add(CountryInfo.UnitedKingdom)`.
 - Geographically assigned numbers in France are currently only resolved within the top level geographic zones (01 Île-de-France, 02 Nord-Ouest, 03 Nord-Est, 04 Sud-Est and 05 Sud-Ouest).
 - Where possible, the geographic area name is in the language/locality of the country for the phone number (e.g. for an Italian phone number assigned to Florence, the geographic area will be set to `Firenze`.
-- Within the North American Numbering Plan (NANP), which covers all countries with the calling code +1:
+- Within the North American Numbering Plan (NANP), which covers all countries with the calling code `1`:
   - Geographically assigned numbers are currently only resolved within the country or state/region level, not at city level.
   - Mobile numbers are geographically assigned and cannot be determined separately from landlines.
   - Freephone numbers (with a few exceptions) are issued from a shared pool. This could mean a Canadian freephone number look up shows as belonging to a different country if parsed from the E.164 format (parsing from the national number format and country code will work as expected).
