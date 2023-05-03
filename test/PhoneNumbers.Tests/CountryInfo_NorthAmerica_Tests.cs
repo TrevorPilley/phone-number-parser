@@ -5,6 +5,26 @@ namespace PhoneNumbers.Tests;
 public class CountryInfo_NorthAmerica_Tests
 {
     [Fact]
+    public void CountryInfo_AntiguaAndBarbuda()
+    {
+        Assert.Same(CountryInfo.AntiguaAndBarbuda, CountryInfo.AntiguaAndBarbuda);
+
+        var countryInfo = CountryInfo.AntiguaAndBarbuda;
+
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
+        Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.Equal("AG", countryInfo.Iso3166Code);
+        Assert.Equal("Antigua and Barbuda", countryInfo.Name);
+        Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
+        Assert.True(countryInfo.SharesCallingCode);
+        Assert.Null(countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_Canada()
     {
         Assert.Same(CountryInfo.Canada, CountryInfo.Canada);
