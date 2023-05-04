@@ -69,6 +69,7 @@ The resulting `PhoneNumber` has the following properties:
 phoneNumber.Country.CallingCode;                // 44
 phoneNumber.Country.Continent;                  // Europe
 phoneNumber.Country.HasNationalDestinationCodes // true
+phoneNumber.Country.IsEuropeanUnionMember       // true
 phoneNumber.Country.Iso3166Code;                // GB
 phoneNumber.Country.Name;                       // United Kingdom
 phoneNumber.Country.SharesCallingCode           // true
