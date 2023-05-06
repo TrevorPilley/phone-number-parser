@@ -21,7 +21,7 @@ public sealed class ParseOptions
     /// <summary>
     /// Gets the <see cref="PhoneNumberParserFactory"/>.
     /// </summary>
-    internal PhoneNumberParserFactory Factory { get; } = new();
+    internal PhoneNumberParserFactory ParserFactory { get; } = new();
 
     /// <summary>
     /// Gets the supported <see cref="CountryInfo"/> with the specified ISO 3166 Alpha-2 code.
