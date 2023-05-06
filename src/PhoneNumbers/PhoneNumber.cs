@@ -82,7 +82,7 @@ public abstract class PhoneNumber
 
         foreach (var countryInfo in options.GetCountryInfos(value))
         {
-            var result = options.Factory.GetParser(countryInfo).Parse(value);
+            var result = options.ParserFactory.GetParser(countryInfo).Parse(value);
 
             if (result.PhoneNumber is not null)
             {
@@ -140,7 +140,7 @@ public abstract class PhoneNumber
             throw new ParseException($"The country {countryInfo.Name} is not enabled in ParseOptions.");
         }
 
-        var result = options.Factory.GetParser(countryInfo).Parse(value);
+        var result = options.ParserFactory.GetParser(countryInfo).Parse(value);
         result.ThrowIfFailure();
 
         return result.PhoneNumber!;
@@ -193,7 +193,7 @@ public abstract class PhoneNumber
         if (options is not null)
         {
             phoneNumbers = options.Countries
-                .Select(x => options.Factory.GetParser(x).Parse(value))
+                .Select(x => options.ParserFactory.GetParser(x).Parse(value))
                 .Where(x => x.PhoneNumber is not null)
                 .Select(x => x.PhoneNumber)
                 .Cast<PhoneNumber>();
@@ -227,7 +227,7 @@ public abstract class PhoneNumber
         {
             foreach (var countryInfo in options.GetCountryInfos(value))
             {
-                var result = options.Factory.GetParser(countryInfo).Parse(value);
+                var result = options.ParserFactory.GetParser(countryInfo).Parse(value);
 
                 if (result.PhoneNumber is not null)
                 {
@@ -275,7 +275,7 @@ public abstract class PhoneNumber
             options is not null &&
             options.Countries.Contains(countryInfo))
         {
-            var result = options.Factory.GetParser(countryInfo).Parse(value);
+            var result = options.ParserFactory.GetParser(countryInfo).Parse(value);
 
             phoneNumber = result.PhoneNumber;
             return result.PhoneNumber is not null;
