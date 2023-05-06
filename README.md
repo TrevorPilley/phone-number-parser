@@ -70,7 +70,7 @@ phoneNumber.Country.CallingCode;                // 44
 phoneNumber.Country.Continent;                  // Europe
 phoneNumber.Country.HasNationalDestinationCodes // true
 phoneNumber.Country.HasTrunkPrefix              // true
-phoneNumber.Country.IsEuropeanUnionMember       // true
+phoneNumber.Country.IsEuropeanUnionMember       // false
 phoneNumber.Country.Iso3166Code;                // GB
 phoneNumber.Country.Name;                       // United Kingdom
 phoneNumber.Country.SharesCallingCode           // true
