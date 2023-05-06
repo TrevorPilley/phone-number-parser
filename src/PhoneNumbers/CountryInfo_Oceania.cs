@@ -16,8 +16,8 @@ public partial class CountryInfo
         FormatProvider = NanpPhoneNumberFormatProvider.Instance,
         Iso3166Code = "AS",
         Name = "American Samoa",
-        NdcLengths = NanpNdcLengths,
-        NsnLengths = NanpNsnLengths,
+        NdcLengths = s_nanpNdcLengths,
+        NsnLengths = s_nanpNsnLengths,
         SharesCallingCode = true,
     };
 
@@ -48,8 +48,8 @@ public partial class CountryInfo
         FormatProvider = NanpPhoneNumberFormatProvider.Instance,
         Iso3166Code = "GU",
         Name = "Guam",
-        NdcLengths = NanpNdcLengths,
-        NsnLengths = NanpNsnLengths,
+        NdcLengths = s_nanpNdcLengths,
+        NsnLengths = s_nanpNsnLengths,
         SharesCallingCode = true,
     };
 
