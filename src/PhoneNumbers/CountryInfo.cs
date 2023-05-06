@@ -142,7 +142,6 @@ public sealed partial class CountryInfo
         return false;
     }
 
-
     /// <summary>
     /// Gets a value indicating whether the specified value has a length equal to a valid national significant number (NSN) for this country.
     /// </summary>
