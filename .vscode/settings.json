@@ -17,6 +17,7 @@
       "markdown"
     ],
     "cSpell.ignorePaths": [
+      "test/PhoneNumbers.Data.Tests/Parsers/DefaultPhoneNumberParserTests_*",
       "test/PhoneNumbers.Tests/Parsers/DefaultPhoneNumberParserTests_*",
       "test/PhoneNumbers.Tests/Parsers/GBPhoneNumberParserTests_*",
   ]
