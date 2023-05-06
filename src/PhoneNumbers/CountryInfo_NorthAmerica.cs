@@ -6,8 +6,8 @@ namespace PhoneNumbers;
 public partial class CountryInfo
 {
     internal const string NanpCallingCode = "1";
-    internal static ReadOnlyCollection<int> NanpNdcLengths { get; } = new ReadOnlyCollection<int>(new[] { 3 });
-    internal static ReadOnlyCollection<int> NanpNsnLengths { get; } = new ReadOnlyCollection<int>(new[] { 10 });
+    private static readonly ReadOnlyCollection<int> s_nanpNdcLengths = new ReadOnlyCollection<int>(new[] { 3 });
+    private static readonly ReadOnlyCollection<int> s_nanpNsnLengths = new ReadOnlyCollection<int>(new[] { 10 });
 
     /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Canada.
@@ -20,8 +20,8 @@ public partial class CountryInfo
         FormatProvider = NanpPhoneNumberFormatProvider.Instance,
         Iso3166Code = "CA",
         Name = "Canada",
-        NdcLengths = NanpNdcLengths,
-        NsnLengths = NanpNsnLengths,
+        NdcLengths = s_nanpNdcLengths,
+        NsnLengths = s_nanpNsnLengths,
         SharesCallingCode = true,
     };
 
@@ -36,8 +36,8 @@ public partial class CountryInfo
         FormatProvider = NanpPhoneNumberFormatProvider.Instance,
         Iso3166Code = "PR",
         Name = "Puerto Rico",
-        NdcLengths = NanpNdcLengths,
-        NsnLengths = NanpNsnLengths,
+        NdcLengths = s_nanpNdcLengths,
+        NsnLengths = s_nanpNsnLengths,
         SharesCallingCode = true,
     };
 
@@ -52,8 +52,8 @@ public partial class CountryInfo
         FormatProvider = NanpPhoneNumberFormatProvider.Instance,
         Iso3166Code = "US",
         Name = "United States",
-        NdcLengths = NanpNdcLengths,
-        NsnLengths = NanpNsnLengths,
+        NdcLengths = s_nanpNdcLengths,
+        NsnLengths = s_nanpNsnLengths,
     };
 
     /// <summary>
@@ -67,8 +67,8 @@ public partial class CountryInfo
         FormatProvider = NanpPhoneNumberFormatProvider.Instance,
         Iso3166Code = "VI",
         Name = "United States Virgin Islands",
-        NdcLengths = NanpNdcLengths,
-        NsnLengths = NanpNsnLengths,
+        NdcLengths = s_nanpNdcLengths,
+        NsnLengths = s_nanpNsnLengths,
         SharesCallingCode = true,
     };
 }
