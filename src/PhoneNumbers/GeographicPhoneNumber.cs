@@ -26,11 +26,12 @@ public sealed class GeographicPhoneNumber : PhoneNumber, IEquatable<GeographicPh
         PhoneNumberKind.GeographicPhoneNumber;
 
     /// <summary>
-    /// The country allows local dialling (subscriber number only), however due to number shortages within
-    /// the national destination code the full national significant number must always be dialled.
+    /// Gets a value indicating whether the full national significant number must always be dialled even when the country
+    /// allows local dialling (subscriber number only), often due to number shortages within the national destination code.
     /// </summary>
+    /// <remarks>This property should never be used directly except from the NdcIsOptional extension method.</remarks>
     internal bool NationalDiallingOnly =>
-        Hint == PhoneNumberHint.NationalDiallingOnly && Country.AllowsLocalGeographicDialling;
+        Hint == PhoneNumberHint.NationalDiallingOnly;
 
     /// <inheritdoc/>
     public static bool operator !=(GeographicPhoneNumber? phoneNumber1, GeographicPhoneNumber? phoneNumber2) =>
