@@ -11,7 +11,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Austria;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("43", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -31,7 +31,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Belarus;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("375", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<SimplePhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -51,7 +51,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Belgium;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("32", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<BEPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -71,7 +71,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Bulgaria;
 
-        Assert.True(countryInfo.AllowLocalGeographicDialling);
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("359", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -91,7 +91,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Croatia;
 
-        Assert.True(countryInfo.AllowLocalGeographicDialling);
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("385", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -111,7 +111,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Cyprus;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("357", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<CYPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -131,7 +131,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.CzechRepublic;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("420", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<CZPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -151,7 +151,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Denmark;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("45", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -171,7 +171,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Estonia;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("372", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<BasicPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -191,7 +191,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Finland;
 
-        Assert.True(countryInfo.AllowLocalGeographicDialling);
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("358", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -211,7 +211,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.France;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("33", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<FRPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -231,7 +231,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Germany;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("49", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<SimplePhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -251,7 +251,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Gibraltar;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("350", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<BasicPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -271,7 +271,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Greece;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("30", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<GRPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -291,7 +291,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Guernsey;
 
-        Assert.True(countryInfo.AllowLocalGeographicDialling);
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("44", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<GBPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -311,7 +311,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Hungary;
 
-        Assert.True(countryInfo.AllowLocalGeographicDialling);
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("36", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -331,7 +331,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Ireland;
 
-        Assert.True(countryInfo.AllowLocalGeographicDialling);
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("353", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -351,7 +351,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.IsleOfMan;
 
-        Assert.True(countryInfo.AllowLocalGeographicDialling);
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("44", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<GBPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -371,7 +371,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Italy;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("39", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<SimplePhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -391,7 +391,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Jersey;
 
-        Assert.True(countryInfo.AllowLocalGeographicDialling);
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("44", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<GBPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -411,7 +411,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Kosovo;
 
-        Assert.True(countryInfo.AllowLocalGeographicDialling);
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("383", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -431,7 +431,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Moldova;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("373", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -451,7 +451,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Monaco;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("377", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<MCPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -471,7 +471,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Netherlands;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("31", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<NLPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -491,7 +491,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Norway;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("47", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<NOPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -511,7 +511,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Poland;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("48", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<PLPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -531,7 +531,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Portugal;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("351", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -551,7 +551,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Romania;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("40", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ROPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -571,7 +571,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.SanMarino;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("378", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<SimplePhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -591,7 +591,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Serbia;
 
-        Assert.True(countryInfo.AllowLocalGeographicDialling);
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("381", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -611,7 +611,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Slovakia;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("421", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -631,7 +631,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Slovenia;
 
-        Assert.True(countryInfo.AllowLocalGeographicDialling);
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("386", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<SLPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -651,7 +651,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Spain;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("34", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ESPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -671,7 +671,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Sweden;
 
-        Assert.True(countryInfo.AllowLocalGeographicDialling);
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("46", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<SEPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -691,7 +691,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Switzerland;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("41", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<CHPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -711,7 +711,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Ukraine;
 
-        Assert.True(countryInfo.AllowLocalGeographicDialling);
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("380", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<UAPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -731,7 +731,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.UnitedKingdom;
 
-        Assert.True(countryInfo.AllowLocalGeographicDialling);
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("44", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<GBPhoneNumberFormatProvider>(countryInfo.FormatProvider);
