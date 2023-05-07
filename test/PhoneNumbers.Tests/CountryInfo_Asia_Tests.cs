@@ -11,7 +11,7 @@ public class CountryInfo_Asia_Tests
 
         var countryInfo = CountryInfo.HongKong;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("852", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -31,7 +31,7 @@ public class CountryInfo_Asia_Tests
 
         var countryInfo = CountryInfo.Macau;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("853", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -51,7 +51,7 @@ public class CountryInfo_Asia_Tests
 
         var countryInfo = CountryInfo.Singapore;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("65", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);

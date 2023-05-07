@@ -12,6 +12,6 @@ internal static class PhoneNumberExtensions
     /// <returns>The true if the National Destination Code is optional, otherwise false.</returns>
     internal static bool NdcIsOptional(this PhoneNumber phoneNumber) =>
         phoneNumber.Kind == PhoneNumberKind.GeographicPhoneNumber &&
-        phoneNumber.Country.AllowLocalGeographicDialling &&
+        phoneNumber.Country.AllowsLocalGeographicDialling &&
         !((GeographicPhoneNumber)phoneNumber).NationalDiallingOnly;
 }

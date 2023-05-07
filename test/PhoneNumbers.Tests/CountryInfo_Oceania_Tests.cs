@@ -11,7 +11,7 @@ public class CountryInfo_Oceania_Tests
 
         var countryInfo = CountryInfo.AmericanSamoa;
 
-        Assert.True(countryInfo.AllowLocalGeographicDialling);
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Oceania, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -30,7 +30,7 @@ public class CountryInfo_Oceania_Tests
 
         var countryInfo = CountryInfo.Australia;
 
-        Assert.True(countryInfo.AllowLocalGeographicDialling);
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("61", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Oceania, countryInfo.Continent);
         Assert.IsType<AUPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -50,7 +50,7 @@ public class CountryInfo_Oceania_Tests
 
         var countryInfo = CountryInfo.Guam;
 
-        Assert.True(countryInfo.AllowLocalGeographicDialling);
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Oceania, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -70,7 +70,7 @@ public class CountryInfo_Oceania_Tests
 
         var countryInfo = CountryInfo.PapuaNewGuinea;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("675", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Oceania, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);

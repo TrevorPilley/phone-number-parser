@@ -10,7 +10,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo AmericanSamoa { get; } = new()
     {
-        AllowLocalGeographicDialling = true,
+        AllowsLocalGeographicDialling = true,
         CallingCode = NanpCallingCode,
         Continent = Oceania,
         FormatProvider = NanpPhoneNumberFormatProvider.Instance,
@@ -26,7 +26,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Australia { get; } = new()
     {
-        AllowLocalGeographicDialling = true,
+        AllowsLocalGeographicDialling = true,
         CallingCode = "61",
         Continent = Oceania,
         FormatProvider = AUPhoneNumberFormatProvider.Instance,
@@ -42,7 +42,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Guam { get; } = new()
     {
-        AllowLocalGeographicDialling = true,
+        AllowsLocalGeographicDialling = true,
         CallingCode = NanpCallingCode,
         Continent = Oceania,
         FormatProvider = NanpPhoneNumberFormatProvider.Instance,

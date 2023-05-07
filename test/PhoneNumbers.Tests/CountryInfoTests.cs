@@ -129,7 +129,7 @@ public class CountryInfoTests
     {
         var countryInfo = (CountryInfo)Activator.CreateInstance(typeof(CountryInfo), true);
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Null(countryInfo.CallingCode);
         Assert.Null(countryInfo.Continent);
         Assert.False(countryInfo.HasNationalDestinationCodes);

@@ -36,6 +36,11 @@ public sealed partial class CountryInfo
     }
 
     /// <summary>
+    /// Gets a value indicating whether local dialling (subscriber number only) is allowed within geographic national destination codes.
+    /// </summary>
+    public bool AllowsLocalGeographicDialling { get; init; }
+
+    /// <summary>
     /// Gets the calling code for the country.
     /// </summary>
     /// <remarks>See https://en.wikipedia.org/wiki/List_of_country_calling_codes, this property does not contain the + character.</remarks>
@@ -82,11 +87,6 @@ public sealed partial class CountryInfo
     /// Gets the trunk prefix used by the country, if applicable.
     /// </summary>
     public string? TrunkPrefix { get; init; }
-
-    /// <summary>
-    /// Gets a value indicating whether local dialling (subscriber number only) is allowed within geographic national destination codes.
-    /// </summary>
-    internal bool AllowLocalGeographicDialling { get; init; }
 
     /// <summary>
     /// Gets the <see cref="PhoneNumberFormatProvider"/> for the country.

@@ -30,7 +30,7 @@ public sealed class GeographicPhoneNumber : PhoneNumber, IEquatable<GeographicPh
     /// the national destination code the full national significant number must always be dialled.
     /// </summary>
     internal bool NationalDiallingOnly =>
-        Hint == PhoneNumberHint.NationalDiallingOnly && Country.AllowLocalGeographicDialling;
+        Hint == PhoneNumberHint.NationalDiallingOnly && Country.AllowsLocalGeographicDialling;
 
     /// <inheritdoc/>
     public static bool operator !=(GeographicPhoneNumber? phoneNumber1, GeographicPhoneNumber? phoneNumber2) =>

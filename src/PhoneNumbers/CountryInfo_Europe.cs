@@ -56,7 +56,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Bulgaria { get; } = new()
     {
-        AllowLocalGeographicDialling = true,
+        AllowsLocalGeographicDialling = true,
         CallingCode = "359",
         Continent = Europe,
         IsEuropeanUnionMember = true,
@@ -72,7 +72,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Croatia { get; } = new()
     {
-        AllowLocalGeographicDialling = true,
+        AllowsLocalGeographicDialling = true,
         CallingCode = "385",
         Continent = Europe,
         IsEuropeanUnionMember = true,
@@ -146,7 +146,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Finland { get; } = new()
     {
-        AllowLocalGeographicDialling = true,
+        AllowsLocalGeographicDialling = true,
         CallingCode = "358",
         Continent = Europe,
         IsEuropeanUnionMember = true,
@@ -222,7 +222,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Guernsey { get; } = new()
     {
-        AllowLocalGeographicDialling = true,
+        AllowsLocalGeographicDialling = true,
         CallingCode = "44",
         Continent = Europe,
         FormatProvider = GBPhoneNumberFormatProvider.Instance,
@@ -239,7 +239,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Hungary { get; } = new()
     {
-        AllowLocalGeographicDialling = true,
+        AllowsLocalGeographicDialling = true,
         CallingCode = "36",
         Continent = Europe,
         IsEuropeanUnionMember = true,
@@ -256,7 +256,7 @@ public partial class CountryInfo
     /// <remarks>Covers the Republic of Ireland, Northern Ireland is part of the United Kingdom.</remarks>
     public static CountryInfo Ireland { get; } = new()
     {
-        AllowLocalGeographicDialling = true,
+        AllowsLocalGeographicDialling = true,
         CallingCode = "353",
         Continent = Europe,
         IsEuropeanUnionMember = true,
@@ -272,7 +272,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo IsleOfMan { get; } = new()
     {
-        AllowLocalGeographicDialling = true,
+        AllowsLocalGeographicDialling = true,
         CallingCode = "44",
         Continent = Europe,
         FormatProvider = GBPhoneNumberFormatProvider.Instance,
@@ -305,7 +305,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Jersey { get; } = new()
     {
-        AllowLocalGeographicDialling = true,
+        AllowsLocalGeographicDialling = true,
         CallingCode = "44",
         Continent = Europe,
         FormatProvider = GBPhoneNumberFormatProvider.Instance,
@@ -322,7 +322,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Kosovo { get; } = new()
     {
-        AllowLocalGeographicDialling = true,
+        AllowsLocalGeographicDialling = true,
         CallingCode = "383",
         Continent = Europe,
         Iso3166Code = "XK",
@@ -451,7 +451,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Serbia { get; } = new()
     {
-        AllowLocalGeographicDialling = true,
+        AllowsLocalGeographicDialling = true,
         CallingCode = "381",
         Continent = Europe,
         Iso3166Code = "RS",
@@ -481,7 +481,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Slovenia { get; } = new()
     {
-        AllowLocalGeographicDialling = true,
+        AllowsLocalGeographicDialling = true,
         CallingCode = "386",
         Continent = Europe,
         FormatProvider = SLPhoneNumberFormatProvider.Instance,
@@ -513,7 +513,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Sweden { get; } = new()
     {
-        AllowLocalGeographicDialling = true,
+        AllowsLocalGeographicDialling = true,
         CallingCode = "46",
         Continent = Europe,
         FormatProvider = SEPhoneNumberFormatProvider.Instance,
@@ -545,7 +545,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Ukraine { get; } = new()
     {
-        AllowLocalGeographicDialling = true,
+        AllowsLocalGeographicDialling = true,
         CallingCode = "380",
         Continent = Europe,
         FormatProvider = UAPhoneNumberFormatProvider.Instance,
@@ -562,7 +562,7 @@ public partial class CountryInfo
     /// <remarks>Covers England, Scotland, Wales and Northern Ireland.</remarks>
     public static CountryInfo UnitedKingdom { get; } = new()
     {
-        AllowLocalGeographicDialling = true,
+        AllowsLocalGeographicDialling = true,
         CallingCode = "44",
         Continent = Europe,
         FormatProvider = GBPhoneNumberFormatProvider.Instance,
