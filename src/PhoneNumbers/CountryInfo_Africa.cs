@@ -39,7 +39,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Nigeria { get; } = new()
     {
-        AllowLocalGeographicDialling = true,
+        AllowsLocalGeographicDialling = true,
         CallingCode = "234",
         Continent = Africa,
         Iso3166Code = "NG",

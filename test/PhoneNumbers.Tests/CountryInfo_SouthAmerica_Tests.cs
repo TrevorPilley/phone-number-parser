@@ -11,7 +11,7 @@ public class CountryInfo_SouthAmerica_Tests
 
         var countryInfo = CountryInfo.Brazil;
 
-        Assert.True(countryInfo.AllowLocalGeographicDialling);
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("55", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.SouthAmerica, countryInfo.Continent);
         Assert.IsType<BRPhoneNumberFormatProvider>(countryInfo.FormatProvider);

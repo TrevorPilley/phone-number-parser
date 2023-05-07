@@ -10,7 +10,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Brazil { get; } = new()
     {
-        AllowLocalGeographicDialling = true,
+        AllowsLocalGeographicDialling = true,
         CallingCode = "55",
         Continent = SouthAmerica,
         FormatProvider = BRPhoneNumberFormatProvider.Instance,

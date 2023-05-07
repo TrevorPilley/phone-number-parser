@@ -66,48 +66,49 @@ The resulting `PhoneNumber` has the following properties:
 
 ```csharp
 // PhoneNumber properties:
-phoneNumber.Country.CallingCode;                // 44
-phoneNumber.Country.Continent;                  // Europe
-phoneNumber.Country.HasNationalDestinationCodes // true
-phoneNumber.Country.HasTrunkPrefix              // true
-phoneNumber.Country.IsEuropeanUnionMember       // false
-phoneNumber.Country.Iso3166Code;                // GB
-phoneNumber.Country.Name;                       // United Kingdom
-phoneNumber.Country.SharesCallingCode           // true
-phoneNumber.Country.TrunkPrefix;                // 0
-phoneNumber.Kind;                               // PhoneNumberKind.GeographicPhoneNumber
-phoneNumber.NationalDestinationCode;            // 114
-phoneNumber.NationalSignificantNumber           // 1142726444
-phoneNumber.SubscriberNumber;                   // 2726444
+phoneNumber.Country.AllowsLocalGeographicDialling // true
+phoneNumber.Country.CallingCode;                  // 44
+phoneNumber.Country.Continent;                    // Europe
+phoneNumber.Country.HasNationalDestinationCodes   // true
+phoneNumber.Country.HasTrunkPrefix                // true
+phoneNumber.Country.IsEuropeanUnionMember         // false
+phoneNumber.Country.Iso3166Code;                  // GB
+phoneNumber.Country.Name;                         // United Kingdom
+phoneNumber.Country.SharesCallingCode             // true
+phoneNumber.Country.TrunkPrefix;                  // 0
+phoneNumber.Kind;                                 // PhoneNumberKind.GeographicPhoneNumber
+phoneNumber.NationalDestinationCode;              // 114
+phoneNumber.NationalSignificantNumber             // 1142726444
+phoneNumber.SubscriberNumber;                     // 2726444
 
 // There are 3 subclasses of PhoneNumber, the correct type to cast to
 // can be determined by inspecting the phoneNumber.Kind property.
 
 // if (phoneNumber.Kind == PhoneNumberKind.GeographicPhoneNumber)
 var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
-geographicPhoneNumber.GeographicArea;           // Sheffield
+geographicPhoneNumber.GeographicArea;             // Sheffield
 
 // if (phoneNumber.Kind == PhoneNumberKind.MobilePhoneNumber)
 var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
-mobilePhoneNumber.IsPager;                      // true/false
-mobilePhoneNumber.IsVirtual;                    // true/false
+mobilePhoneNumber.IsPager;                        // true/false
+mobilePhoneNumber.IsVirtual;                      // true/false
 
 // if (phoneNumber.Kind == PhoneNumberKind.NonGeographicPhoneNumber)
 var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
-nonGeographicPhoneNumber.IsFreephone;           // true/false
-nonGeographicPhoneNumber.IsMachineToMachine;    // true/false
-nonGeographicPhoneNumber.IsPremiumRate;         // true/false
-nonGeographicPhoneNumber.IsSharedCost;          // true/false
+nonGeographicPhoneNumber.IsFreephone;             // true/false
+nonGeographicPhoneNumber.IsMachineToMachine;      // true/false
+nonGeographicPhoneNumber.IsPremiumRate;           // true/false
+nonGeographicPhoneNumber.IsSharedCost;            // true/false
 ```
 
 The phone number can be formatted in the following ways, the default format output can be round tripped via `PhoneNumber.Parse()` to make serialization or database persistence straightforward.
 
 ```csharp
-phoneNumber.ToString();                         // +441142726444       (defaults to E.164 format)
-phoneNumber.ToString("E.164");                  // +441142726444       (E.164 format)
-phoneNumber.ToString("E.123");                  // +44 114 272 6444    (E.123 international format)
-phoneNumber.ToString("N");                      // (0114) 272 6444     (E.123 national notation format)
-phoneNumber.ToString("RFC3966");                // tel:+44-114-272-644 (RFC3966 format)
+phoneNumber.ToString();                           // +441142726444       (defaults to E.164 format)
+phoneNumber.ToString("E.164");                    // +441142726444       (E.164 format)
+phoneNumber.ToString("E.123");                    // +44 114 272 6444    (E.123 international format)
+phoneNumber.ToString("N");                        // (0114) 272 6444     (E.123 national notation format)
+phoneNumber.ToString("RFC3966");                  // tel:+44-114-272-644 (RFC3966 format)
 ```
 
 ### ParseOptions

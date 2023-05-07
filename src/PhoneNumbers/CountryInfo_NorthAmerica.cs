@@ -14,7 +14,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Canada { get; } = new()
     {
-        AllowLocalGeographicDialling = true,
+        AllowsLocalGeographicDialling = true,
         CallingCode = NanpCallingCode,
         Continent = NorthAmerica,
         FormatProvider = NanpPhoneNumberFormatProvider.Instance,
@@ -30,7 +30,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo PuertoRico { get; } = new()
     {
-        AllowLocalGeographicDialling = true,
+        AllowsLocalGeographicDialling = true,
         CallingCode = NanpCallingCode,
         Continent = NorthAmerica,
         FormatProvider = NanpPhoneNumberFormatProvider.Instance,
@@ -46,7 +46,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo UnitedStates { get; } = new()
     {
-        AllowLocalGeographicDialling = true,
+        AllowsLocalGeographicDialling = true,
         CallingCode = NanpCallingCode,
         Continent = NorthAmerica,
         FormatProvider = NanpPhoneNumberFormatProvider.Instance,
@@ -61,7 +61,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo UnitedStatesVirginIslands { get; } = new()
     {
-        AllowLocalGeographicDialling = true,
+        AllowsLocalGeographicDialling = true,
         CallingCode = NanpCallingCode,
         Continent = NorthAmerica,
         FormatProvider = NanpPhoneNumberFormatProvider.Instance,

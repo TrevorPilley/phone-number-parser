@@ -11,7 +11,7 @@ public class CountryInfo_Africa_Tests
 
         var countryInfo = CountryInfo.Egypt;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("20", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -31,7 +31,7 @@ public class CountryInfo_Africa_Tests
 
         var countryInfo = CountryInfo.Kenya;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("254", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
         Assert.IsType<SimplePhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -51,7 +51,7 @@ public class CountryInfo_Africa_Tests
 
         var countryInfo = CountryInfo.Nigeria;
 
-        Assert.True(countryInfo.AllowLocalGeographicDialling);
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("234", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -71,7 +71,7 @@ public class CountryInfo_Africa_Tests
 
         var countryInfo = CountryInfo.SouthAfrica;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("27", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
