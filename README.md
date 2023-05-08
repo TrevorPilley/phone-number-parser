@@ -2,13 +2,13 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/TrevorPilley/PhoneNumbers/blob/main/LICENSE) ![GitHub last commit](https://img.shields.io/github/last-commit/TrevorPilley/PhoneNumbers/main) ![Build Status](https://github.com/TrevorPilley/PhoneNumbers/workflows/CI/badge.svg?branch=main) [![NuGet](https://img.shields.io/nuget/v/PhoneNumberParser.svg)](https://www.nuget.org/packages/PhoneNumberParser/) ![GitHub Release Date](https://img.shields.io/github/release-date/TrevorPilley/PhoneNumbers) [![NuGet](https://img.shields.io/nuget/dt/PhoneNumberParser.svg)](https://www.nuget.org/packages/PhoneNumberParser/)
 
-A library for parsing phone numbers, with builds for:
+A library for parsing phone numbers, providing validity of phone numbers including national destination codes (aka area codes) and subscriber numbers (aka line numbers) based upon published numbering plans for each country. Additional attributes such as the kind of phone number (Mobile, Geographic or Non-Geographic) are also included, and all parsing is performed locally within the library using embedded in-memory data files.
+
+Builds for:
 
 - .NET 7.0
-- .NET Standard 2.1 - _supports .NET Core 3.0 or later and .NET 5.0 or later_
-- .NET Standard 2.0 - _supports .NET Framework 4.6.2 or later (.NET Framework projects will need to be built with a minimum C# language version of 9.0 due to the use of init only properties in this library)_
-
-This library provides a number of benefits over a regular expression, for example greater validity of phone numbers including national destination codes (area codes) and subscriber numbers based upon published numbering plans for each country. Additional attributes such as the kind of phone number (Mobile, Geographic or Non-Geographic) are also included. All parsing is performed locally within the library using embedded in-memory data files.
+- .NET Standard 2.1 - _supports .NET Core 3.0 or newer and .NET 5.0 or newer_
+- .NET Standard 2.0 - _supports .NET Framework 4.6.2 or newer, although projects will need to be built with a minimum C# language version of 9.0 due to use of init only properties_
 
 The library **does not**:
 
@@ -17,7 +17,9 @@ The library **does not**:
 - Support extension numbers
 - Support alphabetic mnemonic system/alphabetic phone-words (e.g. 123-PHONEME)
 
-The library also uses [nullable reference type](https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references) annotations.
+## Versioning
+
+The library adheres to [Semantic Versioning](https://semver.org) and [release notes](https://github.com/TrevorPilley/phone-number-parser/releases) are provided for every published version.
 
 ## Install
 
@@ -35,28 +37,28 @@ using PhoneNumbers;
 
 ## Parsing
 
-Parsing a phone number is achieved via the `PhoneNumber.Parse` method (or alternatively via `PhoneNumber.TryParse`). Any spaces, hyphens or other formatting in the input string is ignored.
+Parsing a phone number is achieved via the `PhoneNumber.Parse` method (or alternatively via `PhoneNumber.TryParse`). Any formatting (e.g. spaces or hyphens) in the input string is ignored.
 
 There are 2 overloads for Parse:
 
 ```csharp
-// If the phone number string is in international format (e.g. +XX):
+// If the phone number string is in international format (e.g. +XXXXXXXXXXXX):
 var phoneNumber = PhoneNumber.Parse("+441142726444");
 
 // If the phone number string is not in international format:
 // Specify the ISO 3166 Alpha-2 code for the country as the second parameter.
-var phoneNumber = PhoneNumber.Parse("01142726444", "GB");
+var phoneNumber = PhoneNumber.Parse("01142726444", "GB"); // Alternatively the typed CountryInfo PhoneNumber.Parse("01142726444", CountryInfo.UnitedKingdom);
 ```
 
 There are 3 overloads for TryParse:
 
 ```csharp
-// If the phone number string is in international format (e.g. +XX):
+// If the phone number string is in international format (e.g. +XXXXXXXXXXXX):
 PhoneNumber.TryParse("+442079813000", out PhoneNumber phoneNumber);
 
 // If the phone number string is not in international format:
 // Specify the ISO 3166 Alpha-2 code for the country as the second parameter.
-PhoneNumber.TryParse("01142726444", "GB", out PhoneNumber phoneNumber);
+PhoneNumber.TryParse("01142726444", "GB", out PhoneNumber phoneNumber); // Alternatively the typed CountryInfo PhoneNumber.TryParse("01142726444", CountryInfo.UnitedKingdom, out PhoneNumber phoneNumber);
 
 // The phone number string is not in international format and the country code is not known:
 PhoneNumber.TryParse("02079813000", out IEnumerable<PhoneNumber> phoneNumbers);
@@ -66,49 +68,49 @@ The resulting `PhoneNumber` has the following properties:
 
 ```csharp
 // PhoneNumber properties:
-phoneNumber.Country.AllowsLocalGeographicDialling // true
-phoneNumber.Country.CallingCode;                  // 44
-phoneNumber.Country.Continent;                    // Europe
-phoneNumber.Country.HasNationalDestinationCodes   // true
-phoneNumber.Country.HasTrunkPrefix                // true
-phoneNumber.Country.IsEuropeanUnionMember         // false
-phoneNumber.Country.Iso3166Code;                  // GB
-phoneNumber.Country.Name;                         // United Kingdom
-phoneNumber.Country.SharesCallingCode             // true
-phoneNumber.Country.TrunkPrefix;                  // 0
-phoneNumber.Kind;                                 // PhoneNumberKind.GeographicPhoneNumber
-phoneNumber.NationalDestinationCode;              // 114
-phoneNumber.NationalSignificantNumber             // 1142726444
-phoneNumber.SubscriberNumber;                     // 2726444
+phoneNumber.Country.AllowsLocalGeographicDialling; // true
+phoneNumber.Country.CallingCode;                   // 44
+phoneNumber.Country.Continent;                     // Europe
+phoneNumber.Country.HasNationalDestinationCodes;   // true
+phoneNumber.Country.HasTrunkPrefix;                // true
+phoneNumber.Country.IsEuropeanUnionMember;         // false
+phoneNumber.Country.Iso3166Code;                   // GB
+phoneNumber.Country.Name;                          // United Kingdom
+phoneNumber.Country.SharesCallingCode;             // true
+phoneNumber.Country.TrunkPrefix;                   // 0
+phoneNumber.Kind;                                  // PhoneNumberKind.GeographicPhoneNumber
+phoneNumber.NationalDestinationCode;               // 114
+phoneNumber.NationalSignificantNumber;             // 1142726444
+phoneNumber.SubscriberNumber;                      // 2726444
 
 // There are 3 subclasses of PhoneNumber, the correct type to cast to
 // can be determined by inspecting the phoneNumber.Kind property.
 
 // if (phoneNumber.Kind == PhoneNumberKind.GeographicPhoneNumber)
 var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
-geographicPhoneNumber.GeographicArea;             // Sheffield
+geographicPhoneNumber.GeographicArea;              // Sheffield
 
 // if (phoneNumber.Kind == PhoneNumberKind.MobilePhoneNumber)
 var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
-mobilePhoneNumber.IsPager;                        // true/false
-mobilePhoneNumber.IsVirtual;                      // true/false
+mobilePhoneNumber.IsPager;                         // true/false
+mobilePhoneNumber.IsVirtual;                       // true/false
 
 // if (phoneNumber.Kind == PhoneNumberKind.NonGeographicPhoneNumber)
 var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
-nonGeographicPhoneNumber.IsFreephone;             // true/false
-nonGeographicPhoneNumber.IsMachineToMachine;      // true/false
-nonGeographicPhoneNumber.IsPremiumRate;           // true/false
-nonGeographicPhoneNumber.IsSharedCost;            // true/false
+nonGeographicPhoneNumber.IsFreephone;              // true/false
+nonGeographicPhoneNumber.IsMachineToMachine;       // true/false
+nonGeographicPhoneNumber.IsPremiumRate;            // true/false
+nonGeographicPhoneNumber.IsSharedCost;             // true/false
 ```
 
-The phone number can be formatted in the following ways, the default format output can be round tripped via `PhoneNumber.Parse()` to make serialization or database persistence straightforward.
+The phone number can be formatted in the following ways, the default format output can be round tripped via `PhoneNumber.Parse()`.
 
 ```csharp
-phoneNumber.ToString();                           // +441142726444       (defaults to E.164 format)
-phoneNumber.ToString("E.164");                    // +441142726444       (E.164 format)
-phoneNumber.ToString("E.123");                    // +44 114 272 6444    (E.123 international format)
-phoneNumber.ToString("N");                        // (0114) 272 6444     (E.123 national notation format)
-phoneNumber.ToString("RFC3966");                  // tel:+44-114-272-644 (RFC3966 format)
+phoneNumber.ToString();                            // +441142726444       (defaults to E.164 format)
+phoneNumber.ToString("E.164");                     // +441142726444       (E.164 format)
+phoneNumber.ToString("E.123");                     // +44 114 272 6444    (E.123 international format)
+phoneNumber.ToString("N");                         // (0114) 272 6444     (E.123 national notation format)
+phoneNumber.ToString("RFC3966");                   // tel:+44-114-272-644 (RFC3966 format)
 ```
 
 ### ParseOptions
@@ -122,6 +124,8 @@ ParseOptions.Default
 At present, the only options available are which countries are parsed.
 
 By default all countries supported by the library can be parsed and any future supported countries will be automatically included.
+
+A `ParseOptions` instance may also be passed as a parameter to the `Parse` and `TryParse` methods, however this is only necessary to supply alternative options to the default ones.
 
 #### Opt-in
 
@@ -148,7 +152,7 @@ ParseOptions.Default.AllowEuropeanUnionCountries();
 
 // Add all supported countries using the same numbering plan:
 ParseOptions.Default.AllowNorthAmericanNumberingPlanCountries();
-ParseOptions.Default.AllowUnitedKingdomNumberingPlanCountries(); // Countries.Add(CountryInfo.UnitedKingdom) won't include Guernsey, Isle of Man and Jersey which also use the same numbering plan, this saves adding them specifically.
+ParseOptions.Default.AllowUnitedKingdomNumberingPlanCountries(); // Countries.Add(CountryInfo.UnitedKingdom) doesn't include Guernsey, Isle of Man and Jersey which also use the same numbering plan.
 ```
 
 #### Opt-out

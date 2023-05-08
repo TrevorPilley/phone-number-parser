@@ -11,8 +11,8 @@ Builds for:
 ```csharp
 using PhoneNumbers;
 
-// Parsing a phone number is achieved via the `PhoneNumber.Parse` method (or alternatively via `PhoneNumber.TryParse`). Any spaces, hyphens or other formatting in the input string is ignored.
-var phoneNumber = PhoneNumber.Parse("+441142726444"); // or Parse("01142726444", "GB")
+// Parsing a phone number is achieved via the `PhoneNumber.Parse` method (or alternatively via `PhoneNumber.TryParse`). Any formatting (e.g. spaces or hyphens) in the input string is ignored.
+var phoneNumber = PhoneNumber.Parse("+441142726444"); // or Parse("01142726444", "GB") or 
 
 phoneNumber.NationalDestinationCode;     // 114     (aka area code)
 phoneNumber.SubscriberNumber;            // 2726444 (aka line number)
