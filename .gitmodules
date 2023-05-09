@@ -1,3 +1,4 @@
 [submodule "TestGenerator"]
 	path = utilities/phone-number-utilities-testgenerator
 	url = https://github.com/TrevorPilley/phone-number-utilities-testgenerator
+    branch = main
