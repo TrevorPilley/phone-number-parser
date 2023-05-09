@@ -79,8 +79,8 @@ public class DefaultPhoneNumberParserTests_LV_NonGeographicPhoneNumber
     }
 
     [Theory]
-    [InlineData("90000000", "90000000")]
-    [InlineData("90999999", "90999999")]
+    [InlineData("81000000", "81000000")]
+    [InlineData("81999999", "81999999")]
     public void Parse_Known_NonGeographicPhoneNumber_SharedCost(string value, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
