@@ -431,7 +431,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.Latvia;
 
-        Assert.False(countryInfo.AllowLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("371", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<BasicPhoneNumberFormatProvider>(countryInfo.FormatProvider);
