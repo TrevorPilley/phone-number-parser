@@ -425,6 +425,26 @@ public class CountryInfo_Europe_Tests
     }
 
     [Fact]
+    public void CountryInfo_Latvia()
+    {
+        Assert.Same(CountryInfo.Latvia, CountryInfo.Latvia);
+
+        var countryInfo = CountryInfo.Latvia;
+
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal("371", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
+        Assert.IsType<BasicPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.True(countryInfo.IsEuropeanUnionMember);
+        Assert.Equal("LV", countryInfo.Iso3166Code);
+        Assert.Equal("Latvia", countryInfo.Name);
+        Assert.Empty(countryInfo.NdcLengths);
+        Assert.Equal(new[] { 8}, countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Null(countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_Moldova()
     {
         Assert.Same(CountryInfo.Moldova, CountryInfo.Moldova);
