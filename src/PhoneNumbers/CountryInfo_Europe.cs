@@ -333,6 +333,20 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Latvia.
+    /// </summary>
+    public static CountryInfo Latvia { get; } = new()
+    {
+        CallingCode = "371",
+        Continent = Europe,
+        FormatProvider = BasicPhoneNumberFormatProvider.Instance,
+        IsEuropeanUnionMember = true,
+        Iso3166Code = "LV",
+        Name = "Latvia",
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 8 }),
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Moldova.
     /// </summary>
     public static CountryInfo Moldova { get; } = new()

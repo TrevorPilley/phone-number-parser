@@ -171,6 +171,14 @@ public class PhoneNumber_Parse_Europe_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_Latvia_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+37167028398");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Latvia, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_Moldova_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+37322251317");
