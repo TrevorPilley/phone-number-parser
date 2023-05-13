@@ -24,6 +24,13 @@ public class PhoneNumber_ToString_NorthAmerica_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+14414056000", "E.123", "+1 441-405-6000")]
+    [InlineData("+14414056000", "N", "(441) 405-6000")]
+    [InlineData("+14414056000", "RFC3966", "tel:+1-441-405-6000")]
+    public void Bermuda_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+16137020016", "E.123", "+1 613-702-0016")]
     [InlineData("+16137020016", "N", "(613) 702-0016")]
     [InlineData("+16137020016", "RFC3966", "tel:+1-613-702-0016")]
