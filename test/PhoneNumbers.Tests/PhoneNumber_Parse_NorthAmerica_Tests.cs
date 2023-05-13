@@ -27,6 +27,14 @@ public class PhoneNumber_Parse_NorthAmerica_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_Bermuda_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+14414056000");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Bermuda, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_Canada_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+16137020016");
