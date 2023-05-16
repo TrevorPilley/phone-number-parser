@@ -65,7 +65,7 @@ internal sealed class NumberRange
 
                 if (separatorIndex != x.LastIndexOf(Chars.Hyphen))
                 {
-                    throw new InvalidOperationException("A number range must be expressed as either X or X-X.");
+                    throw new InvalidOperationException($"A number range must be expressed as either X or X-X, the value '{x}' is invalid");
                 }
 
                 return new NumberRange(
