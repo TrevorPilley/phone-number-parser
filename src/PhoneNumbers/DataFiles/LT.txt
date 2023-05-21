@@ -1,0 +1,55 @@
+# References:
+# - https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200007C0001PDFE.pdf
+G|310|Varėna district|20000-99999|
+G|313|Druskininkai town|20000-99999|
+G|315|Alytus town and district|20000-99999|
+G|318|Lazdijai district|20000-99999|
+G|319|Prienai district and Birštonas town|20000-99999|
+G|340|Ukmergė district|20000-99999|
+G|342|Vilkaviškis district|20000-99999|
+G|343|Marijampolė district|20000-99999|
+G|345|Šakiai district|20000-99999|
+G|346|Kaišiadorys district|20000-99999|
+G|347|Kėdainiai district|20000-99999|
+G|349|Jonava district|20000-99999|
+G|37|Kaunas city and district|200000-999999|
+G|380|Šalčininkai district|20000-99999|
+G|381|Anykščiai district|20000-99999|
+G|382|Širvintos district|20000-99999|
+G|383|Molėtai district|20000-99999|
+G|385|Zarasai district|20000-99999|
+G|386|Ignalina district and Visaginas town|20000-99999|
+G|387|Švenčionys district|20000-99999|
+G|389|Utena district|20000-99999|
+G|41|Šiauliai city and district|200000-999999|
+G|421|Pakruojis district|20000-99999|
+G|422|Radviliškis district|20000-99999|
+G|425|Akmenė district|20000-99999|
+G|426|Joniškis district|20000-99999|
+G|427|Kelmė district|20000-99999|
+G|428|Raseiniai district|20000-99999|
+G|440|Skuodas district|20000-99999|
+G|441|Šilutė district|20000-99999|
+G|443|Mažeikiai district|20000-99999|
+G|444|Telšiai district|20000-99999|
+G|445|Kretinga district|20000-99999|
+G|446|Tauragė district|20000-99999|
+G|447|Jurbarkas district|20000-99999|
+G|448|Plungė district|20000-99999|
+G|449|Šilalė district|20000-99999|
+G|450|Biržai district|20000-99999|
+G|451|Pasvalys district|20000-99999|
+G|45|Panevėžys city and district|400000-599999|
+G|458|Rokiškis district|20000-99999|
+G|459|Kupiškis district|20000-99999|
+G|460|Palanga town|20000-99999|
+G|46|Klaipėda city and district|200000-499999|
+G|469|Neringa town|20000-99999|
+G|5|Vilnius city and district|2000000-2799999|
+G|528|Trakai district|20000-99999|
+M|600-699||00000-99999|
+M|700||00000-99999|V
+N|705-707,801,802,901||00000-99999|
+N|800||00000-99999|F
+N|808||00000-99999|S
+N|900,902-903,909,910||00000-99999|R

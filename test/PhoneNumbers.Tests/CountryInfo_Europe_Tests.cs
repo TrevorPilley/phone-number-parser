@@ -439,9 +439,29 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("LV", countryInfo.Iso3166Code);
         Assert.Equal("Latvia", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
-        Assert.Equal(new[] { 8}, countryInfo.NsnLengths);
+        Assert.Equal(new[] { 8 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
+    public void CountryInfo_Lithuania()
+    {
+        Assert.Same(CountryInfo.Lithuania, CountryInfo.Lithuania);
+
+        var countryInfo = CountryInfo.Lithuania;
+
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal("370", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
+        Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.True(countryInfo.IsEuropeanUnionMember);
+        Assert.Equal("LT", countryInfo.Iso3166Code);
+        Assert.Equal("Lithuania", countryInfo.Name);
+        Assert.Equal(new[] { 3 , 2, 1}, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 8 }, countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Equal("8", countryInfo.TrunkPrefix);
     }
 
     [Fact]
