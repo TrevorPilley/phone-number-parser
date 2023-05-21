@@ -347,6 +347,22 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Lithuania.
+    /// </summary>
+    public static CountryInfo Lithuania { get; } = new()
+    {
+        AllowsLocalGeographicDialling = true,
+        CallingCode = "370",
+        Continent = Europe,
+        IsEuropeanUnionMember = true,
+        Iso3166Code = "LT",
+        Name = "Lithuania",
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 8 }),
+        TrunkPrefix = "8",
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Moldova.
     /// </summary>
     public static CountryInfo Moldova { get; } = new()
