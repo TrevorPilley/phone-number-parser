@@ -6,7 +6,9 @@ public class PhoneNumberTests
 {
     [Theory]
     [InlineData("+441142726444")]
-    [InlineData("tel:+44-114-2726444")]
+    [InlineData("+44 114 272 6444")]
+    [InlineData("+44 (114) 272 6444")]
+    [InlineData("tel:+44-114-272-6444")]
     public void Parse_Value(string input) =>
         Assert.NotNull(PhoneNumber.Parse(input));
 
@@ -16,7 +18,9 @@ public class PhoneNumberTests
     [InlineData("0114.272.6444")]
     [InlineData("(0114) 272 6444")]
     [InlineData("+441142726444")]
-    [InlineData("tel:+44-114-2726444")]
+    [InlineData("+44 114 272 6444")]
+    [InlineData("+44 (114) 272 6444")]
+    [InlineData("tel:+44-114-272-6444")]
     public void Parse_Value_CountryCode(string input) =>
         Assert.NotNull(PhoneNumber.Parse(input, "GB"));
 
@@ -52,7 +56,9 @@ public class PhoneNumberTests
     [InlineData("0114.272.6444")]
     [InlineData("(0114) 272 6444")]
     [InlineData("+441142726444")]
-    [InlineData("tel:+44-114-2726444")]
+    [InlineData("+44 114 272 6444")]
+    [InlineData("+44 (114) 272 6444")]
+    [InlineData("tel:+44-114-272-6444")]
     public void Parse_Value_CountryInfo(string input) =>
         Assert.NotNull(PhoneNumber.Parse(input, CountryInfo.UnitedKingdom));
 
@@ -106,7 +112,7 @@ public class PhoneNumberTests
 
     [Theory]
     [InlineData("+441142726444")]
-    [InlineData("tel:+44-114-2726444")]
+    [InlineData("tel:+44-114-272-6444")]
     public void TryParse_Value(string input)
     {
         Assert.True(PhoneNumber.TryParse(input, out PhoneNumber phoneNumber));
@@ -119,7 +125,9 @@ public class PhoneNumberTests
     [InlineData("0114.272.6444")]
     [InlineData("(0114) 272 6444")]
     [InlineData("+441142726444")]
-    [InlineData("tel:+44-114-2726444")]
+    [InlineData("+44 114 272 6444")]
+    [InlineData("+44 (114) 272 6444")]
+    [InlineData("tel:+44-114-272-6444")]
     public void TryParse_Value_CountryCode(string input)
     {
         Assert.True(PhoneNumber.TryParse(input, "GB", out PhoneNumber phoneNumber));
@@ -178,7 +186,9 @@ public class PhoneNumberTests
     [InlineData("0114.272.6444")]
     [InlineData("(0114) 272 6444")]
     [InlineData("+441142726444")]
-    [InlineData("tel:+44-114-2726444")]
+    [InlineData("+44 114 272 6444")]
+    [InlineData("+44 (114) 272 6444")]
+    [InlineData("tel:+44-114-272-6444")]
     public void TryParse_Value_CountryInfo(string input)
     {
         Assert.True(PhoneNumber.TryParse(input, CountryInfo.UnitedKingdom, out PhoneNumber phoneNumber));
