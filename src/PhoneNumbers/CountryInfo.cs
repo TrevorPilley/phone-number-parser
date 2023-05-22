@@ -136,7 +136,7 @@ public sealed partial class CountryInfo
 
         if (plusIdx >= 0)
         {
-            return value?.IndexOf(CallingCode, StringComparison.Ordinal) == plusIdx + 1;
+            return value!.IndexOf(CallingCode, StringComparison.Ordinal) == plusIdx + 1;
         }
 
         return false;
