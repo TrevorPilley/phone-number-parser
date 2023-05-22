@@ -188,6 +188,13 @@ public class PhoneNumber_ToString_Europe_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+35621336840", "E.123", "+356 2133 6840")]
+    [InlineData("+35621336840", "N", "2133 6840")]
+    [InlineData("+35621336840", "RFC3966", "tel:+356-2133-6840")]
+    public void Malta_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+37322251317", "E.123", "+373 22 251 317")]
     [InlineData("+37322251317", "N", "022 251 317")]
     [InlineData("+37322251317", "RFC3966", "tel:+373-22-251-317")]
