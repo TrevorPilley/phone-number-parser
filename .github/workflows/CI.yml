@@ -69,3 +69,6 @@ jobs:
 
       - name: dotnet pack
         run: dotnet pack --no-build --configuration ${{ env.PROJECT_CONFIGURATION }}
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
