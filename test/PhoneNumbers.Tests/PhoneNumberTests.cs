@@ -70,6 +70,10 @@ public class PhoneNumberTests
     }
 
     [Fact]
+    public void Parse_Value_CountryInfo_Throws_If_CountryInfo_Null() =>
+        Assert.Throws<ArgumentNullException>(() => PhoneNumber.Parse("0123456789", default(CountryInfo)));
+
+    [Fact]
     public void Parse_Value_CountryInfo_Throws_If_ParseOptions_Null() =>
         Assert.Throws<ArgumentNullException>(() => PhoneNumber.Parse("0123456789", CountryInfo.UnitedKingdom, default));
 
@@ -112,6 +116,8 @@ public class PhoneNumberTests
 
     [Theory]
     [InlineData("+441142726444")]
+    [InlineData("+44 114 272 6444")]
+    [InlineData("+44 (114) 272 6444")]
     [InlineData("tel:+44-114-272-6444")]
     public void TryParse_Value(string input)
     {
@@ -148,17 +154,14 @@ public class PhoneNumberTests
         Assert.Null(phoneNumber);
     }
 
-    [Fact]
-    public void TryParse_Value_CountryCode_False_If_Value_Empty()
+    [Theory]
+    [InlineData(default(string))]
+    [InlineData("")]
+    [InlineData(" ")]
+    [InlineData("441142726444")]
+    public void TryParse_Value_CountryCode_False_If_Value_Invalid(string input)
     {
-        Assert.False(PhoneNumber.TryParse(" ", "GB", out var phoneNumber));
-        Assert.Null(phoneNumber);
-    }
-
-    [Fact]
-    public void TryParse_Value_CountryCode_False_If_Value_Null()
-    {
-        Assert.False(PhoneNumber.TryParse(null, "GB", out var phoneNumber));
+        Assert.False(PhoneNumber.TryParse(input, "GB", out PhoneNumber phoneNumber));
         Assert.Null(phoneNumber);
     }
 
@@ -167,17 +170,6 @@ public class PhoneNumberTests
     {
         Assert.True(PhoneNumber.TryParse("0114 272 6444", "GB", out var phoneNumber));
         Assert.NotNull(phoneNumber);
-    }
-
-    [Theory]
-    [InlineData(default(string))]
-    [InlineData("")]
-    [InlineData(" ")]
-    [InlineData("441142726444")]
-    public void TryParse_Value_CountryCode_Throws_If_Value_Invalid(string input)
-    {
-        Assert.False(PhoneNumber.TryParse(input, "GB", out PhoneNumber phoneNumber));
-        Assert.Null(phoneNumber);
     }
 
     [Theory]
@@ -207,9 +199,20 @@ public class PhoneNumberTests
     [InlineData("")]
     [InlineData(" ")]
     [InlineData("441142726444")]
-    public void TryParse_Value_CountryInfo_Throws_If_Value_Invalid(string input)
+    public void TryParse_Value_CountryInfo_False_If_Value_Invalid(string input)
     {
         Assert.False(PhoneNumber.TryParse(input, CountryInfo.UnitedKingdom, out PhoneNumber phoneNumber));
+        Assert.Null(phoneNumber);
+    }
+
+    [Theory]
+    [InlineData(default(string))]
+    [InlineData("")]
+    [InlineData(" ")]
+    [InlineData("441142726444")]
+    public void TryParse_Value_False_If_Value_Invalid(string input)
+    {
+        Assert.False(PhoneNumber.TryParse(input, out PhoneNumber phoneNumber));
         Assert.Null(phoneNumber);
     }
 
@@ -220,21 +223,33 @@ public class PhoneNumberTests
         Assert.Empty(phoneNumbers);
     }
 
-    [Theory]
-    [InlineData(default(string))]
-    [InlineData("")]
-    [InlineData(" ")]
-    [InlineData("441142726444")]
-    public void TryParse_Value_Throws_If_Value_Invalid(string input)
-    {
-        Assert.False(PhoneNumber.TryParse(input, out PhoneNumber phoneNumber));
-        Assert.Null(phoneNumber);
-    }
-
     [Fact]
     public void TryParse_Value_To_PhoneNumber_False_If_ParseOptions_Null()
     {
         Assert.False(PhoneNumber.TryParse("0123456789", default(ParseOptions), out PhoneNumber phoneNumber));
         Assert.Null(phoneNumber);
+    }
+
+    [Fact]
+    public void TryParse_Value_With_CallingCode_Any_Country()
+    {
+        Assert.True(PhoneNumber.TryParse("+442079813000", out IEnumerable<PhoneNumber> phoneNumbers));
+        Assert.NotNull(phoneNumbers);
+        Assert.Single(phoneNumbers);
+        Assert.Equal(CountryInfo.UnitedKingdom, phoneNumbers.Single().Country);
+    }
+
+    [Fact]
+    public void TryParse_Value_Without_CallingCode_Any_Country()
+    {
+        Assert.True(PhoneNumber.TryParse("02079813000", out IEnumerable<PhoneNumber> phoneNumbers));
+        Assert.NotNull(phoneNumbers);
+        Assert.Equal(3, phoneNumbers.Count());
+
+        var phoneNumberResults = phoneNumbers.ToList();
+
+        Assert.Equal(CountryInfo.Finland, phoneNumberResults[0].Country);
+        Assert.Equal(CountryInfo.Serbia, phoneNumberResults[1].Country);
+        Assert.Equal(CountryInfo.UnitedKingdom, phoneNumberResults[2].Country);
     }
 }
