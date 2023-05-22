@@ -66,11 +66,11 @@ jobs:
       - name: dotnet test
         run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover --no-restore --verbosity minimal
 
-      - name: dotnet pack
-        run: dotnet pack --no-build --configuration ${{ env.PROJECT_CONFIGURATION }}
-
       - name: Upload coverage reports to Codecov
         if: matrix.os == 'ubuntu-latest'
         uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
+
+      - name: dotnet pack
+        run: dotnet pack --no-build --configuration ${{ env.PROJECT_CONFIGURATION }}
