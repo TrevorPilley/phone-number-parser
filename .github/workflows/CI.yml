@@ -65,7 +65,7 @@ jobs:
         run: dotnet build --configuration ${{ env.PROJECT_CONFIGURATION }} --no-restore
 
       - name: dotnet test
-        run: dotnet test --no-restore --verbosity minimal
+        run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover --no-restore --verbosity minimal
 
       - name: dotnet pack
         run: dotnet pack --no-build --configuration ${{ env.PROJECT_CONFIGURATION }}
