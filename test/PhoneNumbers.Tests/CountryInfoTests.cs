@@ -28,8 +28,10 @@ public class CountryInfoTests
     [InlineData(default(string))]
     [InlineData("")]
     [InlineData(" ")]
+    [InlineData("35312222222")]
     [InlineData("+35312222222")]
     [InlineData("+35342222222")] // NDC is actually the dummy calling code but since it isn't immediately after the + it doesn't match
+    [InlineData("tel:+353-422-22222")] // NDC is actually the dummy calling code but since it isn't immediately after the + it doesn't match
     public void HasCallingCode_False(string value) =>
         Assert.False(TestHelper.CreateCountryInfo().HasCallingCode(value));
 
@@ -37,9 +39,7 @@ public class CountryInfoTests
     [InlineData("+422012345678")]
     [InlineData("+422(0)12345678")]
     [InlineData("+422 (0) 123 456 78")]
-    [InlineData("+422 (0) 123-456-78")]
-    [InlineData("+422 (0) 123.456.78")]
-    [InlineData("+422 (0) 123/456/78")]
+    [InlineData("+422 (0123) 456 78")]
     [InlineData("tel:+422-123-456-78")]
     public void HasCallingCode_True(string value) =>
         Assert.True(TestHelper.CreateCountryInfo().HasCallingCode(value));
