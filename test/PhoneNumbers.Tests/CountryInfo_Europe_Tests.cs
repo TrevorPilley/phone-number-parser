@@ -465,6 +465,26 @@ public class CountryInfo_Europe_Tests
     }
 
     [Fact]
+    public void CountryInfo_Luxembourg()
+    {
+        Assert.Same(CountryInfo.Luxembourg, CountryInfo.Luxembourg);
+
+        var countryInfo = CountryInfo.Luxembourg;
+
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal("352", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
+        Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.True(countryInfo.IsEuropeanUnionMember);
+        Assert.Equal("LU", countryInfo.Iso3166Code);
+        Assert.Equal("Luxembourg", countryInfo.Name);
+        Assert.Equal(new[] { 2}, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 8, 9, 12 }, countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Null(countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_Malta()
     {
         Assert.Same(CountryInfo.Malta, CountryInfo.Malta);
