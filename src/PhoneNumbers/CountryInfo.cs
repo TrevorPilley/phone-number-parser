@@ -130,16 +130,16 @@ public sealed partial class CountryInfo
     /// <returns>True if the value has the calling code for this country, otherwise false.</returns>
     internal bool HasCallingCode(string value)
     {
-#pragma warning disable CA1307 // Specify StringComparison for clarity
-        var plusIdx = value?.IndexOf(Chars.Plus);
-#pragma warning restore CA1307 // Specify StringComparison for clarity
-
-        if (plusIdx >= 0)
+        if (value is null)
         {
-            return value!.IndexOf(CallingCode, StringComparison.Ordinal) == plusIdx + 1;;
+            return false;
         }
 
-        return false;
+#pragma warning disable CA1307 // Specify StringComparison for clarity
+        var plusIdx = value.IndexOf(Chars.Plus);
+#pragma warning restore CA1307 // Specify StringComparison for clarity
+
+        return plusIdx >= 0 && value.IndexOf(CallingCode, StringComparison.Ordinal) == plusIdx + 1;
     }
 
     /// <summary>
