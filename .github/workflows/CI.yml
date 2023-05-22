@@ -71,5 +71,5 @@ jobs:
         run: dotnet pack --no-build --configuration ${{ env.PROJECT_CONFIGURATION }}
 
       - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v3
         if: matrix.os == 'ubuntu-latest'
+        uses: codecov/codecov-action@v3
