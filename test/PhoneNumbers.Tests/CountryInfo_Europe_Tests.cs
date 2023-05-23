@@ -479,7 +479,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("MT", countryInfo.Iso3166Code);
         Assert.Equal("Malta", countryInfo.Name);
         Assert.Equal(new[] { 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 8 }, countryInfo.NsnLengths);
+        Assert.Equal(new[] { 8, 10 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
