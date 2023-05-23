@@ -373,7 +373,7 @@ public partial class CountryInfo
         Iso3166Code = "MT",
         Name = "Malta",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 8 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 10 }),
     };
 
     /// <summary>
