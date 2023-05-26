@@ -133,16 +133,8 @@ public class DefaultPhoneNumberParserTests_MT_NonGeographicPhoneNumber
     }
 
     [Theory]
-    [InlineData("50037000", "50", "037000")]
-    [InlineData("50037999", "50", "037999")]
     [InlineData("50100000", "50", "100000")]
     [InlineData("50199999", "50", "199999")]
-    [InlineData("50600000", "50", "600000")]
-    [InlineData("50699999", "50", "699999")]
-    [InlineData("50700000", "50", "700000")]
-    [InlineData("50709999", "50", "709999")]
-    [InlineData("50900000", "50", "900000")]
-    [InlineData("50919999", "50", "919999")]
     public void Parse_Known_NonGeographicPhoneNumber_5X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
@@ -184,7 +176,7 @@ public class DefaultPhoneNumberParserTests_MT_NonGeographicPhoneNumber
     [InlineData("80078999", "80", "078999")]
     [InlineData("80090000", "80", "090000")]
     [InlineData("80090999", "80", "090999")]
-    public void Parse_Known_NonGeographicPhoneNumber_8X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
+    public void Parse_Known_NonGeographicPhoneNumber_Freephone(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
         parseResult.ThrowIfFailure();
@@ -196,7 +188,7 @@ public class DefaultPhoneNumberParserTests_MT_NonGeographicPhoneNumber
 
         var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
         Assert.Equal(CountryInfo.Malta, nonGeographicPhoneNumber.Country);
-        Assert.False(nonGeographicPhoneNumber.IsFreephone);
+        Assert.True(nonGeographicPhoneNumber.IsFreephone);
         Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
         Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
         Assert.False(nonGeographicPhoneNumber.IsSharedCost);
@@ -205,8 +197,16 @@ public class DefaultPhoneNumberParserTests_MT_NonGeographicPhoneNumber
     }
 
     [Theory]
+    [InlineData("50037000", "50", "037000")]
+    [InlineData("50037999", "50", "037999")]
     [InlineData("50043000", "50", "043000")]
     [InlineData("50043999", "50", "043999")]
+    [InlineData("50600000", "50", "600000")]
+    [InlineData("50699999", "50", "699999")]
+    [InlineData("50700000", "50", "700000")]
+    [InlineData("50709999", "50", "709999")]
+    [InlineData("50900000", "50", "900000")]
+    [InlineData("50919999", "50", "919999")]
     [InlineData("51002000", "51", "002000")]
     [InlineData("51002199", "51", "002199")]
     [InlineData("51003000", "51", "003000")]
