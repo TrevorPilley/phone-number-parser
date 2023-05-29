@@ -139,7 +139,7 @@ public sealed partial class CountryInfo
         var plusIdx = value.IndexOf(Chars.Plus);
 #else
         var plusIdx = value.IndexIf(Chars.Plus, StringComparison.Ordinal);
-#end if
+#endif
 
         return plusIdx >= 0 && value.IndexOf(CallingCode, StringComparison.Ordinal) == plusIdx + 1;
     }
