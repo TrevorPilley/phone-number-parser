@@ -138,7 +138,7 @@ public sealed partial class CountryInfo
 #if NETSTANDARD2_0
         var plusIdx = value.IndexOf(Chars.Plus);
 #else
-        var plusIdx = value.IndexIf(Chars.Plus, StringComparison.Ordinal);
+        var plusIdx = value.IndexOf(Chars.Plus, StringComparison.Ordinal);
 #endif
 
         return plusIdx >= 0 && value.IndexOf(CallingCode, StringComparison.Ordinal) == plusIdx + 1;
