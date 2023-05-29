@@ -135,9 +135,11 @@ public sealed partial class CountryInfo
             return false;
         }
 
-#pragma warning disable CA1307 // Specify StringComparison for clarity
+#if NETSTANDARD2_0
         var plusIdx = value.IndexOf(Chars.Plus);
-#pragma warning restore CA1307 // Specify StringComparison for clarity
+#else
+        var plusIdx = value.IndexIf(Chars.Plus, StringComparison.Ordinal);
+#end if
 
         return plusIdx >= 0 && value.IndexOf(CallingCode, StringComparison.Ordinal) == plusIdx + 1;
     }
