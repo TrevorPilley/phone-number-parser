@@ -22,6 +22,6 @@ internal sealed class PhoneNumberParserFactory
                     return parser;
                 }
 
-                return DefaultPhoneNumberParser.Create(countryInfo);
+                return DefaultPhoneNumberParser.Create(x);
             });
 }
