@@ -271,8 +271,14 @@ public class PhoneNumber_ToString_Europe_Tests
 
     [Theory]
     [InlineData("+38615836300", "E.123", "+386 1 583 63 00")]
+    [InlineData("+38630123654", "E.123", "+386 30 123 654")]
+    [InlineData("+38665012365", "E.123", "+386 650 12 365")]
     [InlineData("+38615836300", "N", "(01) 583 63 00")]
+    [InlineData("+38630123654", "N", "030 123 654")]
+    [InlineData("+38665012365", "N", "0650 12 365")]
     [InlineData("+38615836300", "RFC3966", "tel:+386-1-583-63-00")]
+    [InlineData("+38630123654", "RFC3966", "tel:+386-30-123-654")]
+    [InlineData("+38665012365", "RFC3966", "tel:+386-650-12-365")]
     public void Slovenia_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
