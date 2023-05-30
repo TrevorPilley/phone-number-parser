@@ -21,9 +21,7 @@ internal sealed class GBPhoneNumberFormatProvider : ComplexPhoneNumberFormatProv
             6 => phoneNumber.NationalDestinationCode!.Length switch
             {
 #pragma warning disable S3358 // Extract this nested ternary operation into an independent statement.
-                3 => international ? "### ######" : ndcOptional ? "(0###) ######" : "0### ######",
                 4 => international ? "#### ######" : ndcOptional ? "(0####) ######" : "0#### ######",
-                5 => international ? "##### ######" : ndcOptional ? "(0#####) ######" : "0##### ######",
 #pragma warning restore S3358 // Extract this nested ternary operation into an independent statement.
                 _ => base.ProvideFormat(phoneNumber, international),
             },
