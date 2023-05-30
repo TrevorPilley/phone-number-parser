@@ -54,9 +54,11 @@ internal sealed class NumberRange
             value,
             x =>
             {
-#pragma warning disable CA1307 // Specify StringComparison for clarity
+#if NETSTANDARD2_0
                 var separatorIndex = x.IndexOf(Chars.Hyphen);
-#pragma warning restore CA1307 // Specify StringComparison for clarity
+#else
+                var separatorIndex = x.IndexOf(Chars.Hyphen, StringComparison.Ordinal);
+#endif
 
                 if (separatorIndex == -1)
                 {
