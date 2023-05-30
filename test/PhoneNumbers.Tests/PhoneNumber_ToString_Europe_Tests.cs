@@ -335,8 +335,11 @@ public class PhoneNumber_ToString_Europe_Tests
 
     [Theory]
     [InlineData("+380442819196", "E.123", "+380 44 281 91 96")]
+    [InlineData("+380891233456", "E.123", "+380 891 233 456")]
     [InlineData("+380442819196", "N", "(044) 281 91 96")]
+    [InlineData("+380891233456", "N", "0891 233 456")]
     [InlineData("+380442819196", "RFC3966", "tel:+380-44-281-91-96")]
+    [InlineData("+380891233456", "RFC3966", "tel:+380-891-233-456")]
     public void Ukraine_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
