@@ -296,6 +296,7 @@ public class PhoneNumber_ToString_Europe_Tests
     [InlineData("+468678550", "E.123", "+46 8 67 85 50")]
     [InlineData("+4686785500", "E.123", "+46 8 678 55 00")]
     [InlineData("+46867855001", "E.123", "+46 8 678 550 01")]
+    [InlineData("+46777855001", "E.123", "+46 77 785 50 01")]
     [InlineData("+469067855", "E.123", "+46 90 678 55")]
     [InlineData("+4690678550", "E.123", "+46 90 67 85 50")]
     [InlineData("+46906785500", "E.123", "+46 90 678 55 00")]
@@ -304,9 +305,21 @@ public class PhoneNumber_ToString_Europe_Tests
     [InlineData("+468678550", "N", "(08) 67 85 50")]
     [InlineData("+4686785500", "N", "(08) 678 55 00")]
     [InlineData("+46867855001", "N", "(08) 678 550 01")]
+    [InlineData("+46777855001", "N", "077 785 50 01")] // mobile so NDC not optional
+    [InlineData("+469067855", "N", "(090) 678 55")]
+    [InlineData("+4690678550", "N", "(090) 67 85 50")]
+    [InlineData("+46906785500", "N", "(090) 678 55 00")]
+    [InlineData("+4664067855", "N", "(0640) 678 55")]
+    [InlineData("+46640678550", "N", "(0640) 67 85 50")]
     [InlineData("+468678550", "RFC3966", "tel:+46-8-67-85-50")]
     [InlineData("+4686785500", "RFC3966", "tel:+46-8-678-55-00")]
     [InlineData("+46867855001", "RFC3966", "tel:+46-8-678-550-01")]
+    [InlineData("+46777855001", "RFC3966", "tel:+46-77-785-50-01")]
+    [InlineData("+469067855", "RFC3966", "tel:+46-90-678-55")]
+    [InlineData("+4690678550", "RFC3966", "tel:+46-90-67-85-50")]
+    [InlineData("+46906785500", "RFC3966", "tel:+46-90-678-55-00")]
+    [InlineData("+4664067855", "RFC3966", "tel:+46-640-678-55")]
+    [InlineData("+46640678550", "RFC3966", "tel:+46-640-67-85-50")]
     public void Sweden_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
