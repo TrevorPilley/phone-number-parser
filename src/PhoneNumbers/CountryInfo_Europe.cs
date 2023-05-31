@@ -363,6 +363,20 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Malta.
+    /// </summary>
+    public static CountryInfo Malta { get; } = new()
+    {
+        CallingCode = "356",
+        Continent = Europe,
+        FormatProvider = MTPhoneNumberFormatProvider.Instance,
+        Iso3166Code = "MT",
+        Name = "Malta",
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 2 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 10 }),
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Moldova.
     /// </summary>
     public static CountryInfo Moldova { get; } = new()
