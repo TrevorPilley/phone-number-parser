@@ -367,7 +367,6 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Luxembourg { get; } = new()
     {
-        AllowsLocalGeographicDialling = true,
         CallingCode = "352",
         Continent = Europe,
         IsEuropeanUnionMember = true,
