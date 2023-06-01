@@ -1,2 +1,3 @@
 # References:
 # - https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200007D0002PDFE.pdf
+G|28|Luxembourg City|000000-999999|
