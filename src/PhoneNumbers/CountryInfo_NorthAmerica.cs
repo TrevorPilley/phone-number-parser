@@ -138,6 +138,22 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Dominica.
+    /// </summary>
+    public static CountryInfo Dominica { get; } = new()
+    {
+        AllowsLocalGeographicDialling = true,
+        CallingCode = NanpCallingCode,
+        Continent = NorthAmerica,
+        FormatProvider = NanpPhoneNumberFormatProvider.Instance,
+        Iso3166Code = "DM",
+        Name = "Dominica",
+        NdcLengths = s_nanpNdcLengths,
+        NsnLengths = s_nanpNsnLengths,
+        SharesCallingCode = true,
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Puerto Rico.
     /// </summary>
     public static CountryInfo PuertoRico { get; } = new()
