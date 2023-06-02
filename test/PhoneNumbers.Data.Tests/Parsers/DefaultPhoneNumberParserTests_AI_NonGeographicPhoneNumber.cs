@@ -8,8 +8,12 @@ public class DefaultPhoneNumberParserTests_AI_NonGeographicPhoneNumber
     private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Anguilla);
 
     [Theory]
-    [InlineData("2647270000", "264", "7270000")]
-    [InlineData("2647279999", "264", "7279999")]
+    [InlineData("2642920000", "264", "2920000")]
+    [InlineData("2642929999", "264", "2929999")]
+    [InlineData("2644610000", "264", "4610000")]
+    [InlineData("2644629999", "264", "4629999")]
+    [InlineData("2644970000", "264", "4970000")]
+    [InlineData("2644989999", "264", "4989999")]
     public void Parse_Known_NonGeographicPhoneNumber_2XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
