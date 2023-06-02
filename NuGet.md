@@ -2,12 +2,6 @@
 
 A library for parsing phone numbers, providing validity of phone numbers including national destination codes (aka area codes) and subscriber numbers (aka line numbers) based upon published numbering plans for each country. Additional attributes such as the kind of phone number (Mobile, Geographic or Non-Geographic) are also included, and all parsing is performed locally within the library using embedded in-memory data files.
 
-Builds for:
-
-- .NET 7.0
-- .NET Standard 2.1 - _supports .NET Core 3.0 or newer and .NET 5.0 or newer_
-- .NET Standard 2.0 - _supports .NET Framework 4.6.2 or newer, although projects will need to be built with a minimum C# language version of 9.0 due to use of init only properties_
-
 ```csharp
 using PhoneNumbers;
 
@@ -34,3 +28,9 @@ phoneNumber.ToString("E.123");           // +44 114 272 6444    (E.123 internati
 phoneNumber.ToString("N");               // (0114) 272 6444     (E.123 national notation format)
 phoneNumber.ToString("RFC3966");         // tel:+44-114-272-644 (RFC3966 format)
 ```
+
+Builds for:
+
+- .NET 7.0
+- .NET Standard 2.1 - _supports .NET Core 3.0 or newer and .NET 5.0 or newer_
+- .NET Standard 2.0 - _supports .NET Framework 4.6.2 or newer, however projects will need to be built with a minimum C# language version of 9.0 due to use of init only properties_
