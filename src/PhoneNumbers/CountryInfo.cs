@@ -175,32 +175,6 @@ public sealed partial class CountryInfo
         return ReadNationalSignificantNumber(value, startIdx);
     }
 
-    /// <summary>
-    /// Counts the digits (0-9) from the specified start index in the specified string,
-    /// until the end of the string or a break character is encountered.
-    /// </summary>
-    private static int CountDigitsFrom(string value, int startIdx)
-    {
-        var digits = 0;
-
-        for (var i = startIdx; i < value.Length; i++)
-        {
-            var charVal = value[i];
-
-            if (IsDigit(charVal))
-            {
-                digits++;
-            }
-
-            if (IsSeparator(charVal))
-            {
-                break;
-            }
-        }
-
-        return digits;
-    }
-
     /// <remarks>Char.IsDigit returns true for more than 0-9 so use a more restricted version.</remarks>
     private static bool IsDigit(char charVal) =>
         charVal is >= '0' and <= '9';
@@ -214,9 +188,7 @@ public sealed partial class CountryInfo
 
     private string ReadNationalSignificantNumber(string value, int startPos)
     {
-        var digits = CountDigitsFrom(value, startPos);
-
-        Span<char> ar = stackalloc char[digits];
+        Span<char> ar = stackalloc char[24]; // more than any valid number should have
         var arPos = 0;
 
         for (var i = startPos; i < value.Length; i++)
@@ -249,10 +221,10 @@ public sealed partial class CountryInfo
 
             if (startsWithTrunkPrefix)
             {
-                return ar.Slice(TrunkPrefix.Length).ToString();
+                return ar.Slice(TrunkPrefix.Length, arPos - TrunkPrefix.Length).ToString();
             }
         }
 
-        return ar.ToString();
+        return ar.Slice(0, arPos).ToString();
     }
 }
