@@ -18,6 +18,8 @@ public class DefaultPhoneNumberParserTests_AI_MobilePhoneNumber
     [InlineData("2645849999", "264", "5849999")]
     [InlineData("2647290000", "264", "7290000")]
     [InlineData("2647299999", "264", "7299999")]
+    [InlineData("2647720000", "264", "7720000")]
+    [InlineData("2647729999", "264", "7729999")]
     public void Parse_Known_MobilePhoneNumber(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
