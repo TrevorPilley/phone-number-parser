@@ -43,6 +43,14 @@ public class PhoneNumber_Parse_NorthAmerica_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_BritishVirginIslands_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+12844946786");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.BritishVirginIslands, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_Canada_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+16137020016");
