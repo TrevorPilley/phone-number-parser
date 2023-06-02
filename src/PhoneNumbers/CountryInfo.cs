@@ -165,36 +165,14 @@ public sealed partial class CountryInfo
             return string.Empty;
         }
 
-        var startPos = 0;
+        var startIdx = 0;
 
         if (HasCallingCode(value))
         {
-            startPos = value.IndexOf(CallingCode, StringComparison.Ordinal) + CallingCode.Length;
+            startIdx = value.IndexOf(CallingCode, StringComparison.Ordinal) + CallingCode.Length;
         }
 
-        return ReadNationalSignificantNumber(value, startPos);
-    }
-
-    private static int CountDigitsAfter(string value, int startPos)
-    {
-        var digits = 0;
-
-        for (var i = startPos; i < value.Length; i++)
-        {
-            var charVal = value[i];
-
-            if (IsDigit(charVal))
-            {
-                digits++;
-            }
-
-            if (IsSeparator(charVal))
-            {
-                break;
-            }
-        }
-
-        return digits;
+        return ReadNationalSignificantNumber(value, startIdx);
     }
 
     /// <remarks>Char.IsDigit returns true for more than 0-9 so use a more restricted version.</remarks>
@@ -210,10 +188,8 @@ public sealed partial class CountryInfo
 
     private string ReadNationalSignificantNumber(string value, int startPos)
     {
-        var digits = CountDigitsAfter(value, startPos);
-
-        var chars = new char[digits];
-        var charPos = 0;
+        Span<char> ar = stackalloc char[24]; // more than any valid number should have
+        var arPos = 0;
 
         for (var i = startPos; i < value.Length; i++)
         {
@@ -221,7 +197,7 @@ public sealed partial class CountryInfo
 
             if (IsDigit(charVal))
             {
-                chars[charPos++] = charVal;
+                ar[arPos++] = charVal;
             }
 
             if (IsSeparator(charVal))
@@ -236,7 +212,7 @@ public sealed partial class CountryInfo
 
             for (int i = 0; i < TrunkPrefix.Length; i++)
             {
-                if (chars[i] != TrunkPrefix[i])
+                if (ar[i] != TrunkPrefix[i])
                 {
                     startsWithTrunkPrefix = false;
                     break;
@@ -245,10 +221,10 @@ public sealed partial class CountryInfo
 
             if (startsWithTrunkPrefix)
             {
-                return chars.AsSpan().Slice(TrunkPrefix.Length).ToString();
+                return ar.Slice(TrunkPrefix.Length, arPos - TrunkPrefix.Length).ToString();
             }
         }
 
-        return new string(chars);
+        return ar.Slice(0, arPos).ToString();
     }
 }
