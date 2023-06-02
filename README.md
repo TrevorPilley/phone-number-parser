@@ -4,22 +4,13 @@
 
 A library for parsing phone numbers, providing validity of phone numbers including national destination codes (aka area codes) and subscriber numbers (aka line numbers) based upon published numbering plans for each country. Additional attributes such as the kind of phone number (Mobile, Geographic or Non-Geographic) are also included, and all parsing is performed locally within the library using embedded in-memory data files.
 
-Builds for:
-
-- .NET 7.0
-- .NET Standard 2.1 - _supports .NET Core 3.0 or newer and .NET 5.0 or newer_
-- .NET Standard 2.0 - _supports .NET Framework 4.6.2 or newer, although projects will need to be built with a minimum C# language version of 9.0 due to use of init only properties_
-
 The library **does not**:
 
+- Yet support every country
 - Provide certainty that a phone number is assigned and in use
 - Include the original carrier for mobile phone numbers due to number portability in most countries
 - Support extension numbers
 - Support alphabetic mnemonic system/alphabetic phone-words (e.g. 123-PHONEME)
-
-## Versioning
-
-The library adheres to [Semantic Versioning](https://semver.org) and [release notes](https://github.com/TrevorPilley/phone-number-parser/releases) are provided for every published version.
 
 ## Install
 
@@ -162,6 +153,18 @@ To out out of specific countries but still use any new ones added in future vers
 ```csharp
 ParseOptions.Default.Countries.Remove(CountryInfo.X);
 ```
+
+## Versioning
+
+The library adheres to [Semantic Versioning](https://semver.org) and [release notes](https://github.com/TrevorPilley/phone-number-parser/releases) are provided for every published version.
+
+Specific builds are included in the nuget package for:
+
+- .NET 7.0
+- .NET Standard 2.1 - _supports .NET Core 3.0 or newer and .NET 5.0 or newer_
+- .NET Standard 2.0 - _supports .NET Framework 4.6.2 or newer, however projects will need to be built with a minimum C# language version of 9.0 due to use of init only properties_
+
+The latest version of .NET will be used (excluding public betas), other versions of .NET and .NET Framework will retain support via the .NET Standard builds.
 
 ## Country support
 
