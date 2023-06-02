@@ -10,5 +10,6 @@ internal static class Chars
     internal const char OpenParenthesis = '(';
     internal const char Pipe = '|';
     internal const char Plus = '+';
+    internal const char Semicolon = ';';
     internal const char Space = ' ';
 }

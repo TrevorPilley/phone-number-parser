@@ -187,6 +187,11 @@ public sealed partial class CountryInfo
             {
                 digits++;
             }
+
+            if (IsSeparator(charVal))
+            {
+                break;
+            }
         }
 
         return digits;
@@ -195,6 +200,9 @@ public sealed partial class CountryInfo
     /// <remarks>Char.IsDigit returns true for more than 0-9 so use a more restricted version.</remarks>
     private static bool IsDigit(char charVal) =>
         charVal is >= '0' and <= '9';
+
+    private static bool IsSeparator(char charVal) =>
+        charVal == Chars.Comma || charVal == Chars.Semicolon;
 
     [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
     private string GetDebuggerDisplay() =>
@@ -214,6 +222,11 @@ public sealed partial class CountryInfo
             if (IsDigit(charVal))
             {
                 chars[charPos++] = charVal;
+            }
+
+            if (IsSeparator(charVal))
+            {
+                break;
             }
         }
 
