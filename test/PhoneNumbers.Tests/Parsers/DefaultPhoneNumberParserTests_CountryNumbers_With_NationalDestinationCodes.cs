@@ -261,4 +261,36 @@ public class DefaultPhoneNumberParserTests_CountryNumbers_WithNationalDestinatio
         Assert.Equal("28000", nonGeographicPhoneNumber.SubscriberNumber);
         Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, nonGeographicPhoneNumber.Kind);
     }
+    
+    [Fact] // This scenario exists within Germany
+    public void Parse_When_Nsn_Shorter_Than_Some_Ndc_Lengths()
+    {
+        var parser = new DefaultPhoneNumberParser(
+            TestHelper.CreateCountryInfo(ndcLengths: new[] { 5, 2 }, nsnLengths: new[] { 7, 4 }),
+            new[]
+            {
+                new CountryNumber
+                {
+                    NationalDestinationCodeRanges = new[] { NumberRange.Create("10000") },
+                    SubscriberNumberRanges = new[] { NumberRange.Create("00-99") },
+                    Kind = PhoneNumberKind.NonGeographicPhoneNumber,
+                    Hint = PhoneNumberHint.None,
+                },
+                new CountryNumber
+                {
+                    NationalDestinationCodeRanges = new[] { NumberRange.Create("18") },
+                    SubscriberNumberRanges = new[] { NumberRange.Create("00-99") },
+                    Kind = PhoneNumberKind.NonGeographicPhoneNumber,
+                    Hint = PhoneNumberHint.None,
+                },
+            });
+
+        var phoneNumber = parser.Parse("1801").PhoneNumber;
+        Assert.NotNull(phoneNumber);
+        Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
+
+        var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
+        Assert.Equal("18", nonGeographicPhoneNumber.NationalDestinationCode);
+        Assert.Equal("01", nonGeographicPhoneNumber.SubscriberNumber);
+    }
 }
