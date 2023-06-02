@@ -165,21 +165,25 @@ public sealed partial class CountryInfo
             return string.Empty;
         }
 
-        var startPos = 0;
+        var startIdx = 0;
 
         if (HasCallingCode(value))
         {
-            startPos = value.IndexOf(CallingCode, StringComparison.Ordinal) + CallingCode.Length;
+            startIdx = value.IndexOf(CallingCode, StringComparison.Ordinal) + CallingCode.Length;
         }
 
-        return ReadNationalSignificantNumber(value, startPos);
+        return ReadNationalSignificantNumber(value, startIdx);
     }
 
-    private static int CountDigitsAfter(string value, int startPos)
+    /// <summary>
+    /// Counts the digits (0-9) from the specified start index in the specified string,
+    /// until the end of the string or a break character is encountered.
+    /// </summary>
+    private static int CountDigitsFrom(string value, int startIdx)
     {
         var digits = 0;
 
-        for (var i = startPos; i < value.Length; i++)
+        for (var i = startIdx; i < value.Length; i++)
         {
             var charVal = value[i];
 
@@ -210,10 +214,10 @@ public sealed partial class CountryInfo
 
     private string ReadNationalSignificantNumber(string value, int startPos)
     {
-        var digits = CountDigitsAfter(value, startPos);
+        var digits = CountDigitsFrom(value, startPos);
 
-        var chars = new char[digits];
-        var charPos = 0;
+        Span<char> ar = stackalloc char[digits];
+        var arPos = 0;
 
         for (var i = startPos; i < value.Length; i++)
         {
@@ -221,7 +225,7 @@ public sealed partial class CountryInfo
 
             if (IsDigit(charVal))
             {
-                chars[charPos++] = charVal;
+                ar[arPos++] = charVal;
             }
 
             if (IsSeparator(charVal))
@@ -236,7 +240,7 @@ public sealed partial class CountryInfo
 
             for (int i = 0; i < TrunkPrefix.Length; i++)
             {
-                if (chars[i] != TrunkPrefix[i])
+                if (ar[i] != TrunkPrefix[i])
                 {
                     startsWithTrunkPrefix = false;
                     break;
@@ -245,10 +249,10 @@ public sealed partial class CountryInfo
 
             if (startsWithTrunkPrefix)
             {
-                return chars.AsSpan().Slice(TrunkPrefix.Length).ToString();
+                return ar.Slice(TrunkPrefix.Length).ToString();
             }
         }
 
-        return new string(chars);
+        return ar.ToString();
     }
 }
