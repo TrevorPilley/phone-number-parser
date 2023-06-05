@@ -59,6 +59,13 @@ public class PhoneNumber_ToString_NorthAmerica_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+17677011252", "E.123", "+1 767-701-1252")]
+    [InlineData("+17677011252", "N", "(767) 701-1252")]
+    [InlineData("+17677011252", "RFC3966", "tel:+1-767-701-1252")]
+    public void Dominica_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+17877222977", "E.123", "+1 787-722-2977")]
     [InlineData("+17877222977", "N", "(787) 722-2977")]
     [InlineData("+17877222977", "RFC3966", "tel:+1-787-722-2977")]
