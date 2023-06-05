@@ -66,6 +66,13 @@ public class PhoneNumber_ToString_NorthAmerica_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+14734081342", "E.123", "+1 473-408-1342")]
+    [InlineData("+14734081342", "N", "(473) 408-1342")]
+    [InlineData("+14734081342", "RFC3966", "tel:+1-473-408-1342")]
+    public void Grenada_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+17877222977", "E.123", "+1 787-722-2977")]
     [InlineData("+17877222977", "N", "(787) 722-2977")]
     [InlineData("+17877222977", "RFC3966", "tel:+1-787-722-2977")]
