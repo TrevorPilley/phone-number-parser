@@ -52,6 +52,13 @@ public class PhoneNumber_ToString_NorthAmerica_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+13459464282", "E.123", "+1 345-946-4282")]
+    [InlineData("+13459464282", "N", "(345) 946-4282")]
+    [InlineData("+13459464282", "RFC3966", "tel:+1-345-946-4282")]
+    public void CaymanIslands_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+17877222977", "E.123", "+1 787-722-2977")]
     [InlineData("+17877222977", "N", "(787) 722-2977")]
     [InlineData("+17877222977", "RFC3966", "tel:+1-787-722-2977")]

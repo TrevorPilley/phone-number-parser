@@ -122,6 +122,22 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Cayman Islands.
+    /// </summary>
+    public static CountryInfo CaymanIslands { get; } = new()
+    {
+        AllowsLocalGeographicDialling = true,
+        CallingCode = NanpCallingCode,
+        Continent = NorthAmerica,
+        FormatProvider = NanpPhoneNumberFormatProvider.Instance,
+        Iso3166Code = "KY",
+        Name = "Cayman Islands",
+        NdcLengths = s_nanpNdcLengths,
+        NsnLengths = s_nanpNsnLengths,
+        SharesCallingCode = true,
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Puerto Rico.
     /// </summary>
     public static CountryInfo PuertoRico { get; } = new()
