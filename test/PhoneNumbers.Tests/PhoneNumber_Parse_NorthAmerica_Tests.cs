@@ -74,6 +74,13 @@ public class PhoneNumber_Parse_NorthAmerica_Tests
         Assert.Equal(CountryInfo.Dominica, phoneNumber.Country);
     }
 
+    [Fact]
+    public void Parse_Value_For_Grenada_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+14734081342");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Grenada, phoneNumber.Country);
+    }
 
     [Fact]
     public void Parse_Value_For_PuertoRico_CallingCode()
