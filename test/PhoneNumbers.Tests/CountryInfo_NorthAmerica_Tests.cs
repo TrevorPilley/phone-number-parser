@@ -105,6 +105,26 @@ public class CountryInfo_NorthAmerica_Tests
     }
 
     [Fact]
+    public void CountryInfo_BritishVirginIslands()
+    {
+        Assert.Same(CountryInfo.BritishVirginIslands, CountryInfo.BritishVirginIslands);
+
+        var countryInfo = CountryInfo.BritishVirginIslands;
+
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
+        Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.Equal("VG", countryInfo.Iso3166Code);
+        Assert.Equal("British Virgin Islands", countryInfo.Name);
+        Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
+        Assert.True(countryInfo.SharesCallingCode);
+        Assert.Null(countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_Canada()
     {
         Assert.Same(CountryInfo.Canada, CountryInfo.Canada);
