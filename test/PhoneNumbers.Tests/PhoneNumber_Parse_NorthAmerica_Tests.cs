@@ -59,6 +59,14 @@ public class PhoneNumber_Parse_NorthAmerica_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_CaymanIslands_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+13459464282");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.CaymanIslands, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_PuertoRico_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+17877222977");
