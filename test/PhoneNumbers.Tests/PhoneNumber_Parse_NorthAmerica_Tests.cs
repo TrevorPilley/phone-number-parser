@@ -67,6 +67,15 @@ public class PhoneNumber_Parse_NorthAmerica_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_Dominica_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+17677011252");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Dominica, phoneNumber.Country);
+    }
+
+
+    [Fact]
     public void Parse_Value_For_PuertoRico_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+17877222977");
