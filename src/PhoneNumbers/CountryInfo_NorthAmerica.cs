@@ -202,6 +202,22 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Saint Kitts and Nevis.
+    /// </summary>
+    public static CountryInfo SaintKittsAndNevis { get; } = new()
+    {
+        AllowsLocalGeographicDialling = true,
+        CallingCode = NanpCallingCode,
+        Continent = NorthAmerica,
+        FormatProvider = NanpPhoneNumberFormatProvider.Instance,
+        Iso3166Code = "KN",
+        Name = "Saint Kitts and Nevis",
+        NdcLengths = s_nanpNdcLengths,
+        NsnLengths = s_nanpNsnLengths,
+        SharesCallingCode = true,
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for the United States.
     /// </summary>
     public static CountryInfo UnitedStates { get; } = new()
