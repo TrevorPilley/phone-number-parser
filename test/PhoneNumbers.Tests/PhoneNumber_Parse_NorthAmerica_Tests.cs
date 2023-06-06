@@ -99,6 +99,14 @@ public class PhoneNumber_Parse_NorthAmerica_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_SaintKittsAndNevis_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+18692291432");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.SaintKittsAndNevis, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_UnitedStatesVirginIslands_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+13407731404");
