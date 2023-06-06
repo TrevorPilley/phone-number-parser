@@ -234,6 +234,22 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Saint Vincent and the Grenadines.
+    /// </summary>
+    public static CountryInfo SaintVincentAndTheGrenadines { get; } = new()
+    {
+        AllowsLocalGeographicDialling = true,
+        CallingCode = NanpCallingCode,
+        Continent = NorthAmerica,
+        FormatProvider = NanpPhoneNumberFormatProvider.Instance,
+        Iso3166Code = "VC",
+        Name = "Saint Vincent and the Grenadines",
+        NdcLengths = s_nanpNdcLengths,
+        NsnLengths = s_nanpNsnLengths,
+        SharesCallingCode = true,
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for the United States.
     /// </summary>
     public static CountryInfo UnitedStates { get; } = new()
