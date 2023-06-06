@@ -107,6 +107,14 @@ public class PhoneNumber_Parse_NorthAmerica_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_SaintLucia_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+17584581701");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.SaintLucia, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_UnitedStatesVirginIslands_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+13407731404");
