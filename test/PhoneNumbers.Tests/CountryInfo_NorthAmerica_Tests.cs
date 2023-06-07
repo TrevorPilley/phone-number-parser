@@ -305,6 +305,26 @@ public class CountryInfo_NorthAmerica_Tests
     }
 
     [Fact]
+    public void CountryInfo_SintMaarten()
+    {
+        Assert.Same(CountryInfo.SintMaarten, CountryInfo.SintMaarten);
+
+        var countryInfo = CountryInfo.SintMaarten;
+
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
+        Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.Equal("SX", countryInfo.Iso3166Code);
+        Assert.Equal("Sint Maarten", countryInfo.Name);
+        Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
+        Assert.True(countryInfo.SharesCallingCode);
+        Assert.Null(countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_UnitedStates()
     {
         Assert.Same(CountryInfo.UnitedStates, CountryInfo.UnitedStates);

@@ -1,0 +1,9 @@
+# References:
+# - https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000F70002PDFE.pdf
+N|721||5460000-5469999,5950000-5969999,5900000-5909999|
+G|721|Philipsburg/Pointe Blanche/Guana Bay/Oyster Pond|5420000-5439999|
+G|721|Colebay/Pelican/Caybay|5440000-5449999|
+G|721|Simpson Bay/Beacon Hill/Maho/Cupecoy|5450000-5459999|
+G|721|Dutch Quarter/Middle Region/Belvedere|5470000-5479999|
+G|721|Cul de Sac/Ebenezer/South Reward/Betty’s Estate/Saunders|5480000-5489999|
+M|721||5200000-5299999,5500000-5509999,5530000-5549999,5560000-5579999,5590000-5599999,5800000-5819999,5840000-5889999|
