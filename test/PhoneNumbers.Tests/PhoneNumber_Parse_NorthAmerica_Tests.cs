@@ -91,6 +91,14 @@ public class PhoneNumber_Parse_NorthAmerica_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_NorthernMarianaIsland_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+16702202200");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.NorthernMarianaIsland, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_PuertoRico_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+17877222977");
