@@ -83,6 +83,14 @@ public class PhoneNumber_Parse_NorthAmerica_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_Jamaica_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+18769686053");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Jamaica, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_Montserrat_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+16644913789");
