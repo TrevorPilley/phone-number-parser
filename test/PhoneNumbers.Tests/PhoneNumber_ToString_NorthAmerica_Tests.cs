@@ -108,6 +108,13 @@ public class PhoneNumber_ToString_NorthAmerica_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+17215425557", "E.123", "+1 721-542-5557")]
+    [InlineData("+17215425557", "N", "(721) 542-5557")]
+    [InlineData("+17215425557", "RFC3966", "tel:+1-721-542-5557")]
+    public void SintMaarten_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+13407731404", "E.123", "+1 340-773-1404")]
     [InlineData("+13407731404", "N", "(340) 773-1404")]
     [InlineData("+13407731404", "RFC3966", "tel:+1-340-773-1404")]

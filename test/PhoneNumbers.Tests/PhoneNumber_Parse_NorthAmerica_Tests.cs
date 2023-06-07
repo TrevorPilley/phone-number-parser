@@ -123,6 +123,14 @@ public class PhoneNumber_Parse_NorthAmerica_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_SintMaarten()
+    {
+        var phoneNumber = PhoneNumber.Parse("+17215425557");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.SintMaarten, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_UnitedStatesVirginIslands_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+13407731404");
