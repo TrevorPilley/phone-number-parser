@@ -73,6 +73,13 @@ public class PhoneNumber_ToString_NorthAmerica_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+18769686053", "E.123", "+1 876-968-6053")]
+    [InlineData("+18769686053", "N", "(876) 968-6053")]
+    [InlineData("+18769686053", "RFC3966", "tel:+1-876-968-6053")]
+    public void Jamaica_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+16644913789", "E.123", "+1 664-491-3789")]
     [InlineData("+16644913789", "N", "(664) 491-3789")]
     [InlineData("+16644913789", "RFC3966", "tel:+1-664-491-3789")]
