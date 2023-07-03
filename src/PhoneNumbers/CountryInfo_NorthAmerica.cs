@@ -298,6 +298,22 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Trinidad and Tobago.
+    /// </summary>
+    public static CountryInfo TrinidadAndTobago { get; } = new()
+    {
+        AllowsLocalGeographicDialling = true,
+        CallingCode = NanpCallingCode,
+        Continent = NorthAmerica,
+        FormatProvider = NanpPhoneNumberFormatProvider.Instance,
+        Iso3166Code = "TT",
+        Name = "Trinidad and Tobago",
+        NdcLengths = s_nanpNdcLengths,
+        NsnLengths = s_nanpNsnLengths,
+        SharesCallingCode = true,
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for the United States.
     /// </summary>
     public static CountryInfo UnitedStates { get; } = new()
