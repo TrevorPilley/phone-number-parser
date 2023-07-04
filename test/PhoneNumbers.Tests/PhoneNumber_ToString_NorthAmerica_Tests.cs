@@ -136,6 +136,13 @@ public class PhoneNumber_ToString_NorthAmerica_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+16499461900", "E.123", "+1 649-946-1900")]
+    [InlineData("+16499461900", "N", "(649) 946-1900")]
+    [InlineData("+16499461900", "RFC3966", "tel:+1-649-946-1900")]
+    public void TurksAndCaicosIslands_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+13407731404", "E.123", "+1 340-773-1404")]
     [InlineData("+13407731404", "N", "(340) 773-1404")]
     [InlineData("+13407731404", "RFC3966", "tel:+1-340-773-1404")]

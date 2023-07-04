@@ -155,6 +155,14 @@ public class PhoneNumber_Parse_NorthAmerica_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_TurksAndCaicosIslands()
+    {
+        var phoneNumber = PhoneNumber.Parse("+16499461900");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.TurksAndCaicosIslands, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_UnitedStatesVirginIslands_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+13407731404");
