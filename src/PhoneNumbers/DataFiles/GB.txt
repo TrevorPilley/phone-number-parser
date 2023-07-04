@@ -1,3 +1,6 @@
+# References:
+# - https://www.ofcom.org.uk/__data/assets/pdf_file/0013/102613/national-numbering-plan.pdf
+# - https://www.ofcom.org.uk/__data/assets/file/0027/227736/S7.csv
 G|113|Leeds|2000000-5999999,7000000-8999999|
 G|114|Sheffield|2000000-7999999|
 G|115|Nottingham|2000000-2999999,6000000-9989999|
