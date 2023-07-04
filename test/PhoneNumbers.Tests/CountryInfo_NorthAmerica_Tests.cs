@@ -385,6 +385,26 @@ public class CountryInfo_NorthAmerica_Tests
     }
 
     [Fact]
+    public void CountryInfo_TurksAndCaicosIslands()
+    {
+        Assert.Same(CountryInfo.TurksAndCaicosIslands, CountryInfo.TurksAndCaicosIslands);
+
+        var countryInfo = CountryInfo.TurksAndCaicosIslands;
+
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
+        Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.Equal("TC", countryInfo.Iso3166Code);
+        Assert.Equal("Turks and Caicos Islands", countryInfo.Name);
+        Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
+        Assert.True(countryInfo.SharesCallingCode);
+        Assert.Null(countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_UnitedStates()
     {
         Assert.Same(CountryInfo.UnitedStates, CountryInfo.UnitedStates);

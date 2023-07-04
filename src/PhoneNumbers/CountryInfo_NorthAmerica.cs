@@ -314,6 +314,22 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Turks and Caicos Islands.
+    /// </summary>
+    public static CountryInfo TurksAndCaicosIslands { get; } = new()
+    {
+        AllowsLocalGeographicDialling = true,
+        CallingCode = NanpCallingCode,
+        Continent = NorthAmerica,
+        FormatProvider = NanpPhoneNumberFormatProvider.Instance,
+        Iso3166Code = "TC",
+        Name = "Turks and Caicos Islands",
+        NdcLengths = s_nanpNdcLengths,
+        NsnLengths = s_nanpNsnLengths,
+        SharesCallingCode = true,
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for the United States.
     /// </summary>
     public static CountryInfo UnitedStates { get; } = new()
