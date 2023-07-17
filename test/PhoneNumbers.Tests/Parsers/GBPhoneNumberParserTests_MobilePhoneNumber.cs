@@ -10,30 +10,7 @@ public class GBPhoneNumberParserTests_MobilePhoneNumber
     [Theory]
     [InlineData("07106000000", "7106", "000000")]
     [InlineData("07106999999", "7106", "999999")]
-    [InlineData("07199000000", "7199", "000000")]
-    [InlineData("07199999999", "7199", "999999")]
     public void Parse_Known_MobilePhoneNumber_71XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
-    {
-        var parseResult = s_parser.Parse(value);
-        parseResult.ThrowIfFailure();
-
-        var phoneNumber = parseResult.PhoneNumber;
-
-        Assert.NotNull(phoneNumber);
-        Assert.IsType<MobilePhoneNumber>(phoneNumber);
-
-        var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.UnitedKingdom, mobilePhoneNumber.Country);
-        Assert.False(mobilePhoneNumber.IsPager);
-        Assert.False(mobilePhoneNumber.IsVirtual);
-        Assert.Equal(NationalDestinationCode, mobilePhoneNumber.NationalDestinationCode);
-        Assert.Equal(subscriberNumber, mobilePhoneNumber.SubscriberNumber);
-    }
-
-    [Theory]
-    [InlineData("07300000000", "7300", "000000")]
-    [InlineData("07300999999", "7300", "999999")]
-    public void Parse_Known_MobilePhoneNumber_73XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
         parseResult.ThrowIfFailure();
@@ -66,14 +43,6 @@ public class GBPhoneNumberParserTests_MobilePhoneNumber
     [InlineData("07452999999", "7452", "999999")]
     [InlineData("07453000000", "7453", "000000")]
     [InlineData("07453999999", "7453", "999999")]
-    [InlineData("07456000000", "7456", "000000")]
-    [InlineData("07456999999", "7456", "999999")]
-    [InlineData("07457000000", "7457", "000000")]
-    [InlineData("07457599999", "7457", "599999")]
-    [InlineData("07457700000", "7457", "700000")]
-    [InlineData("07457999999", "7457", "999999")]
-    [InlineData("07458000000", "7458", "000000")]
-    [InlineData("07458999999", "7458", "999999")]
     public void Parse_Known_MobilePhoneNumber_74XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
@@ -93,6 +62,12 @@ public class GBPhoneNumberParserTests_MobilePhoneNumber
     }
 
     [Theory]
+    [InlineData("07508000000", "7508", "000000")]
+    [InlineData("07508999999", "7508", "999999")]
+    [InlineData("07509800000", "7509", "800000")]
+    [InlineData("07509999999", "7509", "999999")]
+    [InlineData("07510000000", "7510", "000000")]
+    [InlineData("07510999999", "7510", "999999")]
     [InlineData("07599000000", "7599", "000000")]
     [InlineData("07599999999", "7599", "999999")]
     public void Parse_Known_MobilePhoneNumber_75XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
@@ -116,8 +91,6 @@ public class GBPhoneNumberParserTests_MobilePhoneNumber
     [Theory]
     [InlineData("07700000000", "7700", "000000")]
     [InlineData("07700199999", "7700", "199999")]
-    [InlineData("07700700000", "7700", "700000")]
-    [InlineData("07700999999", "7700", "999999")]
     [InlineData("07701000000", "7701", "000000")]
     [InlineData("07701999999", "7701", "999999")]
     [InlineData("07780000000", "7780", "000000")]
@@ -240,6 +213,14 @@ public class GBPhoneNumberParserTests_MobilePhoneNumber
     [Theory]
     [InlineData("07000000000", "7000", "000000")]
     [InlineData("07000999999", "7000", "999999")]
+    [InlineData("07014000000", "7014", "000000")]
+    [InlineData("07014999999", "7014", "999999")]
+    [InlineData("07015000000", "7015", "000000")]
+    [InlineData("07015109999", "7015", "109999")]
+    [InlineData("07015120000", "7015", "120000")]
+    [InlineData("07015129999", "7015", "129999")]
+    [InlineData("07016000000", "7016", "000000")]
+    [InlineData("07016999999", "7016", "999999")]
     [InlineData("07099000000", "7099", "000000")]
     [InlineData("07099999999", "7099", "999999")]
     public void Parse_Known_MobilePhoneNumber_Virtual(string value, string NationalDestinationCode, string subscriberNumber)
