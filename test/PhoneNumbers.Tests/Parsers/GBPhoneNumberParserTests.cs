@@ -60,7 +60,7 @@ public class GBPhoneNumberParserTests
     [InlineData("03600000000")]
     [InlineData("03800000000")]
     [InlineData("03900000000")]
-    [InlineData("07200000000")]
+    [InlineData("07105000000")]
     public void Parse_Returns_Failure_If_NationalDestinationCode_Invalid(string value)
     {
         var result = _parser.Parse(value);
