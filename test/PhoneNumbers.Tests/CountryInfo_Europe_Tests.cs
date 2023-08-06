@@ -478,8 +478,8 @@ public class CountryInfo_Europe_Tests
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("LU", countryInfo.Iso3166Code);
         Assert.Equal("Luxembourg", countryInfo.Name);
-        Assert.Equal(new[] { 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 8, 9, 12 }, countryInfo.NsnLengths);
+        Assert.Empty(countryInfo.NdcLengths);
+        Assert.Equal(new[] { 4, 5, 6, 7, 8, 9, 10, 11, 12 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
