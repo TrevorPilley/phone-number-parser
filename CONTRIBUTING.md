@@ -14,7 +14,7 @@ The project multi targets .NET 7.0 in addition to .NET Standard 2.1 & 2.0 so you
 
 Firstly clone or fork the repository.
 
-There is a `build.ps1` to build, test, view code coverage and create a nuget package on Windows and a `build.sh` for those on macOS (not currently tested on Linux or Windows Subsystem for Linux but it may still work).
+There is a `build.ps1` to build, test, view code coverage and create a nuget package on Windows and a `build.sh` for those on macOS or Linux (Windows Subsystem for Linux but it may still work).
 
 ## Adding a new country
 
