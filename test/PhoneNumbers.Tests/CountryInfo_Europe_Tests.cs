@@ -474,7 +474,7 @@ public class CountryInfo_Europe_Tests
         Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("352", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
-        Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.IsType<LUPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("LU", countryInfo.Iso3166Code);
         Assert.Equal("Luxembourg", countryInfo.Name);

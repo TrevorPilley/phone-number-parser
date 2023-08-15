@@ -369,6 +369,7 @@ public partial class CountryInfo
     {
         CallingCode = "352",
         Continent = Europe,
+        FormatProvider = LUPhoneNumberFormatProvider.Instance,
         IsEuropeanUnionMember = true,
         Iso3166Code = "LU",
         Name = "Luxembourg",
