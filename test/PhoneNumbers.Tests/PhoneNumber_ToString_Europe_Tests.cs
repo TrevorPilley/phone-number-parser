@@ -191,6 +191,9 @@ public class PhoneNumber_ToString_Europe_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+352493579", "E.123", "+352 49 35 79")]
+    [InlineData("+352493579", "N", "49 35 79")]
+    [InlineData("+352493579", "RFC3966", "tel:+352-49-35-79")]
     [InlineData("+35228228228", "E.123", "+352 28 228 228")]
     [InlineData("+35228228228", "N", "28 228 228")]
     [InlineData("+35228228228", "RFC3966", "tel:+352-28-228-228")]
