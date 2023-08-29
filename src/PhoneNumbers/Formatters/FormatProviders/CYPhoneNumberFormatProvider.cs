@@ -3,7 +3,7 @@ namespace PhoneNumbers.Formatters.FormatProviders;
 /// <summary>
 /// A <see cref="PhoneNumberFormatProvider"/> for Cyprus numbers.
 /// </summary>
-internal sealed class CYPhoneNumberFormatProvider : ComplexPhoneNumberFormatProvider
+internal sealed class CYPhoneNumberFormatProvider : PhoneNumberFormatProvider
 {
     private CYPhoneNumberFormatProvider()
     {
@@ -12,9 +12,5 @@ internal sealed class CYPhoneNumberFormatProvider : ComplexPhoneNumberFormatProv
     internal static PhoneNumberFormatProvider Instance { get; } = new CYPhoneNumberFormatProvider();
 
     protected override string ProvideFormat(PhoneNumber phoneNumber, bool international) =>
-        phoneNumber.NationalSignificantNumber.Length switch
-        {
-            8 => "#### ####",
-            _ => base.ProvideFormat(phoneNumber, international),
-        };
+        "#### ####";
 }
