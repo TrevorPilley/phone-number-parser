@@ -11,14 +11,12 @@ internal sealed class LUPhoneNumberFormatProvider : ComplexPhoneNumberFormatProv
 
     internal static PhoneNumberFormatProvider Instance { get; } = new LUPhoneNumberFormatProvider();
 
-    protected override string ProvideFormat(PhoneNumber phoneNumber, bool international)
-    {
-        if (phoneNumber.NationalSignificantNumber.Length == 8 &&
-            phoneNumber.NationalSignificantNumber[0] == '2')
+    protected override string ProvideFormat(PhoneNumber phoneNumber, bool international) =>
+        phoneNumber.NationalSignificantNumber.Length switch
         {
-            return "## ### ###";
-        }
-
-        return base.ProvideFormat(phoneNumber, international);
-    }
+            6 => "## ## ##",
+            8 => phoneNumber.NationalSignificantNumber[0] == '2' ? "## ### ###" : base.ProvideFormat(phoneNumber, international),
+            9 => "# ## ## ## ##",
+            _ => base.ProvideFormat(phoneNumber, international),
+        };
 }
