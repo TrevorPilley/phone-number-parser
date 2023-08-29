@@ -400,7 +400,7 @@ public partial class CountryInfo
         FormatProvider = MCPhoneNumberFormatProvider.Instance,
         Iso3166Code = "MC",
         Name = "Monaco",
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9, 12 }),
     };
 
     /// <summary>
