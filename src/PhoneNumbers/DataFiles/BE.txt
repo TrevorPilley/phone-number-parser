@@ -1,3 +1,6 @@
+# References:
+# - https://www.bipt.be/file/cc73d96153bbd5448a56f19d925d05b1379c7f21/8d6a6b54ed234bec80ec0778fa40868071f61648/b_nr_pq-status-1-1-2018.pdf
+# - https://en.wikipedia.org/wiki/Telephone_numbers_in_Belgium
 G|10|Wavre|000000-999999|
 G|11|Hasselt|000000-999999|
 G|12|Tongeren|000000-999999|

@@ -12,10 +12,13 @@ public class PhoneNumber_ToString_Europe_Tests
     [Theory]
     [InlineData("+3222268888", "E.123", "+32 2 226 88 88")]
     [InlineData("+3250444646", "E.123", "+32 50 44 46 46")]
+    [InlineData("+32455678123", "E.123", "+32 455 67 81 23")]
     [InlineData("+3222268888", "N", "02 226 88 88")]
     [InlineData("+3250444646", "N", "050 44 46 46")]
+    [InlineData("+32455678123", "N", "0455 67 81 23")]
     [InlineData("+3222268888", "RFC3966", "tel:+32-2-226-88-88")]
     [InlineData("+3250444646", "RFC3966", "tel:+32-50-44-46-46")]
+    [InlineData("+32455678123", "RFC3966", "tel:+32-455-67-81-23")]
     public void Belgium_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
