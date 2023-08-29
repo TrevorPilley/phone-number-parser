@@ -363,6 +363,20 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Luxembourg.
+    /// </summary>
+    public static CountryInfo Luxembourg { get; } = new()
+    {
+        CallingCode = "352",
+        Continent = Europe,
+        FormatProvider = LUPhoneNumberFormatProvider.Instance,
+        IsEuropeanUnionMember = true,
+        Iso3166Code = "LU",
+        Name = "Luxembourg",
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 4, 5, 6, 7, 8, 9, 10, 11, 12 }),
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Malta.
     /// </summary>
     public static CountryInfo Malta { get; } = new()
