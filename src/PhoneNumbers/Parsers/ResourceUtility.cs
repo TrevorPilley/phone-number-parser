@@ -63,7 +63,7 @@ internal static class ResourceUtility
 
         while ((line = reader.ReadLine()) is not null)
         {
-            if (line.Length > 0 && line[0] != Chars.Hash)
+            if (line[0] != Chars.Hash)
             {
                 yield return line;
             }
