@@ -16,6 +16,7 @@ internal sealed class BEPhoneNumberFormatProvider : ComplexPhoneNumberFormatProv
         {
             1 => international ? "# ### ## ##" : "0# ### ## ##",
             2 => international ? "## ## ## ##" : "0## ## ## ##",
+            3 => international ? "### ## ## ##" : "0### ## ## ##",
             _ => base.ProvideFormat(phoneNumber, international),
         };
 }
