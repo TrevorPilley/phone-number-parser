@@ -44,7 +44,7 @@ public class ParseOptionsTests
         parseOptions.Countries.Clear();
         parseOptions.AllowEuropeanUnionCountries();
 
-        Assert.True(parseOptions.Countries.Count > 0);
+        Assert.Equal(27, parseOptions.Countries.Count);
         Assert.All(parseOptions.Countries, x => Assert.True(x.IsEuropeanUnionMember));
     }
 
