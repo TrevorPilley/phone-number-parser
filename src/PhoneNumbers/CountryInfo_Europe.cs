@@ -370,6 +370,7 @@ public partial class CountryInfo
         CallingCode = "356",
         Continent = Europe,
         FormatProvider = MTPhoneNumberFormatProvider.Instance,
+        IsEuropeanUnionMember = true,
         Iso3166Code = "MT",
         Name = "Malta",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 2 }),
