@@ -188,7 +188,7 @@ public sealed partial class CountryInfo
 
     private string ReadNationalSignificantNumber(string value, int startPos)
     {
-        Span<char> ar = stackalloc char[24]; // longer than any valid phone number
+        Span<char> ar = stackalloc char[16]; // longer than any valid phone number
         var arPos = 0;
 
         for (var i = startPos; i < value.Length; i++)
