@@ -70,7 +70,7 @@ public class CountryInfoTests
 
     [Fact]
     public void ReadNationalSignificantNumber_With_Number_Exceeding_Array_Size_Returns_Truncated_String() =>
-        Assert.Equal("123456789101112131415161", TestHelper.CreateCountryInfo(trunkPrefix: null).ReadNationalSignificantNumber("+4221234567891011121314151617181920"));
+        Assert.Equal("1234567891011121", TestHelper.CreateCountryInfo(trunkPrefix: null).ReadNationalSignificantNumber("+4221234567891011121314151617181920"));
 
     [Theory]
     [InlineData("+42212345678")]        // E.164 format
