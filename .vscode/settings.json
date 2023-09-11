@@ -21,5 +21,6 @@
       "test/PhoneNumbers.Data.Tests/Parsers/DefaultPhoneNumberParserTests_*",
       "test/PhoneNumbers.Tests/Parsers/DefaultPhoneNumberParserTests_*",
       "test/PhoneNumbers.Tests/Parsers/GBPhoneNumberParserTests_*",
-  ]
+  ],
+  "dotnet.defaultSolution": "PhoneNumbers.sln"
 }
