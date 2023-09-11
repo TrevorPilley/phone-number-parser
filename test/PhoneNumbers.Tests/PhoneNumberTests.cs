@@ -249,7 +249,7 @@ public class PhoneNumberTests
     }
 
     [Fact]
-    public void TryParse_Value_With_CallingCode_Any_Country()
+    public void TryParse_Value_PhoneNumbers_Value_With_CallingCode_UK()
     {
         Assert.True(PhoneNumber.TryParse("+442079813000", out IEnumerable<PhoneNumber> phoneNumbers));
         Assert.NotNull(phoneNumbers);
@@ -258,7 +258,16 @@ public class PhoneNumberTests
     }
 
     [Fact]
-    public void TryParse_Value_Without_CallingCode_Any_Country()
+    public void TryParse_Value_PhoneNumbers_Value_With_CallingCode_US()
+    {
+        Assert.True(PhoneNumber.TryParse("+16054567890", out IEnumerable<PhoneNumber> phoneNumbers));
+        Assert.NotNull(phoneNumbers);
+        Assert.Single(phoneNumbers);
+        Assert.Equal(CountryInfo.UnitedStates, phoneNumbers.Single().Country);
+    }
+
+    [Fact]
+    public void TryParse_Value_PhoneNumbers_Value_Without_CallingCode()
     {
         Assert.True(PhoneNumber.TryParse("02079813000", out IEnumerable<PhoneNumber> phoneNumbers));
         Assert.NotNull(phoneNumbers);
