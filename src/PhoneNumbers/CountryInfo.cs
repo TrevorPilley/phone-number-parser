@@ -215,7 +215,7 @@ public sealed partial class CountryInfo
         {
             var startsWithTrunkPrefix = true;
 
-            for (int i = 0; i < TrunkPrefix.Length; i++)
+            for (var i = 0; i < TrunkPrefix.Length; i++)
             {
                 if (ar[i] != TrunkPrefix[i])
                 {
