@@ -173,10 +173,10 @@ public abstract class PhoneNumber
     }
 
     /// <summary>
-    /// Converts the string representation of a phone number to any <see cref="PhoneNumber"/> equivalents using the default <see cref="ParseOptions"/>. A return value indicates whether the conversion succeeded.
+    /// Converts the string representation of a phone number to any possible <see cref="PhoneNumber"/> equivalents using the default <see cref="ParseOptions"/>. A return value indicates whether the conversion succeeded.
     /// </summary>
     /// <param name="value">A string containing a phone number.</param>
-    /// <param name="phoneNumbers">The <see cref="PhoneNumber"/> equivalent if the conversion succeeds, otherwise null.</param>
+    /// <param name="phoneNumbers">The <see cref="PhoneNumber"/> equivalents if the conversion succeeds, otherwise null.</param>
     /// <returns><c>true</c> if value was converted successfully; otherwise, <c>false</c>.</returns>
     public static bool TryParse(string value, out IEnumerable<PhoneNumber> phoneNumbers) =>
         TryParse(value, ParseOptions.Default, out phoneNumbers);
@@ -192,7 +192,9 @@ public abstract class PhoneNumber
     {
         if (options is not null)
         {
-            phoneNumbers = options.Countries
+            var countries = options.GetCountryInfos(value);
+
+            phoneNumbers = (countries.Any() ? countries : options.Countries)
                 .Select(x => options.ParserFactory.GetParser(x).Parse(value))
                 .Where(x => x.PhoneNumber is not null)
                 .Select(x => x.PhoneNumber)
