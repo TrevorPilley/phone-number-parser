@@ -233,6 +233,7 @@ public partial class CountryInfo
     {
         CallingCode = "52",
         Continent = NorthAmerica,
+        FormatProvider = MXPhoneNumberFormatProvider.Instance,
         Iso3166Code = "MX",
         Name = "Mexico",
         NdcLengths = new ReadOnlyCollection<int>(new[] { 2 }),

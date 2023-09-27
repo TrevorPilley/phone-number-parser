@@ -314,7 +314,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("52", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
-        Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.IsType<MXPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("MX", countryInfo.Iso3166Code);
         Assert.Equal("Mexico", countryInfo.Name);
