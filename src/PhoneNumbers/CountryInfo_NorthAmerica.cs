@@ -194,7 +194,7 @@ public partial class CountryInfo
         Continent = NorthAmerica,
         Iso3166Code = "MX",
         Name = "Mexico",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 1 }),
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 2 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
     };
 
