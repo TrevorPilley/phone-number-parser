@@ -195,7 +195,7 @@ public partial class CountryInfo
         FormatProvider = MXPhoneNumberFormatProvider.Instance,
         Iso3166Code = "MX",
         Name = "Mexico",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 2 }),
+        NdcLengths = new ReadOnlyCollection<int>(new[] { 1 }),
         NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
     };
 
