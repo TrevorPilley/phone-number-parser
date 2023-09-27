@@ -238,7 +238,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("MX", countryInfo.Iso3166Code);
         Assert.Equal("Mexico", countryInfo.Name);
-        Assert.Equal(new[] { 2 }, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 1 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
