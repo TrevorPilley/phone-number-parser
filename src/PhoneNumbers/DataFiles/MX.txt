@@ -1,2 +1,3 @@
 # References:
 # - https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200008A0003PDFE.pdf
+G|55|Mexico City|00000000-99999999|
