@@ -16,6 +16,7 @@
       "extensions": [
         "davidanson.vscode-markdownlint",
         "editorconfig.editorconfig",
+        "ms-dotnettools.csdevkit",
         "ms-dotnettools.csharp",
         //"projektanker.code-butler",
         "streetsidesoftware.code-spell-checker"
