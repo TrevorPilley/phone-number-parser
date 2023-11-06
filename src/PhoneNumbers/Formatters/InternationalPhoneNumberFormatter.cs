@@ -8,8 +8,8 @@ internal abstract class InternationalPhoneNumberFormatter : PhoneNumberFormatter
     protected string Format(
         PhoneNumber phoneNumber,
         string? outputPrefix = null,
-        Char charBetweenCallingCodeAndNsn = Chars.Null,
-        Char nonDigitSubstitute = Chars.Null)
+        char charBetweenCallingCodeAndNsn = Chars.Null,
+        char nonDigitSubstitute = Chars.Null)
     {
         var nsnMask = phoneNumber.Country.FormatProvider.GetFormat(phoneNumber, international: true);
 
