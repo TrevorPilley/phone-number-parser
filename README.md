@@ -37,8 +37,8 @@ There are 2 overloads for Parse:
 var phoneNumber = PhoneNumber.Parse("+441142726444");
 
 // If the phone number string is not in international format:
-// Specify the ISO 3166 Alpha-2 code for the country as the second parameter.
-var phoneNumber = PhoneNumber.Parse("01142726444", "GB"); // Alternatively the typed CountryInfo PhoneNumber.Parse("01142726444", CountryInfo.UnitedKingdom);
+// Specify the typed CountryInfo instance as the second parameter.
+var phoneNumber = PhoneNumber.Parse("01142726444", CountryInfo.UnitedKingdom); // Alternatively the ISO 3166 Alpha-2 code for the country PhoneNumber.Parse("01142726444", "GB");
 ```
 
 There are 3 overloads for TryParse:
@@ -48,8 +48,8 @@ There are 3 overloads for TryParse:
 PhoneNumber.TryParse("+442079813000", out PhoneNumber phoneNumber);
 
 // If the phone number string is not in international format:
-// Specify the ISO 3166 Alpha-2 code for the country as the second parameter.
-PhoneNumber.TryParse("01142726444", "GB", out PhoneNumber phoneNumber); // Alternatively the typed CountryInfo PhoneNumber.TryParse("01142726444", CountryInfo.UnitedKingdom, out PhoneNumber phoneNumber);
+// Specify the typed CountryInfo instance for the country as the second parameter.
+PhoneNumber.TryParse("01142726444", CountryInfo.UnitedKingdom, out PhoneNumber phoneNumber); // Alternatively the ISO 3166 Alpha-2 code PhoneNumber.TryParse("01142726444", "GB", out PhoneNumber phoneNumber);
 
 // The phone number string is not in international format and the country code is not known:
 PhoneNumber.TryParse("02079813000", out IEnumerable<PhoneNumber> phoneNumbers);
@@ -130,7 +130,7 @@ ParseOptions.Default.Countries.Add(CountryInfo.X); // repeat per country
 Alternatively there are additional country sets which can be allowed (any combination may be used):
 
 ```csharp
-// Add all supported countries in one or more continents:
+// Add all countries supported by the library by continent:
 ParseOptions.Default.AllowAfricanCountries();
 ParseOptions.Default.AllowAsianCountries();
 ParseOptions.Default.AllowEuropeanCountries();
@@ -138,10 +138,10 @@ ParseOptions.Default.AllowNorthAmericanCountries();
 ParseOptions.Default.AllowOceanianCountries();
 ParseOptions.Default.AllowSouthAmericanCountries();
 
-// Add all supported countries who are members of the same union:
+// Add all countries supported by the library who are members of the same union:
 ParseOptions.Default.AllowEuropeanUnionCountries();
 
-// Add all supported countries using the same numbering plan:
+// Add all countries supported by the library using the same numbering plan:
 ParseOptions.Default.AllowNorthAmericanNumberingPlanCountries();
 ParseOptions.Default.AllowUnitedKingdomNumberingPlanCountries(); // Countries.Add(CountryInfo.UnitedKingdom) doesn't include Guernsey, Isle of Man and Jersey which also use the same numbering plan.
 ```
