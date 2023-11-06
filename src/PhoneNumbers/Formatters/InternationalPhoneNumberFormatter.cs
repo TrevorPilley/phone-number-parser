@@ -24,7 +24,7 @@ internal abstract class InternationalPhoneNumberFormatter : PhoneNumberFormatter
 
         if (charBetweenCallingCodeAndNsn != Chars.Null)
         {
-            arSize = arSize + 1;
+            arSize++;
         }
 
         Span<char> ar = stackalloc char[arSize];
