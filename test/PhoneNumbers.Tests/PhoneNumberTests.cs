@@ -151,7 +151,7 @@ public class PhoneNumberTests
     [InlineData("tel:+44-114-272-6444;ext=1234")]
     public void TryParse_Value_CountryCode(string input)
     {
-        Assert.True(PhoneNumber.TryParse(input, "GB", out PhoneNumber phoneNumber));
+        Assert.True(PhoneNumber.TryParse(input, "GB", out var phoneNumber));
         Assert.NotNull(phoneNumber);
     }
 
@@ -176,7 +176,7 @@ public class PhoneNumberTests
     [InlineData("441142726444")]
     public void TryParse_Value_CountryCode_False_If_Value_Invalid(string input)
     {
-        Assert.False(PhoneNumber.TryParse(input, "GB", out PhoneNumber phoneNumber));
+        Assert.False(PhoneNumber.TryParse(input, "GB", out var phoneNumber));
         Assert.Null(phoneNumber);
     }
 
@@ -201,7 +201,7 @@ public class PhoneNumberTests
     [InlineData("tel:+44-114-272-6444;ext=1234")]
     public void TryParse_Value_CountryInfo(string input)
     {
-        Assert.True(PhoneNumber.TryParse(input, CountryInfo.UnitedKingdom, out PhoneNumber phoneNumber));
+        Assert.True(PhoneNumber.TryParse(input, CountryInfo.UnitedKingdom, out var phoneNumber));
         Assert.NotNull(phoneNumber);
     }
 
@@ -219,7 +219,7 @@ public class PhoneNumberTests
     [InlineData("441142726444")]
     public void TryParse_Value_CountryInfo_False_If_Value_Invalid(string input)
     {
-        Assert.False(PhoneNumber.TryParse(input, CountryInfo.UnitedKingdom, out PhoneNumber phoneNumber));
+        Assert.False(PhoneNumber.TryParse(input, CountryInfo.UnitedKingdom, out var phoneNumber));
         Assert.Null(phoneNumber);
     }
 

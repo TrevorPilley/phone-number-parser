@@ -32,7 +32,7 @@ internal sealed class NationalPhoneNumberFormatter : PhoneNumberFormatter
         var arPos = 0;
 
         var nsnPos = 0;
-        for (int i = 0; i < nsnMask.Length; i++)
+        for (var i = 0; i < nsnMask.Length; i++)
         {
             if (nsnMask[i] == Chars.Hash)
             {
