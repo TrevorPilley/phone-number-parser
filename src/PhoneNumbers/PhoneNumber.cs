@@ -12,10 +12,8 @@ public abstract class PhoneNumber
     /// Initialises a new instance of the <see cref="PhoneNumber"/> class.
     /// </summary>
     /// <param name="phoneNumberHint">The <see cref="PhoneNumberHint"/> for the phone number.</param>
-    protected PhoneNumber(PhoneNumberHint phoneNumberHint)
-    {
+    protected PhoneNumber(PhoneNumberHint phoneNumberHint) =>
         Hint = phoneNumberHint;
-    }
 
     /// <summary>
     /// Gets the <see cref="CountryInfo"/> for the phone number.
