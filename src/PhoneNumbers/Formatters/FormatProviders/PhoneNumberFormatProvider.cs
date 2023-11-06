@@ -14,7 +14,7 @@ internal abstract class PhoneNumberFormatProvider
         ProvideFormat(phoneNumber, international);
 
     protected static string GenerateMask(int nsnLength) =>
-        new string(Chars.Hash, nsnLength);
+        new(Chars.Hash, nsnLength);
 
     protected static string GenerateMask(int ndcLength, int snLength) =>
         ndcLength == 0 ? GenerateMask(snLength) : $"{new string(Chars.Hash, ndcLength)} {new string(Chars.Hash, snLength)}";
