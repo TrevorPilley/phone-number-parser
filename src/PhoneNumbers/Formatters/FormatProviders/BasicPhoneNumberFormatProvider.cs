@@ -22,7 +22,7 @@ internal sealed class BasicPhoneNumberFormatProvider : PhoneNumberFormatProvider
     {
         var initialMask = _maskCache.GetOrAdd(
             phoneNumber.NationalSignificantNumber.Length,
-            x => GenerateMask(x));
+            GenerateMask);
 
         if (international || !phoneNumber.Country.HasTrunkPrefix)
         {
