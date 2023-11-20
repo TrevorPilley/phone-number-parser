@@ -31,7 +31,7 @@ phoneNumber.ToString("RFC3966");         // tel:+44-114-272-644 (RFC3966 format)
 
 Builds for:
 
-- .NET 7.0
+- .NET 8.0
 - .NET Standard 2.1 - _supports .NET Core 3.0 or newer and .NET 5.0 or newer_
 - .NET Standard 2.0 - _supports .NET Framework 4.6.2 or newer, however projects will need to be built with a minimum C# language version of 9.0 due to use of init only properties_
 
