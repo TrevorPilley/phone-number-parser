@@ -1,3 +1,4 @@
+using System.Collections.ObjectModel;
 using System.Reflection;
 
 namespace PhoneNumbers.Parsers;
@@ -43,7 +44,7 @@ internal static class ResourceUtility
             _ => throw new NotSupportedException(value.ToString()),
         };
 
-    private static IReadOnlyList<NumberRange> ParseNumberRanges(string value) =>
+    private static ReadOnlyCollection<NumberRange> ParseNumberRanges(string value) =>
         value
             .Split(Chars.Comma)
             .Select(NumberRange.Create)
