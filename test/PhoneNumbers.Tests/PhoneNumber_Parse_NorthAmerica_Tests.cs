@@ -75,6 +75,14 @@ public class PhoneNumber_Parse_NorthAmerica_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_DominicanRepublic_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+18294738525");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.DominicanRepublic, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_Grenada_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+14734081342");
