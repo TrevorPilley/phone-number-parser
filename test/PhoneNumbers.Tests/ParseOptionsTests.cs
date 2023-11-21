@@ -1,3 +1,4 @@
+using System;
 using System.Reflection;
 
 namespace PhoneNumbers.Tests;
@@ -123,6 +124,18 @@ public class ParseOptionsTests
 
         Assert.True(countryInfos.Count > 0);
         Assert.Equal(countryInfos, ParseOptions.Default.Countries);
+    }
+
+    [Fact]
+    public void Extensions_Throw_If_ParseOptions_Null()
+    {
+        var parseOptions = default(ParseOptions);
+
+        typeof(ParseOptions)
+            .GetMethods(BindingFlags.Static | BindingFlags.Public)
+            .Where(x => x.GetParameters().Length == 1 && x.GetParameters()[0].ParameterType == typeof(ParseOptions))
+            .ToList()
+            .ForEach(x => Assert.Throws<ArgumentNullException>(() => x.Invoke(null, [parseOptions])));
     }
 
     [Fact]
