@@ -33,7 +33,7 @@ public static CountryInfo CountryName { get; } = new()
     Continent = Africa/Asia/Europe/Oceania/NorthAmerica/SouthAmerica, // as appropriate
     Iso3166Code = "ZZ",
     Name = "CountryName",
-    NsnLengths = new ReadOnlyCollection<int>(new[] { N }),
+    NsnLengths = new ReadOnlyCollection<int>([N]),
 };
 ```
 

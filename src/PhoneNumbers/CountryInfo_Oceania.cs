@@ -32,8 +32,8 @@ public partial class CountryInfo
         FormatProvider = AUPhoneNumberFormatProvider.Instance,
         Iso3166Code = "AU",
         Name = "Australia",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 5, 6, 7, 8, 9, 10 }),
+        NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),
+        NsnLengths = new ReadOnlyCollection<int>([5, 6, 7, 8, 9, 10]),
         TrunkPrefix = "0",
     };
 
@@ -62,7 +62,7 @@ public partial class CountryInfo
         Continent = Oceania,
         Iso3166Code = "PG",
         Name = "Papua New Guinea",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8 }),
+        NdcLengths = new ReadOnlyCollection<int>([3, 2]),
+        NsnLengths = new ReadOnlyCollection<int>([7, 8]),
     };
 }
