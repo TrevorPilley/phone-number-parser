@@ -136,7 +136,7 @@ public class ParseOptionsTests
             .ToList()
             .ForEach(x =>
             {
-                var exception = Assert.Throws<TargetInvocationException>(() => x.Invoke(null, new [] { parseOptions }));
+                var exception = Assert.Throws<TargetInvocationException>(() => x.Invoke(null, [parseOptions]));
                 Assert.IsType<ArgumentNullException>(exception.InnerException);
             });
     }

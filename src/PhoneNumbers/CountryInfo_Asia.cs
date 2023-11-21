@@ -13,7 +13,7 @@ public partial class CountryInfo
         Continent = Asia,
         Iso3166Code = "HK",
         Name = "Hong Kong",
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9, 12 }),
+        NsnLengths = new ReadOnlyCollection<int>([8, 9, 12]),
     };
 
     /// <summary>
@@ -25,7 +25,7 @@ public partial class CountryInfo
         Continent = Asia,
         Iso3166Code = "MO",
         Name = "Macau",
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 8 }),
+        NsnLengths = new ReadOnlyCollection<int>([8]),
     };
 
     /// <summary>
@@ -37,6 +37,6 @@ public partial class CountryInfo
         Continent = Asia,
         Iso3166Code = "SG",
         Name = "Singapore",
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 10, 11 }),
+        NsnLengths = new ReadOnlyCollection<int>([8, 10, 11]),
     };
 }

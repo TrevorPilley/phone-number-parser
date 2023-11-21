@@ -14,8 +14,8 @@ public partial class CountryInfo
         Continent = Africa,
         Iso3166Code = "EG",
         Name = "Egypt",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9, 10, 11 }),
+        NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),
+        NsnLengths = new ReadOnlyCollection<int>([8, 9, 10, 11]),
         TrunkPrefix = "0",
     };
 
@@ -29,8 +29,8 @@ public partial class CountryInfo
         FormatProvider = SimplePhoneNumberFormatProvider.Default,
         Iso3166Code = "KE",
         Name = "Kenya",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8, 9, 12 }),
+        NdcLengths = new ReadOnlyCollection<int>([3, 2]),
+        NsnLengths = new ReadOnlyCollection<int>([7, 8, 9, 12]),
         TrunkPrefix = "0",
     };
 
@@ -44,8 +44,8 @@ public partial class CountryInfo
         Continent = Africa,
         Iso3166Code = "NG",
         Name = "Nigeria",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 10 }),
+        NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),
+        NsnLengths = new ReadOnlyCollection<int>([8, 10]),
         TrunkPrefix = "0",
     };
 
@@ -58,8 +58,8 @@ public partial class CountryInfo
         Continent = Africa,
         Iso3166Code = "ZA",
         Name = "South Africa",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 9, 13 }),
+        NdcLengths = new ReadOnlyCollection<int>([2]),
+        NsnLengths = new ReadOnlyCollection<int>([9, 13]),
         TrunkPrefix = "0",
     };
 }

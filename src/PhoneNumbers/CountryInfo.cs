@@ -19,13 +19,13 @@ public sealed partial class CountryInfo
     internal const string Oceania = "Oceania";
     internal const string SouthAmerica = "South America";
     private static readonly ReadOnlyCollection<int> s_emptyIntArray = new(Array.Empty<int>());
-    private static readonly ReadOnlyCollection<PhoneNumberFormatter> s_formatters = new(new[]
-    {
+    private static readonly ReadOnlyCollection<PhoneNumberFormatter> s_formatters = new(
+    [
         E164PhoneNumberFormatter.Instance,
         E123PhoneNumberFormatter.Instance,
         NationalPhoneNumberFormatter.Instance,
         Rfc3966PhoneNumberFormatter.Instance,
-    });
+    ]);
 
     /// <summary>
     /// Initialises a new instance of the <see cref="CountryInfo"/> class.
