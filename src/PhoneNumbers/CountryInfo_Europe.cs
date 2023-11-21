@@ -15,8 +15,8 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "AT",
         Name = "Austria",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2, 1 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 }),
+        NdcLengths = new ReadOnlyCollection<int>([4, 3, 2, 1]),
+        NsnLengths = new ReadOnlyCollection<int>([4, 5, 6, 7, 8, 9, 10, 11, 12, 13]),
         TrunkPrefix = "0",
     };
 
@@ -30,8 +30,8 @@ public partial class CountryInfo
         Iso3166Code = "BY",
         FormatProvider = SimplePhoneNumberFormatProvider.Default,
         Name = "Belarus",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 9, 10, 11 }),
+        NdcLengths = new ReadOnlyCollection<int>([4, 3, 2]),
+        NsnLengths = new ReadOnlyCollection<int>([6, 9, 10, 11]),
         TrunkPrefix = "8",
     };
 
@@ -46,8 +46,8 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "BE",
         Name = "Belgium",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9 }),
+        NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),
+        NsnLengths = new ReadOnlyCollection<int>([8, 9]),
         TrunkPrefix = "0",
     };
 
@@ -62,8 +62,8 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "BG",
         Name = "Bulgaria",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9, 12 }),
+        NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),
+        NsnLengths = new ReadOnlyCollection<int>([8, 9, 12]),
         TrunkPrefix = "0",
     };
 
@@ -78,8 +78,8 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "HR",
         Name = "Croatia",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2, 1 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8, 9, 10 }),
+        NdcLengths = new ReadOnlyCollection<int>([5, 4, 3, 2, 1]),
+        NsnLengths = new ReadOnlyCollection<int>([6, 7, 8, 9, 10]),
         TrunkPrefix = "0",
     };
 
@@ -94,8 +94,8 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "CY",
         Name = "Cyprus",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 8 }),
+        NdcLengths = new ReadOnlyCollection<int>([2]),
+        NsnLengths = new ReadOnlyCollection<int>([8]),
     };
 
     /// <summary>
@@ -109,8 +109,8 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "CZ",
         Name = "Czech Republic",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 9, 10, 11, 12 }),
+        NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),
+        NsnLengths = new ReadOnlyCollection<int>([7, 9, 10, 11, 12]),
     };
 
     /// <summary>
@@ -123,7 +123,7 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "DK",
         Name = "Denmark",
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 8 }),
+        NsnLengths = new ReadOnlyCollection<int>([8]),
     };
 
     /// <summary>
@@ -137,8 +137,8 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "EE",
         Name = "Estonia",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8, 10, 12 }),
+        NdcLengths = new ReadOnlyCollection<int>([4, 3, 2]),
+        NsnLengths = new ReadOnlyCollection<int>([7, 8, 10, 12]),
     };
 
     /// <summary>
@@ -152,8 +152,8 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "FI",
         Name = "Finland",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2, 1 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 5, 6, 7, 8, 9, 10, 11, 12 }),
+        NdcLengths = new ReadOnlyCollection<int>([4, 3, 2, 1]),
+        NsnLengths = new ReadOnlyCollection<int>([5, 6, 7, 8, 9, 10, 11, 12]),
         TrunkPrefix = "0",
     };
 
@@ -168,7 +168,7 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "FR",
         Name = "France",
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 9, 13 }),
+        NsnLengths = new ReadOnlyCollection<int>([9, 13]),
         TrunkPrefix = "0",
     };
 
@@ -183,8 +183,8 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "DE",
         Name = "Germany",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 }),
+        NdcLengths = new ReadOnlyCollection<int>([5, 4, 3, 2]),
+        NsnLengths = new ReadOnlyCollection<int>([4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]),
         TrunkPrefix = "0",
     };
 
@@ -198,8 +198,8 @@ public partial class CountryInfo
         FormatProvider = BasicPhoneNumberFormatProvider.Instance,
         Iso3166Code = "GI",
         Name = "Gibraltar",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 4, 8 }),
+        NdcLengths = new ReadOnlyCollection<int>([3, 2]),
+        NsnLengths = new ReadOnlyCollection<int>([4, 8]),
     };
 
     /// <summary>
@@ -213,8 +213,8 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "GR",
         Name = "Greece",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
+        NdcLengths = new ReadOnlyCollection<int>([4, 3, 2]),
+        NsnLengths = new ReadOnlyCollection<int>([10]),
     };
 
     /// <summary>
@@ -228,8 +228,8 @@ public partial class CountryInfo
         FormatProvider = GBPhoneNumberFormatProvider.Instance,
         Iso3166Code = "GG",
         Name = "Guernsey",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 4 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
+        NdcLengths = new ReadOnlyCollection<int>([4]),
+        NsnLengths = new ReadOnlyCollection<int>([10]),
         SharesCallingCode = true,
         TrunkPrefix = "0",
     };
@@ -245,8 +245,8 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "HU",
         Name = "Hungary",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 2, 1 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9, 12 }),
+        NdcLengths = new ReadOnlyCollection<int>([2, 1]),
+        NsnLengths = new ReadOnlyCollection<int>([8, 9, 12]),
         TrunkPrefix = "06",
     };
 
@@ -262,8 +262,8 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "IE",
         Name = "Ireland",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 8, 9, 12 }),
+        NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),
+        NsnLengths = new ReadOnlyCollection<int>([7, 8, 9, 12]),
         TrunkPrefix = "0",
     };
 
@@ -278,8 +278,8 @@ public partial class CountryInfo
         FormatProvider = GBPhoneNumberFormatProvider.Instance,
         Iso3166Code = "IM",
         Name = "Isle of Man",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 4 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
+        NdcLengths = new ReadOnlyCollection<int>([4]),
+        NsnLengths = new ReadOnlyCollection<int>([10]),
         SharesCallingCode = true,
         TrunkPrefix = "0",
     };
@@ -296,8 +296,8 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "IT",
         Name = "Italy",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 5, 6, 7, 8, 9, 10, 11 }),
+        NdcLengths = new ReadOnlyCollection<int>([5, 4, 3, 2]),
+        NsnLengths = new ReadOnlyCollection<int>([5, 6, 7, 8, 9, 10, 11]),
     };
 
     /// <summary>
@@ -311,8 +311,8 @@ public partial class CountryInfo
         FormatProvider = GBPhoneNumberFormatProvider.Instance,
         Iso3166Code = "JE",
         Name = "Jersey",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 4 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 10 }),
+        NdcLengths = new ReadOnlyCollection<int>([4]),
+        NsnLengths = new ReadOnlyCollection<int>([10]),
         SharesCallingCode = true,
         TrunkPrefix = "0",
     };
@@ -327,8 +327,8 @@ public partial class CountryInfo
         Continent = Europe,
         Iso3166Code = "XK",
         Name = "Kosovo",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9 }),
+        NdcLengths = new ReadOnlyCollection<int>([3, 2]),
+        NsnLengths = new ReadOnlyCollection<int>([8, 9]),
         TrunkPrefix = "0",
     };
 
@@ -343,7 +343,7 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "LV",
         Name = "Latvia",
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 8 }),
+        NsnLengths = new ReadOnlyCollection<int>([8]),
     };
 
     /// <summary>
@@ -357,8 +357,8 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "LT",
         Name = "Lithuania",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 8 }),
+        NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),
+        NsnLengths = new ReadOnlyCollection<int>([8]),
         TrunkPrefix = "8",
     };
 
@@ -373,7 +373,7 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "LU",
         Name = "Luxembourg",
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 4, 5, 6, 7, 8, 9, 10, 11, 12 }),
+        NsnLengths = new ReadOnlyCollection<int>([4, 5, 6, 7, 8, 9, 10, 11, 12]),
     };
 
     /// <summary>
@@ -387,8 +387,8 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "MT",
         Name = "Malta",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 10 }),
+        NdcLengths = new ReadOnlyCollection<int>([2]),
+        NsnLengths = new ReadOnlyCollection<int>([8, 10]),
     };
 
     /// <summary>
@@ -400,8 +400,8 @@ public partial class CountryInfo
         Continent = Europe,
         Iso3166Code = "MD",
         Name = "Moldova",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 5, 6, 7, 8 }),
+        NdcLengths = new ReadOnlyCollection<int>([3, 2]),
+        NsnLengths = new ReadOnlyCollection<int>([5, 6, 7, 8]),
         TrunkPrefix = "0",
     };
 
@@ -415,7 +415,7 @@ public partial class CountryInfo
         FormatProvider = MCPhoneNumberFormatProvider.Instance,
         Iso3166Code = "MC",
         Name = "Monaco",
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9, 12 }),
+        NsnLengths = new ReadOnlyCollection<int>([8, 9, 12]),
     };
 
     /// <summary>
@@ -429,8 +429,8 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "NL",
         Name = "Netherlands",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
+        NdcLengths = new ReadOnlyCollection<int>([3, 2]),
+        NsnLengths = new ReadOnlyCollection<int>([9]),
         TrunkPrefix = "0",
     };
 
@@ -444,7 +444,7 @@ public partial class CountryInfo
         FormatProvider = NOPhoneNumberFormatProvider.Instance,
         Iso3166Code = "NO",
         Name = "Norway",
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 12 }),
+        NsnLengths = new ReadOnlyCollection<int>([8, 12]),
     };
 
     /// <summary>
@@ -458,8 +458,8 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "PL",
         Name = "Poland",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8, 9 }),
+        NdcLengths = new ReadOnlyCollection<int>([2]),
+        NsnLengths = new ReadOnlyCollection<int>([6, 7, 8, 9]),
     };
 
     /// <summary>
@@ -472,8 +472,8 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "PT",
         Name = "Portugal",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
+        NdcLengths = new ReadOnlyCollection<int>([3]),
+        NsnLengths = new ReadOnlyCollection<int>([9]),
     };
 
     /// <summary>
@@ -487,8 +487,8 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "RO",
         Name = "Romania",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8, 9 }),
+        NdcLengths = new ReadOnlyCollection<int>([3, 2]),
+        NsnLengths = new ReadOnlyCollection<int>([6, 7, 8, 9]),
         TrunkPrefix = "0",
     };
 
@@ -502,7 +502,7 @@ public partial class CountryInfo
         FormatProvider = SimplePhoneNumberFormatProvider.Default,
         Iso3166Code = "SM",
         Name = "San Marino",
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8, 9, 10 }),
+        NsnLengths = new ReadOnlyCollection<int>([6, 7, 8, 9, 10]),
     };
 
     /// <summary>
@@ -515,8 +515,8 @@ public partial class CountryInfo
         Continent = Europe,
         Iso3166Code = "RS",
         Name = "Serbia",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 9, 10, 11, 12 }),
+        NdcLengths = new ReadOnlyCollection<int>([3, 2]),
+        NsnLengths = new ReadOnlyCollection<int>([8, 9, 10, 11, 12]),
         TrunkPrefix = "0",
     };
 
@@ -530,8 +530,8 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "SK",
         Name = "Slovakia",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2, 1 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 9 }),
+        NdcLengths = new ReadOnlyCollection<int>([4, 3, 2, 1]),
+        NsnLengths = new ReadOnlyCollection<int>([7, 9]),
         TrunkPrefix = "0",
     };
 
@@ -547,8 +547,8 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "SL",
         Name = "Slovenia",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 4, 3, 2, 1 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 8, 12 }),
+        NdcLengths = new ReadOnlyCollection<int>([4, 3, 2, 1]),
+        NsnLengths = new ReadOnlyCollection<int>([8, 12]),
         TrunkPrefix = "0",
     };
 
@@ -563,8 +563,8 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "ES",
         Name = "Spain",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 9, 13 }),
+        NdcLengths = new ReadOnlyCollection<int>([3, 2]),
+        NsnLengths = new ReadOnlyCollection<int>([9, 13]),
     };
 
     /// <summary>
@@ -579,8 +579,8 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "SE",
         Name = "Sweden",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2, 1 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8, 9, 10, 13 }),
+        NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),
+        NsnLengths = new ReadOnlyCollection<int>([6, 7, 8, 9, 10, 13]),
         TrunkPrefix = "0",
     };
 
@@ -594,8 +594,8 @@ public partial class CountryInfo
         FormatProvider = CHPhoneNumberFormatProvider.Instance,
         Iso3166Code = "CH",
         Name = "Switzerland",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 9 }),
+        NdcLengths = new ReadOnlyCollection<int>([3, 2]),
+        NsnLengths = new ReadOnlyCollection<int>([9]),
         TrunkPrefix = "0",
     };
 
@@ -610,8 +610,8 @@ public partial class CountryInfo
         FormatProvider = UAPhoneNumberFormatProvider.Instance,
         Iso3166Code = "UA",
         Name = "Ukraine",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 9, 10 }),
+        NdcLengths = new ReadOnlyCollection<int>([3, 2]),
+        NsnLengths = new ReadOnlyCollection<int>([9, 10]),
         TrunkPrefix = "0",
     };
 
@@ -627,8 +627,8 @@ public partial class CountryInfo
         FormatProvider = GBPhoneNumberFormatProvider.Instance,
         Iso3166Code = "GB",
         Name = "United Kingdom",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 5, 4, 3, 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 7, 9, 10 }),
+        NdcLengths = new ReadOnlyCollection<int>([5, 4, 3, 2]),
+        NsnLengths = new ReadOnlyCollection<int>([7, 9, 10]),
         TrunkPrefix = "0",
     };
 }

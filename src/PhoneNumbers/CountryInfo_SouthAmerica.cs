@@ -16,8 +16,8 @@ public partial class CountryInfo
         FormatProvider = BRPhoneNumberFormatProvider.Instance,
         Iso3166Code = "BR",
         Name = "Brazil",
-        NdcLengths = new ReadOnlyCollection<int>(new[] { 3, 2 }),
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 10, 11 }),
+        NdcLengths = new ReadOnlyCollection<int>([3, 2]),
+        NsnLengths = new ReadOnlyCollection<int>([10, 11]),
         TrunkPrefix = "0",
     };
 }

@@ -6,8 +6,8 @@ namespace PhoneNumbers;
 public partial class CountryInfo
 {
     internal const string NanpCallingCode = "1";
-    private static readonly ReadOnlyCollection<int> s_nanpNdcLengths = new(new[] { 3 });
-    private static readonly ReadOnlyCollection<int> s_nanpNsnLengths = new(new[] { 10 });
+    private static readonly ReadOnlyCollection<int> s_nanpNdcLengths = new([3]);
+    private static readonly ReadOnlyCollection<int> s_nanpNsnLengths = new([10]);
 
     /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Anguilla.
