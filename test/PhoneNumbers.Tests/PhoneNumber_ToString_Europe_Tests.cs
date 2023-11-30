@@ -3,6 +3,13 @@ namespace PhoneNumbers.Tests;
 public class PhoneNumber_ToString_Europe_Tests
 {
     [Theory]
+    [InlineData("+35542259571", "E.123", "+355 4 2259571")]
+    [InlineData("+35542259571", "N", "04 2259571")]
+    [InlineData("+35542259571", "RFC3966", "tel:+355-4-2259571")]
+    public void Albania_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+375172171185", "E.123", "+375 17 2171185")]
     [InlineData("+375172171185", "N", "817 2171185")]
     [InlineData("+375172171185", "RFC3966", "tel:+375-17-2171185")]
