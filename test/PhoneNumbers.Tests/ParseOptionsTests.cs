@@ -126,6 +126,22 @@ public class ParseOptionsTests
     }
 
     [Fact]
+    public void Extensions_Throw_If_ParseOptions_Null()
+    {
+        var parseOptions = default(ParseOptions);
+
+        typeof(ParseOptionsExtensions)
+            .GetMethods(BindingFlags.Static | BindingFlags.Public)
+            .Where(x => x.GetParameters().Length == 1 && x.GetParameters()[0].ParameterType == typeof(ParseOptions))
+            .ToList()
+            .ForEach(x =>
+            {
+                var exception = Assert.Throws<TargetInvocationException>(() => x.Invoke(null, new [] { parseOptions }));
+                Assert.IsType<ArgumentNullException>(exception.InnerException);
+            });
+    }
+
+    [Fact]
     public void GetCountryInfo_Does_Not_Exist() =>
         Assert.Null(ParseOptions.Default.GetCountryInfo("ZZ"));
 
