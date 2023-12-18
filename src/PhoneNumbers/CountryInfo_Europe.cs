@@ -14,7 +14,7 @@ public partial class CountryInfo
         Continent = Europe,
         Iso3166Code = "AL",
         Name = "Albania",
-        NsnLengths = new ReadOnlyCollection<int>(new[] { 8 }),
+        NsnLengths = new ReadOnlyCollection<int>(new[] { 6, 7, 8 }),
         TrunkPrefix = "0",
     };
 
