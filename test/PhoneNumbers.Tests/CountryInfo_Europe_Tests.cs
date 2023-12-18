@@ -19,7 +19,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("AL", countryInfo.Iso3166Code);
         Assert.Equal("Albania", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
-        Assert.Equal(new[] { 8 }, countryInfo.NsnLengths);
+        Assert.Equal(new[] { 6, 7, 8 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
