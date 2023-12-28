@@ -4,6 +4,8 @@
 
 A library for parsing phone numbers, providing validity of phone numbers including national destination codes (aka area codes) and subscriber numbers (aka line numbers) based upon published numbering plans for each country. Additional attributes such as the kind of phone number (Mobile, Geographic or Non-Geographic) are also included, and all parsing is performed locally within the library using embedded in-memory data files.
 
+## Limitations
+
 The library **does not**:
 
 - Yet support every country
@@ -94,7 +96,7 @@ nonGeographicPhoneNumber.IsPremiumRate;            // true/false
 nonGeographicPhoneNumber.IsSharedCost;             // true/false
 ```
 
-The phone number can be formatted in the following ways, the default format output can be round tripped via `PhoneNumber.Parse()`.
+The phone number can be formatted in the following ways, the default format output can be round tripped via `PhoneNumber.Parse()` to easily support persistence and serialization use cases.
 
 ```csharp
 phoneNumber.ToString();                            // +441142726444       (defaults to E.164 format)
