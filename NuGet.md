@@ -21,7 +21,7 @@ phoneNumber.Country.TrunkPrefix;         // 0
 var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
 geographicPhoneNumber.GeographicArea;    // Sheffield
 
-// The phone number can be formatted in the following ways, the default format output can be round tripped via `PhoneNumber.Parse()` to make database persistence straightforward.
+// The phone number can be formatted in the following ways, the default format output can be round tripped via `PhoneNumber.Parse()` to easily support persistence and serialization use cases.
 phoneNumber.ToString();                  // +441142726444       (defaults to E.164 format)
 phoneNumber.ToString("E.164");           // +441142726444       (E.164 format)
 phoneNumber.ToString("E.123");           // +44 114 272 6444    (E.123 international format)
@@ -34,3 +34,13 @@ Builds for:
 - .NET 7.0
 - .NET Standard 2.1 - _supports .NET Core 3.0 or newer and .NET 5.0 or newer_
 - .NET Standard 2.0 - _supports .NET Framework 4.6.2 or newer, however projects will need to be built with a minimum C# language version of 9.0 due to use of init only properties_
+
+## Limitations
+
+The library **does not**:
+
+- Yet support every country
+- Provide certainty that a phone number is assigned and in use
+- Include the original carrier for mobile phone numbers due to number portability in most countries
+- Support extension numbers
+- Support alphabetic mnemonic system/alphabetic phone-words (e.g. 123-PHONEME)
