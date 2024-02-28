@@ -16,9 +16,10 @@ public sealed class GeographicPhoneNumber : PhoneNumber, IEquatable<GeographicPh
 
     /// <summary>
     /// Gets the name of the geographic area the phone number the area code is allocated to.
-    /// Depending on the country, this could be an individual city or larger region such as a county.
     /// </summary>
-    /// <remarks>This is an indication based upon the data available for each country.</remarks>
+    /// <remarks>
+    /// This is an indication based upon the data available for each country and could be an individual city or larger region such as a county.
+    /// </remarks>
     public required string GeographicArea { get; init; }
 
     /// <inheritdoc/>
