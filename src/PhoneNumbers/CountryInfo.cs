@@ -73,7 +73,7 @@ public sealed partial class CountryInfo
     public required string Iso3166Code { get; init; } = null!;
 
     /// <summary>
-    /// Gets the name of the country.
+    /// Gets the name of the country in English.
     /// </summary>
     public required string Name { get; init; } = null!;
 
