@@ -11,8 +11,15 @@ internal sealed class AUPhoneNumberFormatProvider : ComplexPhoneNumberFormatProv
 
     internal static PhoneNumberFormatProvider Instance { get; } = new AUPhoneNumberFormatProvider();
 
-    protected override string ProvideFormat(PhoneNumber phoneNumber, bool international) =>
-        phoneNumber.NationalSignificantNumber.Length switch
+    protected override string ProvideFormat(PhoneNumber phoneNumber, bool international)
+    {
+        if (phoneNumber is NonGeographicPhoneNumber nonGeographicPhoneNumber &&
+        nonGeographicPhoneNumber.IsFreephone)
+        {
+            return "#### ### ###";
+        }
+
+        return phoneNumber.NationalSignificantNumber.Length switch
         {
             9 => phoneNumber.Kind switch
             {
@@ -21,4 +28,5 @@ internal sealed class AUPhoneNumberFormatProvider : ComplexPhoneNumberFormatProv
             },
             _ => base.ProvideFormat(phoneNumber, international),
         };
+    }
 }
