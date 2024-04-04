@@ -11,6 +11,7 @@ public partial class CountryInfo
     {
         CallingCode = "852",
         Continent = Asia,
+        InternationalCallPrefix = "001",
         Iso3166Code = "HK",
         Name = "Hong Kong",
         NsnLengths = new ReadOnlyCollection<int>([8, 9, 11, 12]),
@@ -35,6 +36,7 @@ public partial class CountryInfo
     {
         CallingCode = "65",
         Continent = Asia,
+        InternationalCallPrefix = "000",
         Iso3166Code = "SG",
         Name = "Singapore",
         NsnLengths = new ReadOnlyCollection<int>([8, 10, 11]),
