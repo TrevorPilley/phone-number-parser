@@ -8,8 +8,8 @@ public class DefaultPhoneNumberParserTests_ME_GeographicNumber
     private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Montenegro);
 
     [Theory]
-    [InlineData("020000000", "20", "000000", "Podgorica, Danilovgrad, Kolašin")]
-    [InlineData("020999999", "20", "999999", "Podgorica, Danilovgrad, Kolašin")]
+    [InlineData("020000000", "20", "000000", "Podgorica, Tuzi, Danilovgrad, Kolašin")]
+    [InlineData("020999999", "20", "999999", "Podgorica, Tuzi, Danilovgrad, Kolašin")]
     public void Parse_Known_GeographicPhoneNumber_2X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
     {
         var parseResult = s_parser.Parse(value);
@@ -78,8 +78,8 @@ public class DefaultPhoneNumberParserTests_ME_GeographicNumber
     [Theory]
     [InlineData("050000000", "50", "000000", "Bijelo Polje, Mojkovac")]
     [InlineData("050999999", "50", "999999", "Bijelo Polje, Mojkovac")]
-    [InlineData("051000000", "51", "000000", "Berane, Andrijevica, Rožaje, Plav")]
-    [InlineData("051999999", "51", "999999", "Berane, Andrijevica, Rožaje, Plav")]
+    [InlineData("051000000", "51", "000000", "Berane, Andrijevica, Rožaje, Plav, Petnjica, Gusinje")]
+    [InlineData("051999999", "51", "999999", "Berane, Andrijevica, Rožaje, Plav, Petnjica, Gusinje")]
     [InlineData("052000000", "52", "000000", "Pljevlja, Žabljak")]
     [InlineData("052999999", "52", "999999", "Pljevlja, Žabljak")]
     public void Parse_Known_GeographicPhoneNumber_5X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
