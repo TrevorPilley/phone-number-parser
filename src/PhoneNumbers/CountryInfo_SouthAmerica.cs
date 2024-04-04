@@ -14,6 +14,7 @@ public partial class CountryInfo
         CallingCode = "55",
         Continent = SouthAmerica,
         FormatProvider = BRPhoneNumberFormatProvider.Instance,
+        InternationalCallPrefix = "0xx",
         Iso3166Code = "BR",
         Name = "Brazil",
         NdcLengths = new ReadOnlyCollection<int>([3, 2]),
