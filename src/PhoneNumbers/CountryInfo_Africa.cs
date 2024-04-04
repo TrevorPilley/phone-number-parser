@@ -50,7 +50,7 @@ public partial class CountryInfo
     };
 
     /// <summary>
-    /// Gets the <see cref="CountryInfo"/> for SouthAfrica.
+    /// Gets the <see cref="CountryInfo"/> for South Africa.
     /// </summary>
     public static CountryInfo SouthAfrica { get; } = new()
     {
