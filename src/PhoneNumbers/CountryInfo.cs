@@ -15,6 +15,7 @@ public sealed partial class CountryInfo
     internal const string Africa = "Africa";
     internal const string Asia = "Asia";
     internal const string Europe = "Europe";
+    internal const string ItuInternationalCallPrefix = "00";
     internal const string NorthAmerica = "North America";
     internal const string Oceania = "Oceania";
     internal const string SouthAmerica = "South America";
@@ -63,6 +64,12 @@ public sealed partial class CountryInfo
     /// Gets a value indicating whether the country has a trunk prefix.
     /// </summary>
     public bool HasTrunkPrefix => TrunkPrefix is not null;
+
+    /// <summary>
+    /// Gets the international call prefix.
+    /// </summary>
+    /// <remarks>May also be referred to as international direct dialling or international subscriber dialling, defaults to the ITU recommended '00', see https://en.wikipedia.org/wiki/List_of_international_call_prefixes.</remarks>
+    public string InternationalCallPrefix { get; init; } = ItuInternationalCallPrefix;
 
     /// <summary>
     /// Gets a value indicating whether the country is a member of the European Union.

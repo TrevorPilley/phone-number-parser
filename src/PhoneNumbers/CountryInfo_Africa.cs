@@ -27,6 +27,7 @@ public partial class CountryInfo
         CallingCode = "254",
         Continent = Africa,
         FormatProvider = SimplePhoneNumberFormatProvider.Default,
+        InternationalCallPrefix = "000",
         Iso3166Code = "KE",
         Name = "Kenya",
         NdcLengths = new ReadOnlyCollection<int>([3, 2]),
@@ -42,6 +43,7 @@ public partial class CountryInfo
         AllowsLocalGeographicDialling = true,
         CallingCode = "234",
         Continent = Africa,
+        InternationalCallPrefix = "009",
         Iso3166Code = "NG",
         Name = "Nigeria",
         NdcLengths = new ReadOnlyCollection<int>([4, 3]),
@@ -70,6 +72,7 @@ public partial class CountryInfo
     {
         CallingCode = "255",
         Continent = Africa,
+        InternationalCallPrefix = "000",
         Iso3166Code = "TZ",
         Name = "Tanzania",
         NdcLengths = new ReadOnlyCollection<int>([5, 3, 2]),

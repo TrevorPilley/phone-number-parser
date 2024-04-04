@@ -15,6 +15,7 @@ public class CountryInfo_Asia_Tests
         Assert.Equal("852", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("001", countryInfo.InternationalCallPrefix);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("HK", countryInfo.Iso3166Code);
         Assert.Equal("Hong Kong", countryInfo.Name);
@@ -35,6 +36,7 @@ public class CountryInfo_Asia_Tests
         Assert.Equal("853", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("MO", countryInfo.Iso3166Code);
         Assert.Equal("Macau", countryInfo.Name);
@@ -55,6 +57,7 @@ public class CountryInfo_Asia_Tests
         Assert.Equal("65", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("000", countryInfo.InternationalCallPrefix);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("SG", countryInfo.Iso3166Code);
         Assert.Equal("Singapore", countryInfo.Name);

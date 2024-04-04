@@ -16,6 +16,7 @@ public class CountryInfo_Oceania_Tests
         Assert.Equal(CountryInfo.Oceania, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.Equal(CountryInfo.NanpInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Equal("AS", countryInfo.Iso3166Code);
         Assert.Equal("American Samoa", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
@@ -35,6 +36,7 @@ public class CountryInfo_Oceania_Tests
         Assert.Equal("61", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Oceania, countryInfo.Continent);
         Assert.IsType<AUPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("0011", countryInfo.InternationalCallPrefix);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("AU", countryInfo.Iso3166Code);
         Assert.Equal("Australia", countryInfo.Name);
@@ -55,6 +57,7 @@ public class CountryInfo_Oceania_Tests
         Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Oceania, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal(CountryInfo.NanpInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("GU", countryInfo.Iso3166Code);
         Assert.Equal("Guam", countryInfo.Name);
@@ -75,6 +78,7 @@ public class CountryInfo_Oceania_Tests
         Assert.Equal("675", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Oceania, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("PG", countryInfo.Iso3166Code);
         Assert.Equal("Papua New Guinea", countryInfo.Name);
