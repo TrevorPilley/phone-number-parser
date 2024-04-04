@@ -238,6 +238,13 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
         return ReadNationalSignificantNumber(value, startIdx);
     }
 
+    /// <summary>
+    /// Gets a value indicting whether this <see cref="CountryInfo"/> shares a calling code with the specified <see cref="CountryInfo"/>.
+    /// </summary>
+    /// <returns>True if the both countries share a calling code, otherwise false.</returns>
+    internal bool SharesCallingCodeWith(CountryInfo countryInfo) =>
+        CallingCode.Equals(countryInfo.CallingCode, StringComparison.Ordinal);
+
     /// <remarks>Char.IsDigit returns true for more than 0-9 so use a more restricted version.</remarks>
     private static bool IsDigit(char charVal) =>
         charVal is >= '0' and <= '9';

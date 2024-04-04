@@ -258,6 +258,20 @@ public class CountryInfoTests
                 .ReadNationalSignificantNumber(value));
 
     [Fact]
+    public void ShareCallingCodeWith()
+    {
+        Assert.False(CountryInfo.Canada.SharesCallingCodeWith(CountryInfo.France));
+
+        Assert.True(CountryInfo.Canada.SharesCallingCodeWith(CountryInfo.UnitedStates));
+        Assert.True(CountryInfo.Guernsey.SharesCallingCodeWith(CountryInfo.IsleOfMan));
+        Assert.True(CountryInfo.Guernsey.SharesCallingCodeWith(CountryInfo.Jersey));
+        Assert.True(CountryInfo.Guernsey.SharesCallingCodeWith(CountryInfo.UnitedKingdom));
+        Assert.True(CountryInfo.UnitedKingdom.SharesCallingCodeWith(CountryInfo.Guernsey));
+        Assert.True(CountryInfo.UnitedKingdom.SharesCallingCodeWith(CountryInfo.IsleOfMan));
+        Assert.True(CountryInfo.UnitedKingdom.SharesCallingCodeWith(CountryInfo.Jersey));
+    }
+    
+    [Fact]
     public void When_Constructed()
     {
         var countryInfo = (CountryInfo)Activator.CreateInstance(typeof(CountryInfo), true);
