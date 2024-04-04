@@ -83,4 +83,24 @@ public class CountryInfo_Africa_Tests
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
+
+    [Fact]
+    public void CountryInfo_Tanzania()
+    {
+        Assert.Same(CountryInfo.Tanzania, CountryInfo.Tanzania);
+
+        var countryInfo = CountryInfo.Tanzania;
+
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal("255", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
+        Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.Equal("TZ", countryInfo.Iso3166Code);
+        Assert.Equal("Tanzania", countryInfo.Name);
+        //Assert.Equal(new[] { 2 }, countryInfo.NdcLengths);
+        //Assert.Equal(new[] { 9, 13 }, countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Equal("0", countryInfo.TrunkPrefix);
+    }
 }
