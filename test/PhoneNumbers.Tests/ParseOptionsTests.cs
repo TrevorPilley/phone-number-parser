@@ -138,6 +138,8 @@ public class ParseOptionsTests
             {
                 var exception = Assert.Throws<TargetInvocationException>(() => x.Invoke(null, [parseOptions]));
                 Assert.IsType<ArgumentNullException>(exception.InnerException);
+                var argumentNullException = (ArgumentNullException)exception.InnerException;
+                Assert.Equal("parseOptions", argumentNullException.ParamName);
             });
     }
 
