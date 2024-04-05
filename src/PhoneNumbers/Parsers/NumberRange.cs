@@ -7,7 +7,7 @@ namespace PhoneNumbers.Parsers;
 [DebuggerDisplay("{" + nameof(GetDebuggerDisplay) + "(),nq}")]
 internal sealed class NumberRange
 {
-    private static readonly ConcurrentDictionary<string, NumberRange> s_numberRangeCache = new();
+    private static readonly ConcurrentDictionary<string, NumberRange> s_numberRangeCache = new(StringComparer.Ordinal);
 
     private readonly long _fromIntValue;
     private readonly bool _isSingleNumber;
