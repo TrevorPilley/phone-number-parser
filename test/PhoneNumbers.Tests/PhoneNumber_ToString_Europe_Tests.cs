@@ -141,7 +141,7 @@ public class PhoneNumber_ToString_Europe_Tests
     [InlineData("+3545101500", "RFC3966", "tel:+354-510-1500")]
     public void Iceland_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
-    
+
     [Theory]
     [InlineData("+35318049600", "E.123", "+353 1 804 9600")]
     [InlineData("+35361247656", "E.123", "+353 61 247 656")]

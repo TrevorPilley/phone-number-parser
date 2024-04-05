@@ -263,7 +263,7 @@ public partial class CountryInfo
         NsnLengths = new ReadOnlyCollection<int>([8, 9, 12]),
         TrunkPrefix = "06",
     };
-    
+
     /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Iceland.
     /// </summary>
@@ -275,7 +275,7 @@ public partial class CountryInfo
         Name = "Iceland",
         NsnLengths = new ReadOnlyCollection<int>([7, 9]),
     };
-    
+
     /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Ireland.
     /// </summary>
