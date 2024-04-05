@@ -187,6 +187,9 @@ dotnet_diagnostic.SA1309.severity = none
 # SA1311: Static readonly fields should begin with upper-case letter
 dotnet_diagnostic.SA1311.severity = none
 
+# MA0048: File name must match type name
+dotnet_diagnostic.MA0048.severity = none
+
 # Xml files
 [*.{xml,stylecop,resx,ruleset}]
 indent_size = 2
