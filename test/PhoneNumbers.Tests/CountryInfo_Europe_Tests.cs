@@ -355,7 +355,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("354", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
-        Assert.Falsw(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("IS", countryInfo.Iso3166Code);
         Assert.Equal("Iceland", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
