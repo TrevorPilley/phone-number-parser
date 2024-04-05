@@ -13,7 +13,7 @@ internal sealed class ROPhoneNumberFormatProvider : ComplexPhoneNumberFormatProv
 
     protected override string ProvideFormat(PhoneNumber phoneNumber, bool international)
     {
-        if (phoneNumber.NationalDestinationCode == "21" &&
+        if ("21".Equals(phoneNumber.NationalDestinationCode, StringComparison.Ordinal) &&
             phoneNumber.NationalSignificantNumber.Length == 9)
         {
             return international ? "## ### ## ##" : "0## ### ## ##";
