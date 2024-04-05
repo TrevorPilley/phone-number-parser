@@ -28,7 +28,7 @@ public sealed class ParseOptions
     /// </summary>
     /// <param name="countryCode">A string containing an ISO 3166 Alpha-2 code.</param>
     internal CountryInfo? GetCountryInfo(string countryCode) =>
-        Countries.SingleOrDefault(x => x.Iso3166Code == countryCode);
+        Countries.SingleOrDefault(x => x.Iso3166Code.Equals(countryCode, StringComparison.Ordinal));
 
     /// <summary>
     /// Gets the supported <see cref="CountryInfo"/>s for which the specified value is potentially an international number.
