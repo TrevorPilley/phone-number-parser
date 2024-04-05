@@ -263,7 +263,19 @@ public partial class CountryInfo
         NsnLengths = new ReadOnlyCollection<int>([8, 9, 12]),
         TrunkPrefix = "06",
     };
-
+    
+    /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Iceland.
+    /// </summary>
+    public static CountryInfo Iceland { get; } = new()
+    {
+        CallingCode = "354",
+        Continent = Europe,
+        Iso3166Code = "IS",
+        Name = "Iceland",
+        NsnLengths = new ReadOnlyCollection<int>([7, 9]),
+    }
+    
     /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Ireland.
     /// </summary>
