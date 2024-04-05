@@ -38,8 +38,6 @@ internal class SimplePhoneNumberFormatProvider : PhoneNumberFormatProvider
             return initialMask;
         }
 
-        var ndcOptional = phoneNumber.NdcIsOptional();
-
         var maskBuilder = new StringBuilder(20);
         maskBuilder.Append(initialMask);
 
@@ -48,7 +46,7 @@ internal class SimplePhoneNumberFormatProvider : PhoneNumberFormatProvider
             maskBuilder.Insert(0, phoneNumber.Country.TrunkPrefix);
         }
 
-        if (ndcOptional)
+        if (phoneNumber.NdcIsOptional())
         {
             maskBuilder.Insert(0, Chars.OpenParenthesis);
             maskBuilder.Insert(
