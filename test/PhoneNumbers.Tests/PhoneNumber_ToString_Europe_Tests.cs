@@ -228,6 +228,13 @@ public class PhoneNumber_ToString_Europe_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+38220406700", "E.123", "+382 20 406 700")]
+    [InlineData("+38220406700", "N", "020 406 700")]
+    [InlineData("+38220406700", "RFC3966", "tel:+382-20-406-700")]
+    public void Montenegro_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+31702140214", "E.123", "+31 7 02 14 02 14")]
     [InlineData("+31702140214", "N", "07 02 14 02 14")]
     [InlineData("+31702140214", "RFC3966", "tel:+31-7-02-14-02-14")]

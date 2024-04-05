@@ -419,6 +419,20 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Montenegro.
+    /// </summary>
+    public static CountryInfo Montenegro { get; } = new()
+    {
+        CallingCode = "382",
+        Continent = Europe,
+        Iso3166Code = "ME",
+        Name = "Montenegro",
+        NdcLengths = new ReadOnlyCollection<int>([2]),
+        NsnLengths = new ReadOnlyCollection<int>([4, 5, 8, 12]),
+        TrunkPrefix = "0",
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Netherlands.
     /// </summary>
     public static CountryInfo Netherlands { get; } = new()
