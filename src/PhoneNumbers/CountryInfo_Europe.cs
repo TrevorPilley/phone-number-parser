@@ -274,7 +274,7 @@ public partial class CountryInfo
         Iso3166Code = "IS",
         Name = "Iceland",
         NsnLengths = new ReadOnlyCollection<int>([7, 9]),
-    }
+    };
     
     /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Ireland.
