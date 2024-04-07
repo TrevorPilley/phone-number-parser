@@ -63,7 +63,7 @@ public partial class CountryInfo
         NdcLengths = new ReadOnlyCollection<int>([2]),
         NsnLengths = new ReadOnlyCollection<int>([8]),
         TrunkPrefix = "0",
-    }
+    };
 
     /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Bulgaria.
