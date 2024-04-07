@@ -23,6 +23,13 @@ public class PhoneNumber_ToString_Europe_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+38733250600", "E.123", "+387 33 250 600")]
+    [InlineData("+38733250600", "N", "033 250 600")]
+    [InlineData("+38733250600", "RFC3966", "tel:+387-33-250-600")]
+    public void BosniaAndHerzegovina_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+35929492760", "E.123", "+359 2 949 2760")]
     [InlineData("+35929492760", "N", "(02) 949 2760")]
     [InlineData("+35929492760", "RFC3966", "tel:+359-2-949-2760")]

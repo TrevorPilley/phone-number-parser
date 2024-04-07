@@ -60,8 +60,8 @@ public partial class CountryInfo
         Continent = Europe,
         Iso3166Code = "BA",
         Name = "Bosnia and Herzegovina",
-        NdcLengths = new ReadOnlyCollection<int>([2]),
-        NsnLengths = new ReadOnlyCollection<int>([8]),
+        NdcLengths = new ReadOnlyCollection<int>([4, 3, 2]),
+        NsnLengths = new ReadOnlyCollection<int>([8, 9]),
         TrunkPrefix = "0",
     };
 
