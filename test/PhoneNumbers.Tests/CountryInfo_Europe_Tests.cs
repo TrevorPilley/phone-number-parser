@@ -79,7 +79,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("BA", countryInfo.Iso3166Code);
         Assert.Equal("Bosnia and Herzegovina", countryInfo.Name);
         Assert.Equal(new[] { 4, 3, 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 8, 9 }, countryInfo.NsnLengths);
+        Assert.Equal(new[] { 6, 8, 9 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
