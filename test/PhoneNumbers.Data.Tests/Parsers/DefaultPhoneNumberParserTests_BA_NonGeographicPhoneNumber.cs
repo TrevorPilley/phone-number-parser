@@ -8,8 +8,8 @@ public class DefaultPhoneNumberParserTests_BA_NonGeographicPhoneNumber
     private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.BosniaAndHerzegovina);
 
     [Theory]
-    [InlineData("0801000000", "8010", "00000")]
-    [InlineData("0801099999", "8010", "99999")]
+    [InlineData("080100000", "8010", "0000")]
+    [InlineData("080109999", "8010", "9999")]
     [InlineData("081900000", "819", "00000")]
     [InlineData("081999999", "819", "99999")]
     [InlineData("0830000", "83", "0000")]
