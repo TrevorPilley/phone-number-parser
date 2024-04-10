@@ -243,6 +243,14 @@ public class PhoneNumber_Parse_Europe_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_NorthMacedonia_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+38923289200");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.NorthMacedonia, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_Norway_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+4722824600");
