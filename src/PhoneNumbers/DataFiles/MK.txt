@@ -2,17 +2,17 @@
 # - https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000CE0002PDFE.pdf
 G|2|Skopje|0000000-9999999|
 G|31|Kumanovo, Kriva Palanka, Kratovo|200000-999999|
-G|32|Stip, Probistip, Sveti Nikole, Radovis|200000-999999|
-G|33|Kocani, Berovo, Delcevo, Vinica|200000-999999|
+G|32|Štip, Probištip, Sveti Nikole, Radoviš|200000-999999|
+G|33|Kočani, Berovo, Delcevo, Vinica|200000-999999|
 G|34|Gevgelija, Valandovo, Strumica, Dojran|200000-999999|
 G|42|Gostivar|200000-999999|
 G|43|Veles, Kavadarci, Negotino|200000-999999|
 G|44|Tetovo|200000-999999|
-G|45|Kicevo, Makedonski Brod|200000-999999|
+G|45|Kičevo, Makedonski Brod|200000-999999|
 G|46|Ohrid, Struga, Debar|200000-999999|
 G|47|Bitola, Demir Hisar, Resen|200000-999999|
-G|48|Prilep, Krusevo|200000-999999|
+G|48|Prilep, Kruševo|200000-999999|
 N|500||00000-99999|R
 M|70-79||200000-999999|
-N|800||00000-99999|
+N|800||00000-99999|F
 N|801-899||00000-99999|S

@@ -10,7 +10,7 @@ public class DefaultPhoneNumberParserTests_MK_NonGeographicPhoneNumber
     [Theory]
     [InlineData("080000000", "800", "00000")]
     [InlineData("080099999", "800", "99999")]
-    public void Parse_Known_NonGeographicPhoneNumber_8XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
+    public void Parse_Known_NonGeographicPhoneNumber_Freephone(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
         parseResult.ThrowIfFailure();
@@ -22,7 +22,7 @@ public class DefaultPhoneNumberParserTests_MK_NonGeographicPhoneNumber
 
         var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
         Assert.Equal(CountryInfo.NorthMacedonia, nonGeographicPhoneNumber.Country);
-        Assert.False(nonGeographicPhoneNumber.IsFreephone);
+        Assert.True(nonGeographicPhoneNumber.IsFreephone);
         Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
         Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
         Assert.False(nonGeographicPhoneNumber.IsSharedCost);

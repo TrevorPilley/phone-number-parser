@@ -249,9 +249,12 @@ public class PhoneNumber_ToString_Europe_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
-    [InlineData("+38923289200", "E.123", "+389 23 289 200")]
-    [InlineData("+38923289200", "N", "023 289 200")]
-    [InlineData("+38923289200", "RFC3966", "tel:+389-23-289-200")]
+    [InlineData("+38923289200", "E.123", "+389 2 328 9200")]
+    [InlineData("+38970221213", "E.123", "+389 70 221 213")]
+    [InlineData("+38923289200", "N", "02 328 9200")]
+    [InlineData("+38970221213", "N", "070 221 213")]
+    [InlineData("+38923289200", "RFC3966", "tel:+389-2-328-9200")]
+    [InlineData("+38970221213", "RFC3966", "tel:+389-70-221-213")]
     public void NorthMacedonia_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
