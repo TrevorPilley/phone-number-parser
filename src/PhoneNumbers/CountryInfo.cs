@@ -76,9 +76,14 @@ public sealed partial class CountryInfo
     public required string Iso3166Code { get; init; } = null!;
 
     /// <summary>
-    /// Gets the name of the country in English.
+    /// Gets the name of the country the native language of the country.
     /// </summary>
     public required string Name { get; init; } = null!;
+
+    /// <summary>
+    /// Gets the name of the country in English.
+    /// </summary>
+    public required string NameEnglish { get; init; } = null!;
 
     /// <summary>
     /// Gets a value indicating whether the calling code is shared with another country.
