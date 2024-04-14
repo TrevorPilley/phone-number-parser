@@ -59,7 +59,7 @@ public class CountryInfo_Asia_Tests
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("SG", countryInfo.Iso3166Code);
-        Assert.Equal("Singapore", countryInfo.Name);
+        Assert.Equal("Singapura", countryInfo.Name);
         Assert.Equal("Singapore", countryInfo.NameEnglish);
         Assert.Empty(countryInfo.NdcLengths);
         Assert.Equal(new[] { 8, 10, 11 }, countryInfo.NsnLengths);

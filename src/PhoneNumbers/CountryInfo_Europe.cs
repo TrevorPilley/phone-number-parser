@@ -14,7 +14,7 @@ public partial class CountryInfo
         Continent = Europe,
         IsEuropeanUnionMember = true,
         Iso3166Code = "AT",
-        Name = "Austria",
+        Name = "Österreich", // German
         NameEnglish = "Austria",
         NdcLengths = new ReadOnlyCollection<int>([4, 3, 2, 1]),
         NsnLengths = new ReadOnlyCollection<int>([4, 5, 6, 7, 8, 9, 10, 11, 12, 13]),
@@ -30,7 +30,7 @@ public partial class CountryInfo
         Continent = Europe,
         FormatProvider = SimplePhoneNumberFormatProvider.Default,
         Iso3166Code = "BY",
-        Name = "Belarus",
+        Name = "Беларусь", // Belarusian
         NameEnglish = "Belarus",
         NdcLengths = new ReadOnlyCollection<int>([4, 3, 2]),
         NsnLengths = new ReadOnlyCollection<int>([6, 9, 10, 11]),
@@ -47,7 +47,7 @@ public partial class CountryInfo
         FormatProvider = BEPhoneNumberFormatProvider.Instance,
         IsEuropeanUnionMember = true,
         Iso3166Code = "BE",
-        Name = "Belgium",
+        Name = "België", // Dutch
         NameEnglish = "Belgium",
         NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),
         NsnLengths = new ReadOnlyCollection<int>([8, 9]),
@@ -78,7 +78,7 @@ public partial class CountryInfo
         Continent = Europe,
         IsEuropeanUnionMember = true,
         Iso3166Code = "BG",
-        Name = "Bulgaria",
+        Name = "България", // Bulgarian
         NameEnglish = "Bulgaria",
         NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),
         NsnLengths = new ReadOnlyCollection<int>([8, 9, 12]),
@@ -95,7 +95,7 @@ public partial class CountryInfo
         Continent = Europe,
         IsEuropeanUnionMember = true,
         Iso3166Code = "HR",
-        Name = "Croatia",
+        Name = "Hrvatska", // Croatian
         NameEnglish = "Croatia",
         NdcLengths = new ReadOnlyCollection<int>([5, 4, 3, 2, 1]),
         NsnLengths = new ReadOnlyCollection<int>([6, 7, 8, 9, 10]),
@@ -112,7 +112,7 @@ public partial class CountryInfo
         FormatProvider = CYPhoneNumberFormatProvider.Instance,
         IsEuropeanUnionMember = true,
         Iso3166Code = "CY",
-        Name = "Cyprus",
+        Name = "Κύπρος", // Greek
         NameEnglish = "Cyprus",
         NdcLengths = new ReadOnlyCollection<int>([2]),
         NsnLengths = new ReadOnlyCollection<int>([8]),
@@ -128,7 +128,7 @@ public partial class CountryInfo
         FormatProvider = CZPhoneNumberFormatProvider.Instance,
         IsEuropeanUnionMember = true,
         Iso3166Code = "CZ",
-        Name = "Czech Republic",
+        Name = "Česká republika", // Czech
         NameEnglish = "Czech Republic",
         NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),
         NsnLengths = new ReadOnlyCollection<int>([7, 9, 10, 11, 12]),
@@ -143,7 +143,7 @@ public partial class CountryInfo
         Continent = Europe,
         IsEuropeanUnionMember = true,
         Iso3166Code = "DK",
-        Name = "Denmark",
+        Name = "Danmark", // Danish
         NameEnglish = "Denmark",
         NsnLengths = new ReadOnlyCollection<int>([8]),
     };
@@ -158,7 +158,7 @@ public partial class CountryInfo
         FormatProvider = BasicPhoneNumberFormatProvider.Instance,
         IsEuropeanUnionMember = true,
         Iso3166Code = "EE",
-        Name = "Estonia",
+        Name = "Eesti", // Estonian
         NameEnglish = "Estonia",
         NdcLengths = new ReadOnlyCollection<int>([4, 3, 2]),
         NsnLengths = new ReadOnlyCollection<int>([7, 8, 10, 12]),
@@ -174,7 +174,7 @@ public partial class CountryInfo
         Continent = Europe,
         IsEuropeanUnionMember = true,
         Iso3166Code = "FI",
-        Name = "Finland",
+        Name = "Suomi", // Finnish
         NameEnglish = "Finland",
         NdcLengths = new ReadOnlyCollection<int>([4, 3, 2, 1]),
         NsnLengths = new ReadOnlyCollection<int>([5, 6, 7, 8, 9, 10, 11, 12]),
@@ -207,7 +207,7 @@ public partial class CountryInfo
         FormatProvider = SimplePhoneNumberFormatProvider.Default,
         IsEuropeanUnionMember = true,
         Iso3166Code = "DE",
-        Name = "Deutschland",
+        Name = "Deutschland", // German
         NameEnglish = "Germany",
         NdcLengths = new ReadOnlyCollection<int>([5, 4, 3, 2]),
         NsnLengths = new ReadOnlyCollection<int>([4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]),
@@ -239,7 +239,7 @@ public partial class CountryInfo
         FormatProvider = GRPhoneNumberFormatProvider.Instance,
         IsEuropeanUnionMember = true,
         Iso3166Code = "GR",
-        Name = "Greece",
+        Name = "Ελλάδα", // Greek
         NameEnglish = "Greece",
         NdcLengths = new ReadOnlyCollection<int>([4, 3, 2]),
         NsnLengths = new ReadOnlyCollection<int>([10]),
@@ -273,7 +273,7 @@ public partial class CountryInfo
         Continent = Europe,
         IsEuropeanUnionMember = true,
         Iso3166Code = "HU",
-        Name = "Hungary",
+        Name = "Magyarország", // Hungarian
         NameEnglish = "Hungary",
         NdcLengths = new ReadOnlyCollection<int>([2, 1]),
         NsnLengths = new ReadOnlyCollection<int>([8, 9, 12]),
@@ -339,7 +339,7 @@ public partial class CountryInfo
         FormatProvider = SimplePhoneNumberFormatProvider.Default,
         IsEuropeanUnionMember = true,
         Iso3166Code = "IT",
-        Name = "Italy",
+        Name = "Italia", // Italian
         NameEnglish = "Italy",
         NdcLengths = new ReadOnlyCollection<int>([5, 4, 3, 2]),
         NsnLengths = new ReadOnlyCollection<int>([5, 6, 7, 8, 9, 10, 11]),
@@ -372,7 +372,7 @@ public partial class CountryInfo
         CallingCode = "383",
         Continent = Europe,
         Iso3166Code = "XK",
-        Name = "Kosovo",
+        Name = "Kosova", // Albanian
         NameEnglish = "Kosovo",
         NdcLengths = new ReadOnlyCollection<int>([3, 2]),
         NsnLengths = new ReadOnlyCollection<int>([8, 9]),
@@ -389,7 +389,7 @@ public partial class CountryInfo
         FormatProvider = BasicPhoneNumberFormatProvider.Instance,
         IsEuropeanUnionMember = true,
         Iso3166Code = "LV",
-        Name = "Latvia",
+        Name = "Latvija", // Latvian
         NameEnglish = "Latvia",
         NsnLengths = new ReadOnlyCollection<int>([8]),
     };
@@ -404,7 +404,7 @@ public partial class CountryInfo
         Continent = Europe,
         IsEuropeanUnionMember = true,
         Iso3166Code = "LT",
-        Name = "Lithuania",
+        Name = "Lietuva", // Lithuanian
         NameEnglish = "Lithuania",
         NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),
         NsnLengths = new ReadOnlyCollection<int>([8]),
@@ -421,7 +421,7 @@ public partial class CountryInfo
         FormatProvider = LUPhoneNumberFormatProvider.Instance,
         IsEuropeanUnionMember = true,
         Iso3166Code = "LU",
-        Name = "Luxembourg",
+        Name = "Lëtzebuerg", // Luxembourgish
         NameEnglish = "Luxembourg",
         NsnLengths = new ReadOnlyCollection<int>([4, 5, 6, 7, 8, 9, 10, 11, 12]),
     };
@@ -479,7 +479,7 @@ public partial class CountryInfo
         CallingCode = "382",
         Continent = Europe,
         Iso3166Code = "ME",
-        Name = "Montenegro",
+        Name = "Crna Gora",
         NameEnglish = "Montenegro",
         NdcLengths = new ReadOnlyCollection<int>([2]),
         NsnLengths = new ReadOnlyCollection<int>([4, 5, 8, 12]),
@@ -496,7 +496,7 @@ public partial class CountryInfo
         FormatProvider = NLPhoneNumberFormatProvider.Instance,
         IsEuropeanUnionMember = true,
         Iso3166Code = "NL",
-        Name = "Netherlands",
+        Name = "Nederland", // Dutch
         NameEnglish = "Netherlands",
         NdcLengths = new ReadOnlyCollection<int>([3, 2]),
         NsnLengths = new ReadOnlyCollection<int>([9]),
@@ -527,7 +527,7 @@ public partial class CountryInfo
         Continent = Europe,
         FormatProvider = NOPhoneNumberFormatProvider.Instance,
         Iso3166Code = "NO",
-        Name = "Norway",
+        Name = "Norge", // Norwegian
         NameEnglish = "Norway",
         NsnLengths = new ReadOnlyCollection<int>([8, 12]),
     };
@@ -542,7 +542,7 @@ public partial class CountryInfo
         FormatProvider = PLPhoneNumberFormatProvider.Instance,
         IsEuropeanUnionMember = true,
         Iso3166Code = "PL",
-        Name = "Poland",
+        Name = "Polska", // Polish
         NameEnglish = "Poland",
         NdcLengths = new ReadOnlyCollection<int>([2]),
         NsnLengths = new ReadOnlyCollection<int>([6, 7, 8, 9]),
@@ -573,7 +573,7 @@ public partial class CountryInfo
         FormatProvider = ROPhoneNumberFormatProvider.Instance,
         IsEuropeanUnionMember = true,
         Iso3166Code = "RO",
-        Name = "Romania",
+        Name = "România", // Romanian
         NameEnglish = "Romania",
         NdcLengths = new ReadOnlyCollection<int>([3, 2]),
         NsnLengths = new ReadOnlyCollection<int>([6, 7, 8, 9]),
@@ -603,7 +603,7 @@ public partial class CountryInfo
         CallingCode = "381",
         Continent = Europe,
         Iso3166Code = "RS",
-        Name = "Serbia",
+        Name = "Србија", // Serbian
         NameEnglish = "Serbia",
         NdcLengths = new ReadOnlyCollection<int>([3, 2]),
         NsnLengths = new ReadOnlyCollection<int>([8, 9, 10, 11, 12]),
@@ -619,7 +619,7 @@ public partial class CountryInfo
         Continent = Europe,
         IsEuropeanUnionMember = true,
         Iso3166Code = "SK",
-        Name = "Slovakia",
+        Name = "Slovensko", // Slovaki
         NameEnglish = "Slovakia",
         NdcLengths = new ReadOnlyCollection<int>([4, 3, 2, 1]),
         NsnLengths = new ReadOnlyCollection<int>([7, 9]),
@@ -637,7 +637,7 @@ public partial class CountryInfo
         FormatProvider = SLPhoneNumberFormatProvider.Instance,
         IsEuropeanUnionMember = true,
         Iso3166Code = "SL",
-        Name = "Slovenia",
+        Name = "Slovenija", // Slovene
         NameEnglish = "Slovenia",
         NdcLengths = new ReadOnlyCollection<int>([4, 3, 2, 1]),
         NsnLengths = new ReadOnlyCollection<int>([8, 12]),
@@ -654,7 +654,7 @@ public partial class CountryInfo
         FormatProvider = ESPhoneNumberFormatProvider.Instance,
         IsEuropeanUnionMember = true,
         Iso3166Code = "ES",
-        Name = "España",
+        Name = "España", // Spanish
         NameEnglish = "Spain",
         NdcLengths = new ReadOnlyCollection<int>([3, 2]),
         NsnLengths = new ReadOnlyCollection<int>([9, 13]),
@@ -671,7 +671,7 @@ public partial class CountryInfo
         FormatProvider = SEPhoneNumberFormatProvider.Instance,
         IsEuropeanUnionMember = true,
         Iso3166Code = "SE",
-        Name = "Sverige",
+        Name = "Sverige", // Swedish
         NameEnglish = "Sweden",
         NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),
         NsnLengths = new ReadOnlyCollection<int>([6, 7, 8, 9, 10, 13]),
@@ -687,7 +687,7 @@ public partial class CountryInfo
         Continent = Europe,
         FormatProvider = CHPhoneNumberFormatProvider.Instance,
         Iso3166Code = "CH",
-        Name = "Switzerland",
+        Name = "Schweiz", // German
         NameEnglish = "Switzerland",
         NdcLengths = new ReadOnlyCollection<int>([3, 2]),
         NsnLengths = new ReadOnlyCollection<int>([9]),
@@ -704,7 +704,7 @@ public partial class CountryInfo
         Continent = Europe,
         FormatProvider = UAPhoneNumberFormatProvider.Instance,
         Iso3166Code = "UA",
-        Name = "Україна",
+        Name = "Україна", // Ukrainian
         NameEnglish = "Ukraine",
         NdcLengths = new ReadOnlyCollection<int>([3, 2]),
         NsnLengths = new ReadOnlyCollection<int>([9, 10]),

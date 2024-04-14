@@ -12,7 +12,7 @@ public partial class CountryInfo
         CallingCode = "852",
         Continent = Asia,
         Iso3166Code = "HK",
-        Name = "香港",
+        Name = "香港", // Chinese
         NameEnglish = "Hong Kong",
         NsnLengths = new ReadOnlyCollection<int>([8, 9, 12]),
     };
@@ -25,7 +25,7 @@ public partial class CountryInfo
         CallingCode = "853",
         Continent = Asia,
         Iso3166Code = "MO",
-        Name = "澳門",
+        Name = "澳門", // Chinese
         NameEnglish = "Macau",
         NsnLengths = new ReadOnlyCollection<int>([8]),
     };
@@ -38,7 +38,7 @@ public partial class CountryInfo
         CallingCode = "65",
         Continent = Asia,
         Iso3166Code = "SG",
-        Name = "Singapore",
+        Name = "Singapura", // Malay
         NameEnglish = "Singapore",
         NsnLengths = new ReadOnlyCollection<int>([8, 10, 11]),
     };
