@@ -296,3 +296,4 @@ Brazil         | BR            | 55           | 0            | Yes        | Yes 
   - Mobile numbers are geographically assigned and cannot be determined separately from landlines.
   - Freephone numbers (with a few exceptions) are issued from a shared pool. This could mean a Canadian freephone number look up shows as belonging to a different country if parsed from the E.164 format (parsing from the national number format and country code will work as expected).
   - Virtual (aka personal numbers) are issued from a shared pool and always show as belonging to the United States.
+- Landline numbers can be ported in some countries and therefore although originally geographically assigned, they may no longer match the specified geographic area (Countries affected - Iceland)
