@@ -30,6 +30,11 @@ public static class PhoneNumberExtensions
                 return $"{destination.Country.TrunkPrefix}{destination.NationalSignificantNumber}";
         }
 
+        //if (countryInfo.InternationalCallPrefixes.TryGet(destination.Country.CallingCode, out var callPrefix))
+        //{
+        //    return $"{callPrefix}{destination.Country.CallingCode}{destination.NationalSignificantNumber}";
+        //}
+
         return $"{countryInfo.InternationalCallPrefix}{destination.Country.CallingCode}{destination.NationalSignificantNumber}";
     }
 
@@ -42,29 +47,29 @@ public static class PhoneNumberExtensions
     /// <returns>Returns the number needed to dial a <see cref="PhoneNumber"/> from another <see cref="PhoneNumber"/>.</returns>
     public static string NumberToDialFrom(this PhoneNumber destination, PhoneNumber source)
     {
-        if (source is null)
-        {
-            throw new ArgumentNullException(nameof(source));
-        }
-
         if (destination is null)
         {
             throw new ArgumentNullException(nameof(destination));
         }
 
-        if (destination.Country == source.Country ||
-            destination.Country.SharesCallingCodeWith(source.Country))
+        if (source is null)
         {
-            if (destination.NationalDestinationCode?.Equals(source.NationalDestinationCode, StringComparison.Ordinal) == true &&
-                destination.NdcIsOptional())
-                {
-                    return destination.SubscriberNumber;
-                }
-
-                return $"{destination.Country.TrunkPrefix}{destination.NationalSignificantNumber}";
+            throw new ArgumentNullException(nameof(source));
         }
 
-        return $"{source.Country.InternationalCallPrefix}{destination.Country.CallingCode}{destination.NationalSignificantNumber}";
+        if (source.Country == destination.Country ||
+            source.Country.SharesCallingCodeWith(destination.Country))
+        {
+            if (source.NationalDestinationCode?.Equals(destination.NationalDestinationCode, StringComparison.Ordinal) == true &&
+                source.NdcIsOptional())
+            {
+                return destination.SubscriberNumber;
+            }
+
+            return $"{destination.Country.TrunkPrefix}{destination.NationalSignificantNumber}";
+        }
+
+        return NumberToDialFrom(destination, source.Country);
     }
 
     /// <summary>
