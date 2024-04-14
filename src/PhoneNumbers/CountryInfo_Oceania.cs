@@ -50,7 +50,7 @@ public partial class CountryInfo
         FormatProvider = NanpPhoneNumberFormatProvider.Instance,
         Iso3166Code = "GU",
         Name = "Guåhan",
-        Name = "Guam",
+        NameEnglish = "Guam",
         NdcLengths = s_nanpNdcLengths,
         NsnLengths = s_nanpNsnLengths,
         SharesCallingCode = true,
