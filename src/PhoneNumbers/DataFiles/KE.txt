@@ -1,3 +1,5 @@
+# References:
+# - https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000700008PDFE.pdf
 G|20|Nairobi|000000-9999999|
 N|30||0000000000-9999999999|M
 G|40|Kwale|000000-9999999|
