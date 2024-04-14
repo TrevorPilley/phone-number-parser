@@ -15,6 +15,7 @@ public class DefaultPhoneNumberParserTests_IS_GeographicNumber
     [InlineData("4190000", "4190000", "Excluding Reykjavík and Capital Region")]
     [InlineData("4279999", "4279999", "Excluding Reykjavík and Capital Region")]
     [InlineData("4300000", "4300000", "Excluding Reykjavík and Capital Region")]
+    [InlineData("4389999", "4389999", "Excluding Reykjavík and Capital Region")]
     [InlineData("4400000", "4400000", "Excluding Reykjavík and Capital Region")]
     [InlineData("4429999", "4429999", "Excluding Reykjavík and Capital Region")]
     [InlineData("4440000", "4440000", "Excluding Reykjavík and Capital Region")]
@@ -28,6 +29,7 @@ public class DefaultPhoneNumberParserTests_IS_GeographicNumber
     [InlineData("4580000", "4580000", "Excluding Reykjavík and Capital Region")]
     [InlineData("4589999", "4589999", "Excluding Reykjavík and Capital Region")]
     [InlineData("4600000", "4600000", "Excluding Reykjavík and Capital Region")]
+    [InlineData("4789999", "4789999", "Excluding Reykjavík and Capital Region")]
     [InlineData("4810000", "4810000", "Excluding Reykjavík and Capital Region")]
     [InlineData("4839999", "4839999", "Excluding Reykjavík and Capital Region")]
     [InlineData("4860000", "4860000", "Excluding Reykjavík and Capital Region")]
@@ -72,8 +74,6 @@ public class DefaultPhoneNumberParserTests_IS_GeographicNumber
     [InlineData("5969999", "5969999", "Reykjavík and Capital Region")]
     [InlineData("5980000", "5980000", "Reykjavík and Capital Region")]
     [InlineData("5999999", "5999999", "Reykjavík and Capital Region")]
-    [InlineData("43809999", "43809999", "Excluding Reykjavík and Capital Region")]
-    [InlineData("464789999", "464789999", "Excluding Reykjavík and Capital Region")]
     public void Parse_Known_GeographicPhoneNumber(string value, string subscriberNumber, string geographicArea)
     {
         var parseResult = s_parser.Parse(value);
