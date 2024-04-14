@@ -17,6 +17,7 @@ public class CountryInfo_Oceania_Tests
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.Equal("AS", countryInfo.Iso3166Code);
         Assert.Equal("American Samoa", countryInfo.Name);
+        Assert.Equal("American Samoa", countryInfo.NameEnglish);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
         Assert.True(countryInfo.SharesCallingCode);
@@ -37,6 +38,7 @@ public class CountryInfo_Oceania_Tests
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("AU", countryInfo.Iso3166Code);
         Assert.Equal("Australia", countryInfo.Name);
+        Assert.Equal("Australia", countryInfo.NameEnglish);
         Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 5, 6, 7, 8, 9, 10 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
@@ -56,7 +58,8 @@ public class CountryInfo_Oceania_Tests
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("GU", countryInfo.Iso3166Code);
-        Assert.Equal("Guam", countryInfo.Name);
+        Assert.Equal("Guåhan", countryInfo.Name);
+        Assert.Equal("Guam", countryInfo.NameEnglish);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
         Assert.True(countryInfo.SharesCallingCode);
@@ -77,6 +80,7 @@ public class CountryInfo_Oceania_Tests
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("PG", countryInfo.Iso3166Code);
         Assert.Equal("Papua New Guinea", countryInfo.Name);
+        Assert.Equal("Papua New Guinea", countryInfo.NameEnglish);
         Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 7, 8 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);

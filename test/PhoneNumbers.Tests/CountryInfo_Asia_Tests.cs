@@ -17,7 +17,8 @@ public class CountryInfo_Asia_Tests
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("HK", countryInfo.Iso3166Code);
-        Assert.Equal("Hong Kong", countryInfo.Name);
+        Assert.Equal("香港", countryInfo.Name);
+        Assert.Equal("Hong Kong", countryInfo.NameEnglish);
         Assert.Empty(countryInfo.NdcLengths);
         Assert.Equal(new[] { 8, 9, 12 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
@@ -37,7 +38,8 @@ public class CountryInfo_Asia_Tests
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("MO", countryInfo.Iso3166Code);
-        Assert.Equal("Macau", countryInfo.Name);
+        Assert.Equal("澳門", countryInfo.Name);
+        Assert.Equal("Macau", countryInfo.NameEnglish);
         Assert.Empty(countryInfo.NdcLengths);
         Assert.Equal(new[] { 8 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
@@ -58,6 +60,7 @@ public class CountryInfo_Asia_Tests
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("SG", countryInfo.Iso3166Code);
         Assert.Equal("Singapore", countryInfo.Name);
+        Assert.Equal("Singapore", countryInfo.NameEnglish);
         Assert.Empty(countryInfo.NdcLengths);
         Assert.Equal(new[] { 8, 10, 11 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);

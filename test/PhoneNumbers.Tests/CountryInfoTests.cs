@@ -149,6 +149,7 @@ public class CountryInfoTests
         Assert.False(countryInfo.HasTrunkPrefix);
         Assert.Null(countryInfo.Iso3166Code);
         Assert.Null(countryInfo.Name);
+        Assert.Null(countryInfo.NameEnglish);
         Assert.Empty(countryInfo.NdcLengths);
         Assert.Empty(countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
