@@ -179,7 +179,7 @@ Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobi
 Egypt          | EG            | 20           | 0            | Yes        | Yes    |                    |                      |                | Yes                            | Yes                               |                                  |
 Kenya          | KE            | 254          | 0            | Yes        | Yes    |                    |                      |                |                                |                                   |                                  | Yes
 Nigeria        | NG            | 234          | 0            | Yes        | Yes    |                    |                      |                |                                |                                   |                                  |
-South Africa   | Za            | 27           | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               | Yes                              | Yes
+South Africa   | ZA            | 27           | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               | Yes                              | Yes
 
 ### Asia
 
