@@ -15,7 +15,7 @@ public partial class CountryInfo
         Continent = SouthAmerica,
         FormatProvider = BRPhoneNumberFormatProvider.Instance,
         Iso3166Code = "BR",
-        Name = "Brasil",
+        Name = "Brasil", // Portugese
         NameEnglish = "Brazil",
         NdcLengths = new ReadOnlyCollection<int>([3, 2]),
         NsnLengths = new ReadOnlyCollection<int>([10, 11]),

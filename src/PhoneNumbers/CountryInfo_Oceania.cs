@@ -15,7 +15,7 @@ public partial class CountryInfo
         Continent = Oceania,
         FormatProvider = NanpPhoneNumberFormatProvider.Instance,
         Iso3166Code = "AS",
-        Name = "American Samoa",
+        Name = "Amerika Sāmoa", // Samoan
         NameEnglish = "American Samoa",
         NdcLengths = s_nanpNdcLengths,
         NsnLengths = s_nanpNsnLengths,
@@ -49,7 +49,7 @@ public partial class CountryInfo
         Continent = Oceania,
         FormatProvider = NanpPhoneNumberFormatProvider.Instance,
         Iso3166Code = "GU",
-        Name = "Guåhan",
+        Name = "Guåhan", // Chamorro
         NameEnglish = "Guam",
         NdcLengths = s_nanpNdcLengths,
         NsnLengths = s_nanpNsnLengths,
