@@ -72,6 +72,8 @@ public partial class CountryInfo
         Continent = Africa,
         Iso3166Code = "TZ",
         Name = "Tanzania",
+        NdcLengths = new ReadOnlyCollection<int>([5, 3, 2]),
+        NsnLengths = new ReadOnlyCollection<int>([9, 12]),
         TrunkPrefix = "0",
     };
 }

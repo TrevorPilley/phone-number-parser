@@ -1,0 +1,17 @@
+# References:
+# - https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000CB0007PDFE.pdf
+# - https://www.tcra.go.tz/uploads/text-editor/files/National%20Numbering%20Plan%20and%20Signaling%20Point%20Codes%20Plan%20June%202023_1687754400.pdf
+G|22|Dar-Es-Salaam Region|2000000-2999999|
+G|23|Coast, Lindi, Morogoro, Mtwara Regions|2000000-2999999|
+G|24|Zanzibar (including Pemba and Unguja)|2000000-2999999|
+G|25|Katavi, Mbeya, Rukwa, Ruvuma and Songwe Regions|2000000-2999999|
+G|26|Dodoma, Iringa, Njombe, Singida and Tabora Regions|2000000-2999999|
+G|27|Arusha, Kilimanjaro, Manyara and Tanga Regions|2000000-2999999|
+G|28|Geita, Kagera, Kigoma, Mara, Mwanza, Shinyanga and Simiyu Regions|2000000-2999999|
+N|30001-30005||0000000-9999999|M
+N|41,51-58||0000000-9999999|
+M|61-62,65-69,71,73-78||0000000-9999999|
+N|800||110000-129999,710000-719999,750000-759999,780000-789999|F
+N|808||000000-009999,110000-119999|F
+N|900||010000-019999|R
+N|901||000000-009999,120000-129999,220000-229999,650000-659999,760000-769999|R

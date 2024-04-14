@@ -33,4 +33,12 @@ public class PhoneNumber_Parse_Africa_Tests
         Assert.NotNull(phoneNumber);
         Assert.Equal(CountryInfo.SouthAfrica, phoneNumber.Country);
     }
+
+    [Fact]
+    public void Parse_Value_For_Tanzania_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+255222199760");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Tanzania, phoneNumber.Country);
+    }
 }
