@@ -224,7 +224,7 @@ public partial class CountryInfo
         FormatProvider = BasicPhoneNumberFormatProvider.Instance,
         Iso3166Code = "GI",
         Name = "Gibraltar",
-        Name = "Gibraltar",
+        NameEnglish = "Gibraltar",
         NdcLengths = new ReadOnlyCollection<int>([3, 2]),
         NsnLengths = new ReadOnlyCollection<int>([4, 8]),
     };
