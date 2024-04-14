@@ -104,6 +104,11 @@ public sealed partial class CountryInfo
     internal PhoneNumberFormatProvider FormatProvider { get; init; } = ComplexPhoneNumberFormatProvider.Default;
 
     /// <summary>
+    /// Gets country specific international call prefixes.
+    /// </summary>
+    internal Dictionary<string, string> InternationalCallPrefixes { get; init; } = [];
+
+    /// <summary>
     /// Gets the possible lengths of the national destination code.
     /// </summary>
     internal ReadOnlyCollection<int> NdcLengths { get; init; } =
