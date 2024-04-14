@@ -28,6 +28,7 @@ public partial class CountryInfo
         Continent = Africa,
         FormatProvider = SimplePhoneNumberFormatProvider.Default,
         InternationalCallPrefix = "000",
+        //InternationalCallPrefixes = ["255", "007"] // Calls to Tanzania use 007
         Iso3166Code = "KE",
         Name = "Kenya",
         NdcLengths = new ReadOnlyCollection<int>([3, 2]),

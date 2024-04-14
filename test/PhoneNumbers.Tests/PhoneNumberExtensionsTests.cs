@@ -17,6 +17,8 @@ public class PhoneNumberExtensionsTests
     [InlineData("+33140477283", "US", "01133140477283")] // France number from US
     [InlineData("+12124841200", "GB", "0012124841200")] // US number from UK
     [InlineData("+447106865391", "US", "011447106865391")] // UK number from US
+    //[InlineData("+25420424200", "TZ", "00520424200")] // Kenya from Tanzania (uses 005 instead of +255)
+    //[InlineData("+255222199760", "KE", "007222199760")] // Tanzania from Kenya (uses 007 instead of +254)
     public void NumberToDialFrom_CountryInfo(string source, string countryCode, string expected) =>
         Assert.Equal(
             expected,
@@ -36,6 +38,8 @@ public class PhoneNumberExtensionsTests
     [InlineData("+33601876543", "+447106865391", "0033601876543")] // UK Mobile to France Mobile
     [InlineData("+447712674523", "+12124841200", "011447712674523")] // US to UK Mobile
     [InlineData("+85229616333", "+85229615432", "29616333")] // HK to HK
+    //[InlineData("+25420424200", "+255222199760", "00520424200")] // Kenya from Tanzania (uses 005 instead of +255)
+    //[InlineData("+255222199760", "+25420424200", "007222199760")] // Tanzania from Kenya (uses 007 instead of +254)
     public void NumberToDialFrom_PhoneNumber(string destination, string source, string expected) =>
         Assert.Equal(
             expected,
