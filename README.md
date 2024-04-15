@@ -180,7 +180,7 @@ Egypt          | EG            | 20           | 0            | Yes        | Yes 
 Kenya          | KE            | 254          | 0            | Yes        | Yes    |                    |                      |                |                                |                                   |                                  | Yes
 Nigeria        | NG            | 234          | 0            | Yes        | Yes    |                    |                      |                |                                |                                   |                                  |
 South Africa   | ZA            | 27           | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               | Yes                              | Yes
-Tanzania.      | TZ            | 255          | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               | Yes                              | Yes
+Tanzania       | TZ            | 255          | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               | Yes                              | Yes
 
 ### Asia
 
