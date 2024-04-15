@@ -30,10 +30,10 @@ public static class PhoneNumberExtensions
                 return $"{destination.Country.TrunkPrefix}{destination.NationalSignificantNumber}";
         }
 
-        //if (countryInfo.InternationalCallPrefixes.TryGet(destination.Country.CallingCode, out var callPrefix))
-        //{
-        //    return $"{callPrefix}{destination.Country.CallingCode}{destination.NationalSignificantNumber}";
-        //}
+        if (countryInfo.InternationalCallPrefixes.TryGetValue(destination.Country.CallingCode, out var callPrefix))
+        {
+           return $"{callPrefix}{destination.NationalSignificantNumber}";
+        }
 
         return $"{countryInfo.InternationalCallPrefix}{destination.Country.CallingCode}{destination.NationalSignificantNumber}";
     }

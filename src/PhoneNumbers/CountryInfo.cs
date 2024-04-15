@@ -21,6 +21,7 @@ public sealed partial class CountryInfo
     internal const string SouthAmerica = "South America";
     #if !NET8_0_OR_GREATER
     private static readonly ReadOnlyCollection<int> s_emptyIntArray = new(Array.Empty<int>());
+    private static readonly ReadOnlyDictionary<string, string> s_emptyStringDictionary = new(new Dictionary<string, string>());
     #endif
 
     private static readonly ReadOnlyCollection<PhoneNumberFormatter> s_formatters = new(
@@ -106,7 +107,12 @@ public sealed partial class CountryInfo
     /// <summary>
     /// Gets country specific international call prefixes.
     /// </summary>
-    internal Dictionary<string, string> InternationalCallPrefixes { get; init; } = [];
+    internal ReadOnlyDictionary<string, string> InternationalCallPrefixes { get; init; } =
+    #if NET8_0_OR_GREATER
+    ReadOnlyDictionary<string, string>.Empty;
+    #else
+    s_emptyStringDictionary;
+    #endif
 
     /// <summary>
     /// Gets the possible lengths of the national destination code.
