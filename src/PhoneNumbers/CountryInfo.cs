@@ -18,7 +18,10 @@ public sealed partial class CountryInfo
     internal const string NorthAmerica = "North America";
     internal const string Oceania = "Oceania";
     internal const string SouthAmerica = "South America";
+    #if !NET8_0_OR_GREATER
     private static readonly ReadOnlyCollection<int> s_emptyIntArray = new(Array.Empty<int>());
+    #endif
+
     private static readonly ReadOnlyCollection<PhoneNumberFormatter> s_formatters = new(
     [
         E164PhoneNumberFormatter.Instance,
@@ -96,12 +99,22 @@ public sealed partial class CountryInfo
     /// <summary>
     /// Gets the possible lengths of the national destination code.
     /// </summary>
-    internal ReadOnlyCollection<int> NdcLengths { get; init; } = s_emptyIntArray;
+    internal ReadOnlyCollection<int> NdcLengths { get; init; } =
+    #if NET8_0_OR_GREATER
+    ReadOnlyCollection<int>.Empty;
+    #else
+    s_emptyIntArray;
+    #endif
 
     /// <summary>
     /// Gets the permitted lengths of the national significant number.
     /// </summary>
-    internal ReadOnlyCollection<int> NsnLengths { get; init; } = s_emptyIntArray;
+    internal ReadOnlyCollection<int> NsnLengths { get; init; } =
+    #if NET8_0_OR_GREATER
+    ReadOnlyCollection<int>.Empty;
+    #else
+    s_emptyIntArray;
+    #endif
 
     internal static IEnumerable<CountryInfo> GetCountries() =>
         typeof(CountryInfo)
