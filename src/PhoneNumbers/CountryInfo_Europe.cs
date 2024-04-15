@@ -63,6 +63,7 @@ public partial class CountryInfo
         Continent = Europe,
         Iso3166Code = "BA",
         Name = "Bosnia and Herzegovina",
+        NameEnglish = "Bosnia and Herzegovina",
         NdcLengths = new ReadOnlyCollection<int>([4, 3, 2]),
         NsnLengths = new ReadOnlyCollection<int>([6, 8, 9]),
         TrunkPrefix = "0",
@@ -288,7 +289,8 @@ public partial class CountryInfo
         CallingCode = "354",
         Continent = Europe,
         Iso3166Code = "IS",
-        Name = "Iceland",
+        Name = "Ísland", // Icelandic
+        NameEnglish = "Iceland",
         NsnLengths = new ReadOnlyCollection<int>([7, 9]),
     };
 
@@ -512,7 +514,8 @@ public partial class CountryInfo
         CallingCode = "389",
         Continent = Europe,
         Iso3166Code = "MK",
-        Name = "North Macedonia",
+        Name = "Северна Македонија", // Macedonian
+        NameEnglish = "North Macedonia",
         NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),
         NsnLengths = new ReadOnlyCollection<int>([8]),
         TrunkPrefix = "0",

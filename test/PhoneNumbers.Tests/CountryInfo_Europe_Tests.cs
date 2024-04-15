@@ -81,6 +81,7 @@ public class CountryInfo_Europe_Tests
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("BA", countryInfo.Iso3166Code);
         Assert.Equal("Bosnia and Herzegovina", countryInfo.Name);
+        Assert.Equal("Bosnia and Herzegovina", countryInfo.NameEnglish);
         Assert.Equal(new[] { 4, 3, 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 6, 8, 9 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
@@ -373,7 +374,8 @@ public class CountryInfo_Europe_Tests
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("IS", countryInfo.Iso3166Code);
-        Assert.Equal("Iceland", countryInfo.Name);
+        Assert.Equal("Ísland", countryInfo.Name);
+        Assert.Equal("Iceland", countryInfo.NameEnglish);
         Assert.Empty(countryInfo.NdcLengths);
         Assert.Equal(new[] { 7, 9 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
@@ -666,7 +668,8 @@ public class CountryInfo_Europe_Tests
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("MK", countryInfo.Iso3166Code);
-        Assert.Equal("North Macedonia", countryInfo.Name);
+        Assert.Equal("Северна Македонија", countryInfo.Name);
+        Assert.Equal("North Macedonia", countryInfo.NameEnglish);
         Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 8 } ,countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);

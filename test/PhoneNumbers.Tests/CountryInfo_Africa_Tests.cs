@@ -102,6 +102,7 @@ public class CountryInfo_Africa_Tests
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("TZ", countryInfo.Iso3166Code);
         Assert.Equal("Tanzania", countryInfo.Name);
+        Assert.Equal("Tanzania", countryInfo.NameEnglish);
         Assert.Equal(new[] { 5, 3, 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 9, 12 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
