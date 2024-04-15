@@ -52,6 +52,20 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Bosnia and Herzegovina.
+    /// </summary>
+    public static CountryInfo BosniaAndHerzegovina { get; } = new()
+    {
+        CallingCode = "387",
+        Continent = Europe,
+        Iso3166Code = "BA",
+        Name = "Bosnia and Herzegovina",
+        NdcLengths = new ReadOnlyCollection<int>([4, 3, 2]),
+        NsnLengths = new ReadOnlyCollection<int>([6, 8, 9]),
+        TrunkPrefix = "0",
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Bulgaria.
     /// </summary>
     public static CountryInfo Bulgaria { get; } = new()

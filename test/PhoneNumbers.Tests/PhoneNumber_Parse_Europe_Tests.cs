@@ -27,6 +27,14 @@ public class PhoneNumber_Parse_Europe_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_BosniaAndHerzegovina_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+38733250600");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.BosniaAndHerzegovina, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_Bulgaria_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+35929492760");

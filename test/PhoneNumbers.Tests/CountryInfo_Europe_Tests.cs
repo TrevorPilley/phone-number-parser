@@ -65,6 +65,26 @@ public class CountryInfo_Europe_Tests
     }
 
     [Fact]
+    public void CountryInfo_BosniaAndHerzegovina()
+    {
+        Assert.Same(CountryInfo.BosniaAndHerzegovina, CountryInfo.BosniaAndHerzegovina);
+
+        var countryInfo = CountryInfo.BosniaAndHerzegovina;
+
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal("387", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
+        Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.Equal("BA", countryInfo.Iso3166Code);
+        Assert.Equal("Bosnia and Herzegovina", countryInfo.Name);
+        Assert.Equal(new[] { 4, 3, 2 }, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 6, 8, 9 }, countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Equal("0", countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_Bulgaria()
     {
         Assert.Same(CountryInfo.Bulgaria, CountryInfo.Bulgaria);
