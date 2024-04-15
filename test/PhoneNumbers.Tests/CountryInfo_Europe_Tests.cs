@@ -345,6 +345,26 @@ public class CountryInfo_Europe_Tests
     }
 
     [Fact]
+    public void CountryInfo_Iceland()
+    {
+        Assert.Same(CountryInfo.Iceland, CountryInfo.Iceland);
+
+        var countryInfo = CountryInfo.Iceland;
+
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal("354", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
+        Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.Equal("IS", countryInfo.Iso3166Code);
+        Assert.Equal("Iceland", countryInfo.Name);
+        Assert.Empty(countryInfo.NdcLengths);
+        Assert.Equal(new[] { 7, 9 }, countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Null(countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_Ireland()
     {
         Assert.Same(CountryInfo.Ireland, CountryInfo.Ireland);

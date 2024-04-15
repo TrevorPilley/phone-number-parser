@@ -139,6 +139,14 @@ public class PhoneNumber_Parse_Europe_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_Iceland_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+3545101500");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Iceland, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_Ireland_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+35318049600");

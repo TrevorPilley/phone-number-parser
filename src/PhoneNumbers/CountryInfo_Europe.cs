@@ -265,6 +265,18 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Iceland.
+    /// </summary>
+    public static CountryInfo Iceland { get; } = new()
+    {
+        CallingCode = "354",
+        Continent = Europe,
+        Iso3166Code = "IS",
+        Name = "Iceland",
+        NsnLengths = new ReadOnlyCollection<int>([7, 9]),
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Ireland.
     /// </summary>
     /// <remarks>Covers the Republic of Ireland, Northern Ireland is part of the United Kingdom.</remarks>
