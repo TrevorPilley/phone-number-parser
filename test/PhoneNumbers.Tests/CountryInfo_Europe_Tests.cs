@@ -605,6 +605,26 @@ public class CountryInfo_Europe_Tests
     }
 
     [Fact]
+    public void CountryInfo_NorthMacedonia()
+    {
+        Assert.Same(CountryInfo.NorthMacedonia, CountryInfo.NorthMacedonia);
+
+        var countryInfo = CountryInfo.NorthMacedonia;
+
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal("389", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
+        Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.Equal("MK", countryInfo.Iso3166Code);
+        Assert.Equal("North Macedonia", countryInfo.Name);
+        Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 8 } ,countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Equal("0", countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_Norway()
     {
         Assert.Same(CountryInfo.Norway, CountryInfo.Norway);

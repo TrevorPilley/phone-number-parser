@@ -463,6 +463,21 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for North Macedonia.
+    /// </summary>
+    public static CountryInfo NorthMacedonia { get; } = new()
+    {
+        AllowsLocalGeographicDialling = true,
+        CallingCode = "389",
+        Continent = Europe,
+        Iso3166Code = "MK",
+        Name = "North Macedonia",
+        NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),
+        NsnLengths = new ReadOnlyCollection<int>([8]),
+        TrunkPrefix = "0",
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Norway.
     /// </summary>
     public static CountryInfo Norway { get; } = new()
