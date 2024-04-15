@@ -40,6 +40,10 @@ public class PhoneNumberExtensionsTests
     [InlineData("+85229616333", "+85229615432", "29616333")] // HK to HK
     [InlineData("+25420424200", "+255222199760", "00520424200")] // Kenya from Tanzania (uses 005 instead of +255)
     [InlineData("+255222199760", "+25420424200", "007222199760")] // Tanzania from Kenya (uses 007 instead of +254)
+    // Italy to San Marino
+    // San Marino to Italy
+    // Singapore to Malaysia
+    // Malaysia to Singapore
     public void NumberToDialFrom_PhoneNumber(string destination, string source, string expected) =>
         Assert.Equal(
             expected,
