@@ -611,7 +611,7 @@ public class CountryInfo_Europe_Tests
 
         var countryInfo = CountryInfo.NorthMacedonia;
 
-        Assert.False(countryInfo.AllowsLocalGeographicDialling);
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("389", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);

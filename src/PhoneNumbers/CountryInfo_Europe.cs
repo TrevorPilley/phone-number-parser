@@ -467,6 +467,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo NorthMacedonia { get; } = new()
     {
+        AllowsLocalGeographicDialling = true,
         CallingCode = "389",
         Continent = Europe,
         Iso3166Code = "MK",
