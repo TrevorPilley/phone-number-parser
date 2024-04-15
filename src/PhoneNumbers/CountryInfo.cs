@@ -21,7 +21,7 @@ public sealed partial class CountryInfo
     internal const string SouthAmerica = "South America";
     #if !NET8_0_OR_GREATER
     private static readonly ReadOnlyCollection<int> s_emptyIntArray = new(Array.Empty<int>());
-    private static readonly ReadOnlyDictionary<string, string> s_emptyStringDictionary = new(new Dictionary<string, string>());
+    private static readonly ReadOnlyDictionary<string, string> s_emptyStringDictionary = new(new Dictionary<string, string>(StringComparer.Ordinal));
     #endif
 
     private static readonly ReadOnlyCollection<PhoneNumberFormatter> s_formatters = new(
