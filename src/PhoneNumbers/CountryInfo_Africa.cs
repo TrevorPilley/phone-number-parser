@@ -62,4 +62,18 @@ public partial class CountryInfo
         NsnLengths = new ReadOnlyCollection<int>([9, 13]),
         TrunkPrefix = "0",
     };
+
+    /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Tanzania.
+    /// </summary>
+    public static CountryInfo Tanzania { get; } = new()
+    {
+        CallingCode = "255",
+        Continent = Africa,
+        Iso3166Code = "TZ",
+        Name = "Tanzania",
+        NdcLengths = new ReadOnlyCollection<int>([5, 3, 2]),
+        NsnLengths = new ReadOnlyCollection<int>([9, 12]),
+        TrunkPrefix = "0",
+    };
 }
