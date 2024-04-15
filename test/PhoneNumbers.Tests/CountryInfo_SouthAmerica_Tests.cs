@@ -16,6 +16,7 @@ public class CountryInfo_SouthAmerica_Tests
         Assert.Equal(CountryInfo.SouthAmerica, countryInfo.Continent);
         Assert.IsType<BRPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.Equal("0xx", countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("BR", countryInfo.Iso3166Code);
         Assert.Equal("Brazil", countryInfo.Name);

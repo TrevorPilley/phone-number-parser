@@ -28,7 +28,12 @@ public partial class CountryInfo
         Continent = Africa,
         FormatProvider = SimplePhoneNumberFormatProvider.Default,
         InternationalCallPrefix = "000",
-        //InternationalCallPrefixes = ["255", "007"] // Calls to Tanzania use 007
+        InternationalCallPrefixes = new ReadOnlyDictionary<string, string>(
+            new Dictionary<string, string>()
+            {
+                { "255", "007" }, // To call Tanzania from Kenya, subscribers dial 007 instead of +255.
+                { "256", "006" }, // To call Uganda from Kenya, subscribers dial 006 instead of +256
+            }),
         Iso3166Code = "KE",
         Name = "Kenya",
         NdcLengths = new ReadOnlyCollection<int>([3, 2]),
@@ -74,6 +79,12 @@ public partial class CountryInfo
         CallingCode = "255",
         Continent = Africa,
         InternationalCallPrefix = "000",
+        InternationalCallPrefixes = new ReadOnlyDictionary<string, string>(
+            new Dictionary<string, string>()
+            {
+                { "254", "005" }, // To call Kenya from Tanzania, subscribers dial 005 instead of +254
+                { "256", "006" }, // To call Uganda from Tanzania, subscribers dial 006 instead of +256
+            }),
         Iso3166Code = "TZ",
         Name = "Tanzania",
         NdcLengths = new ReadOnlyCollection<int>([5, 3, 2]),
