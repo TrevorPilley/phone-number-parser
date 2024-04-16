@@ -1,3 +1,5 @@
+# Reference: https://www.icasa.org.za/uploads/files/Amendment-of-the-Numbering-Plan-Regulations-2016.pdf via https://www.icasa.org.za/pages/numbering
+# Reference Date: 29/03/2023
 G|10-11|Johannesburg|0000000-9999999|
 G|12|Tshwane region|0000000-9999999|
 G|13|Northern and western parts of Mpumalanga|0000000-9999999|
@@ -34,7 +36,7 @@ G|54|Gordonia|0000000-9999999|
 G|56|Northern part of Free State|0000000-9999999|
 G|57|Free State Goldfields|0000000-9999999|
 G|58|Eastern part of Free State|0000000-9999999|
-M|60-74,76-79,81-84||0000000-9999999|
+M|50,52,55,59,60-79,81-85||0000000-9999999|
 N|80||0000000-9999999|F
 N|86||0000000-9999999|S
 N|87-89||0000000-9999999|
