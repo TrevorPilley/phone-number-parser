@@ -1,2 +1,4 @@
+# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200007E0002MSWE.doc
+# Reference Date: 02/08/2006
 N|||28000000-28999999,80000000-89999999|
 M|||60000000-69999999|

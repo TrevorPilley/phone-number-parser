@@ -1,5 +1,5 @@
-# References:
-# - https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000CB0007PDFE.pdf
+# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000CB0007PDFE.pdf
+# Reference Date: 14/12/2023
 G|22|Dar-Es-Salaam Region|2000000-2999999|
 G|23|Coast, Lindi, Morogoro, Mtwara Regions|2000000-2999999|
 G|24|Zanzibar (including Pemba and Unguja)|2000000-2999999|
