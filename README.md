@@ -205,7 +205,7 @@ Czech Republic | CZ            | 420          |              | Yes        | Yes 
 Denmark        | DK            | 45           |              |            | Yes    |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
 Estonia        | EE            | 372          |              |            | Yes    |                    | Yes                  | Yes            | Yes                            | Yes                               |                                  | Yes
 Finland        | FI            | 358          | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            |                                   |                                  | Yes
-France         | FR            | 33           | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
+France         | FR            | 33           | 0            |            | Yes    |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
 Germany        | DE            | 49           | 0            | Yes        | Yes    | Yes                | Yes                  | Yes            | Yes                            | Yes                               |                                  | Yes
 Gibraltar      | GI            | 350          |              | Yes        | Yes    |                    |                      |                | Yes                            | Yes                               |                                  |
 Greece         | GR            | 30           |              | Yes        | Yes    |                    | Yes                  | Yes            | Yes                            | Yes                               | Yes                              | Yes
@@ -289,7 +289,6 @@ Brazil         | BR            | 55           | 0            | Yes        | Yes 
   - Covers England, Scotland, Wales and Northern Ireland.
   - The Crown Dependencies Guernsey, Isle of Man and Jersey also use the same numbering plan but are separate countries.
   - To avoid a legitimate UK phone number from being rejected by the library, consider using `ParseOptions.Default.AllowUnitedKingdomNumberingPlanCountries()` if you are customising the countries used instead of `ParseOptions.Countries.Add(CountryInfo.UnitedKingdom)`.
-- Geographically assigned numbers in France are currently only resolved within the top level geographic zones (01 Île-de-France, 02 Nord-Ouest, 03 Nord-Est, 04 Sud-Est and 05 Sud-Ouest).
 - Where possible, the geographic area name is in the language/locality of the country for the phone number (e.g. for an Italian phone number assigned to Florence, the geographic area will be set to `Firenze`.
 - Within the North American Numbering Plan (NANP), which covers all countries with the calling code `1`:
   - Geographically assigned numbers are currently only resolved within the country or state/region level, not at city level.
