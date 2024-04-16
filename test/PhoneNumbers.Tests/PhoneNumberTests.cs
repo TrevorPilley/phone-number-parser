@@ -283,12 +283,13 @@ public class PhoneNumberTests
     {
         Assert.True(PhoneNumber.TryParse("02079813000", out IEnumerable<PhoneNumber> phoneNumbers));
         Assert.NotNull(phoneNumbers);
-        Assert.Equal(3, phoneNumbers.Count());
+        Assert.Equal(4, phoneNumbers.Count());
 
         var phoneNumberResults = phoneNumbers.ToList();
 
-        Assert.Equal(CountryInfo.Finland, phoneNumberResults[0].Country);
-        Assert.Equal(CountryInfo.Serbia, phoneNumberResults[1].Country);
-        Assert.Equal(CountryInfo.UnitedKingdom, phoneNumberResults[2].Country);
+        Assert.Equal(CountryInfo.Nigeria, phoneNumberResults[0].Country);
+        Assert.Equal(CountryInfo.Finland, phoneNumberResults[1].Country);
+        Assert.Equal(CountryInfo.Serbia, phoneNumberResults[2].Country);
+        Assert.Equal(CountryInfo.UnitedKingdom, phoneNumberResults[3].Country);
     }
 }

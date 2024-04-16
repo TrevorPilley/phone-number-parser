@@ -44,8 +44,8 @@ public partial class CountryInfo
         Continent = Africa,
         Iso3166Code = "NG",
         Name = "Nigeria",
-        NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),
-        NsnLengths = new ReadOnlyCollection<int>([8, 10]),
+        NdcLengths = new ReadOnlyCollection<int>([4, 3]),
+        NsnLengths = new ReadOnlyCollection<int>([10]),
         TrunkPrefix = "0",
     };
 

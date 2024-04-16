@@ -58,8 +58,8 @@ public class CountryInfo_Africa_Tests
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("NG", countryInfo.Iso3166Code);
         Assert.Equal("Nigeria", countryInfo.Name);
-        Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 8, 10 }, countryInfo.NsnLengths);
+        Assert.Equal(new[] { 4, 3 }, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
