@@ -1,3 +1,5 @@
+# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200003E0004PDFE.pdf
+# Reference Date: 10/09/2017
 M|10-12,15||00000000-99999999|
 G|13|Elqalubia|0000000-9999999|
 G|2|Cairo|00000000-99999999|
