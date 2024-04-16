@@ -20,9 +20,9 @@ public class PhoneNumber_ToString_Africa_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
-    [InlineData("+23494617000", "E.123", "+234 9 461 7000")]
-    [InlineData("+23494617000", "N", "(09) 461 7000")]
-    [InlineData("+23494617000", "RFC3966", "tel:+234-9-461-7000")]
+    [InlineData("+2342094617000", "E.123", "+234 209 461 7000")]
+    [InlineData("+2342094617000", "N", "(0209) 461 7000")]
+    [InlineData("+2342094617000", "RFC3966", "tel:+234-209-461-7000")]
     public void Nigeria_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
