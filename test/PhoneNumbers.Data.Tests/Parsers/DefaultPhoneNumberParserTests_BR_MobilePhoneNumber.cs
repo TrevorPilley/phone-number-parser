@@ -8,11 +8,11 @@ public class DefaultPhoneNumberParserTests_BR_MobilePhoneNumber
     private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Brazil);
 
     [Theory]
-    [InlineData("012700000000", "12", "700000000")]
-    [InlineData("012799999999", "12", "799999999")]
-    [InlineData("012900000000", "12", "900000000")]
-    [InlineData("012999999999", "12", "999999999")]
-    public void Parse_Known_MobilePhoneNumber_12_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
+    [InlineData("011700000000", "11", "700000000")]
+    [InlineData("011799999999", "11", "799999999")]
+    [InlineData("011900000000", "11", "900000000")]
+    [InlineData("011999999999", "11", "999999999")]
+    public void Parse_Known_MobilePhoneNumber_11_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
         parseResult.ThrowIfFailure();
