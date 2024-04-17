@@ -9,12 +9,10 @@ public class DefaultPhoneNumberParserTests_HK_NonGeographicPhoneNumber
 
     [Theory]
     [InlineData("20100000", "20100000")]
-    [InlineData("20199999", "20199999")]
-    [InlineData("20200000", "20200000")]
-    [InlineData("20209999", "20209999")]
-    [InlineData("20210000", "20210000")]
     [InlineData("20699999", "20699999")]
     [InlineData("21000000", "21000000")]
+    [InlineData("28087999", "28087999")]
+    [InlineData("28088000", "28088000")]
     [InlineData("29999999", "29999999")]
     [InlineData("31000000", "31000000")]
     [InlineData("31999999", "31999999")]
@@ -22,6 +20,12 @@ public class DefaultPhoneNumberParserTests_HK_NonGeographicPhoneNumber
     [InlineData("39999999", "39999999")]
     [InlineData("58000000", "58000000")]
     [InlineData("58999999", "58999999")]
+    [InlineData("90030000", "90030000")]
+    [InlineData("90039999", "90039999")]
+    [InlineData("90000000000", "90000000000")]
+    [InlineData("90029999999", "90029999999")]
+    [InlineData("90040000000", "90040000000")]
+    [InlineData("90099999999", "90099999999")]
     public void Parse_Known_NonGeographicPhoneNumber(string value, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);

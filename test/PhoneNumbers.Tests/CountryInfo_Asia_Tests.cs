@@ -19,7 +19,7 @@ public class CountryInfo_Asia_Tests
         Assert.Equal("HK", countryInfo.Iso3166Code);
         Assert.Equal("Hong Kong", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
-        Assert.Equal(new[] { 8, 9, 12 }, countryInfo.NsnLengths);
+        Assert.Equal(new[] { 8, 9, 11, 12 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }

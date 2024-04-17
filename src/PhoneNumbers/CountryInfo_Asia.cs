@@ -13,7 +13,7 @@ public partial class CountryInfo
         Continent = Asia,
         Iso3166Code = "HK",
         Name = "Hong Kong",
-        NsnLengths = new ReadOnlyCollection<int>([8, 9, 12]),
+        NsnLengths = new ReadOnlyCollection<int>([8, 9, 11, 12]),
     };
 
     /// <summary>
