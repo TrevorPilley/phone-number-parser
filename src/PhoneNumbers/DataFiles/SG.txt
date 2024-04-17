@@ -1,5 +1,7 @@
+# Reference: https://www.imda.gov.sg/-/media/imda/files/regulation-licensing-and-consultations/frameworks-and-policies/numbering/national-numbering-plan-and-allocation-process/imda-national-numbering-plan.pdf via https://www.imda.gov.sg/regulations-and-licensing-listing/numbering/national-numbering-plan-and-allocation-process
+# Reference Date: 09/2021
 N|||18000000000-18009999999|F
 N|||19000000000-19009999999|R
 N|||30000000-39999999,60000000-69999999|
 N|||8000000000-8009999999|F
-M|||81000000-89999999,90000000-98999999|
+M|||80000000-89999999,90000000-98999999|
