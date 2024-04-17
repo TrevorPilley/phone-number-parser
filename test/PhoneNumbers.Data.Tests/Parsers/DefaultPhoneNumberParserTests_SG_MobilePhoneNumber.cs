@@ -8,7 +8,7 @@ public class DefaultPhoneNumberParserTests_SG_MobilePhoneNumber
     private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Singapore);
 
     [Theory]
-    [InlineData("81000000", "81000000")]
+    [InlineData("80000000", "80000000")]
     [InlineData("89999999", "89999999")]
     [InlineData("90000000", "90000000")]
     [InlineData("98999999", "98999999")]
