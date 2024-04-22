@@ -13,19 +13,12 @@ internal abstract class InternationalPhoneNumberFormatter : PhoneNumberFormatter
     {
         var nsnMask = phoneNumber.Country.FormatProvider.GetFormat(phoneNumber, international: true);
 
-        var arSize = nsnMask.Length + 1; // add one for the + appended to the calling code
-
-        if (outputPrefix is not null)
-        {
-            arSize += outputPrefix.Length;
-        }
-
-        arSize += phoneNumber.Country.CallingCode.Length;
-
-        if (charBetweenCallingCodeAndNsn != Chars.Null)
-        {
-            arSize++;
-        }
+        var arSize =
+            (outputPrefix?.Length ?? 0)
+            + 1 // add one for the + appended to the calling code
+            + phoneNumber.Country.CallingCode.Length
+            + (charBetweenCallingCodeAndNsn != Chars.Null ? 1 : 0)
+            + nsnMask.Length;
 
         Span<char> ar = stackalloc char[arSize];
         var arPos = 0;
