@@ -196,9 +196,10 @@ public abstract class PhoneNumber
                 .Select(x => options.ParserFactory.GetParser(x).Parse(value))
                 .Where(x => x.PhoneNumber is not null)
                 .Select(x => x.PhoneNumber)
-                .Cast<PhoneNumber>();
+                .Cast<PhoneNumber>()
+                .ToList();
 
-            return true;
+            return phoneNumbers.Any();
         }
 
         phoneNumbers = Enumerable.Empty<PhoneNumber>();
