@@ -11,7 +11,8 @@ internal static class PhoneNumberExtensions
     /// <param name="phoneNumber">The <see cref="PhoneNumber"/> instance to check.</param>
     /// <returns>The true if the National Destination Code is optional, otherwise false.</returns>
     internal static bool NdcIsOptional(this PhoneNumber phoneNumber) =>
-        phoneNumber.Kind == PhoneNumberKind.GeographicPhoneNumber &&
+        phoneNumber.Country.HasNationalDestinationCodes &&
         phoneNumber.Country.AllowsLocalGeographicDialling &&
+        phoneNumber.Kind == PhoneNumberKind.GeographicPhoneNumber &&
         !((GeographicPhoneNumber)phoneNumber).NationalDiallingOnly;
 }

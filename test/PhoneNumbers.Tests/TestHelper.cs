@@ -33,7 +33,7 @@ internal static class TestHelper
         PhoneNumberHint phoneNumberHint = PhoneNumberHint.None) =>
         new GeographicPhoneNumber(phoneNumberHint)
         {
-            Country = CreateCountryInfo(trunkPrefix: trunkPrefix, allowsLocalGeographicDialling: allowsLocalGeographicDialling),
+            Country = CreateCountryInfo(trunkPrefix: trunkPrefix, ndcLengths: ndc is not null ? [ndc.Length] : [], allowsLocalGeographicDialling: allowsLocalGeographicDialling),
             GeographicArea = "AreaName",
             NationalDestinationCode = ndc,
             NationalSignificantNumber = $"{ndc}{sn}",
@@ -48,7 +48,7 @@ internal static class TestHelper
         PhoneNumberHint phoneNumberHint = PhoneNumberHint.None) =>
         new MobilePhoneNumber(phoneNumberHint)
         {
-            Country = CreateCountryInfo(trunkPrefix: trunkPrefix, allowsLocalGeographicDialling: allowsLocalGeographicDialling),
+            Country = CreateCountryInfo(trunkPrefix: trunkPrefix, ndcLengths: ndc is not null ? [ndc.Length] : [], allowsLocalGeographicDialling: allowsLocalGeographicDialling),
             NationalDestinationCode = ndc,
             NationalSignificantNumber = $"{ndc}{sn}",
             SubscriberNumber = sn,
@@ -62,7 +62,7 @@ internal static class TestHelper
         PhoneNumberHint phoneNumberHint = PhoneNumberHint.None) =>
         new NonGeographicPhoneNumber(phoneNumberHint)
         {
-            Country = CreateCountryInfo(trunkPrefix: trunkPrefix, allowsLocalGeographicDialling: allowLocalGeographicDialling),
+            Country = CreateCountryInfo(trunkPrefix: trunkPrefix, ndcLengths: ndc is not null ? [ndc.Length] : [], allowsLocalGeographicDialling: allowLocalGeographicDialling),
             NationalDestinationCode = ndc,
             NationalSignificantNumber = $"{ndc}{sn}",
             SubscriberNumber = sn,
