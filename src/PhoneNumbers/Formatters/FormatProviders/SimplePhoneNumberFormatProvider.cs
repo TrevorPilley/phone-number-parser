@@ -50,7 +50,7 @@ internal class SimplePhoneNumberFormatProvider : PhoneNumberFormatProvider
         {
             maskBuilder.Insert(0, Chars.OpenParenthesis);
             maskBuilder.Insert(
-                1 + (phoneNumber.Country.TrunkPrefix?.Length ?? 0) + (phoneNumber.NationalDestinationCode?.Length ?? 0),
+                1 + (phoneNumber.Country.TrunkPrefix?.Length ?? 0) + phoneNumber.NationalDestinationCode!.Length,
                 Chars.CloseParenthesis);
         }
 

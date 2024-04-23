@@ -66,7 +66,7 @@ public class SimplePhoneNumberFormatProviderTests
     [InlineData("12345678", "########")]
     [InlineData("123456789", "#########")]
     [InlineData("1234567890", "##########")]
-    public void GetFormat_National_Closed_Plan_No_TrunkPrefix_No_Ndc(string sn, string expectedMask) =>
+    public void GetFormat_National_No_TrunkPrefix_No_Ndc(string sn, string expectedMask) =>
         Assert.Equal(
             expectedMask,
             SimplePhoneNumberFormatProvider.Default.GetFormat(
@@ -108,7 +108,7 @@ public class SimplePhoneNumberFormatProviderTests
     [InlineData("12345", "12345678", "##### ########")]
     [InlineData("12345", "123456789", "##### #########")]
     [InlineData("12345", "1234567890", "##### ##########")]
-    public void GetFormat_National_Closed_Plan_No_TrunkPrefix_With_Ndc(string ndc, string sn, string expectedMask) =>
+    public void GetFormat_National_No_TrunkPrefix_With_Ndc(string ndc, string sn, string expectedMask) =>
         Assert.Equal(
             expectedMask,
             SimplePhoneNumberFormatProvider.Default.GetFormat(
@@ -122,7 +122,7 @@ public class SimplePhoneNumberFormatProviderTests
     [InlineData("0", "12345678", "0########")]
     [InlineData("0", "123456789", "0#########")]
     [InlineData("0", "1234567890", "0##########")]
-    public void GetFormat_National_Closed_Plan_With_TrunkPrefix_No_Ndc(string trunkPrefix, string sn, string expectedMask) =>
+    public void GetFormat_National_With_TrunkPrefix_No_Ndc(string trunkPrefix, string sn, string expectedMask) =>
         Assert.Equal(
             expectedMask,
             SimplePhoneNumberFormatProvider.Default.GetFormat(
@@ -164,7 +164,7 @@ public class SimplePhoneNumberFormatProviderTests
     [InlineData("0", "12345", "12345678", "0##### ########")]
     [InlineData("0", "12345", "123456789", "0##### #########")]
     [InlineData("0", "12345", "1234567890", "0##### ##########")]
-    public void GetFormat_National_Closed_Plan_With_TrunkPrefix_With_Ndc(string trunkPrefix, string ndc, string sn, string expectedMask) =>
+    public void GetFormat_National_With_TrunkPrefix_With_Ndc(string trunkPrefix, string ndc, string sn, string expectedMask) =>
         Assert.Equal(
             expectedMask,
             SimplePhoneNumberFormatProvider.Default.GetFormat(
@@ -206,7 +206,7 @@ public class SimplePhoneNumberFormatProviderTests
     [InlineData("12345", "12345678", "(#####) ########")]
     [InlineData("12345", "123456789", "(#####) #########")]
     [InlineData("12345", "1234567890", "(#####) ##########")]
-    public void GetFormat_National_Open_Plan_No_TrunkPrefix_With_Ndc_Geo(string ndc, string sn, string expectedMask) =>
+    public void GetFormat_National_No_TrunkPrefix_With_Ndc_Optional(string ndc, string sn, string expectedMask) =>
         Assert.Equal(
             expectedMask,
             SimplePhoneNumberFormatProvider.Default.GetFormat(
@@ -248,7 +248,7 @@ public class SimplePhoneNumberFormatProviderTests
     [InlineData("12345", "12345678", "##### ########")]
     [InlineData("12345", "123456789", "##### #########")]
     [InlineData("12345", "1234567890", "##### ##########")]
-    public void GetFormat_National_Open_Plan_No_TrunkPrefix_With_Ndc_NonGeo(string ndc, string sn, string expectedMask) =>
+    public void GetFormat_National_No_TrunkPrefix_With_Ndc_Required(string ndc, string sn, string expectedMask) =>
         Assert.Equal(
             expectedMask,
             SimplePhoneNumberFormatProvider.Default.GetFormat(
@@ -290,7 +290,7 @@ public class SimplePhoneNumberFormatProviderTests
     [InlineData("0", "12345", "12345678", "(0#####) ########")]
     [InlineData("0", "12345", "123456789", "(0#####) #########")]
     [InlineData("0", "12345", "1234567890", "(0#####) ##########")]
-    public void GetFormat_National_Open_Plan_With_TrunkPrefix_With_Ndc_Geo(string trunkPrefix, string ndc, string sn, string expectedMask) =>
+    public void GetFormat_National_With_TrunkPrefix_With_Ndc_Optional(string trunkPrefix, string ndc, string sn, string expectedMask) =>
         Assert.Equal(
             expectedMask,
             SimplePhoneNumberFormatProvider.Default.GetFormat(
@@ -332,7 +332,7 @@ public class SimplePhoneNumberFormatProviderTests
     [InlineData("0", "12345", "12345678", "0##### ########")]
     [InlineData("0", "12345", "123456789", "0##### #########")]
     [InlineData("0", "12345", "1234567890", "0##### ##########")]
-    public void GetFormat_National_Open_Plan_With_TrunkPrefix_With_Ndc_NonGeo(string trunkPrefix, string ndc, string sn, string expectedMask) =>
+    public void GetFormat_National_With_TrunkPrefix_With_Ndc_Required(string trunkPrefix, string ndc, string sn, string expectedMask) =>
         Assert.Equal(
             expectedMask,
             SimplePhoneNumberFormatProvider.Default.GetFormat(
