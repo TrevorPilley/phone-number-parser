@@ -3,7 +3,7 @@
   <PropertyGroup>
     <AssemblyName>PhoneNumbers.Tests</AssemblyName>
     <RootNamespace>PhoneNumbers.Tests</RootNamespace>
-    <TargetFrameworks>net8.0;net4.6.2</TargetFrameworks>
+    <TargetFrameworks>net8.0;net462</TargetFrameworks>
     <LangVersion>12.0</LangVersion>
     <IsPackable>false</IsPackable>
     <SignAssembly>true</SignAssembly>
