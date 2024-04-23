@@ -51,9 +51,18 @@ public class PhoneNumber_ToString_Europe_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
-    [InlineData("+420224004111", "E.123", "+420 224 004 111")]
-    [InlineData("+420224004111", "N", "224 004 111")]
-    [InlineData("+420224004111", "RFC3966", "tel:+420-224-004-111")]
+    [InlineData("+4209831452", "E.123", "+420 983 1452")]
+    [InlineData("+420224004111", "E.123", "+420 224 004 111")] // 1 digit NDC still formatted 3-3-3
+    [InlineData("+420351786544", "E.123", "+420 351 786 544")] // 2 digit NDC still formatted 3-3-3
+    [InlineData("+420910687654", "E.123", "+420 910 687 654")] // 3 digit NDC still formatted 3-3-3
+    [InlineData("+4209831452", "N", "983 1452")]
+    [InlineData("+420224004111", "N", "224 004 111")] // 1 digit NDC still formatted 3-3-3
+    [InlineData("+420910687654", "N", "910 687 654")] // 2 digit NDC still formatted 3-3-3
+    [InlineData("+420351786544", "N", "351 786 544")] // 3 digit NDC still formatted 3-3-3
+    [InlineData("+4209831452", "RFC3966", "tel:+420-983-1452")]
+    [InlineData("+420224004111", "RFC3966", "tel:+420-224-004-111")] // 1 digit NDC still formatted 3-3-3
+    [InlineData("+420351786544", "RFC3966", "tel:+420-351-786-544")] // 2 digit NDC still formatted 3-3-3
+    [InlineData("+420910687654", "RFC3966", "tel:+420-910-687-654")] // 3 digit NDC still formatted 3-3-3
     public void CzechRepublic_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
@@ -83,8 +92,11 @@ public class PhoneNumber_ToString_Europe_Tests
 
     [Theory]
     [InlineData("+33140477283", "E.123", "+33 1 40 47 72 83")]
+    [InlineData("+337000000000000", "E.123", "+33 7 00 00 00 00 00 00")]
     [InlineData("+33140477283", "N", "01 40 47 72 83")]
+    [InlineData("+337000000000000", "N", "07 00 00 00 00 00 00")]
     [InlineData("+33140477283", "RFC3966", "tel:+33-1-40-47-72-83")]
+    [InlineData("+337000000000000", "RFC3966", "tel:+33-7-00-00-00-00-00-00")]
     public void France_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
@@ -206,11 +218,17 @@ public class PhoneNumber_ToString_Europe_Tests
 
     [Theory]
     [InlineData("+352493579", "E.123", "+352 49 35 79")]
-    [InlineData("+352493579", "N", "49 35 79")]
-    [InlineData("+352493579", "RFC3966", "tel:+352-49-35-79")]
     [InlineData("+35228228228", "E.123", "+352 28 228 228")]
+    [InlineData("+35290500000", "E.123", "+352 9050 0000")]
+    [InlineData("+352691000000", "E.123", "+352 691 000 000")]
+    [InlineData("+352493579", "N", "49 35 79")]
     [InlineData("+35228228228", "N", "28 228 228")]
+    [InlineData("+35290500000", "N", "9050 0000")]
+    [InlineData("+352691000000", "N", "691 000 000")]
+    [InlineData("+352493579", "RFC3966", "tel:+352-49-35-79")]
     [InlineData("+35228228228", "RFC3966", "tel:+352-28-228-228")]
+    [InlineData("+35290500000", "RFC3966", "tel:+352-9050-0000")]
+    [InlineData("+352691000000", "RFC3966", "tel:+352-691-000-000")]
     public void Luxembourg_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
