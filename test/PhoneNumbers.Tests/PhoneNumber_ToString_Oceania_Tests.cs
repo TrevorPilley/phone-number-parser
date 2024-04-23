@@ -10,12 +10,15 @@ public class PhoneNumber_ToString_Oceania_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+61131234", "E.123", "+61 13 1234")]
     [InlineData("+61399636800", "E.123", "+61 3 9963 6800")]
     [InlineData("+61436986301", "E.123", "+61 436 986 301")]
     [InlineData("+611800900090", "E.123", "+61 1800 900 090")]
+    [InlineData("+61131234", "N", "013 1234")]
     [InlineData("+61399636800", "N", "(03) 9963 6800")]
     [InlineData("+61436986301", "N", "0436 986 301")]
     [InlineData("+611800900090", "N", "1800 900 090")]
+    [InlineData("+61131234", "RFC3966", "tel:+61-13-1234")]
     [InlineData("+61399636800", "RFC3966", "tel:+61-3-9963-6800")]
     [InlineData("+61436986301", "RFC3966", "tel:+61-436-986-301")]
     [InlineData("+611800900090", "RFC3966", "tel:+61-1800-900-090")]

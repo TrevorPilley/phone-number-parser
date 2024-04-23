@@ -15,6 +15,7 @@ internal sealed class FRPhoneNumberFormatProvider : ComplexPhoneNumberFormatProv
         phoneNumber.NationalSignificantNumber.Length switch
         {
             9 => international ? "# ## ## ## ##" : "0# ## ## ## ##",
+            13 => international ? "# ## ## ## ## ## ##" : "0# ## ## ## ## ## ##",
             _ => base.ProvideFormat(phoneNumber, international),
         };
 }
