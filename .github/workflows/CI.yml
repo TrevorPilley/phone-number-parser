@@ -74,7 +74,7 @@ jobs:
 
       - name: dotnet test (.NET Framework)
         if: matrix.os == 'windows-latest'
-        run: dotnet test  --configuration ${{ env.PROJECT_CONFIGURATION }} -f net462 --no-restore --verbosity minimal
+        run: dotnet test test/PhoneNumbers.Tests/PhoneNumbers.Tests.csproj -f net462 --configuration ${{ env.PROJECT_CONFIGURATION }} --no-restore --verbosity minimal
 
       - name: Upload coverage reports to Codecov
         if: matrix.os == 'ubuntu-latest'
