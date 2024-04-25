@@ -16,6 +16,10 @@ public class DefaultPhoneNumberParserTests_AU_NonGeographicPhoneNumber
     [InlineData("0145999999", "145", "999999")]
     [InlineData("0147000000", "147", "000000")]
     [InlineData("0147999999", "147", "999999")]
+    [InlineData("0192000", "192", "000")]
+    [InlineData("0192999", "192", "999")]
+    [InlineData("01980000000", "198", "0000000")]
+    [InlineData("01989999999", "198", "9999999")]
     public void Parse_Known_NonGeographicPhoneNumber_1X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
@@ -86,8 +90,6 @@ public class DefaultPhoneNumberParserTests_AU_NonGeographicPhoneNumber
 
     [Theory]
     [InlineData("01900000000", "19", "00000000")]
-    [InlineData("01900999999", "19", "00999999")]
-    [InlineData("01901000000", "19", "01000000")]
     [InlineData("01902999999", "19", "02999999")]
     [InlineData("01906000000", "19", "06000000")]
     [InlineData("01906999999", "19", "06999999")]
