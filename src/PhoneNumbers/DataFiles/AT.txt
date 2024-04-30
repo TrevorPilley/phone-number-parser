@@ -1,3 +1,5 @@
+# Reference: https://www.rtr.at/TKP/was_wir_tun/telekommunikation/nummerierung/Austrian_Numbering_Plan_2011-03-30.pdf
+# Reference Date: 30/03/2011
 G|1|Wien|000-999999999999|
 G|2142|Gattendorf|000-999999999|
 G|2143|Kittsee|000-999999999|
