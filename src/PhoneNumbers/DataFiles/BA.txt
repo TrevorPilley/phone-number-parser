@@ -1,5 +1,5 @@
-# References:
-# - https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200001B0001PDFE.pdf
+# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200001B0001PDFE.pdf
+# Reference Date: 21/03/2017
 G|30|Central Bosnia Canton|000000-999999|
 G|31|Posavina Canton|000000-999999|
 G|32|Zenica-Doboj Canton|000000-999999|

@@ -1,3 +1,5 @@
+# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000320003PDFE.pdf
+# Reference Date: 21/03/2016
 G|1|Zagreb County and the City of Zagreb|2000000-9999999|
 G|20|Dubrovnik-Neretva County|200000-9999999|
 G|21|Split-Dalmatia County|200000-9999999|
