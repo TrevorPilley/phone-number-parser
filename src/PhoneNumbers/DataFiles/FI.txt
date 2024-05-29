@@ -1,3 +1,5 @@
+# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000490003PDFE.pdf
+# Reference Date: 23/08/2017
 N|100,200,2021,2024-2029,2090-2097||0000-999999|
 N|101-109,201,203-208,301-309||00000-9999999|
 G|13|Pohjois-Karjala|10000-8999999|
