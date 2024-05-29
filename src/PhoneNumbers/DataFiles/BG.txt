@@ -1,3 +1,5 @@
+# Reference: https://crc.bg/files/_en/bulgarian_NNP-en-2014(ver..2016).pdf via https://www.crc.bg/en/rubrics/481/numbering
+# Reference Date: 20/05/2014
 G|2|Sofia|2000000-9999999|
 G|30|Smolyan, Smolyan region and Plovdiv region|200000-999999|
 G|31,33|Plovdiv region|200000-999999|

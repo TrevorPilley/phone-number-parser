@@ -1,4 +1,5 @@
-# https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000340002PDFE.pdf
+# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000340002PDFE.pdf
+# Reference Date: 07/06/2021
 G|22|Nicosia|000000-999999|
 G|23|Famagusta|000000-999999|
 G|24|Larnaca|000000-999999|
