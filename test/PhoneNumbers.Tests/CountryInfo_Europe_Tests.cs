@@ -179,7 +179,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("DK", countryInfo.Iso3166Code);
         Assert.Equal("Denmark", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
-        Assert.Equal(new[] { 8 }, countryInfo.NsnLengths);
+        Assert.Equal(new[] { 8, 12 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }

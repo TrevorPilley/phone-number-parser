@@ -137,7 +137,7 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "DK",
         Name = "Denmark",
-        NsnLengths = new ReadOnlyCollection<int>([8]),
+        NsnLengths = new ReadOnlyCollection<int>([8, 12]),
     };
 
     /// <summary>
