@@ -1,3 +1,5 @@
+# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000680001PDFE.pdf
+# Reference Date: 30/07/2018
 G|1|Dublin|2000000-9989999|
 N|151||20000-89999|R
 N|152-159||00000-09999|R

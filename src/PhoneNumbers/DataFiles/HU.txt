@@ -1,3 +1,5 @@
+# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000610004PDFE.pdf
+# Reference Date: 06/05/2021
 G|1|Budapest|0000000-9999999|
 M|20,30-31,50,70||0000000-9999999|
 N|21,38||0000000-9999999|
