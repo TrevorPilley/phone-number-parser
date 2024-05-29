@@ -74,8 +74,8 @@ public class DefaultPhoneNumberParserTests_DK_NonGeographicPhoneNumber
     }
 
     [Theory]
-    [InlineData("37000000", "37000000")]
-    [InlineData("37999999", "37999999")]
+    [InlineData("370000000000", "370000000000")]
+    [InlineData("379999999999", "379999999999")]
     public void Parse_Known_NonGeographicPhoneNumber_MachineToMachine(string value, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
