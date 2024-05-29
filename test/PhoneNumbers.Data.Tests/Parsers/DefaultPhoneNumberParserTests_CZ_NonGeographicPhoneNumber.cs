@@ -8,9 +8,19 @@ public class DefaultPhoneNumberParserTests_CZ_NonGeographicPhoneNumber
     private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.CzechRepublic);
 
     [Theory]
-    [InlineData("820000000", "82", "0000000")]
-    [InlineData("829999999", "82", "9999999")]
-    public void Parse_Known_NonGeographicPhoneNumber_8X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
+    [InlineData("820000000", "820", "000000")]
+    [InlineData("820999999", "820", "999999")]
+    [InlineData("829000000", "829", "000000")]
+    [InlineData("829999999", "829", "999999")]
+    [InlineData("840000000", "840", "000000")]
+    [InlineData("840999999", "840", "999999")]
+    [InlineData("842000000", "842", "000000")]
+    [InlineData("842999999", "842", "999999")]
+    [InlineData("847000000", "847", "000000")]
+    [InlineData("847999999", "847", "999999")]
+    [InlineData("849000000", "849", "000000")]
+    [InlineData("849999999", "849", "999999")]
+    public void Parse_Known_NonGeographicPhoneNumber_8XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
         parseResult.ThrowIfFailure();
@@ -57,7 +67,7 @@ public class DefaultPhoneNumberParserTests_CZ_NonGeographicPhoneNumber
     [InlineData("9839999", "983", "9999")]
     [InlineData("989000000", "989", "000000")]
     [InlineData("989999999", "989", "999999")]
-    public void Parse_Known_NonGeographicPhoneNumber_9X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
+    public void Parse_Known_NonGeographicPhoneNumber_9XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
         parseResult.ThrowIfFailure();
@@ -132,12 +142,18 @@ public class DefaultPhoneNumberParserTests_CZ_NonGeographicPhoneNumber
     }
 
     [Theory]
-    [InlineData("810000000", "81", "0000000")]
-    [InlineData("819999999", "81", "9999999")]
-    [InlineData("830000000", "83", "0000000")]
-    [InlineData("839999999", "83", "9999999")]
-    [InlineData("840000000", "84", "0000000")]
-    [InlineData("849999999", "84", "9999999")]
+    [InlineData("810000000", "810", "000000")]
+    [InlineData("810999999", "810", "999999")]
+    [InlineData("819000000", "819", "000000")]
+    [InlineData("819999999", "819", "999999")]
+    [InlineData("830000000", "830", "000000")]
+    [InlineData("830999999", "830", "999999")]
+    [InlineData("839000000", "839", "000000")]
+    [InlineData("839999999", "839", "999999")]
+    [InlineData("843000000", "843", "000000")]
+    [InlineData("843999999", "843", "999999")]
+    [InlineData("846000000", "846", "000000")]
+    [InlineData("846999999", "846", "999999")]
     public void Parse_Known_NonGeographicPhoneNumber_SharedCost(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
