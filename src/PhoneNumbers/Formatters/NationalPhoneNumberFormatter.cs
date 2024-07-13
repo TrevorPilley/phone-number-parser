@@ -9,6 +9,7 @@ internal sealed class NationalPhoneNumberFormatter : PhoneNumberFormatter
     /// Initialises a new instance of the <see cref="NationalPhoneNumberFormatter"/> class.
     /// </summary>
     private NationalPhoneNumberFormatter()
+        : base("N")
     {
     }
 
@@ -16,10 +17,6 @@ internal sealed class NationalPhoneNumberFormatter : PhoneNumberFormatter
     /// Gets the <see cref="NationalPhoneNumberFormatter"/> instance.
     /// </summary>
     internal static PhoneNumberFormatter Instance { get; } = new NationalPhoneNumberFormatter();
-
-    /// <inheritdoc/>
-    internal override bool CanFormat(string format) =>
-        format?.Equals("N", StringComparison.Ordinal) == true;
 
     /// <inheritdoc/>
     internal override string Format(PhoneNumber phoneNumber)
