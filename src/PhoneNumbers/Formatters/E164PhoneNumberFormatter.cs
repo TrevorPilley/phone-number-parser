@@ -9,6 +9,7 @@ internal sealed class E164PhoneNumberFormatter : PhoneNumberFormatter
     /// Initialises a new instance of the <see cref="E164PhoneNumberFormatter"/> class.
     /// </summary>
     private E164PhoneNumberFormatter()
+        : base(DefaultFormat)
     {
     }
 
@@ -16,10 +17,6 @@ internal sealed class E164PhoneNumberFormatter : PhoneNumberFormatter
     /// Gets the <see cref="E164PhoneNumberFormatter"/> instance.
     /// </summary>
     internal static PhoneNumberFormatter Instance { get; } = new E164PhoneNumberFormatter();
-
-    /// <inheritdoc/>
-    internal override bool CanFormat(string format) =>
-        format?.Equals(DefaultFormat, StringComparison.Ordinal) == true;
 
     /// <inheritdoc/>
     internal override string Format(PhoneNumber phoneNumber) =>
