@@ -1,6 +1,6 @@
-# References:
-# - https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000CE0002PDFE.pdf
-G|2|Skopje|0000000-9999999|
+# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000CE0002PDFE.pdf
+# Reference Date: 15/10/2021
+G|2|Skopje|2000000-9999999|
 G|31|Kumanovo, Kriva Palanka, Kratovo|200000-999999|
 G|32|Štip, Probištip, Sveti Nikole, Radoviš|200000-999999|
 G|33|Kočani, Berovo, Delcevo, Vinica|200000-999999|

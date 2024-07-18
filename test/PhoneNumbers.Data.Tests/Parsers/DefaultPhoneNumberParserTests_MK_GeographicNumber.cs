@@ -8,7 +8,7 @@ public class DefaultPhoneNumberParserTests_MK_GeographicNumber
     private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.NorthMacedonia);
 
     [Theory]
-    [InlineData("020000000", "2", "0000000", "Skopje")]
+    [InlineData("022000000", "2", "2000000", "Skopje")]
     [InlineData("029999999", "2", "9999999", "Skopje")]
     public void Parse_Known_GeographicPhoneNumber_2_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
     {
