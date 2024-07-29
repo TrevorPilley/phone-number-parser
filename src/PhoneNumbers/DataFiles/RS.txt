@@ -1,3 +1,5 @@
+# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000B90001PDFE.pdf
+# Reference Date: 26/05/2011
 G|10|Pirot|2000000-9999999999|
 G|11|Beograd|2000000-9999999999|
 G|12|Požarevac|2000000-9999999999|

@@ -1,3 +1,5 @@
+# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000FD0002PDFE.pdf
+# Reference Date: 31/10/2019
 G|28|Mitrovica|200000-999999|
 G|29|Prizreni|200000-999999|
 G|38|Prishtina|200000-999999|

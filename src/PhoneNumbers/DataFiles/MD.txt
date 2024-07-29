@@ -1,3 +1,5 @@
+# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200008C0003PDFE.pdf
+# Reference Date: 06/04/2016
 G|210|Grigoriopol|00000-99999|
 G|215|Dubăsari|00000-99999|
 G|216|Camenca|00000-99999|
