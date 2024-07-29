@@ -1,5 +1,5 @@
-# References:
-# - https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200007C0001PDFE.pdf
+# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200007C0001PDFE.pdf
+# Reference Date: 31/08/2012
 G|310|Varėna district|20000-99999|
 G|313|Druskininkai town|20000-99999|
 G|315|Alytus town and district|20000-99999|
@@ -49,7 +49,7 @@ G|5|Vilnius city and district|2000000-2799999|
 G|528|Trakai district|20000-99999|
 M|600-699||00000-99999|
 M|700||00000-99999|V
-N|705-707,801,802,901||00000-99999|
+N|705-707,801-802,901||00000-99999|
 N|800||00000-99999|F
 N|808||00000-99999|S
-N|900,902-903,909,910||00000-99999|R
+N|900,902-903,909-910||00000-99999|R
