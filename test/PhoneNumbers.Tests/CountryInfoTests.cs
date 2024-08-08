@@ -100,7 +100,7 @@ public class CountryInfoTests
     [InlineData("+422 166 80666")]      // E.123 format
     [InlineData("(06166) 80666")]       // N format (open dialling)
     [InlineData("0616680666")]          // N format (closed dialling)
-    [InlineData("0123/45678-10")]       // Very old German number format
+    [InlineData("06166/80666-10")]       // Very old German number format
     [InlineData("+4220616680666")]      // E.164 format plus trunk prefix (not a correct format)
     [InlineData("+422(06)16680666")]    // E.164 format plus trunk prefix (not a correct format)
     [InlineData("+422 (06) 166 80666")]
@@ -124,7 +124,7 @@ public class CountryInfoTests
     [InlineData("+422 123 45678")]      // E.123 format
     [InlineData("123 45678")]           // N format (open dialling)
     [InlineData("12345678")]            // N format (closed dialling)
-    [InlineData("0123/45678-10")]       // Very old German number format
+    [InlineData("123/45678-10")]       // Very old German number format
     [InlineData("+422 123 456 78")]
     [InlineData("+422 123-456-78")]
     [InlineData("+422 123.456.78")]
