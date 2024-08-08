@@ -5,6 +5,15 @@ namespace PhoneNumbers.Tests;
 public class PhoneNumberTests
 {
     [Theory]
+    [InlineData("0234/123456-10")]
+    [InlineData("0234/123456-106")]
+    public void Parse_Germany_PhoneNumber_In_Very_Old_Format(string input)
+    {
+        var phoneNumber = PhoneNumber.Parse(input, CountryInfo.Germany);
+        Assert.Equal("234123456", phoneNumber.NationalSignificantNumber);
+    }
+    
+    [Theory]
     [InlineData("+441142726444")]
     [InlineData("+44 114 272 6444")]
     [InlineData("+44 (114) 272 6444")]
