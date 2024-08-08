@@ -12,8 +12,11 @@ public class PhoneNumberTests
     [InlineData("tel:+44-114-272-6444,1234")]
     [InlineData("tel:+44-114-272-6444;1234")]
     [InlineData("tel:+44-114-272-6444;ext=1234")]
-    public void Parse_Value(string input) =>
-        Assert.NotNull(PhoneNumber.Parse(input));
+    public void Parse_Value(string input)
+    {
+        var phoneNumber = PhoneNumber.Parse(input);
+        Assert.Equal("1142726444", phoneNumber.NationalSignificantNumber);
+    }
 
     [Theory]
     [InlineData("0114 272 6444")]
@@ -27,8 +30,11 @@ public class PhoneNumberTests
     [InlineData("tel:+44-114-272-6444,1234")]
     [InlineData("tel:+44-114-272-6444;1234")]
     [InlineData("tel:+44-114-272-6444;ext=1234")]
-    public void Parse_Value_CountryCode(string input) =>
-        Assert.NotNull(PhoneNumber.Parse(input, "GB"));
+    public void Parse_Value_CountryCode(string input)
+    {
+        var phoneNumber = PhoneNumber.Parse(input, "GB");
+        Assert.Equal("1142726444", phoneNumber.NationalSignificantNumber);
+    }
 
     [Fact]
     public void Parse_Value_CountryCode_Throws_If_CountryCode_Not_Supported()
@@ -68,8 +74,11 @@ public class PhoneNumberTests
     [InlineData("tel:+44-114-272-6444,1234")]
     [InlineData("tel:+44-114-272-6444;1234")]
     [InlineData("tel:+44-114-272-6444;ext=1234")]
-    public void Parse_Value_CountryInfo(string input) =>
-        Assert.NotNull(PhoneNumber.Parse(input, CountryInfo.UnitedKingdom));
+    public void Parse_Value_CountryInfo(string input)
+    {
+        var phoneNumber = PhoneNumber.Parse(input, CountryInfo.UnitedKingdom);
+        Assert.Equal("1142726444", phoneNumber.NationalSignificantNumber);
+    }
 
     [Fact]
     public void Parse_Value_CountryInfo_Throws_If_CountryInfo_Not_Supported()
@@ -135,6 +144,7 @@ public class PhoneNumberTests
     {
         Assert.True(PhoneNumber.TryParse(input, out PhoneNumber phoneNumber));
         Assert.NotNull(phoneNumber);
+        Assert.Equal("1142726444", phoneNumber.NationalSignificantNumber);
     }
 
     [Theory]
@@ -153,6 +163,7 @@ public class PhoneNumberTests
     {
         Assert.True(PhoneNumber.TryParse(input, "GB", out var phoneNumber));
         Assert.NotNull(phoneNumber);
+        Assert.Equal("1142726444", phoneNumber.NationalSignificantNumber);
     }
 
     [Fact]
@@ -203,6 +214,7 @@ public class PhoneNumberTests
     {
         Assert.True(PhoneNumber.TryParse(input, CountryInfo.UnitedKingdom, out var phoneNumber));
         Assert.NotNull(phoneNumber);
+        Assert.Equal("1142726444", phoneNumber.NationalSignificantNumber);
     }
 
     [Fact]
@@ -283,9 +295,10 @@ public class PhoneNumberTests
     {
         Assert.True(PhoneNumber.TryParse("02079813000", out IEnumerable<PhoneNumber> phoneNumbers));
         Assert.NotNull(phoneNumbers);
-        Assert.Equal(4, phoneNumbers.Count());
 
         var phoneNumberResults = phoneNumbers.ToList();
+
+        Assert.Equal(4, phoneNumberResults.Count);
 
         Assert.Equal(CountryInfo.Nigeria, phoneNumberResults[0].Country);
         Assert.Equal(CountryInfo.Finland, phoneNumberResults[1].Country);
