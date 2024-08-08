@@ -75,6 +75,7 @@ public class CountryInfoTests
     [Theory]
     [InlineData("+42212345678")]        // E.164 format
     [InlineData("+422 123 45678")]      // E.123 format
+    [InlineData("+422 (123) 45678")]    // Microsoft canonical address format (E.123 with parenthesis around area code)
     [InlineData("(0123) 45678")]        // N format (open dialling)
     [InlineData("012345678")]           // N format (closed dialling)
     [InlineData("+422012345678")]       // E.164 format plus trunk prefix (not a correct format)
@@ -97,6 +98,7 @@ public class CountryInfoTests
     [Theory]
     [InlineData("+42216680666")]        // E.164 format
     [InlineData("+422 166 80666")]      // E.123 format
+    [InlineData("+422 (166) 80666")]    // Microsoft canonical address format (E.123 with parenthesis around area code)
     [InlineData("(06166) 80666")]       // N format (open dialling)
     [InlineData("0616680666")]          // N format (closed dialling)
     [InlineData("+4220616680666")]      // E.164 format plus trunk prefix (not a correct format)
@@ -120,6 +122,7 @@ public class CountryInfoTests
     [Theory]
     [InlineData("+42212345678")]        // E.164 format
     [InlineData("+422 123 45678")]      // E.123 format
+    [InlineData("+422 (123) 45678")]    // Microsoft canonical address format (E.123 with parenthesis around area code)
     [InlineData("123 45678")]           // N format (open dialling)
     [InlineData("12345678")]            // N format (closed dialling)
     [InlineData("+422 123 456 78")]
