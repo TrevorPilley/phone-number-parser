@@ -192,7 +192,7 @@ public sealed partial class CountryInfo
     private static bool IsDigit(char charVal) =>
         charVal is >= '0' and <= '9';
 
-    private static bool IsSeparator(char charVal) =>
+    private static bool IsDelimiter(char charVal) =>
         charVal == Chars.Comma || charVal == Chars.Semicolon;
 
     [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
@@ -213,7 +213,7 @@ public sealed partial class CountryInfo
                 ar[arPos++] = charVal;
             }
 
-            if (IsSeparator(charVal))
+            if (IsDelimiter(charVal))
             {
                 break;
             }
