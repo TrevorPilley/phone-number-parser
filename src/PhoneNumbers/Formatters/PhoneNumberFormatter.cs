@@ -36,6 +36,7 @@ internal abstract class PhoneNumberFormatter(string format)
         bool wrapNdc = false,
         char nonDigitSubstitute = Chars.Null)
     {
+        var shouldWrapNdc = wrapNdc && phoneNumber.Country.HasNationalDestinationCodes;
         var nsnMask = phoneNumber.Country.FormatProvider.GetFormat(phoneNumber, international: true);
 
         var arSize =
@@ -69,17 +70,20 @@ internal abstract class PhoneNumberFormatter(string format)
             ar[arPos++] = charBetweenCallingCodeAndNsn;
         }
 
-        if (wrapNdc && phoneNumber.Country.HasNationalDestinationCodes)
+        if (shouldWrapNdc)
         {
             ar[arPos++] = Chars.OpenParenthesis;
         }
 
+        bool ndcWrapped;
         var nsnPos = 0;
+
         for (var i = 0; i < nsnMask.Length; i++)
         {
-            if (wrapNdc && phoneNumber.Country.HasNationalDestinationCodes && nsnPos == phoneNumber.NationalDestinationCode.Length)
+            if (shouldWrapNdc && !ndcWrapped && nsnPos == phoneNumber.NationalDestinationCode.Length)
             {
                 ar[arPos++] = Chars.CloseParenthesis;
+                ndcWrapped = true;
             }
             
             if (nsnMask[i] == Chars.Hash)
