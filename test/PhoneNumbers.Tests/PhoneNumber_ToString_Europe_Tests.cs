@@ -448,6 +448,13 @@ public class PhoneNumber_ToString_Europe_Tests
     [InlineData("+441642012234", "RFC3966", "tel:+44-1642-012234")]
     [InlineData("+447106010234", "RFC3966", "tel:+44-7106-010234")]
     [InlineData("+441946722130", "RFC3966", "tel:+44-19467-22130")]
+    [InlineData("+442079813000", "TAPI", "+44 (20) 7981 3000")]
+    [InlineData("+441142726444", "TAPI", "+44 (114) 272 6444")]
+    [InlineData("+443001100123", "TAPI", "+44 (300) 110 0123")]
+    [InlineData("+441642012234", "TAPI", "+44 (1642) 012234")]
+    [InlineData("+441733234567", "TAPI", "+44 (1733) 234567")]
+    [InlineData("+447106010234", "TAPI", "+44 (7106) 010234")]
+    [InlineData("+441946722130", "TAPI", "+44 (19467) 22130")]
     public void UnitedKingdom_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 }
