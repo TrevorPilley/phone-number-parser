@@ -11,7 +11,7 @@ The library **does not**:
 - Yet support every country
 - Provide certainty that a phone number is assigned and in use
 - Include the original carrier for mobile phone numbers due to number portability in most countries
-- Support extension numbers
+- Support extension numbers, although they are ignored if separated with a `,` or `;` in RFC3966 format
 - Support alphabetic mnemonic system/alphabetic phone-words (e.g. 123-PHONEME)
 - Correctly exclude extension numbers separated with a hyphen (issue #689), e.g. in the older German style `0234/123456-10` the `10` is incorrectly added to the subscriber number. If you know numbers may be entered in this format, please manually split on the `-` before calling `PhoneNumber.Parse`
 
