@@ -27,16 +27,16 @@ internal abstract class PhoneNumberFormatter(string format)
     /// <param name="phoneNumber">The <see cref="PhoneNumber"/> to format.</param>
     /// <param name="outputPrefix">The optional prefix to be used.</param>
     /// <param name="charBetweenCallingCodeAndNsn">The character to use between the calling code and national significant number.</param>
-    /// <param name="useInternationalMask">A value indicating whether to use the international mask or the national mask.</param>
+    /// <param name="wrapNdc">A value indicating whether to wrap the NDC value in parenthesis.</param>
     /// <param name="nonDigitSubstitute">The character to substitute for non digits in the format mask.</param>
     protected string FormatInternational(
         PhoneNumber phoneNumber,
         string? outputPrefix = null,
         char charBetweenCallingCodeAndNsn = Chars.Null,
-        bool useInternationalMask = true,
+        bool wrapNdc = false,
         char nonDigitSubstitute = Chars.Null)
     {
-        var nsnMask = phoneNumber.Country.FormatProvider.GetFormat(phoneNumber, international: useInternationalMask);
+        var nsnMask = phoneNumber.Country.FormatProvider.GetFormat(phoneNumber, international: true);
 
         var arSize =
             (outputPrefix?.Length ?? 0)
