@@ -28,6 +28,7 @@ public sealed partial class CountryInfo
         E123PhoneNumberFormatter.Instance,
         NationalPhoneNumberFormatter.Instance,
         Rfc3966PhoneNumberFormatter.Instance,
+        TapiPhoneNumberFormatter.Instance,
     ]);
 
     /// <summary>
