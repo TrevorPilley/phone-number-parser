@@ -75,7 +75,7 @@ internal abstract class PhoneNumberFormatter(string format)
             ar[arPos++] = Chars.OpenParenthesis;
         }
 
-        bool ndcWrapped;
+        bool ndcWrapped = false;
         var nsnPos = 0;
 
         for (var i = 0; i < nsnMask.Length; i++)
