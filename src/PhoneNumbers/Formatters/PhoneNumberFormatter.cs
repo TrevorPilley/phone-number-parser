@@ -77,7 +77,7 @@ internal abstract class PhoneNumberFormatter(string format)
         var nsnPos = 0;
         for (var i = 0; i < nsnMask.Length; i++)
         {
-            if (wrapNdc && phoneNumber.Country.HasNationalDestinationCodes && arPos == arSize - phoneNumber.SubscriberNumber.Length)
+            if (wrapNdc && phoneNumber.Country.HasNationalDestinationCodes && nsnPos == phoneNumber.NationalDestinationCode.Length - 1)
             {
                 ar[arPos++] = Chars.CloseParenthesis;
             }
