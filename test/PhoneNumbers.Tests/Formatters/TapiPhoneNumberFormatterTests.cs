@@ -25,3 +25,4 @@ public class TapiPhoneNumberFormatterTests
         Assert.NotNull(TapiPhoneNumberFormatter.Instance);
         Assert.Same(TapiPhoneNumberFormatter.Instance, TapiPhoneNumberFormatter.Instance);
     }
+}
