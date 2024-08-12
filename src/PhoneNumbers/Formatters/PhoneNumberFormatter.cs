@@ -71,7 +71,7 @@ internal abstract class PhoneNumberFormatter(string format)
 
         if (wrapNdc && phoneNumber.Country.HasNationalDestinationCodes)
         {
-            ar[arPos++] = Char.OpenParenthesis;
+            ar[arPos++] = Chars.OpenParenthesis;
         }
 
         var nsnPos = 0;
