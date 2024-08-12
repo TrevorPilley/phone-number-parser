@@ -43,6 +43,7 @@ internal abstract class PhoneNumberFormatter(string format)
             + 1 // add one for the + appended to the calling code
             + phoneNumber.Country.CallingCode.Length
             + (charBetweenCallingCodeAndNsn != Chars.Null ? 1 : 0)
+            + (wrapNdc ? 2 : 0)
             + nsnMask.Length;
 
         Span<char> ar = stackalloc char[arSize];
@@ -66,6 +67,11 @@ internal abstract class PhoneNumberFormatter(string format)
         if (charBetweenCallingCodeAndNsn != Chars.Null)
         {
             ar[arPos++] = charBetweenCallingCodeAndNsn;
+        }
+
+        if (wrapNdc && phoneNumber.Country.HasNationalDestinationCodes)
+        {
+            ar[arPos++] = Char.OpenParenthesis;
         }
 
         var nsnPos = 0;
