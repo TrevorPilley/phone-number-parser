@@ -20,5 +20,5 @@ internal sealed class TapiPhoneNumberFormatter : PhoneNumberFormatter
 
     /// <inheritdoc/>
     internal override string Format(PhoneNumber phoneNumber) =>
-        FormatInternational(phoneNumber, charBetweenCallingCodeAndNsn: Chars.Space);
+        FormatInternational(phoneNumber, charBetweenCallingCodeAndNsn: Chars.Space, useInternationalMask: false);
 }
