@@ -27,6 +27,8 @@ phoneNumber.ToString("E.164");           // +441142726444       (E.164 format)
 phoneNumber.ToString("E.123");           // +44 114 272 6444    (E.123 international format)
 phoneNumber.ToString("N");               // (0114) 272 6444     (E.123 national notation format)
 phoneNumber.ToString("RFC3966");         // tel:+44-114-272-644 (RFC3966 format)
+phoneNumber.ToString("TAPI");            // +44 (114) 272 6444    (Telephony Application Programming Interface (TAPI) format)
+
 ```
 
 Builds for:
