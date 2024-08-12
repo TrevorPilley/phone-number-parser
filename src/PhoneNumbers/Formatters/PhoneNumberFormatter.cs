@@ -77,6 +77,11 @@ internal abstract class PhoneNumberFormatter(string format)
         var nsnPos = 0;
         for (var i = 0; i < nsnMask.Length; i++)
         {
+            if (wrapNdc && phoneNumber.Country.HasNationalDestinationCodes && arPos = arSize - phoneNumber.SubscriberNumber.Length)
+            {
+                ar[arPos++] = Chars.CloseParenthesis;
+            }
+            
             if (nsnMask[i] == Chars.Hash)
             {
                 ar[arPos++] = phoneNumber.NationalSignificantNumber[nsnPos++];
