@@ -80,7 +80,7 @@ internal abstract class PhoneNumberFormatter(string format)
 
         for (var i = 0; i < nsnMask.Length; i++)
         {
-            if (shouldWrapNdc && !ndcWrapped && nsnPos == phoneNumber.NationalDestinationCode.Length)
+            if (shouldWrapNdc && !ndcWrapped && nsnPos == phoneNumber.NationalDestinationCode!.Length)
             {
                 ar[arPos++] = Chars.CloseParenthesis;
                 ndcWrapped = true;
