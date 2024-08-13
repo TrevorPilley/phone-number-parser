@@ -24,9 +24,9 @@ public class PhoneNumber_ToString_Asia_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
-    [InlineData("+903122947200", "E.123", "+90 312 2947 200")]
-    [InlineData("+903122947200", "N", "(0312) 2947 200")]
-    [InlineData("+903122947200", "RFC3966", "tel:+90-312-2947-200")]
+    [InlineData("+903122947200", "E.123", "+90 312 294 72 00")]
+    [InlineData("+903122947200", "N", "(0312) 294 72 00")]
+    [InlineData("+903122947200", "RFC3966", "tel:+90-312-294-72-00")]
     public void Turkey_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 }
