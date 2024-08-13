@@ -1,3 +1,5 @@
 # Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000D60002PDFE.pdf
 # Reference Date: 02/03/2018
-G|312|Ankara|0000000-9999999|
+G|212|Istanbul (European Part)|2000000-9999999|
+G|216|Istanbul (Anatolian Part)|2000000-9999999|
+G|312|Ankara|2000000-9999999|
