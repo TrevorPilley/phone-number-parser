@@ -39,4 +39,18 @@ public partial class CountryInfo
         Name = "Singapore",
         NsnLengths = new ReadOnlyCollection<int>([8, 10, 11]),
     };
+
+    /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Turkey.
+    /// </summary>
+    public static CountryInfo Turkey { get; } = new()
+    {
+        CallingCode = "90",
+        Continent = Africa,
+        Iso3166Code = "TR",
+        Name = "Turkey",
+        NdcLengths = new ReadOnlyCollection<int>([3]),
+        NsnLengths = new ReadOnlyCollection<int>([10]),
+        TrunkPrefix = "0",
+    };
 }
