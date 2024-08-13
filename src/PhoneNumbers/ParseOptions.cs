@@ -16,7 +16,7 @@ public sealed class ParseOptions
     /// Gets the supported <see cref="CountryInfo"/>s.
     /// </summary>
     /// <remarks>By default, this will contain all <see cref="CountryInfo"/> static properties.</remarks>
-    public ICollection<CountryInfo> Countries { get; } = CountryInfo.GetCountries().ToList();
+    public ICollection<CountryInfo> Countries { get; } = CountryInfo.GetCountries().ToHashSet();
 
     /// <summary>
     /// Gets the <see cref="PhoneNumberParserFactory"/>.
@@ -35,5 +35,5 @@ public sealed class ParseOptions
     /// </summary>
     /// <param name="value">A string containing a phone number in international format (e.g. +XX).</param>
     internal IEnumerable<CountryInfo> GetCountryInfos(string value) =>
-        Countries.Where(x => x.HasCallingCode(value));
+        Countries.Where(x => x.HasCallingCode(value)).OrderBy(x => x.SharesCallingCode);
 }

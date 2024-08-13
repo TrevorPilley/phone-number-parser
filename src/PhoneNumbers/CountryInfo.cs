@@ -121,8 +121,7 @@ public sealed partial class CountryInfo
             .GetProperties(BindingFlags.Public | BindingFlags.Static)
             .Where(x => x.PropertyType == typeof(CountryInfo))
             .Select(x => x.GetValue(null))
-            .Cast<CountryInfo>()
-            .OrderBy(x => x.SharesCallingCode);
+            .Cast<CountryInfo>();
 
     internal static IEnumerable<CountryInfo> GetCountries(Func<CountryInfo, bool> predicate) =>
         GetCountries()
