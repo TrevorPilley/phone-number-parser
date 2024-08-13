@@ -67,6 +67,7 @@ phoneNumber.Country.Continent;                     // Europe
 phoneNumber.Country.HasNationalDestinationCodes;   // true
 phoneNumber.Country.HasTrunkPrefix;                // true
 phoneNumber.Country.IsEuropeanUnionMember;         // false
+phoneNumber.Country.IsNatoMember;                  // true
 phoneNumber.Country.Iso3166Code;                   // GB
 phoneNumber.Country.Name;                          // United Kingdom
 phoneNumber.Country.SharesCallingCode;             // true
@@ -142,6 +143,7 @@ ParseOptions.Default.AllowSouthAmericanCountries();
 
 // Add all countries supported by the library who are members of the same union:
 ParseOptions.Default.AllowEuropeanUnionCountries();
+ParseOptions.Default.AllowNatoCountries();
 
 // Add all countries supported by the library using the same numbering plan:
 ParseOptions.Default.AllowNorthAmericanNumberingPlanCountries();
