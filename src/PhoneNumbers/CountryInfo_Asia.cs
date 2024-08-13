@@ -46,7 +46,7 @@ public partial class CountryInfo
     public static CountryInfo Turkey { get; } = new()
     {
         CallingCode = "90",
-        Continent = Africa,
+        Continent = Asia
         Iso3166Code = "TR",
         Name = "Turkey",
         NdcLengths = new ReadOnlyCollection<int>([3]),
