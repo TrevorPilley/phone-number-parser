@@ -15,6 +15,7 @@ public class CountryInfo_Oceania_Tests
         Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Oceania, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("AS", countryInfo.Iso3166Code);
         Assert.Equal("American Samoa", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
