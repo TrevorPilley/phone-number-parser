@@ -4,10 +4,11 @@ using System.Text;
 namespace PhoneNumbers.Formatters.FormatProviders;
 
 /// <summary>
-/// A <see cref="PhoneNumberFormatProvider"/> for numbers which returns a mask based upon '{NDC}{space}{SN}' with no additional formatting of the SN.
+/// A <see cref="PhoneNumberFormatProvider"/> for numbers which returns a mask based upon '{NDC}{space}{SN}',
+/// prefixing the trunk prefix where appropriate.
 /// </summary>
 /// <remarks>
-/// It caters for trunk prefixes, the numbering plan type and whether the NDC is optional.
+/// It caters for trunk prefixes, and whether the NDC is optional.
 /// </remarks>
 internal class SimplePhoneNumberFormatProvider : PhoneNumberFormatProvider
 {

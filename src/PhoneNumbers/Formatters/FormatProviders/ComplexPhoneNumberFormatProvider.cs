@@ -4,8 +4,8 @@ namespace PhoneNumbers.Formatters.FormatProviders;
 /// The base class for a class which can provide a format for a <see cref="PhoneNumber"/>.
 /// </summary>
 /// <remarks>
-/// It caters for trunk prefixes, the numbering plan type and whether the National Destination Code (where used) is optional
-/// for geographic numbers in an open numbering plan where the geographic area is not specifically closed.
+/// It caters for trunk prefixes and whether the National Destination Code (where used) is optional
+/// for geographic numbers or where the geographic area is specifically closed.
 /// Subscriber numbers of 5 digits or less are not split
 /// Subscriber numbers of 6 digits are split 3-3
 /// Subscriber numbers of 7 digits are split 3-4
