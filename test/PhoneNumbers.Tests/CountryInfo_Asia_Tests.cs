@@ -63,4 +63,24 @@ public class CountryInfo_Asia_Tests
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
+
+    [Fact]
+    public void CountryInfo_Turkey()
+    {
+        Assert.Same(CountryInfo.Turkey, CountryInfo.Turkey);
+
+        var countryInfo = CountryInfo.Turkey;
+
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal("90", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
+        Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.Equal("TR", countryInfo.Iso3166Code);
+        Assert.Equal("Turkey", countryInfo.Name);
+        Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Equal("0", countryInfo.TrunkPrefix);
+    }
 }
