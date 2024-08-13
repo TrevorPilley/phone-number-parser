@@ -22,4 +22,11 @@ public class PhoneNumber_ToString_Asia_Tests
     [InlineData("+6563773800", "RFC3966", "tel:+65-6377-3800")]
     public void Singapore_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
+    [InlineData("+903122947200", "E.123", "+90 312 2947 200")]
+    [InlineData("+903122947200", "N", "(0312) 2947 200")]
+    [InlineData("+903122947200", "RFC3966", "tel:+90-312-2947-200")]
+    public void Turkey_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 }
