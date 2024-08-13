@@ -3,10 +3,11 @@ using System.Collections.Concurrent;
 namespace PhoneNumbers.Formatters.FormatProviders;
 
 /// <summary>
-/// A <see cref="PhoneNumberFormatProvider"/> for numbers which returns an unformatted mask the length of the NSN.
+/// A <see cref="PhoneNumberFormatProvider"/> for numbers which returns an unformatted mask the length of the NSN,
+/// prefixing the trunk prefix where appropriate.
 /// </summary>
 /// <remarks>
-/// It caters for trunk prefixes, but not the numbering plan type or whether the NDC is optional.
+/// It caters for trunk prefixes only.
 /// </remarks>
 internal sealed class BasicPhoneNumberFormatProvider : PhoneNumberFormatProvider
 {
