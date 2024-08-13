@@ -60,6 +60,17 @@ public class ParseOptionsTests
     }
 
     [Fact]
+    public void AllowNatoCountries()
+    {
+        var parseOptions = new ParseOptions();
+        parseOptions.Countries.Clear();
+        parseOptions.AllowNatoCountries();
+
+        Assert.Equal(32, parseOptions.Countries.Count);
+        Assert.All(parseOptions.Countries, x => Assert.True(x.IsNatoMember));
+    }
+
+    [Fact]
     public void AllowNorthAmericanCountries()
     {
         var parseOptions = new ParseOptions();
