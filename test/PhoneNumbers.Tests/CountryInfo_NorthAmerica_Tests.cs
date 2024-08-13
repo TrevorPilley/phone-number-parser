@@ -16,6 +16,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("AI", countryInfo.Iso3166Code);
         Assert.Equal("Anguilla", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
@@ -36,6 +37,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("AG", countryInfo.Iso3166Code);
         Assert.Equal("Antigua and Barbuda", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
@@ -56,6 +58,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("BS", countryInfo.Iso3166Code);
         Assert.Equal("Bahamas", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
@@ -76,6 +79,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("BB", countryInfo.Iso3166Code);
         Assert.Equal("Barbados", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
@@ -96,6 +100,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("BM", countryInfo.Iso3166Code);
         Assert.Equal("Bermuda", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
@@ -116,6 +121,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("VG", countryInfo.Iso3166Code);
         Assert.Equal("British Virgin Islands", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
@@ -136,6 +142,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("CA", countryInfo.Iso3166Code);
         Assert.Equal("Canada", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
@@ -156,6 +163,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("KY", countryInfo.Iso3166Code);
         Assert.Equal("Cayman Islands", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
@@ -176,6 +184,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("DM", countryInfo.Iso3166Code);
         Assert.Equal("Dominica", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
@@ -196,6 +205,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("GD", countryInfo.Iso3166Code);
         Assert.Equal("Grenada", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
@@ -216,6 +226,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("JM", countryInfo.Iso3166Code);
         Assert.Equal("Jamaica", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
@@ -236,6 +247,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("MS", countryInfo.Iso3166Code);
         Assert.Equal("Montserrat", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
@@ -256,6 +268,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("MP", countryInfo.Iso3166Code);
         Assert.Equal("Northern Mariana Island", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
@@ -276,6 +289,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("PR", countryInfo.Iso3166Code);
         Assert.Equal("Puerto Rico", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
@@ -296,6 +310,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("KN", countryInfo.Iso3166Code);
         Assert.Equal("Saint Kitts and Nevis", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
@@ -316,6 +331,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("LC", countryInfo.Iso3166Code);
         Assert.Equal("Saint Lucia", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
@@ -336,6 +352,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("VC", countryInfo.Iso3166Code);
         Assert.Equal("Saint Vincent and the Grenadines", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
@@ -356,6 +373,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("SX", countryInfo.Iso3166Code);
         Assert.Equal("Sint Maarten", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
@@ -376,6 +394,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("TT", countryInfo.Iso3166Code);
         Assert.Equal("Trinidad and Tobago", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
@@ -396,6 +415,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("TC", countryInfo.Iso3166Code);
         Assert.Equal("Turks and Caicos Islands", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
@@ -416,6 +436,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("US", countryInfo.Iso3166Code);
         Assert.Equal("United States", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
@@ -436,6 +457,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("VI", countryInfo.Iso3166Code);
         Assert.Equal("United States Virgin Islands", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
