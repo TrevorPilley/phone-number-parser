@@ -5,6 +5,17 @@ namespace PhoneNumbers.Tests;
 public class ParseOptionsTests
 {
     [Fact]
+    public void AddingCountryMultipleTimesOnlyOnceInList()
+    {
+        var parseOptions = new ParseOptions();
+        parseOptions.Countries.Clear();
+        parseOptions.Countries.Add(CountryInfo.UnitedKingdom);
+        parseOptions.Countries.Add(CountryInfo.UnitedKingdom);
+
+        Assert.Single(parseOptions.Countries);
+    }
+    
+    [Fact]
     public void AllowAfricanCountries()
     {
         var parseOptions = new ParseOptions();
@@ -118,11 +129,10 @@ public class ParseOptionsTests
             .Where(x => x.PropertyType == typeof(CountryInfo))
             .Select(x => x.GetValue(null))
             .Cast<CountryInfo>()
-            .OrderBy(x => x.SharesCallingCode)
-            .ToList();
+            .OrderBy(x => x.Name);
 
-        Assert.True(countryInfos.Count > 0);
-        Assert.Equal(countryInfos, ParseOptions.Default.Countries);
+        Assert.True(countryInfos.Count() > 0);
+        Assert.Equal(countryInfos, ParseOptions.Default.Countries.OrderBy(x => x.Name));
     }
 
     [Fact]
