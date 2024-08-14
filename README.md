@@ -189,6 +189,7 @@ Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobi
 Hong Kong      | HK            | 852          |              |            | Yes    |                    | Yes                  | Yes            | Yes                            |                                   |                                  | Yes
 Macau          | MO            | 853          |              |            | Yes    |                    |                      | Yes            |                                |                                   |                                  |
 Singapore      | SG            | 65           |              |            | Yes    |                    |                      | Yes            | Yes                            | Yes                               |                                  |
+Turkey         | TR            | 90           | 0            |            | Yes    |                    |                      | Yes            | Yes                            | Yes                               |                                  |
 
 ### Europe
 
