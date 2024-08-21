@@ -210,14 +210,13 @@ public sealed partial class CountryInfo
             if (IsDigit(charVal))
             {
                 ar[arPos++] = charVal;
-            }
 
-            if (IsDelimiter(charVal))
-            {
-                break;
+                if (arPos == ar.Length)
+                {
+                    break;
+                }
             }
-
-            if (arPos == ar.Length)
+            else if (IsDelimiter(charVal))
             {
                 break;
             }
