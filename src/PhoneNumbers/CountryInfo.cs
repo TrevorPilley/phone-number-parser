@@ -161,7 +161,7 @@ public sealed partial class CountryInfo
     /// </summary>
     /// <param name="value">A string containing a phone number.</param>
     /// <returns>True if the value has a valid length for this country, otherwise false.</returns>
-    internal bool IsValidNsnLength(string value) =>
+    internal bool HasValidNsnLength(string value) =>
         NsnLengths.Contains(value.Length);
 
     /// <summary>
