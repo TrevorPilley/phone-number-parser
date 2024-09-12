@@ -78,6 +78,8 @@ public class CountryInfoTests
     [InlineData("+422 (123) 45678")]    // Microsoft canonical address format (E.123 with parenthesis around area code)
     [InlineData("(0123) 45678")]        // N format (open dialling)
     [InlineData("012345678")]           // N format (closed dialling)
+    [InlineData("0123 45678-10")]       // DIN 5008 (Germany) with extension number
+    [InlineData("0123/45678-10")]       // Very old German number format
     [InlineData("+422012345678")]       // E.164 format plus trunk prefix (not a correct format)
     [InlineData("+422(0)12345678")]     // E.164 format plus trunk prefix (not a correct format)
     [InlineData("+422 (0) 123 456 78")]
@@ -93,7 +95,11 @@ public class CountryInfoTests
     [InlineData("A sentence containing a valid international formatted number +42212345678 within it.")]
     [InlineData("A sentence containing a valid national formatted number (0123) 45678 within it.")]
     public void ReadNationalSignificantNumber_With_TrunkPrefix(string value) =>
-        Assert.Equal("12345678", TestHelper.CreateCountryInfo(trunkPrefix: "0").ReadNationalSignificantNumber(value));
+        Assert.Equal(
+            "12345678",
+            TestHelper
+                .CreateCountryInfo(trunkPrefix: "0", nsnLengths: new[] { 8 })
+                .ReadNationalSignificantNumber(value));
 
     [Theory]
     [InlineData("+42216680666")]        // E.164 format
@@ -101,6 +107,8 @@ public class CountryInfoTests
     [InlineData("+422 (166) 80666")]    // Microsoft canonical address format (E.123 with parenthesis around area code)
     [InlineData("(06166) 80666")]       // N format (open dialling)
     [InlineData("0616680666")]          // N format (closed dialling)
+    [InlineData("06166 80666-10")]      // DIN 5008 (Germany) with extension number
+    [InlineData("06166/80666-10")]      // Very old German number format
     [InlineData("+4220616680666")]      // E.164 format plus trunk prefix (not a correct format)
     [InlineData("+422(06)16680666")]    // E.164 format plus trunk prefix (not a correct format)
     [InlineData("+422 (06) 166 80666")]
@@ -117,7 +125,11 @@ public class CountryInfoTests
     [InlineData("A sentence containing a valid international formatted number +42216680666 within it.")]
     [InlineData("A sentence containing a valid national formatted number (06166) 80666 within it.")]
     public void ReadNationalSignificantNumber_With_TrunkPrefix_MultiDigit(string value) =>
-        Assert.Equal("16680666", TestHelper.CreateCountryInfo(trunkPrefix: "06").ReadNationalSignificantNumber(value));
+        Assert.Equal(
+            "16680666",
+            TestHelper
+                .CreateCountryInfo(trunkPrefix: "06", nsnLengths: new[] { 8 })
+                .ReadNationalSignificantNumber(value));
 
     [Theory]
     [InlineData("+42212345678")]        // E.164 format
@@ -125,6 +137,8 @@ public class CountryInfoTests
     [InlineData("+422 (123) 45678")]    // Microsoft canonical address format (E.123 with parenthesis around area code)
     [InlineData("123 45678")]           // N format (open dialling)
     [InlineData("12345678")]            // N format (closed dialling)
+    [InlineData("123 45678-10")]        // DIN 5008 (Germany) with extension number
+    [InlineData("123/45678-10")]        // Very old German number format
     [InlineData("+422 123 456 78")]
     [InlineData("+422 123-456-78")]
     [InlineData("+422 123.456.78")]
@@ -138,7 +152,11 @@ public class CountryInfoTests
     [InlineData("A sentence containing a valid international formatted number +42212345678 within it.")]
     [InlineData("A sentence containing a valid national formatted number 123 45678 within it.")]
     public void ReadNationalSignificantNumber_Without_TrunkPrefix(string value) =>
-        Assert.Equal("12345678", TestHelper.CreateCountryInfo(trunkPrefix: null).ReadNationalSignificantNumber(value));
+        Assert.Equal(
+            "12345678",
+            TestHelper
+                .CreateCountryInfo(trunkPrefix: null, nsnLengths: new[] { 8 })
+                .ReadNationalSignificantNumber(value));
 
     [Fact]
     public void When_Constructed()

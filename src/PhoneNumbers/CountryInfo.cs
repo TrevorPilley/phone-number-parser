@@ -162,7 +162,7 @@ public sealed partial class CountryInfo
     /// <param name="value">A string containing a phone number.</param>
     /// <returns>True if the value has a valid length for this country, otherwise false.</returns>
     internal bool HasValidNsnLength(string value) =>
-        NsnLengths.Contains(value.Length);
+        IsValidNsnLength(value.Length);
 
     /// <summary>
     /// Reads the national significant number (NSN) from the specified phone number value.
@@ -194,14 +194,21 @@ public sealed partial class CountryInfo
     private static bool IsDelimiter(char charVal) =>
         charVal == Chars.Comma || charVal == Chars.Semicolon;
 
+    private static bool IsSeparator(char charVal) =>
+        charVal == Chars.Hyphen || charVal == Chars.ForwardSlash;
+
     [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
     private string GetDebuggerDisplay() =>
         $"{Iso3166Code} {CallingCode}";
+
+    private bool IsValidNsnLength(int length) =>
+        NsnLengths.Contains(length);
 
     private string ReadNationalSignificantNumber(string value, int startPos)
     {
         Span<char> ar = stackalloc char[16]; // longer than any valid phone number
         var arPos = 0;
+        var startsWithTrunkPrefix = HasTrunkPrefix;
 
         for (var i = startPos; i < value.Length; i++)
         {
@@ -209,6 +216,11 @@ public sealed partial class CountryInfo
 
             if (IsDigit(charVal))
             {
+                if (startsWithTrunkPrefix && arPos < TrunkPrefix!.Length)
+                {
+                    startsWithTrunkPrefix &= TrunkPrefix[arPos] == charVal;
+                }
+
                 ar[arPos++] = charVal;
 
                 if (arPos == ar.Length)
@@ -216,29 +228,16 @@ public sealed partial class CountryInfo
                     break;
                 }
             }
-            else if (IsDelimiter(charVal))
+            else if (IsDelimiter(charVal)
+                || IsSeparator(charVal) && (startsWithTrunkPrefix && IsValidNsnLength(arPos - TrunkPrefix!.Length) || (!startsWithTrunkPrefix && IsValidNsnLength(arPos))))
             {
                 break;
             }
         }
 
-        if (TrunkPrefix is not null)
+        if (startsWithTrunkPrefix)
         {
-            var startsWithTrunkPrefix = true;
-
-            for (var i = 0; i < TrunkPrefix.Length; i++)
-            {
-                if (ar[i] != TrunkPrefix[i])
-                {
-                    startsWithTrunkPrefix = false;
-                    break;
-                }
-            }
-
-            if (startsWithTrunkPrefix)
-            {
-                return ar.Slice(TrunkPrefix.Length, arPos - TrunkPrefix.Length).ToString();
-            }
+            return ar.Slice(TrunkPrefix!.Length, arPos - TrunkPrefix.Length).ToString();
         }
 
         return ar.Slice(0, arPos).ToString();
