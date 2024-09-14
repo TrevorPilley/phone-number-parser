@@ -235,6 +235,11 @@ public sealed partial class CountryInfo
             }
         }
 
+        if (arPos == 0)
+        {
+            return string.Empty;
+        }
+
         if (startsWithTrunkPrefix)
         {
             return ar.Slice(TrunkPrefix!.Length, arPos - TrunkPrefix.Length).ToString();
