@@ -193,6 +193,8 @@ public class PhoneNumberTests
     [InlineData(default(string))]
     [InlineData("")]
     [InlineData(" ")]
+    [InlineData("-")]
+    [InlineData("+44")]
     [InlineData("441142726444")]
     public void TryParse_Value_CountryCode_False_If_Value_Invalid(string input)
     {
