@@ -7,12 +7,14 @@ public class PhoneNumberTests
     [Theory]
     [InlineData("0234/123456-10")]
     [InlineData("0234/123456-106")]
+    [InlineData("+49234/123456-10")]
+    [InlineData("+49234/123456-106")]
     public void Parse_Germany_PhoneNumber_In_Very_Old_Format(string input)
     {
         var phoneNumber = PhoneNumber.Parse(input, CountryInfo.Germany);
         Assert.Equal("234123456", phoneNumber.NationalSignificantNumber);
     }
-    
+
     [Theory]
     [InlineData("+441142726444")]
     [InlineData("+44 114 272 6444")]
@@ -67,6 +69,10 @@ public class PhoneNumberTests
     [InlineData(default(string))]
     [InlineData("")]
     [InlineData(" ")]
+    [InlineData("-")]
+    [InlineData("/")]
+    [InlineData("+44")]
+    [InlineData("+44-1/2")]
     [InlineData("441142726444")]
     public void Parse_Value_CountryCode_Throws_If_Value_Invalid(string input) =>
         Assert.Throws<ParseException>(() => PhoneNumber.Parse(input, "GB"));
@@ -108,6 +114,10 @@ public class PhoneNumberTests
     [InlineData(default(string))]
     [InlineData("")]
     [InlineData(" ")]
+    [InlineData("-")]
+    [InlineData("/")]
+    [InlineData("+44")]
+    [InlineData("+44-1/2")]
     [InlineData("441142726444")]
     public void Parse_Value_CountryInfo_Throws_If_Value_Invalid(string input) =>
         Assert.Throws<ParseException>(() => PhoneNumber.Parse(input, CountryInfo.UnitedKingdom));
@@ -120,6 +130,10 @@ public class PhoneNumberTests
     [InlineData(default(string))]
     [InlineData("")]
     [InlineData(" ")]
+    [InlineData("-")]
+    [InlineData("/")]
+    [InlineData("+44")]
+    [InlineData("+44-1/2")]
     [InlineData("441142726444")]
     public void Parse_Value_Throws_If_Value_Invalid(string input) =>
         Assert.Throws<ParseException>(() => PhoneNumber.Parse(input));
@@ -193,6 +207,10 @@ public class PhoneNumberTests
     [InlineData(default(string))]
     [InlineData("")]
     [InlineData(" ")]
+    [InlineData("-")]
+    [InlineData("/")]
+    [InlineData("+44")]
+    [InlineData("+44-1/2")]
     [InlineData("441142726444")]
     public void TryParse_Value_CountryCode_False_If_Value_Invalid(string input)
     {
@@ -237,6 +255,10 @@ public class PhoneNumberTests
     [InlineData(default(string))]
     [InlineData("")]
     [InlineData(" ")]
+    [InlineData("-")]
+    [InlineData("/")]
+    [InlineData("+44")]
+    [InlineData("+44-1/2")]
     [InlineData("441142726444")]
     public void TryParse_Value_CountryInfo_False_If_Value_Invalid(string input)
     {
@@ -248,6 +270,10 @@ public class PhoneNumberTests
     [InlineData(default(string))]
     [InlineData("")]
     [InlineData(" ")]
+    [InlineData("-")]
+    [InlineData("/")]
+    [InlineData("+44")]
+    [InlineData("+44-1/2")]
     [InlineData("441142726444")]
     public void TryParse_Value_False_If_Value_Invalid(string input)
     {
@@ -273,6 +299,10 @@ public class PhoneNumberTests
     [InlineData(default(string))]
     [InlineData("")]
     [InlineData(" ")]
+    [InlineData("-")]
+    [InlineData("/")]
+    [InlineData("+44")]
+    [InlineData("+44-1/2")]
     [InlineData("441142726444")]
     public void TryParse_Value_PhoneNumbers_False_If_Value_Invalid(string input)
     {
