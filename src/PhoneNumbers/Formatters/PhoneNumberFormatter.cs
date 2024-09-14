@@ -28,7 +28,7 @@ internal abstract class PhoneNumberFormatter(string format)
     /// <param name="outputPrefix">The optional prefix to be used.</param>
     /// <param name="charBetweenCallingCodeAndNsn">The character to use between the calling code and national significant number.</param>
     /// <param name="nonDigitSubstitute">The character to substitute for non digits in the format mask.</param>
-    protected string FormatInternational(
+    protected static string FormatInternational(
         PhoneNumber phoneNumber,
         string? outputPrefix = null,
         char charBetweenCallingCodeAndNsn = Chars.Null,
