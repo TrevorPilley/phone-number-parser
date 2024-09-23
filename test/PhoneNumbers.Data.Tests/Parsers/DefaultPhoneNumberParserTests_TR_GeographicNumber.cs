@@ -8,10 +8,10 @@ public class DefaultPhoneNumberParserTests_TR_GeographicNumber
     private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Turkey);
 
     [Theory]
-    [InlineData("02122000000", "212", "2000000", "Istanbul (European Part)")]
-    [InlineData("02129999999", "212", "9999999", "Istanbul (European Part)")]
-    [InlineData("02162000000", "216", "2000000", "Istanbul (Anatolian Part)")]
-    [InlineData("02169999999", "216", "9999999", "Istanbul (Anatolian Part)")]
+    [InlineData("02122000000", "212", "2000000", "Istanbul (European Side)")]
+    [InlineData("02129999999", "212", "9999999", "Istanbul (European Side)")]
+    [InlineData("02162000000", "216", "2000000", "Istanbul (Anatolian Side)")]
+    [InlineData("02169999999", "216", "9999999", "Istanbul (Anatolian Side)")]
     [InlineData("02222000000", "222", "2000000", "Eskişehir")]
     [InlineData("02229999999", "222", "9999999", "Eskişehir")]
     [InlineData("02242000000", "224", "2000000", "Bursa")]
