@@ -79,6 +79,7 @@ public class CountryInfo_Asia_Tests
         Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
         Assert.IsType<TRPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("TR", countryInfo.Iso3166Code);
         Assert.Equal("Turkey", countryInfo.Name);
         Assert.Equal(new[] { 3, 0 }, countryInfo.NdcLengths);
