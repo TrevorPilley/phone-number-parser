@@ -60,6 +60,29 @@ public class DefaultPhoneNumberParserTests_TR_NonGeographicPhoneNumber
     }
 
     [Theory]
+    [InlineData("04440000", "4440000")]
+    [InlineData("04449999", "4449999")]
+    public void Parse_Known_NonGeographicPhoneNumber(string value, string subscriberNumber)
+    {
+        var parseResult = s_parser.Parse(value);
+        parseResult.ThrowIfFailure();
+
+        var phoneNumber = parseResult.PhoneNumber;
+
+        Assert.NotNull(phoneNumber);
+        Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
+
+        var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
+        Assert.Equal(CountryInfo.Turkey, nonGeographicPhoneNumber.Country);
+        Assert.False(nonGeographicPhoneNumber.IsFreephone);
+        Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
+        Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
+        Assert.False(nonGeographicPhoneNumber.IsSharedCost);
+        Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
+        Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
+    }
+
+    [Theory]
     [InlineData("08000000000", "800", "0000000")]
     [InlineData("08009999999", "800", "9999999")]
     public void Parse_Known_NonGeographicPhoneNumber_Freephone(string value, string NationalDestinationCode, string subscriberNumber)

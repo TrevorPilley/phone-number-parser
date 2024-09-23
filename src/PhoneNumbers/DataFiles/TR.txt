@@ -88,3 +88,5 @@ N|800||0000000-9999999|F
 N|811-812||0000000-9999999|
 M|850||0000000-9999999|V
 N|888,898,900||0000000-9999999|R
+# call center numbers cannot be dialed with area code, they must be dialed with 7 digits
+N|||4440000-4449999|

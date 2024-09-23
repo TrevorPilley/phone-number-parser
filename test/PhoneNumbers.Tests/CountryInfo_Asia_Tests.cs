@@ -78,8 +78,8 @@ public class CountryInfo_Asia_Tests
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("TR", countryInfo.Iso3166Code);
         Assert.Equal("Turkey", countryInfo.Name);
-        Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
+        Assert.Equal(new[] { 3, 0 }, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 7, 10 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
