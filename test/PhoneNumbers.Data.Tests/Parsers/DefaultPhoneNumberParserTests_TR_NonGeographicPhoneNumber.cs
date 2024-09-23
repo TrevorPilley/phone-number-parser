@@ -78,7 +78,7 @@ public class DefaultPhoneNumberParserTests_TR_NonGeographicPhoneNumber
         Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
         Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
         Assert.False(nonGeographicPhoneNumber.IsSharedCost);
-        Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
+        Assert.Null(nonGeographicPhoneNumber.NationalDestinationCode);
         Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
     }
 
