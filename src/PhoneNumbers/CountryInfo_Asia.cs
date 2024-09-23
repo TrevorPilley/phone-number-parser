@@ -1,4 +1,5 @@
 using System.Collections.ObjectModel;
+using PhoneNumbers.Formatters.FormatProviders;
 
 namespace PhoneNumbers;
 
@@ -38,5 +39,20 @@ public partial class CountryInfo
         Iso3166Code = "SG",
         Name = "Singapore",
         NsnLengths = new ReadOnlyCollection<int>([8, 10, 11]),
+    };
+
+    /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Turkey.
+    /// </summary>
+    public static CountryInfo Turkey { get; } = new()
+    {
+        CallingCode = "90",
+        Continent = Asia,
+        FormatProvider = TRPhoneNumberFormatProvider.Instance,
+        Iso3166Code = "TR",
+        Name = "Turkey",
+        NdcLengths = new ReadOnlyCollection<int>([3, 0]),
+        NsnLengths = new ReadOnlyCollection<int>([7, 10]),
+        TrunkPrefix = "0",
     };
 }
