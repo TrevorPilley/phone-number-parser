@@ -1,5 +1,7 @@
 # Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000D60002PDFE.pdf
 # Reference Date: 02/03/2018
+# call center numbers cannot be dialed with area code, they must be dialed with 7 digits
+N|||4440000-4449999|
 G|212|Istanbul (European Side)|2000000-9999999|
 G|216|Istanbul (Anatolian Side)|2000000-9999999|
 G|222|Eskişehir|2000000-9999999|
@@ -88,5 +90,3 @@ N|800||0000000-9999999|F
 N|811-812||0000000-9999999|
 M|850||0000000-9999999|V
 N|888,898,900||0000000-9999999|R
-# call center numbers cannot be dialed with area code, they must be dialed with 7 digits
-N|||4440000-4449999|

@@ -14,6 +14,7 @@ internal sealed class TRPhoneNumberFormatProvider : ComplexPhoneNumberFormatProv
     protected override string ProvideFormat(PhoneNumber phoneNumber, bool international) =>
         phoneNumber.NationalSignificantNumber.Length switch
         {
+            7 => international ? "### ## ##" : "(0###) ## ##",
             10 => international ? "### ### ## ##" : "(0###) ### ## ##",
             _ => base.ProvideFormat(phoneNumber, international),
         };

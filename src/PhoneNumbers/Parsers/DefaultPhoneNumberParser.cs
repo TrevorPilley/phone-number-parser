@@ -50,13 +50,24 @@ internal class DefaultPhoneNumberParser : PhoneNumberParser
                     continue;
                 }
 
-                ndc = nsnValue.Substring(0, len);
-                sn = nsnValue.Substring(ndc.Length);
+                if (len > 0)
+                {
+                    ndc = nsnValue.Substring(0, len);
+                    sn = nsnValue.Substring(ndc.Length);
 
-                countryNumber = CountryNumbers
-                    .FirstOrDefault(x =>
-                        x.NationalDestinationCodeRanges!.Any(x => x.Contains(ndc)) &&
-                        x.SubscriberNumberRanges.Any(x => x.Contains(sn)));
+                    countryNumber = CountryNumbers
+                        .FirstOrDefault(x =>
+                            x.NationalDestinationCodeRanges?.Any(x => x.Contains(ndc)) == true &&
+                            x.SubscriberNumberRanges.Any(x => x.Contains(sn)));
+                }
+                else
+                {
+                    ndc = null;
+                    sn = nsnValue;
+
+                    countryNumber = CountryNumbers
+                        .FirstOrDefault(x => x.NationalDestinationCodeRanges is null && x.SubscriberNumberRanges.Any(x => x.Contains(nsnValue)));
+                }
 
                 if (countryNumber is not null)
                 {
