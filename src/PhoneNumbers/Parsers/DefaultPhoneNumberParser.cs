@@ -66,7 +66,9 @@ internal class DefaultPhoneNumberParser : PhoneNumberParser
                     sn = nsnValue;
 
                     countryNumber = CountryNumbers
-                        .FirstOrDefault(x => x.NationalDestinationCodeRanges is null && x.SubscriberNumberRanges.Any(x => x.Contains(nsnValue)));
+                        .FirstOrDefault(x =>
+                            x.NationalDestinationCodeRanges is null &&
+                            x.SubscriberNumberRanges.Any(x => x.Contains(nsnValue)));
                 }
 
                 if (countryNumber is not null)
