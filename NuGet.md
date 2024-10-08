@@ -42,5 +42,5 @@ The library **does not**:
 - Yet support every country
 - Provide certainty that a phone number is assigned and in use
 - Include the original carrier for mobile phone numbers due to number portability in most countries
-- Support extension numbers
+- Support extension numbers, although they are ignored if specified when parsing a value in RFC3966 format or in the older German style `0234/123456-10`
 - Support alphabetic mnemonic system/alphabetic phone-words (e.g. 123-PHONEME)
