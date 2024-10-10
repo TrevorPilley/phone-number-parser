@@ -41,6 +41,6 @@ public class CountryInfo_SouthAmerica_Tests
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
-        Assert.Equal("0", countryInfo.TrunkPrefix);
+        Assert.Null(countryInfo.TrunkPrefix);
     }
 }

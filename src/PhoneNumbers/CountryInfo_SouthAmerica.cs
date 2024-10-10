@@ -33,6 +33,5 @@ public partial class CountryInfo
         Name = "Colombia",
         NdcLengths = new ReadOnlyCollection<int>([3]),
         NsnLengths = new ReadOnlyCollection<int>([10]),
-        TrunkPrefix = "0",
     };
 }

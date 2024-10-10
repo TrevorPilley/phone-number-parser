@@ -14,7 +14,7 @@ public class PhoneNumber_ToString_SouthAmerica_Tests
 
     [Theory]
     [InlineData("+576013198300", "E.123", "+57 601 3198300")]
-    [InlineData("+576013198300", "N", "0601 3198300")]
+    [InlineData("+576013198300", "N", "601 3198300")]
     [InlineData("+576013198300", "RFC3966", "tel:+57-601-3198300")]
     public void Colombia_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
