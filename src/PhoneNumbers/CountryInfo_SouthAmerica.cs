@@ -20,4 +20,19 @@ public partial class CountryInfo
         NsnLengths = new ReadOnlyCollection<int>([10, 11]),
         TrunkPrefix = "0",
     };
+
+    /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Colombia.
+    /// </summary>
+    public static CountryInfo Colombia { get; } = new()
+    {
+        CallingCode = "57",
+        Continent = SouthAmerica,
+        FormatProvider = COPhoneNumberFormatProvider.Instance,
+        Iso3166Code = "CO",
+        Name = "Colombia",
+        NdcLengths = new ReadOnlyCollection<int>([3]),
+        NsnLengths = new ReadOnlyCollection<int>([10]),
+        TrunkPrefix = "0",
+    };
 }
