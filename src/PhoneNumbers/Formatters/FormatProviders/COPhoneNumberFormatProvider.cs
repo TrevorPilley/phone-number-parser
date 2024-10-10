@@ -12,5 +12,5 @@ internal sealed class COPhoneNumberFormatProvider : PhoneNumberFormatProvider
     internal static PhoneNumberFormatProvider Instance { get; } = new COPhoneNumberFormatProvider();
 
     protected override string ProvideFormat(PhoneNumber phoneNumber, bool international) =>
-        international ? "### #######" : "0### #######";
+        "### #######";
 }
