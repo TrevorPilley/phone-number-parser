@@ -23,9 +23,7 @@ internal sealed class NationalPhoneNumberFormatter : PhoneNumberFormatter
     {
         var nsnMask = phoneNumber.Country.FormatProvider.GetFormat(phoneNumber, international: false);
 
-        var arSize = nsnMask.Length;
-
-        Span<char> ar = stackalloc char[arSize];
+        Span<char> ar = stackalloc char[nsnMask.Length];
         var arPos = 0;
 
         var nsnPos = 0;
