@@ -14,7 +14,7 @@ internal sealed class AUPhoneNumberFormatProvider : ComplexPhoneNumberFormatProv
     protected override string ProvideFormat(PhoneNumber phoneNumber, bool international)
     {
         if (phoneNumber is NonGeographicPhoneNumber nonGeographicPhoneNumber &&
-        nonGeographicPhoneNumber.IsFreephone)
+            nonGeographicPhoneNumber.IsFreephone)
         {
             return "#### ### ###";
         }
