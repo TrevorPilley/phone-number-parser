@@ -46,7 +46,7 @@ jobs:
      - name: Setup .NET
        uses: actions/setup-dotnet@v4
        with:
-        dotnet-version: 8.0.x
+        dotnet-version: 9.0.x
 
      - name: Set release version
        if: github.ref_type == 'tag'
@@ -83,7 +83,7 @@ jobs:
        run: dotnet build --configuration ${{ env.PROJECT_CONFIGURATION }} --no-restore
 
      - name: dotnet test
-       run: dotnet test --configuration ${{ env.PROJECT_CONFIGURATION }} -f net8.0 --no-restore --verbosity minimal
+       run: dotnet test --configuration ${{ env.PROJECT_CONFIGURATION }} -f net9.0 --no-restore --verbosity minimal
 
      - name: dotnet pack
        if: github.ref_type == 'tag'
