@@ -275,4 +275,3 @@ public class DefaultPhoneNumberParserTests_LU_NonGeographicPhoneNumber
         Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
     }
 }
-}
