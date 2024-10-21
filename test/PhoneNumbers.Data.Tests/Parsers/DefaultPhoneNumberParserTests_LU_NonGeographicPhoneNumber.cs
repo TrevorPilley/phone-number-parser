@@ -8,6 +8,7 @@ public class DefaultPhoneNumberParserTests_LU_NonGeographicPhoneNumber
     private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Luxembourg);
 
     [Theory]
+    [InlineData("1399", "1399")]
     [InlineData("2200", "2200")]
     [InlineData("2299", "2299")]
     [InlineData("2500", "2500")]
@@ -28,6 +29,9 @@ public class DefaultPhoneNumberParserTests_LU_NonGeographicPhoneNumber
     [InlineData("9799", "9799")]
     [InlineData("9900", "9900")]
     [InlineData("9999", "9999")]
+    [InlineData(" 1300", " 1300")]
+    [InlineData("12000", "12000")]
+    [InlineData("12999", "12999")]
     [InlineData("22000", "22000")]
     [InlineData("22999", "22999")]
     [InlineData("25000", "25000")]
