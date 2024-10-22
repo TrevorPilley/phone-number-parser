@@ -11,4 +11,11 @@ public class PhoneNumber_ToString_SouthAmerica_Tests
     [InlineData("+5541732649808", "RFC3966", "tel:+55-41-73264-9808")]
     public void Brazil_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
+    [InlineData("+576013198300", "E.123", "+57 601 3198300")]
+    [InlineData("+576013198300", "N", "601 3198300")]
+    [InlineData("+576013198300", "RFC3966", "tel:+57-601-3198300")]
+    public void Colombia_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 }
