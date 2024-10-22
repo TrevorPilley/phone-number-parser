@@ -18,6 +18,8 @@ public class DefaultPhoneNumberParserTests_LU_MobilePhoneNumber
     [InlineData("661999999", "661999999")]
     [InlineData("671000000", "671000000")]
     [InlineData("671999999", "671999999")]
+    [InlineData("679000000", "679000000")]
+    [InlineData("679999999", "679999999")]
     [InlineData("681000000", "681000000")]
     [InlineData("681999999", "681999999")]
     [InlineData("691000000", "691000000")]

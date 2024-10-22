@@ -8,6 +8,8 @@ public class DefaultPhoneNumberParserTests_LU_NonGeographicPhoneNumber
     private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Luxembourg);
 
     [Theory]
+    [InlineData("1300", "1300")]
+    [InlineData("1399", "1399")]
     [InlineData("2200", "2200")]
     [InlineData("2299", "2299")]
     [InlineData("2500", "2500")]
@@ -15,9 +17,9 @@ public class DefaultPhoneNumberParserTests_LU_NonGeographicPhoneNumber
     [InlineData("2900", "2900")]
     [InlineData("2999", "2999")]
     [InlineData("3000", "3000")]
-    [InlineData("5099", "5099")]
+    [InlineData("5999", "5999")]
     [InlineData("7000", "7000")]
-    [InlineData("7099", "7099")]
+    [InlineData("7999", "7999")]
     [InlineData("8020", "8020")]
     [InlineData("8999", "8999")]
     [InlineData("9080", "9080")]
@@ -28,6 +30,8 @@ public class DefaultPhoneNumberParserTests_LU_NonGeographicPhoneNumber
     [InlineData("9799", "9799")]
     [InlineData("9900", "9900")]
     [InlineData("9999", "9999")]
+    [InlineData("12000", "12000")]
+    [InlineData("12999", "12999")]
     [InlineData("22000", "22000")]
     [InlineData("22999", "22999")]
     [InlineData("25000", "25000")]
@@ -35,9 +39,9 @@ public class DefaultPhoneNumberParserTests_LU_NonGeographicPhoneNumber
     [InlineData("29000", "29000")]
     [InlineData("29999", "29999")]
     [InlineData("30000", "30000")]
-    [InlineData("50999", "50999")]
+    [InlineData("59999", "59999")]
     [InlineData("70000", "70000")]
-    [InlineData("70999", "70999")]
+    [InlineData("79999", "79999")]
     [InlineData("80200", "80200")]
     [InlineData("89999", "89999")]
     [InlineData("90800", "90800")]
@@ -55,9 +59,9 @@ public class DefaultPhoneNumberParserTests_LU_NonGeographicPhoneNumber
     [InlineData("290000", "290000")]
     [InlineData("299999", "299999")]
     [InlineData("300000", "300000")]
-    [InlineData("509999", "509999")]
+    [InlineData("599999", "599999")]
     [InlineData("700000", "700000")]
-    [InlineData("709999", "709999")]
+    [InlineData("799999", "799999")]
     [InlineData("802000", "802000")]
     [InlineData("899999", "899999")]
     [InlineData("908000", "908000")]
@@ -75,9 +79,9 @@ public class DefaultPhoneNumberParserTests_LU_NonGeographicPhoneNumber
     [InlineData("2900000", "2900000")]
     [InlineData("2999999", "2999999")]
     [InlineData("3000000", "3000000")]
-    [InlineData("5099999", "5099999")]
+    [InlineData("5999999", "5999999")]
     [InlineData("7000000", "7000000")]
-    [InlineData("7099999", "7099999")]
+    [InlineData("7999999", "7999999")]
     [InlineData("8020000", "8020000")]
     [InlineData("8999999", "8999999")]
     [InlineData("9080000", "9080000")]
@@ -101,9 +105,9 @@ public class DefaultPhoneNumberParserTests_LU_NonGeographicPhoneNumber
     [InlineData("29000000", "29000000")]
     [InlineData("29999999", "29999999")]
     [InlineData("30000000", "30000000")]
-    [InlineData("50999999", "50999999")]
+    [InlineData("59999999", "59999999")]
     [InlineData("70000000", "70000000")]
-    [InlineData("70999999", "70999999")]
+    [InlineData("79999999", "79999999")]
     [InlineData("80200000", "80200000")]
     [InlineData("89999999", "89999999")]
     [InlineData("90800000", "90800000")]
@@ -121,9 +125,9 @@ public class DefaultPhoneNumberParserTests_LU_NonGeographicPhoneNumber
     [InlineData("290000000", "290000000")]
     [InlineData("299999999", "299999999")]
     [InlineData("300000000", "300000000")]
-    [InlineData("509999999", "509999999")]
+    [InlineData("599999999", "599999999")]
     [InlineData("700000000", "700000000")]
-    [InlineData("709999999", "709999999")]
+    [InlineData("799999999", "799999999")]
     [InlineData("802000000", "802000000")]
     [InlineData("899999999", "899999999")]
     [InlineData("908000000", "908000000")]
@@ -141,9 +145,9 @@ public class DefaultPhoneNumberParserTests_LU_NonGeographicPhoneNumber
     [InlineData("2900000000", "2900000000")]
     [InlineData("2999999999", "2999999999")]
     [InlineData("3000000000", "3000000000")]
-    [InlineData("5099999999", "5099999999")]
+    [InlineData("5999999999", "5999999999")]
     [InlineData("7000000000", "7000000000")]
-    [InlineData("7099999999", "7099999999")]
+    [InlineData("7999999999", "7999999999")]
     [InlineData("8020000000", "8020000000")]
     [InlineData("8999999999", "8999999999")]
     [InlineData("9080000000", "9080000000")]
@@ -161,9 +165,9 @@ public class DefaultPhoneNumberParserTests_LU_NonGeographicPhoneNumber
     [InlineData("29000000000", "29000000000")]
     [InlineData("29999999999", "29999999999")]
     [InlineData("30000000000", "30000000000")]
-    [InlineData("50999999999", "50999999999")]
+    [InlineData("59999999999", "59999999999")]
     [InlineData("70000000000", "70000000000")]
-    [InlineData("70999999999", "70999999999")]
+    [InlineData("79999999999", "79999999999")]
     [InlineData("80200000000", "80200000000")]
     [InlineData("89999999999", "89999999999")]
     [InlineData("90800000000", "90800000000")]
@@ -211,6 +215,35 @@ public class DefaultPhoneNumberParserTests_LU_NonGeographicPhoneNumber
         Assert.Equal(CountryInfo.Luxembourg, nonGeographicPhoneNumber.Country);
         Assert.True(nonGeographicPhoneNumber.IsFreephone);
         Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
+        Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
+        Assert.False(nonGeographicPhoneNumber.IsSharedCost);
+        Assert.Null(nonGeographicPhoneNumber.NationalDestinationCode);
+        Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
+    }
+
+    [Theory]
+    [InlineData("600000000000", "600000000000")]
+    [InlineData("600299999999", "600299999999")]
+    [InlineData("602100000000", "602100000000")]
+    [InlineData("602199999999", "602199999999")]
+    [InlineData("606100000000", "606100000000")]
+    [InlineData("606199999999", "606199999999")]
+    [InlineData("606700000000", "606700000000")]
+    [InlineData("606799999999", "606799999999")]
+    public void Parse_Known_NonGeographicPhoneNumber_MachineToMachine(string value, string subscriberNumber)
+    {
+        var parseResult = s_parser.Parse(value);
+        parseResult.ThrowIfFailure();
+
+        var phoneNumber = parseResult.PhoneNumber;
+
+        Assert.NotNull(phoneNumber);
+        Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
+
+        var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
+        Assert.Equal(CountryInfo.Luxembourg, nonGeographicPhoneNumber.Country);
+        Assert.False(nonGeographicPhoneNumber.IsFreephone);
+        Assert.True(nonGeographicPhoneNumber.IsMachineToMachine);
         Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
         Assert.False(nonGeographicPhoneNumber.IsSharedCost);
         Assert.Null(nonGeographicPhoneNumber.NationalDestinationCode);
