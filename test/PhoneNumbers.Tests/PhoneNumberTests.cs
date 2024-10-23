@@ -16,6 +16,12 @@ public class PhoneNumberTests
     }
 
     [Theory]
+    [InlineData("+352 26 312 - 1")]   // Listed on https://www.bertrange.lu
+    [InlineData("(+352) 26 84 60 1")] // Listed on http://www.fidest.lu
+    public void Parse_Luxembourg_Numbers_Known_To_Be_Listed_Outside_Of_Numbering_Plan(string input) =>
+        Assert.True(PhoneNumber.TryParse(input, out PhoneNumber _));
+
+    [Theory]
     [InlineData("+441142726444")]
     [InlineData("+44 114 272 6444")]
     [InlineData("+44 (114) 272 6444")]
