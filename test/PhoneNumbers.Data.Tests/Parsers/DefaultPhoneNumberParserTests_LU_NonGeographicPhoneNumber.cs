@@ -107,7 +107,7 @@ public class DefaultPhoneNumberParserTests_LU_NonGeographicPhoneNumber
     [InlineData("25000000", "25000000")]
     [InlineData("25999999", "25999999")]
     [InlineData("26000000", "26000000")]
-    [InlineData("26000000", "26000000")]
+    [InlineData("26999999", "26999999")]
     [InlineData("27000000", "27000000")]
     [InlineData("28999999", "28999999")]
     [InlineData("29000000", "29000000")]
