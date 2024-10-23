@@ -37,6 +37,7 @@ public class CountryInfo_SouthAmerica_Tests
         Assert.Equal(CountryInfo.SouthAmerica, countryInfo.Continent);
         Assert.IsType<COPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("CO", countryInfo.Iso3166Code);
         Assert.Equal("Colombia", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
