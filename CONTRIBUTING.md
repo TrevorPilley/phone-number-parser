@@ -77,6 +77,8 @@ The name of the area a geographically assigned number is allocated to, preferabl
 
 Can be specified in the same way as national destination code ranges.
 
+Note however for numbering plans that do not use national destination codes but have variable length subscriber numbers which all start with the same digits, each segment needs specifying individually by length. For example, if the numbering plan states NSN starting 26 with a min length of 6 and a max length of 7 the data file would need to contain `260000-269999,2600000-2699999`. If it was defined as `260000-2699999` it would incorrectly include the number `2599999`.
+
 #### Hint
 
 Optional but can be one of:
