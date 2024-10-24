@@ -70,6 +70,11 @@ public sealed partial class CountryInfo
     public bool IsEuropeanUnionMember { get; init; }
 
     /// <summary>
+    /// Gets a value indicating whether the country is a member of the North Atlantic Treaty Organisation.
+    /// </summary>
+    public bool IsNatoMember { get; init; }
+
+    /// <summary>
     /// Gets the ISO 3166 Alpha-2 code for the country.
     /// </summary>
     /// <remarks>See https://www.iso.org/iso-3166-country-codes.html</remarks>
