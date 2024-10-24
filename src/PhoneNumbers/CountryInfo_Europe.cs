@@ -191,6 +191,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Germany { get; } = new()
     {
+        AllowsLocalGeographicDialling = true,
         CallingCode = "49",
         Continent = Europe,
         FormatProvider = SimplePhoneNumberFormatProvider.Default,

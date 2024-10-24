@@ -102,7 +102,7 @@ public class PhoneNumber_ToString_Europe_Tests
 
     [Theory]
     [InlineData("+49228141177", "E.123", "+49 228 141177")]
-    [InlineData("+49228141177", "N", "0228 141177")]
+    [InlineData("+49228141177", "N", "(0228) 141177")]
     [InlineData("+49228141177", "RFC3966", "tel:+49-228-141177")]
     public void Germany_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
