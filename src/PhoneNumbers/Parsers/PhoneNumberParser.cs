@@ -3,20 +3,14 @@ namespace PhoneNumbers.Parsers;
 /// <summary>
 /// The base class for a class which parses a string containing a phone number into a <see cref="PhoneNumber"/> instance.
 /// </summary>
-internal abstract class PhoneNumberParser
+/// <param name="countryInfo">The <see cref="CountryInfo"/> of the country for the parser.</param>
+/// <exception cref="ArgumentNullException">Thrown if <paramref name="countryInfo"/> is null.</exception>
+internal abstract class PhoneNumberParser(CountryInfo countryInfo)
 {
-    /// <summary>
-    /// Initialises a new instance of the <see cref="PhoneNumberParser"/> class.
-    /// </summary>
-    /// <param name="countryInfo">The <see cref="CountryInfo"/> of the country for the parser.</param>
-    /// <exception cref="ArgumentNullException">Thrown if <paramref name="countryInfo"/> is null.</exception>
-    protected PhoneNumberParser(CountryInfo countryInfo) =>
-        Country = countryInfo ?? throw new ArgumentNullException(nameof(countryInfo));
-
     /// <summary>
     /// Gets the <see cref="CountryInfo"/> for the parser.
     /// </summary>
-    protected CountryInfo Country { get; }
+    protected CountryInfo Country { get; } = countryInfo ?? throw new ArgumentNullException(nameof(countryInfo));
 
     /// <summary>
     /// Parses the phone number represented in the specified string into a <see cref="PhoneNumber"/> instance.

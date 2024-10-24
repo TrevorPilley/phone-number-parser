@@ -6,15 +6,9 @@ namespace PhoneNumbers;
 /// <summary>
 /// The base class representing a <see cref="PhoneNumber"/>.
 /// </summary>
-public abstract class PhoneNumber
+/// <param name="phoneNumberHint">The <see cref="PhoneNumberHint"/> for the phone number.</param>
+public abstract class PhoneNumber(PhoneNumberHint phoneNumberHint)
 {
-    /// <summary>
-    /// Initialises a new instance of the <see cref="PhoneNumber"/> class.
-    /// </summary>
-    /// <param name="phoneNumberHint">The <see cref="PhoneNumberHint"/> for the phone number.</param>
-    protected PhoneNumber(PhoneNumberHint phoneNumberHint) =>
-        Hint = phoneNumberHint;
-
     /// <summary>
     /// Gets the <see cref="CountryInfo"/> for the phone number.
     /// </summary>
@@ -52,7 +46,7 @@ public abstract class PhoneNumber
     /// <summary>
     /// Gets the <see cref="PhoneNumberHint"/>.
     /// </summary>
-    protected PhoneNumberHint Hint { get; }
+    protected PhoneNumberHint Hint { get; } = phoneNumberHint;
 
     /// <summary>
     /// Parses the specified phone number value into a <see cref="PhoneNumber"/> instance based upon its calling code using the default <see cref="ParseOptions"/>.
