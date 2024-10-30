@@ -16,6 +16,7 @@ public class CountryInfo_Africa_Tests
         Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("EG", countryInfo.Iso3166Code);
         Assert.Equal("Egypt", countryInfo.Name);
         Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
@@ -36,6 +37,7 @@ public class CountryInfo_Africa_Tests
         Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
         Assert.IsType<SimplePhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("KE", countryInfo.Iso3166Code);
         Assert.Equal("Kenya", countryInfo.Name);
         Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
@@ -56,6 +58,7 @@ public class CountryInfo_Africa_Tests
         Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("NG", countryInfo.Iso3166Code);
         Assert.Equal("Nigeria", countryInfo.Name);
         Assert.Equal(new[] { 4, 3 }, countryInfo.NdcLengths);
@@ -76,6 +79,7 @@ public class CountryInfo_Africa_Tests
         Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("ZA", countryInfo.Iso3166Code);
         Assert.Equal("South Africa", countryInfo.Name);
         Assert.Equal(new[] { 2 }, countryInfo.NdcLengths);
@@ -96,6 +100,7 @@ public class CountryInfo_Africa_Tests
         Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("TZ", countryInfo.Iso3166Code);
         Assert.Equal("Tanzania", countryInfo.Name);
         Assert.Equal(new[] { 5, 3, 2 }, countryInfo.NdcLengths);
@@ -116,6 +121,7 @@ public class CountryInfo_Africa_Tests
         Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
         Assert.IsType<UGPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("UG", countryInfo.Iso3166Code);
         Assert.Equal("Uganda", countryInfo.Name);
         Assert.Equal(new[] { 6, 5, 4, 3, 1 }, countryInfo.NdcLengths);
