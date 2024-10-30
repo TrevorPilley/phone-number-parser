@@ -103,4 +103,24 @@ public class CountryInfo_Africa_Tests
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
+
+    [Fact]
+    public void CountryInfo_Uganda()
+    {
+        Assert.Same(CountryInfo.Uganda, CountryInfo.Uganda);
+
+        var countryInfo = CountryInfo.Uganda;
+
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal("256", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
+        Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.Equal("UG", countryInfo.Iso3166Code);
+        Assert.Equal("Uganda", countryInfo.Name);
+        Assert.Equal(new[] { 6, 5, 4, 3, 1 }, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 9 }, countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Equal("0", countryInfo.TrunkPrefix);
+    }
 }

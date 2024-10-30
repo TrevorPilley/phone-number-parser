@@ -76,4 +76,18 @@ public partial class CountryInfo
         NsnLengths = new ReadOnlyCollection<int>([9, 12]),
         TrunkPrefix = "0",
     };
+
+    /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Uganda.
+    /// </summary>
+    public static CountryInfo Uganda { get; } = new()
+    {
+        CallingCode = "256",
+        Continent = Africa,
+        Iso3166Code = "UG",
+        Name = "Uganda",
+        NdcLengths = new ReadOnlyCollection<int>([6, 5, 4, 3, 1]),
+        NsnLengths = new ReadOnlyCollection<int>([9]),
+        TrunkPrefix = "0",
+    };
 }
