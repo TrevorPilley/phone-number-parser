@@ -42,6 +42,15 @@ public static class ParseOptionsExtensions
         Allow(parseOptions, x => x.IsEuropeanUnionMember);
 
     /// <summary>
+    /// Allows the <see cref="ParseOptions"/> instance to include all supported countries who are members of the North Atlantic Treaty Organisation.
+    /// </summary>
+    /// <param name="parseOptions">The <see cref="ParseOptions"/> instance to update.</param>
+    /// <exception cref="ArgumentNullException">Thrown if the specified <paramref name="parseOptions"/> is null.</exception>
+    /// <returns>The updated <see cref="ParseOptions"/>.</returns>
+    public static ParseOptions AllowNatoCountries(this ParseOptions parseOptions) =>
+        Allow(parseOptions, x => x.IsNatoMember);
+
+    /// <summary>
     /// Allows the <see cref="ParseOptions"/> instance to include all supported countries in North America.
     /// </summary>
     /// <param name="parseOptions">The <see cref="ParseOptions"/> instance to update.</param>
