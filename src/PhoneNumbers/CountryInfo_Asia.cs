@@ -49,6 +49,7 @@ public partial class CountryInfo
         CallingCode = "90",
         Continent = Asia,
         FormatProvider = TRPhoneNumberFormatProvider.Instance,
+        IsNatoMember = true,
         Iso3166Code = "TR",
         Name = "Turkey",
         NdcLengths = new ReadOnlyCollection<int>([3, 0]),
