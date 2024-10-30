@@ -27,6 +27,7 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
         E164PhoneNumberFormatter.Instance,
         E123PhoneNumberFormatter.Instance,
         NationalPhoneNumberFormatter.Instance,
+        NationalUnformattedPhoneNumberFormatter.Instance,
         Rfc3966PhoneNumberFormatter.Instance,
     ]);
 
