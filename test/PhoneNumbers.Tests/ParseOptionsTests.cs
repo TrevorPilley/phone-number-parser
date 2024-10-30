@@ -14,7 +14,7 @@ public class ParseOptionsTests
 
         Assert.Single(parseOptions.Countries);
     }
-    
+
     [Fact]
     public void AllowAfricanCountries()
     {
@@ -57,6 +57,17 @@ public class ParseOptionsTests
 
         Assert.Equal(27, parseOptions.Countries.Count);
         Assert.All(parseOptions.Countries, x => Assert.True(x.IsEuropeanUnionMember));
+    }
+
+    [Fact]
+    public void AllowNatoCountries()
+    {
+        var parseOptions = new ParseOptions();
+        parseOptions.Countries.Clear();
+        parseOptions.AllowNatoCountries();
+
+        Assert.Equal(31, parseOptions.Countries.Count);
+        Assert.All(parseOptions.Countries, x => Assert.True(x.IsNatoMember));
     }
 
     [Fact]

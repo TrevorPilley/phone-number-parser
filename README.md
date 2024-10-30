@@ -67,6 +67,7 @@ phoneNumber.Country.Continent;                     // Europe
 phoneNumber.Country.HasNationalDestinationCodes;   // true
 phoneNumber.Country.HasTrunkPrefix;                // true
 phoneNumber.Country.IsEuropeanUnionMember;         // false
+phoneNumber.Country.IsNatoMember;                  // true
 phoneNumber.Country.Iso3166Code;                   // GB
 phoneNumber.Country.Name;                          // United Kingdom
 phoneNumber.Country.SharesCallingCode;             // true
@@ -140,8 +141,9 @@ ParseOptions.Default.AllowNorthAmericanCountries();
 ParseOptions.Default.AllowOceanianCountries();
 ParseOptions.Default.AllowSouthAmericanCountries();
 
-// Add all countries supported by the library who are members of the same union:
-ParseOptions.Default.AllowEuropeanUnionCountries();
+// Add all countries supported by the library who are members of the same union/alliance:
+ParseOptions.Default.AllowEuropeanUnionCountries();   // all 27 members
+ParseOptions.Default.AllowNatoCountries();            // 31 of 32 members (Albania not supported yet)
 
 // Add all countries supported by the library using the same numbering plan:
 ParseOptions.Default.AllowNorthAmericanNumberingPlanCountries();
