@@ -290,10 +290,12 @@ public class PhoneNumber_Parse_Europe_Tests
         Assert.Equal(CountryInfo.Romania, phoneNumber.Country);
     }
 
-    [Fact]
-    public void Parse_Value_For_SanMarino_CallingCode()
+    [Theory]
+    [InlineData("+378882555")] // San Marino international
+    [InlineData("+3780549882555")] // San Marino country code and the Italian area code
+    public void Parse_Value_For_SanMarino_CallingCode(string value)
     {
-        var phoneNumber = PhoneNumber.Parse("+3780549882555");
+        var phoneNumber = PhoneNumber.Parse(value);
         Assert.NotNull(phoneNumber);
         Assert.Equal(CountryInfo.SanMarino, phoneNumber.Country);
     }
