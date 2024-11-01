@@ -734,7 +734,7 @@ public class CountryInfo_Europe_Tests
         Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("378", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
-        Assert.IsType<SimplePhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.IsType<SMPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("SM", countryInfo.Iso3166Code);
         Assert.Equal("San Marino", countryInfo.Name);
