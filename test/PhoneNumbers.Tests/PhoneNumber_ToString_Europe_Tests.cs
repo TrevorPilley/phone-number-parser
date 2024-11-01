@@ -176,9 +176,15 @@ public class PhoneNumber_ToString_Europe_Tests
 
     // Italy has no defined format convention so use the simple format
     [Theory]
-    [InlineData("+393492525255", "E.123", "+39 34 92525255")]
-    [InlineData("+393492525255", "N", "34 92525255")]
-    [InlineData("+393492525255", "RFC3966", "tel:+39-34-92525255")]
+    [InlineData("+390549882555", "E.123", "+39 0549 882555")]       // San Marino Landline via Italian NDC
+    [InlineData("+390577292222", "E.123", "+39 0577 292222")]       // Geo
+    [InlineData("+393492525255", "E.123", "+39 34 92525255")]       // Mobile
+    [InlineData("+390549882555", "N", "0549 882555")]               // San Marino Landline via Italian NDC
+    [InlineData("+390577292222", "N", "0577 292222")]               // Geo
+    [InlineData("+393492525255", "N", "34 92525255")]               // Mobile
+    [InlineData("+390549882555", "RFC3966", "tel:+39-0549-882555")] // San Marino Landline via Italian NDC
+    [InlineData("+390577292222", "RFC3966", "tel:+39-0577-292222")] // Geo
+    [InlineData("+393492525255", "RFC3966", "tel:+39-34-92525255")] // Mobile
     public void Italy_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
