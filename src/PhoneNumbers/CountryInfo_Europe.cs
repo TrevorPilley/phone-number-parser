@@ -555,7 +555,7 @@ public partial class CountryInfo
     {
         CallingCode = "378",
         Continent = Europe,
-        FormatProvider = SimplePhoneNumberFormatProvider.Default,
+        FormatProvider = SMPhoneNumberFormatProvider.Instance,
         Iso3166Code = "SM",
         Name = "San Marino",
         NsnLengths = new ReadOnlyCollection<int>([6, 7, 8, 9, 10]),
