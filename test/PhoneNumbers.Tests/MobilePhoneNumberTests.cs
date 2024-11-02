@@ -151,7 +151,7 @@ public class MobilePhoneNumberTests
         Assert.True(phoneNumber1 != (object)phoneNumber2);
         Assert.True(phoneNumber2 != (object)phoneNumber1);
 
-        // Change area code
+        // Change national destination code
         var phoneNumber3 =new MobilePhoneNumber(PhoneNumberHint.None)
         {
             Country = CountryInfo.UnitedKingdom,
