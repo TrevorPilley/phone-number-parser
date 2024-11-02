@@ -78,12 +78,8 @@ public sealed class NonGeographicPhoneNumber : PhoneNumber, IEquatable<NonGeogra
             return true;
         }
 
-        return Hint.Equals(other.Hint) &&
-            Country.Equals(other.Country) &&
-            Kind.Equals(other.Kind) &&
-            (!HasNationalDestinationCode && !other.HasNationalDestinationCode || NationalDestinationCode!.Equals(other.NationalDestinationCode, StringComparison.Ordinal)) &&
-            NationalSignificantNumber.Equals(other.NationalSignificantNumber, StringComparison.Ordinal) &&
-            SubscriberNumber.Equals(other.SubscriberNumber, StringComparison.Ordinal);
+        return Country.Equals(other.Country) &&
+            NationalSignificantNumber.Equals(other.NationalSignificantNumber, StringComparison.Ordinal);
     }
 
     /// <inheritdoc/>
