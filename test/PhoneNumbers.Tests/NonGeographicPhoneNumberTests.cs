@@ -222,7 +222,7 @@ public class NonGeographicPhoneNumberTests
         {
             Country = CountryInfo.UnitedKingdom,
             NationalDestinationCode = "12345",
-            NationalSignificantNumber = "12345667788",
+            NationalSignificantNumber = "12345667789",
             SubscriberNumber = "667789",
         };
 
