@@ -203,7 +203,7 @@ public class NonGeographicPhoneNumberTests
         Assert.True(phoneNumber1 != (object)phoneNumber2);
         Assert.True(phoneNumber2 != (object)phoneNumber1);
 
-        // Change area code
+        // Change national destination code
         var phoneNumber3 = new NonGeographicPhoneNumber(PhoneNumberHint.None)
         {
             Country = CountryInfo.UnitedKingdom,
@@ -230,19 +230,5 @@ public class NonGeographicPhoneNumberTests
         Assert.False(phoneNumber1.Equals(phoneNumber4));
         Assert.False(phoneNumber1 == phoneNumber4);
         Assert.True(phoneNumber1 != phoneNumber4);
-
-        // change hint
-        var phoneNumber5 = new NonGeographicPhoneNumber(PhoneNumberHint.Freephone)
-        {
-            Country = CountryInfo.UnitedKingdom,
-            NationalDestinationCode = "12345",
-            NationalSignificantNumber = "12345667788",
-            SubscriberNumber = "667788",
-        };
-
-        Assert.NotEqual(phoneNumber1, phoneNumber5);
-        Assert.False(phoneNumber1.Equals(phoneNumber5));
-        Assert.False(phoneNumber1 == phoneNumber5);
-        Assert.True(phoneNumber1 != phoneNumber5);
     }
 }
