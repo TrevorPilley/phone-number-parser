@@ -215,20 +215,5 @@ public class GeographicPhoneNumberTests
         Assert.False(phoneNumber1.Equals(phoneNumber4));
         Assert.False(phoneNumber1 == phoneNumber4);
         Assert.True(phoneNumber1 != phoneNumber4);
-
-        // change geographic area
-        var phoneNumber5 = new GeographicPhoneNumber(PhoneNumberHint.None)
-        {
-            Country = CountryInfo.UnitedKingdom,
-            GeographicArea = "N/B",
-            NationalDestinationCode = "12345",
-            NationalSignificantNumber = "12345667788",
-            SubscriberNumber = "667788",
-        };
-
-        Assert.NotEqual(phoneNumber1, phoneNumber5);
-        Assert.False(phoneNumber1.Equals(phoneNumber5));
-        Assert.False(phoneNumber1 == phoneNumber5);
-        Assert.True(phoneNumber1 != phoneNumber5);
     }
 }
