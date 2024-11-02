@@ -66,13 +66,8 @@ public sealed class GeographicPhoneNumber : PhoneNumber, IEquatable<GeographicPh
             return true;
         }
 
-        return Hint.Equals(other.Hint) &&
-            Country.Equals(other.Country) &&
-            GeographicArea.Equals(other.GeographicArea, StringComparison.Ordinal) &&
-            Kind.Equals(other.Kind) &&
-            (!HasNationalDestinationCode && !other.HasNationalDestinationCode || NationalDestinationCode!.Equals(other.NationalDestinationCode, StringComparison.Ordinal)) &&
-            NationalSignificantNumber.Equals(other.NationalSignificantNumber, StringComparison.Ordinal) &&
-            SubscriberNumber.Equals(other.SubscriberNumber, StringComparison.Ordinal);
+        return Country.Equals(other.Country) &&
+            NationalSignificantNumber.Equals(other.NationalSignificantNumber, StringComparison.Ordinal);
     }
 
     /// <inheritdoc/>
