@@ -116,6 +116,21 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
     s_emptyIntArray;
     #endif
 
+    /// <inheritdoc/>
+    public static bool operator !=(CountryInfo? countryInfo1, CountryInfo? countryInfo2) =>
+        !(countryInfo1 == countryInfo2);
+
+    /// <inheritdoc/>
+    public static bool operator ==(CountryInfo? countryInfo1, CountryInfo? countryInfo2)
+    {
+        if (countryInfo1 is null)
+        {
+            return countryInfo2 is null;
+        }
+
+        return countryInfo1.Equals(countryInfo2);
+    }
+
     internal static IEnumerable<CountryInfo> GetCountries() =>
         typeof(CountryInfo)
             .GetProperties(BindingFlags.Public | BindingFlags.Static)
@@ -134,22 +149,6 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
     /// <returns>The <see cref="PhoneNumberFormatter"/>.</returns>
     internal static PhoneNumberFormatter GetFormatter(string format) =>
         s_formatters.SingleOrDefault(x => x.CanFormat(format)) ?? throw new FormatException($"{format} is not a supported format");
-
-
-    /// <inheritdoc/>
-    public static bool operator !=(CountryInfo? countryInfo1, CountryInfo? countryInfo2) =>
-        !(countryInfo1 == countryInfo2);
-
-    /// <inheritdoc/>
-    public static bool operator ==(CountryInfo? countryInfo1, CountryInfo? countryInfo2)
-    {
-        if (countryInfo1 is null)
-        {
-            return countryInfo2 is null;
-        }
-
-        return countryInfo1.Equals(countryInfo2);
-    }
 
     /// <inheritdoc/>
     public override bool Equals(object? obj) =>
