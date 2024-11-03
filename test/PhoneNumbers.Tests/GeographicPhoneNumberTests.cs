@@ -109,9 +109,9 @@ public class GeographicPhoneNumberTests
             trunkPrefix: default,
             ndc: "12345",
             sn: "667788");
-        
+
         var phoneNumber2 = TestHelper.CreateGeographicPhoneNumber(
-            trunkPredix: default,
+            trunkPrefix: default,
             ndc: "12345",
             sn: "667788");
 
@@ -129,9 +129,9 @@ public class GeographicPhoneNumberTests
             trunkPrefix: default,
             ndc: default,
             sn: "667788");
-        
+
         var phoneNumber2 = TestHelper.CreateGeographicPhoneNumber(
-            trunkPredix: default,
+            trunkPrefix: default,
             ndc: default,
             sn: "667788");
 
@@ -149,7 +149,7 @@ public class GeographicPhoneNumberTests
             trunkPrefix: default,
             ndc: "12345",
             sn: "667788");
-        
+
         var phoneNumber2 = default(GeographicPhoneNumber);
 
         Assert.NotEqual(phoneNumber1, phoneNumber2);

@@ -80,9 +80,9 @@ public class MobilePhoneNumberTests
             trunkPrefix: default,
             ndc: "12345",
             sn: "667788");
-        
+
         var phoneNumber2 = TestHelper.CreateMobilePhoneNumber(
-            trunkPredix: default,
+            trunkPrefix: default,
             ndc: "12345",
             sn: "667788");
 
@@ -96,13 +96,13 @@ public class MobilePhoneNumberTests
     [Fact]
     public void Equality_Same_Values_Without_NationalDestinationCode()
     {
-        var phoneNumber1 = TestHelper.CreateMobilePhoneNumber
+        var phoneNumber1 = TestHelper.CreateMobilePhoneNumber(
             trunkPrefix: default,
             ndc: default,
             sn: "667788");
-        
+
         var phoneNumber2 = TestHelper.CreateMobilePhoneNumber(
-            trunkPredix: default,
+            trunkPrefix: default,
             ndc: default,
             sn: "667788");
 
@@ -120,7 +120,7 @@ public class MobilePhoneNumberTests
             trunkPrefix: default,
             ndc: "12345",
             sn: "667788");
-        
+
         var phoneNumber2 = default(MobilePhoneNumber);
 
         Assert.NotEqual(phoneNumber1, phoneNumber2);
@@ -148,7 +148,7 @@ public class MobilePhoneNumberTests
         Assert.True(phoneNumber1 != phoneNumber3);
 
         // change subscriber number
-        var phoneNumber4 = TestHelper.CreateMobilePhoneNumber
+        var phoneNumber4 = TestHelper.CreateMobilePhoneNumber(
             trunkPrefix: default,
             ndc: "12345",
             sn: "667789");

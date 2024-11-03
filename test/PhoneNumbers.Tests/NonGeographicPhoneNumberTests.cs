@@ -132,9 +132,9 @@ public class NonGeographicPhoneNumberTests
             trunkPrefix: default,
             ndc: "12345",
             sn: "667788");
-        
+
         var phoneNumber2 = TestHelper.CreateNonGeographicPhoneNumber(
-            trunkPredix: default,
+            trunkPrefix: default,
             ndc: "12345",
             sn: "667788");
 
@@ -148,13 +148,13 @@ public class NonGeographicPhoneNumberTests
     [Fact]
     public void Equality_Same_Values_Without_NationalDestinationCode()
     {
-        var phoneNumber1 = TestHelper.CreateNonGeographicPhoneNumber
+        var phoneNumber1 = TestHelper.CreateNonGeographicPhoneNumber(
             trunkPrefix: default,
             ndc: default,
             sn: "667788");
-        
+
         var phoneNumber2 = TestHelper.CreateNonGeographicPhoneNumber(
-            trunkPredix: default,
+            trunkPrefix: default,
             ndc: default,
             sn: "667788");
 
@@ -172,7 +172,7 @@ public class NonGeographicPhoneNumberTests
             trunkPrefix: default,
             ndc: "12345",
             sn: "667788");
-        
+
         var phoneNumber2 = default(NonGeographicPhoneNumber);
 
         Assert.NotEqual(phoneNumber1, phoneNumber2);
@@ -200,7 +200,7 @@ public class NonGeographicPhoneNumberTests
         Assert.True(phoneNumber1 != phoneNumber3);
 
         // change subscriber number
-        var phoneNumber4 = TestHelper.CreateNonGeographicPhoneNumber
+        var phoneNumber4 = TestHelper.CreateNonGeographicPhoneNumber(
             trunkPrefix: default,
             ndc: "12345",
             sn: "667789");
