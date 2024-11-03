@@ -66,9 +66,9 @@ public sealed class GeographicPhoneNumber : PhoneNumber, IEquatable<GeographicPh
             return true;
         }
 
-        // The National Significant Number (NSN) must be unique within a numbering plan so if
-        // the countries match or share a calling code and the NSN matches they are the the same.
-        return Country.SharesCallingCode(other.Country) &&
+        // The National Significant Number (NSN) must be unique within a numbering plan so only
+        // where the countries match and the NSNs match they are the the same phone number.
+        return Country == other.Country &&
             NationalSignificantNumber.Equals(other.NationalSignificantNumber, StringComparison.Ordinal);
     }
 
