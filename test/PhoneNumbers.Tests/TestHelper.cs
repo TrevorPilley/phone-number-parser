@@ -31,7 +31,7 @@ internal static class TestHelper
         string sn,
         bool allowsLocalGeographicDialling = false,
         PhoneNumberHint phoneNumberHint = PhoneNumberHint.None) =>
-        new GeographicPhoneNumber(phoneNumberHint)
+        new(phoneNumberHint)
         {
             Country = CreateCountryInfo(trunkPrefix: trunkPrefix, ndcLengths: ndc is not null ? [ndc.Length] : [], allowsLocalGeographicDialling: allowsLocalGeographicDialling),
             GeographicArea = "AreaName",
@@ -46,7 +46,7 @@ internal static class TestHelper
         string sn,
         bool allowsLocalGeographicDialling = false,
         PhoneNumberHint phoneNumberHint = PhoneNumberHint.None) =>
-        new MobilePhoneNumber(phoneNumberHint)
+        new(phoneNumberHint)
         {
             Country = CreateCountryInfo(trunkPrefix: trunkPrefix, ndcLengths: ndc is not null ? [ndc.Length] : [], allowsLocalGeographicDialling: allowsLocalGeographicDialling),
             NationalDestinationCode = ndc,
@@ -60,7 +60,7 @@ internal static class TestHelper
         string sn,
         bool allowLocalGeographicDialling = false,
         PhoneNumberHint phoneNumberHint = PhoneNumberHint.None) =>
-        new NonGeographicPhoneNumber(phoneNumberHint)
+        new(phoneNumberHint)
         {
             Country = CreateCountryInfo(trunkPrefix: trunkPrefix, ndcLengths: ndc is not null ? [ndc.Length] : [], allowsLocalGeographicDialling: allowLocalGeographicDialling),
             NationalDestinationCode = ndc,
