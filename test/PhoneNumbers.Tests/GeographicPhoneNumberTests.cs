@@ -88,7 +88,7 @@ public class GeographicPhoneNumberTests
     public void Equality_Same_Instance()
     {
         var phoneNumber1 = TestHelper.CreateGeographicPhoneNumber(
-            trunkPredix: default,
+            trunkPrefix: default,
             ndc: "12345",
             sn: "667788");
         var phoneNumber2 = phoneNumber1;
@@ -106,7 +106,7 @@ public class GeographicPhoneNumberTests
     public void Equality_Same_Values_With_NationalDestinationCode()
     {
         var phoneNumber1 = TestHelper.CreateGeographicPhoneNumber(
-            trunkPredix: default,
+            trunkPrefix: default,
             ndc: "12345",
             sn: "667788");
         
@@ -126,7 +126,7 @@ public class GeographicPhoneNumberTests
     public void Equality_Same_Values_Without_NationalDestinationCode()
     {
         var phoneNumber1 = TestHelper.CreateGeographicPhoneNumber(
-            trunkPredix: default,
+            trunkPrefix: default,
             ndc: default,
             sn: "667788");
         
@@ -146,7 +146,7 @@ public class GeographicPhoneNumberTests
     public void Inequality()
     {
         var phoneNumber1 = TestHelper.CreateGeographicPhoneNumber(
-            trunkPredix: default,
+            trunkPrefix: default,
             ndc: "12345",
             sn: "667788");
         
@@ -167,7 +167,7 @@ public class GeographicPhoneNumberTests
 
         // Change national destination code
         var phoneNumber3 = TestHelper.CreateGeographicPhoneNumber(
-            trunkPredix: default,
+            trunkPrefix: default,
             ndc: "12346",
             sn: "667788");
 
@@ -178,7 +178,7 @@ public class GeographicPhoneNumberTests
 
         // change subscriber number
         var phoneNumber4 = TestHelper.CreateGeographicPhoneNumber(
-            trunkPredix: default,
+            trunkPrefix: default,
             ndc: "12345",
             sn: "667789");
 
