@@ -64,7 +64,9 @@ public sealed class MobilePhoneNumber : PhoneNumber, IEquatable<MobilePhoneNumbe
             return true;
         }
 
-        return Country.Equals(other.Country) &&
+        // The National Significant Number (NSN) must be unique within a numbering plan so if
+        // the countries match or share a calling code and the NSN matches they are the the same.
+        return Country.SharesCallingCode(other.Country) &&
             NationalSignificantNumber.Equals(other.NationalSignificantNumber, StringComparison.Ordinal);
     }
 
