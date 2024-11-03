@@ -209,5 +209,19 @@ public class NonGeographicPhoneNumberTests
         Assert.False(phoneNumber1.Equals(phoneNumber4));
         Assert.False(phoneNumber1 == phoneNumber4);
         Assert.True(phoneNumber1 != phoneNumber4);
+
+        // change country
+        var phoneNumber5 = new NonGeographicPhoneNumber(PhoneNumberHint.None)
+        {
+            Country = CountryInfo.France,
+            NationalDestinationCode = phoneNumber1.NationalDestinationCode,
+            NationalSignificantNumber = phoneNumber1.NationalSignificantNumber,
+            SubscriberNumber = phoneNumber1.SubscriberNumber,
+        };
+
+        Assert.NotEqual(phoneNumber1, phoneNumber5);
+        Assert.False(phoneNumber1.Equals(phoneNumber5));
+        Assert.False(phoneNumber1 == phoneNumber5);
+        Assert.True(phoneNumber1 != phoneNumber5);
     }
 }
