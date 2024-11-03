@@ -186,5 +186,15 @@ public class GeographicPhoneNumberTests
         Assert.False(phoneNumber1.Equals(phoneNumber4));
         Assert.False(phoneNumber1 == phoneNumber4);
         Assert.True(phoneNumber1 != phoneNumber4);
+
+
+        var phoneNumber5 = new GeographicPhoneNumber(PhoneNumberHint.None)
+        {
+            Country = CountryInfo.France,
+            GeographicArea = "N/A",
+            NationalDestinationCode = null,
+            NationalSignificantNumber = "12345667788",
+            SubscriberNumber = "667788",
+        };
     }
 }
