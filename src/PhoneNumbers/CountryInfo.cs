@@ -10,7 +10,7 @@ namespace PhoneNumbers;
 /// A class which contains country information related to phone numbers.
 /// </summary>
 [DebuggerDisplay("{" + nameof(GetDebuggerDisplay) + "(),nq}")]
-public sealed partial class CountryInfo
+public sealed partial class CountryInfo : IEquatable<CountryInfo>
 {
     internal const string Africa = "Africa";
     internal const string Asia = "Asia";
@@ -134,6 +134,47 @@ public sealed partial class CountryInfo
     /// <returns>The <see cref="PhoneNumberFormatter"/>.</returns>
     internal static PhoneNumberFormatter GetFormatter(string format) =>
         s_formatters.SingleOrDefault(x => x.CanFormat(format)) ?? throw new FormatException($"{format} is not a supported format");
+
+
+    /// <inheritdoc/>
+    public static bool operator !=(CountryInfo? countryInfo1, CountryInfo? countryInfo2) =>
+        !(countryInfo1 == countryInfo2);
+
+    /// <inheritdoc/>
+    public static bool operator ==(CountryInfo? countryInfo1, CountryInfo? countryInfo2)
+    {
+        if (countryInfo1 is null)
+        {
+            return countryInfo2 is null;
+        }
+
+        return countryInfo1.Equals(countryInfo2);
+    }
+
+    /// <inheritdoc/>
+    public override bool Equals(object? obj) =>
+        Equals(obj as CountryInfo);
+
+    /// <inheritdoc/>
+    public bool Equals(CountryInfo? other)
+    {
+        if (other is null)
+        {
+            return false;
+        }
+
+        if (ReferenceEquals(this, other))
+        {
+            return true;
+        }
+
+        return Iso3166Code.Equals(other.Iso3166Code, StringComparison.Ordinal);
+    }
+
+    /// <inheritdoc/>
+    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+    public override int GetHashCode() =>
+        HashCode.Combine(Iso3166Code);
 
     /// <summary>
     /// Gets a value indicating whether the specified value has the calling code for this country.

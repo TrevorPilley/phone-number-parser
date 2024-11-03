@@ -75,5 +75,5 @@ public sealed class GeographicPhoneNumber : PhoneNumber, IEquatable<GeographicPh
     /// <inheritdoc/>
     [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
     public override int GetHashCode() =>
-        HashCode.Combine(Hint, Country, GeographicArea, Kind, NationalSignificantNumber, NationalDestinationCode, SubscriberNumber);
+        HashCode.Combine(Country, NationalSignificantNumber);
 }

@@ -87,5 +87,5 @@ public sealed class NonGeographicPhoneNumber : PhoneNumber, IEquatable<NonGeogra
     /// <inheritdoc/>
     [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
     public override int GetHashCode() =>
-        HashCode.Combine(Hint, Country, Kind, NationalSignificantNumber, NationalDestinationCode, SubscriberNumber);
+        HashCode.Combine(Country, NationalSignificantNumber);
 }
