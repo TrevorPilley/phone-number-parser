@@ -68,7 +68,7 @@ public sealed class GeographicPhoneNumber : PhoneNumber, IEquatable<GeographicPh
 
         // The National Significant Number (NSN) must be unique within a numbering plan so only
         // where the countries match and the NSNs match they are the the same phone number.
-        return Country == other.Country &&
+        return Country.Equals(other.Country) &&
             NationalSignificantNumber.Equals(other.NationalSignificantNumber, StringComparison.Ordinal);
     }
 
