@@ -162,10 +162,14 @@ public class PhoneNumber_Parse_Europe_Tests
         Assert.Equal(CountryInfo.IsleOfMan, phoneNumber.Country);
     }
 
-    [Fact]
-    public void Parse_Value_For_Italy_CallingCode()
+    [Theory]
+    [InlineData("+393492525255")]
+    [InlineData("+390549082555")] // San Marino country code and the Italian area code fixed line starting 0
+    [InlineData("+390549882555")] // San Marino country code and the Italian area code fixed line starting 8
+    [InlineData("+390549892555")] // San Marino country code and the Italian area code fixed line starting 9
+    public void Parse_Value_For_Italy_CallingCode(string value)
     {
-        var phoneNumber = PhoneNumber.Parse("+393492525255");
+        var phoneNumber = PhoneNumber.Parse(value);
         Assert.NotNull(phoneNumber);
         Assert.Equal(CountryInfo.Italy, phoneNumber.Country);
     }
