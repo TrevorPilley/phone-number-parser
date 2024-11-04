@@ -66,17 +66,14 @@ public sealed class GeographicPhoneNumber : PhoneNumber, IEquatable<GeographicPh
             return true;
         }
 
-        return Hint.Equals(other.Hint) &&
-            Country.Equals(other.Country) &&
-            GeographicArea.Equals(other.GeographicArea, StringComparison.Ordinal) &&
-            Kind.Equals(other.Kind) &&
-            (!HasNationalDestinationCode && !other.HasNationalDestinationCode || NationalDestinationCode!.Equals(other.NationalDestinationCode, StringComparison.Ordinal)) &&
-            NationalSignificantNumber.Equals(other.NationalSignificantNumber, StringComparison.Ordinal) &&
-            SubscriberNumber.Equals(other.SubscriberNumber, StringComparison.Ordinal);
+        // The National Significant Number (NSN) must be unique within a numbering plan so only
+        // where the countries match and the NSNs match they are the the same phone number.
+        return Country.Equals(other.Country) &&
+            NationalSignificantNumber.Equals(other.NationalSignificantNumber, StringComparison.Ordinal);
     }
 
     /// <inheritdoc/>
     [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
     public override int GetHashCode() =>
-        HashCode.Combine(Hint, Country, GeographicArea, Kind, NationalSignificantNumber, NationalDestinationCode, SubscriberNumber);
+        HashCode.Combine(Country, NationalSignificantNumber);
 }
