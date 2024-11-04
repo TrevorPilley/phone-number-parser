@@ -24,6 +24,60 @@ public class CountryInfoTests
     public void GetFormatter_Throws_For_Invalid_Format() =>
         Assert.Throws<FormatException>(() => CountryInfo.GetFormatter("X"));
 
+    [Fact]
+    public void Equality_Both_Null()
+    {
+        var countryInfo1 = default(CountryInfo);
+        var countryInfo2 = default(CountryInfo);
+
+        Assert.Equal(countryInfo1, countryInfo2);
+        Assert.True(countryInfo1 == countryInfo2);
+        Assert.True(countryInfo1 == (object)countryInfo2);
+        Assert.False(countryInfo1 != countryInfo2);
+        Assert.False(countryInfo1 != (object)countryInfo2);
+    }
+
+    [Fact]
+    public void Equality_Same_Instance()
+    {
+        var countryInfo1 = TestHelper.CreateCountryInfo();
+        var countryInfo2 = countryInfo1;
+
+        Assert.Equal(countryInfo1, countryInfo2);
+        Assert.True(countryInfo1.Equals(countryInfo2));
+        Assert.True(countryInfo1.Equals((object)countryInfo2));
+        Assert.True(countryInfo1 == countryInfo2);
+        Assert.True(countryInfo1 == (object)countryInfo2);
+        Assert.False(countryInfo1 != countryInfo2);
+        Assert.False(countryInfo1 != (object)countryInfo2);
+    }
+
+    [Fact]
+    public void Equality_Same_Iso3166Code()
+    {
+        var countryInfo1 = new CountryInfo
+        {
+            CallingCode = "-1",
+            Continent = "Pangea",
+            Iso3166Code = "YZ",
+            Name = "Nowhere",
+        };
+
+        var countryInfo2 = new CountryInfo
+        {
+            CallingCode = "-1",
+            Continent = "Pangea",
+            Iso3166Code = "YZ",
+            Name = "Nowhere",
+        };
+
+        Assert.Equal(countryInfo1, countryInfo2);
+        Assert.True(countryInfo1.Equals(countryInfo2));
+        Assert.True(countryInfo1.Equals((object)countryInfo2));
+        Assert.True(countryInfo1 == countryInfo2);
+        Assert.False(countryInfo1 != countryInfo2);
+    }
+
     [Theory]
     [InlineData(default(string))]
     [InlineData("")]
@@ -59,6 +113,47 @@ public class CountryInfoTests
     [Fact]
     public void HasTrunkPrefix_True() =>
         Assert.True(TestHelper.CreateCountryInfo(trunkPrefix: "0").HasTrunkPrefix);
+
+    [Fact]
+    public void Inequality()
+    {
+        var countryInfo1 = new CountryInfo
+        {
+            CallingCode = "-1",
+            Continent = "Pangea",
+            Iso3166Code = "YZ",
+            Name = "Nowhere",
+        };
+
+        var countryInfo2 = default(CountryInfo);
+
+        Assert.NotEqual(countryInfo1, countryInfo2);
+        Assert.NotEqual(countryInfo2, countryInfo1);
+        Assert.False(countryInfo1.Equals(countryInfo2));
+        Assert.False(countryInfo1.Equals((object)countryInfo2));
+        Assert.False(countryInfo1 == countryInfo2);
+        Assert.False(countryInfo2 == countryInfo1);
+        Assert.False(countryInfo1 == (object)countryInfo2);
+        Assert.False(countryInfo2 == (object)countryInfo1);
+        Assert.True(countryInfo1 != countryInfo2);
+        Assert.True(countryInfo2 != countryInfo1);
+        Assert.True(countryInfo1 != (object)countryInfo2);
+        Assert.True(countryInfo2 != (object)countryInfo1);
+
+        // change the ISO3166 code
+        var countryInfo3 = new CountryInfo
+        {
+            CallingCode = "-1",
+            Continent = "Pangea",
+            Iso3166Code = "YY",
+            Name = "Nowhere",
+        };
+
+        Assert.NotEqual(countryInfo1, countryInfo3);
+        Assert.False(countryInfo1.Equals(countryInfo3));
+        Assert.False(countryInfo1 == countryInfo3);
+        Assert.True(countryInfo1 != countryInfo3);
+    }
 
     [Theory]
     [InlineData(default(string))]

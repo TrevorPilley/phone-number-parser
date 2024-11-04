@@ -110,13 +110,10 @@ public class NonGeographicPhoneNumberTests
     [Fact]
     public void Equality_Same_Instance()
     {
-        var phoneNumber1 = new NonGeographicPhoneNumber(PhoneNumberHint.None)
-        {
-            Country = CountryInfo.UnitedKingdom,
-            NationalDestinationCode = "7654",
-            NationalSignificantNumber = "7654112233",
-            SubscriberNumber = "112233",
-        };
+        var phoneNumber1 = TestHelper.CreateNonGeographicPhoneNumber(
+            trunkPrefix: default,
+            ndc: "12345",
+            sn: "667788");
         var phoneNumber2 = phoneNumber1;
 
         Assert.Equal(phoneNumber1, phoneNumber2);
@@ -131,20 +128,15 @@ public class NonGeographicPhoneNumberTests
     [Fact]
     public void Equality_Same_Values_With_NationalDestinationCode()
     {
-        var phoneNumber1 = new NonGeographicPhoneNumber(PhoneNumberHint.None)
-        {
-            Country = CountryInfo.UnitedKingdom,
-            NationalDestinationCode = "12345",
-            NationalSignificantNumber = "12345667788",
-            SubscriberNumber = "667788",
-        };
-        var phoneNumber2 = new NonGeographicPhoneNumber(PhoneNumberHint.None)
-        {
-            Country = CountryInfo.UnitedKingdom,
-            NationalDestinationCode = "12345",
-            NationalSignificantNumber = "12345667788",
-            SubscriberNumber = "667788",
-        };
+        var phoneNumber1 = TestHelper.CreateNonGeographicPhoneNumber(
+            trunkPrefix: default,
+            ndc: "12345",
+            sn: "667788");
+
+        var phoneNumber2 = TestHelper.CreateNonGeographicPhoneNumber(
+            trunkPrefix: default,
+            ndc: "12345",
+            sn: "667788");
 
         Assert.Equal(phoneNumber1, phoneNumber2);
         Assert.True(phoneNumber1.Equals(phoneNumber2));
@@ -156,20 +148,15 @@ public class NonGeographicPhoneNumberTests
     [Fact]
     public void Equality_Same_Values_Without_NationalDestinationCode()
     {
-        var phoneNumber1 = new NonGeographicPhoneNumber(PhoneNumberHint.None)
-        {
-            Country = CountryInfo.UnitedKingdom,
-            NationalDestinationCode = null,
-            NationalSignificantNumber = "667788",
-            SubscriberNumber = "667788",
-        };
-        var phoneNumber2 = new NonGeographicPhoneNumber(PhoneNumberHint.None)
-        {
-            Country = CountryInfo.UnitedKingdom,
-            NationalDestinationCode = null,
-            NationalSignificantNumber = "667788",
-            SubscriberNumber = "667788",
-        };
+        var phoneNumber1 = TestHelper.CreateNonGeographicPhoneNumber(
+            trunkPrefix: default,
+            ndc: default,
+            sn: "667788");
+
+        var phoneNumber2 = TestHelper.CreateNonGeographicPhoneNumber(
+            trunkPrefix: default,
+            ndc: default,
+            sn: "667788");
 
         Assert.Equal(phoneNumber1, phoneNumber2);
         Assert.True(phoneNumber1.Equals(phoneNumber2));
@@ -181,13 +168,11 @@ public class NonGeographicPhoneNumberTests
     [Fact]
     public void Inequality()
     {
-        var phoneNumber1 = new NonGeographicPhoneNumber(PhoneNumberHint.None)
-        {
-            Country = CountryInfo.UnitedKingdom,
-            NationalDestinationCode = "12345",
-            NationalSignificantNumber = "12345667788",
-            SubscriberNumber = "667788",
-        };
+        var phoneNumber1 = TestHelper.CreateNonGeographicPhoneNumber(
+            trunkPrefix: default,
+            ndc: "12345",
+            sn: "667788");
+
         var phoneNumber2 = default(NonGeographicPhoneNumber);
 
         Assert.NotEqual(phoneNumber1, phoneNumber2);
@@ -203,14 +188,11 @@ public class NonGeographicPhoneNumberTests
         Assert.True(phoneNumber1 != (object)phoneNumber2);
         Assert.True(phoneNumber2 != (object)phoneNumber1);
 
-        // Change area code
-        var phoneNumber3 = new NonGeographicPhoneNumber(PhoneNumberHint.None)
-        {
-            Country = CountryInfo.UnitedKingdom,
-            NationalDestinationCode = "12346",
-            NationalSignificantNumber = "12346667788",
-            SubscriberNumber = "667788",
-        };
+        // Change national destination code
+        var phoneNumber3 = TestHelper.CreateNonGeographicPhoneNumber(
+            trunkPrefix: default,
+            ndc: "12346",
+            sn: "667788");
 
         Assert.NotEqual(phoneNumber1, phoneNumber3);
         Assert.False(phoneNumber1.Equals(phoneNumber3));
@@ -218,26 +200,23 @@ public class NonGeographicPhoneNumberTests
         Assert.True(phoneNumber1 != phoneNumber3);
 
         // change subscriber number
-        var phoneNumber4 = new NonGeographicPhoneNumber(PhoneNumberHint.None)
-        {
-            Country = CountryInfo.UnitedKingdom,
-            NationalDestinationCode = "12345",
-            NationalSignificantNumber = "12345667788",
-            SubscriberNumber = "667789",
-        };
+        var phoneNumber4 = TestHelper.CreateNonGeographicPhoneNumber(
+            trunkPrefix: default,
+            ndc: "12345",
+            sn: "667789");
 
         Assert.NotEqual(phoneNumber1, phoneNumber4);
         Assert.False(phoneNumber1.Equals(phoneNumber4));
         Assert.False(phoneNumber1 == phoneNumber4);
         Assert.True(phoneNumber1 != phoneNumber4);
 
-        // change hint
-        var phoneNumber5 = new NonGeographicPhoneNumber(PhoneNumberHint.Freephone)
+        // change country
+        var phoneNumber5 = new NonGeographicPhoneNumber(PhoneNumberHint.None)
         {
-            Country = CountryInfo.UnitedKingdom,
-            NationalDestinationCode = "12345",
-            NationalSignificantNumber = "12345667788",
-            SubscriberNumber = "667788",
+            Country = CountryInfo.France,
+            NationalDestinationCode = phoneNumber1.NationalDestinationCode,
+            NationalSignificantNumber = phoneNumber1.NationalSignificantNumber,
+            SubscriberNumber = phoneNumber1.SubscriberNumber,
         };
 
         Assert.NotEqual(phoneNumber1, phoneNumber5);
