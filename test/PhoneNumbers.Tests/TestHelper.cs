@@ -25,13 +25,13 @@ internal static class TestHelper
             TrunkPrefix = trunkPrefix,
         };
 
-    internal static PhoneNumber CreateGeographicPhoneNumber(
+    internal static GeographicPhoneNumber CreateGeographicPhoneNumber(
         string trunkPrefix,
         string ndc,
         string sn,
         bool allowsLocalGeographicDialling = false,
         PhoneNumberHint phoneNumberHint = PhoneNumberHint.None) =>
-        new GeographicPhoneNumber(phoneNumberHint)
+        new(phoneNumberHint)
         {
             Country = CreateCountryInfo(trunkPrefix: trunkPrefix, ndcLengths: ndc is not null ? [ndc.Length] : [], allowsLocalGeographicDialling: allowsLocalGeographicDialling),
             GeographicArea = "AreaName",
@@ -40,13 +40,13 @@ internal static class TestHelper
             SubscriberNumber = sn,
         };
 
-    internal static PhoneNumber CreateMobilePhoneNumber(
+    internal static MobilePhoneNumber CreateMobilePhoneNumber(
         string trunkPrefix,
         string ndc,
         string sn,
         bool allowsLocalGeographicDialling = false,
         PhoneNumberHint phoneNumberHint = PhoneNumberHint.None) =>
-        new MobilePhoneNumber(phoneNumberHint)
+        new(phoneNumberHint)
         {
             Country = CreateCountryInfo(trunkPrefix: trunkPrefix, ndcLengths: ndc is not null ? [ndc.Length] : [], allowsLocalGeographicDialling: allowsLocalGeographicDialling),
             NationalDestinationCode = ndc,
@@ -54,13 +54,13 @@ internal static class TestHelper
             SubscriberNumber = sn,
         };
 
-    internal static PhoneNumber CreateNonGeographicPhoneNumber(
+    internal static NonGeographicPhoneNumber CreateNonGeographicPhoneNumber(
         string trunkPrefix,
         string ndc,
         string sn,
         bool allowLocalGeographicDialling = false,
         PhoneNumberHint phoneNumberHint = PhoneNumberHint.None) =>
-        new NonGeographicPhoneNumber(phoneNumberHint)
+        new(phoneNumberHint)
         {
             Country = CreateCountryInfo(trunkPrefix: trunkPrefix, ndcLengths: ndc is not null ? [ndc.Length] : [], allowsLocalGeographicDialling: allowLocalGeographicDialling),
             NationalDestinationCode = ndc,
