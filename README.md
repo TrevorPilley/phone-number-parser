@@ -161,6 +161,23 @@ To out out of specific countries but still use any new ones added in future vers
 ParseOptions.Default.Countries.Remove(CountryInfo.X);
 ```
 
+## Dial helper
+
+The library contains helper methods to determine the number that needs to be dialled for a call between two phone numbers.
+
+```csharp
+var callerNumber = PhoneNumber.Parse("+441142726444");
+
+PhoneNumber.Parse("+441146548866").NumberToDialFrom(callerNumber); // 6548866 UK local dialling within same NDC
+PhoneNumber.Parse("+447106865391").NumberToDialFrom(callerNumber); // 07106865391 UK mobile from UK landline
+PhoneNumber.Parse("+33140477283").NumberToDialFrom(callerNumber);  // 0033140477283 French mobile from UK landline
+
+// Alternatively a destination number from a specific country
+PhoneNumber.Parse("+441146548866").NumberToDialFrom(CountryInfo.UnitedKingdom); // 01146548866 UK landline from UK
+PhoneNumber.Parse("+447106865391").NumberToDialFrom(CountryInfo.UnitedKingdom); // 07106865391 UK mobile from UK
+PhoneNumber.Parse("+33140477283").NumberToDialFrom(CountryInfo.UnitedKingdom);  // 0033140477283 French mobile from UK
+```
+
 ## Versioning
 
 The library adheres to [Semantic Versioning](https://semver.org) and [release notes](https://github.com/TrevorPilley/phone-number-parser/releases) are provided for every published version.
