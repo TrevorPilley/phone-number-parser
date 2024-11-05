@@ -66,6 +66,7 @@ phoneNumber.Country.CallingCode;                   // 44
 phoneNumber.Country.Continent;                     // Europe
 phoneNumber.Country.HasNationalDestinationCodes;   // true
 phoneNumber.Country.HasTrunkPrefix;                // true
+phoneNumber.Country.InternationalCallPrefix;       // 00
 phoneNumber.Country.IsEuropeanUnionMember;         // false
 phoneNumber.Country.IsNatoMember;                  // true
 phoneNumber.Country.Iso3166Code;                   // GB
