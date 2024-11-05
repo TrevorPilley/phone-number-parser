@@ -16,6 +16,8 @@ public class CountryInfo_Oceania_Tests
         Assert.Equal(CountryInfo.Oceania, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.Equal(CountryInfo.NanpInternationalCallPrefix, countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("AS", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
@@ -37,6 +39,8 @@ public class CountryInfo_Oceania_Tests
         Assert.Equal("61", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Oceania, countryInfo.Continent);
         Assert.IsType<AUPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("0011", countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("AU", countryInfo.Iso3166Code);
@@ -59,6 +63,8 @@ public class CountryInfo_Oceania_Tests
         Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Oceania, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal(CountryInfo.NanpInternationalCallPrefix, countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("GU", countryInfo.Iso3166Code);
@@ -81,6 +87,8 @@ public class CountryInfo_Oceania_Tests
         Assert.Equal("675", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Oceania, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("PG", countryInfo.Iso3166Code);

@@ -27,6 +27,12 @@ public partial class CountryInfo
         CallingCode = "254",
         Continent = Africa,
         FormatProvider = SimplePhoneNumberFormatProvider.Default,
+        InternationalCallPrefix = "000",
+        InternationalCallPrefixes = new Dictionary<string, string>(StringComparer.Ordinal)
+        {
+            { "255", "007" }, // To call Tanzania from Kenya, subscribers dial 007 instead of +255
+            { "256", "006" }, // To call Uganda from Kenya, subscribers dial 006 instead of +256
+        }.AsReadOnly(),
         Iso3166Code = "KE",
         Name = "Kenya",
         NdcLengths = new ReadOnlyCollection<int>([3, 2]),
@@ -42,6 +48,7 @@ public partial class CountryInfo
         AllowsLocalGeographicDialling = true,
         CallingCode = "234",
         Continent = Africa,
+        InternationalCallPrefix = "009",
         Iso3166Code = "NG",
         Name = "Nigeria",
         NdcLengths = new ReadOnlyCollection<int>([4, 3]),
@@ -70,6 +77,12 @@ public partial class CountryInfo
     {
         CallingCode = "255",
         Continent = Africa,
+        InternationalCallPrefix = "000",
+        InternationalCallPrefixes = new Dictionary<string, string>(StringComparer.Ordinal)
+        {
+            { "254", "005" }, // To call Kenya from Tanzania, subscribers dial 005 instead of +254
+            { "256", "006" }, // To call Uganda from Tanzania, subscribers dial 006 instead of +256
+        }.AsReadOnly(),
         Iso3166Code = "TZ",
         Name = "Tanzania",
         NdcLengths = new ReadOnlyCollection<int>([5, 3, 2]),
@@ -85,6 +98,12 @@ public partial class CountryInfo
         CallingCode = "256",
         Continent = Africa,
         FormatProvider = UGPhoneNumberFormatProvider.Instance,
+        InternationalCallPrefix = "000",
+        InternationalCallPrefixes = new Dictionary<string, string>(StringComparer.Ordinal)
+        {
+            { "254", "005" }, // To call Kenya from Uganda, subscribers dial 005 instead of +254
+            { "255", "007" }, // To call Tanzania from Uganda, subscribers dial 007 instead of +255
+        }.AsReadOnly(),
         Iso3166Code = "UG",
         Name = "Uganda",
         NdcLengths = new ReadOnlyCollection<int>([6, 5, 4, 3, 1]),
