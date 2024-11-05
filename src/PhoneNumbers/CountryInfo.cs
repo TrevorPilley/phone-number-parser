@@ -15,11 +15,13 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
     internal const string Africa = "Africa";
     internal const string Asia = "Asia";
     internal const string Europe = "Europe";
+    internal const string ItuInternationalCallPrefix = "00";
     internal const string NorthAmerica = "North America";
     internal const string Oceania = "Oceania";
     internal const string SouthAmerica = "South America";
     #if !NET8_0_OR_GREATER
     private static readonly ReadOnlyCollection<int> s_emptyIntArray = new(Array.Empty<int>());
+    private static readonly ReadOnlyDictionary<string, string> s_emptyStringDictionary = new(new Dictionary<string, string>(StringComparer.Ordinal));
     #endif
 
     private static readonly ReadOnlyCollection<PhoneNumberFormatter> s_formatters = new(
@@ -66,6 +68,12 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
     public bool HasTrunkPrefix => TrunkPrefix is not null;
 
     /// <summary>
+    /// Gets the international call prefix.
+    /// </summary>
+    /// <remarks>May also be referred to as international direct dialling or international subscriber dialling, defaults to the ITU recommended '00', see https://en.wikipedia.org/wiki/List_of_international_call_prefixes.</remarks>
+    public string InternationalCallPrefix { get; init; } = ItuInternationalCallPrefix;
+
+    /// <summary>
     /// Gets a value indicating whether the country is a member of the European Union.
     /// </summary>
     public bool IsEuropeanUnionMember { get; init; }
@@ -106,6 +114,15 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
     /// Gets the <see cref="PhoneNumberFormatProvider"/> for the country.
     /// </summary>
     internal PhoneNumberFormatProvider FormatProvider { get; init; } = ComplexPhoneNumberFormatProvider.Default;
+    /// <summary>
+    /// Gets country specific international call prefixes.
+    /// </summary>
+    internal ReadOnlyDictionary<string, string> InternationalCallPrefixes { get; init; } =
+    #if NET8_0_OR_GREATER
+    ReadOnlyDictionary<string, string>.Empty;
+    #else
+    s_emptyStringDictionary;
+    #endif
 
     /// <summary>
     /// Gets the possible lengths of the national destination code.

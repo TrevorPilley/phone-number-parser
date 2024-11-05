@@ -29,6 +29,7 @@ public partial class CountryInfo
         CallingCode = "375",
         Continent = Europe,
         FormatProvider = SimplePhoneNumberFormatProvider.Default,
+        InternationalCallPrefix = "8~10",
         Iso3166Code = "BY",
         Name = "Belarus",
         NdcLengths = new ReadOnlyCollection<int>([4, 3, 2]),

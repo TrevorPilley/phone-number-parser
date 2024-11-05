@@ -15,6 +15,8 @@ public class CountryInfo_SouthAmerica_Tests
         Assert.Equal("55", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.SouthAmerica, countryInfo.Continent);
         Assert.IsType<BRPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("0xx", countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("BR", countryInfo.Iso3166Code);
@@ -37,6 +39,8 @@ public class CountryInfo_SouthAmerica_Tests
         Assert.Equal("57", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.SouthAmerica, countryInfo.Continent);
         Assert.IsType<COPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("CO", countryInfo.Iso3166Code);
