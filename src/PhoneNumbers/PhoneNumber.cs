@@ -216,4 +216,12 @@ public abstract class PhoneNumber(PhoneNumberHint phoneNumberHint)
     /// <returns>The string representation of the value of this instance as specified by the format.</returns>
     public string ToString(string format) =>
         CountryInfo.GetFormatter(format).Format(this);
+
+    /// <summary>
+    /// Gets a value indicting whether this <see cref="PhoneNumber"/> shares a national destination code with the specified <see cref="PhoneNumber"/>.
+    /// </summary>
+    /// <param name="phoneNumber">The <see cref="PhoneNumber"/> to compare against.</param>
+    /// <returns>True if the both phone numbers share a national destination code, otherwise false.</returns>
+    internal bool SharesNdcWith(PhoneNumber phoneNumber) =>
+        NationalDestinationCode?.Equals(phoneNumber.NationalDestinationCode, StringComparison.Ordinal) == true;
 }

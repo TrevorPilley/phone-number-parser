@@ -167,6 +167,29 @@ public class PhoneNumberTests
     }
 
     [Fact]
+    public void SharesNdcWith()
+    {
+        var phoneNumber1 = TestHelper.CreateGeographicPhoneNumber(
+            trunkPrefix: default,
+            ndc: "12345",
+            sn: "667788");
+
+        var phoneNumber2 = TestHelper.CreateGeographicPhoneNumber(
+            trunkPrefix: default,
+            ndc: "12345",
+            sn: "667788");
+
+        Assert.True(phoneNumber1.SharesNdcWith(phoneNumber2));
+
+        var phoneNumber3 = TestHelper.CreateGeographicPhoneNumber(
+            trunkPrefix: default,
+            ndc: "12346",
+            sn: "667788");
+
+        Assert.False(phoneNumber1.SharesNdcWith(phoneNumber3));
+    }
+
+    [Fact]
     public void ToString_Returns_Default_Formatted_PhoneNumber()
     {
         var phoneNumber = PhoneNumber.Parse("+441142726444");
