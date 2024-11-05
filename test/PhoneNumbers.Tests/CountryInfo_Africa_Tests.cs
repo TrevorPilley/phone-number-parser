@@ -15,6 +15,8 @@ public class CountryInfo_Africa_Tests
         Assert.Equal("20", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("EG", countryInfo.Iso3166Code);
@@ -37,6 +39,10 @@ public class CountryInfo_Africa_Tests
         Assert.Equal("254", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
         Assert.IsType<SimplePhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("000", countryInfo.InternationalCallPrefix);
+        Assert.Equal(2, countryInfo.InternationalCallPrefixes.Count);
+        Assert.Equal("006", countryInfo.InternationalCallPrefixes["256"]); // Uganda
+        Assert.Equal("007", countryInfo.InternationalCallPrefixes["255"]); // Tanzania
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("KE", countryInfo.Iso3166Code);
@@ -59,6 +65,8 @@ public class CountryInfo_Africa_Tests
         Assert.Equal("234", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("009", countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("NG", countryInfo.Iso3166Code);
@@ -81,6 +89,8 @@ public class CountryInfo_Africa_Tests
         Assert.Equal("27", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("ZA", countryInfo.Iso3166Code);
@@ -103,6 +113,10 @@ public class CountryInfo_Africa_Tests
         Assert.Equal("255", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("000", countryInfo.InternationalCallPrefix);
+        Assert.Equal(2, countryInfo.InternationalCallPrefixes.Count);
+        Assert.Equal("005", countryInfo.InternationalCallPrefixes["254"]); // Kenya
+        Assert.Equal("006", countryInfo.InternationalCallPrefixes["256"]); // Uganda
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("TZ", countryInfo.Iso3166Code);
@@ -125,6 +139,10 @@ public class CountryInfo_Africa_Tests
         Assert.Equal("256", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
         Assert.IsType<UGPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("000", countryInfo.InternationalCallPrefix);
+        Assert.Equal(2, countryInfo.InternationalCallPrefixes.Count);
+        Assert.Equal("005", countryInfo.InternationalCallPrefixes["254"]); // Kenya
+        Assert.Equal("007", countryInfo.InternationalCallPrefixes["255"]); // Tanzania
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("UG", countryInfo.Iso3166Code);
