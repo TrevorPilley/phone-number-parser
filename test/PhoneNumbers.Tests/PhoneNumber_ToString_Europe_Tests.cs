@@ -350,7 +350,7 @@ public class PhoneNumber_ToString_Europe_Tests
     [InlineData("+37858001110", "RFC3966", "tel:+378-58-001110")]     // IP Telephony
     [InlineData("+37866661212", "RFC3966", "tel:+378-66-661212")]     // Mobile
     [InlineData("+378882555", "RFC3966", "tel:+378-882555")]          // Landline without Italian NDC
-    [InlineData("+378054988", "ERFC3966", "tel:+378-0549-88")]        // Landline with Italian NDC
+    [InlineData("+378054988", "RFC3966", "tel:+378-0549-88")]         // Landline with Italian NDC
     [InlineData("+3780549882", "RFC3966", "tel:+378-0549-882")]       // Landline with Italian NDC
     [InlineData("+37805498825", "RFC3966", "tel:+378-0549-8825")]     // Landline with Italian NDC
     [InlineData("+378054988255", "RFC3966", "tel:+378-0549-88255")]   // Landline with Italian NDC
