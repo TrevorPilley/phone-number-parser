@@ -402,6 +402,9 @@ public class PhoneNumber_ToString_Europe_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+46201234", "E.123", "+46 20 1234")]
+    [InlineData("+462012345", "E.123", "+46 20 123 45")]
+    [InlineData("+4620123456", "E.123", "+46 20 123 456")]
     [InlineData("+468678550", "E.123", "+46 8 67 85 50")]
     [InlineData("+4686785500", "E.123", "+46 8 678 55 00")]
     [InlineData("+46867855001", "E.123", "+46 8 678 550 01")]
@@ -423,6 +426,9 @@ public class PhoneNumber_ToString_Europe_Tests
     [InlineData("+46906785500", "N", "(090) 678 55 00")]
     [InlineData("+4664067855", "N", "(0640) 678 55")]
     [InlineData("+46640678550", "N", "(0640) 67 85 50")]
+    [InlineData("+46201234", "RFC3966", "tel:+46 20 1234")]
+    [InlineData("+462012345", "RFC3966", "tel:+46 20 123 45")]
+    [InlineData("+4620123456", "RFC3966", "tel:+46 20 123 456")]
     [InlineData("+468678550", "RFC3966", "tel:+46-8-67-85-50")]
     [InlineData("+4686785500", "RFC3966", "tel:+46-8-678-55-00")]
     [InlineData("+46867855001", "RFC3966", "tel:+46-8-678-550-01")]
