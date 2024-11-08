@@ -16,16 +16,14 @@ internal sealed class GBPhoneNumberFormatProvider : ComplexPhoneNumberFormatProv
         var ndcOptional = phoneNumber.NdcIsOptional();
 
         // The base formats cover all UK formats except for 6 digit subscriber numbers as in the UK they aren't separated.
-        return phoneNumber.SubscriberNumber.Length switch
+        if (phoneNumber.SubscriberNumber.Length == 6 &&
+            phoneNumber.NationalDestinationCode!.Length == 4)
         {
-            6 => phoneNumber.NationalDestinationCode!.Length switch
-            {
 #pragma warning disable S3358 // Extract this nested ternary operation into an independent statement.
-                4 => international ? "#### ######" : ndcOptional ? "(0####) ######" : "0#### ######",
+            return international ? "#### ######" : ndcOptional ? "(0####) ######" : "0#### ######";
 #pragma warning restore S3358 // Extract this nested ternary operation into an independent statement.
-                _ => base.ProvideFormat(phoneNumber, international),
-            },
-            _ => base.ProvideFormat(phoneNumber, international),
         };
+
+        return base.ProvideFormat(phoneNumber, international);
     }
 }
