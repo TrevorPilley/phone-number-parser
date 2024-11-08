@@ -334,14 +334,26 @@ public class PhoneNumber_ToString_Europe_Tests
     [InlineData("+37858001110", "E.123", "+378 58 001110")]           // IP Telephony
     [InlineData("+37866661212", "E.123", "+378 66 661212")]           // Mobile
     [InlineData("+378882555", "E.123", "+378 882555")]                // Landline without Italian NDC
+    [InlineData("+378054988", "E.123", "+378 0549 88")]               // Landline with Italian NDC
+    [InlineData("+3780549882", "E.123", "+378 0549 882")]             // Landline with Italian NDC
+    [InlineData("+37805498825", "E.123", "+378 0549 8825")]           // Landline with Italian NDC
+    [InlineData("+378054988255", "E.123", "+378 0549 88255")]         // Landline with Italian NDC
     [InlineData("+3780549882555", "E.123", "+378 0549 882555")]       // Landline with Italian NDC
     [InlineData("+37858001110", "N", "58 001110")]                    // IP Telephony
     [InlineData("+37866661212", "N", "66 661212")]                    // Mobile
     [InlineData("+378882555", "N", "882555")]                         // Landline without Italian NDC
+    [InlineData("+378054988", "N", "(0549) 88")]                      // Landline with Italian NDC
+    [InlineData("+3780549882", "N", "(0549) 882")]                    // Landline with Italian NDC
+    [InlineData("+37805498825", "N", "(0549) 8825")]                  // Landline with Italian NDC
+    [InlineData("+378054988255", "N", "(0549) 88255")]                // Landline with Italian NDC
     [InlineData("+3780549882555", "N", "(0549) 882555")]              // Landline with Italian NDC
     [InlineData("+37858001110", "RFC3966", "tel:+378-58-001110")]     // IP Telephony
     [InlineData("+37866661212", "RFC3966", "tel:+378-66-661212")]     // Mobile
     [InlineData("+378882555", "RFC3966", "tel:+378-882555")]          // Landline without Italian NDC
+    [InlineData("+378054988", "ERFC3966", "tel:+378-0549-88")]        // Landline with Italian NDC
+    [InlineData("+3780549882", "RFC3966", "tel:+378-0549-882")]       // Landline with Italian NDC
+    [InlineData("+37805498825", "RFC3966", "tel:+378-0549-8825")]     // Landline with Italian NDC
+    [InlineData("+378054988255", "RFC3966", "tel:+378-0549-88255")]   // Landline with Italian NDC
     [InlineData("+3780549882555", "RFC3966", "tel:+378-0549-882555")] // Landline with Italian NDC
     public void SanMarino_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
