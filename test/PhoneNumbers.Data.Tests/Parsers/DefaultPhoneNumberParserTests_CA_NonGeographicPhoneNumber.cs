@@ -46,6 +46,8 @@ public class DefaultPhoneNumberParserTests_CA_NonGeographicPhoneNumber
     [InlineData("6229109999", "622", "9109999")]
     [InlineData("6229120000", "622", "9120000")]
     [InlineData("6229999999", "622", "9999999")]
+    [InlineData("6330000000", "633", "0000000")]
+    [InlineData("6339999999", "633", "9999999")]
     public void Parse_Known_NonGeographicPhoneNumber_6XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
