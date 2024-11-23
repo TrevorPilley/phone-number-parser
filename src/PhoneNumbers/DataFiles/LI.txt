@@ -1,0 +1,11 @@
+# Reference: https://archiv.llv.li/files/ak/pdf-llv-ak-liechtenstein_numbering_plan.pdf via https://www.llv.li/en/national-administration/office-for-communications/electronic-communication/numbering/liechtenstein-numbering-plan-itu-t-e.164-
+# Reference Date: 01/03/2017
+N|||2000000-3999999|
+M|||600000000-689999999|
+M|||690000000-699999999|
+M|||7000000-7999999|
+N|||8000000-8099999|F
+N|||8400000-8499999|S
+N|||8700000-8799999|
+M|||8900000-8999999|V
+N|||9000000-9019999,9060000-9069999|R

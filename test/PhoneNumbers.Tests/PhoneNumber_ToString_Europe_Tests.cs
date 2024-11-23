@@ -216,6 +216,13 @@ public class PhoneNumber_ToString_Europe_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+4232366488", "E.123", "+423 236 64 88")]
+    [InlineData("+4232366488", "N", "236 64 88")]
+    [InlineData("+4232366488", "RFC3966", "tel:+423-236-64-88")]
+    public void Liechtenstein_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+37052105664", "E.123", "+370 5 210 5664")]
     [InlineData("+37052105664", "N", "(85) 210 5664")]
     [InlineData("+37052105664", "RFC3966", "tel:+370-5-210-5664")]
