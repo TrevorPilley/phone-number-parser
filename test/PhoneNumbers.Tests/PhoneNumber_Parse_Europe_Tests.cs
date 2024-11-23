@@ -199,6 +199,14 @@ public class PhoneNumber_Parse_Europe_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_Liechtenstein_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+4232366488");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Liechtenstein, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_Lithuania_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+37052105664");

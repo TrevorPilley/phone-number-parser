@@ -485,6 +485,26 @@ public class CountryInfo_Europe_Tests
     }
 
     [Fact]
+    public void CountryInfo_Liechtenstein()
+    {
+        Assert.Same(CountryInfo.Liechtenstein, CountryInfo.Liechtenstein);
+
+        var countryInfo = CountryInfo.Liechtenstein;
+
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal("423", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
+        Assert.IsType<LIPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.Equal("LI", countryInfo.Iso3166Code);
+        Assert.Equal("Liechtenstein", countryInfo.Name);
+        Assert.Empty(countryInfo.NdcLengths);
+        Assert.Equal(new[] { 7, 9 }, countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Null(countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_Lithuania()
     {
         Assert.Same(CountryInfo.Lithuania, CountryInfo.Lithuania);

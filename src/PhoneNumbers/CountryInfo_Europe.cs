@@ -374,6 +374,19 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Liechtenstein.
+    /// </summary>
+    public static CountryInfo Liechtenstein { get; } = new()
+    {
+        CallingCode = "423",
+        Continent = Europe,
+        FormatProvider = LIPhoneNumberFormatProvider.Instance,
+        Iso3166Code = "LI",
+        Name = "Liechtenstein",
+        NsnLengths = new ReadOnlyCollection<int>([7, 9]),
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Lithuania.
     /// </summary>
     public static CountryInfo Lithuania { get; } = new()
