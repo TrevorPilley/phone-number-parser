@@ -41,4 +41,12 @@ public class PhoneNumber_Parse_Africa_Tests
         Assert.NotNull(phoneNumber);
         Assert.Equal(CountryInfo.Tanzania, phoneNumber.Country);
     }
+
+    [Fact]
+    public void Parse_Value_For_Uganda_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+256414348832");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Uganda, phoneNumber.Country);
+    }
 }
