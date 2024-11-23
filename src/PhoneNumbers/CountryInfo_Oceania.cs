@@ -31,6 +31,7 @@ public partial class CountryInfo
         Continent = Oceania,
         FormatProvider = AUPhoneNumberFormatProvider.Instance,
         Iso3166Code = "AU",
+        IsOecdMember = true,
         Name = "Australia",
         NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),
         NsnLengths = new ReadOnlyCollection<int>([5, 6, 7, 8, 9, 10]),

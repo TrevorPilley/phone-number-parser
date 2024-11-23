@@ -18,6 +18,7 @@ public class CountryInfo_Africa_Tests
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("EG", countryInfo.Iso3166Code);
+        Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Egypt", countryInfo.Name);
         Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 8, 9, 10, 11 }, countryInfo.NsnLengths);
@@ -39,6 +40,7 @@ public class CountryInfo_Africa_Tests
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("KE", countryInfo.Iso3166Code);
+        Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Kenya", countryInfo.Name);
         Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 7, 8, 9, 12 }, countryInfo.NsnLengths);
@@ -60,6 +62,7 @@ public class CountryInfo_Africa_Tests
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("NG", countryInfo.Iso3166Code);
+        Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Nigeria", countryInfo.Name);
         Assert.Equal(new[] { 4, 3 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
@@ -81,6 +84,7 @@ public class CountryInfo_Africa_Tests
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("ZA", countryInfo.Iso3166Code);
+        Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("South Africa", countryInfo.Name);
         Assert.Equal(new[] { 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 9, 13 }, countryInfo.NsnLengths);
@@ -102,6 +106,7 @@ public class CountryInfo_Africa_Tests
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("TZ", countryInfo.Iso3166Code);
+        Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Tanzania", countryInfo.Name);
         Assert.Equal(new[] { 5, 3, 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 9, 12 }, countryInfo.NsnLengths);
@@ -123,6 +128,7 @@ public class CountryInfo_Africa_Tests
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("UG", countryInfo.Iso3166Code);
+        Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Uganda", countryInfo.Name);
         Assert.Equal(new[] { 6, 5, 4, 3, 1 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 9 }, countryInfo.NsnLengths);

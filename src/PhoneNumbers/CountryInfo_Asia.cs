@@ -51,6 +51,7 @@ public partial class CountryInfo
         FormatProvider = TRPhoneNumberFormatProvider.Instance,
         IsNatoMember = true,
         Iso3166Code = "TR",
+        IsOecdMember = true,
         Name = "Turkey",
         NdcLengths = new ReadOnlyCollection<int>([3, 0]),
         NsnLengths = new ReadOnlyCollection<int>([7, 10]),

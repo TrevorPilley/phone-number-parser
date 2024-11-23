@@ -18,6 +18,7 @@ public class CountryInfo_Oceania_Tests
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("AS", countryInfo.Iso3166Code);
+        Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("American Samoa", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
@@ -39,6 +40,7 @@ public class CountryInfo_Oceania_Tests
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("AU", countryInfo.Iso3166Code);
+        Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Australia", countryInfo.Name);
         Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 5, 6, 7, 8, 9, 10 }, countryInfo.NsnLengths);
@@ -60,6 +62,7 @@ public class CountryInfo_Oceania_Tests
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("GU", countryInfo.Iso3166Code);
+        Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Guam", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
@@ -81,6 +84,7 @@ public class CountryInfo_Oceania_Tests
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("PG", countryInfo.Iso3166Code);
+        Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Papua New Guinea", countryInfo.Name);
         Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 7, 8 }, countryInfo.NsnLengths);
