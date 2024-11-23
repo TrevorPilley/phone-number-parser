@@ -30,6 +30,7 @@ public partial class CountryInfo
         Continent = SouthAmerica,
         FormatProvider = COPhoneNumberFormatProvider.Instance,
         Iso3166Code = "CO",
+        IsOecdMember = true,
         Name = "Colombia",
         NdcLengths = new ReadOnlyCollection<int>([3]),
         NsnLengths = new ReadOnlyCollection<int>([10]),

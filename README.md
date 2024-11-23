@@ -145,6 +145,7 @@ ParseOptions.Default.AllowSouthAmericanCountries();
 // Add all countries supported by the library who are members of the same union/alliance:
 ParseOptions.Default.AllowEuropeanUnionCountries();   // all 27 members
 ParseOptions.Default.AllowNatoCountries();            // 31 of 32 members (Albania not supported yet)
+ParseOptions.Default.AllowOecdCountries();            // 31 of 38 members
 
 // Add all countries supported by the library using the same numbering plan:
 ParseOptions.Default.AllowNorthAmericanNumberingPlanCountries();
