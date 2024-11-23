@@ -39,4 +39,11 @@ public class PhoneNumber_ToString_Africa_Tests
     [InlineData("+255222199760", "RFC3966", "tel:+255-22-219-9760")]
     public void Tanzania_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
+    [InlineData("+256414348832", "E.123", "+256 41 434 8832")]
+    [InlineData("+256414348832", "N", "041 434 8832")]
+    [InlineData("+256414348832", "RFC3966", "tel:+256-41-434-8832")]
+    public void Uganda_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 }

@@ -181,6 +181,7 @@ Kenya          | KE            | 254          | 0            | Yes        | Yes 
 Nigeria        | NG            | 234          | 0            | Yes        | Yes    |                    | Yes                  |                | Yes                            |                                   |                                  |
 South Africa   | ZA            | 27           | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               | Yes                              | Yes
 Tanzania       | TZ            | 255          | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               | Yes                              | Yes
+Uganda         | UG            | 256          | 0            |            | Yes    |                    |                      | Yes            | Yes                            |                                   |                                  |
 
 ### Asia
 
