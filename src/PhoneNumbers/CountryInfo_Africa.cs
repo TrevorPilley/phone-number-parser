@@ -84,6 +84,7 @@ public partial class CountryInfo
     {
         CallingCode = "256",
         Continent = Africa,
+        FormatProvider = UGPhoneNumberFormatProvider.Instance,
         Iso3166Code = "UG",
         Name = "Uganda",
         NdcLengths = new ReadOnlyCollection<int>([6, 5, 4, 3, 1]),
