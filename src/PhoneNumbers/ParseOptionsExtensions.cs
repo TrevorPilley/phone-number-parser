@@ -78,6 +78,15 @@ public static class ParseOptionsExtensions
         Allow(parseOptions, x => x.Continent.Equals(CountryInfo.Oceania, StringComparison.Ordinal));
 
     /// <summary>
+    /// Allows the <see cref="ParseOptions"/> instance to include all supported countries who are members of the Organisation for Economic Co-operation and Development.
+    /// </summary>
+    /// <param name="parseOptions">The <see cref="ParseOptions"/> instance to update.</param>
+    /// <exception cref="ArgumentNullException">Thrown if the specified <paramref name="parseOptions"/> is null.</exception>
+    /// <returns>The updated <see cref="ParseOptions"/>.</returns>
+    public static ParseOptions AllowOecdCountries(this ParseOptions parseOptions) =>
+        Allow(parseOptions, x => x.IsOecdMember);
+
+    /// <summary>
     /// Allows the <see cref="ParseOptions"/> instance to include all supported countries in South America.
     /// </summary>
     /// <param name="parseOptions">The <see cref="ParseOptions"/> instance to update.</param>
