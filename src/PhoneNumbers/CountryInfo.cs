@@ -82,6 +82,11 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
     public required string Iso3166Code { get; init; } = null!;
 
     /// <summary>
+    /// Gets a value indicating whether the country is a member of the Organisation for Economic Co-operation and Development.
+    /// </summary>
+    public bool IsOecdMember { get; init; }
+
+    /// <summary>
     /// Gets the name of the country in English.
     /// </summary>
     public required string Name { get; init; } = null!;
