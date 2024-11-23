@@ -13,8 +13,8 @@ internal sealed class UGPhoneNumberFormatProvider : ComplexPhoneNumberFormatProv
 
     protected override string ProvideFormat(PhoneNumber phoneNumber, bool international)
     {
-        if (phoneNumber.NationalDestinationCode![0] == 3 ||
-            phoneNumber.NationalDestinationCode![0] == 4)
+        if (phoneNumber.NationalDestinationCode! == 3 ||
+            phoneNumber.NationalDestinationCode! == 4)
         {
             return international ? "## ### ####" : "0## ### ####";
         }
