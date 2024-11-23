@@ -114,7 +114,7 @@ public class CountryInfo_Africa_Tests
         Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("256", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
-        Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.IsType<UGPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal("UG", countryInfo.Iso3166Code);
         Assert.Equal("Uganda", countryInfo.Name);
