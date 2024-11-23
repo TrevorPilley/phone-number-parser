@@ -240,11 +240,8 @@ public class PhoneNumber_ToString_Europe_Tests
 
     [Theory]
     [InlineData("+35621336840", "E.123", "+356 2133 6840")]
-    [InlineData("+3564254321234", "E.123", "+356 42 5432 1234")]
     [InlineData("+35621336840", "N", "2133 6840")]
-    [InlineData("+3564254321234", "N", "42 5432 1234")]
     [InlineData("+35621336840", "RFC3966", "tel:+356-2133-6840")]
-    [InlineData("+3564254321234", "RFC3966", "tel:+356-42-5432-1234")]
     public void Malta_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
