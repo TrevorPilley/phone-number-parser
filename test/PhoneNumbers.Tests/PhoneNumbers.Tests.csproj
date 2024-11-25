@@ -4,7 +4,7 @@
     <AssemblyName>PhoneNumbers.Tests</AssemblyName>
     <RootNamespace>PhoneNumbers.Tests</RootNamespace>
     <TargetFrameworks>net9.0;net462</TargetFrameworks>
-    <LangVersion>12.0</LangVersion>
+    <LangVersion>13.0</LangVersion>
     <IsPackable>false</IsPackable>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\..\PhoneNumbers.snk</AssemblyOriginatorKeyFile>
