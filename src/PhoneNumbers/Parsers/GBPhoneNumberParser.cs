@@ -43,9 +43,7 @@ internal sealed class GBPhoneNumberParser : DefaultPhoneNumberParser
                 // Except 11X and 1X1 area codes, which are are 3 digits.
                 ndcLength = 3;
             }
-            else if (_areaCodesWith5Digits
-                        .Where(x => x.NationalDestinationCodeRanges!.Any(x => nsnValue.StartsWith(x.From, StringComparison.Ordinal)))
-                        .Any(x => x.SubscriberNumberRanges.Any(x => x.Contains(nsnValue.Substring(5)))))
+            else if (_areaCodesWith5Digits.Any(x => x.NationalDestinationCodeRanges!.Any(x => nsnValue.StartsWith(x.From, StringComparison.Ordinal))))
             {
                 // There are some 5 digit area codes which use a subset of numbers from the "parent" 4 digit area code:
                 // e.g. Langholm (13873) uses the 32XXXX-39XXXX range from Dumfries (1387) meaning Dumfries can only use 2XXXXX and 4XXXXX-9XXXXX
