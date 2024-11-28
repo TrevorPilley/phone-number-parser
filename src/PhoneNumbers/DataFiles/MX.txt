@@ -1,5 +1,5 @@
-# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200008A0003PDFE.pdf
-# Reference Date: 12/06/2018
+# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200008A0004PDFE.pdf
+# Reference Date: 05/07/2024
 G|2|Este|100000000-999999999|
 G|3|Oeste|100000000-999999999|
 G|4|Norte|100000000-999999999|

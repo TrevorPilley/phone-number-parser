@@ -101,7 +101,7 @@ public class PhoneNumber_Parse_NorthAmerica_Tests
     [Fact]
     public void Parse_Value_For_Mexico_CallingCode()
     {
-        var phoneNumber = PhoneNumber.Parse("+525550154158");
+        var phoneNumber = PhoneNumber.Parse("+525550154106");
         Assert.NotNull(phoneNumber);
         Assert.Equal(CountryInfo.Mexico, phoneNumber.Country);
     }
