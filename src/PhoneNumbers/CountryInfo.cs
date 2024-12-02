@@ -187,12 +187,12 @@ public sealed partial class CountryInfo
         return ReadNationalSignificantNumber(value, startIdx);
     }
 
+    private static bool IsDelimiter(char charVal) =>
+        charVal == Chars.Comma || charVal == Chars.Semicolon;
+
     /// <remarks>Char.IsDigit returns true for more than 0-9 so use a more restricted version.</remarks>
     private static bool IsDigit(char charVal) =>
         charVal is >= '0' and <= '9';
-
-    private static bool IsDelimiter(char charVal) =>
-        charVal == Chars.Comma || charVal == Chars.Semicolon;
 
     private static bool IsSeparator(char charVal) =>
         charVal == Chars.Hyphen || charVal == Chars.ForwardSlash;

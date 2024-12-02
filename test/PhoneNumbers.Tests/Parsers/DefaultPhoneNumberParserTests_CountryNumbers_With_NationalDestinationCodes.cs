@@ -261,7 +261,7 @@ public class DefaultPhoneNumberParserTests_CountryNumbers_WithNationalDestinatio
         Assert.Equal("28000", nonGeographicPhoneNumber.SubscriberNumber);
         Assert.Equal(PhoneNumberKind.NonGeographicPhoneNumber, nonGeographicPhoneNumber.Kind);
     }
-    
+
     [Fact] // This scenario exists within Germany
     public void Parse_When_Nsn_Shorter_Than_Some_Ndc_Lengths()
     {
