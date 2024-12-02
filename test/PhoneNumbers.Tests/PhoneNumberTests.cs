@@ -294,13 +294,6 @@ public class PhoneNumberTests
         Assert.Empty(phoneNumbers);
     }
 
-    [Fact]
-    public void TryParse_Value_To_PhoneNumber_False_If_ParseOptions_Null()
-    {
-        Assert.False(PhoneNumber.TryParse("0123456789", default(ParseOptions), out PhoneNumber phoneNumber));
-        Assert.Null(phoneNumber);
-    }
-
     [Theory]
     [InlineData(default(string))]
     [InlineData("")]
@@ -349,5 +342,12 @@ public class PhoneNumberTests
         Assert.Equal(CountryInfo.Finland, phoneNumberResults[1].Country);
         Assert.Equal(CountryInfo.Serbia, phoneNumberResults[2].Country);
         Assert.Equal(CountryInfo.UnitedKingdom, phoneNumberResults[3].Country);
+    }
+
+    [Fact]
+    public void TryParse_Value_To_PhoneNumber_False_If_ParseOptions_Null()
+    {
+        Assert.False(PhoneNumber.TryParse("0123456789", default(ParseOptions), out PhoneNumber phoneNumber));
+        Assert.Null(phoneNumber);
     }
 }

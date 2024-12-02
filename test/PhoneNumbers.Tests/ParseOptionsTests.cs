@@ -14,7 +14,7 @@ public class ParseOptionsTests
 
         Assert.Single(parseOptions.Countries);
     }
-    
+
     [Fact]
     public void AllowAfricanCountries()
     {
