@@ -84,15 +84,15 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
     public bool IsNatoMember { get; init; }
 
     /// <summary>
+    /// Gets a value indicating whether the country is a member of the Organisation for Economic Co-operation and Development.
+    /// </summary>
+    public bool IsOecdMember { get; init; }
+
+    /// <summary>
     /// Gets the ISO 3166 Alpha-2 code for the country.
     /// </summary>
     /// <remarks>See https://www.iso.org/iso-3166-country-codes.html</remarks>
     public required string Iso3166Code { get; init; } = null!;
-
-    /// <summary>
-    /// Gets a value indicating whether the country is a member of the Organisation for Economic Co-operation and Development.
-    /// </summary>
-    public bool IsOecdMember { get; init; }
 
     /// <summary>
     /// Gets the name of the country in English.
@@ -159,25 +159,6 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
         return countryInfo1.Equals(countryInfo2);
     }
 
-    internal static IEnumerable<CountryInfo> GetCountries() =>
-        typeof(CountryInfo)
-            .GetProperties(BindingFlags.Public | BindingFlags.Static)
-            .Where(x => x.PropertyType == typeof(CountryInfo))
-            .Select(x => x.GetValue(null))
-            .Cast<CountryInfo>();
-
-    internal static IEnumerable<CountryInfo> GetCountries(Func<CountryInfo, bool> predicate) =>
-        GetCountries()
-        .Where(predicate);
-
-    /// <summary>
-    /// Gets the <see cref="PhoneNumberFormatter"/> for the specified format.
-    /// </summary>
-    /// <exception cref="FormatException">Thrown if the format string is not valid.</exception>
-    /// <returns>The <see cref="PhoneNumberFormatter"/>.</returns>
-    internal static PhoneNumberFormatter GetFormatter(string format) =>
-        s_formatters.SingleOrDefault(x => x.CanFormat(format)) ?? throw new FormatException($"{format} is not a supported format");
-
     /// <inheritdoc/>
     public override bool Equals(object? obj) =>
         Equals(obj as CountryInfo);
@@ -202,6 +183,25 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
     [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
     public override int GetHashCode() =>
         HashCode.Combine(Iso3166Code);
+
+    internal static IEnumerable<CountryInfo> GetCountries() =>
+        typeof(CountryInfo)
+            .GetProperties(BindingFlags.Public | BindingFlags.Static)
+            .Where(x => x.PropertyType == typeof(CountryInfo))
+            .Select(x => x.GetValue(null))
+            .Cast<CountryInfo>();
+
+    internal static IEnumerable<CountryInfo> GetCountries(Func<CountryInfo, bool> predicate) =>
+        GetCountries()
+        .Where(predicate);
+
+    /// <summary>
+    /// Gets the <see cref="PhoneNumberFormatter"/> for the specified format.
+    /// </summary>
+    /// <exception cref="FormatException">Thrown if the format string is not valid.</exception>
+    /// <returns>The <see cref="PhoneNumberFormatter"/>.</returns>
+    internal static PhoneNumberFormatter GetFormatter(string format) =>
+        s_formatters.SingleOrDefault(x => x.CanFormat(format)) ?? throw new FormatException($"{format} is not a supported format");
 
     /// <summary>
     /// Gets a value indicating whether the specified value has the calling code for this country.
@@ -262,12 +262,12 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
     internal bool SharesCallingCodeWith(CountryInfo countryInfo) =>
         CallingCode.Equals(countryInfo.CallingCode, StringComparison.Ordinal);
 
+    private static bool IsDelimiter(char charVal) =>
+        charVal == Chars.Comma || charVal == Chars.Semicolon;
+
     /// <remarks>Char.IsDigit returns true for more than 0-9 so use a more restricted version.</remarks>
     private static bool IsDigit(char charVal) =>
         charVal is >= '0' and <= '9';
-
-    private static bool IsDelimiter(char charVal) =>
-        charVal == Chars.Comma || charVal == Chars.Semicolon;
 
     private static bool IsSeparator(char charVal) =>
         charVal == Chars.Hyphen || charVal == Chars.ForwardSlash;

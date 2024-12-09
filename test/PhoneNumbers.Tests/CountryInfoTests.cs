@@ -4,29 +4,6 @@ namespace PhoneNumbers.Tests;
 
 public class CountryInfoTests
 {
-    [Fact]
-    public void GetFormatter_E123_Returns_E123PhoneNumberFormatter() =>
-        Assert.IsType<E123PhoneNumberFormatter>(CountryInfo.GetFormatter("E.123"));
-
-    [Fact]
-    public void GetFormatter_E164_Returns_E164PhoneNumberFormatter() =>
-        Assert.IsType<E164PhoneNumberFormatter>(CountryInfo.GetFormatter("E.164"));
-
-    [Fact]
-    public void GetFormatter_N_Returns_NationalPhoneNumberFormatter() =>
-        Assert.IsType<NationalPhoneNumberFormatter>(CountryInfo.GetFormatter("N"));
-
-    [Fact]
-    public void GetFormatter_RFC3966_Returns_Rfc3966PhoneNumberFormatter() =>
-        Assert.IsType<Rfc3966PhoneNumberFormatter>(CountryInfo.GetFormatter("RFC3966"));
-    
-    [Fact]
-    public void GetFormatter_U_Returns_NationalUnformattedPhoneNumberFormatter() =>
-        Assert.IsType<NationalUnformattedPhoneNumberFormatter>(CountryInfo.GetFormatter("U"));
-
-    [Fact]
-    public void GetFormatter_Throws_For_Invalid_Format() =>
-        Assert.Throws<FormatException>(() => CountryInfo.GetFormatter("X"));
 
     [Fact]
     public void Equality_Both_Null()
@@ -81,6 +58,29 @@ public class CountryInfoTests
         Assert.True(countryInfo1 == countryInfo2);
         Assert.False(countryInfo1 != countryInfo2);
     }
+    [Fact]
+    public void GetFormatter_E123_Returns_E123PhoneNumberFormatter() =>
+        Assert.IsType<E123PhoneNumberFormatter>(CountryInfo.GetFormatter("E.123"));
+
+    [Fact]
+    public void GetFormatter_E164_Returns_E164PhoneNumberFormatter() =>
+        Assert.IsType<E164PhoneNumberFormatter>(CountryInfo.GetFormatter("E.164"));
+
+    [Fact]
+    public void GetFormatter_N_Returns_NationalPhoneNumberFormatter() =>
+        Assert.IsType<NationalPhoneNumberFormatter>(CountryInfo.GetFormatter("N"));
+
+    [Fact]
+    public void GetFormatter_RFC3966_Returns_Rfc3966PhoneNumberFormatter() =>
+        Assert.IsType<Rfc3966PhoneNumberFormatter>(CountryInfo.GetFormatter("RFC3966"));
+
+    [Fact]
+    public void GetFormatter_Throws_For_Invalid_Format() =>
+        Assert.Throws<FormatException>(() => CountryInfo.GetFormatter("X"));
+
+    [Fact]
+    public void GetFormatter_U_Returns_NationalUnformattedPhoneNumberFormatter() =>
+        Assert.IsType<NationalUnformattedPhoneNumberFormatter>(CountryInfo.GetFormatter("U"));
 
     [Theory]
     [InlineData(default(string))]
@@ -270,7 +270,7 @@ public class CountryInfoTests
         Assert.True(CountryInfo.UnitedKingdom.SharesCallingCodeWith(CountryInfo.IsleOfMan));
         Assert.True(CountryInfo.UnitedKingdom.SharesCallingCodeWith(CountryInfo.Jersey));
     }
-    
+
     [Fact]
     public void When_Constructed()
     {
