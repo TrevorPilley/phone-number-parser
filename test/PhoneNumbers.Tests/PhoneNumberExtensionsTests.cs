@@ -48,13 +48,6 @@ public class PhoneNumberExtensionsTests
     public void NumberToDialFrom_CountryInfo_Throws_If_PhoneNumber_Null() =>
         Assert.Throws<ArgumentNullException>(() => default(PhoneNumber).NumberToDialFrom(CountryInfo.UnitedKingdom));
 
-    [Fact]
-    public void NumberToDialFrom_PhoneNumber_Throws_If_CountryInfo_Null()
-    {
-        Assert.Throws<ArgumentNullException>(() => default(PhoneNumber).NumberToDialFrom(TestHelper.CreateMobilePhoneNumber(null, "1", "123")));
-        Assert.Throws<ArgumentNullException>(() => TestHelper.CreateMobilePhoneNumber(null, "1", "123").NumberToDialFrom(default(PhoneNumber)));
-    }
-
     [Theory]
     [InlineData("+441142726444", "+441146548866", "6548866")]        // UK Geo to Geo within NDC, local dialling permitted, NDC not required
     [InlineData("+441202454877", "+441202653887", "01202653887")]    // UK Geo to Geo within NDC, local dialling permitted, NDC required for local dialling due to number shortages
@@ -88,4 +81,11 @@ public class PhoneNumberExtensionsTests
         Assert.Equal(
             expected,
             PhoneNumber.Parse(destination).NumberToDialFrom(PhoneNumber.Parse(source)));
+
+    [Fact]
+    public void NumberToDialFrom_PhoneNumber_Throws_If_CountryInfo_Null()
+    {
+        Assert.Throws<ArgumentNullException>(() => default(PhoneNumber).NumberToDialFrom(TestHelper.CreateMobilePhoneNumber(null, "1", "123")));
+        Assert.Throws<ArgumentNullException>(() => TestHelper.CreateMobilePhoneNumber(null, "1", "123").NumberToDialFrom(default(PhoneNumber)));
+    }
 }
