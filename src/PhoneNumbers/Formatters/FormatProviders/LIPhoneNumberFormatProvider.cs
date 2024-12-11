@@ -3,7 +3,7 @@ namespace PhoneNumbers.Formatters.FormatProviders;
 /// <summary>
 /// A <see cref="PhoneNumberFormatProvider"/> for Liechtenstein numbers.
 /// </summary>
-internal sealed class LIPhoneNumberFormatProvider : SimplePhoneNumberFormatProvider
+internal sealed class LIPhoneNumberFormatProvider : ComplexPhoneNumberFormatProvider
 {
     private LIPhoneNumberFormatProvider()
     {
@@ -15,7 +15,6 @@ internal sealed class LIPhoneNumberFormatProvider : SimplePhoneNumberFormatProvi
         phoneNumber.NationalSignificantNumber.Length switch
         {
             7 => "### ## ##",
-            9 => "### ### ###",
             _ => base.ProvideFormat(phoneNumber, international),
         };
 }
