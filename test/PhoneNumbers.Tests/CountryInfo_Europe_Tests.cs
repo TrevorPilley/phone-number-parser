@@ -15,6 +15,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("43", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Republic of Austria", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.True(countryInfo.IsEuropeanUnionMember);
@@ -39,6 +40,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("375", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<SimplePhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Republic of Belarus", countryInfo.FullName);
         Assert.Equal("8~10", countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
@@ -63,6 +65,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("32", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<BEPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Kingdom of Belgium", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.True(countryInfo.IsEuropeanUnionMember);
@@ -87,6 +90,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("387", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Bosnia and Herzegovina", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
@@ -111,6 +115,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("359", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Republic of Bulgaria", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.True(countryInfo.IsEuropeanUnionMember);
@@ -135,6 +140,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("385", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Republic of Croatia", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.True(countryInfo.IsEuropeanUnionMember);
@@ -159,6 +165,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("357", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<CYPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Republic of Cyprus", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.True(countryInfo.IsEuropeanUnionMember);
@@ -183,6 +190,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("420", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<CZPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Czech Republic", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.True(countryInfo.IsEuropeanUnionMember);
@@ -207,6 +215,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("45", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Denmark", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.True(countryInfo.IsEuropeanUnionMember);
@@ -231,6 +240,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("372", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<BasicPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Republic of Estonia", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.True(countryInfo.IsEuropeanUnionMember);
@@ -255,6 +265,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("358", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Republic of Finland", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.True(countryInfo.IsEuropeanUnionMember);
@@ -279,6 +290,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("33", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<FRPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("French Republic", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.True(countryInfo.IsEuropeanUnionMember);
@@ -303,6 +315,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("49", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<SimplePhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Federal Republic of Germany", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.True(countryInfo.IsEuropeanUnionMember);
@@ -327,6 +340,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("350", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<BasicPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Gibraltar", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
@@ -351,6 +365,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("30", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<GRPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Hellenic Republic", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.True(countryInfo.IsEuropeanUnionMember);
@@ -375,6 +390,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("44", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<GBPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Guernsey", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
@@ -399,6 +415,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("36", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Hungary", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.True(countryInfo.IsEuropeanUnionMember);
@@ -423,6 +440,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("354", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Iceland", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
@@ -447,6 +465,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("353", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Ireland", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.True(countryInfo.IsEuropeanUnionMember);
@@ -471,6 +490,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("44", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<GBPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Isle of Man", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
@@ -495,6 +515,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("39", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<SimplePhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Italian Republic", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.True(countryInfo.IsEuropeanUnionMember);
@@ -519,6 +540,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("44", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<GBPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Bailiwick of Jersey", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
@@ -543,6 +565,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("383", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Republic of Kosovo", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
@@ -567,6 +590,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("371", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<BasicPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Republic of Latvia", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.True(countryInfo.IsEuropeanUnionMember);
@@ -591,6 +615,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("423", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<LIPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Principality of Liechtenstein", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
@@ -615,6 +640,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("370", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Republic of Lithuania", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.True(countryInfo.IsEuropeanUnionMember);
@@ -639,6 +665,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("352", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<LUPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Grand Duchy of Luxembourg", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.True(countryInfo.IsEuropeanUnionMember);
@@ -663,6 +690,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("356", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Republic of Malta", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.True(countryInfo.IsEuropeanUnionMember);
@@ -687,6 +715,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("373", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Republic of Moldova", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
@@ -711,6 +740,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("377", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<MCPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Principality of Monaco", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
@@ -735,6 +765,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("382", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Montenegro", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
@@ -759,6 +790,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("31", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<NLPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Netherlands", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.True(countryInfo.IsEuropeanUnionMember);
@@ -783,6 +815,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("389", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Republic of North Macedonia", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
@@ -807,6 +840,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("47", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<NOPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Kingdom of Norway", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
@@ -831,6 +865,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("48", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<PLPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Republic of Poland", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.True(countryInfo.IsEuropeanUnionMember);
@@ -855,6 +890,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("351", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Portuguese Republic", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.True(countryInfo.IsEuropeanUnionMember);
@@ -879,6 +915,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("40", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ROPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Romania", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.True(countryInfo.IsEuropeanUnionMember);
@@ -903,6 +940,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("378", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<SMPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Most Serene Republic of San Marino", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
@@ -927,6 +965,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("381", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Republic of Serbia", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
@@ -951,6 +990,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("421", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Slovak Republic", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.True(countryInfo.IsEuropeanUnionMember);
@@ -975,6 +1015,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("386", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<SLPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Republic of Slovenia", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.True(countryInfo.IsEuropeanUnionMember);
@@ -999,6 +1040,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("34", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<ESPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Kingdom of Spain", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.True(countryInfo.IsEuropeanUnionMember);
@@ -1023,6 +1065,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("46", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<SEPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Kingdom of Sweden", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.True(countryInfo.IsEuropeanUnionMember);
@@ -1047,6 +1090,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("41", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<CHPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Swiss Confederation", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
@@ -1071,6 +1115,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("380", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<UAPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Ukraine", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
@@ -1095,6 +1140,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("44", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<GBPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("United Kingdom of Great Britain and Northern Ireland", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);

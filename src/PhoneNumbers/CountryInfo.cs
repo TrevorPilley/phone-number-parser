@@ -58,6 +58,11 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
     public required string Continent { get; init; } = null!;
 
     /// <summary>
+    /// Gets the full name of the country in English.
+    /// </summary>
+    public required string FullName { get; init; } = null!;
+
+    /// <summary>
     /// Gets a value indicating whether the country has national destination codes.
     /// </summary>
     public bool HasNationalDestinationCodes => NdcLengths.Count > 0;

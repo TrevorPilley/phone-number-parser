@@ -12,6 +12,7 @@ public partial class CountryInfo
     {
         CallingCode = "20",
         Continent = Africa,
+        FullName = "Arab Republic of Egypt",
         Iso3166Code = "EG",
         Name = "Egypt",
         NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),
@@ -27,6 +28,7 @@ public partial class CountryInfo
         CallingCode = "254",
         Continent = Africa,
         FormatProvider = SimplePhoneNumberFormatProvider.Default,
+        FullName = "Republic of Kenya",
         InternationalCallPrefix = "000",
         InternationalCallPrefixes = new Dictionary<string, string>(StringComparer.Ordinal)
         {
@@ -48,6 +50,7 @@ public partial class CountryInfo
         AllowsLocalGeographicDialling = true,
         CallingCode = "234",
         Continent = Africa,
+        FullName = "Federal Republic of Nigeria",
         InternationalCallPrefix = "009",
         Iso3166Code = "NG",
         Name = "Nigeria",
@@ -63,6 +66,7 @@ public partial class CountryInfo
     {
         CallingCode = "27",
         Continent = Africa,
+        FullName = "Republic of South Africa",
         Iso3166Code = "ZA",
         Name = "South Africa",
         NdcLengths = new ReadOnlyCollection<int>([2]),
@@ -77,6 +81,7 @@ public partial class CountryInfo
     {
         CallingCode = "255",
         Continent = Africa,
+        FullName = "United Republic of Tanzania",
         InternationalCallPrefix = "000",
         InternationalCallPrefixes = new Dictionary<string, string>(StringComparer.Ordinal)
         {
@@ -97,6 +102,7 @@ public partial class CountryInfo
     {
         CallingCode = "256",
         Continent = Africa,
+        FullName = "Republic of Uganda",
         FormatProvider = UGPhoneNumberFormatProvider.Instance,
         InternationalCallPrefix = "000",
         InternationalCallPrefixes = new Dictionary<string, string>(StringComparer.Ordinal)
