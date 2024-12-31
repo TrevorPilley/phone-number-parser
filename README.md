@@ -64,6 +64,7 @@ The resulting `PhoneNumber` has the following properties:
 phoneNumber.Country.AllowsLocalGeographicDialling; // true
 phoneNumber.Country.CallingCode;                   // 44
 phoneNumber.Country.Continent;                     // Europe
+phoneNumber.Country.FullName;                      // United Kingdom of Great Britain and Northern Ireland
 phoneNumber.Country.HasNationalDestinationCodes;   // true
 phoneNumber.Country.HasTrunkPrefix;                // true
 phoneNumber.Country.InternationalCallPrefix;       // 00

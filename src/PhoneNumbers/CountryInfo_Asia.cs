@@ -12,6 +12,7 @@ public partial class CountryInfo
     {
         CallingCode = "852",
         Continent = Asia,
+        FullName = "Hong Kong",
         InternationalCallPrefix = "001",
         Iso3166Code = "HK",
         Name = "Hong Kong",
@@ -25,6 +26,7 @@ public partial class CountryInfo
     {
         CallingCode = "853",
         Continent = Asia,
+        FullName = "Macau",
         Iso3166Code = "MO",
         Name = "Macau",
         NsnLengths = new ReadOnlyCollection<int>([8]),
@@ -37,6 +39,7 @@ public partial class CountryInfo
     {
         CallingCode = "65",
         Continent = Asia,
+        FullName = "Republic of Singapore",
         InternationalCallPrefix = "000",
         Iso3166Code = "SG",
         Name = "Singapore",
@@ -51,6 +54,7 @@ public partial class CountryInfo
         CallingCode = "90",
         Continent = Asia,
         FormatProvider = TRPhoneNumberFormatProvider.Instance,
+        FullName = "Republic of Türkiye",
         IsNatoMember = true,
         Iso3166Code = "TR",
         IsOecdMember = true,

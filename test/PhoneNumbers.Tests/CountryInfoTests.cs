@@ -40,6 +40,7 @@ public class CountryInfoTests
         {
             CallingCode = "-1",
             Continent = "Pangea",
+            FullName = "Nowhere",
             Iso3166Code = "YZ",
             Name = "Nowhere",
         };
@@ -48,6 +49,7 @@ public class CountryInfoTests
         {
             CallingCode = "-1",
             Continent = "Pangea",
+            FullName = "Nowhere",
             Iso3166Code = "YZ",
             Name = "Nowhere",
         };
@@ -125,6 +127,7 @@ public class CountryInfoTests
         {
             CallingCode = "-1",
             Continent = "Pangea",
+            FullName = "Nowhere",
             Iso3166Code = "YZ",
             Name = "Nowhere",
         };
@@ -149,6 +152,7 @@ public class CountryInfoTests
         {
             CallingCode = "-1",
             Continent = "Pangea",
+            FullName = "Nowhere",
             Iso3166Code = "YY",
             Name = "Nowhere",
         };
