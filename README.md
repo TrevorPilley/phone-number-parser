@@ -8,11 +8,11 @@ A library for parsing phone numbers, providing validity of phone numbers includi
 
 The library **does not**:
 
-- Yet support every country
-- Provide certainty that a phone number is assigned and in use
-- Include the original carrier for mobile phone numbers due to number portability in most countries
-- Support extension numbers, although they are ignored if specified when parsing a value in RFC3966 format or in the older German style `0234/123456-10`
-- Support alphabetic mnemonic system/alphabetic phone-words (e.g. 123-PHONEME)
+- Yet support all countries (additional countries are added incrementally through future releases).
+- Provide certainty that a phone number is assigned and in use.
+- Include the original carrier for mobile phone numbers due to number portability in most countries.
+- Support extension numbers, although they are ignored if specified when parsing a value in RFC3966 format `tel:+44-114-272-644;ext=1234` or the older German style `0234/123456-10` format.
+- Support alphabetic mnemonic system/alphabetic phone-words (e.g. 123-PHONEME).
 
 ## Install
 
@@ -38,9 +38,12 @@ There are 2 overloads for Parse:
 // If the phone number string is in international format (e.g. +XXXXXXXXXXXX):
 var phoneNumber = PhoneNumber.Parse("+441142726444");
 
-// If the phone number string is not in international format:
-// Specify the typed CountryInfo instance as the second parameter.
-var phoneNumber = PhoneNumber.Parse("01142726444", CountryInfo.UnitedKingdom); // Alternatively the ISO 3166 Alpha-2 code for the country PhoneNumber.Parse("01142726444", "GB");
+// If the phone number string is not in international format,
+// specify the typed CountryInfo instance as the second parameter:
+var phoneNumber = PhoneNumber.Parse("01142726444", CountryInfo.UnitedKingdom);
+
+// Alternatively the ISO 3166 Alpha-2 code for the country:
+PhoneNumber.Parse("01142726444", "GB");
 ```
 
 There are 3 overloads for TryParse:
@@ -49,11 +52,15 @@ There are 3 overloads for TryParse:
 // If the phone number string is in international format (e.g. +XXXXXXXXXXXX):
 PhoneNumber.TryParse("+442079813000", out PhoneNumber phoneNumber);
 
-// If the phone number string is not in international format:
-// Specify the typed CountryInfo instance for the country as the second parameter.
-PhoneNumber.TryParse("01142726444", CountryInfo.UnitedKingdom, out PhoneNumber phoneNumber); // Alternatively the ISO 3166 Alpha-2 code PhoneNumber.TryParse("01142726444", "GB", out PhoneNumber phoneNumber);
+// If the phone number string is not in international format,
+// specify the typed CountryInfo instance for the country as the second parameter:
+PhoneNumber.TryParse("01142726444", CountryInfo.UnitedKingdom, out PhoneNumber phoneNumber);
 
-// The phone number string is not in international format and the country code is not known:
+// Alternatively the ISO 3166 Alpha-2 code:
+PhoneNumber.TryParse("01142726444", "GB", out PhoneNumber phoneNumber);
+
+// If the phone number string is not in international format and the country code is not known,
+// any possible matches can be determined via:
 PhoneNumber.TryParse("02079813000", out IEnumerable<PhoneNumber> phoneNumbers);
 ```
 
@@ -70,6 +77,7 @@ phoneNumber.Country.HasTrunkPrefix;                // true
 phoneNumber.Country.InternationalCallPrefix;       // 00
 phoneNumber.Country.IsEuropeanUnionMember;         // false
 phoneNumber.Country.IsNatoMember;                  // true
+phoneNumber.Country.IsOecdMember;                  // true
 phoneNumber.Country.Iso3166Code;                   // GB
 phoneNumber.Country.Name;                          // United Kingdom
 phoneNumber.Country.SharesCallingCode;             // true
@@ -107,7 +115,7 @@ phoneNumber.ToString("E.164");                     // +441142726444       (E.164
 phoneNumber.ToString("E.123");                     // +44 114 272 6444    (E.123 international format)
 phoneNumber.ToString("N");                         // (0114) 272 6444     (E.123 national notation format)
 phoneNumber.ToString("RFC3966");                   // tel:+44-114-272-644 (RFC3966 format)
-phoneNumber.ToString("U");                         // 01142726444         (the national notation without any formatting)
+phoneNumber.ToString("U");                         // 01142726444         (the unformatted national notation)
 ```
 
 ### ParseOptions
@@ -150,13 +158,13 @@ ParseOptions.Default.AllowNatoCountries();            // 31 of 32 members (Alban
 ParseOptions.Default.AllowOecdCountries();            // 31 of 38 members
 
 // Add all countries supported by the library using the same numbering plan:
-ParseOptions.Default.AllowNorthAmericanNumberingPlanCountries();
+ParseOptions.Default.AllowNorthAmericanNumberingPlanCountries(); // 24 of 25 countries (Dominican Republic not supported yet)
 ParseOptions.Default.AllowUnitedKingdomNumberingPlanCountries(); // Countries.Add(CountryInfo.UnitedKingdom) doesn't include Guernsey, Isle of Man and Jersey which also use the same numbering plan.
 ```
 
 #### Opt-out
 
-To out out of specific countries but still use any new ones added in future versions of the library:
+To opt out of specific countries but still use any new ones added in future versions of the library:
 
 ```csharp
 ParseOptions.Default.Countries.Remove(CountryInfo.X);
@@ -187,7 +195,7 @@ Specific builds are included in the nuget package for:
 
 - .NET 9.0
 - .NET Standard 2.1 - _supports .NET Core 3.0 or newer and .NET 5.0 or newer_
-- .NET Standard 2.0 - _supports .NET Framework 4.6.2 or newer, however projects will need to be built with a minimum C# language version of 9.0 due to use of init only properties_
+- .NET Standard 2.0 - _supports .NET Framework 4.6.2 or newer, however consuming projects will need to be built with a minimum C# language version of 9.0 due to use of init only properties witihn the phone number parser library_
 
 The latest version of .NET will be used (excluding public betas), other versions of .NET and .NET Framework will retain support via the .NET Standard builds.
 
