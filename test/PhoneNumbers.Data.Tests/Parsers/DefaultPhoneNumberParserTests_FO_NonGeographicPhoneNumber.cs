@@ -14,7 +14,8 @@ public class DefaultPhoneNumberParserTests_FO_NonGeographicPhoneNumber
     [InlineData("499999", "499999")]
     [InlineData("600000", "600000")]
     [InlineData("699999", "699999")]
-    [InlineData("810000–899999", "810000–899999")]
+    [InlineData("810000", "810000")]
+    [InlineData("899999", "899999")]
     public void Parse_Known_NonGeographicPhoneNumber(string value, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);

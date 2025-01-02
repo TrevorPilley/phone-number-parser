@@ -8,11 +8,14 @@ public class DefaultPhoneNumberParserTests_FO_MobilePhoneNumber
     private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.FaroeIslands);
 
     [Theory]
+    [InlineData("210000", "210000")]
+    [InlineData("299999", "299999")]
     [InlineData("500000", "500000")]
     [InlineData("599999", "599999")]
-    [InlineData("210000–299999", "210000–299999")]
-    [InlineData("710000–799999", "710000–799999")]
-    [InlineData("910000–999999", "910000–999999")]
+    [InlineData("710000", "710000")]
+    [InlineData("799999", "799999")]
+    [InlineData("910000", "910000")]
+    [InlineData("999999", "999999")]
     public void Parse_Known_MobilePhoneNumber(string value, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
