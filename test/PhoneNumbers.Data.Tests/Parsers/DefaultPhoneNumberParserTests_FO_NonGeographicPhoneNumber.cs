@@ -84,7 +84,7 @@ public class DefaultPhoneNumberParserTests_FO_NonGeographicPhoneNumber
 
     [Theory]
     [InlineData("700000", "700000")]
-    [InlineData("799999", "799999")]
+    [InlineData("709999", "709999")]
     public void Parse_Known_NonGeographicPhoneNumber_SharedCost(string value, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
