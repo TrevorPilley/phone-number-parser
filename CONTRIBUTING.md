@@ -31,8 +31,9 @@ public static CountryInfo CountryName { get; } = new()
 {
     CallingCode = "NN",
     Continent = Africa/Asia/Europe/Oceania/NorthAmerica/SouthAmerica, // as appropriate
+    FullName = "Country Name",
     Iso3166Code = "ZZ",
-    Name = "CountryName",
+    Name = "Country Name",
     NsnLengths = new ReadOnlyCollection<int>([N]),
 };
 ```
