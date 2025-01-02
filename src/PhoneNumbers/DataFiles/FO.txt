@@ -1,0 +1,7 @@
+# Reference: https://vs.cdn.fo/savn/ticdqbcc/faroese-numbering-plan-august-2023.xls?s=FKA19HvsW22MtCDRr3TYnMjbGU0 via https://www.fjarskiftiseftirlitid.fo/fo/fjarskifti/nummarskipan/
+# Reference Date: August 2023
+N|||200000-209999,300000-499999,600000-699999,810000–899999|
+M|||210000–299999,500000-599999,710000–799999,910000–999999|
+N|||700000-799999|S
+N|||800000-809999|F
+N|||900000-909999|R
