@@ -119,6 +119,7 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
     /// Gets the <see cref="PhoneNumberFormatProvider"/> for the country.
     /// </summary>
     internal PhoneNumberFormatProvider FormatProvider { get; init; } = ComplexPhoneNumberFormatProvider.Default;
+
     /// <summary>
     /// Gets country specific international call prefixes.
     /// </summary>
