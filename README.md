@@ -32,7 +32,7 @@ using PhoneNumbers;
 
 Parsing a phone number is achieved via the `PhoneNumber.Parse` method (or alternatively via `PhoneNumber.TryParse`). Any formatting (e.g. spaces or hyphens) in the input string is ignored.
 
-There are 2 overloads for Parse:
+There are 3 overloads for Parse:
 
 ```csharp
 // If the phone number string is in international format (e.g. +XXXXXXXXXXXX):
@@ -43,10 +43,10 @@ var phoneNumber = PhoneNumber.Parse("+441142726444");
 var phoneNumber = PhoneNumber.Parse("01142726444", CountryInfo.UnitedKingdom);
 
 // Alternatively the ISO 3166 Alpha-2 code for the country:
-PhoneNumber.Parse("01142726444", "GB");
+var phoneNumber = PhoneNumber.Parse("01142726444", "GB");
 ```
 
-There are 3 overloads for TryParse:
+There are 4 overloads for TryParse:
 
 ```csharp
 // If the phone number string is in international format (e.g. +XXXXXXXXXXXX):
