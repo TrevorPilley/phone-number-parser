@@ -78,6 +78,7 @@ public class PhoneNumber_ToString_NorthAmerica_Tests
     [InlineData("+18294738525", "E.123", "+1 829-473-8525")]
     [InlineData("+18294738525", "N", "(829) 473-8525")]
     [InlineData("+18294738525", "RFC3966", "tel:+1-829-473-8525")]
+    [InlineData("+18294738525", "U", "8294738525")]
     public void DominicanRepublic_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 

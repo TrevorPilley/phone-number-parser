@@ -220,8 +220,8 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
-        Assert.Equal("DM", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
+        Assert.Equal("DM", countryInfo.Iso3166Code);
         Assert.Equal("Dominica", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
@@ -240,7 +240,11 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Dominican Republic", countryInfo.FullName);
+        Assert.Equal(CountryInfo.NanpInternationalCallPrefix, countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("DO", countryInfo.Iso3166Code);
         Assert.Equal("Dominican Republic", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
