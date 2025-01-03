@@ -110,12 +110,12 @@ nonGeographicPhoneNumber.IsSharedCost;             // true/false
 The phone number can be formatted in the following ways, the default format output can be round tripped via `PhoneNumber.Parse()` to easily support persistence and serialization use cases.
 
 ```csharp
-phoneNumber.ToString();           // +441142726444       (defaults to E.164 format)
-phoneNumber.ToString("E.164");    // +441142726444       (E.164 format)
-phoneNumber.ToString("E.123");    // +44 114 272 6444    (E.123 international format)
-phoneNumber.ToString("N");        // (0114) 272 6444     (E.123 national notation format)
-phoneNumber.ToString("RFC3966");  // tel:+44-114-272-644 (RFC3966 format)
-phoneNumber.ToString("U");        // 01142726444         (the unformatted national notation)
+phoneNumber.ToString();          // +441142726444       (defaults to E.164 format)
+phoneNumber.ToString("E.164");   // +441142726444       (E.164 format)
+phoneNumber.ToString("E.123");   // +44 114 272 6444    (E.123 international format)
+phoneNumber.ToString("N");       // (0114) 272 6444     (E.123 national notation format)
+phoneNumber.ToString("RFC3966"); // tel:+44-114-272-644 (RFC3966 format)
+phoneNumber.ToString("U");       // 01142726444         (the unformatted national notation)
 ```
 
 ### ParseOptions
@@ -153,9 +153,9 @@ ParseOptions.Default.AllowOceanianCountries();
 ParseOptions.Default.AllowSouthAmericanCountries();
 
 // Add all countries supported by the library who are members of the same union/alliance:
-ParseOptions.Default.AllowEuropeanUnionCountries();   // all 27 members
-ParseOptions.Default.AllowNatoCountries();            // 31 of 32 members (Albania not supported yet)
-ParseOptions.Default.AllowOecdCountries();            // 31 of 38 members
+ParseOptions.Default.AllowEuropeanUnionCountries(); // all 27 members
+ParseOptions.Default.AllowNatoCountries();          // 31 of 32 members (Albania not supported yet)
+ParseOptions.Default.AllowOecdCountries();          // 31 of 38 members
 
 // Add all countries supported by the library using the same numbering plan:
 ParseOptions.Default.AllowNorthAmericanNumberingPlanCountries(); // 24 of 25 countries (Dominican Republic not supported yet)
