@@ -6,6 +6,19 @@ namespace PhoneNumbers;
 public partial class CountryInfo
 {
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Andorra.
+    /// </summary>
+    public static CountryInfo Andorra { get; } = new()
+    {
+        CallingCode = "376",
+        Continent = Europe,
+        FullName = "Principality of Andorra",
+        Iso3166Code = "AD",
+        Name = "Andorra",
+        NsnLengths = new ReadOnlyCollection<int>([6, 8]),
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Austria.
     /// </summary>
     public static CountryInfo Austria { get; } = new()
