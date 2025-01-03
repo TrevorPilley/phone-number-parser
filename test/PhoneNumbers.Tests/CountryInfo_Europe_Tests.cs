@@ -24,7 +24,7 @@ public class CountryInfo_Europe_Tests
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Andorra", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
-        Assert.Equal(new[] { 6, 8 }, countryInfo.NsnLengths);
+        Assert.Equal(new[] { 6, 8, 9 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }

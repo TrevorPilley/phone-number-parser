@@ -12,10 +12,11 @@ public partial class CountryInfo
     {
         CallingCode = "376",
         Continent = Europe,
+        FormatProvider = BasicPhoneNumberFormatProvider.Instance,
         FullName = "Principality of Andorra",
         Iso3166Code = "AD",
         Name = "Andorra",
-        NsnLengths = new ReadOnlyCollection<int>([6, 8]),
+        NsnLengths = new ReadOnlyCollection<int>([6, 8, 9]),
     };
 
     /// <summary>
