@@ -14,7 +14,7 @@ public class CountryInfo_Europe_Tests
         Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("376", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
-        Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.IsType<BasicPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.Equal("Principality of Andorra", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
