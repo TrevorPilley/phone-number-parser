@@ -91,6 +91,14 @@ public class PhoneNumber_Parse_Europe_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_FaroeIslands_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+298356020");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.FaroeIslands, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_Finland_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+358295390361");

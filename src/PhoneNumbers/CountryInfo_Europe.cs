@@ -192,6 +192,20 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Faroe Islands.
+    /// </summary>
+    public static CountryInfo FaroeIslands { get; } = new()
+    {
+        CallingCode = "298",
+        Continent = Europe,
+        FormatProvider = FOPhoneNumberFormatProvider.Instance,
+        FullName = "Faroe Islands",
+        Iso3166Code = "FO",
+        Name = "Faroe Islands",
+        NsnLengths = new ReadOnlyCollection<int>([6]),
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Finland.
     /// </summary>
     public static CountryInfo Finland { get; } = new()

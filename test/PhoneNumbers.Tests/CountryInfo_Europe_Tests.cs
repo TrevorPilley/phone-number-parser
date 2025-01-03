@@ -280,6 +280,31 @@ public class CountryInfo_Europe_Tests
     }
 
     [Fact]
+    public void CountryInfo_FaroeIslands()
+    {
+        Assert.Same(CountryInfo.FaroeIslands, CountryInfo.FaroeIslands);
+
+        var countryInfo = CountryInfo.FaroeIslands;
+
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal("298", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
+        Assert.IsType<FOPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Faroe Islands", countryInfo.FullName);
+        Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
+        Assert.Equal("FO", countryInfo.Iso3166Code);
+        Assert.False(countryInfo.IsOecdMember);
+        Assert.Equal("Faroe Islands", countryInfo.Name);
+        Assert.Empty(countryInfo.NdcLengths);
+        Assert.Equal(new[] { 6 }, countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Null(countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_Finland()
     {
         Assert.Same(CountryInfo.Finland, CountryInfo.Finland);
