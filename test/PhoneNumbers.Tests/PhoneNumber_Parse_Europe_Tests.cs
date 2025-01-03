@@ -3,6 +3,14 @@ namespace PhoneNumbers.Tests;
 public class PhoneNumber_Parse_Europe_Tests
 {
     [Fact]
+    public void Parse_Value_For_Andorra_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+376301115");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Andorra, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_Austria_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+431580580");
