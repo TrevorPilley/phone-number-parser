@@ -3,6 +3,14 @@ namespace PhoneNumbers.Tests;
 public class PhoneNumber_ToString_Europe_Tests
 {
     [Theory]
+    [InlineData("+376301115", "E.123", "+376 301115")]
+    [InlineData("+376301115", "N", "301115")]
+    [InlineData("+376301115", "RFC3966", "tel:+376-301115")]
+    [InlineData("+376301115", "U", "301115")]
+    public void Andorra_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+375172171185", "E.123", "+375 17 2171185")]
     [InlineData("+375172171185", "N", "817 2171185")]
     [InlineData("+375172171185", "RFC3966", "tel:+375-17-2171185")]
