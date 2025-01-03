@@ -103,6 +103,14 @@ public class PhoneNumber_ToString_Europe_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+298356020", "E.123", "+298 35 60 20")]
+    [InlineData("+298356020", "N", "35 60 20")]
+    [InlineData("+298356020", "RFC3966", "tel:+298-35-60-20")]
+    [InlineData("+298356020", "U", "356020")]
+    public void FaroeIslands_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+358295390361", "E.123", "+358 29 539 0361")] // Non Geographic
     [InlineData("+358931013300", "E.123", "+358 9 3101 3300")] // Geographic
     [InlineData("+358295390361", "N", "029 539 0361")] // Non Geographic
