@@ -183,13 +183,15 @@ public partial class CountryInfo
         CallingCode = NanpCallingCode,
         Continent = NorthAmerica,
         FormatProvider = NanpPhoneNumberFormatProvider.Instance,
+        FullName = "Dominican Republic",
+        InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "DO",
         Name = "Dominican Republic",
         NdcLengths = s_nanpNdcLengths,
         NsnLengths = s_nanpNsnLengths,
         SharesCallingCode = true,
     };
-    
+
     /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Grenada.
     /// </summary>
