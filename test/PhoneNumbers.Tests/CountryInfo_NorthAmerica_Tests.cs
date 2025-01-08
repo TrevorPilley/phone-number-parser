@@ -211,7 +211,7 @@ public class CountryInfo_NorthAmerica_Tests
 
         var countryInfo = CountryInfo.Dominica;
 
-        Assert.False(countryInfo.AllowsLocalGeographicDialling);
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
@@ -236,7 +236,7 @@ public class CountryInfo_NorthAmerica_Tests
 
         var countryInfo = CountryInfo.DominicanRepublic;
 
-        Assert.True(countryInfo.AllowsLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);

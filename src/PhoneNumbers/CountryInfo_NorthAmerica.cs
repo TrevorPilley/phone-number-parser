@@ -179,7 +179,6 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo DominicanRepublic { get; } = new()
     {
-        AllowsLocalGeographicDialling = false,
         CallingCode = NanpCallingCode,
         Continent = NorthAmerica,
         FormatProvider = NanpPhoneNumberFormatProvider.Instance,
