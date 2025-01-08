@@ -246,6 +246,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("DO", countryInfo.Iso3166Code);
+        Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Dominican Republic", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
