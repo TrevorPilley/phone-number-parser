@@ -8,12 +8,24 @@ public class DefaultPhoneNumberParserTests_SX_NonGeographicPhoneNumber
     private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.SintMaarten);
 
     [Theory]
-    [InlineData("7215460000", "721", "5460000")]
-    [InlineData("7215469999", "721", "5469999")]
-    [InlineData("7215900000", "721", "5900000")]
-    [InlineData("7215909999", "721", "5909999")]
-    [InlineData("7215950000", "721", "5950000")]
-    [InlineData("7215969999", "721", "5969999")]
+    [InlineData("7212000000", "721", "2000000")]
+    [InlineData("7212109999", "721", "2109999")]
+    [InlineData("7212120000", "721", "2120000")]
+    [InlineData("7213109999", "721", "3109999")]
+    [InlineData("7213120000", "721", "3120000")]
+    [InlineData("7214109999", "721", "4109999")]
+    [InlineData("7214120000", "721", "4120000")]
+    [InlineData("7215109999", "721", "5109999")]
+    [InlineData("7215120000", "721", "5120000")]
+    [InlineData("7216109999", "721", "6109999")]
+    [InlineData("7216120000", "721", "6120000")]
+    [InlineData("7217109999", "721", "7109999")]
+    [InlineData("7217120000", "721", "7120000")]
+    [InlineData("7218109999", "721", "8109999")]
+    [InlineData("7218120000", "721", "8120000")]
+    [InlineData("7219109999", "721", "9109999")]
+    [InlineData("7219120000", "721", "9120000")]
+    [InlineData("7219999999", "721", "9999999")]
     public void Parse_Known_NonGeographicPhoneNumber_7XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
