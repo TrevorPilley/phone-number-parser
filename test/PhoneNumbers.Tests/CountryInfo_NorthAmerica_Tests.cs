@@ -230,6 +230,31 @@ public class CountryInfo_NorthAmerica_Tests
     }
 
     [Fact]
+    public void CountryInfo_DominicanRepublic()
+    {
+        Assert.Same(CountryInfo.DominicanRepublic, CountryInfo.DominicanRepublic);
+
+        var countryInfo = CountryInfo.DominicanRepublic;
+
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
+        Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Dominican Republic", countryInfo.FullName);
+        Assert.Equal(CountryInfo.NanpInternationalCallPrefix, countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
+        Assert.Equal("DO", countryInfo.Iso3166Code);
+        Assert.False(countryInfo.IsOecdMember);
+        Assert.Equal("Dominican Republic", countryInfo.Name);
+        Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
+        Assert.True(countryInfo.SharesCallingCode);
+        Assert.Null(countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_Grenada()
     {
         Assert.Same(CountryInfo.Grenada, CountryInfo.Grenada);
