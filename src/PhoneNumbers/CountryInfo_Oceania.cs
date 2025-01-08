@@ -47,7 +47,6 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Guam { get; } = new()
     {
-        AllowsLocalGeographicDialling = true,
         CallingCode = NanpCallingCode,
         Continent = Oceania,
         FormatProvider = NanpPhoneNumberFormatProvider.Instance,
