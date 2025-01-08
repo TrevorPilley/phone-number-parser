@@ -61,7 +61,7 @@ public class CountryInfo_Oceania_Tests
 
         var countryInfo = CountryInfo.Guam;
 
-        Assert.True(countryInfo.AllowsLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Oceania, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);

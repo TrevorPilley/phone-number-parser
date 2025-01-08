@@ -286,7 +286,7 @@ public class CountryInfo_NorthAmerica_Tests
 
         var countryInfo = CountryInfo.Jamaica;
 
-        Assert.True(countryInfo.AllowsLocalGeographicDialling);
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);

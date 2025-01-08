@@ -214,7 +214,6 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Jamaica { get; } = new()
     {
-        AllowsLocalGeographicDialling = true,
         CallingCode = NanpCallingCode,
         Continent = NorthAmerica,
         FormatProvider = NanpPhoneNumberFormatProvider.Instance,
