@@ -195,8 +195,8 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
-        Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("KY", countryInfo.Iso3166Code);
+        Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Cayman Islands", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
@@ -220,8 +220,8 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
-        Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("DM", countryInfo.Iso3166Code);
+        Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Dominica", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
