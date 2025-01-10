@@ -227,6 +227,21 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Mexico.
+    /// </summary>
+    public static CountryInfo Mexico { get; } = new()
+    {
+        CallingCode = "52",
+        Continent = NorthAmerica,
+        FormatProvider = MXPhoneNumberFormatProvider.Instance,
+        FullName = "United Mexican States",
+        Iso3166Code = "MX",
+        IsOecdMember = true,
+        Name = "Mexico",
+        NsnLengths = new ReadOnlyCollection<int>([10]),
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Montserrat.
     /// </summary>
     public static CountryInfo Montserrat { get; } = new()
