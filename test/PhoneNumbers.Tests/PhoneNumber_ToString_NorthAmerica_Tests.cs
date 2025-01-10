@@ -99,6 +99,14 @@ public class PhoneNumber_ToString_NorthAmerica_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+525550154106", "E.123", "+52 55 5015 4106")]
+    [InlineData("+525550154106", "N", "55 5015 4106")]
+    [InlineData("+525550154106", "RFC3966", "tel:+52-55-5015-4106")]
+    [InlineData("+525550154106", "U", "5550154106")]
+    public void Mexico_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+16644913789", "E.123", "+1 664-491-3789")]
     [InlineData("+16644913789", "N", "(664) 491-3789")]
     [InlineData("+16644913789", "RFC3966", "tel:+1-664-491-3789")]
