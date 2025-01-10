@@ -157,7 +157,7 @@ ParseOptions.Default.AllowSouthAmericanCountries();
 // Add all countries supported by the library who are members of the same union/alliance:
 ParseOptions.Default.AllowEuropeanUnionCountries(); // all 27 members
 ParseOptions.Default.AllowNatoCountries();          // 31 of 32 members (Albania not supported yet)
-ParseOptions.Default.AllowOecdCountries();          // 31 of 38 members
+ParseOptions.Default.AllowOecdCountries();          // 32 of 38 members
 
 // Add all countries supported by the library using the same numbering plan:
 ParseOptions.Default.AllowNorthAmericanNumberingPlanCountries(); // all 25 countries
@@ -294,6 +294,7 @@ Dominica                         | DM            | 1 767 _(NANP)_         |     
 Dominican Republic               | DM            | 1 809 / 829 / 849 _(NANP)_         |              |            |        |                    |                      | Yes            |                                |                                   |                                  |
 Grenada                          | GD            | 1 473 _(NANP)_         |              |            |        |                    |                      | Yes            |                                |                                   |                                  |
 Jamaica                          | JM            | 1 658 / 876 _(NANP)_   |              |            |        |                    |                      | Yes            |                                |                                   |                                  |
+Mexico                           | MX            | 52                     |              | Yes *      |        |                    |                      | Yes            | Yes                            | Yes                               |                                  |
 Montserrat                       | MS            | 1 664 _(NANP)_         |              |            |        |                    |                      | Yes            |                                |                                   |                                  |
 Northern Mariana Island          | MP            | 1 670 _(NANP)_         |              |            |        |                    |                      | Yes            |                                |                                   |                                  |
 Puerto Rico                      | PR            | 1 787 / 939 _(NANP)_   |              |            |        |                    |                      | Yes            |                                |                                   |                                  |
@@ -336,3 +337,6 @@ Colombia       | CO            | 57           |              | Yes        | Yes 
   - Freephone numbers (with a few exceptions) are issued from a shared pool. This could mean a Canadian freephone number look up shows as belonging to a different country if parsed from the E.164 format (parsing from the national number format and country code will work as expected).
   - Virtual (aka personal numbers) are issued from a shared pool and always show as belonging to the United States.
 - Landline numbers can be ported in some countries and therefore although originally geographically assigned, they may no longer match the specified geographic area (Countries affected - Iceland)
+- Within Mexico:
+  - Geographically assigned numbers are only resolved within the eight principal regions of the countr.
+  - Mobile numbers are geographically assigned and cannot be determined separately from landlines.

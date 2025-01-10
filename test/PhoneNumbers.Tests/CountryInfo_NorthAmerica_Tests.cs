@@ -305,6 +305,31 @@ public class CountryInfo_NorthAmerica_Tests
     }
 
     [Fact]
+    public void CountryInfo_Mexico()
+    {
+        Assert.Same(CountryInfo.Mexico, CountryInfo.Mexico);
+
+        var countryInfo = CountryInfo.Mexico;
+
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal("52", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
+        Assert.IsType<MXPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("United Mexican States", countryInfo.FullName);
+        Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
+        Assert.Equal("MX", countryInfo.Iso3166Code);
+        Assert.True(countryInfo.IsOecdMember);
+        Assert.Equal("Mexico", countryInfo.Name);
+        Assert.Empty(countryInfo.NdcLengths);
+        Assert.Equal([10], countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Null(countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_Montserrat()
     {
         Assert.Same(CountryInfo.Montserrat, CountryInfo.Montserrat);
