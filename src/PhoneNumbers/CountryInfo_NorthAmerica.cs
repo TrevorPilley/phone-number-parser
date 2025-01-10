@@ -238,7 +238,6 @@ public partial class CountryInfo
         Iso3166Code = "MX",
         IsOecdMember = true,
         Name = "Mexico",
-        NdcLengths = new ReadOnlyCollection<int>([1]),
         NsnLengths = new ReadOnlyCollection<int>([10]),
     };
 
