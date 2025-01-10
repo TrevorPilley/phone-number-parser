@@ -315,8 +315,13 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal("52", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<MXPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("United Mexican States", countryInfo.FullName);
+        Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("MX", countryInfo.Iso3166Code);
+        Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Mexico", countryInfo.Name);
         Assert.Equal(new[] { 1 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
