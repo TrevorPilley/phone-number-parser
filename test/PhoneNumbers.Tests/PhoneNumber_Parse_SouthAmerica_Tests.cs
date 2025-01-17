@@ -17,4 +17,12 @@ public class PhoneNumber_Parse_SouthAmerica_Tests
         Assert.NotNull(phoneNumber);
         Assert.Equal(CountryInfo.Colombia, phoneNumber.Country);
     }
+
+    [Fact]
+    public void Parse_Value_For_FalklandIslands_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+50028459");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.FalklandIslands, phoneNumber.Country);
+    }
 }
