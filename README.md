@@ -316,10 +316,11 @@ Papua New Guinea | PG            | 675            |              | Yes        | 
 
 ### South America
 
-Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
----            | ---           | ---          | ---          | :-:        | :-:    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
-Brazil         | BR            | 55           | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               |                                  |
-Colombia       | CO            | 57           |              | Yes        | Yes    |                    |                      |                |                                |                                   |                                  |
+Country          | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
+---              | ---           | ---          | ---          | :-:        | :-:    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
+Brazil           | BR            | 55           | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               |                                  |
+Colombia         | CO            | 57           |              | Yes        | Yes    |                    |                      |                |                                |                                   |                                  |
+Falkland Islands | FK            | 500          |              |            | Yes    |                    |                      | Yes            |                                |                                   |                                  |
 
 ### Notes
 
