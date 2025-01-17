@@ -156,7 +156,7 @@ ParseOptions.Default.AllowSouthAmericanCountries();
 
 // Add all countries supported by the library who are members of the same union/alliance:
 ParseOptions.Default.AllowEuropeanUnionCountries(); // all 27 members
-ParseOptions.Default.AllowNatoCountries();          // 31 of 32 members (Albania not supported yet)
+ParseOptions.Default.AllowNatoCountries();          // all 32 members
 ParseOptions.Default.AllowOecdCountries();          // 32 of 38 members
 
 // Add all countries supported by the library using the same numbering plan:
@@ -229,6 +229,7 @@ Turkey         | TR            | 90           | 0            | Yes        | Yes 
 
 Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
 ---            | ---           | ---          | ---          | :-:        | :-:    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
+Albania        | AL            | 355          | 0            |            |        |                    |                      |                |                                |                                   |                                  |
 Andorra        | AD            | 376          |              |            | Yes    |                    |                      | Yes            | Yes                            |                                   |                                  |
 Austria        | AT            | 43           | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               |                                  |
 Belarus        | BY            | 375          | 8            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               |                                  |

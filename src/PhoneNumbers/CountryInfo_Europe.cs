@@ -6,6 +6,21 @@ namespace PhoneNumbers;
 public partial class CountryInfo
 {
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Albania.
+    /// </summary>
+    public static CountryInfo Albania { get; } = new()
+    {
+        CallingCode = "355",
+        Continent = Europe,
+        FullName = "Republic of Albania",
+        IsNatoMember = true,
+        Iso3166Code = "AL",
+        Name = "Albania",
+        NsnLengths = new ReadOnlyCollection<int>([8, 9]),
+        TrunkPrefix = "0",
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Andorra.
     /// </summary>
     public static CountryInfo Andorra { get; } = new()
