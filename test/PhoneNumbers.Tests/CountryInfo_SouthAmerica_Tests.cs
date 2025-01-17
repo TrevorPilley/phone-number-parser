@@ -53,4 +53,29 @@ public class CountryInfo_SouthAmerica_Tests
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
+
+    [Fact]
+    public void CountryInfo_FalklandIslands()
+    {
+        Assert.Same(CountryInfo.FalklandIslands, CountryInfo.FalklandIslands);
+
+        var countryInfo = CountryInfo.FalklandIslands;
+
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal("500", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.SouthAmerica, countryInfo.Continent);
+        Assert.IsType<BasicPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Falkland Islands", countryInfo.FullName);
+        Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
+        Assert.Equal("FK", countryInfo.Iso3166Code);
+        Assert.False(countryInfo.IsOecdMember);
+        Assert.Equal("Falkland Islands", countryInfo.Name);
+        Assert.Empty(countryInfo.NdcLengths);
+        Assert.Equal([5], countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Null(countryInfo.TrunkPrefix);
+    }
 }

@@ -1,0 +1,4 @@
+# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000460002PDFE.pdf
+# Reference Date: 10/06/2020
+N|||20000-49999,70000-79999,99000-99999|
+M|||50000-69999|
