@@ -5,6 +5,29 @@ using PhoneNumbers.Formatters.FormatProviders;
 public class CountryInfo_Europe_Tests
 {
     [Fact]
+    public void CountryInfo_Albania()
+    {
+        Assert.Same(CountryInfo.Albania, CountryInfo.Albania);
+
+        var countryInfo = CountryInfo.Albania;
+
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal("355", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
+        Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Republic of Albania", countryInfo.FullName);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.True(countryInfo.IsNatoMember);
+        Assert.Equal("AL", countryInfo.Iso3166Code);
+        Assert.False(countryInfo.IsOecdMember);
+        Assert.Equal("Albania", countryInfo.Name);
+        Assert.Empty(countryInfo.NdcLengths);
+        Assert.Equal([8, 9], countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Equal("0", countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_Andorra()
     {
         Assert.Same(CountryInfo.Andorra, CountryInfo.Andorra);
