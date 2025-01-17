@@ -38,4 +38,17 @@ public partial class CountryInfo
         NdcLengths = new ReadOnlyCollection<int>([3]),
         NsnLengths = new ReadOnlyCollection<int>([10]),
     };
+    
+    /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Falkland Islands.
+    /// </summary>
+    public static CountryInfo FalklandIslands { get; } = new()
+    {
+        CallingCode = "500",
+        Continent = SouthAmerica,
+        FullName = "Falkland Islands",
+        Iso3166Code = "FK",
+        Name = "Falkland Islands",
+        NsnLengths = new ReadOnlyCollection<int>([5]),
+    }
 }
