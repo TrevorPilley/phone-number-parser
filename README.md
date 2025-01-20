@@ -149,7 +149,7 @@ Alternatively there are additional country sets which can be allowed (any combin
 // Add all countries supported by the library by continent:
 ParseOptions.Default.AllowAfricanCountries();
 ParseOptions.Default.AllowAsianCountries();
-ParseOptions.Default.AllowEuropeanCountries();      // 45 of 47 (Albania and Russia not supported yet)
+ParseOptions.Default.AllowEuropeanCountries();
 ParseOptions.Default.AllowNorthAmericanCountries();
 ParseOptions.Default.AllowOceanianCountries();
 ParseOptions.Default.AllowSouthAmericanCountries();
