@@ -415,6 +415,14 @@ public class PhoneNumber_ToString_Europe_Tests
     public void Romania_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
+    [Theory]
+    [InlineData("+74957718000", "E.123", "+7 495 771 8000")]
+    [InlineData("+74957718000", "N", "8495 771 8000")]
+    [InlineData("+74957718000", "RFC3966", "tel:+7-495-771-8000")]
+    [InlineData("+74957718000", "U", "84957718000")]
+    public void Russia_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
     // Italy has no defined format convention so use the simple format
     [Theory]
     [InlineData("+37858001110", "E.123", "+378 58 001110")]           // IP Telephony
