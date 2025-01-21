@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/TrevorPilley/phone-number-parser/blob/main/LICENSE) [![NuGet](https://img.shields.io/nuget/v/PhoneNumberParser.svg)](https://www.nuget.org/packages/PhoneNumberParser/) [![Semantic Versioning](https://img.shields.io/badge/semver-2.0.0-3D9FE0.svg)](https://semver.org/) ![GitHub Release Date](https://img.shields.io/github/release-date/TrevorPilley/phone-number-parser) [![NuGet](https://img.shields.io/nuget/dt/PhoneNumberParser.svg)](https://www.nuget.org/packages/PhoneNumberParser/)
 
-![Build Status](https://github.com/TrevorPilley/phone-number-parser/actions/workflows/CI.yml/badge.svg?branch=main) ![GitHub last commit](https://img.shields.io/github/last-commit/TrevorPilley/phone-number-parser/main) [![codecov](https://codecov.io/gh/TrevorPilley/phone-number-parser/branch/main/graph/badge.svg?token=653YHSMOQL)](https://codecov.io/gh/TrevorPilley/phone-number-parser) 
+![Build Status](https://github.com/TrevorPilley/phone-number-parser/actions/workflows/CI.yml/badge.svg?branch=main) ![GitHub last commit](https://img.shields.io/github/last-commit/TrevorPilley/phone-number-parser/main) [![codecov](https://codecov.io/gh/TrevorPilley/phone-number-parser/branch/main/graph/badge.svg?token=653YHSMOQL)](https://codecov.io/gh/TrevorPilley/phone-number-parser)
 
 A library for parsing phone numbers, providing validity of phone numbers including national destination codes (aka area codes) and subscriber numbers (aka line numbers) based upon published numbering plans for each country. Additional attributes such as the kind of phone number (Mobile, Geographic or Non-Geographic) are also included, and all parsing is performed locally within the library using embedded in-memory data files.
 
@@ -195,11 +195,11 @@ The library adheres to [Semantic Versioning](https://semver.org) and [release no
 
 Specific builds are included in the nuget package for:
 
-- .NET 9.0
+- .NET 8.0 and 9.0
 - .NET Standard 2.1 - _supports .NET Core 3.0 or newer and .NET 5.0 or newer_
-- .NET Standard 2.0 - _supports .NET Core 2.0 or newer and .NET Framework 4.6.2 or newer (however consuming projects will need to be built with a minimum C# language version of 9.0 due to use of init only properties witihn the phone number parser library)_
+- .NET Standard 2.0 - _supports .NET Core 2.0 or newer and .NET Framework 4.6.2 or newer (however consuming projects will need to be built with a minimum C# language version of 9.0 due to use of init only properties within the phone number parser library)_
 
-The latest version of .NET will be used (excluding public betas), other versions of .NET and .NET Framework will retain support via the .NET Standard builds.
+All versions of .NET which are still within their Microsoft support lifecycle will be supported by this library (excluding public betas), other versions of .NET and .NET Framework will retain support via the .NET Standard builds.
 
 ## Country support
 
