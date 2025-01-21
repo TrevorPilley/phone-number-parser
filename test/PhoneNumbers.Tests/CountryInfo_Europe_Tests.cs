@@ -980,6 +980,31 @@ public class CountryInfo_Europe_Tests
     }
 
     [Fact]
+    public void CountryInfo_Russia()
+    {
+        Assert.Same(CountryInfo.Russia, CountryInfo.Russia);
+
+        var countryInfo = CountryInfo.Russia;
+
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal("7", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
+        Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Russian Federation", countryInfo.FullName);
+        Assert.Equal("8~xx", countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
+        Assert.Equal("RU", countryInfo.Iso3166Code);
+        Assert.False(countryInfo.IsOecdMember);
+        Assert.Equal("Russia", countryInfo.Name);
+        Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
+        Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Equal("8", countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_SanMarino()
     {
         Assert.Same(CountryInfo.SanMarino, CountryInfo.SanMarino);

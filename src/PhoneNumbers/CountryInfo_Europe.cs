@@ -669,6 +669,22 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Russia.
+    /// </summary>
+    public static CountryInfo Russia { get; } = new()
+    {
+        CallingCode = "7",
+        Continent = Europe,
+        FullName = "Russian Federation",
+        InternationalCallPrefix = "8~xx",
+        Iso3166Code = "RU",
+        Name = "Russia",
+        NdcLengths = new ReadOnlyCollection<int>([3]),
+        NsnLengths = new ReadOnlyCollection<int>([10]),
+        TrunkPrefix = "8",
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for San Marino.
     /// </summary>
     public static CountryInfo SanMarino { get; } = new()
