@@ -42,7 +42,7 @@ Builds for:
 
 - .NET 9.0
 - .NET Standard 2.1 - _supports .NET Core 3.0 or newer and .NET 5.0 or newer_
-- .NET Standard 2.0 - _supports .NET Framework 4.6.2 or newer, however consuming projects will need to be built with a minimum C# language version of 9.0 due to use of init only properties witihn the phone number parser library_
+- .NET Standard 2.0 - _supports .NET Core 2.0 or newer and .NET Framework 4.6.2 or newer (however consuming projects will need to be built with a minimum C# language version of 9.0 due to use of init only properties witihn the phone number parser library)_
 
 ## Limitations
 
