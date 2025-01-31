@@ -1,3 +1,15 @@
 # Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000AD0004PDFE.pdf
 # Reference Date: 04/03/2022
+G|301|Republic of Buryatia (Ulan – Ude)|0000000-9999999|
+G|302|Chita region together with the Agin-Buryat autonomous region (Chita)|0000000-9999999|
+G|336|Baikonur|0000000-9999999|
+G|341|Republic of Udmurtia (Izhevsk)|0000000-9999999|
+G|342|Perm territory|0000000-9999999|
+G|343|Sverdlovsk region (Ekaterinburg)|0000000-9999999|
+G|345|Tyumen region|0000000-9999999|
+G|346|Khanty – Mansiysk autonomous region – Yugra (Surgut)|0000000-9999999|
+G|347|Republic of Bashkortostan (Ufa)|0000000-9999999|
+G|349|Yamalo-Nenets autonomous region (Salekhard)|0000000-9999999|
+G|||0000000-9999999|
 G|495|Moscow (city)|0000000-9999999|
+N|941||0000000-9999999|
