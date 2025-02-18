@@ -39,11 +39,12 @@ public static CountryInfo CountryName { get; } = new()
 ```
 
 2. If the country uses national destination codes (aka. area codes), also set the `NdcLengths` property as appropriate and declare in descending order (this is important as the default parser tries to match for the longest NDC first).
-3. If the country uses a trunk prefix, set the `TrunkPrefix` appropriately.
-4. If the country allows local dialling (subscriber number only) within a geographic national destination code, set `AllowLocalGeographicDialling = true,`.
-5. By default, the `ComplexPhoneNumberFormatProvider` is used which has defined spacing rules for formatting the subscriber number (e.g. a 6 digit SN is formatted as XXX XXX and a 7 digit SN is formatted XXX XXXX). If the country convention is not to separate out the subscriber number but still separates the national destination code from the subscriber number, use the `SimplePhoneNumberFormatProvider` instead. If the country uses conventions the built in providers don't support, add a custom `{CountryCode}PhoneNumberFormatProvider` and override the base behaviour as appropriate and set as the `FormatProvider` property in the `CountryInfo` definition.
-6. Add a new `CountryInfo_CountryName` test in the `CountryInfo_{Continent}_Tests.cs` file asserting the property values (see an existing implementation).
-7. Add a new set of tests in the `CountryInfo_{Continent}_ToString_Tests.cs` to cover the various number kinds and NDC/SN length combinations.
+3. If the country uses a trunk prefix, set the `TrunkPrefix` accordingly.
+4. If the country does not use the ITU default international call prefix of `00`, set the `InternationalCallPrefix` accordingly.
+5. If the country allows local dialling (subscriber number only) within a geographic national destination code, set `AllowLocalGeographicDialling = true,`.
+6. By default, the `ComplexPhoneNumberFormatProvider` is used which has defined spacing rules for formatting the subscriber number (e.g. a 6 digit SN is formatted as XXX XXX and a 7 digit SN is formatted XXX XXXX). If the country convention is not to separate out the subscriber number but still separates the national destination code from the subscriber number, use the `SimplePhoneNumberFormatProvider` instead. If the country uses conventions the built in providers don't support, add a custom `{CountryCode}PhoneNumberFormatProvider` and override the base behaviour as appropriate and set as the `FormatProvider` property in the `CountryInfo` definition.
+7. Add a new `CountryInfo_CountryName` test in the `CountryInfo_{Continent}_Tests.cs` file asserting the property values (see an existing implementation).
+8. Add a new set of tests in the `CountryInfo_{Continent}_ToString_Tests.cs` to cover the various number kinds and NDC/SN length combinations.
 
 ### Add the data file
 
