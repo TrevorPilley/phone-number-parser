@@ -65,12 +65,9 @@ public static class PhoneNumberExtensions
 
         if (source.Country.SharesCallingCodeWith(destination.Country))
         {
-            if (source.SharesNdcWith(destination) && source.NdcIsOptional())
-            {
-                return destination.SubscriberNumber;
-            }
-
-            return destination.ToString("U");
+            return source.SharesNdcWith(destination) && source.NdcIsOptional()
+                ? destination.SubscriberNumber
+                : destination.ToString("U");
         }
 
         return NumberToDialFrom(destination, source.Country);

@@ -155,15 +155,8 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
         !(countryInfo1 == countryInfo2);
 
     /// <inheritdoc/>
-    public static bool operator ==(CountryInfo? countryInfo1, CountryInfo? countryInfo2)
-    {
-        if (countryInfo1 is null)
-        {
-            return countryInfo2 is null;
-        }
-
-        return countryInfo1.Equals(countryInfo2);
-    }
+    public static bool operator ==(CountryInfo? countryInfo1, CountryInfo? countryInfo2) =>
+        countryInfo1 is null ? countryInfo2 is null : countryInfo1.Equals(countryInfo2);
 
     /// <inheritdoc/>
     public override bool Equals(object? obj) =>
@@ -269,14 +262,14 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
         CallingCode.Equals(countryInfo.CallingCode, StringComparison.Ordinal);
 
     private static bool IsDelimiter(char charVal) =>
-        charVal == Chars.Comma || charVal == Chars.Semicolon;
+        charVal is Chars.Comma || charVal is Chars.Semicolon;
 
     /// <remarks>Char.IsDigit returns true for more than 0-9 so use a more restricted version.</remarks>
     private static bool IsDigit(char charVal) =>
         charVal is >= '0' and <= '9';
 
     private static bool IsSeparator(char charVal) =>
-        charVal == Chars.Hyphen || charVal == Chars.ForwardSlash;
+        charVal is Chars.Hyphen || charVal is Chars.ForwardSlash;
 
     [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
     private string GetDebuggerDisplay() =>

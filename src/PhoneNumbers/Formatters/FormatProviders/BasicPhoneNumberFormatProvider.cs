@@ -25,11 +25,8 @@ internal sealed class BasicPhoneNumberFormatProvider : PhoneNumberFormatProvider
             phoneNumber.NationalSignificantNumber.Length,
             GenerateMask);
 
-        if (international || !phoneNumber.Country.HasTrunkPrefix)
-        {
-            return initialMask;
-        }
-
-        return $"{phoneNumber.Country.TrunkPrefix}{initialMask}";
+        return international || !phoneNumber.Country.HasTrunkPrefix
+            ? initialMask
+            : $"{phoneNumber.Country.TrunkPrefix}{initialMask}";
     }
 }
