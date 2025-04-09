@@ -39,15 +39,8 @@ public sealed class GeographicPhoneNumber : PhoneNumber, IEquatable<GeographicPh
         !(phoneNumber1 == phoneNumber2);
 
     /// <inheritdoc/>
-    public static bool operator ==(GeographicPhoneNumber? phoneNumber1, GeographicPhoneNumber? phoneNumber2)
-    {
-        if (phoneNumber1 is null)
-        {
-            return phoneNumber2 is null;
-        }
-
-        return phoneNumber1.Equals(phoneNumber2);
-    }
+    public static bool operator ==(GeographicPhoneNumber? phoneNumber1, GeographicPhoneNumber? phoneNumber2) =>
+        phoneNumber1 is null ? phoneNumber2 is null : phoneNumber1.Equals(phoneNumber2);
 
     /// <inheritdoc/>
     public override bool Equals(object? obj) =>

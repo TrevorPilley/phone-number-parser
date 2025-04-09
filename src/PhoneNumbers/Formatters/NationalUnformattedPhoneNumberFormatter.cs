@@ -21,6 +21,6 @@ internal sealed class NationalUnformattedPhoneNumberFormatter : PhoneNumberForma
     /// <inheritdoc/>
     internal override string Format(PhoneNumber phoneNumber) =>
         phoneNumber.Country.HasTrunkPrefix
-        ? $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.NationalSignificantNumber}"
-        : phoneNumber.NationalSignificantNumber;
+            ? $"{phoneNumber.Country.TrunkPrefix}{phoneNumber.NationalSignificantNumber}"
+            : phoneNumber.NationalSignificantNumber;
 }
