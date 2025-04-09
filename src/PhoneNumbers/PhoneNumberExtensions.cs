@@ -31,7 +31,7 @@ public static class PhoneNumberExtensions
 
         if (countryInfo.InternationalCallPrefixes.TryGetValue(destination.Country.CallingCode, out var callPrefix))
         {
-           return $"{callPrefix}{destination.NationalSignificantNumber}";
+            return $"{callPrefix}{destination.NationalSignificantNumber}";
         }
 
         if (countryInfo == CountryInfo.Italy && destination.IsSanMarinoLandline())
