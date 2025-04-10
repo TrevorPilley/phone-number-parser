@@ -1,6 +1,10 @@
 #if NETSTANDARD2_0
 namespace System.Diagnostics.CodeAnalysis
 {
+    /// <summary>Specifies that a method will never return under any circumstance.</summary>
+    [System.AttributeUsage(System.AttributeTargets.Method, Inherited=false)]
+    internal sealed class DoesNotReturnAttribute : Attribute { }
+
     /// <summary>Specifies that when a method returns <see cref="ReturnValue"/>, the parameter will not be null even if the corresponding type allows it.</summary>
     /// <remarks>https://github.com/dotnet/runtime/blob/main/src/libraries/System.Private.CoreLib/src/System/Diagnostics/CodeAnalysis/NullableAttributes.cs</remarks>
     [AttributeUsage(AttributeTargets.Parameter, Inherited = false)]
@@ -15,5 +19,9 @@ namespace System.Diagnostics.CodeAnalysis
         /// <summary>Gets the return value condition.</summary>
         public bool ReturnValue { get; }
     }
+
+    /// <summary>Specifies that an output will not be null even if the corresponding type allows it. Specifies that an input argument was not null when the call returns.</summary>
+    [AttributeUsage(AttributeTargets.Field | AttributeTargets.Parameter | AttributeTargets.Property | AttributeTargets.ReturnValue, Inherited = false)]
+    internal sealed class NotNullAttribute : Attribute { }
 }
 #endif

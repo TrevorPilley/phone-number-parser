@@ -107,10 +107,11 @@ public static class ParseOptionsExtensions
 
     private static ParseOptions Allow(ParseOptions parseOptions, Func<CountryInfo, bool> predicate)
     {
-        if (parseOptions is null)
-        {
-            throw new ArgumentNullException(nameof(parseOptions));
-        }
+#if NET6_0_OR_GREATER
+        ArgumentNullException.ThrowIfNull(parseOptions);
+#else
+        ArgumentNullExceptionEx.ThrowIfNull(parseOptions);
+#endif
 
         foreach (var countryInfo in CountryInfo.GetCountries(predicate))
         {
