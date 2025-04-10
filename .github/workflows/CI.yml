@@ -63,10 +63,13 @@ jobs:
       - name: dotnet build
         run: dotnet build --configuration ${{ env.PROJECT_CONFIGURATION }} --no-restore
 
-      - name: dotnet test
+      - name: dotnet test (.NET 9.0)
         run: dotnet test --configuration ${{ env.PROJECT_CONFIGURATION }} -f net9.0 /p:CollectCoverage=true /p:CoverletOutputFormat=opencover --no-restore --verbosity minimal
 
-      - name: dotnet test (.NET Framework)
+      - name: dotnet test (.NET 8.0)
+        run: dotnet test test/PhoneNumbers.Tests/PhoneNumbers.Tests.csproj --configuration ${{ env.PROJECT_CONFIGURATION }} -f net8.0 --no-restore --verbosity minimal
+
+      - name: dotnet test (.NET Framework 4.6.2)
         if: matrix.os == 'windows-latest'
         run: dotnet test test/PhoneNumbers.Tests/PhoneNumbers.Tests.csproj --configuration ${{ env.PROJECT_CONFIGURATION }} -f net462 --no-restore --verbosity minimal
 
