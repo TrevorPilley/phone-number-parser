@@ -54,12 +54,8 @@ internal sealed class NumberRange
             value,
             x =>
             {
-#if NETSTANDARD2_0
-                var separatorIndex = x.IndexOf(Chars.Hyphen);
-#else
                 var separatorIndex = x.IndexOf(Chars.Hyphen, StringComparison.Ordinal);
-#endif
-
+                
                 if (separatorIndex == -1)
                 {
                     return new NumberRange(x, x);
