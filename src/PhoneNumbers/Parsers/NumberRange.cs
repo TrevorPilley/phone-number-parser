@@ -2,6 +2,14 @@ using System.Collections.Concurrent;
 using System.Diagnostics;
 using System.Globalization;
 
+#if NET6_0_OR_GREATER
+using static System.ArgumentException;
+using static System.ArgumentOutOfRangeException;
+#else
+using static System.ArgumentExceptionEx;
+using static System.ArgumentOutOfRangeExceptionEx;
+#endif
+
 namespace PhoneNumbers.Parsers;
 
 [DebuggerDisplay("{" + nameof(GetDebuggerDisplay) + "(),nq}")]
@@ -15,15 +23,9 @@ internal sealed class NumberRange
 
     private NumberRange(string from, string to)
     {
-#if NET8_0_OR_GREATER
-        ArgumentException.ThrowIfNullOrWhiteSpace(from);
-        ArgumentException.ThrowIfNullOrWhiteSpace(to);
-        ArgumentOutOfRangeException.ThrowIfLessThan(to.Length, from.Length);
-#else
-        ArgumentExceptionEx.ThrowIfNullOrWhiteSpace(from);
-        ArgumentExceptionEx.ThrowIfNullOrWhiteSpace(to);
-        ArgumentOutOfRangeExceptionEx.ThrowIfLessThan(to.Length, from.Length);
-#endif
+        ThrowIfNullOrWhiteSpace(from);
+        ThrowIfNullOrWhiteSpace(to);
+        ThrowIfLessThan(to.Length, from.Length);
 
         (From, To) = (from, to);
         _isSingleNumber = From.Equals(To, StringComparison.Ordinal);
@@ -33,11 +35,7 @@ internal sealed class NumberRange
             _fromIntValue = long.Parse(From, CultureInfo.InvariantCulture);
             _toIntValue = long.Parse(To, CultureInfo.InvariantCulture);
 
-#if NET8_0_OR_GREATER
-            ArgumentOutOfRangeException.ThrowIfLessThan(_toIntValue, _fromIntValue);
-#else
-            ArgumentOutOfRangeExceptionEx.ThrowIfLessThan(_toIntValue, _fromIntValue);
-#endif
+            ThrowIfLessThan(_toIntValue, _fromIntValue);
         }
     }
 
