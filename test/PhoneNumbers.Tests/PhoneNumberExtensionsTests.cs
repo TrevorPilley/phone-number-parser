@@ -40,13 +40,17 @@ public class PhoneNumberExtensionsTests
     [Fact]
     public void NumberToDialFrom_CountryInfo_Throws_If_CountryInfo_Null()
     {
-        var phoneNumber1 = TestHelper.CreateMobilePhoneNumber(null, "1", "123");
-        Assert.Throws<ArgumentNullException>(() => phoneNumber1.NumberToDialFrom(default(CountryInfo)));
+        var phoneNumber = TestHelper.CreateMobilePhoneNumber(null, "1", "123");
+        var exception = Assert.Throws<ArgumentNullException>(() => phoneNumber.NumberToDialFrom(default(CountryInfo)));
+        Assert.Equal("countryInfo", exception.ParamName);
     }
 
     [Fact]
-    public void NumberToDialFrom_CountryInfo_Throws_If_PhoneNumber_Null() =>
-        Assert.Throws<ArgumentNullException>(() => default(PhoneNumber).NumberToDialFrom(CountryInfo.UnitedKingdom));
+    public void NumberToDialFrom_CountryInfo_Throws_If_PhoneNumber_Null()
+    {
+        var exception = Assert.Throws<ArgumentNullException>(() => default(PhoneNumber).NumberToDialFrom(CountryInfo.UnitedKingdom));
+        Assert.Equal("destination", exception.ParamName);
+    }
 
     [Theory]
     [InlineData("+441142726444", "+441146548866", "6548866")]        // UK Geo to Geo within NDC, local dialling permitted, NDC not required

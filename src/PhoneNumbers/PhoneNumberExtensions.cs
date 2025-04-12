@@ -14,15 +14,13 @@ public static class PhoneNumberExtensions
     /// <returns>Returns the number needed to dial a <see cref="PhoneNumber"/> from another <see cref="CountryInfo"/>.</returns>
     public static string NumberToDialFrom(this PhoneNumber destination, CountryInfo countryInfo)
     {
-        if (destination is null)
-        {
-            throw new ArgumentNullException(nameof(destination));
-        }
-
-        if (countryInfo is null)
-        {
-            throw new ArgumentNullException(nameof(countryInfo));
-        }
+#if NET6_0_OR_GREATER
+        ArgumentNullException.ThrowIfNull(destination);
+        ArgumentNullException.ThrowIfNull(countryInfo);
+#else
+        ArgumentNullExceptionEx.ThrowIfNull(destination);
+        ArgumentNullExceptionEx.ThrowIfNull(countryInfo);
+#endif
 
         if (destination.Country.SharesCallingCodeWith(countryInfo))
         {
@@ -53,15 +51,13 @@ public static class PhoneNumberExtensions
     /// <returns>Returns the number needed to dial a <see cref="PhoneNumber"/> from another <see cref="PhoneNumber"/>.</returns>
     public static string NumberToDialFrom(this PhoneNumber destination, PhoneNumber source)
     {
-        if (destination is null)
-        {
-            throw new ArgumentNullException(nameof(destination));
-        }
-
-        if (source is null)
-        {
-            throw new ArgumentNullException(nameof(source));
-        }
+#if NET6_0_OR_GREATER
+        ArgumentNullException.ThrowIfNull(destination);
+        ArgumentNullException.ThrowIfNull(source);
+#else
+        ArgumentNullExceptionEx.ThrowIfNull(destination);
+        ArgumentNullExceptionEx.ThrowIfNull(source);
+#endif
 
         if (source.Country.SharesCallingCodeWith(destination.Country))
         {
