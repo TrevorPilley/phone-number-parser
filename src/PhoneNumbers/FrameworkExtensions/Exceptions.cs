@@ -50,6 +50,20 @@ namespace System
             throw new ArgumentException($"The value cannot be an empty string or composed entirely of whitespace. (Parameter '{paramName}')", paramName);
         }
     }
+
+    internal static class ArgumentOutOfRangeExceptionEx
+    {
+        public static void ThrowIfLessThan<T>(T value, T other, [CallerArgumentExpression(nameof(value))] string? paramName = null)
+            where T : IComparable<T>
+        {
+            if (value.CompareTo(other) < 0)
+                ThrowLess(value, other, paramName);
+        }
+
+        [DoesNotReturn]
+        private static void ThrowLess<T>(T value, T other, string? paramName) =>
+            throw new ArgumentOutOfRangeException(paramName, value, $"{paramName} ('{value}') must be greater than or equal to '{other}'.");
+    }
 }
 #endif
 
