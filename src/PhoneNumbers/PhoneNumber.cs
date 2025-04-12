@@ -83,10 +83,11 @@ public abstract class PhoneNumber(PhoneNumberHint phoneNumberHint)
     /// <returns>A <see cref="PhoneNumber"/> instance representing the specified phone number string value.</returns>
     public static PhoneNumber Parse(string value, CountryInfo countryInfo, ParseOptions? options = null)
     {
-        if (countryInfo is null)
-        {
-            throw new ArgumentNullException(nameof(countryInfo));
-        }
+#if NET6_0_OR_GREATER
+        ArgumentNullException.ThrowIfNull(countryInfo);
+#else
+        ArgumentNullExceptionEx.ThrowIfNull(countryInfo);
+#endif
 
         options ??= ParseOptions.Default;
 
