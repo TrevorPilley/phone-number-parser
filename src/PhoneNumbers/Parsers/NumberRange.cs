@@ -15,15 +15,13 @@ internal sealed class NumberRange
 
     private NumberRange(string from, string to)
     {
-        if (string.IsNullOrWhiteSpace(from))
-        {
-            throw new ArgumentException($"'{nameof(from)}' cannot be null or whitespace", nameof(from));
-        }
-
-        if (string.IsNullOrWhiteSpace(to))
-        {
-            throw new ArgumentException($"'{nameof(to)}' cannot be null or whitespace", nameof(to));
-        }
+#if NET8_0_OR_GREATER
+        ArgumentException.ThrowIfNullOrWhiteSpace(from);
+        ArgumentException.ThrowIfNullOrWhiteSpace(to);
+#else
+        ArgumentExceptionEx.ThrowIfNullOrWhiteSpace(from);
+        ArgumentExceptionEx.ThrowIfNullOrWhiteSpace(to);
+#endif
 
         if (to.Length < from.Length)
         {
