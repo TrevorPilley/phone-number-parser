@@ -1,3 +1,9 @@
+#if NET6_0_OR_GREATER
+using static System.ArgumentNullException;
+#else
+using static System.ArgumentNullExceptionEx;
+#endif
+
 namespace PhoneNumbers;
 
 /// <summary>
@@ -107,11 +113,7 @@ public static class ParseOptionsExtensions
 
     private static ParseOptions Allow(ParseOptions parseOptions, Func<CountryInfo, bool> predicate)
     {
-#if NET6_0_OR_GREATER
-        ArgumentNullException.ThrowIfNull(parseOptions);
-#else
-        ArgumentNullExceptionEx.ThrowIfNull(parseOptions);
-#endif
+        ThrowIfNull(parseOptions);
 
         foreach (var countryInfo in CountryInfo.GetCountries(predicate))
         {
