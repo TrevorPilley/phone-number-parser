@@ -18,15 +18,12 @@ internal sealed class NumberRange
 #if NET8_0_OR_GREATER
         ArgumentException.ThrowIfNullOrWhiteSpace(from);
         ArgumentException.ThrowIfNullOrWhiteSpace(to);
+        ArgumentOutOfRangeException.ThrowIfLessThan(to.Length, from.Length);
 #else
         ArgumentExceptionEx.ThrowIfNullOrWhiteSpace(from);
         ArgumentExceptionEx.ThrowIfNullOrWhiteSpace(to);
+        ArgumentOutOfRangeExceptionEx.ThrowIfLessThan(to.Length, from.Length);
 #endif
-
-        if (to.Length < from.Length)
-        {
-            throw new ArgumentOutOfRangeException(nameof(to), $"The length of the value To ({to}) must be greater than or equal to the length of the value From ({from})");
-        }
 
         (From, To) = (from, to);
         _isSingleNumber = From.Equals(To, StringComparison.Ordinal);
@@ -36,10 +33,11 @@ internal sealed class NumberRange
             _fromIntValue = long.Parse(From, CultureInfo.InvariantCulture);
             _toIntValue = long.Parse(To, CultureInfo.InvariantCulture);
 
-            if (_toIntValue < _fromIntValue)
-            {
-                throw new ArgumentOutOfRangeException(nameof(to), $"The value To ({to}) must be greater than or equal to the value From ({from})");
-            }
+#if NET8_0_OR_GREATER
+            ArgumentOutOfRangeException.ThrowIfLessThan(_toIntValue, _fromIntValue);
+#else
+            ArgumentOutOfRangeExceptionEx.ThrowIfLessThan(_toIntValue, _fromIntValue);
+#endif
         }
     }
 
