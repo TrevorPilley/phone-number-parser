@@ -1,4 +1,4 @@
-# Reference: https://avance.digital.gob.es/es-ES/Servicios/Numeracion/Documents/Presentation_NNP_Spain.pdf
+# Reference: https://avance.digital.gob.es/es-ES/Servicios/Numeracion/Documents/Presentation_NNP_Spain.pdf via https://avance.digital.gob.es/en-us/Servicios/Numeracion/Paginas/Plan.aspx
 # Reference Date: 18/02/2021
 N|51||0000000-9999999|
 N|59||00000000000-99999999999|M
