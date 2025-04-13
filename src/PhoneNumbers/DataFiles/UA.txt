@@ -1,3 +1,5 @@
+# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000DB0007PDFE.pdf
+# Reference Date: 29/07/2019
 G|31|Zakarpattia region|0000000-9999999|
 G|32|Lviv region|0000000-9999999|
 G|33|Volyn region|0000000-9999999|
