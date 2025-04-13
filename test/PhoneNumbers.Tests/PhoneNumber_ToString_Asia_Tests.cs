@@ -37,12 +37,12 @@ public class PhoneNumber_ToString_Asia_Tests
     [InlineData("+903122947200", "U", "03122947200")]
     public void Turkey_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
-    
+
     [Theory]
     [InlineData("+97126212222", "E.123", "+971 2 621 2222")]
-    [InlineData("+97126212222", "N", "2 621 2222")]
+    [InlineData("+97126212222", "N", "(02) 621 2222")]
     [InlineData("+97126212222", "RFC3966", "tel:+971-2-621-2222")]
-    [InlineData("+97126212222", "U", "26212222")]
+    [InlineData("+97126212222", "U", "026212222")]
     public void UnitedArabEmirates_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 }

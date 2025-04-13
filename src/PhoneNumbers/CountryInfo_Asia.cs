@@ -69,13 +69,14 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo UnitedArabEmirates { get; } = new()
     {
+        AllowsLocalGeographicDialling = true,
         CallingCode = "971",
         Continent = Asia,
         FullName = "United Arab Emirates",
         Iso3166Code = "AE",
         Name = "United Arab Emirates",
-        NdcLengths = new ReadOnlyCollection<int>([3, 2]),
-        NsnLengths = new ReadOnlyCollection<int>([8, 9]),
+        NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),
+        NsnLengths = new ReadOnlyCollection<int>([5, 6, 7, 8, 9, 10, 11, 12]),
         TrunkPrefix = "0",
     };
 }
