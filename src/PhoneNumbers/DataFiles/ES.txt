@@ -1,3 +1,5 @@
+# Reference: https://avance.digital.gob.es/es-ES/Servicios/Numeracion/Documents/Presentation_NNP_Spain.pdf
+# Reference Date: 18/02/2021
 N|51||0000000-9999999|
 N|59||00000000000-99999999999|M
 M|600-699,710-749||000000-999999|
