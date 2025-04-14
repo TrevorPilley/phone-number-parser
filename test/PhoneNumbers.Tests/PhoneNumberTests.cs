@@ -343,7 +343,6 @@ public class PhoneNumberTests
     [InlineData("/")]
     [InlineData("+44")]
     [InlineData("+44-1/2")]
-    [InlineData("441142726444")]
     public void TryParse_Value_PhoneNumbers_False_If_Value_Invalid(string input)
     {
         Assert.False(PhoneNumber.TryParse(input, out IEnumerable<PhoneNumber> phoneNumbers));

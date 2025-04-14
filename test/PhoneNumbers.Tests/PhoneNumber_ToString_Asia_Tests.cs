@@ -19,6 +19,14 @@ public class PhoneNumber_ToString_Asia_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+96824222163", "E.123", "+968 24222163")]
+    [InlineData("+96824222163", "N", "24222163")]
+    [InlineData("+96824222163", "RFC3966", "tel:+968-24222163")]
+    [InlineData("+96824222163", "U", "24222163")]
+    public void Oman_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+97444994081", "E.123", "+974 44994081")]
     [InlineData("+97444994081", "N", "44994081")]
     [InlineData("+97444994081", "RFC3966", "tel:+974-44994081")]
