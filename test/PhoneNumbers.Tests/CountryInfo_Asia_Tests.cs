@@ -103,4 +103,29 @@ public class CountryInfo_Asia_Tests
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
+
+    [Fact]
+    public void CountryInfo_UnitedArabEmirates()
+    {
+        Assert.Same(CountryInfo.UnitedArabEmirates, CountryInfo.UnitedArabEmirates);
+
+        var countryInfo = CountryInfo.UnitedArabEmirates;
+
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal("971", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
+        Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("United Arab Emirates", countryInfo.FullName);
+        Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
+        Assert.Equal("AE", countryInfo.Iso3166Code);
+        Assert.False(countryInfo.IsOecdMember);
+        Assert.Equal("United Arab Emirates", countryInfo.Name);
+        Assert.Equal([3, 2, 1], countryInfo.NdcLengths);
+        Assert.Equal([5, 6, 7, 8, 9, 10, 11, 12], countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Equal("0", countryInfo.TrunkPrefix);
+    }
 }
