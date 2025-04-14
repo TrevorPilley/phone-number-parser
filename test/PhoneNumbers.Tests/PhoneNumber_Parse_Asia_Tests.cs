@@ -19,6 +19,14 @@ public class PhoneNumber_Parse_Asia_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_Oman_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+96824222163");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Oman, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_Qatar_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+97444994081");

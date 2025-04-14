@@ -33,6 +33,20 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Oman.
+    /// </summary>
+    public static CountryInfo Oman { get; } = new()
+    {
+        CallingCode = "968",
+        Continent = Asia,
+        FormatProvider = BasicPhoneNumberFormatProvider.Instance,
+        FullName = "Sultanate of Oman",
+        Iso3166Code = "OM",
+        Name = "Oman",
+        NsnLengths = new ReadOnlyCollection<int>([8, 12]),
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Qatar.
     /// </summary>
     public static CountryInfo Qatar { get; } = new()
