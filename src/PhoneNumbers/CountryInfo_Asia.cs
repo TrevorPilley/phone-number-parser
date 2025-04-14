@@ -63,4 +63,20 @@ public partial class CountryInfo
         NsnLengths = new ReadOnlyCollection<int>([7, 10]),
         TrunkPrefix = "0",
     };
+
+    /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for United Arab Emirates.
+    /// </summary>
+    public static CountryInfo UnitedArabEmirates { get; } = new()
+    {
+        AllowsLocalGeographicDialling = true,
+        CallingCode = "971",
+        Continent = Asia,
+        FullName = "United Arab Emirates",
+        Iso3166Code = "AE",
+        Name = "United Arab Emirates",
+        NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),
+        NsnLengths = new ReadOnlyCollection<int>([5, 6, 7, 8, 9, 10, 11, 12]),
+        TrunkPrefix = "0",
+    };
 }
