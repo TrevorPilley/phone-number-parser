@@ -136,20 +136,20 @@ public class DefaultPhoneNumberParserTests_AE_GeographicNumber
     }
 
     [Theory]
-    [InlineData("072010000", "7", "2010000", "Ras Al Khai mah Region")]
-    [InlineData("072990000", "7", "2990000", "Ras Al Khai mah Region")]
-    [InlineData("073010000", "7", "3010000", "Ras Al Khai mah Region")]
-    [InlineData("073990000", "7", "3990000", "Ras Al Khai mah Region")]
-    [InlineData("074010000", "7", "4010000", "Ras Al Khai mah Region")]
-    [InlineData("074990000", "7", "4990000", "Ras Al Khai mah Region")]
-    [InlineData("075010000", "7", "5010000", "Ras Al Khai mah Region")]
-    [InlineData("075990000", "7", "5990000", "Ras Al Khai mah Region")]
-    [InlineData("076010000", "7", "6010000", "Ras Al Khai mah Region")]
-    [InlineData("076990000", "7", "6990000", "Ras Al Khai mah Region")]
-    [InlineData("077010000", "7", "7010000", "Ras Al Khai mah Region")]
-    [InlineData("077990000", "7", "7990000", "Ras Al Khai mah Region")]
-    [InlineData("078010000", "7", "8010000", "Ras Al Khai mah Region")]
-    [InlineData("078990000", "7", "8990000", "Ras Al Khai mah Region")]
+    [InlineData("072010000", "7", "2010000", "Ras Al Khaimah Region")]
+    [InlineData("072990000", "7", "2990000", "Ras Al Khaimah Region")]
+    [InlineData("073010000", "7", "3010000", "Ras Al Khaimah Region")]
+    [InlineData("073990000", "7", "3990000", "Ras Al Khaimah Region")]
+    [InlineData("074010000", "7", "4010000", "Ras Al Khaimah Region")]
+    [InlineData("074990000", "7", "4990000", "Ras Al Khaimah Region")]
+    [InlineData("075010000", "7", "5010000", "Ras Al Khaimah Region")]
+    [InlineData("075990000", "7", "5990000", "Ras Al Khaimah Region")]
+    [InlineData("076010000", "7", "6010000", "Ras Al Khaimah Region")]
+    [InlineData("076990000", "7", "6990000", "Ras Al Khaimah Region")]
+    [InlineData("077010000", "7", "7010000", "Ras Al Khaimah Region")]
+    [InlineData("077990000", "7", "7990000", "Ras Al Khaimah Region")]
+    [InlineData("078010000", "7", "8010000", "Ras Al Khaimah Region")]
+    [InlineData("078990000", "7", "8990000", "Ras Al Khaimah Region")]
     public void Parse_Known_GeographicPhoneNumber_7_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
     {
         var parseResult = s_parser.Parse(value);
@@ -197,5 +197,8 @@ public class DefaultPhoneNumberParserTests_AE_GeographicNumber
         Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
         Assert.Equal(NationalDestinationCode, geographicPhoneNumber.NationalDestinationCode);
         Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
+    }
+}
+ber);
     }
 }
