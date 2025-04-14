@@ -64,7 +64,7 @@ public class CountryInfo_Asia_Tests
         Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("974", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
-        Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.IsType<BasicPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.Equal("State of Qatar", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);

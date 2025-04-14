@@ -39,6 +39,7 @@ public partial class CountryInfo
     {
         CallingCode = "974",
         Continent = Asia,
+        FormatProvider = BasicPhoneNumberFormatProvider.Instance,
         FullName = "State of Qatar",
         Iso3166Code = "QA",
         Name = "Qatar",
