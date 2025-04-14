@@ -33,6 +33,19 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Qatar.
+    /// </summary>
+    public static CountryInfo Qatar { get; } = new()
+    {
+        CallingCode = "974",
+        Continent = Asia,
+        FullName = "State of Qatar",
+        Iso3166Code = "QA",
+        Name = "Qatar",
+        NsnLengths = new ReadOnlyCollection<int>([7, 8, 10]),
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Singapore.
     /// </summary>
     public static CountryInfo Singapore { get; } = new()
