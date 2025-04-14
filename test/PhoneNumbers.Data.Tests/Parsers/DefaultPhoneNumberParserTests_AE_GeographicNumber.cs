@@ -199,6 +199,3 @@ public class DefaultPhoneNumberParserTests_AE_GeographicNumber
         Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
     }
 }
-ber);
-    }
-}
