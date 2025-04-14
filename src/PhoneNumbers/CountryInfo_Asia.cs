@@ -65,6 +65,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo SaudiArabia { get; } = new()
     {
+        AllowsLocalGeographicDialling = true,
         CallingCode = "966",
         Continent = Asia,
         FullName = "Kingdom of Saudi Arabia",

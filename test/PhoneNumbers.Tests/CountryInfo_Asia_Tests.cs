@@ -111,7 +111,7 @@ public class CountryInfo_Asia_Tests
 
         var countryInfo = CountryInfo.SaudiArabia;
 
-        Assert.False(countryInfo.AllowsLocalGeographicDialling);
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("966", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);

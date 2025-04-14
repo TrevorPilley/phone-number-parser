@@ -36,7 +36,7 @@ public class PhoneNumber_ToString_Asia_Tests
 
     [Theory]
     [InlineData("+966114618281", "E.123", "+966 11 461 8281")]
-    [InlineData("+966114618281", "N", "011 461 8281")]
+    [InlineData("+966114618281", "N", "(011) 461 8281")]
     [InlineData("+966114618281", "RFC3966", "tel:+966-11-461-8281")]
     [InlineData("+966114618281", "U", "0114618281")]
     public void SaudiArabia_Numbers(string input, string format, string expected) =>
