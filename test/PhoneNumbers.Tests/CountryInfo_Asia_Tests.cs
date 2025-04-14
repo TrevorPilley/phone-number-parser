@@ -105,6 +105,31 @@ public class CountryInfo_Asia_Tests
     }
 
     [Fact]
+    public void CountryInfo_SaudiArabia()
+    {
+        Assert.Same(CountryInfo.SaudiArabia, CountryInfo.SaudiArabia);
+
+        var countryInfo = CountryInfo.SaudiArabia;
+
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal("966", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
+        Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Kingdom of Saudi Arabia", countryInfo.FullName);
+        Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
+        Assert.Equal("SA", countryInfo.Iso3166Code);
+        Assert.False(countryInfo.IsOecdMember);
+        Assert.Equal("Saudi Arabia", countryInfo.Name);
+        Assert.Equal([4, 3, 2], countryInfo.NdcLengths);
+        Assert.Equal([8, 9, 10, 11, 12], countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Equal("0", countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_Singapore()
     {
         Assert.Same(CountryInfo.Singapore, CountryInfo.Singapore);

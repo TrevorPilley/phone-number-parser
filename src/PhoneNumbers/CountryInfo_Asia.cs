@@ -61,6 +61,21 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Saudi Arabia.
+    /// </summary>
+    public static CountryInfo SaudiArabia { get; } = new()
+    {
+        CallingCode = "966",
+        Continent = Asia,
+        FullName = "Kingdom of Saudi Arabia",
+        Iso3166Code = "SA",
+        Name = "Saudi Arabia",
+        NdcLengths = new ReadOnlyCollection<int>([4, 3, 2]),
+        NsnLengths = new ReadOnlyCollection<int>([8, 9, 10, 11, 12]),
+        TrunkPrefix = "0",
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Singapore.
     /// </summary>
     public static CountryInfo Singapore { get; } = new()
