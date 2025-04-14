@@ -19,6 +19,14 @@ public class PhoneNumber_ToString_Asia_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+97444994081", "E.123", "+974 44994081")]
+    [InlineData("+97444994081", "N", "44994081")]
+    [InlineData("+97444994081", "RFC3966", "tel:+974-44994081")]
+    [InlineData("+97444994081", "U", "44994081")]
+    public void Qatar_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+6563773800", "E.123", "+65 6377 3800")]
     [InlineData("+6563773800", "N", "6377 3800")]
     [InlineData("+6563773800", "RFC3966", "tel:+65-6377-3800")]
