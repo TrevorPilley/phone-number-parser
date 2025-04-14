@@ -33,4 +33,12 @@ public class PhoneNumber_Parse_Asia_Tests
         Assert.NotNull(phoneNumber);
         Assert.Equal(CountryInfo.Turkey, phoneNumber.Country);
     }
+
+    [Fact]
+    public void Parse_Value_For_UnitedArabEmirates_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+97126212222");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.UnitedArabEmirates, phoneNumber.Country);
+    }
 }
