@@ -55,6 +55,31 @@ public class CountryInfo_Asia_Tests
     }
 
     [Fact]
+    public void CountryInfo_Oman()
+    {
+        Assert.Same(CountryInfo.Oman, CountryInfo.Oman);
+
+        var countryInfo = CountryInfo.Oman;
+
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal("968", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
+        Assert.IsType<BasicPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Sultanate of Oman", countryInfo.FullName);
+        Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
+        Assert.Equal("OM", countryInfo.Iso3166Code);
+        Assert.False(countryInfo.IsOecdMember);
+        Assert.Equal("Oman", countryInfo.Name);
+        Assert.Empty(countryInfo.NdcLengths);
+        Assert.Equal([8, 12], countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Null(countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_Qatar()
     {
         Assert.Same(CountryInfo.Qatar, CountryInfo.Qatar);
