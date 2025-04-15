@@ -18,6 +18,7 @@ public class CountryInfo_Asia_Tests
         Assert.Equal("Hong Kong", countryInfo.FullName);
         Assert.Equal("001", countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("HK", countryInfo.Iso3166Code);
@@ -43,6 +44,7 @@ public class CountryInfo_Asia_Tests
         Assert.Equal("Macau", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("MO", countryInfo.Iso3166Code);
@@ -68,6 +70,7 @@ public class CountryInfo_Asia_Tests
         Assert.Equal("Sultanate of Oman", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.True(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("OM", countryInfo.Iso3166Code);
@@ -93,6 +96,7 @@ public class CountryInfo_Asia_Tests
         Assert.Equal("State of Qatar", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.True(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("QA", countryInfo.Iso3166Code);
@@ -118,6 +122,7 @@ public class CountryInfo_Asia_Tests
         Assert.Equal("Kingdom of Saudi Arabia", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.True(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("SA", countryInfo.Iso3166Code);
@@ -143,6 +148,7 @@ public class CountryInfo_Asia_Tests
         Assert.Equal("Republic of Singapore", countryInfo.FullName);
         Assert.Equal("000", countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("SG", countryInfo.Iso3166Code);
@@ -168,6 +174,7 @@ public class CountryInfo_Asia_Tests
         Assert.Equal("Republic of Türkiye", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("TR", countryInfo.Iso3166Code);
@@ -193,6 +200,7 @@ public class CountryInfo_Asia_Tests
         Assert.Equal("United Arab Emirates", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.True(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("AE", countryInfo.Iso3166Code);
@@ -218,6 +226,7 @@ public class CountryInfo_Asia_Tests
         Assert.Equal("Republic of Yemen", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.True(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("YE", countryInfo.Iso3166Code);

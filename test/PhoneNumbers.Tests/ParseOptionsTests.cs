@@ -27,6 +27,17 @@ public class ParseOptionsTests
     }
 
     [Fact]
+    public void AllowArabLeagueCountries()
+    {
+        var parseOptions = new ParseOptions();
+        parseOptions.Countries.Clear();
+        parseOptions.AllowArabLeagueCountries();
+
+        Assert.Equal(6, parseOptions.Countries.Count);
+        Assert.All(parseOptions.Countries, x => Assert.True(x.IsArabLeagueMember));
+    }
+
+    [Fact]
     public void AllowAsianCountries()
     {
         var parseOptions = new ParseOptions();

@@ -18,6 +18,7 @@ public class CountryInfo_Africa_Tests
         Assert.Equal("Arab Republic of Egypt", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.True(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("EG", countryInfo.Iso3166Code);
@@ -45,6 +46,7 @@ public class CountryInfo_Africa_Tests
         Assert.Equal(2, countryInfo.InternationalCallPrefixes.Count);
         Assert.Equal("006", countryInfo.InternationalCallPrefixes["256"]); // Uganda
         Assert.Equal("007", countryInfo.InternationalCallPrefixes["255"]); // Tanzania
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("KE", countryInfo.Iso3166Code);
@@ -70,6 +72,7 @@ public class CountryInfo_Africa_Tests
         Assert.Equal("Federal Republic of Nigeria", countryInfo.FullName);
         Assert.Equal("009", countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("NG", countryInfo.Iso3166Code);
@@ -95,6 +98,7 @@ public class CountryInfo_Africa_Tests
         Assert.Equal("Republic of South Africa", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("ZA", countryInfo.Iso3166Code);
@@ -122,6 +126,7 @@ public class CountryInfo_Africa_Tests
         Assert.Equal(2, countryInfo.InternationalCallPrefixes.Count);
         Assert.Equal("005", countryInfo.InternationalCallPrefixes["254"]); // Kenya
         Assert.Equal("006", countryInfo.InternationalCallPrefixes["256"]); // Uganda
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("TZ", countryInfo.Iso3166Code);
@@ -149,6 +154,7 @@ public class CountryInfo_Africa_Tests
         Assert.Equal(2, countryInfo.InternationalCallPrefixes.Count);
         Assert.Equal("005", countryInfo.InternationalCallPrefixes["254"]); // Kenya
         Assert.Equal("007", countryInfo.InternationalCallPrefixes["255"]); // Tanzania
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("UG", countryInfo.Iso3166Code);
