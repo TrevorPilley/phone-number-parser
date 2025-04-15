@@ -327,7 +327,7 @@ public partial class CountryInfo
         Iso3166Code = "HU",
         IsOecdMember = true,
         Name = "Hungary",
-        NdcLengths = new ReadOnlyCollection<int>([2, 1]),
+        NdcLengths = s_ndc_2_1,
         NsnLengths = s_nsn_8_9_12,
         TrunkPrefix = "06",
     };

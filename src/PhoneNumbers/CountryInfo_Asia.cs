@@ -123,4 +123,20 @@ public partial class CountryInfo
         NsnLengths = new ReadOnlyCollection<int>([5, 6, 7, 8, 9, 10, 11, 12]),
         TrunkPrefix = "0",
     };
+
+    /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Yemen.
+    /// </summary>
+    public static CountryInfo Yemen { get; } = new()
+    {
+        CallingCode = "967",
+        Continent = Asia,
+        FormatProvider = YEPhoneNumberFormatProvider.Instance,
+        FullName = "Republic of Yemen",
+        Iso3166Code = "YE",
+        Name = "Yemen",
+        NdcLengths = s_ndc_2_1,
+        NsnLengths = new ReadOnlyCollection<int>([7, 8, 9]),
+        TrunkPrefix = "0",
+    };
 }
