@@ -1,0 +1,19 @@
+# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000B70005PDFE.pdf
+# Reference Date: 06/12/2021
+# Reference: https://www.cst.gov.sa/en/RulesandSystems/RegulatoryDocuments/Numbering/Documents/TA103E-NationalNumberingPlanIssue2.pdf
+# Reference Date: 08/2011
+G|11|Area 1 (Riyadh, Kharj)|2000000-8999999|
+G|12|Area 2 (Makkah, Jeddah)|2000000-8999999|
+G|13|Area 3 (Dammam, Khobar, Dahran)|2000000-8999999|
+G|14|Area 4 (Madenah, Arar, Tabuk, Yanbu)|2000000-8999999|
+G|16|Area 6 (Hail, Qasim)|2000000-8999999|
+G|17|Area 6 (Abha, Najran, Jezan)|2000000-8999999|
+M|50-51,53-59||0000000-9999999|
+N|700||00000-99999|R
+N|800||0000000-9999999|F
+N|811||00000000-99999999|
+N|830||000000000-999999999|M
+M|831||000000000-999999999|
+N|891||00000000-99999999|
+N|9200-9209||00000-99999|S
+N|9250-9259||00000-99999|

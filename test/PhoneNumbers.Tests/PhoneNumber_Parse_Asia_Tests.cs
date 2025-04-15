@@ -35,6 +35,14 @@ public class PhoneNumber_Parse_Asia_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_SaudiArabia_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+966114618281");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.SaudiArabia, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_Singapore_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+6563773800");
