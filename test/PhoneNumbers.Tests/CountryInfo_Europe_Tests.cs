@@ -18,6 +18,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Principality of Andorra", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("AD", countryInfo.Iso3166Code);
@@ -43,6 +44,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Republic of Austria", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("AT", countryInfo.Iso3166Code);
@@ -68,6 +70,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Republic of Belarus", countryInfo.FullName);
         Assert.Equal("8~10", countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("BY", countryInfo.Iso3166Code);
@@ -93,6 +96,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Kingdom of Belgium", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("BE", countryInfo.Iso3166Code);
@@ -118,6 +122,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Bosnia and Herzegovina", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("BA", countryInfo.Iso3166Code);
@@ -143,6 +148,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Republic of Bulgaria", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("BG", countryInfo.Iso3166Code);
@@ -168,6 +174,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Republic of Croatia", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("HR", countryInfo.Iso3166Code);
@@ -193,6 +200,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Republic of Cyprus", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("CY", countryInfo.Iso3166Code);
@@ -218,6 +226,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Czech Republic", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("CZ", countryInfo.Iso3166Code);
@@ -243,6 +252,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Denmark", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("DK", countryInfo.Iso3166Code);
@@ -268,6 +278,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Republic of Estonia", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("EE", countryInfo.Iso3166Code);
@@ -293,6 +304,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Faroe Islands", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("FO", countryInfo.Iso3166Code);
@@ -318,6 +330,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Republic of Finland", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("FI", countryInfo.Iso3166Code);
@@ -343,6 +356,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("French Republic", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("FR", countryInfo.Iso3166Code);
@@ -368,6 +382,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Federal Republic of Germany", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("DE", countryInfo.Iso3166Code);
@@ -393,6 +408,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Gibraltar", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("GI", countryInfo.Iso3166Code);
@@ -418,6 +434,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Hellenic Republic", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("GR", countryInfo.Iso3166Code);
@@ -443,6 +460,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Guernsey", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("GG", countryInfo.Iso3166Code);
@@ -468,6 +486,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Hungary", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("HU", countryInfo.Iso3166Code);
@@ -493,6 +512,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Iceland", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("IS", countryInfo.Iso3166Code);
@@ -518,6 +538,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Ireland", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("IE", countryInfo.Iso3166Code);
@@ -543,6 +564,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Isle of Man", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("IM", countryInfo.Iso3166Code);
@@ -568,6 +590,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Italian Republic", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("IT", countryInfo.Iso3166Code);
@@ -593,6 +616,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Bailiwick of Jersey", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("JE", countryInfo.Iso3166Code);
@@ -618,6 +642,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Republic of Kosovo", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("XK", countryInfo.Iso3166Code);
@@ -643,6 +668,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Republic of Latvia", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("LV", countryInfo.Iso3166Code);
@@ -668,6 +694,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Principality of Liechtenstein", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("LI", countryInfo.Iso3166Code);
@@ -693,6 +720,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Republic of Lithuania", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("LT", countryInfo.Iso3166Code);
@@ -718,6 +746,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Grand Duchy of Luxembourg", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("LU", countryInfo.Iso3166Code);
@@ -743,6 +772,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Republic of Malta", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("MT", countryInfo.Iso3166Code);
@@ -768,6 +798,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Republic of Moldova", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("MD", countryInfo.Iso3166Code);
@@ -793,6 +824,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Principality of Monaco", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("MC", countryInfo.Iso3166Code);
@@ -818,6 +850,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Montenegro", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("ME", countryInfo.Iso3166Code);
@@ -843,6 +876,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Netherlands", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("NL", countryInfo.Iso3166Code);
@@ -868,6 +902,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Republic of North Macedonia", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("MK", countryInfo.Iso3166Code);
@@ -893,6 +928,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Kingdom of Norway", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("NO", countryInfo.Iso3166Code);
@@ -918,6 +954,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Republic of Poland", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("PL", countryInfo.Iso3166Code);
@@ -943,6 +980,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Portuguese Republic", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("PT", countryInfo.Iso3166Code);
@@ -968,6 +1006,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Romania", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("RO", countryInfo.Iso3166Code);
@@ -993,6 +1032,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Most Serene Republic of San Marino", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("SM", countryInfo.Iso3166Code);
@@ -1018,6 +1058,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Republic of Serbia", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("RS", countryInfo.Iso3166Code);
@@ -1043,6 +1084,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Slovak Republic", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("SK", countryInfo.Iso3166Code);
@@ -1068,6 +1110,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Republic of Slovenia", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("SL", countryInfo.Iso3166Code);
@@ -1093,6 +1136,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Kingdom of Spain", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("ES", countryInfo.Iso3166Code);
@@ -1118,6 +1162,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Kingdom of Sweden", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("SE", countryInfo.Iso3166Code);
@@ -1143,6 +1188,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Swiss Confederation", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("CH", countryInfo.Iso3166Code);
@@ -1168,6 +1214,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Ukraine", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("UA", countryInfo.Iso3166Code);
@@ -1193,6 +1240,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("United Kingdom of Great Britain and Northern Ireland", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("GB", countryInfo.Iso3166Code);

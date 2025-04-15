@@ -77,6 +77,7 @@ phoneNumber.Country.FullName;                      // United Kingdom of Great Br
 phoneNumber.Country.HasNationalDestinationCodes;   // true
 phoneNumber.Country.HasTrunkPrefix;                // true
 phoneNumber.Country.InternationalCallPrefix;       // 00
+phoneNumber.Country.IsArabLeagueMember;            // false
 phoneNumber.Country.IsEuropeanUnionMember;         // false
 phoneNumber.Country.IsNatoMember;                  // true
 phoneNumber.Country.IsOecdMember;                  // true
@@ -155,6 +156,7 @@ ParseOptions.Default.AllowOceanianCountries();
 ParseOptions.Default.AllowSouthAmericanCountries();
 
 // Add all countries supported by the library who are members of the same union/alliance:
+ParseOptions.Default.AllowArabLeagueCountries();    // 6 of 22 members
 ParseOptions.Default.AllowEuropeanUnionCountries(); // all 27 members
 ParseOptions.Default.AllowNatoCountries();          // 31 of 32 members (Albania not supported yet)
 ParseOptions.Default.AllowOecdCountries();          // 32 of 38 members

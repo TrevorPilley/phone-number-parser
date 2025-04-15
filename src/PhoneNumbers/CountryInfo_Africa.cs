@@ -13,6 +13,7 @@ public partial class CountryInfo
         CallingCode = "20",
         Continent = Africa,
         FullName = "Arab Republic of Egypt",
+        IsArabLeagueMember = true,
         Iso3166Code = "EG",
         Name = "Egypt",
         NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),

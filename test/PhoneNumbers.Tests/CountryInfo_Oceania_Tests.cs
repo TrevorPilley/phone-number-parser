@@ -19,6 +19,7 @@ public class CountryInfo_Oceania_Tests
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.Equal(CountryInfo.NanpInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("AS", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
@@ -42,6 +43,7 @@ public class CountryInfo_Oceania_Tests
         Assert.IsType<AUPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.Equal("Commonwealth of Australia", countryInfo.FullName);
         Assert.Equal("0011", countryInfo.InternationalCallPrefix);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
@@ -68,6 +70,7 @@ public class CountryInfo_Oceania_Tests
         Assert.Equal("Guam", countryInfo.FullName);
         Assert.Equal(CountryInfo.NanpInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("GU", countryInfo.Iso3166Code);
@@ -93,6 +96,7 @@ public class CountryInfo_Oceania_Tests
         Assert.Equal("Independent State of Papua New Guinea", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("PG", countryInfo.Iso3166Code);
