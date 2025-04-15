@@ -65,4 +65,12 @@ public class PhoneNumber_Parse_Asia_Tests
         Assert.NotNull(phoneNumber);
         Assert.Equal(CountryInfo.UnitedArabEmirates, phoneNumber.Country);
     }
+
+    [Fact]
+    public void Parse_Value_For_Yemen_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+967777002345");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Yemen, phoneNumber.Country);
+    }
 }
