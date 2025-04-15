@@ -203,4 +203,29 @@ public class CountryInfo_Asia_Tests
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
+
+    [Fact]
+    public void CountryInfo_Yemen()
+    {
+        Assert.Same(CountryInfo.Yemen, CountryInfo.Yemen);
+
+        var countryInfo = CountryInfo.Yemen;
+
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal("967", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
+        Assert.IsType<YEPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Republic of Yemen", countryInfo.FullName);
+        Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
+        Assert.Equal("YE", countryInfo.Iso3166Code);
+        Assert.False(countryInfo.IsOecdMember);
+        Assert.Equal("Yemen", countryInfo.Name);
+        Assert.Equal([2, 1], countryInfo.NdcLengths);
+        Assert.Equal([7, 8, 9], countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Equal("0", countryInfo.TrunkPrefix);
+    }
 }

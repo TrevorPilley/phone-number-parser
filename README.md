@@ -228,6 +228,7 @@ Saudi Arabia         | SA            | 966          | 0            | Yes        
 Singapore            | SG            | 65           |              |            | Yes    |                    |                      | Yes            | Yes                            | Yes                               |                                  |
 Turkey               | TR            | 90           | 0            | Yes        | Yes    |                    | Yes                  | Yes            | Yes                            | Yes                               |                                  |
 United Arab Emirates | AE            | 971          | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               | Yes                              |
+Yemen                | YE            | 967          | 0            | Yes        | Yes    |                    |                      |                |                                |                                   |                                  |
 
 ### Europe
 
