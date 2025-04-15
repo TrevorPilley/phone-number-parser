@@ -95,16 +95,18 @@ public class DefaultPhoneNumberParserTests_YE_GeographicNumber
 
     [Theory]
     [InlineData("04200000", "4", "200000", "Taiz")]
+    [InlineData("04329999", "4", "329999", "Taiz")]
     [InlineData("04330000", "4", "330000", "Ibb")]
     [InlineData("04339999", "4", "339999", "Ibb")]
+    [InlineData("04340000", "4", "340000", "Taiz")]
     [InlineData("04399999", "4", "399999", "Taiz")]
     [InlineData("04400000", "4", "400000", "Ibb")]
     [InlineData("04599999", "4", "599999", "Ibb")]
     [InlineData("04830000", "4", "830000", "Taiz")]
     [InlineData("04839999", "4", "839999", "Taiz")]
     [InlineData("04840000", "4", "840000", "Taiz")]
-    [InlineData("04840000", "4", "840000", "Ibb")]
     [InlineData("04843999", "4", "843999", "Taiz")]
+    [InlineData("04844000", "4", "844000", "Ibb")]
     [InlineData("04859999", "4", "859999", "Ibb")]
     public void Parse_Known_GeographicPhoneNumber_4_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
     {
