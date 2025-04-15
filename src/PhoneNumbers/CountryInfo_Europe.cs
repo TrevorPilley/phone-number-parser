@@ -694,7 +694,7 @@ public partial class CountryInfo
         Iso3166Code = "RS",
         Name = "Serbia",
         NdcLengths = s_ndc_3_2,
-        NsnLengths = new ReadOnlyCollection<int>([8, 9, 10, 11, 12]),
+        NsnLengths = s_nsn_8_9_10_11_12,
         TrunkPrefix = "0",
     };
 
