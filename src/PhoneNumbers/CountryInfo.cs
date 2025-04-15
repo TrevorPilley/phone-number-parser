@@ -102,6 +102,11 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
     public string InternationalCallPrefix { get; init; } = ItuInternationalCallPrefix;
 
     /// <summary>
+    /// Gets a value indicating whether the country is a member of the Arab League.
+    /// </summary>
+    public bool IsArabLeagueMember { get; init; }
+
+    /// <summary>
     /// Gets a value indicating whether the country is a member of the European Union.
     /// </summary>
     public bool IsEuropeanUnionMember { get; init; }
