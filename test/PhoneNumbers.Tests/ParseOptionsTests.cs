@@ -33,7 +33,7 @@ public class ParseOptionsTests
         parseOptions.Countries.Clear();
         parseOptions.AllowArabLeagueCountries();
 
-        Assert.Equal(6, parseOptions.Countries.Count);
+        Assert.Equal(7, parseOptions.Countries.Count);
         Assert.All(parseOptions.Countries, x => Assert.True(x.IsArabLeagueMember));
     }
 
