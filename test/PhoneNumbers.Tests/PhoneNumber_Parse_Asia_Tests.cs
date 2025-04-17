@@ -11,6 +11,14 @@ public class PhoneNumber_Parse_Asia_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_Jordan_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+96265501120");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Jordan, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_Macau_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+85328000000");
