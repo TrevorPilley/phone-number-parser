@@ -17,7 +17,7 @@ public class DefaultPhoneNumberParserTests_MT_MobilePhoneNumber
     [InlineData("79130000", "79130000")]
     [InlineData("79149999", "79149999")]
     [InlineData("79170000", "79170000")]
-    [InlineData("79799999", "79999999")]
+    [InlineData("79999999", "79999999")]
     [InlineData("92100000", "92100000")]
     [InlineData("92119999", "92119999")]
     [InlineData("92310000", "92310000")]

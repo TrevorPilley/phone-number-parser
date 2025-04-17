@@ -104,6 +104,7 @@ public class DefaultPhoneNumberParserTests_MT_NonGeographicPhoneNumber
     [InlineData("23890000", "23890000")]
     [InlineData("23910000", "23910000")]
     [InlineData("23999999", "23999999")]
+    [InlineData("24002400", "24002400")]
     [InlineData("25220000", "25220000")]
     [InlineData("25229999", "25229999")]
     [InlineData("25400000", "25400000")]
@@ -180,8 +181,37 @@ public class DefaultPhoneNumberParserTests_MT_NonGeographicPhoneNumber
     }
 
     [Theory]
+    [InlineData("4000100000", "4000100000")]
+    [InlineData("4002599999", "4002599999")]
+    [InlineData("4007900000", "4007900000")]
+    [InlineData("4007999999", "4007999999")]
+    [InlineData("4009900000", "4009900000")]
+    [InlineData("4009999999", "4009999999")]
+    public void Parse_Known_NonGeographicPhoneNumber_MachineToMachine(string value, string subscriberNumber)
+    {
+        var parseResult = s_parser.Parse(value);
+        parseResult.ThrowIfFailure();
+
+        var phoneNumber = parseResult.PhoneNumber;
+
+        Assert.NotNull(phoneNumber);
+        Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
+
+        var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
+        Assert.Equal(CountryInfo.Malta, nonGeographicPhoneNumber.Country);
+        Assert.False(nonGeographicPhoneNumber.IsFreephone);
+        Assert.True(nonGeographicPhoneNumber.IsMachineToMachine);
+        Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
+        Assert.False(nonGeographicPhoneNumber.IsSharedCost);
+        Assert.Null(nonGeographicPhoneNumber.NationalDestinationCode);
+        Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
+    }
+
+    [Theory]
     [InlineData("50037000", "50037000")]
     [InlineData("50037999", "50037999")]
+    [InlineData("50043000", "50043000")]
+    [InlineData("50043999", "50043999")]
     [InlineData("50600000", "50600000")]
     [InlineData("50699999", "50699999")]
     [InlineData("50700000", "50700000")]
