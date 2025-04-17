@@ -27,6 +27,7 @@ public partial class CountryInfo
         CallingCode = "962",
         Continent = Asia,
         FullName = "Hashemite Kingdom of Jordan",
+        IsArabLeagueMember = true,
         Iso3166Code = "JO",
         Name = "Jordan",
         NsnLengths = new ReadOnlyCollection<int>([9]),
