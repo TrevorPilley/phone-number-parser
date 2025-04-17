@@ -41,7 +41,7 @@ public class CountryInfo_Asia_Tests
         Assert.Equal("962", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
-        Assert.Equal("", countryInfo.FullName);
+        Assert.Equal("Hashemite Kingdom of Jordan", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.True(countryInfo.IsArabLeagueMember);
