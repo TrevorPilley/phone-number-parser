@@ -1,3 +1,5 @@
+# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200002C0002PDFE.pdf
+# Reference Date: 31/10/2019
 G|601|Bogotá and Cundinamarca|2000000-9999999|
 G|602|Valle del Cauca, Cauca and Nariño|2000000-9999999|
 G|604|Antioquia, Chocó and Córdoba|2000000-9999999|
@@ -5,7 +7,7 @@ G|605|Atlántico, Bolívar, Cesar, La Guajira, Magdalena and Sucre|2000000-99999
 G|606|Caldas, Risaralda and Quindío|2000000-9999999|
 G|607|Norte de Santander, Santander and Arauca|2000000-9999999|
 G|608|Boyacá, Tolima, Huila, San Andrés, Meta, Caquetá and the Amazon and Orinoco|2000000-9999999|
-M|300-302,304-305,310-314,315-324,333,350-351||2000000-9999999|
+M|300-302,304-305,310-324,333,350-351||2000000-9999999|
 # The following all use the access code 01 which isn't part of the NDC so shouldn't
 # be included but I have no way to cater for it at the moment so these aren't implemented.
 #N|800||0000000-9999999|F
