@@ -40,7 +40,7 @@ public class CountryInfo_Asia_Tests
         Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("962", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
-        Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.IsType<SimplePhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.Equal("Hashemite Kingdom of Jordan", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
@@ -50,8 +50,8 @@ public class CountryInfo_Asia_Tests
         Assert.Equal("JO", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Jordan", countryInfo.Name);
-        Assert.Empty(countryInfo.NdcLengths);
-        Assert.Equal([9], countryInfo.NsnLengths);
+        Assert.Equal([1], countryInfo.NdcLengths);
+        Assert.Equal([8, 9], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }

@@ -18,7 +18,7 @@ public partial class CountryInfo
         Name = "Hong Kong",
         NsnLengths = new ReadOnlyCollection<int>([8, 9, 11, 12]),
     };
-    
+
     /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Jordan.
     /// </summary>
@@ -26,11 +26,14 @@ public partial class CountryInfo
     {
         CallingCode = "962",
         Continent = Asia,
+        FormatProvider = SimplePhoneNumberFormatProvider.Default,
+        #pragma warning restore format
         FullName = "Hashemite Kingdom of Jordan",
         IsArabLeagueMember = true,
         Iso3166Code = "JO",
         Name = "Jordan",
-        NsnLengths = new ReadOnlyCollection<int>([9]),
+        NdcLengths = new ReadOnlyCollection<int>([1]),
+        NsnLengths = new ReadOnlyCollection<int>([8, 9]),
         TrunkPrefix = "0",
     };
 
