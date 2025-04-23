@@ -32,42 +32,38 @@ internal sealed class GBPhoneNumberParser : DefaultPhoneNumberParser
         var ndcLength = 0;
         PhoneNumberKind phoneNumberKind = default;
 
-        if (nsnValue[0] == '1')
+        switch (nsnValue[0])
         {
-            // Most 1X UK area codes are 4 digits geographically assigned.
-            ndcLength = 4;
-            phoneNumberKind = PhoneNumberKind.GeographicPhoneNumber;
+            case '1':
+                phoneNumberKind = PhoneNumberKind.GeographicPhoneNumber;
 
-            if (nsnValue[1] == '1' || nsnValue[2] == '1')
-            {
-                // Except 11X and 1X1 area codes, which are are 3 digits.
+                if (nsnValue[1] == '1' || nsnValue[2] == '1')
+                {
+                    ndcLength = 3;
+                }
+                else if (_areaCodesWith5Digits.Any(x => x.NationalDestinationCodeRanges!.Any(x => nsnValue.StartsWith(x.From, StringComparison.Ordinal))))
+                {
+                    ndcLength = 5;
+                }
+                else
+                {
+                    ndcLength = 4;
+                }
+                break;
+            case '2':
+                phoneNumberKind = PhoneNumberKind.GeographicPhoneNumber;
+                ndcLength = 2;
+                break;
+            case '3':
+            case '8':
+            case '9':
+                phoneNumberKind = PhoneNumberKind.NonGeographicPhoneNumber;
                 ndcLength = 3;
-            }
-            else if (_areaCodesWith5Digits.Any(x => x.NationalDestinationCodeRanges!.Any(x => nsnValue.StartsWith(x.From, StringComparison.Ordinal))))
-            {
-                // There are some 5 digit area codes which use a subset of numbers from the "parent" 4 digit area code:
-                // e.g. Langholm (13873) uses the 32XXXX-39XXXX range from Dumfries (1387) meaning Dumfries can only use 2XXXXX and 4XXXXX-9XXXXX
-                // Since geographic area codes are for a single value only, we can just check against From.
-                ndcLength = 5;
-            }
-        }
-        else if (nsnValue[0] == '2')
-        {
-            // 2X area codes, are 2 digits and geographically assigned.
-            ndcLength = 2;
-            phoneNumberKind = PhoneNumberKind.GeographicPhoneNumber;
-        }
-        else if (nsnValue[0] == '3' || nsnValue[0] == '8' || nsnValue[0] == '9')
-        {
-            // 3XX, 8XX and 9XX area codes are 3 digits and non-geographic numbers.
-            ndcLength = 3;
-            phoneNumberKind = PhoneNumberKind.NonGeographicPhoneNumber;
-        }
-        else if (nsnValue[0] == '7')
-        {
-            // All UK mobile area codes are 4 digits.
-            ndcLength = 4;
-            phoneNumberKind = PhoneNumberKind.MobilePhoneNumber;
+                break;
+            case '7':
+                phoneNumberKind = PhoneNumberKind.MobilePhoneNumber;
+                ndcLength = 4;
+                break;
         }
 
         var ndc = nsnValue.Substring(0, ndcLength);
