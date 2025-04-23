@@ -18,8 +18,8 @@ public partial class CountryInfo
         InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "AS",
         Name = "American Samoa",
-        NdcLengths = s_nanpNdcLengths,
-        NsnLengths = s_nanpNsnLengths,
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_10,
         SharesCallingCode = true,
     };
 
@@ -37,7 +37,7 @@ public partial class CountryInfo
         Iso3166Code = "AU",
         IsOecdMember = true,
         Name = "Australia",
-        NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),
+        NdcLengths = s_ndc_3_2_1,
         NsnLengths = new ReadOnlyCollection<int>([5, 6, 7, 8, 9, 10]),
         TrunkPrefix = "0",
     };
@@ -54,8 +54,8 @@ public partial class CountryInfo
         InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "GU",
         Name = "Guam",
-        NdcLengths = s_nanpNdcLengths,
-        NsnLengths = s_nanpNsnLengths,
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_10,
         SharesCallingCode = true,
     };
 
@@ -69,7 +69,7 @@ public partial class CountryInfo
         FullName = "Independent State of Papua New Guinea",
         Iso3166Code = "PG",
         Name = "Papua New Guinea",
-        NdcLengths = new ReadOnlyCollection<int>([3, 2]),
+        NdcLengths = s_ndc_3_2,
         NsnLengths = new ReadOnlyCollection<int>([7, 8]),
     };
 }
