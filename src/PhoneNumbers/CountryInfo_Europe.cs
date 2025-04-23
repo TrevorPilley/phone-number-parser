@@ -16,7 +16,7 @@ public partial class CountryInfo
         FullName = "Principality of Andorra",
         Iso3166Code = "AD",
         Name = "Andorra",
-        NsnLengths = new ReadOnlyCollection<int>([6, 8, 9]),
+        NsnLengths = s_nsn_6_8_9,
     };
 
     /// <summary>
@@ -31,7 +31,7 @@ public partial class CountryInfo
         Iso3166Code = "AT",
         IsOecdMember = true,
         Name = "Austria",
-        NdcLengths = new ReadOnlyCollection<int>([4, 3, 2, 1]),
+        NdcLengths = s_ndc_4_3_2_1,
         NsnLengths = new ReadOnlyCollection<int>([4, 5, 6, 7, 8, 9, 10, 11, 12, 13]),
         TrunkPrefix = "0",
     };
@@ -48,7 +48,7 @@ public partial class CountryInfo
         InternationalCallPrefix = "8~10",
         Iso3166Code = "BY",
         Name = "Belarus",
-        NdcLengths = new ReadOnlyCollection<int>([4, 3, 2]),
+        NdcLengths = s_ndc_4_3_2,
         NsnLengths = new ReadOnlyCollection<int>([6, 9, 10, 11]),
         TrunkPrefix = "8",
     };
@@ -67,8 +67,8 @@ public partial class CountryInfo
         Iso3166Code = "BE",
         IsOecdMember = true,
         Name = "Belgium",
-        NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),
-        NsnLengths = new ReadOnlyCollection<int>([8, 9]),
+        NdcLengths = s_ndc_3_2_1,
+        NsnLengths = s_nsn_8_9,
         TrunkPrefix = "0",
     };
 
@@ -82,8 +82,8 @@ public partial class CountryInfo
         FullName = "Bosnia and Herzegovina",
         Iso3166Code = "BA",
         Name = "Bosnia and Herzegovina",
-        NdcLengths = new ReadOnlyCollection<int>([4, 3, 2]),
-        NsnLengths = new ReadOnlyCollection<int>([6, 8, 9]),
+        NdcLengths = s_ndc_4_3_2,
+        NsnLengths = s_nsn_6_8_9,
         TrunkPrefix = "0",
     };
 
@@ -100,8 +100,8 @@ public partial class CountryInfo
         IsNatoMember = true,
         Iso3166Code = "BG",
         Name = "Bulgaria",
-        NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),
-        NsnLengths = new ReadOnlyCollection<int>([8, 9, 12]),
+        NdcLengths = s_ndc_3_2_1,
+        NsnLengths = s_nsn_8_9_12,
         TrunkPrefix = "0",
     };
 
@@ -119,7 +119,7 @@ public partial class CountryInfo
         Iso3166Code = "HR",
         Name = "Croatia",
         NdcLengths = new ReadOnlyCollection<int>([5, 4, 3, 2, 1]),
-        NsnLengths = new ReadOnlyCollection<int>([6, 7, 8, 9, 10]),
+        NsnLengths = s_nsn_6_7_8_9_10,
         TrunkPrefix = "0",
     };
 
@@ -135,8 +135,8 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "CY",
         Name = "Cyprus",
-        NdcLengths = new ReadOnlyCollection<int>([2]),
-        NsnLengths = new ReadOnlyCollection<int>([8]),
+        NdcLengths = s_ndc_2,
+        NsnLengths = s_nsn_8,
     };
 
     /// <summary>
@@ -153,7 +153,7 @@ public partial class CountryInfo
         Iso3166Code = "CZ",
         IsOecdMember = true,
         Name = "Czech Republic",
-        NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),
+        NdcLengths = s_ndc_3_2_1,
         NsnLengths = new ReadOnlyCollection<int>([7, 9, 10, 11, 12]),
     };
 
@@ -170,7 +170,7 @@ public partial class CountryInfo
         Iso3166Code = "DK",
         IsOecdMember = true,
         Name = "Denmark",
-        NsnLengths = new ReadOnlyCollection<int>([8, 12]),
+        NsnLengths = s_nsn_8_12,
     };
 
     /// <summary>
@@ -187,7 +187,7 @@ public partial class CountryInfo
         Iso3166Code = "EE",
         IsOecdMember = true,
         Name = "Estonia",
-        NdcLengths = new ReadOnlyCollection<int>([4, 3, 2]),
+        NdcLengths = s_ndc_4_3_2,
         NsnLengths = new ReadOnlyCollection<int>([7, 8, 10, 12]),
     };
 
@@ -219,7 +219,7 @@ public partial class CountryInfo
         Iso3166Code = "FI",
         IsOecdMember = true,
         Name = "Finland",
-        NdcLengths = new ReadOnlyCollection<int>([4, 3, 2, 1]),
+        NdcLengths = s_ndc_4_3_2_1,
         NsnLengths = new ReadOnlyCollection<int>([5, 6, 7, 8, 9, 10, 11, 12]),
         TrunkPrefix = "0",
     };
@@ -238,7 +238,7 @@ public partial class CountryInfo
         Iso3166Code = "FR",
         IsOecdMember = true,
         Name = "France",
-        NsnLengths = new ReadOnlyCollection<int>([9, 13]),
+        NsnLengths = s_nsn_9_13,
         TrunkPrefix = "0",
     };
 
@@ -257,7 +257,7 @@ public partial class CountryInfo
         Iso3166Code = "DE",
         IsOecdMember = true,
         Name = "Germany",
-        NdcLengths = new ReadOnlyCollection<int>([5, 4, 3, 2]),
+        NdcLengths = s_ndc_5_4_3_2,
         NsnLengths = new ReadOnlyCollection<int>([4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]),
         TrunkPrefix = "0",
     };
@@ -273,7 +273,7 @@ public partial class CountryInfo
         FullName = "Gibraltar",
         Iso3166Code = "GI",
         Name = "Gibraltar",
-        NdcLengths = new ReadOnlyCollection<int>([3, 2]),
+        NdcLengths = s_ndc_3_2,
         NsnLengths = new ReadOnlyCollection<int>([4, 8]),
     };
 
@@ -291,8 +291,8 @@ public partial class CountryInfo
         Iso3166Code = "GR",
         IsOecdMember = true,
         Name = "Greece",
-        NdcLengths = new ReadOnlyCollection<int>([4, 3, 2]),
-        NsnLengths = new ReadOnlyCollection<int>([10]),
+        NdcLengths = s_ndc_4_3_2,
+        NsnLengths = s_nsn_10,
     };
 
     /// <summary>
@@ -307,8 +307,8 @@ public partial class CountryInfo
         FullName = "Guernsey",
         Iso3166Code = "GG",
         Name = "Guernsey",
-        NdcLengths = new ReadOnlyCollection<int>([4]),
-        NsnLengths = new ReadOnlyCollection<int>([10]),
+        NdcLengths = s_ndc_4,
+        NsnLengths = s_nsn_10,
         SharesCallingCode = true,
         TrunkPrefix = "0",
     };
@@ -328,7 +328,7 @@ public partial class CountryInfo
         IsOecdMember = true,
         Name = "Hungary",
         NdcLengths = new ReadOnlyCollection<int>([2, 1]),
-        NsnLengths = new ReadOnlyCollection<int>([8, 9, 12]),
+        NsnLengths = s_nsn_8_9_12,
         TrunkPrefix = "06",
     };
 
@@ -344,7 +344,7 @@ public partial class CountryInfo
         Iso3166Code = "IS",
         IsOecdMember = true,
         Name = "Iceland",
-        NsnLengths = new ReadOnlyCollection<int>([7, 9]),
+        NsnLengths = s_nsn_7_9,
     };
 
     /// <summary>
@@ -361,7 +361,7 @@ public partial class CountryInfo
         Iso3166Code = "IE",
         IsOecdMember = true,
         Name = "Ireland",
-        NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),
+        NdcLengths = s_ndc_3_2_1,
         NsnLengths = new ReadOnlyCollection<int>([7, 8, 9, 12]),
         TrunkPrefix = "0",
     };
@@ -378,8 +378,8 @@ public partial class CountryInfo
         FullName = "Isle of Man",
         Iso3166Code = "IM",
         Name = "Isle of Man",
-        NdcLengths = new ReadOnlyCollection<int>([4]),
-        NsnLengths = new ReadOnlyCollection<int>([10]),
+        NdcLengths = s_ndc_4,
+        NsnLengths = s_nsn_10,
         SharesCallingCode = true,
         TrunkPrefix = "0",
     };
@@ -399,7 +399,7 @@ public partial class CountryInfo
         Iso3166Code = "IT",
         IsOecdMember = true,
         Name = "Italy",
-        NdcLengths = new ReadOnlyCollection<int>([5, 4, 3, 2]),
+        NdcLengths = s_ndc_5_4_3_2,
         NsnLengths = new ReadOnlyCollection<int>([5, 6, 7, 8, 9, 10, 11]),
     };
 
@@ -415,8 +415,8 @@ public partial class CountryInfo
         FullName = "Bailiwick of Jersey",
         Iso3166Code = "JE",
         Name = "Jersey",
-        NdcLengths = new ReadOnlyCollection<int>([4]),
-        NsnLengths = new ReadOnlyCollection<int>([10]),
+        NdcLengths = s_ndc_4,
+        NsnLengths = s_nsn_10,
         SharesCallingCode = true,
         TrunkPrefix = "0",
     };
@@ -432,8 +432,8 @@ public partial class CountryInfo
         FullName = "Republic of Kosovo",
         Iso3166Code = "XK",
         Name = "Kosovo",
-        NdcLengths = new ReadOnlyCollection<int>([3, 2]),
-        NsnLengths = new ReadOnlyCollection<int>([8, 9]),
+        NdcLengths = s_ndc_3_2,
+        NsnLengths = s_nsn_8_9,
         TrunkPrefix = "0",
     };
 
@@ -451,7 +451,7 @@ public partial class CountryInfo
         Iso3166Code = "LV",
         IsOecdMember = true,
         Name = "Latvia",
-        NsnLengths = new ReadOnlyCollection<int>([8]),
+        NsnLengths = s_nsn_8,
     };
 
     /// <summary>
@@ -465,7 +465,7 @@ public partial class CountryInfo
         FullName = "Principality of Liechtenstein",
         Iso3166Code = "LI",
         Name = "Liechtenstein",
-        NsnLengths = new ReadOnlyCollection<int>([7, 9]),
+        NsnLengths = s_nsn_7_9,
     };
 
     /// <summary>
@@ -482,8 +482,8 @@ public partial class CountryInfo
         Iso3166Code = "LT",
         IsOecdMember = true,
         Name = "Lithuania",
-        NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),
-        NsnLengths = new ReadOnlyCollection<int>([8]),
+        NdcLengths = s_ndc_3_2_1,
+        NsnLengths = s_nsn_8,
         TrunkPrefix = "8",
     };
 
@@ -528,7 +528,7 @@ public partial class CountryInfo
         FullName = "Republic of Moldova",
         Iso3166Code = "MD",
         Name = "Moldova",
-        NdcLengths = new ReadOnlyCollection<int>([3, 2]),
+        NdcLengths = s_ndc_3_2,
         NsnLengths = new ReadOnlyCollection<int>([5, 6, 7, 8]),
         TrunkPrefix = "0",
     };
@@ -544,7 +544,7 @@ public partial class CountryInfo
         FormatProvider = MCPhoneNumberFormatProvider.Instance,
         Iso3166Code = "MC",
         Name = "Monaco",
-        NsnLengths = new ReadOnlyCollection<int>([8, 9, 12]),
+        NsnLengths = s_nsn_8_9_12,
     };
 
     /// <summary>
@@ -558,7 +558,7 @@ public partial class CountryInfo
         IsNatoMember = true,
         Iso3166Code = "ME",
         Name = "Montenegro",
-        NdcLengths = new ReadOnlyCollection<int>([2]),
+        NdcLengths = s_ndc_2,
         NsnLengths = new ReadOnlyCollection<int>([4, 5, 8, 12]),
         TrunkPrefix = "0",
     };
@@ -577,8 +577,8 @@ public partial class CountryInfo
         Iso3166Code = "NL",
         IsOecdMember = true,
         Name = "Netherlands",
-        NdcLengths = new ReadOnlyCollection<int>([3, 2]),
-        NsnLengths = new ReadOnlyCollection<int>([9]),
+        NdcLengths = s_ndc_3_2,
+        NsnLengths = s_nsn_9,
         TrunkPrefix = "0",
     };
 
@@ -594,8 +594,8 @@ public partial class CountryInfo
         IsNatoMember = true,
         Iso3166Code = "MK",
         Name = "North Macedonia",
-        NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),
-        NsnLengths = new ReadOnlyCollection<int>([8]),
+        NdcLengths = s_ndc_3_2_1,
+        NsnLengths = s_nsn_8,
         TrunkPrefix = "0",
     };
 
@@ -612,7 +612,7 @@ public partial class CountryInfo
         Iso3166Code = "NO",
         IsOecdMember = true,
         Name = "Norway",
-        NsnLengths = new ReadOnlyCollection<int>([8, 12]),
+        NsnLengths = s_nsn_8_12,
     };
 
     /// <summary>
@@ -629,8 +629,8 @@ public partial class CountryInfo
         Iso3166Code = "PL",
         IsOecdMember = true,
         Name = "Poland",
-        NdcLengths = new ReadOnlyCollection<int>([2]),
-        NsnLengths = new ReadOnlyCollection<int>([6, 7, 8, 9]),
+        NdcLengths = s_ndc_2,
+        NsnLengths = s_nsn_6_7_8_9,
     };
 
     /// <summary>
@@ -646,8 +646,8 @@ public partial class CountryInfo
         Iso3166Code = "PT",
         IsOecdMember = true,
         Name = "Portugal",
-        NdcLengths = new ReadOnlyCollection<int>([3]),
-        NsnLengths = new ReadOnlyCollection<int>([9]),
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_9,
     };
 
     /// <summary>
@@ -663,8 +663,8 @@ public partial class CountryInfo
         IsNatoMember = true,
         Iso3166Code = "RO",
         Name = "Romania",
-        NdcLengths = new ReadOnlyCollection<int>([3, 2]),
-        NsnLengths = new ReadOnlyCollection<int>([6, 7, 8, 9]),
+        NdcLengths = s_ndc_3_2,
+        NsnLengths = s_nsn_6_7_8_9,
         TrunkPrefix = "0",
     };
 
@@ -679,7 +679,7 @@ public partial class CountryInfo
         FullName = "Most Serene Republic of San Marino",
         Iso3166Code = "SM",
         Name = "San Marino",
-        NsnLengths = new ReadOnlyCollection<int>([6, 7, 8, 9, 10]),
+        NsnLengths = s_nsn_6_7_8_9_10,
     };
 
     /// <summary>
@@ -693,7 +693,7 @@ public partial class CountryInfo
         FullName = "Republic of Serbia",
         Iso3166Code = "RS",
         Name = "Serbia",
-        NdcLengths = new ReadOnlyCollection<int>([3, 2]),
+        NdcLengths = s_ndc_3_2,
         NsnLengths = new ReadOnlyCollection<int>([8, 9, 10, 11, 12]),
         TrunkPrefix = "0",
     };
@@ -711,8 +711,8 @@ public partial class CountryInfo
         Iso3166Code = "SK",
         IsOecdMember = true,
         Name = "Slovakia",
-        NdcLengths = new ReadOnlyCollection<int>([4, 3, 2, 1]),
-        NsnLengths = new ReadOnlyCollection<int>([7, 9]),
+        NdcLengths = s_ndc_4_3_2_1,
+        NsnLengths = s_nsn_7_9,
         TrunkPrefix = "0",
     };
 
@@ -731,8 +731,8 @@ public partial class CountryInfo
         Iso3166Code = "SL",
         IsOecdMember = true,
         Name = "Slovenia",
-        NdcLengths = new ReadOnlyCollection<int>([4, 3, 2, 1]),
-        NsnLengths = new ReadOnlyCollection<int>([8, 12]),
+        NdcLengths = s_ndc_4_3_2_1,
+        NsnLengths = s_nsn_8_12,
         TrunkPrefix = "0",
     };
 
@@ -750,8 +750,8 @@ public partial class CountryInfo
         Iso3166Code = "ES",
         IsOecdMember = true,
         Name = "Spain",
-        NdcLengths = new ReadOnlyCollection<int>([3, 2]),
-        NsnLengths = new ReadOnlyCollection<int>([9, 13]),
+        NdcLengths = s_ndc_3_2,
+        NsnLengths = s_nsn_9_13,
     };
 
     /// <summary>
@@ -769,7 +769,7 @@ public partial class CountryInfo
         Iso3166Code = "SE",
         IsOecdMember = true,
         Name = "Sweden",
-        NdcLengths = new ReadOnlyCollection<int>([3, 2, 1]),
+        NdcLengths = s_ndc_3_2_1,
         NsnLengths = new ReadOnlyCollection<int>([6, 7, 8, 9, 10, 13]),
         TrunkPrefix = "0",
     };
@@ -786,8 +786,8 @@ public partial class CountryInfo
         Iso3166Code = "CH",
         IsOecdMember = true,
         Name = "Switzerland",
-        NdcLengths = new ReadOnlyCollection<int>([3, 2]),
-        NsnLengths = new ReadOnlyCollection<int>([9]),
+        NdcLengths = s_ndc_3_2,
+        NsnLengths = s_nsn_9,
         TrunkPrefix = "0",
     };
 
@@ -803,7 +803,7 @@ public partial class CountryInfo
         FullName = "Ukraine",
         Iso3166Code = "UA",
         Name = "Ukraine",
-        NdcLengths = new ReadOnlyCollection<int>([3, 2]),
+        NdcLengths = s_ndc_3_2,
         NsnLengths = new ReadOnlyCollection<int>([9, 10]),
         TrunkPrefix = "0",
     };
@@ -823,7 +823,7 @@ public partial class CountryInfo
         Iso3166Code = "GB",
         IsOecdMember = true,
         Name = "United Kingdom",
-        NdcLengths = new ReadOnlyCollection<int>([5, 4, 3, 2]),
+        NdcLengths = s_ndc_5_4_3_2,
         NsnLengths = new ReadOnlyCollection<int>([7, 9, 10]),
         TrunkPrefix = "0",
     };

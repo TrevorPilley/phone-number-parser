@@ -7,8 +7,6 @@ public partial class CountryInfo
 {
     internal const string NanpCallingCode = "1";
     internal const string NanpInternationalCallPrefix = "011";
-    private static readonly ReadOnlyCollection<int> s_nanpNdcLengths = new([3]);
-    private static readonly ReadOnlyCollection<int> s_nanpNsnLengths = new([10]);
 
     /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Anguilla.
@@ -23,8 +21,8 @@ public partial class CountryInfo
         InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "AI",
         Name = "Anguilla",
-        NdcLengths = s_nanpNdcLengths,
-        NsnLengths = s_nanpNsnLengths,
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_10,
         SharesCallingCode = true,
     };
 
@@ -41,8 +39,8 @@ public partial class CountryInfo
         InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "AG",
         Name = "Antigua and Barbuda",
-        NdcLengths = s_nanpNdcLengths,
-        NsnLengths = s_nanpNsnLengths,
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_10,
         SharesCallingCode = true,
     };
 
@@ -59,8 +57,8 @@ public partial class CountryInfo
         InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "BS",
         Name = "Bahamas",
-        NdcLengths = s_nanpNdcLengths,
-        NsnLengths = s_nanpNsnLengths,
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_10,
         SharesCallingCode = true,
     };
 
@@ -77,8 +75,8 @@ public partial class CountryInfo
         InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "BB",
         Name = "Barbados",
-        NdcLengths = s_nanpNdcLengths,
-        NsnLengths = s_nanpNsnLengths,
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_10,
         SharesCallingCode = true,
     };
 
@@ -95,8 +93,8 @@ public partial class CountryInfo
         InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "BM",
         Name = "Bermuda",
-        NdcLengths = s_nanpNdcLengths,
-        NsnLengths = s_nanpNsnLengths,
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_10,
         SharesCallingCode = true,
     };
 
@@ -113,8 +111,8 @@ public partial class CountryInfo
         InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "VG",
         Name = "British Virgin Islands",
-        NdcLengths = s_nanpNdcLengths,
-        NsnLengths = s_nanpNsnLengths,
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_10,
         SharesCallingCode = true,
     };
 
@@ -133,8 +131,8 @@ public partial class CountryInfo
         Iso3166Code = "CA",
         IsOecdMember = true,
         Name = "Canada",
-        NdcLengths = s_nanpNdcLengths,
-        NsnLengths = s_nanpNsnLengths,
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_10,
         SharesCallingCode = true,
     };
 
@@ -151,8 +149,8 @@ public partial class CountryInfo
         InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "KY",
         Name = "Cayman Islands",
-        NdcLengths = s_nanpNdcLengths,
-        NsnLengths = s_nanpNsnLengths,
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_10,
         SharesCallingCode = true,
     };
 
@@ -169,8 +167,8 @@ public partial class CountryInfo
         InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "DM",
         Name = "Dominica",
-        NdcLengths = s_nanpNdcLengths,
-        NsnLengths = s_nanpNsnLengths,
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_10,
         SharesCallingCode = true,
     };
 
@@ -186,8 +184,8 @@ public partial class CountryInfo
         InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "DO",
         Name = "Dominican Republic",
-        NdcLengths = s_nanpNdcLengths,
-        NsnLengths = s_nanpNsnLengths,
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_10,
         SharesCallingCode = true,
     };
 
@@ -204,8 +202,8 @@ public partial class CountryInfo
         InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "GD",
         Name = "Grenada",
-        NdcLengths = s_nanpNdcLengths,
-        NsnLengths = s_nanpNsnLengths,
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_10,
         SharesCallingCode = true,
     };
 
@@ -221,8 +219,8 @@ public partial class CountryInfo
         InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "JM",
         Name = "Jamaica",
-        NdcLengths = s_nanpNdcLengths,
-        NsnLengths = s_nanpNsnLengths,
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_10,
         SharesCallingCode = true,
     };
 
@@ -238,7 +236,7 @@ public partial class CountryInfo
         Iso3166Code = "MX",
         IsOecdMember = true,
         Name = "Mexico",
-        NsnLengths = new ReadOnlyCollection<int>([10]),
+        NsnLengths = s_nsn_10,
     };
 
     /// <summary>
@@ -254,8 +252,8 @@ public partial class CountryInfo
         InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "MS",
         Name = "Montserrat",
-        NdcLengths = s_nanpNdcLengths,
-        NsnLengths = s_nanpNsnLengths,
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_10,
         SharesCallingCode = true,
     };
 
@@ -272,8 +270,8 @@ public partial class CountryInfo
         InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "MP",
         Name = "Northern Mariana Island",
-        NdcLengths = s_nanpNdcLengths,
-        NsnLengths = s_nanpNsnLengths,
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_10,
         SharesCallingCode = true,
     };
 
@@ -290,8 +288,8 @@ public partial class CountryInfo
         InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "PR",
         Name = "Puerto Rico",
-        NdcLengths = s_nanpNdcLengths,
-        NsnLengths = s_nanpNsnLengths,
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_10,
         SharesCallingCode = true,
     };
 
@@ -308,8 +306,8 @@ public partial class CountryInfo
         InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "KN",
         Name = "Saint Kitts and Nevis",
-        NdcLengths = s_nanpNdcLengths,
-        NsnLengths = s_nanpNsnLengths,
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_10,
         SharesCallingCode = true,
     };
 
@@ -326,8 +324,8 @@ public partial class CountryInfo
         InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "LC",
         Name = "Saint Lucia",
-        NdcLengths = s_nanpNdcLengths,
-        NsnLengths = s_nanpNsnLengths,
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_10,
         SharesCallingCode = true,
     };
 
@@ -344,8 +342,8 @@ public partial class CountryInfo
         InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "VC",
         Name = "Saint Vincent and the Grenadines",
-        NdcLengths = s_nanpNdcLengths,
-        NsnLengths = s_nanpNsnLengths,
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_10,
         SharesCallingCode = true,
     };
 
@@ -362,8 +360,8 @@ public partial class CountryInfo
         InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "SX",
         Name = "Sint Maarten",
-        NdcLengths = s_nanpNdcLengths,
-        NsnLengths = s_nanpNsnLengths,
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_10,
         SharesCallingCode = true,
     };
 
@@ -380,8 +378,8 @@ public partial class CountryInfo
         InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "TT",
         Name = "Trinidad and Tobago",
-        NdcLengths = s_nanpNdcLengths,
-        NsnLengths = s_nanpNsnLengths,
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_10,
         SharesCallingCode = true,
     };
 
@@ -398,8 +396,8 @@ public partial class CountryInfo
         InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "TC",
         Name = "Turks and Caicos Islands",
-        NdcLengths = s_nanpNdcLengths,
-        NsnLengths = s_nanpNsnLengths,
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_10,
         SharesCallingCode = true,
     };
 
@@ -418,8 +416,8 @@ public partial class CountryInfo
         Iso3166Code = "US",
         IsOecdMember = true,
         Name = "United States",
-        NdcLengths = s_nanpNdcLengths,
-        NsnLengths = s_nanpNsnLengths,
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_10,
     };
 
     /// <summary>
@@ -435,8 +433,8 @@ public partial class CountryInfo
         InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "VI",
         Name = "United States Virgin Islands",
-        NdcLengths = s_nanpNdcLengths,
-        NsnLengths = s_nanpNsnLengths,
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_10,
         SharesCallingCode = true,
     };
 }

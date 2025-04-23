@@ -18,7 +18,7 @@ public partial class CountryInfo
         InternationalCallPrefix = "0xx",
         Iso3166Code = "BR",
         Name = "Brazil",
-        NdcLengths = new ReadOnlyCollection<int>([3, 2]),
+        NdcLengths = s_ndc_3_2,
         NsnLengths = new ReadOnlyCollection<int>([10, 11]),
         TrunkPrefix = "0",
     };
@@ -35,8 +35,8 @@ public partial class CountryInfo
         Iso3166Code = "CO",
         IsOecdMember = true,
         Name = "Colombia",
-        NdcLengths = new ReadOnlyCollection<int>([3]),
-        NsnLengths = new ReadOnlyCollection<int>([10]),
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_10,
     };
 
     /// <summary>

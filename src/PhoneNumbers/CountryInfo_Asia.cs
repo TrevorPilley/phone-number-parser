@@ -29,7 +29,7 @@ public partial class CountryInfo
         FullName = "Macau",
         Iso3166Code = "MO",
         Name = "Macau",
-        NsnLengths = new ReadOnlyCollection<int>([8]),
+        NsnLengths = s_nsn_8,
     };
 
     /// <summary>
