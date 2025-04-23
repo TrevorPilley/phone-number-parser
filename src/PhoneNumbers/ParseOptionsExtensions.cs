@@ -115,10 +115,7 @@ public static class ParseOptionsExtensions
     {
         ThrowIfNull(parseOptions);
 
-        foreach (var countryInfo in CountryInfo.GetCountries(predicate))
-        {
-            parseOptions.Countries.Add(countryInfo);
-        }
+        ((HashSet<CountryInfo>)parseOptions.Countries).UnionWith(CountryInfo.GetCountries(predicate));
 
         return parseOptions;
     }
