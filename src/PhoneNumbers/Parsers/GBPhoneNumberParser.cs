@@ -15,7 +15,7 @@ internal sealed class GBPhoneNumberParser : DefaultPhoneNumberParser
     private GBPhoneNumberParser(IReadOnlyList<CountryNumber> countryNumbers)
         : base(CountryInfo.UnitedKingdom, countryNumbers) =>
         _areaCodesWith5Digits = countryNumbers
-            .Where(x => x.NationalDestinationCodeRanges!.Any(x => x.From.Length == 5))
+            .Where(x => x.GeographicArea is not null && x.NationalDestinationCodeRanges!.Any(x => x.From.Length == 5))
             .ToList();
 
     /// <summary>
@@ -41,7 +41,7 @@ internal sealed class GBPhoneNumberParser : DefaultPhoneNumberParser
                 {
                     ndcLength = 3;
                 }
-                else if (_areaCodesWith5Digits.Any(x => x.NationalDestinationCodeRanges!.Any(x => nsnValue.StartsWith(x.From, StringComparison.Ordinal))))
+                else if (_areaCodesWith5Digits.Any(x => nsnValue.StartsWith(x.NationalDestinationCodeRanges![0].From, StringComparison.Ordinal)))
                 {
                     ndcLength = 5;
                 }
