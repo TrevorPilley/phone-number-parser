@@ -33,7 +33,7 @@ public partial class CountryInfo
         Iso3166Code = "JO",
         Name = "Jordan",
         NdcLengths = new ReadOnlyCollection<int>([1]),
-        NsnLengths = new ReadOnlyCollection<int>([8, 9]),
+        NsnLengths = s_nsn_8_9,
         TrunkPrefix = "0",
     };
 
