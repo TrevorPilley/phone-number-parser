@@ -27,7 +27,6 @@ public partial class CountryInfo
         CallingCode = "962",
         Continent = Asia,
         FormatProvider = SimplePhoneNumberFormatProvider.Default,
-        #pragma warning restore format
         FullName = "Hashemite Kingdom of Jordan",
         IsArabLeagueMember = true,
         Iso3166Code = "JO",
