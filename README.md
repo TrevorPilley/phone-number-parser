@@ -156,7 +156,7 @@ ParseOptions.Default.AllowOceanianCountries();
 ParseOptions.Default.AllowSouthAmericanCountries();
 
 // Add all countries supported by the library who are members of the same union/alliance:
-ParseOptions.Default.AllowArabLeagueCountries();    // 6 of 22 members
+ParseOptions.Default.AllowArabLeagueCountries();    // 7 of 22 members
 ParseOptions.Default.AllowEuropeanUnionCountries(); // all 27 members
 ParseOptions.Default.AllowNatoCountries();          // 31 of 32 members (Albania not supported yet)
 ParseOptions.Default.AllowOecdCountries();          // 32 of 38 members
@@ -223,6 +223,7 @@ Uganda         | UG            | 256          | 0            |            | Yes 
 Country              | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
 ---                  | ---           | ---          | ---          | :-:        | :-:    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
 Hong Kong            | HK            | 852          |              |            | Yes    |                    | Yes                  | Yes            | Yes                            |                                   |                                  | Yes
+Jordan               | JO            | 962          | 0            | Yes        | Yes    | Yes                | Yes                  | Yes            |                                | Yes                               | Yes                              |
 Macau                | MO            | 853          |              |            | Yes    |                    |                      | Yes            |                                |                                   |                                  |
 Oman                 | OM            | 968          |              | Yes        | Yes    |                    |                      | Yes            |                                |                                   |                                  |
 Qatar                | QA            | 974          |              |            | Yes    |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes

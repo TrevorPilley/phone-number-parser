@@ -11,6 +11,14 @@ public class PhoneNumber_ToString_Asia_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+96265501120", "E.123", "+962 6 5501120")]
+    [InlineData("+96265501120", "N", "06 5501120")]
+    [InlineData("+96265501120", "RFC3966", "tel:+962-6-5501120")]
+    [InlineData("+96265501120", "U", "065501120")]
+    public void Jordan_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+85328000000", "E.123", "+853 2800 0000")]
     [InlineData("+85328000000", "N", "2800 0000")]
     [InlineData("+85328000000", "RFC3966", "tel:+853-2800-0000")]

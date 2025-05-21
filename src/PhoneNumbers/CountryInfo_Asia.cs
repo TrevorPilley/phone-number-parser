@@ -20,6 +20,23 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Jordan.
+    /// </summary>
+    public static CountryInfo Jordan { get; } = new()
+    {
+        CallingCode = "962",
+        Continent = Asia,
+        FormatProvider = SimplePhoneNumberFormatProvider.Default,
+        FullName = "Hashemite Kingdom of Jordan",
+        IsArabLeagueMember = true,
+        Iso3166Code = "JO",
+        Name = "Jordan",
+        NdcLengths = new ReadOnlyCollection<int>([1]),
+        NsnLengths = s_nsn_8_9,
+        TrunkPrefix = "0",
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Macau.
     /// </summary>
     public static CountryInfo Macau { get; } = new()
