@@ -11,11 +11,11 @@ public class DefaultPhoneNumberParserTests_JO_MobilePhoneNumber
     [InlineData("0770000000", "7", "70000000")]
     [InlineData("0772999999", "7", "72999999")]
     [InlineData("0775000000", "7", "75000000")]
+    [InlineData("0782999999", "7", "82999999")]
     [InlineData("0785000000", "7", "85000000")]
     [InlineData("0792999999", "7", "92999999")]
     [InlineData("0795000000", "7", "95000000")]
     [InlineData("0799999999", "7", "99999999")]
-    [InlineData("07829999999", "7", "829999999")]
     public void Parse_Known_MobilePhoneNumber(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
@@ -56,4 +56,5 @@ public class DefaultPhoneNumberParserTests_JO_MobilePhoneNumber
         Assert.Equal(NationalDestinationCode, mobilePhoneNumber.NationalDestinationCode);
         Assert.Equal(subscriberNumber, mobilePhoneNumber.SubscriberNumber);
     }
+}
 }
