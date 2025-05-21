@@ -220,7 +220,7 @@ public partial class CountryInfo
         IsOecdMember = true,
         Name = "Finland",
         NdcLengths = s_ndc_4_3_2_1,
-        NsnLengths = new ReadOnlyCollection<int>([5, 6, 7, 8, 9, 10, 11, 12]),
+        NsnLengths = s_nsn_5_6_7_8_9_10_11_12,
         TrunkPrefix = "0",
     };
 
@@ -694,7 +694,7 @@ public partial class CountryInfo
         Iso3166Code = "RS",
         Name = "Serbia",
         NdcLengths = s_ndc_3_2,
-        NsnLengths = new ReadOnlyCollection<int>([8, 9, 10, 11, 12]),
+        NsnLengths = s_nsn_8_9_10_11_12,
         TrunkPrefix = "0",
     };
 
