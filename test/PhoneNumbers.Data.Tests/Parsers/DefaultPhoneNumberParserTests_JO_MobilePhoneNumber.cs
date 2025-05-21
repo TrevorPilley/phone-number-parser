@@ -57,4 +57,3 @@ public class DefaultPhoneNumberParserTests_JO_MobilePhoneNumber
         Assert.Equal(subscriberNumber, mobilePhoneNumber.SubscriberNumber);
     }
 }
-}
