@@ -79,12 +79,16 @@ public class PhoneNumber_ToString_Asia_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+9671280330", "E.123", "+967 1 280 330")]
     [InlineData("+96717522229", "E.123", "+967 1 752 22 29")]
     [InlineData("+967777002345", "E.123", "+967 777 002 345")]
+    [InlineData("+9671280330", "N", "01 280 330")]
     [InlineData("+96717522229", "N", "01 752 22 29")]
     [InlineData("+967777002345", "N", "0777 002 345")]
+    [InlineData("+9671280330", "RFC3966", "tel:+967-1-280-330")]
     [InlineData("+96717522229", "RFC3966", "tel:+967-1-752-22-29")]
     [InlineData("+967777002345", "RFC3966", "tel:+967-777-002-345")]
+    [InlineData("+9671280330", "U", "01280330")]
     [InlineData("+96717522229", "U", "017522229")]
     [InlineData("+967777002345", "U", "0777002345")]
     public void Yemen_Numbers(string input, string format, string expected) =>
