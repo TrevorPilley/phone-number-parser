@@ -12,9 +12,9 @@ namespace PhoneNumbers.Formatters.FormatProviders;
 /// </remarks>
 internal class SimplePhoneNumberFormatProvider : PhoneNumberFormatProvider
 {
-    private readonly ConcurrentDictionary<Tuple<int, int>, string> _maskCache = new();
+    private readonly ConcurrentDictionary<ValueTuple<int, int>, string> _maskCache = new();
 
-    protected SimplePhoneNumberFormatProvider(Dictionary<Tuple<int, int>, string>? commonMasks = null)
+    protected SimplePhoneNumberFormatProvider(Dictionary<ValueTuple<int, int>, string>? commonMasks = null)
     {
         if (commonMasks is not null)
         {
@@ -30,7 +30,7 @@ internal class SimplePhoneNumberFormatProvider : PhoneNumberFormatProvider
         var snLength = phoneNumber.SubscriberNumber.Length;
 
         var initialMask = _maskCache.GetOrAdd(
-            Tuple.Create(ndcLength, snLength),
+            ValueTuple.Create(ndcLength, snLength),
             x => GenerateMask(x.Item1, x.Item2));
 
         if (international ||
