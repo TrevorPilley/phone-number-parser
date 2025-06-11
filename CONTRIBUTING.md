@@ -10,11 +10,9 @@ Before raising a bug, please check whether the issue still exists in the latest 
 
 ## Building the project
 
-The project multi targets .NET 8.0 and 9.0 in addition to .NET Standard 2.1 & 2.0 so you will need to have the relevant SDK's installed in order to build the solution locally. It also utilises C# 13 language features so you will need an IDE that supports it.
+The project multi targets .NET 9.0 and 8.0 in addition to .NET Standard 2.1 & 2.0 so you will need to have the relevant SDK's installed in order to build the solution locally. It also utilises C# 13 language features so you will need an IDE that supports it.
 
 Firstly clone or fork the repository.
-
-There is a `build.ps1` to build, test, view code coverage and create a nuget package on Windows and a `build.sh` for those on macOS or Linux.
 
 ## Adding a new country
 
