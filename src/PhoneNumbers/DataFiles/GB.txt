@@ -1,13 +1,13 @@
-# Reference: https://www.ofcom.org.uk/siteassets/resources/documents/phones-telecoms-and-internet/information-for-industry/numbering/other/national-numbering-plan.pdf?v=322516
-# Reference Date: 11/03/2022
+# Reference: https://www.ofcom.org.uk/siteassets/resources/documents/phones-telecoms-and-internet/information-for-industry/numbering/other/national-numbering-plan.pdf?v=394360
+# Reference Date: 13/01/2025
 # Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000DD0003PDFE.pdf
-# Reference Date: 18/01/2024
-G|113|Leeds|2000000-5999999,7000000-8999999|
-G|114|Sheffield|2000000-7999999|
-G|115|Nottingham|2000000-2999999,6000000-9989999|
-G|116|Leicester|2000000-4999999|
-G|117|Bristol|2000000-4999999,9000000-9989999|
-G|118|Reading|2000000-4999999,9000000-9989999|
+# Reference Date: 11/04/2025
+G|113|Leeds|2000000-9989999|
+G|114|Sheffield|2000000-9989999|
+G|115|Nottingham|2000000-9989999|
+G|116|Leicester|2000000-9989999|
+G|117|Bristol|2000000-9989999|
+G|118|Reading|2000000-9989999|
 G|1200|Clitheroe|200000-998999|
 G|1202|Bournemouth|000000-998999|N
 G|1204|Bolton|61000-64999,200000-998999|
@@ -16,7 +16,7 @@ G|1206|Colchester|200000-998999|
 G|1207|Consett|200000-998999|
 G|1208|Bodmin|72000-79999,200000-998999|
 G|1209|Redruth|200000-998999|
-G|121|Birmingham|2000000-7999999|
+G|121|Birmingham|2000000-9989999|
 G|1223|Cambridge|200000-998999|
 G|1224|Aberdeen|000000-998999|N
 G|1225|Bath|200000-998999|
@@ -68,12 +68,12 @@ G|1279|Bishops Stortford|200000-998999|
 G|1280|Buckingham|200000-998999|
 G|1282|Burnley|200000-998999|
 G|1283|Burton-on-Trent|200000-998999|
-G|1284|Bury-St-Edmunds|200000-998999|
+G|1284|Bury St Edmunds|200000-998999|
 G|1285|Cirencester|200000-998999|
 G|1286|Caernarfon|200000-998999|
 G|1287|Guisborough|200000-998999|
 G|1288|Bude|200000-998999|
-G|1289|Berwick-on-Tweed|200000-998999|
+G|1289|Berwick-upon-Tweed|200000-998999|
 G|1290|Cumnock|200000-998999|
 G|1291|Chepstow|200000-998999|
 G|1292|Ayr|200000-998999|
@@ -94,7 +94,7 @@ G|1306|Dorking|200000-998999|
 G|1307|Forfar|200000-998999|
 G|1308|Bridport|200000-998999|
 G|1309|Forres|200000-998999|
-G|131|Edinburgh|2000000-7999999|
+G|131|Edinburgh|2000000-9989999|
 G|1320|Fort Augustus|200000-998999|
 G|1322|Dartford|200000-998999|
 G|1323|Eastbourne|200000-998999|
@@ -106,7 +106,7 @@ G|1328|Fakenham|200000-998999|
 G|1329|Fareham|200000-998999|
 G|1330|Banchory|200000-998999|
 G|1332|Derby|200000-998999|
-G|1333|Anstruther|200000-998999|
+G|1333|Peat Inn|200000-998999|
 G|1334|St Andrews|200000-998999|
 G|1335|Ashbourne|200000-998999|
 G|1337|Ladybank|200000-998999|
@@ -141,8 +141,7 @@ G|1368|Dunbar|200000-998999|
 G|1369|Dunoon|200000-998999|
 G|1371|Great Dunmow|200000-998999|
 G|1372|Esher|200000-998999|
-G|1373|Frome|600000-998999|
-G|1373|North Cave|200000-599999|
+G|1373|Frome|200000-998999|
 G|1375|Grays Thurrock|200000-998999|
 G|1376|Braintree|200000-998999|
 G|1377|Driffield|200000-998999|
@@ -181,7 +180,8 @@ G|1425|Ringwood|200000-998999|
 G|1427|Gainsborough|200000-998999|
 G|1428|Haslemere|200000-998999|
 G|1429|Hartlepool|200000-998999|
-G|1430|Market Weighton / North Cave|200000-998999|
+G|1430|Market Weighton|600000-998999|
+G|1430|North Cave|200000-599999|
 G|1431|Helmsdale|200000-998999|
 G|1432|Hereford|200000-998999|
 G|1433|Hathersage|200000-998999|
@@ -323,7 +323,9 @@ G|1591|Llanwrtyd Wells|200000-998999|
 G|1592|Kirkcaldy|200000-998999|
 G|1593|Lybster|200000-998999|
 G|1594|Lydney|200000-998999|
-G|1595|Lerwick, Shetland Islands|200000-998999|
+G|1595|Lerwick, Shetland Islands|200000-749999,770000-998999|
+G|1595|Foula|750000-759999|
+G|1595|Fair Isle|760000-769999|
 G|1597|Llandrindod Wells|200000-998999|
 G|1598|Lynton|200000-998999|
 G|1599|Kyle|200000-998999|
@@ -333,7 +335,7 @@ G|1604|Northampton|200000-998999|
 G|1606|Northwich|40000-49999,74000-77999,79000-79999,200000-998999|
 G|1608|Chipping Norton|200000-998999|
 G|1609|Northallerton|200000-998999|
-G|161|Manchester|2000000-4999999,6000000-9989999|
+G|161|Manchester|2000000-9989999|
 G|1620|North Berwick|200000-998999|
 G|1621|Maldon|200000-998999|
 G|1622|Maidstone|200000-998999|
