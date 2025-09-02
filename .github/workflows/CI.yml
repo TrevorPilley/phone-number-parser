@@ -52,10 +52,15 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      - name: Setup .NET
+      - name: Setup .NET (.NET 10.0)
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 10.0.x
+
+      - name: Setup .NET (.NET 9.0)
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.0.x
 
       - name : dotnet restore
         run: dotnet restore
