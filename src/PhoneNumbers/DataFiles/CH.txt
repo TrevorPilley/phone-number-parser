@@ -1,5 +1,5 @@
-# Reference: https://www.bakom.admin.ch/dam/bakom/en/dokumente/tc/rechtliche_grundlagen/sr_784_101_113_22nummerierungsplane164.pdf.download.pdf/sr_784_101_113_22numberingplane1642002.pdf
-# Reference Date: 18/11/2020
+# Reference: https://www.bakom.admin.ch/dam/en/sd-web/Z0P7gateTOUQ/TAV_PTA_2_2_ed8_e%20(1).pdf
+# Reference Date: 01/03/2024
 G|21|Lausanne|2100000-9999999|
 G|22|Genève|3000000-9999999|
 G|24|Yverdon / Aigle|4200000-5889999|
@@ -18,11 +18,11 @@ G|56|Baden, Zurzach|2000000-6789999|
 N|58||0000000-9999999|
 G|61|Basel|2000000-9999999|
 G|62|Olten-Langenthal(Oberaargau)-Aargau-West|2000000-9689999|
+M|68-69,72-73,75-79||0000000-9999999|
 G|71|St. Gallen|2200000-9999999|
-M|73,75-79||0000000-9999999|
 M|74||0220000-8119999|P
 N|800||000000-999999|F
-N|840,842,844,848||000000-999999|
+N|840,842,844,848||000000-999999|S
 G|81|Chur|2500000-9499999|
 M|878||000000-999999|V
 N|900-901,906||000000-999999|R
