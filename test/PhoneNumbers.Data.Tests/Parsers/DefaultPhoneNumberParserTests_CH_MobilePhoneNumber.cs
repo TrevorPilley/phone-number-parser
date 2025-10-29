@@ -8,6 +8,12 @@ public class DefaultPhoneNumberParserTests_CH_MobilePhoneNumber
     private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Switzerland);
 
     [Theory]
+    [InlineData("0680000000", "68", "0000000")]
+    [InlineData("0689999999", "68", "9999999")]
+    [InlineData("0690000000", "69", "0000000")]
+    [InlineData("0699999999", "69", "9999999")]
+    [InlineData("0720000000", "72", "0000000")]
+    [InlineData("0729999999", "72", "9999999")]
     [InlineData("0730000000", "73", "0000000")]
     [InlineData("0739999999", "73", "9999999")]
     [InlineData("0750000000", "75", "0000000")]
