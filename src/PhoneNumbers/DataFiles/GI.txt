@@ -1,5 +1,5 @@
 # Reference: https://www.gra.gi/uploads/documents/Communications/Numbering%20Plan/GRA%20Numbering%20Plan.pdf via https://www.gra.gi/communications/numbering-plan
-# Reference Date: 11/05/2023
+# Reference Date: 01/03/2024
 G|200|Gibraltar|00000-99999|
 G|203|Gibraltar|00000-19999|
 G|216|Gibraltar|20000-29999,40000-84999,90000-94999|
@@ -7,6 +7,7 @@ G|222|Gibraltar|20000-29999,40000-59999,70000-79999|
 G|225|Gibraltar|00000-14999,50000-54999|
 M|51||000000-099999|
 M|52||500000-514999|
+M|54||000000-999999|
 M|56-58||000000-999999|
 M|60||100000-119999|
 N|80||00-99|F

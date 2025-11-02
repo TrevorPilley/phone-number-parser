@@ -12,6 +12,8 @@ public class DefaultPhoneNumberParserTests_GI_MobilePhoneNumber
     [InlineData("51099999", "51", "099999")]
     [InlineData("52500000", "52", "500000")]
     [InlineData("52514999", "52", "514999")]
+    [InlineData("54000000", "54", "000000")]
+    [InlineData("54999999", "54", "999999")]
     [InlineData("56000000", "56", "000000")]
     [InlineData("56999999", "56", "999999")]
     [InlineData("58000000", "58", "000000")]
