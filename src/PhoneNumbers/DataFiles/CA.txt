@@ -1,5 +1,6 @@
 # Resource: https://secure.nanpa.com/public-report/npa/non-geographic-use
 # Resource: https://cnac.ca/canadian_dial_plan/Canadian_Dial_Plan_Table.pdf
+# Resource Date: 30/06/2023
 # Resource: https://cnac.ca/data/ServiceAccessCode_600.htm
 G|204,431,584|Province of Manitoba|2000000-2109999,2120000-3109999,3120000-4109999,4120000-5109999,5120000-6109999,6120000-7109999,7120000-8109999,8120000-9109999,9120000-9999999|N
 G|226,382,519,548|South-Western part of Province of Ontario|2000000-2109999,2120000-3109999,3120000-4109999,4120000-5109999,5120000-6109999,6120000-7109999,7120000-8109999,8120000-9109999,9120000-9999999|N
