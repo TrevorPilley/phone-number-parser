@@ -727,7 +727,7 @@ public class CountryInfo_Europe_Tests
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Lithuania", countryInfo.Name);
         Assert.Equal(new[] { 3 , 2, 1}, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 8 }, countryInfo.NsnLengths);
+        Assert.Equal(new[] { 8, 12 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("8", countryInfo.TrunkPrefix);
     }
