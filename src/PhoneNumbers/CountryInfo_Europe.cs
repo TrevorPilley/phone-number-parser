@@ -483,7 +483,7 @@ public partial class CountryInfo
         IsOecdMember = true,
         Name = "Lithuania",
         NdcLengths = s_ndc_3_2_1,
-        NsnLengths = s_nsn_8,
+        NsnLengths = s_nsn_8_12,
         TrunkPrefix = "8",
     };
 

@@ -1,5 +1,6 @@
-# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200007C0001PDFE.pdf
-# Reference Date: 31/08/2012
+# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200007C0002PDFE.pdf
+# Reference Date: 06/03/2025
+N|2||00000000000-99999999999|M
 G|310|Varėna district|20000-99999|
 G|313|Druskininkai town|20000-99999|
 G|315|Alytus town and district|20000-99999|
