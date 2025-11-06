@@ -25,7 +25,9 @@ internal sealed class NumberRange
     {
         ThrowIfNullOrWhiteSpace(from);
         ThrowIfNullOrWhiteSpace(to);
-        ThrowIfLessThan(to.Length, from.Length);
+#pragma warning disable S3236
+        ThrowIfLessThan(to.Length, from.Length, nameof(to));
+#pragma warning restore S3236
 
         (From, To) = (from, to);
         _isSingleNumber = From.Equals(To, StringComparison.Ordinal);
@@ -35,7 +37,9 @@ internal sealed class NumberRange
             _fromIntValue = long.Parse(From, CultureInfo.InvariantCulture);
             _toIntValue = long.Parse(To, CultureInfo.InvariantCulture);
 
-            ThrowIfLessThan(_toIntValue, _fromIntValue);
+#pragma warning disable S3236
+            ThrowIfLessThan(_toIntValue, _fromIntValue, nameof(to));
+#pragma warning restore S3236
         }
     }
 
