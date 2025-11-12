@@ -21,6 +21,7 @@
       "markdown"
     ],
     "cSpell.ignorePaths": [
+      "src/PhoneNumbers/DataFiles/*.txt",
       "test/PhoneNumbers.Data.Tests/Parsers/DefaultPhoneNumberParserTests_*",
       "test/PhoneNumbers.Tests/Parsers/DefaultPhoneNumberParserTests_*",
       "test/PhoneNumbers.Tests/Parsers/GBPhoneNumberParserTests_*",
