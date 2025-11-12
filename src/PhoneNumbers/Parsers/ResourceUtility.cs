@@ -10,13 +10,21 @@ internal static class ResourceUtility
     internal static IReadOnlyList<CountryNumber> ReadCountryNumbers(string name) =>
         ReadLines(name)
             .Select(x => x.Split(Chars.Pipe))
-            .Select(x => new CountryNumber
+            .Select(x =>
             {
-                GeographicArea = x[2].Length > 0 ? x[2] : null,
-                Hint = ParseNumberHint(x[4].Length > 0 ? x[4][0] : Chars.Null),
-                Kind = ParseNumberKind(x[0][0]),
-                NationalDestinationCodeRanges = x[1].Length > 0 ? ParseNumberRanges(x[1]) : null,
-                SubscriberNumberRanges = ParseNumberRanges(x[3]),
+#if DEBUG && NET8_0_OR_GREATER
+                ArgumentOutOfRangeException.ThrowIfGreaterThan(x[0].Length, 1, "Kind");
+                ArgumentOutOfRangeException.ThrowIfGreaterThan(x[4].Length, 1, "Hint");
+#endif
+
+                return new CountryNumber
+                {
+                    GeographicArea = x[2].Length > 0 ? x[2] : null,
+                    Hint = ParseNumberHint(x[4].Length > 0 ? x[4][0] : Chars.Null),
+                    Kind = ParseNumberKind(x[0][0]),
+                    NationalDestinationCodeRanges = x[1].Length > 0 ? ParseNumberRanges(x[1]) : null,
+                    SubscriberNumberRanges = ParseNumberRanges(x[3]),
+                };
             })
             .ToList()
             .AsReadOnly();
