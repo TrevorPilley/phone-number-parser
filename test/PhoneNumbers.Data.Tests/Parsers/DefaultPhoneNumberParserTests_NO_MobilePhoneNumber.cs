@@ -9,7 +9,11 @@ public class DefaultPhoneNumberParserTests_NO_MobilePhoneNumber
 
     [Theory]
     [InlineData("40000000", "40000000")]
-    [InlineData("49999999", "49999999")]
+    [InlineData("41999999", "41999999")]
+    [InlineData("45000000", "45000000")]
+    [InlineData("45359999", "45359999")]
+    [InlineData("45370000", "45370000")]
+    [InlineData("48999999", "48999999")]
     [InlineData("90000000", "90000000")]
     [InlineData("99999999", "99999999")]
     public void Parse_Known_MobilePhoneNumber(string value, string subscriberNumber)
