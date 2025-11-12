@@ -369,16 +369,16 @@ public class PhoneNumber_ToString_Europe_Tests
 
     [Theory]
     [InlineData("+4722824600", "E.123", "+47 22 82 46 00")]
-    [InlineData("+4780824600", "E.123", "+47 808 24 600")]
+    [InlineData("+4780019999", "E.123", "+47 800 19 999")]
     [InlineData("+47581223344556", "E.123", "+47 58 12 23 34 45 56")]
     [InlineData("+4722824600", "N", "22 82 46 00")]
-    [InlineData("+4780824600", "N", "808 24 600")]
+    [InlineData("+4780019999", "N", "800 19 999")]
     [InlineData("+47581223344556", "N", "58 12 23 34 45 56")]
     [InlineData("+4722824600", "RFC3966", "tel:+47-22-82-46-00")]
-    [InlineData("+4780824600", "RFC3966", "tel:+47-808-24-600")]
+    [InlineData("+4780019999", "RFC3966", "tel:+47-800-19-999")]
     [InlineData("+47581223344556", "RFC3966", "tel:+47-58-12-23-34-45-56")]
     [InlineData("+4722824600", "U", "22824600")]
-    [InlineData("+4780824600", "U", "80824600")]
+    [InlineData("+4780019999", "U", "80019999")]
     [InlineData("+47581223344556", "U", "581223344556")]
     public void Norway_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
