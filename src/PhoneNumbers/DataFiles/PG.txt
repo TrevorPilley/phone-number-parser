@@ -1,5 +1,5 @@
-# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000A40009PDFE.pdf
-# Reference Date: 16/05/2022
+# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000A40010PDFE.pdf
+# Reference Date: 28/07/2025
 N|180||0000-9999|F
 N|188,200-205,207,275-276,278||0000-9999|
 N|190||0000-9999|R
@@ -20,7 +20,7 @@ G|644|MobileSAT|0000-9999|
 G|645-646|Western|0000-9999|
 G|648|Gulf|0000-9999|
 G|649|Tabubil/Kiunga|0000-9999|
-M|70-79,81,88||000000-999999|
+M|70-79,81,84,88||000000-999999|
 G|970|Manus|0000-9999|
 G|973,975-976|North Solomons|0000-9999|
 G|980-982,985,987,989|East New Britain|0000-9999|
