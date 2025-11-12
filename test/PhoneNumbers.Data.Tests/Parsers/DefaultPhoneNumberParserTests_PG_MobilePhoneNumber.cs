@@ -14,6 +14,8 @@ public class DefaultPhoneNumberParserTests_PG_MobilePhoneNumber
     [InlineData("79999999", "79", "999999")]
     [InlineData("81000000", "81", "000000")]
     [InlineData("81999999", "81", "999999")]
+    [InlineData("84000000", "84", "000000")]
+    [InlineData("84999999", "84", "999999")]
     [InlineData("88000000", "88", "000000")]
     [InlineData("88999999", "88", "999999")]
     public void Parse_Known_MobilePhoneNumber(string value, string NationalDestinationCode, string subscriberNumber)
