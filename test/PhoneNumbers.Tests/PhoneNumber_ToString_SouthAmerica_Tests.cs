@@ -29,4 +29,12 @@ public class PhoneNumber_ToString_SouthAmerica_Tests
     [InlineData("+50028459", "U", "28459")]
     public void FalklandIslands_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
+    [InlineData("+5113324079", "E.123", "+51 1 332 4079")]
+    [InlineData("+5113324079", "N", "01 332 4079")]
+    [InlineData("+5113324079", "RFC3966", "tel:+51-1-332-4079")]
+    [InlineData("+5113324079", "U", "13324079")]
+    public void Peru_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 }
