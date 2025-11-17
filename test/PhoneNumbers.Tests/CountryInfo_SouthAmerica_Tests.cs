@@ -92,7 +92,7 @@ public class CountryInfo_SouthAmerica_Tests
         Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("51", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.SouthAmerica, countryInfo.Continent);
-        Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.IsType<PEPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.Equal("Republic of Peru", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
