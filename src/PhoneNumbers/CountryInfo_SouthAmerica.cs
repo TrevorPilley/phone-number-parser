@@ -65,6 +65,6 @@ public partial class CountryInfo
         Name = "Peru",
         NdcLengths = s_ndc_2_1,
         NsnLengths = new ReadOnlyCollection<int>([6, 7, 9]),
-        TrunkPrefix = “0”,
+        TrunkPrefix = "0",
     };
 }
