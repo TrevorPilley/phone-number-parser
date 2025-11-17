@@ -12,10 +12,8 @@ internal static class ResourceUtility
             .Select(x => x.Split(Chars.Pipe))
             .Select(x =>
             {
-#if DEBUG && NET8_0_OR_GREATER
-                ArgumentOutOfRangeException.ThrowIfGreaterThan(x[0].Length, 1, "Kind");
-                ArgumentOutOfRangeException.ThrowIfGreaterThan(x[4].Length, 1, "Hint");
-#endif
+                System.Diagnostics.Debug.Assert(x[0].Length <= 1);
+                System.Diagnostics.Debug.Assert(x[4].Length <= 1);
 
                 return new CountryNumber
                 {
