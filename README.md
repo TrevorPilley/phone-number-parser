@@ -331,6 +331,7 @@ Country          | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mo
 Brazil           | BR            | 55           | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               |                                  |
 Colombia         | CO            | 57           |              | Yes        | Yes    |                    |                      |                |                                |                                   |                                  |
 Falkland Islands | FK            | 500          |              |            | Yes    |                    |                      | Yes            |                                |                                   |                                  |
+Peru             | PE            | 51           | 0            | Yes        | Yes    |                    |                      |                |                                |                                   |                                  |
 
 ### Notes
 
