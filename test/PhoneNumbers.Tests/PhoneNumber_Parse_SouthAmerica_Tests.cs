@@ -25,4 +25,12 @@ public class PhoneNumber_Parse_SouthAmerica_Tests
         Assert.NotNull(phoneNumber);
         Assert.Equal(CountryInfo.FalklandIslands, phoneNumber.Country);
     }
+
+    [Fact]
+    public void Parse_Value_For_Peru_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+5113324079");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Peru, phoneNumber.Country);
+    }
 }
