@@ -60,6 +60,7 @@ public partial class CountryInfo
     {
         CallingCode = "51",
         Continent = SouthAmerica,
+        FormatProvider = PEPhoneNumberFormatProvider.Instance,
         FullName = "Republic of Peru",
         Iso3166Code = "PE",
         Name = "Peru",
