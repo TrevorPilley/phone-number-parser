@@ -64,7 +64,7 @@ public partial class CountryInfo
         Iso3166Code = "PE",
         Name = "Peru",
         NdcLengths = s_ndc_2_1,
-        NsnLengths = new ReadOnlyCollection<int>([6, 7, 9]),
+        NsnLengths = new ReadOnlyCollection<int>([8, 9]),
         TrunkPrefix = "0",
     };
 }
