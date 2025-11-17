@@ -81,7 +81,7 @@ public class CountryInfo_SouthAmerica_Tests
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
-    
+
     [Fact]
     public void CountryInfo_Peru()
     {
@@ -103,8 +103,8 @@ public class CountryInfo_SouthAmerica_Tests
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Peru", countryInfo.Name);
         Assert.Equal([2, 1], countryInfo.NdcLengths);
-        Assert.Equal([6, 7, 9], countryInfo.NsnLengths);
+        Assert.Equal([8, 9], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
-    }   
+    }
 }
