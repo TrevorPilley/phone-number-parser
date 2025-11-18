@@ -2,14 +2,6 @@ using System.Collections.Concurrent;
 using System.Diagnostics;
 using System.Globalization;
 
-#if NET6_0_OR_GREATER
-using static System.ArgumentException;
-using static System.ArgumentOutOfRangeException;
-#else
-using static System.ArgumentExceptionEx;
-using static System.ArgumentOutOfRangeExceptionEx;
-#endif
-
 namespace PhoneNumbers.Parsers;
 
 [DebuggerDisplay("{" + nameof(GetDebuggerDisplay) + "(),nq}")]
@@ -23,10 +15,10 @@ internal sealed class NumberRange
 
     private NumberRange(string from, string to)
     {
-        ThrowIfNullOrWhiteSpace(from);
-        ThrowIfNullOrWhiteSpace(to);
+        ArgumentNullException.ThrowIfNullOrWhiteSpace(from);
+        ArgumentNullException.ThrowIfNullOrWhiteSpace(to);
 #pragma warning disable S3236
-        ThrowIfLessThan(to.Length, from.Length, nameof(to));
+        ArgumentOutOfRangeException.ThrowIfLessThan(to.Length, from.Length, nameof(to));
 #pragma warning restore S3236
 
         (From, To) = (from, to);
@@ -38,7 +30,7 @@ internal sealed class NumberRange
             _toIntValue = long.Parse(To, CultureInfo.InvariantCulture);
 
 #pragma warning disable S3236
-            ThrowIfLessThan(_toIntValue, _fromIntValue, nameof(to));
+            ArgumentOutOfRangeException.ThrowIfLessThan(_toIntValue, _fromIntValue, nameof(to));
 #pragma warning restore S3236
         }
     }
