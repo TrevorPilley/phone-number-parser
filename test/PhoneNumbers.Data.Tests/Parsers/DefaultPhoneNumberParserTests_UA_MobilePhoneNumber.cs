@@ -18,6 +18,8 @@ public class DefaultPhoneNumberParserTests_UA_MobilePhoneNumber
     [InlineData("0689999999", "68", "9999999")]
     [InlineData("0730000000", "73", "0000000")]
     [InlineData("0739999999", "73", "9999999")]
+    [InlineData("0790000000", "790", "000000")]
+    [InlineData("0790999999", "790", "999999")]
     [InlineData("0910000000", "91", "0000000")]
     [InlineData("0919999999", "91", "9999999")]
     [InlineData("0990000000", "99", "0000000")]
