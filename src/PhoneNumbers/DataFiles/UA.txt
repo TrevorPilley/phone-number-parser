@@ -1,5 +1,5 @@
-# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000DB0007PDFE.pdf
-# Reference Date: 29/07/2019
+# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000DB0009PDFE.pdf
+# Reference Date: 24/07/2025
 G|31|Zakarpattia region|0000000-9999999|
 G|32|Lviv region|0000000-9999999|
 G|33|Volyn region|0000000-9999999|
@@ -28,6 +28,7 @@ G|62|Donetsk region|0000000-9999999|
 G|64|Luhansk region|0000000-9999999|
 G|65|Crimea region|0000000-9999999|
 G|69|Sevastopol region|0000000-9999999|
+M|790||000000-999999|
 N|800||100000-899999|F
-N|891-894,897,899||000000-999999|
+N|891-895,897,899||000000-999999|
 N|900||200000-399999,900000-999999|R
