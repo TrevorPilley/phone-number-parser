@@ -20,11 +20,6 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
     internal const string Oceania = "Oceania";
     internal const string SouthAmerica = "South America";
 
-    #if !NET8_0_OR_GREATER
-    private static readonly ReadOnlyCollection<int> s_emptyIntArray = new(Array.Empty<int>());
-    private static readonly ReadOnlyDictionary<string, string> s_emptyStringDictionary = new(new Dictionary<string, string>(StringComparer.Ordinal));
-    #endif
-
     private static readonly ReadOnlyCollection<PhoneNumberFormatter> s_formatters = new(
     [
         E164PhoneNumberFormatter.Instance,
@@ -154,32 +149,17 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
     /// <summary>
     /// Gets country specific international call prefixes.
     /// </summary>
-    internal ReadOnlyDictionary<string, string> InternationalCallPrefixes { get; init; } =
-    #if NET8_0_OR_GREATER
-    ReadOnlyDictionary<string, string>.Empty;
-    #else
-    s_emptyStringDictionary;
-    #endif
+    internal ReadOnlyDictionary<string, string> InternationalCallPrefixes { get; init; } = ReadOnlyDictionary<string, string>.Empty;
 
     /// <summary>
     /// Gets the possible lengths of the national destination code.
     /// </summary>
-    internal ReadOnlyCollection<int> NdcLengths { get; init; } =
-    #if NET8_0_OR_GREATER
-    ReadOnlyCollection<int>.Empty;
-    #else
-    s_emptyIntArray;
-    #endif
+    internal ReadOnlyCollection<int> NdcLengths { get; init; } = ReadOnlyCollection<int>.Empty;
 
     /// <summary>
     /// Gets the permitted lengths of the national significant number.
     /// </summary>
-    internal ReadOnlyCollection<int> NsnLengths { get; init; } =
-    #if NET8_0_OR_GREATER
-    ReadOnlyCollection<int>.Empty;
-    #else
-    s_emptyIntArray;
-    #endif
+    internal ReadOnlyCollection<int> NsnLengths { get; init; } = ReadOnlyCollection<int>.Empty;
 
     /// <inheritdoc/>
     public static bool operator !=(CountryInfo? countryInfo1, CountryInfo? countryInfo2) =>

@@ -1,9 +1,3 @@
-#if NET6_0_OR_GREATER
-using static System.ArgumentNullException;
-#else
-using static System.ArgumentNullExceptionEx;
-#endif
-
 namespace PhoneNumbers;
 
 /// <summary>
@@ -20,8 +14,8 @@ public static class PhoneNumberExtensions
     /// <returns>Returns the number needed to dial a <see cref="PhoneNumber"/> from another <see cref="CountryInfo"/>.</returns>
     public static string NumberToDialFrom(this PhoneNumber destination, CountryInfo countryInfo)
     {
-        ThrowIfNull(destination);
-        ThrowIfNull(countryInfo);
+        ArgumentNullException.ThrowIfNull(destination);
+        ArgumentNullException.ThrowIfNull(countryInfo);
 
         if (destination.Country.SharesCallingCodeWith(countryInfo))
         {
@@ -52,8 +46,8 @@ public static class PhoneNumberExtensions
     /// <returns>Returns the number needed to dial a <see cref="PhoneNumber"/> from another <see cref="PhoneNumber"/>.</returns>
     public static string NumberToDialFrom(this PhoneNumber destination, PhoneNumber source)
     {
-        ThrowIfNull(destination);
-        ThrowIfNull(source);
+        ArgumentNullException.ThrowIfNull(destination);
+        ArgumentNullException.ThrowIfNull(source);
 
         if (source.Country.SharesCallingCodeWith(destination.Country))
         {
