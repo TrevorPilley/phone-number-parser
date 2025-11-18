@@ -8,8 +8,8 @@ public class DefaultPhoneNumberParserTests_ME_GeographicNumber
     private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Montenegro);
 
     [Theory]
-    [InlineData("020000000", "20", "000000", "Podgorica, Tuzi, Danilovgrad, Kolašin")]
-    [InlineData("020999999", "20", "999999", "Podgorica, Tuzi, Danilovgrad, Kolašin")]
+    [InlineData("020000000", "20", "000000", "Podgorica, Danilovgrad, Kolašin, Tuiz, Zeta")]
+    [InlineData("020999999", "20", "999999", "Podgorica, Danilovgrad, Kolašin, Tuiz, Zeta")]
     public void Parse_Known_GeographicPhoneNumber_2X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
     {
         var parseResult = s_parser.Parse(value);
