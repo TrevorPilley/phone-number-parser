@@ -712,7 +712,7 @@ public partial class CountryInfo
         IsOecdMember = true,
         Name = "Slovakia",
         NdcLengths = s_ndc_4_3_2_1,
-        NsnLengths = s_nsn_7_9,
+        NsnLengths = s_nsn_9_12,
         TrunkPrefix = "0",
     };
 
