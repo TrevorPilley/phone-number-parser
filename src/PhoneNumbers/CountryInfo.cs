@@ -55,6 +55,7 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
     private static readonly ReadOnlyCollection<int> s_nsn_8_9_12 = new([8, 9, 12]);
     private static readonly ReadOnlyCollection<int> s_nsn_8_12 = new([8, 12]);
     private static readonly ReadOnlyCollection<int> s_nsn_9 = new([9]);
+    private static readonly ReadOnlyCollection<int> s_nsn_9_12 = new([9, 12]);
     private static readonly ReadOnlyCollection<int> s_nsn_9_13 = new([9, 13]);
     private static readonly ReadOnlyCollection<int> s_nsn_10 = new([10]);
 

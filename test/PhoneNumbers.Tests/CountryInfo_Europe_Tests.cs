@@ -1091,7 +1091,7 @@ public class CountryInfo_Europe_Tests
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Slovakia", countryInfo.Name);
         Assert.Equal(new[] { 4, 3, 2, 1 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 7, 9 }, countryInfo.NsnLengths);
+        Assert.Equal(new[] { 9, 12 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
