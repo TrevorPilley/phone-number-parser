@@ -52,4 +52,20 @@ public partial class CountryInfo
         Name = "Falkland Islands",
         NsnLengths = new ReadOnlyCollection<int>([5]),
     };
+
+    /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Peru.
+    /// </summary>
+    public static CountryInfo Peru { get; } = new()
+    {
+        CallingCode = "51",
+        Continent = SouthAmerica,
+        FormatProvider = PEPhoneNumberFormatProvider.Instance,
+        FullName = "Republic of Peru",
+        Iso3166Code = "PE",
+        Name = "Peru",
+        NdcLengths = s_ndc_2_1,
+        NsnLengths = new ReadOnlyCollection<int>([8, 9]),
+        TrunkPrefix = "0",
+    };
 }

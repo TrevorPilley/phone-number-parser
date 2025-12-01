@@ -81,4 +81,30 @@ public class CountryInfo_SouthAmerica_Tests
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
+
+    [Fact]
+    public void CountryInfo_Peru()
+    {
+        Assert.Same(CountryInfo. Peru, CountryInfo. Peru);
+
+        var countryInfo = CountryInfo. Peru;
+
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal("51", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.SouthAmerica, countryInfo.Continent);
+        Assert.IsType<PEPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Republic of Peru", countryInfo.FullName);
+        Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
+        Assert.Equal("PE", countryInfo.Iso3166Code);
+        Assert.False(countryInfo.IsOecdMember);
+        Assert.Equal("Peru", countryInfo.Name);
+        Assert.Equal([2, 1], countryInfo.NdcLengths);
+        Assert.Equal([8, 9], countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Equal("0", countryInfo.TrunkPrefix);
+    }
 }
