@@ -40,7 +40,7 @@ phoneNumber.NumberToDialFrom(PhoneNumber.Parse("+33140477283")); // 004411427264
 
 Builds for:
 
-- .NET 8.0 and 9.0
+- .NET 10.0, 9.0 and 8.0
 - .NET Standard 2.1 - _supports .NET Core 3.0 or newer and .NET 5.0 or newer_
 - .NET Standard 2.0 - _supports .NET Core 2.0 or newer and .NET Framework 4.6.2 or newer (however consuming projects will need to be built with a minimum C# language version of 9.0 due to use of init only properties within the phone number parser library)_
 
