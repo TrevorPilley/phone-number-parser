@@ -1,10 +1,8 @@
-# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000680001PDFE.pdf
-# Reference Date: 30/07/2018
+# Reference: https://www.comreg.ie/industry/licensing/numbering/
+# Reference Date: 22/12/2025 [last reviewed]
+# Reference: https://www.comreg.ie/media/2024/04/ComReg-15136R4.pdf via https://www.comreg.ie/publication/numbering-conditions-of-use-and-application-process-3
+# Reference Date: 03/04/2024
 G|1|Dublin|2000000-9989999|
-N|151||20000-89999|R
-N|152-159||00000-09999|R
-N|159||80000-99999|R
-N|185,189||00000-09999|S
 G|21|Cork, Coachford and Kinsale|2000000-9989999|
 G|22|Mallow|20000-99899|
 G|23|Bandon|20000-99899,2000000-9989999|
@@ -42,12 +40,10 @@ G|66|Tralee, Dingle, Killorglin, Cahirciveen|2000000-9989999|
 G|67|Nenagh|20000-99899|
 G|68|Listowel|20000-99899|
 G|69|Newcastle West|20000-99899|
-M|700||000000-999999|V
 G|71|Sligo, Manorhamilton, Carrick-on- Shannon|2000000-9989999|
 G|74|Letterkenny, Donegal, Dungloe, Buncrana|2000000-9989999|
-N|800||000000-999999|F
-M|822||000000-999999|P
-M|83-87,89||0000000-9999999|
+N|818||000000-999999|
+M|83,85-87,89||0000000-9999999|
 N|88||0000000000-9999999999|M
 G|90|Athlone, Roscommon, Ballinasloe, Portumna|2000000-9989999|
 G|91|Galway, Loughrea, Gort|200000-998999|
