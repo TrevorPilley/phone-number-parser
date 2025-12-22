@@ -5,7 +5,6 @@
       "cref",
       "Firenze",
       "Freephone",
-      "fuget",
       "inheritdoc",
       "Maarten",
       "nanp",
@@ -16,15 +15,16 @@
       "Sint",
       "Xunit"
     ],
-    "cSpell.enabledLanguageIds": [
-      "csharp",
-      "markdown"
-    ],
+    "cSpell.enabledFileTypes": {
+      "*": false,
+      "csharp": true,
+      "markdown": true
+    },
     "cSpell.ignorePaths": [
       "src/PhoneNumbers/DataFiles/*.txt",
       "test/PhoneNumbers.Data.Tests/Parsers/DefaultPhoneNumberParserTests_*",
       "test/PhoneNumbers.Tests/Parsers/DefaultPhoneNumberParserTests_*",
       "test/PhoneNumbers.Tests/Parsers/GBPhoneNumberParserTests_*",
   ],
-  "dotnet.defaultSolution": "PhoneNumbers.sln"
+  "dotnet.defaultSolution": "PhoneNumbers.slnx"
 }
