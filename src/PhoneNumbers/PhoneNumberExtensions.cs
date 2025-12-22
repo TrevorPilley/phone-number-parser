@@ -34,6 +34,13 @@ public static class PhoneNumberExtensions
                 : destination.SubscriberNumber;
         }
 
+        if (countryInfo == CountryInfo.Ireland && destination.IsNorthernIrelandLandline())
+        {
+            // Even though Northern Ireland is part of the United Kingdom numbering plan,
+            // Republic of Ireland can dial Northern Ireland fixed line numbers via a 48 NDC.
+            return $"{countryInfo.TrunkPrefix}48{destination.SubscriberNumber}";
+        }
+
         return $"{countryInfo.InternationalCallPrefix}{destination.Country.CallingCode}{destination.NationalSignificantNumber}";
     }
 
@@ -69,6 +76,10 @@ public static class PhoneNumberExtensions
         phoneNumber.Country.AllowsLocalGeographicDialling &&
         phoneNumber.Kind == PhoneNumberKind.GeographicPhoneNumber &&
         !((GeographicPhoneNumber)phoneNumber).NationalDiallingOnly;
+
+    private static bool IsNorthernIrelandLandline(this PhoneNumber phoneNumber) =>
+        phoneNumber.Country == CountryInfo.UnitedKingdom &&
+        phoneNumber.NationalDestinationCode!.Equals("28", StringComparison.OrdinalIgnoreCase);
 
     private static bool IsSanMarinoLandline(this PhoneNumber phoneNumber) =>
         phoneNumber.Country == CountryInfo.SanMarino &&
