@@ -1,4 +1,5 @@
 #pragma warning disable S3261 // Remove this empty namespace.
+#pragma warning disable IDE0130 // Namespace does not match folder structure
 namespace System.Diagnostics.CodeAnalysis
 {
     #if NETSTANDARD2_0
@@ -174,4 +175,5 @@ namespace PhoneNumbers
     #endif //!NET8_OR_GREATER
 
 }
+#pragma warning restore IDE0130 // Namespace does not match folder structure
 #pragma warning restore S3261 // Remove this empty namespace.
