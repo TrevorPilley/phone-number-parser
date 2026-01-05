@@ -1,11 +1,11 @@
 namespace PhoneNumbers.Tests.Parsers;
 
 /// <summary>
-/// Contains unit tests for the <see cref="DefaultPhoneNumberParser"/> class for Czech Republic <see cref="PhoneNumber"/>s.
+/// Contains unit tests for the <see cref="DefaultPhoneNumberParser"/> class for Czechia <see cref="PhoneNumber"/>s.
 /// </summary>
 public class DefaultPhoneNumberParserTests_CZ_MobilePhoneNumber
 {
-    private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.CzechRepublic);
+    private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Czechia);
 
     [Theory]
     [InlineData("601000000", "601", "000000")]
@@ -39,7 +39,7 @@ public class DefaultPhoneNumberParserTests_CZ_MobilePhoneNumber
         Assert.IsType<MobilePhoneNumber>(phoneNumber);
 
         var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.CzechRepublic, mobilePhoneNumber.Country);
+        Assert.Equal(CountryInfo.Czechia, mobilePhoneNumber.Country);
         Assert.False(mobilePhoneNumber.IsPager);
         Assert.False(mobilePhoneNumber.IsVirtual);
         Assert.Equal(NationalDestinationCode, mobilePhoneNumber.NationalDestinationCode);
@@ -60,7 +60,7 @@ public class DefaultPhoneNumberParserTests_CZ_MobilePhoneNumber
         Assert.IsType<MobilePhoneNumber>(phoneNumber);
 
         var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.CzechRepublic, mobilePhoneNumber.Country);
+        Assert.Equal(CountryInfo.Czechia, mobilePhoneNumber.Country);
         Assert.False(mobilePhoneNumber.IsPager);
         Assert.True(mobilePhoneNumber.IsVirtual);
         Assert.Equal(NationalDestinationCode, mobilePhoneNumber.NationalDestinationCode);

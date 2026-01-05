@@ -1,11 +1,11 @@
 namespace PhoneNumbers.Tests.Parsers;
 
 /// <summary>
-/// Contains unit tests for the <see cref="DefaultPhoneNumberParser"/> class for Turkey <see cref="PhoneNumber"/>s.
+/// Contains unit tests for the <see cref="DefaultPhoneNumberParser"/> class for Turkiye <see cref="PhoneNumber"/>s.
 /// </summary>
 public class DefaultPhoneNumberParserTests_TR_MobilePhoneNumber
 {
-    private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Turkey);
+    private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Turkiye);
 
     [Theory]
     [InlineData("05010000000", "501", "0000000")]
@@ -37,7 +37,7 @@ public class DefaultPhoneNumberParserTests_TR_MobilePhoneNumber
         Assert.IsType<MobilePhoneNumber>(phoneNumber);
 
         var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.Turkey, mobilePhoneNumber.Country);
+        Assert.Equal(CountryInfo.Turkiye, mobilePhoneNumber.Country);
         Assert.False(mobilePhoneNumber.IsPager);
         Assert.False(mobilePhoneNumber.IsVirtual);
         Assert.Equal(NationalDestinationCode, mobilePhoneNumber.NationalDestinationCode);
@@ -58,11 +58,10 @@ public class DefaultPhoneNumberParserTests_TR_MobilePhoneNumber
         Assert.IsType<MobilePhoneNumber>(phoneNumber);
 
         var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.Turkey, mobilePhoneNumber.Country);
+        Assert.Equal(CountryInfo.Turkiye, mobilePhoneNumber.Country);
         Assert.False(mobilePhoneNumber.IsPager);
         Assert.True(mobilePhoneNumber.IsVirtual);
         Assert.Equal(NationalDestinationCode, mobilePhoneNumber.NationalDestinationCode);
         Assert.Equal(subscriberNumber, mobilePhoneNumber.SubscriberNumber);
     }
 }
-
