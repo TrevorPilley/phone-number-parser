@@ -1113,7 +1113,7 @@ public class CountryInfo_Europe_Tests
         Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
-        Assert.Equal("SL", countryInfo.Iso3166Code);
+        Assert.Equal("SI", countryInfo.Iso3166Code);
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Slovenia", countryInfo.Name);
         Assert.Equal(new[] { 4, 3, 2, 1 }, countryInfo.NdcLengths);

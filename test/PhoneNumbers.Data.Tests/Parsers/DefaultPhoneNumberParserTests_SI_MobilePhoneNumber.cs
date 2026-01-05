@@ -3,7 +3,7 @@ namespace PhoneNumbers.Tests.Parsers;
 /// <summary>
 /// Contains unit tests for the <see cref="DefaultPhoneNumberParser"/> class for Slovenia <see cref="PhoneNumber"/>s.
 /// </summary>
-public class DefaultPhoneNumberParserTests_SL_MobilePhoneNumber
+public class DefaultPhoneNumberParserTests_SI_MobilePhoneNumber
 {
     private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Slovenia);
 
