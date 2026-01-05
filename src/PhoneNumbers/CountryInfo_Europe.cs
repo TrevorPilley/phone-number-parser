@@ -728,7 +728,7 @@ public partial class CountryInfo
         FullName = "Republic of Slovenia",
         IsEuropeanUnionMember = true,
         IsNatoMember = true,
-        Iso3166Code = "SL",
+        Iso3166Code = "SI",
         IsOecdMember = true,
         Name = "Slovenia",
         NdcLengths = s_ndc_4_3_2_1,
