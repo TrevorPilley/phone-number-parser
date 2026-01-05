@@ -34,6 +34,7 @@ public class PhoneNumberExtensionsTests
     [InlineData("CA", "+12124841200", "2124841200")]       // US number from Canada
     [InlineData("IE", "+442894484957", "04894484957")]     // Northern Ireland number from Republic of Ireland (via 48 NDC)
     [InlineData("IE", "+447106865391", "00447106865391")]  // United Kingdom number from Republic of Ireland (international)
+    [InlineData("IE", "+33140477283", "0033140477283")]    // France number from Republic of Ireland
     public void NumberToDialFrom_CountryInfo(string sourceCountryCode, string destination, string expected) =>
         Assert.Equal(
             expected,
@@ -84,8 +85,9 @@ public class PhoneNumberExtensionsTests
     [InlineData("+19517121234", "+19514185634", "9514185634")]       // US within NDC, local dialling permitted, NDC required
     [InlineData("+15597121234", "+15594185634", "4185634")]          // US within NDC, local dialling permitted, NDC not required
     [InlineData("+18093725555", "+18093721909", "8093721909")]       // Dominican Republic, NANP but local dialling not permitted
-    [InlineData("+35318049600", "+442894484957", "04894484957")]     // Republic of Ireland to Northern Ireland (via 48 NDC)
-    [InlineData("+35318049600", "+447106865391", "00447106865391")]  // United Kingdom number from Republic of Ireland (international)
+    [InlineData("+35318049600", "+442894484957", "04894484957")]     // Republic of Ireland number to Northern Ireland (via 48 NDC)
+    [InlineData("+35318049600", "+447106865391", "00447106865391")]  // Republic of Ireland number to United Kingdom number (international)
+    [InlineData("+35318049600", "+33140477283", "0033140477283")]    // Republic of Ireland number to France
     public void NumberToDialFrom_PhoneNumber(string source, string destination, string expected) =>
         Assert.Equal(
             expected,
