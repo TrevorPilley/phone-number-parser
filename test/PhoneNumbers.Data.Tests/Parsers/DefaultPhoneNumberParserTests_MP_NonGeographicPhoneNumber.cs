@@ -5,7 +5,7 @@ namespace PhoneNumbers.Tests.Parsers;
 /// </summary>
 public class DefaultPhoneNumberParserTests_MP_NonGeographicPhoneNumber
 {
-    private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.NorthernMarianaIsland);
+    private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.NorthernMarianaIslands);
 
     [Theory]
     [InlineData("6702000000", "670", "2000000")]
@@ -37,7 +37,7 @@ public class DefaultPhoneNumberParserTests_MP_NonGeographicPhoneNumber
         Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
 
         var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.NorthernMarianaIsland, nonGeographicPhoneNumber.Country);
+        Assert.Equal(CountryInfo.NorthernMarianaIslands, nonGeographicPhoneNumber.Country);
         Assert.False(nonGeographicPhoneNumber.IsFreephone);
         Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
         Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
