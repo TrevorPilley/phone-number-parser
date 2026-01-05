@@ -19,11 +19,11 @@ public class PhoneNumber_Parse_Asia_Tests
     }
 
     [Fact]
-    public void Parse_Value_For_Macau_CallingCode()
+    public void Parse_Value_For_Macao_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+85328000000");
         Assert.NotNull(phoneNumber);
-        Assert.Equal(CountryInfo.Macau, phoneNumber.Country);
+        Assert.Equal(CountryInfo.Macao, phoneNumber.Country);
     }
 
     [Fact]
@@ -59,11 +59,11 @@ public class PhoneNumber_Parse_Asia_Tests
     }
 
     [Fact]
-    public void Parse_Value_For_Turkey_CallingCode()
+    public void Parse_Value_For_Turkiye_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+903122947200");
         Assert.NotNull(phoneNumber);
-        Assert.Equal(CountryInfo.Turkey, phoneNumber.Country);
+        Assert.Equal(CountryInfo.Turkiye, phoneNumber.Country);
     }
 
     [Fact]

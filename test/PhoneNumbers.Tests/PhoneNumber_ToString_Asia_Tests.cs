@@ -23,7 +23,7 @@ public class PhoneNumber_ToString_Asia_Tests
     [InlineData("+85328000000", "N", "2800 0000")]
     [InlineData("+85328000000", "RFC3966", "tel:+853-2800-0000")]
     [InlineData("+85328000000", "U", "28000000")]
-    public void Macau_Numbers(string input, string format, string expected) =>
+    public void Macao_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
@@ -67,7 +67,7 @@ public class PhoneNumber_ToString_Asia_Tests
     [InlineData("+903122947200", "RFC3966", "tel:+90-312-294-72-00")]
     [InlineData("+904441234", "U", "04441234")]
     [InlineData("+903122947200", "U", "03122947200")]
-    public void Turkey_Numbers(string input, string format, string expected) =>
+    public void Turkiye_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
