@@ -5,7 +5,7 @@ namespace PhoneNumbers.Tests.Parsers;
 /// </summary>
 public class DefaultPhoneNumberParserTests_TR_NonGeographicPhoneNumber
 {
-    private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Turkey);
+    private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Turkiye);
 
     [Theory]
     [InlineData("04440000", "4440000")]
@@ -21,7 +21,7 @@ public class DefaultPhoneNumberParserTests_TR_NonGeographicPhoneNumber
         Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
 
         var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.Turkey, nonGeographicPhoneNumber.Country);
+        Assert.Equal(CountryInfo.Turkiye, nonGeographicPhoneNumber.Country);
         Assert.False(nonGeographicPhoneNumber.IsFreephone);
         Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
         Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
@@ -48,7 +48,7 @@ public class DefaultPhoneNumberParserTests_TR_NonGeographicPhoneNumber
         Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
 
         var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.Turkey, nonGeographicPhoneNumber.Country);
+        Assert.Equal(CountryInfo.Turkiye, nonGeographicPhoneNumber.Country);
         Assert.False(nonGeographicPhoneNumber.IsFreephone);
         Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
         Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
@@ -73,7 +73,7 @@ public class DefaultPhoneNumberParserTests_TR_NonGeographicPhoneNumber
         Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
 
         var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.Turkey, nonGeographicPhoneNumber.Country);
+        Assert.Equal(CountryInfo.Turkiye, nonGeographicPhoneNumber.Country);
         Assert.False(nonGeographicPhoneNumber.IsFreephone);
         Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
         Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
@@ -96,7 +96,7 @@ public class DefaultPhoneNumberParserTests_TR_NonGeographicPhoneNumber
         Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
 
         var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.Turkey, nonGeographicPhoneNumber.Country);
+        Assert.Equal(CountryInfo.Turkiye, nonGeographicPhoneNumber.Country);
         Assert.True(nonGeographicPhoneNumber.IsFreephone);
         Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
         Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
@@ -123,7 +123,7 @@ public class DefaultPhoneNumberParserTests_TR_NonGeographicPhoneNumber
         Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
 
         var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.Turkey, nonGeographicPhoneNumber.Country);
+        Assert.Equal(CountryInfo.Turkiye, nonGeographicPhoneNumber.Country);
         Assert.False(nonGeographicPhoneNumber.IsFreephone);
         Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
         Assert.True(nonGeographicPhoneNumber.IsPremiumRate);

@@ -5,7 +5,7 @@ namespace PhoneNumbers.Tests.Parsers;
 /// </summary>
 public class DefaultPhoneNumberParserTests_CZ_GeographicNumber
 {
-    private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.CzechRepublic);
+    private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Czechia);
 
     [Theory]
     [InlineData("200000000", "2", "00000000", "Capital Praha and Region Stredocesky")]
@@ -21,7 +21,7 @@ public class DefaultPhoneNumberParserTests_CZ_GeographicNumber
         Assert.IsType<GeographicPhoneNumber>(phoneNumber);
 
         var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.CzechRepublic, geographicPhoneNumber.Country);
+        Assert.Equal(CountryInfo.Czechia, geographicPhoneNumber.Country);
         Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
         Assert.Equal(NationalDestinationCode, geographicPhoneNumber.NationalDestinationCode);
         Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
@@ -51,7 +51,7 @@ public class DefaultPhoneNumberParserTests_CZ_GeographicNumber
         Assert.IsType<GeographicPhoneNumber>(phoneNumber);
 
         var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.CzechRepublic, geographicPhoneNumber.Country);
+        Assert.Equal(CountryInfo.Czechia, geographicPhoneNumber.Country);
         Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
         Assert.Equal(NationalDestinationCode, geographicPhoneNumber.NationalDestinationCode);
         Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
@@ -79,7 +79,7 @@ public class DefaultPhoneNumberParserTests_CZ_GeographicNumber
         Assert.IsType<GeographicPhoneNumber>(phoneNumber);
 
         var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.CzechRepublic, geographicPhoneNumber.Country);
+        Assert.Equal(CountryInfo.Czechia, geographicPhoneNumber.Country);
         Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
         Assert.Equal(NationalDestinationCode, geographicPhoneNumber.NationalDestinationCode);
         Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
@@ -113,7 +113,7 @@ public class DefaultPhoneNumberParserTests_CZ_GeographicNumber
         Assert.IsType<GeographicPhoneNumber>(phoneNumber);
 
         var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.CzechRepublic, geographicPhoneNumber.Country);
+        Assert.Equal(CountryInfo.Czechia, geographicPhoneNumber.Country);
         Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
         Assert.Equal(NationalDestinationCode, geographicPhoneNumber.NationalDestinationCode);
         Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);

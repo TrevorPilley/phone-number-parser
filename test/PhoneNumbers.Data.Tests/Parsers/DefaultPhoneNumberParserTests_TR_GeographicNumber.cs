@@ -5,7 +5,7 @@ namespace PhoneNumbers.Tests.Parsers;
 /// </summary>
 public class DefaultPhoneNumberParserTests_TR_GeographicNumber
 {
-    private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Turkey);
+    private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Turkiye);
 
     [Theory]
     [InlineData("02122000000", "212", "2000000", "Istanbul (European Side)")]
@@ -67,7 +67,7 @@ public class DefaultPhoneNumberParserTests_TR_GeographicNumber
         Assert.IsType<GeographicPhoneNumber>(phoneNumber);
 
         var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.Turkey, geographicPhoneNumber.Country);
+        Assert.Equal(CountryInfo.Turkiye, geographicPhoneNumber.Country);
         Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
         Assert.Equal(NationalDestinationCode, geographicPhoneNumber.NationalDestinationCode);
         Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
@@ -145,7 +145,7 @@ public class DefaultPhoneNumberParserTests_TR_GeographicNumber
         Assert.IsType<GeographicPhoneNumber>(phoneNumber);
 
         var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.Turkey, geographicPhoneNumber.Country);
+        Assert.Equal(CountryInfo.Turkiye, geographicPhoneNumber.Country);
         Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
         Assert.Equal(NationalDestinationCode, geographicPhoneNumber.NationalDestinationCode);
         Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
@@ -219,7 +219,7 @@ public class DefaultPhoneNumberParserTests_TR_GeographicNumber
         Assert.IsType<GeographicPhoneNumber>(phoneNumber);
 
         var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.Turkey, geographicPhoneNumber.Country);
+        Assert.Equal(CountryInfo.Turkiye, geographicPhoneNumber.Country);
         Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
         Assert.Equal(NationalDestinationCode, geographicPhoneNumber.NationalDestinationCode);
         Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);

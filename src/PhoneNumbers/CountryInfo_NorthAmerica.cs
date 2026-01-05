@@ -305,7 +305,7 @@ public partial class CountryInfo
     /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Northern Mariana Islands.
     /// </summary>
-    public static CountryInfo NorthernMarianaIsland { get; } = new()
+    public static CountryInfo NorthernMarianaIslands { get; } = new()
     {
         AllowsLocalGeographicDialling = true,
         CallingCode = NanpCallingCode,

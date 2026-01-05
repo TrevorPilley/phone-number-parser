@@ -74,11 +74,11 @@ public class PhoneNumber_Parse_Europe_Tests
     }
 
     [Fact]
-    public void Parse_Value_For_CzechRepublic_CallingCode()
+    public void Parse_Value_For_Czechia_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+420224004111");
         Assert.NotNull(phoneNumber);
-        Assert.Equal(CountryInfo.CzechRepublic, phoneNumber.Country);
+        Assert.Equal(CountryInfo.Czechia, phoneNumber.Country);
     }
 
     [Fact]

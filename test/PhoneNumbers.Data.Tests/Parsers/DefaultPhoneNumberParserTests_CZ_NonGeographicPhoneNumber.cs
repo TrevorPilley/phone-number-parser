@@ -5,7 +5,7 @@ namespace PhoneNumbers.Tests.Parsers;
 /// </summary>
 public class DefaultPhoneNumberParserTests_CZ_NonGeographicPhoneNumber
 {
-    private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.CzechRepublic);
+    private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Czechia);
 
     [Theory]
     [InlineData("820000000", "820", "000000")]
@@ -31,7 +31,7 @@ public class DefaultPhoneNumberParserTests_CZ_NonGeographicPhoneNumber
         Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
 
         var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.CzechRepublic, nonGeographicPhoneNumber.Country);
+        Assert.Equal(CountryInfo.Czechia, nonGeographicPhoneNumber.Country);
         Assert.False(nonGeographicPhoneNumber.IsFreephone);
         Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
         Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
@@ -78,7 +78,7 @@ public class DefaultPhoneNumberParserTests_CZ_NonGeographicPhoneNumber
         Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
 
         var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.CzechRepublic, nonGeographicPhoneNumber.Country);
+        Assert.Equal(CountryInfo.Czechia, nonGeographicPhoneNumber.Country);
         Assert.False(nonGeographicPhoneNumber.IsFreephone);
         Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
         Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
@@ -101,7 +101,7 @@ public class DefaultPhoneNumberParserTests_CZ_NonGeographicPhoneNumber
         Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
 
         var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.CzechRepublic, nonGeographicPhoneNumber.Country);
+        Assert.Equal(CountryInfo.Czechia, nonGeographicPhoneNumber.Country);
         Assert.True(nonGeographicPhoneNumber.IsFreephone);
         Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
         Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
@@ -132,7 +132,7 @@ public class DefaultPhoneNumberParserTests_CZ_NonGeographicPhoneNumber
         Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
 
         var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.CzechRepublic, nonGeographicPhoneNumber.Country);
+        Assert.Equal(CountryInfo.Czechia, nonGeographicPhoneNumber.Country);
         Assert.False(nonGeographicPhoneNumber.IsFreephone);
         Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
         Assert.True(nonGeographicPhoneNumber.IsPremiumRate);
@@ -165,7 +165,7 @@ public class DefaultPhoneNumberParserTests_CZ_NonGeographicPhoneNumber
         Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
 
         var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.CzechRepublic, nonGeographicPhoneNumber.Country);
+        Assert.Equal(CountryInfo.Czechia, nonGeographicPhoneNumber.Country);
         Assert.False(nonGeographicPhoneNumber.IsFreephone);
         Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
         Assert.False(nonGeographicPhoneNumber.IsPremiumRate);

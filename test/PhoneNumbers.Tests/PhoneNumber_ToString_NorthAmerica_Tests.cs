@@ -143,7 +143,7 @@ public class PhoneNumber_ToString_NorthAmerica_Tests
     [InlineData("+16702202200", "N", "(670) 220-2200")]
     [InlineData("+16702202200", "RFC3966", "tel:+1-670-220-2200")]
     [InlineData("+16702202200", "U", "6702202200")]
-    public void NorthernMarianaIsland_Numbers(string input, string format, string expected) =>
+    public void NorthernMarianaIslands_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
