@@ -87,7 +87,7 @@ public class PhoneNumberExtensionsTests
     [InlineData("+18093725555", "+18093721909", "8093721909")]       // Dominican Republic, NANP but local dialling not permitted
     [InlineData("+35318049600", "+442894484957", "04894484957")]     // Republic of Ireland to Northern Ireland (via 48 NDC)
     [InlineData("+35318049600", "+447106865391", "00447106865391")]  // United Kingdom number from Republic of Ireland (international)
-    [InlineData("+353567704100", "+353469422213", "03469422213")]    // Republic of Ireland number from Republic of Ireland
+    [InlineData("+353567704100", "+353469422213", "0469422213")]     // Republic of Ireland number from Republic of Ireland
     public void NumberToDialFrom_PhoneNumber(string source, string destination, string expected) =>
         Assert.Equal(
             expected,
