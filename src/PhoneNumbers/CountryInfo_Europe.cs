@@ -162,7 +162,7 @@ public partial class CountryInfo
     /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Czechia (Czech Republic).
     /// </summary>
-    public static CountryInfo CzechRepublic { get; } = new()
+    public static CountryInfo Czechia { get; } = new()
     {
         CallingCode = "420",
         Continent = Europe,

@@ -78,7 +78,7 @@ public class PhoneNumber_Parse_Europe_Tests
     {
         var phoneNumber = PhoneNumber.Parse("+420224004111");
         Assert.NotNull(phoneNumber);
-        Assert.Equal(CountryInfo.CzechRepublic, phoneNumber.Country);
+        Assert.Equal(CountryInfo.Czechia, phoneNumber.Country);
     }
 
     [Fact]

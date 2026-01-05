@@ -241,9 +241,9 @@ public class CountryInfo_Europe_Tests
     [Fact]
     public void CountryInfo_CzechRepublic()
     {
-        Assert.Same(CountryInfo.CzechRepublic, CountryInfo.CzechRepublic);
+        Assert.Same(CountryInfo.Czechia, CountryInfo.Czechia);
 
-        var countryInfo = CountryInfo.CzechRepublic;
+        var countryInfo = CountryInfo.Czechia;
 
         Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("420", countryInfo.CallingCode);

@@ -143,7 +143,7 @@ public class PhoneNumber_Parse_NorthAmerica_Tests
     {
         var phoneNumber = PhoneNumber.Parse("+16702202200");
         Assert.NotNull(phoneNumber);
-        Assert.Equal(CountryInfo.NorthernMarianaIsland, phoneNumber.Country);
+        Assert.Equal(CountryInfo.NorthernMarianaIslands, phoneNumber.Country);
     }
 
     [Fact]
@@ -207,7 +207,7 @@ public class PhoneNumber_Parse_NorthAmerica_Tests
     {
         var phoneNumber = PhoneNumber.Parse("+13407731404");
         Assert.NotNull(phoneNumber);
-        Assert.Equal(CountryInfo.UnitedStatesVirginIslands, phoneNumber.Country);
+        Assert.Equal(CountryInfo.VirginIslandsOfTheUnitedStates, phoneNumber.Country);
     }
 
     [Fact]
