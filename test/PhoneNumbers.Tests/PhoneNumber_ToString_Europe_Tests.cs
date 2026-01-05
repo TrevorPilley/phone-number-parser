@@ -91,7 +91,7 @@ public class PhoneNumber_ToString_Europe_Tests
     [InlineData("+420224004111", "U", "224004111")]
     [InlineData("+420910687654", "U", "910687654")]
     [InlineData("+420351786544", "U", "351786544")]
-    public void CzechRepublic_Numbers(string input, string format, string expected) =>
+    public void Czechia_Numbers(string input, string format, string expected) =>
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
