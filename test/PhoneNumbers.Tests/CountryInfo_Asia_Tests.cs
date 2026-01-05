@@ -15,7 +15,7 @@ public class CountryInfo_Asia_Tests
         Assert.Equal("852", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
-        Assert.Equal("Hong Kong", countryInfo.FullName);
+        Assert.Equal("Hong Kong Special Administrative Region of China", countryInfo.FullName);
         Assert.Equal("001", countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsArabLeagueMember);
@@ -67,7 +67,7 @@ public class CountryInfo_Asia_Tests
         Assert.Equal("853", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
-        Assert.Equal("Macau", countryInfo.FullName);
+        Assert.Equal("Macao Special Administrative Region of China", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsArabLeagueMember);
@@ -75,7 +75,7 @@ public class CountryInfo_Asia_Tests
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("MO", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
-        Assert.Equal("Macau", countryInfo.Name);
+        Assert.Equal("Macao", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
         Assert.Equal(new[] { 8 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
@@ -205,7 +205,7 @@ public class CountryInfo_Asia_Tests
         Assert.True(countryInfo.IsNatoMember);
         Assert.Equal("TR", countryInfo.Iso3166Code);
         Assert.True(countryInfo.IsOecdMember);
-        Assert.Equal("Turkey", countryInfo.Name);
+        Assert.Equal("Türkiye", countryInfo.Name);
         Assert.Equal(new[] { 3, 0 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 7, 10 }, countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);

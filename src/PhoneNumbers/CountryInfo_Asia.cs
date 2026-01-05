@@ -12,7 +12,7 @@ public partial class CountryInfo
     {
         CallingCode = "852",
         Continent = Asia,
-        FullName = "Hong Kong",
+        FullName = "Hong Kong Special Administrative Region of China",
         InternationalCallPrefix = "001",
         Iso3166Code = "HK",
         Name = "Hong Kong",
@@ -37,15 +37,15 @@ public partial class CountryInfo
     };
 
     /// <summary>
-    /// Gets the <see cref="CountryInfo"/> for Macau.
+    /// Gets the <see cref="CountryInfo"/> for Macau (Macao).
     /// </summary>
     public static CountryInfo Macau { get; } = new()
     {
         CallingCode = "853",
         Continent = Asia,
-        FullName = "Macau",
+        FullName = "Macao Special Administrative Region of China",
         Iso3166Code = "MO",
-        Name = "Macau",
+        Name = "Macao",
         NsnLengths = s_nsn_8,
     };
 
@@ -111,7 +111,7 @@ public partial class CountryInfo
     };
 
     /// <summary>
-    /// Gets the <see cref="CountryInfo"/> for Turkey.
+    /// Gets the <see cref="CountryInfo"/> for Türkiye.
     /// </summary>
     public static CountryInfo Turkey { get; } = new()
     {
@@ -122,7 +122,7 @@ public partial class CountryInfo
         IsNatoMember = true,
         Iso3166Code = "TR",
         IsOecdMember = true,
-        Name = "Turkey",
+        Name = "Türkiye",
         NdcLengths = new ReadOnlyCollection<int>([3, 0]),
         NsnLengths = new ReadOnlyCollection<int>([7, 10]),
         TrunkPrefix = "0",

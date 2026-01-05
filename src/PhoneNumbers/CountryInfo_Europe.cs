@@ -140,7 +140,7 @@ public partial class CountryInfo
     };
 
     /// <summary>
-    /// Gets the <see cref="CountryInfo"/> for Czech Republic.
+    /// Gets the <see cref="CountryInfo"/> for Czechia (Czech Republic).
     /// </summary>
     public static CountryInfo CzechRepublic { get; } = new()
     {
@@ -152,7 +152,7 @@ public partial class CountryInfo
         IsNatoMember = true,
         Iso3166Code = "CZ",
         IsOecdMember = true,
-        Name = "Czech Republic",
+        Name = "Czechia",
         NdcLengths = s_ndc_3_2_1,
         NsnLengths = new ReadOnlyCollection<int>([7, 9, 10, 11, 12]),
     };
@@ -164,7 +164,7 @@ public partial class CountryInfo
     {
         CallingCode = "45",
         Continent = Europe,
-        FullName = "Denmark",
+        FullName = "Kingdom of Denmark",
         IsEuropeanUnionMember = true,
         IsNatoMember = true,
         Iso3166Code = "DK",
@@ -348,7 +348,7 @@ public partial class CountryInfo
     };
 
     /// <summary>
-    /// Gets the <see cref="CountryInfo"/> for Ireland.
+    /// Gets the <see cref="CountryInfo"/> for Ireland (Republic of Ireland).
     /// </summary>
     /// <remarks>Covers the Republic of Ireland, Northern Ireland is part of the United Kingdom.</remarks>
     public static CountryInfo Ireland { get; } = new()
@@ -393,7 +393,7 @@ public partial class CountryInfo
         CallingCode = "39",
         Continent = Europe,
         FormatProvider = SimplePhoneNumberFormatProvider.Default,
-        FullName = "Italian Republic",
+        FullName = "Republic of Italy",
         IsEuropeanUnionMember = true,
         IsNatoMember = true,
         Iso3166Code = "IT",
@@ -570,7 +570,7 @@ public partial class CountryInfo
     {
         CallingCode = "31",
         Continent = Europe,
-        FullName = "Netherlands",
+        FullName = "Kingdom of the Netherlands",
         FormatProvider = NLPhoneNumberFormatProvider.Instance,
         IsEuropeanUnionMember = true,
         IsNatoMember = true,
@@ -676,7 +676,7 @@ public partial class CountryInfo
         CallingCode = "378",
         Continent = Europe,
         FormatProvider = SMPhoneNumberFormatProvider.Instance,
-        FullName = "Most Serene Republic of San Marino",
+        FullName = "Republic of San Marino",
         Iso3166Code = "SM",
         Name = "San Marino",
         NsnLengths = s_nsn_6_7_8_9_10,
@@ -809,7 +809,7 @@ public partial class CountryInfo
     };
 
     /// <summary>
-    /// Gets the <see cref="CountryInfo"/> for the United Kingdom.
+    /// Gets the <see cref="CountryInfo"/> for the United Kingdom (UK).
     /// </summary>
     /// <remarks>Covers England, Scotland, Wales and Northern Ireland.</remarks>
     public static CountryInfo UnitedKingdom { get; } = new()
