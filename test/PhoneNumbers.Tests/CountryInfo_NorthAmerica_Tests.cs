@@ -448,11 +448,11 @@ public class CountryInfo_NorthAmerica_Tests
     }
 
     [Fact]
-    public void CountryInfo_NorthernMarianaIsland()
+    public void CountryInfo_NorthernMarianaIslands()
     {
-        Assert.Same(CountryInfo.NorthernMarianaIsland, CountryInfo.NorthernMarianaIsland);
+        Assert.Same(CountryInfo.NorthernMarianaIslands, CountryInfo.NorthernMarianaIslands);
 
-        var countryInfo = CountryInfo.NorthernMarianaIsland;
+        var countryInfo = CountryInfo.NorthernMarianaIslands;
 
         Assert.True(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
