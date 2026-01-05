@@ -5,7 +5,7 @@ namespace PhoneNumbers.Tests.Parsers;
 /// </summary>
 public class DefaultPhoneNumberParserTests_MO_MobilePhoneNumber
 {
-    private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Macau);
+    private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Macao);
 
     [Theory]
     [InlineData("60000000", "60000000")]
@@ -21,7 +21,7 @@ public class DefaultPhoneNumberParserTests_MO_MobilePhoneNumber
         Assert.IsType<MobilePhoneNumber>(phoneNumber);
 
         var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.Macau, mobilePhoneNumber.Country);
+        Assert.Equal(CountryInfo.Macao, mobilePhoneNumber.Country);
         Assert.False(mobilePhoneNumber.IsPager);
         Assert.False(mobilePhoneNumber.IsVirtual);
         Assert.Null(mobilePhoneNumber.NationalDestinationCode);
