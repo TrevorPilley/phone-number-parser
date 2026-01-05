@@ -139,11 +139,11 @@ public class PhoneNumber_Parse_NorthAmerica_Tests
     }
 
     [Fact]
-    public void Parse_Value_For_NorthernMarianaIsland_CallingCode()
+    public void Parse_Value_For_NorthernMarianaIslands_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+16702202200");
         Assert.NotNull(phoneNumber);
-        Assert.Equal(CountryInfo.NorthernMarianaIsland, phoneNumber.Country);
+        Assert.Equal(CountryInfo.NorthernMarianaIslands, phoneNumber.Country);
     }
 
     [Fact]

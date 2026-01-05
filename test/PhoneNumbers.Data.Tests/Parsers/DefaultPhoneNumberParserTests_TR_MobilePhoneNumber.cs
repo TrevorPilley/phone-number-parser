@@ -5,7 +5,7 @@ namespace PhoneNumbers.Tests.Parsers;
 /// </summary>
 public class DefaultPhoneNumberParserTests_TR_MobilePhoneNumber
 {
-    private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Turkey);
+    private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Turkiye);
 
     [Theory]
     [InlineData("05010000000", "501", "0000000")]
@@ -37,7 +37,7 @@ public class DefaultPhoneNumberParserTests_TR_MobilePhoneNumber
         Assert.IsType<MobilePhoneNumber>(phoneNumber);
 
         var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.Turkey, mobilePhoneNumber.Country);
+        Assert.Equal(CountryInfo.Turkiye, mobilePhoneNumber.Country);
         Assert.False(mobilePhoneNumber.IsPager);
         Assert.False(mobilePhoneNumber.IsVirtual);
         Assert.Equal(NationalDestinationCode, mobilePhoneNumber.NationalDestinationCode);
@@ -58,7 +58,7 @@ public class DefaultPhoneNumberParserTests_TR_MobilePhoneNumber
         Assert.IsType<MobilePhoneNumber>(phoneNumber);
 
         var mobilePhoneNumber = (MobilePhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.Turkey, mobilePhoneNumber.Country);
+        Assert.Equal(CountryInfo.Turkiye, mobilePhoneNumber.Country);
         Assert.False(mobilePhoneNumber.IsPager);
         Assert.True(mobilePhoneNumber.IsVirtual);
         Assert.Equal(NationalDestinationCode, mobilePhoneNumber.NationalDestinationCode);
