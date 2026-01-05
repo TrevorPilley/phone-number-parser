@@ -448,11 +448,11 @@ public class CountryInfo_NorthAmerica_Tests
     }
 
     [Fact]
-    public void CountryInfo_NorthernMarianaIsland()
+    public void CountryInfo_NorthernMarianaIslands()
     {
-        Assert.Same(CountryInfo.NorthernMarianaIsland, CountryInfo.NorthernMarianaIsland);
+        Assert.Same(CountryInfo.NorthernMarianaIslands, CountryInfo.NorthernMarianaIslands);
 
-        var countryInfo = CountryInfo.NorthernMarianaIsland;
+        var countryInfo = CountryInfo.NorthernMarianaIslands;
 
         Assert.True(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
@@ -682,11 +682,11 @@ public class CountryInfo_NorthAmerica_Tests
     }
 
     [Fact]
-    public void CountryInfo_UnitedStatesVirginIslands()
+    public void CountryInfo_VirginIslandsOfTheUnitedStates()
     {
-        Assert.Same(CountryInfo.UnitedStatesVirginIslands, CountryInfo.UnitedStatesVirginIslands);
+        Assert.Same(CountryInfo.VirginIslandsOfTheUnitedStates, CountryInfo.VirginIslandsOfTheUnitedStates);
 
-        var countryInfo = CountryInfo.UnitedStatesVirginIslands;
+        var countryInfo = CountryInfo.VirginIslandsOfTheUnitedStates;
 
         Assert.True(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
@@ -700,7 +700,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("VI", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
-        Assert.Equal("United States Virgin Islands", countryInfo.Name);
+        Assert.Equal("Virgin Islands (U.S.)", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
         Assert.True(countryInfo.SharesCallingCode);

@@ -57,11 +57,11 @@ public class CountryInfo_Asia_Tests
     }
 
     [Fact]
-    public void CountryInfo_Macau()
+    public void CountryInfo_Macao()
     {
-        Assert.Same(CountryInfo.Macau, CountryInfo.Macau);
+        Assert.Same(CountryInfo.Macao, CountryInfo.Macao);
 
-        var countryInfo = CountryInfo.Macau;
+        var countryInfo = CountryInfo.Macao;
 
         Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("853", countryInfo.CallingCode);
@@ -187,11 +187,11 @@ public class CountryInfo_Asia_Tests
     }
 
     [Fact]
-    public void CountryInfo_Turkey()
+    public void CountryInfo_Turkiye()
     {
-        Assert.Same(CountryInfo.Turkey, CountryInfo.Turkey);
+        Assert.Same(CountryInfo.Turkiye, CountryInfo.Turkiye);
 
-        var countryInfo = CountryInfo.Turkey;
+        var countryInfo = CountryInfo.Turkiye;
 
         Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("90", countryInfo.CallingCode);

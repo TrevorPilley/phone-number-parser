@@ -306,7 +306,7 @@ public partial class CountryInfo
     /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Northern Mariana Island.
     /// </summary>
-    public static CountryInfo NorthernMarianaIsland { get; } = new()
+    public static CountryInfo NorthernMarianaIslands { get; } = new()
     {
         AllowsLocalGeographicDialling = true,
         CallingCode = NanpCallingCode,
@@ -467,9 +467,9 @@ public partial class CountryInfo
     };
 
     /// <summary>
-    /// Gets the <see cref="CountryInfo"/> for the United States Virgin Islands.
+    /// Gets the <see cref="CountryInfo"/> for the Virgin Islands (U.S.).
     /// </summary>
-    public static CountryInfo UnitedStatesVirginIslands { get; } = new()
+    public static CountryInfo VirginIslandsOfTheUnitedStates { get; } = new()
     {
         AllowsLocalGeographicDialling = true,
         CallingCode = NanpCallingCode,
@@ -478,7 +478,7 @@ public partial class CountryInfo
         FullName = "Virgin Islands of the United States",
         InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "VI",
-        Name = "United States Virgin Islands",
+        Name = "Virgin Islands (U.S.)",
         NdcLengths = s_ndc_3,
         NsnLengths = s_nsn_10,
         SharesCallingCode = true,

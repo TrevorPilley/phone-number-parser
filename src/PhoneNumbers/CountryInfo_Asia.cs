@@ -39,7 +39,7 @@ public partial class CountryInfo
     /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Macao (Macau).
     /// </summary>
-    public static CountryInfo Macau { get; } = new()
+    public static CountryInfo Macao { get; } = new()
     {
         CallingCode = "853",
         Continent = Asia,
@@ -113,7 +113,7 @@ public partial class CountryInfo
     /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Türkiye.
     /// </summary>
-    public static CountryInfo Turkey { get; } = new()
+    public static CountryInfo Turkiye { get; } = new()
     {
         CallingCode = "90",
         Continent = Asia,
