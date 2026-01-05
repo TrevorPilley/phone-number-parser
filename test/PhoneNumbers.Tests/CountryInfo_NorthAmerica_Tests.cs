@@ -682,11 +682,11 @@ public class CountryInfo_NorthAmerica_Tests
     }
 
     [Fact]
-    public void CountryInfo_VirginIslandsOfTheUnitedStates()
+    public void CountryInfo_UnitedStatesVirginIslands()
     {
-        Assert.Same(CountryInfo.VirginIslandsOfTheUnitedStates, CountryInfo.VirginIslandsOfTheUnitedStates);
+        Assert.Same(CountryInfo.UnitedStatesVirginIslands, CountryInfo.UnitedStatesVirginIslands);
 
-        var countryInfo = CountryInfo.VirginIslandsOfTheUnitedStates;
+        var countryInfo = CountryInfo.UnitedStatesVirginIslands;
 
         Assert.True(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);

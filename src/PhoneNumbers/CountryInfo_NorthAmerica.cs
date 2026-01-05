@@ -467,9 +467,9 @@ public partial class CountryInfo
     };
 
     /// <summary>
-    /// Gets the <see cref="CountryInfo"/> for the Virgin Islands (U.S.).
+    /// Gets the <see cref="CountryInfo"/> for the United States Virgin Islands.
     /// </summary>
-    public static CountryInfo VirginIslandsOfTheUnitedStates { get; } = new()
+    public static CountryInfo UnitedStatesVirginIslands { get; } = new()
     {
         AllowsLocalGeographicDialling = true,
         CallingCode = NanpCallingCode,
