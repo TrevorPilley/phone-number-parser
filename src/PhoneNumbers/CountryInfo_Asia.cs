@@ -37,7 +37,7 @@ public partial class CountryInfo
     };
 
     /// <summary>
-    /// Gets the <see cref="CountryInfo"/> for Macau (Macao).
+    /// Gets the <see cref="CountryInfo"/> for Macao (Macau).
     /// </summary>
     public static CountryInfo Macau { get; } = new()
     {
