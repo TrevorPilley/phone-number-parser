@@ -31,11 +31,11 @@ public class DefaultPhoneNumberParserTests_TZ_NonGeographicPhoneNumber
     }
 
     [Theory]
-    [InlineData("0510000000", "51", "0000000")]
-    [InlineData("0519999999", "51", "9999999")]
-    [InlineData("0580000000", "58", "0000000")]
-    [InlineData("0589999999", "58", "9999999")]
-    public void Parse_Known_NonGeographicPhoneNumber_5X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
+    [InlineData("0510000000", "5100", "00000")]
+    [InlineData("0510099999", "5100", "99999")]
+    [InlineData("0560100000", "5601", "00000")]
+    [InlineData("0560199999", "5601", "99999")]
+    public void Parse_Known_NonGeographicPhoneNumber_5XXX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
         parseResult.ThrowIfFailure();
@@ -133,8 +133,8 @@ public class DefaultPhoneNumberParserTests_TZ_NonGeographicPhoneNumber
     [Theory]
     [InlineData("0900010000", "900", "010000")]
     [InlineData("0900019999", "900", "019999")]
-    [InlineData("0902010000", "902", "010000")]
-    [InlineData("0902019999", "902", "019999")]
+    [InlineData("0901010000", "901", "010000")]
+    [InlineData("0901019999", "901", "019999")]
     public void Parse_Known_NonGeographicPhoneNumber_PremiumRate(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);

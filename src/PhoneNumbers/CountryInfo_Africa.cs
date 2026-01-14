@@ -91,7 +91,7 @@ public partial class CountryInfo
         }.AsReadOnly(),
         Iso3166Code = "TZ",
         Name = "Tanzania",
-        NdcLengths = new ReadOnlyCollection<int>([5, 3, 2]),
+        NdcLengths = s_ndc_5_4_3_2,
         NsnLengths = new ReadOnlyCollection<int>([9, 12]),
         TrunkPrefix = "0",
     };
