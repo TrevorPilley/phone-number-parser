@@ -1,3 +1,5 @@
+# Resource: https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000BE0002PDFE.pdf
+# Resource Date: 18/07/2018
 G|1|Ljubljana|2000000-8999999|
 G|2|Maribor, Ravne na Koroškem, Murska Sobota|2000000-8999999|
 G|3|Celje, Trbovlje|2000000-8999999|
@@ -8,7 +10,7 @@ M|30-31,40-41,51,64,66-68,70-71||000000-999999|
 N|49,88||000000-999999|
 N|80||000000-999999|F
 N|90||000000-999999|R
-N|91||0000000000-9999999999|
+N|91||0000000000-9999999999|M
 N|590-599,810-817,819-821,823-827,829-839,891-893||00000-99999|
 # these are more specific NDCs which are included in the 65X and 69X ranges listed subsequently
 M|6555,6560,6570,6910||0000-9999|
