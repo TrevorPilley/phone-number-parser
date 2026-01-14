@@ -86,29 +86,6 @@ public class DefaultPhoneNumberParserTests_SI_NonGeographicPhoneNumber
     }
 
     [Theory]
-    [InlineData("0910000000000", "91", "0000000000")]
-    [InlineData("0919999999999", "91", "9999999999")]
-    public void Parse_Known_NonGeographicPhoneNumber_9X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
-    {
-        var parseResult = s_parser.Parse(value);
-        parseResult.ThrowIfFailure();
-
-        var phoneNumber = parseResult.PhoneNumber;
-
-        Assert.NotNull(phoneNumber);
-        Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
-
-        var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
-        Assert.Equal(CountryInfo.Slovenia, nonGeographicPhoneNumber.Country);
-        Assert.False(nonGeographicPhoneNumber.IsFreephone);
-        Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
-        Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
-        Assert.False(nonGeographicPhoneNumber.IsSharedCost);
-        Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
-        Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
-    }
-
-    [Theory]
     [InlineData("059000000", "590", "00000")]
     [InlineData("059099999", "590", "99999")]
     [InlineData("059900000", "599", "00000")]
@@ -150,6 +127,29 @@ public class DefaultPhoneNumberParserTests_SI_NonGeographicPhoneNumber
         Assert.Equal(CountryInfo.Slovenia, nonGeographicPhoneNumber.Country);
         Assert.True(nonGeographicPhoneNumber.IsFreephone);
         Assert.False(nonGeographicPhoneNumber.IsMachineToMachine);
+        Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
+        Assert.False(nonGeographicPhoneNumber.IsSharedCost);
+        Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
+        Assert.Equal(subscriberNumber, nonGeographicPhoneNumber.SubscriberNumber);
+    }
+
+    [Theory]
+    [InlineData("0910000000000", "91", "0000000000")]
+    [InlineData("0919999999999", "91", "9999999999")]
+    public void Parse_Known_NonGeographicPhoneNumber_MachineToMachine(string value, string NationalDestinationCode, string subscriberNumber)
+    {
+        var parseResult = s_parser.Parse(value);
+        parseResult.ThrowIfFailure();
+
+        var phoneNumber = parseResult.PhoneNumber;
+
+        Assert.NotNull(phoneNumber);
+        Assert.IsType<NonGeographicPhoneNumber>(phoneNumber);
+
+        var nonGeographicPhoneNumber = (NonGeographicPhoneNumber)phoneNumber;
+        Assert.Equal(CountryInfo.Slovenia, nonGeographicPhoneNumber.Country);
+        Assert.False(nonGeographicPhoneNumber.IsFreephone);
+        Assert.True(nonGeographicPhoneNumber.IsMachineToMachine);
         Assert.False(nonGeographicPhoneNumber.IsPremiumRate);
         Assert.False(nonGeographicPhoneNumber.IsSharedCost);
         Assert.Equal(NationalDestinationCode, nonGeographicPhoneNumber.NationalDestinationCode);
