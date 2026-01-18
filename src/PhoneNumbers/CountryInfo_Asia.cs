@@ -16,7 +16,7 @@ public partial class CountryInfo
         InternationalCallPrefix = "001",
         Iso3166Code = "HK",
         Name = "Hong Kong",
-        NsnLengths = new ReadOnlyCollection<int>([8, 9, 11, 12]),
+        NsnLengths = s_nsn_8_9_11_12,
     };
 
     /// <summary>
@@ -31,7 +31,7 @@ public partial class CountryInfo
         IsArabLeagueMember = true,
         Iso3166Code = "JO",
         Name = "Jordan",
-        NdcLengths = new ReadOnlyCollection<int>([1]),
+        NdcLengths = s_ndc_1,
         NsnLengths = s_nsn_8_9,
         TrunkPrefix = "0",
     };
@@ -76,7 +76,7 @@ public partial class CountryInfo
         IsArabLeagueMember = true,
         Iso3166Code = "QA",
         Name = "Qatar",
-        NsnLengths = new ReadOnlyCollection<int>([7, 8, 10]),
+        NsnLengths = s_nsn_7_8_10,
     };
 
     /// <summary>
@@ -107,7 +107,7 @@ public partial class CountryInfo
         InternationalCallPrefix = "000",
         Iso3166Code = "SG",
         Name = "Singapore",
-        NsnLengths = new ReadOnlyCollection<int>([8, 10, 11]),
+        NsnLengths = s_nsn_8_10_11,
     };
 
     /// <summary>
@@ -123,8 +123,8 @@ public partial class CountryInfo
         Iso3166Code = "TR",
         IsOecdMember = true,
         Name = "Türkiye",
-        NdcLengths = new ReadOnlyCollection<int>([3, 0]),
-        NsnLengths = new ReadOnlyCollection<int>([7, 10]),
+        NdcLengths = s_ndc_3_0,
+        NsnLengths = s_nsn_7_10,
         TrunkPrefix = "0",
     };
 
@@ -158,7 +158,7 @@ public partial class CountryInfo
         Iso3166Code = "YE",
         Name = "Yemen",
         NdcLengths = s_ndc_2_1,
-        NsnLengths = new ReadOnlyCollection<int>([7, 8, 9]),
+        NsnLengths = s_nsn_7_8_9,
         TrunkPrefix = "0",
     };
 }
