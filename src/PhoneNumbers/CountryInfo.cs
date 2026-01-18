@@ -43,6 +43,7 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
     private static readonly ReadOnlyCollection<int> s_ndc_5_4_3_2 = new([5, 4, 3, 2]);
     private static readonly ReadOnlyCollection<int> s_ndc_6_5_4_3_2_1 = new([6, 5, 4, 3, 2, 1]);
 
+    private static readonly ReadOnlyCollection<int> s_nsn_5 = new ([5]);
     private static readonly ReadOnlyCollection<int> s_nsn_5_6_7_8_9_10 = new ([5, 6, 7, 8, 9, 10]);
     private static readonly ReadOnlyCollection<int> s_nsn_5_6_7_8_9_10_11_12 = new ([5, 6, 7, 8, 9, 10, 11, 12]);
     private static readonly ReadOnlyCollection<int> s_nsn_6_7_8_9 = new([6, 7, 8, 9]);
@@ -66,6 +67,7 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
     private static readonly ReadOnlyCollection<int> s_nsn_9_12 = new([9, 12]);
     private static readonly ReadOnlyCollection<int> s_nsn_9_13 = new([9, 13]);
     private static readonly ReadOnlyCollection<int> s_nsn_10 = new([10]);
+    private static readonly ReadOnlyCollection<int> s_nsn_10_11 = new([10, 11]);
 
     /// <summary>
     /// Initialises a new instance of the <see cref="CountryInfo"/> class.
