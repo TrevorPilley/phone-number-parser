@@ -32,7 +32,7 @@ public partial class CountryInfo
         IsOecdMember = true,
         Name = "Austria",
         NdcLengths = s_ndc_4_3_2_1,
-        NsnLengths = new ReadOnlyCollection<int>([4, 5, 6, 7, 8, 9, 10, 11, 12, 13]),
+        NsnLengths = s_nsn_4_5_6_7_8_9_10_11_12_13,
         TrunkPrefix = "0",
     };
 
@@ -49,7 +49,7 @@ public partial class CountryInfo
         Iso3166Code = "BY",
         Name = "Belarus",
         NdcLengths = s_ndc_4_3_2,
-        NsnLengths = new ReadOnlyCollection<int>([6, 9, 10, 11]),
+        NsnLengths = s_nsn_6_9_10_11,
         TrunkPrefix = "8",
     };
 
@@ -118,7 +118,7 @@ public partial class CountryInfo
         IsNatoMember = true,
         Iso3166Code = "HR",
         Name = "Croatia",
-        NdcLengths = new ReadOnlyCollection<int>([5, 4, 3, 2, 1]),
+        NdcLengths = s_ndc_5_4_3_2_1,
         NsnLengths = s_nsn_6_7_8_9_10,
         TrunkPrefix = "0",
     };
@@ -154,7 +154,7 @@ public partial class CountryInfo
         IsOecdMember = true,
         Name = "Czechia",
         NdcLengths = s_ndc_3_2_1,
-        NsnLengths = new ReadOnlyCollection<int>([7, 9, 10, 11, 12]),
+        NsnLengths = s_nsn_7_9_10_11_12,
     };
 
     /// <summary>
@@ -188,7 +188,7 @@ public partial class CountryInfo
         IsOecdMember = true,
         Name = "Estonia",
         NdcLengths = s_ndc_4_3_2,
-        NsnLengths = new ReadOnlyCollection<int>([7, 8, 10, 12]),
+        NsnLengths = s_nsn_7_8_10_12,
     };
 
     /// <summary>
@@ -202,7 +202,7 @@ public partial class CountryInfo
         FullName = "Faroe Islands",
         Iso3166Code = "FO",
         Name = "Faroe Islands",
-        NsnLengths = new ReadOnlyCollection<int>([6]),
+        NsnLengths = s_ndc_6,
     };
 
     /// <summary>
@@ -258,7 +258,7 @@ public partial class CountryInfo
         IsOecdMember = true,
         Name = "Germany",
         NdcLengths = s_ndc_5_4_3_2,
-        NsnLengths = new ReadOnlyCollection<int>([4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]),
+        NsnLengths = s_nsn_4_5_6_7_8_9_10_11_12_13_14,
         TrunkPrefix = "0",
     };
 
@@ -274,7 +274,7 @@ public partial class CountryInfo
         Iso3166Code = "GI",
         Name = "Gibraltar",
         NdcLengths = s_ndc_3_2,
-        NsnLengths = new ReadOnlyCollection<int>([4, 8]),
+        NsnLengths = s_nsn_4_8,
     };
 
     /// <summary>
@@ -362,7 +362,7 @@ public partial class CountryInfo
         IsOecdMember = true,
         Name = "Ireland",
         NdcLengths = s_ndc_3_2_1,
-        NsnLengths = new ReadOnlyCollection<int>([7, 8, 9, 12]),
+        NsnLengths = s_nsn_7_8_9_12,
         TrunkPrefix = "0",
     };
 
@@ -400,7 +400,7 @@ public partial class CountryInfo
         IsOecdMember = true,
         Name = "Italy",
         NdcLengths = s_ndc_5_4_3_2,
-        NsnLengths = new ReadOnlyCollection<int>([5, 6, 7, 8, 9, 10, 11]),
+        NsnLengths = s_nsn_5_6_7_8_9_10_11,
     };
 
     /// <summary>
@@ -501,7 +501,7 @@ public partial class CountryInfo
         Iso3166Code = "LU",
         IsOecdMember = true,
         Name = "Luxembourg",
-        NsnLengths = new ReadOnlyCollection<int>([4, 5, 6, 7, 8, 9, 10, 11, 12]),
+        NsnLengths = s_nsn_4_5_6_7_8_9_10_11_12,
     };
 
     /// <summary>
@@ -515,7 +515,7 @@ public partial class CountryInfo
         IsEuropeanUnionMember = true,
         Iso3166Code = "MT",
         Name = "Malta",
-        NsnLengths = new ReadOnlyCollection<int>([8, 10]),
+        NsnLengths = s_nsn_8_10,
     };
 
     /// <summary>
@@ -529,7 +529,7 @@ public partial class CountryInfo
         Iso3166Code = "MD",
         Name = "Moldova",
         NdcLengths = s_ndc_3_2,
-        NsnLengths = new ReadOnlyCollection<int>([5, 6, 7, 8]),
+        NsnLengths = s_nsn_5_6_7_8,
         TrunkPrefix = "0",
     };
 
@@ -559,7 +559,7 @@ public partial class CountryInfo
         Iso3166Code = "ME",
         Name = "Montenegro",
         NdcLengths = s_ndc_2,
-        NsnLengths = new ReadOnlyCollection<int>([4, 5, 8, 12]),
+        NsnLengths = s_nsn_4_5_8_12,
         TrunkPrefix = "0",
     };
 
@@ -770,7 +770,7 @@ public partial class CountryInfo
         IsOecdMember = true,
         Name = "Sweden",
         NdcLengths = s_ndc_3_2_1,
-        NsnLengths = new ReadOnlyCollection<int>([6, 7, 8, 9, 10, 13]),
+        NsnLengths = s_nsn_6_7_8_9_10_13,
         TrunkPrefix = "0",
     };
 
@@ -804,7 +804,7 @@ public partial class CountryInfo
         Iso3166Code = "UA",
         Name = "Ukraine",
         NdcLengths = s_ndc_3_2,
-        NsnLengths = new ReadOnlyCollection<int>([9, 10]),
+        NsnLengths = s_nsn_9_10,
         TrunkPrefix = "0",
     };
 
@@ -824,7 +824,7 @@ public partial class CountryInfo
         IsOecdMember = true,
         Name = "United Kingdom",
         NdcLengths = s_ndc_5_4_3_2,
-        NsnLengths = new ReadOnlyCollection<int>([7, 9, 10]),
+        NsnLengths = s_nsn_7_9_10,
         TrunkPrefix = "0",
     };
 }

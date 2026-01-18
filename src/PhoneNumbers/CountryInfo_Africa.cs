@@ -17,7 +17,7 @@ public partial class CountryInfo
         Iso3166Code = "EG",
         Name = "Egypt",
         NdcLengths = s_ndc_3_2_1,
-        NsnLengths = new ReadOnlyCollection<int>([8, 9, 10, 11]),
+        NsnLengths = s_nsn_8_9_10_11,
         TrunkPrefix = "0",
     };
 
@@ -39,7 +39,7 @@ public partial class CountryInfo
         Iso3166Code = "KE",
         Name = "Kenya",
         NdcLengths = s_ndc_3_2,
-        NsnLengths = new ReadOnlyCollection<int>([7, 8, 9, 12]),
+        NsnLengths = s_nsn_7_8_9_12,
         TrunkPrefix = "0",
     };
 
@@ -55,7 +55,7 @@ public partial class CountryInfo
         InternationalCallPrefix = "009",
         Iso3166Code = "NG",
         Name = "Nigeria",
-        NdcLengths = new ReadOnlyCollection<int>([4, 3]),
+        NdcLengths = s_ndc_4_3,
         NsnLengths = s_nsn_10,
         TrunkPrefix = "0",
     };
@@ -92,7 +92,7 @@ public partial class CountryInfo
         Iso3166Code = "TZ",
         Name = "Tanzania",
         NdcLengths = s_ndc_5_4_3_2,
-        NsnLengths = new ReadOnlyCollection<int>([9, 12]),
+        NsnLengths = s_nsn_9_12,
         TrunkPrefix = "0",
     };
 
@@ -113,7 +113,7 @@ public partial class CountryInfo
         }.AsReadOnly(),
         Iso3166Code = "UG",
         Name = "Uganda",
-        NdcLengths = new ReadOnlyCollection<int>([6, 5, 4, 3, 1]),
+        NdcLengths = s_ndc_6_5_4_3_1,
         NsnLengths = s_nsn_9,
         TrunkPrefix = "0",
     };
