@@ -38,7 +38,7 @@ public partial class CountryInfo
         IsOecdMember = true,
         Name = "Australia",
         NdcLengths = s_ndc_3_2_1,
-        NsnLengths = new ReadOnlyCollection<int>([5, 6, 7, 8, 9, 10]),
+        NsnLengths = s_nsn_5_6_7_8_9_10,
         TrunkPrefix = "0",
     };
 
@@ -70,6 +70,6 @@ public partial class CountryInfo
         Iso3166Code = "PG",
         Name = "Papua New Guinea",
         NdcLengths = s_ndc_3_2,
-        NsnLengths = new ReadOnlyCollection<int>([7, 8]),
+        NsnLengths = s_nsn_7_8,
     };
 }
