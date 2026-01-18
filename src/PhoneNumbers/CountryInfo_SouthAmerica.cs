@@ -19,7 +19,7 @@ public partial class CountryInfo
         Iso3166Code = "BR",
         Name = "Brazil",
         NdcLengths = s_ndc_3_2,
-        NsnLengths = new ReadOnlyCollection<int>([10, 11]),
+        NsnLengths = s_nsn_10_11,
         TrunkPrefix = "0",
     };
 
@@ -50,7 +50,7 @@ public partial class CountryInfo
         FullName = "Falkland Islands",
         Iso3166Code = "FK",
         Name = "Falkland Islands",
-        NsnLengths = new ReadOnlyCollection<int>([5]),
+        NsnLengths = s_nsn_5,
     };
 
     /// <summary>
@@ -65,7 +65,7 @@ public partial class CountryInfo
         Iso3166Code = "PE",
         Name = "Peru",
         NdcLengths = s_ndc_2_1,
-        NsnLengths = new ReadOnlyCollection<int>([8, 9]),
+        NsnLengths = s_nsn_8_9,
         TrunkPrefix = "0",
     };
 }
