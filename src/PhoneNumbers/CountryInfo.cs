@@ -29,25 +29,36 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
         Rfc3966PhoneNumberFormatter.Instance,
     ]);
 
+    private static readonly ReadOnlyCollection<int> s_ndc_1 = new([1]);
     private static readonly ReadOnlyCollection<int> s_ndc_2 = new([2]);
     private static readonly ReadOnlyCollection<int> s_ndc_2_1 = new([2, 1]);
     private static readonly ReadOnlyCollection<int> s_ndc_3 = new([3]);
+    private static readonly ReadOnlyCollection<int> s_ndc_3_0 = new([3, 0]);
     private static readonly ReadOnlyCollection<int> s_ndc_3_2 = new([3, 2]);
     private static readonly ReadOnlyCollection<int> s_ndc_3_2_1 = new([3, 2, 1]);
     private static readonly ReadOnlyCollection<int> s_ndc_4 = new([4]);
+    private static readonly ReadOnlyCollection<int> s_ndc_4_3 = new([4, 3]);
     private static readonly ReadOnlyCollection<int> s_ndc_4_3_2 = new([4, 3, 2]);
     private static readonly ReadOnlyCollection<int> s_ndc_4_3_2_1 = new([4, 3, 2, 1]);
     private static readonly ReadOnlyCollection<int> s_ndc_5_4_3_2 = new([5, 4, 3, 2]);
+    private static readonly ReadOnlyCollection<int> s_ndc_6_5_4_3_2_1 = new([6, 5, 4, 3, 2, 1]);
 
     private static readonly ReadOnlyCollection<int> s_nsn_5_6_7_8_9_10_11_12 = new ([5, 6, 7, 8, 9, 10, 11, 12]);
     private static readonly ReadOnlyCollection<int> s_nsn_6_7_8_9 = new([6, 7, 8, 9]);
     private static readonly ReadOnlyCollection<int> s_nsn_6_7_8_9_10 = new([6, 7, 8, 9, 10]);
     private static readonly ReadOnlyCollection<int> s_nsn_6_8_9 = new([6, 8, 9]);
+    private static readonly ReadOnlyCollection<int> s_nsn_7_8_9 = new([7, 8, 9]);
+    private static readonly ReadOnlyCollection<int> s_nsn_7_8_9_12 = new([7, 8, 9, 12]);
+    private static readonly ReadOnlyCollection<int> s_nsn_7_8_10 = new([7, 8, 10]);
     private static readonly ReadOnlyCollection<int> s_nsn_7_9 = new([7, 9]);
+    private static readonly ReadOnlyCollection<int> s_nsn_7_10 = new([7, 10]);
     private static readonly ReadOnlyCollection<int> s_nsn_8 = new([8]);
     private static readonly ReadOnlyCollection<int> s_nsn_8_9 = new([8, 9]);
+    private static readonly ReadOnlyCollection<int> s_nsn_8_9_10_11 = new([8, 9, 10, 11]);
     private static readonly ReadOnlyCollection<int> s_nsn_8_9_10_11_12 = new([8, 9, 10, 11, 12]);
+    private static readonly ReadOnlyCollection<int> s_nsn_8_9_11_12 = new([8, 9, 11, 12]);
     private static readonly ReadOnlyCollection<int> s_nsn_8_9_12 = new([8, 9, 12]);
+    private static readonly ReadOnlyCollection<int> s_nsn_8_10_11 = new([8, 10, 11]);
     private static readonly ReadOnlyCollection<int> s_nsn_8_12 = new([8, 12]);
     private static readonly ReadOnlyCollection<int> s_nsn_9 = new([9]);
     private static readonly ReadOnlyCollection<int> s_nsn_9_12 = new([9, 12]);
