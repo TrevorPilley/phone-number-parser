@@ -34,8 +34,8 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
     private static readonly ReadOnlyCollection<int> s_ndc_3 = new([3]);
     private static readonly ReadOnlyCollection<int> s_ndc_3_2 = new([3, 2]);
     private static readonly ReadOnlyCollection<int> s_ndc_3_2_1 = new([3, 2, 1]);
-    private static readonly ReadOnlyCollection<int> s_ndc_4_3_2 = new([4, 3, 2]);
     private static readonly ReadOnlyCollection<int> s_ndc_4 = new([4]);
+    private static readonly ReadOnlyCollection<int> s_ndc_4_3_2 = new([4, 3, 2]);
     private static readonly ReadOnlyCollection<int> s_ndc_4_3_2_1 = new([4, 3, 2, 1]);
     private static readonly ReadOnlyCollection<int> s_ndc_5_4_3_2 = new([5, 4, 3, 2]);
 
