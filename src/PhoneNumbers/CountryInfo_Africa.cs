@@ -113,7 +113,7 @@ public partial class CountryInfo
         }.AsReadOnly(),
         Iso3166Code = "UG",
         Name = "Uganda",
-        NdcLengths = s_ndc_6_5_4_3_2_1,
+        NdcLengths = s_ndc_6_5_4_3_1,
         NsnLengths = s_nsn_9,
         TrunkPrefix = "0",
     };
