@@ -6,6 +6,26 @@ namespace PhoneNumbers;
 public partial class CountryInfo
 {
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Åland Islands.
+    /// </summary>
+    public static CountryInfo AlandIslands { get; } = new()
+    {
+        AllowsLocalGeographicDialling = true,
+        CallingCode = "358",
+        Continent = Europe,
+        FullName = "Region of Åland",
+        IsEuropeanUnionMember = true, // as a result of being part of Finland
+        IsNatoMember = false,
+        Iso3166Code = "AX",
+        IsOecdMember = false,
+        Name = "Åland Islands",
+        NdcLengths = s_ndc_2,
+        NsnLengths = s_nsn_7_8_9,
+        SharesCallingCode = true,
+        TrunkPrefix = "0",
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Andorra.
     /// </summary>
     public static CountryInfo Andorra { get; } = new()

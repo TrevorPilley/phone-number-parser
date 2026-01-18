@@ -51,6 +51,16 @@ public static class ParseOptionsExtensions
         Allow(parseOptions, x => x.IsEuropeanUnionMember);
 
     /// <summary>
+    /// Allows the <see cref="ParseOptions"/> instance to include all supported countries using Finland Numbering Plan.
+    /// </summary>
+    /// <param name="parseOptions">The <see cref="ParseOptions"/> instance to update.</param>
+    /// <exception cref="ArgumentNullException">Thrown if the specified <paramref name="parseOptions"/> is null.</exception>
+    /// <returns>The updated <see cref="ParseOptions"/>.</returns>
+    /// <remarks>Adds Åland Islands in addition to the United Kingdom.</remarks>
+    public static ParseOptions AllowFinlandNumberingPlanCountries(this ParseOptions parseOptions) =>
+        Allow(parseOptions, x => x.CallingCode.Equals(CountryInfo.Finland.CallingCode, StringComparison.Ordinal));
+
+    /// <summary>
     /// Allows the <see cref="ParseOptions"/> instance to include all supported countries who are members of the North Atlantic Treaty Organisation.
     /// </summary>
     /// <param name="parseOptions">The <see cref="ParseOptions"/> instance to update.</param>

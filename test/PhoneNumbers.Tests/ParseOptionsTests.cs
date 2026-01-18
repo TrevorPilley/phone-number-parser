@@ -66,8 +66,22 @@ public class ParseOptionsTests
         parseOptions.Countries.Clear();
         parseOptions.AllowEuropeanUnionCountries();
 
-        Assert.Equal(27, parseOptions.Countries.Count);
+        Assert.Equal(28, parseOptions.Countries.Count);
+        Assert.Equal(27, parseOptions.Countries.Count(x => !x.SharesCallingCode));
         Assert.All(parseOptions.Countries, x => Assert.True(x.IsEuropeanUnionMember));
+    }
+
+    [Fact]
+    public void AllowFinlandNumberingPlanCountries()
+    {
+        var parseOptions = new ParseOptions();
+        parseOptions.Countries.Clear();
+        parseOptions.AllowFinlandNumberingPlanCountries();
+
+        Assert.Equal(2, parseOptions.Countries.Count);
+        Assert.All(parseOptions.Countries, x => Assert.Equal(CountryInfo.Finland.CallingCode, x.CallingCode));
+        Assert.Contains(CountryInfo.AlandIslands, parseOptions.Countries);
+        Assert.Contains(CountryInfo.Finland, parseOptions.Countries);
     }
 
     [Fact]
