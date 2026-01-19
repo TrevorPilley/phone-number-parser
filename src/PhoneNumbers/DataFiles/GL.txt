@@ -1,2 +1,23 @@
 # Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000560002PDFE.pdf
 # Reference Date: 07/07/2017
+M|||210000-299999,420000-499999,510000-519999|
+G||Nuuk|310000-379999|
+G||Nanortalik|610000-619999|
+G||Qaqortoq|640000-649999|
+G||Narsaq|660000-669999|
+G||Paamiut|680000-689999|
+G||Ivittuut|690000-699999|
+G||Maniitsoq|810000-819999|
+G||Kangerlussuaq|840000-849999|
+G||Sisimiut|850000-869999|
+G||Kangaatsiaq|870000-879999|
+G||Aasiaat|890000-899999|
+G||Qasigannguit|910000-919999|
+G||Qeqertasuaq|920000-929999|
+G||Ilulissat|940000-949999|
+G||Uummannaq|950000-959999|
+G||Upernavik|960000-969999|
+G||Qaanaaq|970000-979999|
+G||Tasiilaq|980000-989999|
+G||Illoqqortoormiut|990000-999999|
+N|||199100-199299,380000-399999|

@@ -275,7 +275,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("299", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
-        Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.IsType<BasicPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.Equal("Greenland", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);

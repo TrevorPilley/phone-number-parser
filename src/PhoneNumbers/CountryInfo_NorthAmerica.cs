@@ -196,6 +196,7 @@ public partial class CountryInfo
     {
         CallingCode = "299",
         Continent = NorthAmerica,
+        FormatProvider = BasicPhoneNumberFormatProvider.Instance,
         FullName = "Greenland",
         Iso3166Code = "GL",
         Name = "Greenland",
