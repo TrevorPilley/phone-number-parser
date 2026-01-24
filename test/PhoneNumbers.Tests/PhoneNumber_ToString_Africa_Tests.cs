@@ -31,6 +31,14 @@ public class PhoneNumber_ToString_Africa_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+262262254127", "E.123", "+262 262 25 41 27")]
+    [InlineData("+262262254127", "N", "0262 25 41 27")]
+    [InlineData("+262262254127", "RFC3966", "tel:+262-262-25-41-27")]
+    [InlineData("+262262254127", "U", "0262254127")]
+    public void Reunion_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+27215616800", "E.123", "+27 21 561 6800")]
     [InlineData("+27215616800", "N", "021 561 6800")]
     [InlineData("+27215616800", "RFC3966", "tel:+27-21-561-6800")]

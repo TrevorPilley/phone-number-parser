@@ -27,6 +27,14 @@ public class PhoneNumber_Parse_Africa_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_Reunion_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+262262254127");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Reunion, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_SouthAfrica_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+27215616800");

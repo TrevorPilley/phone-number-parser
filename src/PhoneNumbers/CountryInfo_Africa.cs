@@ -61,6 +61,22 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Réunion
+    /// </summary>
+    public static CountryInfo Reunion { get; } = new()
+    {
+        CallingCode = "262",
+        Continent = Africa,
+        FormatProvider = FodPhoneNumberFormatProvider.Instance,
+        FullName = "Réunion",
+        IsEuropeanUnionMember = true, // as a result of being part of France
+        Iso3166Code = "RE",
+        Name = "Réunion",
+        NsnLengths = s_nsn_9_12,
+        TrunkPrefix = "0",
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for South Africa.
     /// </summary>
     public static CountryInfo SouthAfrica { get; } = new()
