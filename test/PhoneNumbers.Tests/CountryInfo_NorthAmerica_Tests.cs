@@ -327,12 +327,12 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("590", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
-        Assert.IsType<GPPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.IsType<FodPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.Equal("Guadeloupe", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsArabLeagueMember);
-        Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.True(countryInfo.IsEuropeanUnionMember); // as a result of being part of France
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("GP", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
