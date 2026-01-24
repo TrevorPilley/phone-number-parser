@@ -85,6 +85,32 @@ public class CountryInfo_Africa_Tests
     }
 
     [Fact]
+    public void CountryInfo_Reunion()
+    {
+        Assert.Same(CountryInfo.Reunion, CountryInfo.Reunion);
+
+        var countryInfo = CountryInfo.Reunion;
+
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal("262", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
+        Assert.IsType<FodPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Réunion", countryInfo.FullName);
+        Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
+        Assert.True(countryInfo.IsEuropeanUnionMember); // as a result of being part of France
+        Assert.False(countryInfo.IsNatoMember);
+        Assert.Equal("RE", countryInfo.Iso3166Code);
+        Assert.False(countryInfo.IsOecdMember);
+        Assert.Equal("Réunion", countryInfo.Name);
+        Assert.Empty(countryInfo.NdcLengths);
+        Assert.Equal(new[] { 9, 12 }, countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Equal("0", countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_SouthAfrica()
     {
         Assert.Same(CountryInfo.SouthAfrica, CountryInfo.SouthAfrica);

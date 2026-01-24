@@ -228,7 +228,7 @@ public partial class CountryInfo
     {
         CallingCode = "590",
         Continent = NorthAmerica,
-        FormatProvider = GPPhoneNumberFormatProvider.Instance,
+        FormatProvider = FodPhoneNumberFormatProvider.Instance,
         FullName = "Guadeloupe",
         IsEuropeanUnionMember = true, // as a result of being part of France
         Iso3166Code = "GP",

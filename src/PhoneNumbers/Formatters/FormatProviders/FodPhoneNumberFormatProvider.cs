@@ -1,15 +1,15 @@
 namespace PhoneNumbers.Formatters.FormatProviders;
 
 /// <summary>
-/// A <see cref="PhoneNumberFormatProvider"/> for Guadeloupe numbers.
+/// A <see cref="PhoneNumberFormatProvider"/> for French Overseas Departments numbers.
 /// </summary>
-internal sealed class GPPhoneNumberFormatProvider : ComplexPhoneNumberFormatProvider
+internal sealed class FodPhoneNumberFormatProvider : ComplexPhoneNumberFormatProvider
 {
-    private GPPhoneNumberFormatProvider()
+    private FodPhoneNumberFormatProvider()
     {
     }
 
-    internal static PhoneNumberFormatProvider Instance { get; } = new GPPhoneNumberFormatProvider();
+    internal static PhoneNumberFormatProvider Instance { get; } = new FodPhoneNumberFormatProvider();
 
     protected override string ProvideFormat(PhoneNumber phoneNumber, bool international) =>
         phoneNumber.NationalSignificantNumber.Length switch
