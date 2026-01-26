@@ -318,6 +318,32 @@ public class CountryInfo_NorthAmerica_Tests
     }
 
     [Fact]
+    public void CountryInfo_Guadeloupe()
+    {
+        Assert.Same(CountryInfo.Guadeloupe, CountryInfo.Guadeloupe);
+
+        var countryInfo = CountryInfo.Guadeloupe;
+
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal("590", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
+        Assert.IsType<GPPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Guadeloupe", countryInfo.FullName);
+        Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
+        Assert.Equal("GP", countryInfo.Iso3166Code);
+        Assert.False(countryInfo.IsOecdMember);
+        Assert.Equal("Guadeloupe", countryInfo.Name);
+        Assert.Empty(countryInfo.NdcLengths);
+        Assert.Equal(new[] { 9, 12 }, countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Equal("0", countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_Jamaica()
     {
         Assert.Same(CountryInfo.Jamaica, CountryInfo.Jamaica);

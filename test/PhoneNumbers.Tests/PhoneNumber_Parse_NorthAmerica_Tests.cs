@@ -99,6 +99,14 @@ public class PhoneNumber_Parse_NorthAmerica_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_Guadeloupe_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+590590909238");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Guadeloupe, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_Jamaica_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+18769686053");
