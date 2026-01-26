@@ -1,0 +1,4 @@
+# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000490003PDFE.pdf
+# Reference Date: 23/08/2017
+G|18|Åland (Aaland) islands|10000-899999|
+M|45||7000000-7099999|

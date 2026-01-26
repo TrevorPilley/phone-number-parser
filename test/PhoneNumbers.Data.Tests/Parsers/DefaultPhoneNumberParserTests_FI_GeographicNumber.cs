@@ -18,8 +18,6 @@ public class DefaultPhoneNumberParserTests_FI_GeographicNumber
     [InlineData("0168999999", "16", "8999999", "Lappi")]
     [InlineData("01710000", "17", "10000", "Kuopio")]
     [InlineData("0178999999", "17", "8999999", "Kuopio")]
-    [InlineData("01810000", "18", "10000", "Åland (Aaland) islands")]
-    [InlineData("0188999999", "18", "8999999", "Åland (Aaland) islands")]
     [InlineData("01910000", "19", "10000", "Uusimaa II")]
     [InlineData("0198999999", "19", "8999999", "Uusimaa II")]
     public void Parse_Known_GeographicPhoneNumber_1X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)

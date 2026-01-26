@@ -162,6 +162,7 @@ ParseOptions.Default.AllowNatoCountries();          // 31 of 32 members (Albania
 ParseOptions.Default.AllowOecdCountries();          // 32 of 38 members
 
 // Add all countries supported by the library using the same numbering plan:
+ParseOptions.Default.AllowFinlandNumberingPlanCountries(); // Finland and Åland Islands
 ParseOptions.Default.AllowNorthAmericanNumberingPlanCountries(); // all 25 countries
 ParseOptions.Default.AllowUnitedKingdomNumberingPlanCountries(); // Countries.Add(CountryInfo.UnitedKingdom) doesn't include Guernsey, Isle of Man and Jersey which also use the same numbering plan.
 ```
@@ -237,6 +238,7 @@ Yemen                | YE            | 967          | 0            | Yes        
 
 Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobile | Mobile<br/>(Pager) | Mobile<br/>(Virtual) | Non-Geographic | Non-Geographic<br/>(Freephone) | Non-Geographic<br/>(Premium Rate) | Non-Geographic<br/>(Shared Cost) | Non-Geographic (M2M)
 ---            | ---           | ---          | ---          | :-:        | :-:    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
+Åland Islands  | AX            | 358 _(Finland)_        | 0            | Yes        | Yes    |                    |                      |                |                                |                                   |                                  |
 Andorra        | AD            | 376          |              |            | Yes    |                    |                      | Yes            | Yes                            |                                   |                                  |
 Austria        | AT            | 43           | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               |                                  |
 Belarus        | BY            | 375          | 8            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               |                                  |
