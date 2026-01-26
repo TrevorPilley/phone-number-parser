@@ -59,6 +59,32 @@ public class CountryInfo_Africa_Tests
     }
 
     [Fact]
+    public void CountryInfo_Mayotte()
+    {
+        Assert.Same(CountryInfo.Mayotte, CountryInfo.Mayotte);
+
+        var countryInfo = CountryInfo.Mayotte;
+
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal("262", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Africa, countryInfo.Continent);
+        Assert.IsType<FodPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Mayotte", countryInfo.FullName);
+        Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
+        Assert.True(countryInfo.IsEuropeanUnionMember); // as a result of being part of France
+        Assert.False(countryInfo.IsNatoMember);
+        Assert.Equal("YT", countryInfo.Iso3166Code);
+        Assert.False(countryInfo.IsOecdMember);
+        Assert.Equal("Mayotte", countryInfo.Name);
+        Assert.Empty(countryInfo.NdcLengths);
+        Assert.Equal(new[] { 9, 12 }, countryInfo.NsnLengths);
+        Assert.True(countryInfo.SharesCallingCode);
+        Assert.Equal("0", countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_Nigeria()
     {
         Assert.Same(CountryInfo.Nigeria, CountryInfo.Nigeria);

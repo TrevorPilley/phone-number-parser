@@ -44,6 +44,23 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Mayotte
+    /// </summary>
+    public static CountryInfo Mayotte { get; } = new()
+    {
+        CallingCode = "262",
+        Continent = Africa,
+        FormatProvider = FodPhoneNumberFormatProvider.Instance,
+        FullName = "Mayotte",
+        IsEuropeanUnionMember = true, // as a result of being part of France
+        Iso3166Code = "YT",
+        Name = "Mayotte",
+        NsnLengths = s_nsn_9_12,
+        SharesCallingCode = true,
+        TrunkPrefix = "0",
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Nigeria.
     /// </summary>
     public static CountryInfo Nigeria { get; } = new()

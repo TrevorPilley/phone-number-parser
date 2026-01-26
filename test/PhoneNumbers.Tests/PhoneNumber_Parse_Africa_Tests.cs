@@ -19,6 +19,14 @@ public class PhoneNumber_Parse_Africa_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_Mayotte_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+262269645400");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Mayotte, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_Nigeria_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+2342094617000");

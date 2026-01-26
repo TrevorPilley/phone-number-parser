@@ -37,6 +37,7 @@ public class PhoneNumberExtensionsTests
     [InlineData("IE", "+33140477283", "0033140477283")]    // France number from Republic of Ireland
     [InlineData("FR", "+590590909238", "0590909238")]      // Guadeloupe number from France
     [InlineData("FR", "+262262254127", "0262254127")]      // Réunion number from France
+    [InlineData("FR", "+262269645400", "0269645400")]      // Mayotte from France
     public void NumberToDialFrom_CountryInfo(string sourceCountryCode, string destination, string expected) =>
         Assert.Equal(
             expected,
@@ -92,6 +93,7 @@ public class PhoneNumberExtensionsTests
     [InlineData("+35318049600", "+33140477283", "0033140477283")]    // Republic of Ireland number to France
     [InlineData("+33140477283", "+590590909238", "0590909238")]      // France to Guadeloupe
     [InlineData("+33140477283", "+262262254127", "0262254127")]      // France to Réunion
+    [InlineData("+33140477283", "+262269645400", "0269645400")]      // France to Mayotte
     public void NumberToDialFrom_PhoneNumber(string source, string destination, string expected) =>
         Assert.Equal(
             expected,
