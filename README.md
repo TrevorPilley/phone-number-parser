@@ -157,7 +157,7 @@ ParseOptions.Default.AllowSouthAmericanCountries();
 
 // Add all countries supported by the library who are members of the same union/alliance:
 ParseOptions.Default.AllowArabLeagueCountries();    // 7 of 22 members
-ParseOptions.Default.AllowEuropeanUnionCountries(); // all 27 members
+ParseOptions.Default.AllowEuropeanUnionCountries(); // all 27 member states + 4 territories with special status
 ParseOptions.Default.AllowNatoCountries();          // 31 of 32 members (Albania not supported yet)
 ParseOptions.Default.AllowOecdCountries();          // 32 of 38 members
 
@@ -213,7 +213,9 @@ Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobi
 ---            | ---           | ---          | ---          | :-:        | :-:    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
 Egypt          | EG            | 20           | 0            | Yes        | Yes    |                    |                      |                | Yes                            | Yes                               |                                  |
 Kenya          | KE            | 254          | 0            | Yes        | Yes    |                    |                      |                |                                |                                   |                                  | Yes
+Mayotte        | YT            | 262 _(Réunion)_         | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
 Nigeria        | NG            | 234          | 0            | Yes        | Yes    |                    | Yes                  |                | Yes                            |                                   |                                  |
+Réunion        | RE            | 262          | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
 South Africa   | ZA            | 27           | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               | Yes                              | Yes
 Tanzania       | TZ            | 255          | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               | Yes                              | Yes
 Uganda         | UG            | 256          | 0            |            | Yes    |                    |                      | Yes            | Yes                            |                                   |                                  |
@@ -301,6 +303,7 @@ Canada                           | CA            | 1 (NANP)_              |     
 Cayman Islands                   | KY            | 1 345 _(NANP)_         |              |            |        |                    |                      | Yes            |                                |                                   |                                  |
 Dominica                         | DM            | 1 767 _(NANP)_         |              |            |        |                    |                      | Yes            |                                |                                   |                                  |
 Dominican Republic               | DM            | 1 809 / 829 / 849 _(NANP)_         |              |            |        |                    |                      | Yes            |                                |                                   |                                  |
+Guadeloupe                       | GP            | 590                    | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
 Greenland                        | GL            | 299                    |              | Yes        | Yes    |                    |                      | Yes            |                                |                                   |                                  |
 Grenada                          | GD            | 1 473 _(NANP)_         |              |            |        |                    |                      | Yes            |                                |                                   |                                  |
 Jamaica                          | JM            | 1 658 / 876 _(NANP)_   |              |            |        |                    |                      | Yes            |                                |                                   |                                  |
