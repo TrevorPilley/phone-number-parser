@@ -157,7 +157,7 @@ ParseOptions.Default.AllowSouthAmericanCountries();
 
 // Add all countries supported by the library who are members of the same union/alliance:
 ParseOptions.Default.AllowArabLeagueCountries();    // 7 of 22 members
-ParseOptions.Default.AllowEuropeanUnionCountries(); // all 27 members
+ParseOptions.Default.AllowEuropeanUnionCountries(); // all 27 member states + 5 territories with special status
 ParseOptions.Default.AllowNatoCountries();          // 31 of 32 members (Albania not supported yet)
 ParseOptions.Default.AllowOecdCountries();          // 32 of 38 members
 
@@ -214,7 +214,9 @@ Country        | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mobi
 ---            | ---           | ---          | ---          | :-:        | :-:    | :-:                | :-:                  | :-:            | :-:                            | :-:                               | :-:                              | :-:
 Egypt          | EG            | 20           | 0            | Yes        | Yes    |                    |                      |                | Yes                            | Yes                               |                                  |
 Kenya          | KE            | 254          | 0            | Yes        | Yes    |                    |                      |                |                                |                                   |                                  | Yes
+Mayotte        | YT            | 262 _(Réunion)_         | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
 Nigeria        | NG            | 234          | 0            | Yes        | Yes    |                    | Yes                  |                | Yes                            |                                   |                                  |
+Réunion        | RE            | 262          | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
 South Africa   | ZA            | 27           | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               | Yes                              | Yes
 Tanzania       | TZ            | 255          | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               | Yes                              | Yes
 Uganda         | UG            | 256          | 0            |            | Yes    |                    |                      | Yes            | Yes                            |                                   |                                  |
@@ -302,9 +304,11 @@ Canada                           | CA            | 1 (NANP)_              |     
 Cayman Islands                   | KY            | 1 345 _(NANP)_         |              |            |        |                    |                      | Yes            |                                |                                   |                                  |
 Dominica                         | DM            | 1 767 _(NANP)_         |              |            |        |                    |                      | Yes            |                                |                                   |                                  |
 Dominican Republic               | DM            | 1 809 / 829 / 849 _(NANP)_         |              |            |        |                    |                      | Yes            |                                |                                   |                                  |
+Guadeloupe                       | GP            | 590                    | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
 Greenland                        | GL            | 299                    |              | Yes        | Yes    |                    |                      | Yes            |                                |                                   |                                  |
 Grenada                          | GD            | 1 473 _(NANP)_         |              |            |        |                    |                      | Yes            |                                |                                   |                                  |
 Jamaica                          | JM            | 1 658 / 876 _(NANP)_   |              |            |        |                    |                      | Yes            |                                |                                   |                                  |
+Martinique                       | MQ            | 596                    | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
 Mexico                           | MX            | 52                     |              | Yes *      |        |                    |                      | Yes            | Yes                            | Yes                               |                                  |
 Montserrat                       | MS            | 1 664 _(NANP)_         |              |            |        |                    |                      | Yes            |                                |                                   |                                  |
 Northern Mariana Islands         | MP            | 1 670 _(NANP)_         |              |            |        |                    |                      | Yes            |                                |                                   |                                  |
@@ -338,12 +342,12 @@ Peru             | PE            | 51           | 0            | Yes        | Ye
 
 ### Notes
 
+- Where possible, the geographic area name is in the language/locality of the country for the phone number (e.g. for an Italian phone number assigned to Florence, the geographic area will be set to `Firenze`).
 - For the United Kingdom:
   - The ISO code is 'GB' rather than 'UK'.
   - Covers England, Scotland, Wales and Northern Ireland.
   - The Crown Dependencies Guernsey, Isle of Man and Jersey also use the same numbering plan but are separate countries.
   - To avoid a legitimate UK phone number from being rejected by the library, consider using `ParseOptions.Default.AllowUnitedKingdomNumberingPlanCountries()` if you are customising the countries used instead of `ParseOptions.Countries.Add(CountryInfo.UnitedKingdom)`.
-- Where possible, the geographic area name is in the language/locality of the country for the phone number (e.g. for an Italian phone number assigned to Florence, the geographic area will be set to `Firenze`.
 - Within the North American Numbering Plan (NANP), which covers all countries with the calling code `1`:
   - Geographically assigned numbers are only resolved within the country or state/region level.
   - Mobile numbers are geographically assigned and cannot be determined separately from landlines.
@@ -351,5 +355,5 @@ Peru             | PE            | 51           | 0            | Yes        | Ye
   - Virtual (aka personal numbers) are issued from a shared pool and always show as belonging to the United States.
 - Landline numbers can be ported in some countries and therefore although originally geographically assigned, they may no longer match the specified geographic area (Countries affected - Iceland)
 - Within Mexico:
-  - Geographically assigned numbers are only resolved within the eight principal regions of the countr.
+  - Geographically assigned numbers are only resolved within the eight principal regions of the country.
   - Mobile numbers are geographically assigned and cannot be determined separately from landlines.
