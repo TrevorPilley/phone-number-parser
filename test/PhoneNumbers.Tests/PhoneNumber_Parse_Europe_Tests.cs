@@ -3,6 +3,13 @@ namespace PhoneNumbers.Tests;
 public class PhoneNumber_Parse_Europe_Tests
 {
     [Fact]
+    public void Parse_Value_For_AlandIslands_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+3581822222");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.AlandIslands, phoneNumber.Country);
+    }
+    [Fact]
     public void Parse_Value_For_Andorra_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+376301115");
