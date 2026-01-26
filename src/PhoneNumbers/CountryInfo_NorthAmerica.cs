@@ -255,6 +255,22 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Martinique.
+    /// </summary>
+    public static CountryInfo Martinique { get; } = new()
+    {
+        CallingCode = "596",
+        Continent = NorthAmerica,
+        FormatProvider = FodPhoneNumberFormatProvider.Instance,
+        FullName = "Martinique",
+        IsEuropeanUnionMember = true, // as a result of being part of France
+        Iso3166Code = "MQ",
+        Name = "Martinique",
+        NsnLengths = s_nsn_9_12,
+        TrunkPrefix = "0",
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Mexico.
     /// </summary>
     public static CountryInfo Mexico { get; } = new()

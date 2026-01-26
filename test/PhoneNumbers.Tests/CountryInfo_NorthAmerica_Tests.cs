@@ -370,6 +370,32 @@ public class CountryInfo_NorthAmerica_Tests
     }
 
     [Fact]
+    public void CountryInfo_Martinique()
+    {
+        Assert.Same(CountryInfo.Martinique, CountryInfo.Martinique);
+
+        var countryInfo = CountryInfo.Martinique;
+
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal("596", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
+        Assert.IsType<FodPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Martinique", countryInfo.FullName);
+        Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
+        Assert.True(countryInfo.IsEuropeanUnionMember); // as a result of being part of France
+        Assert.False(countryInfo.IsNatoMember);
+        Assert.Equal("MQ", countryInfo.Iso3166Code);
+        Assert.False(countryInfo.IsOecdMember);
+        Assert.Equal("Martinique", countryInfo.Name);
+        Assert.Empty(countryInfo.NdcLengths);
+        Assert.Equal(new[] { 9, 12 }, countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Equal("0", countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_Mexico()
     {
         Assert.Same(CountryInfo.Mexico, CountryInfo.Mexico);

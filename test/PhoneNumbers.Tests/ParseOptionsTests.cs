@@ -66,11 +66,11 @@ public class ParseOptionsTests
         parseOptions.Countries.Clear();
         parseOptions.AllowEuropeanUnionCountries();
 
-        // 27 member states + 4 territories with special status
-        Assert.Equal(31, parseOptions.Countries.Count);
+        // 27 member states + 5 territories with special status
+        Assert.Equal(32, parseOptions.Countries.Count);
 
         // Åland Islands shares calling code with Finland, Reunion and Mayotte share calling code
-        Assert.Equal(29, parseOptions.Countries.Count(x => !x.SharesCallingCode));
+        Assert.Equal(30, parseOptions.Countries.Count(x => !x.SharesCallingCode));
 
         Assert.All(parseOptions.Countries, x => Assert.True(x.IsEuropeanUnionMember));
     }

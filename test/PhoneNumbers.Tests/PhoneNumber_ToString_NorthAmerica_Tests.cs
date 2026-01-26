@@ -115,6 +115,14 @@ public class PhoneNumber_ToString_NorthAmerica_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+596596421995", "E.123", "+596 596 42 19 95")]
+    [InlineData("+596596421995", "N", "0596 42 19 95")]
+    [InlineData("+596596421995", "RFC3966", "tel:+596-596-42-19-95")]
+    [InlineData("+596596421995", "U", "0596421995")]
+    public void Martinique_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+525550154106", "E.123", "+52 55 5015 4106")]
     [InlineData("+525550154106", "N", "55 5015 4106")]
     [InlineData("+525550154106", "RFC3966", "tel:+52-55-5015-4106")]

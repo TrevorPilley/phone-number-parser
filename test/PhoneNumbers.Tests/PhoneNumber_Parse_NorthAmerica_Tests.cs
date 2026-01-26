@@ -115,6 +115,14 @@ public class PhoneNumber_Parse_NorthAmerica_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_Martinique_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+596596421995");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Martinique, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_Mexico_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+525550154106");
