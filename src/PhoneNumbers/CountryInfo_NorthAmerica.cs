@@ -222,6 +222,22 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Guadeloupe.
+    /// </summary>
+    public static CountryInfo Guadeloupe { get; } = new()
+    {
+        CallingCode = "590",
+        Continent = NorthAmerica,
+        FormatProvider = GPPhoneNumberFormatProvider.Instance,
+        FullName = "Guadeloupe",
+        IsEuropeanUnionMember = true, // as a result of being part of France
+        Iso3166Code = "GP",
+        Name = "Guadeloupe",
+        NsnLengths = s_nsn_9_12,
+        TrunkPrefix = "0",
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Jamaica.
     /// </summary>
     public static CountryInfo Jamaica { get; } = new()

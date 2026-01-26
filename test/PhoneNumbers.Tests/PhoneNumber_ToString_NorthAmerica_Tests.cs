@@ -99,6 +99,14 @@ public class PhoneNumber_ToString_NorthAmerica_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+590590909238", "E.123", "+590 590 90 92 38")]
+    [InlineData("+590590909238", "N", "0590 90 92 38")]
+    [InlineData("+590590909238", "RFC3966", "tel:+590-590-90-92-38")]
+    [InlineData("+590590909238", "U", "0590909238")]
+    public void Guadeloupe_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+18769686053", "E.123", "+1 876-968-6053")]
     [InlineData("+18769686053", "N", "(876) 968-6053")]
     [InlineData("+18769686053", "RFC3966", "tel:+1-876-968-6053")]
