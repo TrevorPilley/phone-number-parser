@@ -23,6 +23,14 @@ public class PhoneNumber_ToString_Africa_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+262269645400", "E.123", "+262 269 64 54 00")]
+    [InlineData("+262269645400", "N", "0269 64 54 00")]
+    [InlineData("+262269645400", "RFC3966", "tel:+262-269-64-54-00")]
+    [InlineData("+262269645400", "U", "0269645400")]
+    public void Mayotte_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+2342094617000", "E.123", "+234 209 461 7000")]
     [InlineData("+2342094617000", "N", "(0209) 461 7000")]
     [InlineData("+2342094617000", "RFC3966", "tel:+234-209-461-7000")]
