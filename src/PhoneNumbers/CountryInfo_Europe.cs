@@ -253,6 +253,10 @@ public partial class CountryInfo
         Continent = Europe,
         FormatProvider = FRPhoneNumberFormatProvider.Instance,
         FullName = "French Republic",
+        InternationalCallPrefixes = new Dictionary<string, string>(StringComparer.Ordinal)
+        {
+            { "590", "0" }, // To call Guadeloupe from France, subscribers dial 0 instead of +590
+        }.AsReadOnly(),
         IsEuropeanUnionMember = true,
         IsNatoMember = true,
         Iso3166Code = "FR",

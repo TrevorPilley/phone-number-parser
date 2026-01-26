@@ -381,7 +381,8 @@ public class CountryInfo_Europe_Tests
         Assert.IsType<FRPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.Equal("French Republic", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
-        Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.Equal(1, countryInfo.InternationalCallPrefixes.Count);
+        Assert.Equal("0", countryInfo.InternationalCallPrefixes["590"]); // Guadeloupe
         Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
