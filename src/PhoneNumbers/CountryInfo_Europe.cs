@@ -255,7 +255,7 @@ public partial class CountryInfo
         FullName = "French Republic",
         InternationalCallPrefixes = new Dictionary<string, string>(StringComparer.Ordinal)
         {
-            { "262", "0" }, // To call Réunion from France, subscribers dial 0 instead of +262
+            { "262", "0" }, // To call Réunion and Mayotte from France, subscribers dial 0 instead of +262
             { "590", "0" }, // To call Guadeloupe from France, subscribers dial 0 instead of +590
         }.AsReadOnly(),
         IsEuropeanUnionMember = true,
