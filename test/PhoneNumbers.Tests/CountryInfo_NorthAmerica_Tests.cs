@@ -1,3 +1,4 @@
+using System.Numerics;
 using PhoneNumbers.Formatters.FormatProviders;
 
 namespace PhoneNumbers.Tests;
@@ -261,6 +262,32 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
         Assert.True(countryInfo.SharesCallingCode);
+        Assert.Null(countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
+    public void CountryInfo_Greenland()
+    {
+        Assert.Same(CountryInfo.Greenland, CountryInfo.Greenland);
+
+        var countryInfo = CountryInfo.Greenland;
+
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal("299", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
+        Assert.IsType<BasicPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Greenland", countryInfo.FullName);
+        Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
+        Assert.Equal("GL", countryInfo.Iso3166Code);
+        Assert.False(countryInfo.IsOecdMember);
+        Assert.Equal("Greenland", countryInfo.Name);
+        Assert.Empty(countryInfo.NdcLengths);
+        Assert.Equal(new[] { 6 }, countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
 

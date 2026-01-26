@@ -83,6 +83,14 @@ public class PhoneNumber_ToString_NorthAmerica_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+299341255", "E.123", "+299 341255")]
+    [InlineData("+299341255", "N", "341255")]
+    [InlineData("+299341255", "RFC3966", "tel:+299-341255")]
+    [InlineData("+299341255", "U", "341255")]
+    public void Greenland_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+14734081342", "E.123", "+1 473-408-1342")]
     [InlineData("+14734081342", "N", "(473) 408-1342")]
     [InlineData("+14734081342", "RFC3966", "tel:+1-473-408-1342")]

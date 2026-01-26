@@ -190,6 +190,20 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Greenland.
+    /// </summary>
+    public static CountryInfo Greenland { get; } = new()
+    {
+        CallingCode = "299",
+        Continent = NorthAmerica,
+        FormatProvider = BasicPhoneNumberFormatProvider.Instance,
+        FullName = "Greenland",
+        Iso3166Code = "GL",
+        Name = "Greenland",
+        NsnLengths = s_nsn_6,
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Grenada.
     /// </summary>
     public static CountryInfo Grenada { get; } = new()

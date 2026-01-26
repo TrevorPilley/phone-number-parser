@@ -83,6 +83,14 @@ public class PhoneNumber_Parse_NorthAmerica_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_Greenland_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+299341255");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Greenland, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_Grenada_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+14734081342");
