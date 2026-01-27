@@ -162,6 +162,7 @@ ParseOptions.Default.AllowNatoCountries();          // 31 of 32 members (Albania
 ParseOptions.Default.AllowOecdCountries();          // 32 of 38 members
 
 // Add all countries supported by the library using the same numbering plan:
+ParseOptions.Default.AllowFinlandNumberingPlanCountries(); // Finland and Åland Islands
 ParseOptions.Default.AllowNorthAmericanNumberingPlanCountries(); // all 25 countries
 ParseOptions.Default.AllowUnitedKingdomNumberingPlanCountries(); // Countries.Add(CountryInfo.UnitedKingdom) doesn't include Guernsey, Isle of Man and Jersey which also use the same numbering plan.
 ```
