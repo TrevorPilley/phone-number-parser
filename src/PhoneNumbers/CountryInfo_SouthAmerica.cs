@@ -54,6 +54,22 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for French Guiana.
+    /// </summary>
+    public static CountryInfo FrenchGuiana { get; } = new()
+    {
+        CallingCode = "594",
+        Continent = SouthAmerica,
+        FormatProvider = FodPhoneNumberFormatProvider.Instance,
+        FullName = "French Guiana",
+        IsEuropeanUnionMember = true, // as a result of being part of France
+        Iso3166Code = "GF",
+        Name = "French Guiana",
+        NsnLengths = s_nsn_9_12,
+        TrunkPrefix = "0",
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Peru.
     /// </summary>
     public static CountryInfo Peru { get; } = new()

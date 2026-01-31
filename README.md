@@ -157,7 +157,7 @@ ParseOptions.Default.AllowSouthAmericanCountries();
 
 // Add all countries supported by the library who are members of the same union/alliance:
 ParseOptions.Default.AllowArabLeagueCountries();    // 7 of 22 members
-ParseOptions.Default.AllowEuropeanUnionCountries(); // all 27 member states + 5 territories with special status
+ParseOptions.Default.AllowEuropeanUnionCountries(); // all 27 member states + 6 territories with special status
 ParseOptions.Default.AllowNatoCountries();          // 31 of 32 members (Albania not supported yet)
 ParseOptions.Default.AllowOecdCountries();          // 32 of 38 members
 
@@ -338,6 +338,7 @@ Country          | ISO 3166 Code | Calling Code | Trunk Prefix | Geographic | Mo
 Brazil           | BR            | 55           | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               |                                  |
 Colombia         | CO            | 57           |              | Yes        | Yes    |                    |                      |                |                                |                                   |                                  |
 Falkland Islands | FK            | 500          |              |            | Yes    |                    |                      | Yes            |                                |                                   |                                  |
+French Guiana    | GF            | 594          | 0            | Yes        | Yes    |                    |                      | Yes            | Yes                            | Yes                               |                                  | Yes
 Peru             | PE            | 51           | 0            | Yes        | Yes    |                    |                      |                |                                |                                   |                                  |
 
 ### Notes

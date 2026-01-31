@@ -31,6 +31,14 @@ public class PhoneNumber_ToString_SouthAmerica_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+594594299700", "E.123", "+594 594 29 97 00")]
+    [InlineData("+594594299700", "N", "0594 29 97 00")]
+    [InlineData("+594594299700", "RFC3966", "tel:+594-594-29-97-00")]
+    [InlineData("+594594299700", "U", "0594299700")]
+    public void FrenchGuiana_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+5184581200", "E.123", "+51 84 581 200")]
     [InlineData("+5113324079", "E.123", "+51 1 332 4079")]
     [InlineData("+51973700075", "E.123", "+51 973 700 075")]

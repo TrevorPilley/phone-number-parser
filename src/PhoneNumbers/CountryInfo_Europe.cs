@@ -257,6 +257,7 @@ public partial class CountryInfo
         {
             { "262", "0" }, // To call Réunion and Mayotte from France, subscribers dial 0 instead of +262
             { "590", "0" }, // To call Guadeloupe from France, subscribers dial 0 instead of +590
+            { "594", "0" }, // To call French Guiana from France, subscribers dial 0 instead of +594
             { "596", "0" }, // To call Martinique from France, subscribers dial 0 instead of +596
         }.AsReadOnly(),
         IsEuropeanUnionMember = true,

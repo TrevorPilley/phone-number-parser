@@ -83,6 +83,32 @@ public class CountryInfo_SouthAmerica_Tests
     }
 
     [Fact]
+    public void CountryInfo_FrenchGuiana()
+    {
+        Assert.Same(CountryInfo.FrenchGuiana, CountryInfo.FrenchGuiana);
+
+        var countryInfo = CountryInfo.FrenchGuiana;
+
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal("594", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.SouthAmerica, countryInfo.Continent);
+        Assert.IsType<FodPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("French Guiana", countryInfo.FullName);
+        Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
+        Assert.True(countryInfo.IsEuropeanUnionMember); // as a result of being part of France
+        Assert.False(countryInfo.IsNatoMember);
+        Assert.Equal("GF", countryInfo.Iso3166Code);
+        Assert.False(countryInfo.IsOecdMember);
+        Assert.Equal("French Guiana", countryInfo.Name);
+        Assert.Empty(countryInfo.NdcLengths);
+        Assert.Equal(new[] { 9, 12 }, countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Equal("0", countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_Peru()
     {
         Assert.Same(CountryInfo. Peru, CountryInfo. Peru);
