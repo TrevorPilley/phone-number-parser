@@ -9,6 +9,15 @@ public class PhoneNumber_Parse_Europe_Tests
         Assert.NotNull(phoneNumber);
         Assert.Equal(CountryInfo.AlandIslands, phoneNumber.Country);
     }
+
+    [Fact]
+    public void Parse_Value_For_Albania_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+35542259571");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Albania, phoneNumber.Country);
+    }
+
     [Fact]
     public void Parse_Value_For_Andorra_CallingCode()
     {
