@@ -20,6 +20,22 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Kazakhstan.
+    /// </summary>
+    public static CountryInfo Kazakhstan { get; } = new()
+    {
+        CallingCode = "7",
+        Continent = Asia,
+        FullName = "Republic of Kazakhstan",
+        InternationalCallPrefix = "8~xx",
+        Iso3166Code = "KZ",
+        Name = "Kazakhstan",
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_10,
+        TrunkPrefix = "8",
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Jordan.
     /// </summary>
     public static CountryInfo Jordan { get; } = new()

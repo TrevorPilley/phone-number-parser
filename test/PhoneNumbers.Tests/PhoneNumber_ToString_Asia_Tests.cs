@@ -11,6 +11,14 @@ public class PhoneNumber_ToString_Asia_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+77172613325", "E.123", "+7 717 261 3325")]
+    [InlineData("+77172613325", "N", "8717 261 3325")]
+    [InlineData("+77172613325", "RFC3966", "tel:+7-717-261-3325")]
+    [InlineData("+77172613325", "U", "87172613325")]
+    public void Kazakhstan_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+96265501120", "E.123", "+962 6 5501120")]
     [InlineData("+96265501120", "N", "06 5501120")]
     [InlineData("+96265501120", "RFC3966", "tel:+962-6-5501120")]
