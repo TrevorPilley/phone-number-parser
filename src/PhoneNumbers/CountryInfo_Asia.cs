@@ -32,6 +32,7 @@ public partial class CountryInfo
         Name = "Kazakhstan",
         NdcLengths = s_ndc_3,
         NsnLengths = s_nsn_10,
+        SharesCallingCode = true,
         TrunkPrefix = "8",
     };
 
