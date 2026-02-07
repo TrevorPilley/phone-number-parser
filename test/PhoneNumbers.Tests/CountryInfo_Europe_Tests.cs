@@ -1062,6 +1062,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Russian Federation", countryInfo.FullName);
         Assert.Equal("8~xx", countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("RU", countryInfo.Iso3166Code);
