@@ -11,19 +11,19 @@ public class PhoneNumber_Parse_Asia_Tests
     }
 
     [Fact]
-    public void Parse_Value_For_Kazakhstan_CallingCode()
-    {
-        var phoneNumber = PhoneNumber.Parse("+77172613325");
-        Assert.NotNull(phoneNumber);
-        Assert.Equal(CountryInfo.Kazakhstan, phoneNumber.Country);
-    }
-
-    [Fact]
     public void Parse_Value_For_Jordan_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+96265501120");
         Assert.NotNull(phoneNumber);
         Assert.Equal(CountryInfo.Jordan, phoneNumber.Country);
+    }
+
+    [Fact]
+    public void Parse_Value_For_Kazakhstan_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+77172613325");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Kazakhstan, phoneNumber.Country);
     }
 
     [Fact]

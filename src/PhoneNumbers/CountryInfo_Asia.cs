@@ -20,23 +20,6 @@ public partial class CountryInfo
     };
 
     /// <summary>
-    /// Gets the <see cref="CountryInfo"/> for Kazakhstan.
-    /// </summary>
-    public static CountryInfo Kazakhstan { get; } = new()
-    {
-        CallingCode = "7",
-        Continent = Asia,
-        FullName = "Republic of Kazakhstan",
-        InternationalCallPrefix = "8~xx",
-        Iso3166Code = "KZ",
-        Name = "Kazakhstan",
-        NdcLengths = s_ndc_3,
-        NsnLengths = s_nsn_10,
-        SharesCallingCode = true,
-        TrunkPrefix = "8",
-    };
-
-    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Jordan.
     /// </summary>
     public static CountryInfo Jordan { get; } = new()
@@ -51,6 +34,23 @@ public partial class CountryInfo
         NdcLengths = s_ndc_1,
         NsnLengths = s_nsn_8_9,
         TrunkPrefix = "0",
+    };
+
+    /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Kazakhstan.
+    /// </summary>
+    public static CountryInfo Kazakhstan { get; } = new()
+    {
+        CallingCode = "7",
+        Continent = Asia,
+        FullName = "Republic of Kazakhstan",
+        InternationalCallPrefix = "8~xx",
+        Iso3166Code = "KZ",
+        Name = "Kazakhstan",
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_10,
+        SharesCallingCode = true,
+        TrunkPrefix = "8",
     };
 
     /// <summary>
