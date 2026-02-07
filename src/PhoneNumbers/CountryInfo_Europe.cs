@@ -706,8 +706,8 @@ public partial class CountryInfo
         InternationalCallPrefix = "8~xx",
         Iso3166Code = "RU",
         Name = "Russia",
-        NdcLengths = new ReadOnlyCollection<int>([3]),
-        NsnLengths = new ReadOnlyCollection<int>([10]),
+        NdcLengths = s_ndc_3,
+        NsnLengths = s_nsn_10,
         TrunkPrefix = "8",
     };
 
