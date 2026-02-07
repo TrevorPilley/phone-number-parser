@@ -52,7 +52,7 @@ public class CountryInfo_Asia_Tests
         Assert.Equal("Kazakhstan", countryInfo.Name);
         Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
         Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
-        Assert.False(countryInfo.SharesCallingCode);
+        Assert.True(countryInfo.SharesCallingCode);
         Assert.Equal("8", countryInfo.TrunkPrefix);
     }
 
