@@ -66,8 +66,8 @@ internal sealed class GBPhoneNumberParser : DefaultPhoneNumberParser
                 break;
         }
 
-        var ndc = nsnValue.Substring(0, ndcLength);
-        var sn = nsnValue.Substring(ndc.Length);
+        var ndc = nsnValue[0..ndcLength];
+        var sn = nsnValue[ndcLength..];
 
         var countryNumber = CountryNumbers
             .FirstOrDefault(x => x.Kind == phoneNumberKind &&

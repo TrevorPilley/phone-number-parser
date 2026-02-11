@@ -50,8 +50,8 @@ internal class DefaultPhoneNumberParser : PhoneNumberParser
                     continue;
                 }
 
-                ndc = len > 0 ? nsnValue.Substring(0, len) : null;
-                sn = ndc is not null ? nsnValue.Substring(ndc.Length) : nsnValue;
+                ndc = len > 0 ? nsnValue[0..len] : null;
+                sn = ndc is not null ? nsnValue[ndc.Length..] : nsnValue;
 
                 countryNumber = CountryNumbers
                     .FirstOrDefault(x =>

@@ -57,8 +57,8 @@ internal sealed class NumberRange
                 }
 
                 return new NumberRange(
-                    x.Substring(0, separatorIndex),
-                    x.Substring(separatorIndex + 1));
+                    x[0..separatorIndex],
+                    x[(separatorIndex + 1)..]);
             });
 
     internal bool Contains(string value)
