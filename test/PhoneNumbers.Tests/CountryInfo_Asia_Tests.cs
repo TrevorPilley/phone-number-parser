@@ -25,7 +25,7 @@ public class CountryInfo_Asia_Tests
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Hong Kong", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
-        Assert.Equal(new[] { 8, 9, 11, 12 }, countryInfo.NsnLengths);
+        Assert.Equal([8, 9, 11, 12], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -77,7 +77,7 @@ public class CountryInfo_Asia_Tests
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Macao", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
-        Assert.Equal(new[] { 8 }, countryInfo.NsnLengths);
+        Assert.Equal([8], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -181,7 +181,7 @@ public class CountryInfo_Asia_Tests
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Singapore", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
-        Assert.Equal(new[] { 8, 10, 11 }, countryInfo.NsnLengths);
+        Assert.Equal([8, 10, 11], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -206,8 +206,8 @@ public class CountryInfo_Asia_Tests
         Assert.Equal("TR", countryInfo.Iso3166Code);
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Türkiye", countryInfo.Name);
-        Assert.Equal(new[] { 3, 0 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 7, 10 }, countryInfo.NsnLengths);
+        Assert.Equal([3, 0], countryInfo.NdcLengths);
+        Assert.Equal([7, 10], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }

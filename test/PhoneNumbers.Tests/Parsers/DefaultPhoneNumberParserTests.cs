@@ -1,5 +1,3 @@
-using System.Collections.ObjectModel;
-
 namespace PhoneNumbers.Tests.Parsers;
 
 /// <summary>
@@ -14,8 +12,8 @@ public class DefaultPhoneNumberParserTests
     [Fact]
     public void Parse_Fails_For_Unsupported_NSN_Length_With_TrunkPrefix()
     {
-        var countryInfo = TestHelper.CreateCountryInfo(trunkPrefix: "0", nsnLengths: new[] { 8, 9 });
-        var parser = new DefaultPhoneNumberParser(countryInfo, new ReadOnlyCollection<CountryNumber>(Array.Empty<CountryNumber>()));
+        var countryInfo = TestHelper.CreateCountryInfo(trunkPrefix: "0", nsnLengths: [8, 9]);
+        var parser = new DefaultPhoneNumberParser(countryInfo, []);
         var parseResult = parser.Parse("8010");
 
         Assert.Equal(
@@ -26,8 +24,8 @@ public class DefaultPhoneNumberParserTests
     [Fact]
     public void Parse_Fails_For_Unsupported_NSN_Length_Without_TrunkPrefix()
     {
-        var countryInfo = TestHelper.CreateCountryInfo(nsnLengths: new[] { 8, 9 });
-        var parser = new DefaultPhoneNumberParser(countryInfo, new ReadOnlyCollection<CountryNumber>(Array.Empty<CountryNumber>()));
+        var countryInfo = TestHelper.CreateCountryInfo(nsnLengths: [8, 9]);
+        var parser = new DefaultPhoneNumberParser(countryInfo, []);
         var parseResult = parser.Parse("8010");
 
         Assert.Equal(

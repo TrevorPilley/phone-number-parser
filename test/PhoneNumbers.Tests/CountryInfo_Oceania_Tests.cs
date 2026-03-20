@@ -24,8 +24,8 @@ public class CountryInfo_Oceania_Tests
         Assert.Equal("AS", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("American Samoa", countryInfo.Name);
-        Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
+        Assert.Equal([3], countryInfo.NdcLengths);
+        Assert.Equal([10], countryInfo.NsnLengths);
         Assert.True(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -50,8 +50,8 @@ public class CountryInfo_Oceania_Tests
         Assert.Equal("AU", countryInfo.Iso3166Code);
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Australia", countryInfo.Name);
-        Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 5, 6, 7, 8, 9, 10 }, countryInfo.NsnLengths);
+        Assert.Equal([3, 2, 1], countryInfo.NdcLengths);
+        Assert.Equal([5, 6, 7, 8, 9, 10], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -76,8 +76,8 @@ public class CountryInfo_Oceania_Tests
         Assert.Equal("GU", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Guam", countryInfo.Name);
-        Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
+        Assert.Equal([3], countryInfo.NdcLengths);
+        Assert.Equal([10], countryInfo.NsnLengths);
         Assert.True(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -102,8 +102,8 @@ public class CountryInfo_Oceania_Tests
         Assert.Equal("PG", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Papua New Guinea", countryInfo.Name);
-        Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 7, 8 }, countryInfo.NsnLengths);
+        Assert.Equal([3, 2], countryInfo.NdcLengths);
+        Assert.Equal([7, 8], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }

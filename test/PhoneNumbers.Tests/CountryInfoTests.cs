@@ -110,7 +110,7 @@ public class CountryInfoTests
 
     [Fact]
     public void HasNationalDestinationCodes_True() =>
-        Assert.True(TestHelper.CreateCountryInfo(ndcLengths: new[] { 2 }).HasNationalDestinationCodes);
+        Assert.True(TestHelper.CreateCountryInfo(ndcLengths: [2]).HasNationalDestinationCodes);
 
     [Fact]
     public void HasTrunkPrefix_False() =>
@@ -201,7 +201,7 @@ public class CountryInfoTests
         Assert.Equal(
             "12345678",
             TestHelper
-                .CreateCountryInfo(trunkPrefix: "0", nsnLengths: new[] { 8 })
+                .CreateCountryInfo(trunkPrefix: "0", nsnLengths: [8])
                 .ReadNationalSignificantNumber(value));
 
     [Theory]
@@ -231,7 +231,7 @@ public class CountryInfoTests
         Assert.Equal(
             "16680666",
             TestHelper
-                .CreateCountryInfo(trunkPrefix: "06", nsnLengths: new[] { 8 })
+                .CreateCountryInfo(trunkPrefix: "06", nsnLengths: [8])
                 .ReadNationalSignificantNumber(value));
 
     [Theory]
@@ -258,7 +258,7 @@ public class CountryInfoTests
         Assert.Equal(
             "12345678",
             TestHelper
-                .CreateCountryInfo(trunkPrefix: null, nsnLengths: new[] { 8 })
+                .CreateCountryInfo(trunkPrefix: null, nsnLengths: [8])
                 .ReadNationalSignificantNumber(value));
 
     [Fact]

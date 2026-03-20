@@ -24,8 +24,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("AX", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Åland Islands", countryInfo.Name);
-        Assert.Equal(new[] { 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 7, 8, 9 }, countryInfo.NsnLengths);
+        Assert.Equal([2], countryInfo.NdcLengths);
+        Assert.Equal([7, 8, 9], countryInfo.NsnLengths);
         Assert.True(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -51,7 +51,7 @@ public class CountryInfo_Europe_Tests
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Andorra", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
-        Assert.Equal(new[] { 6, 8, 9 }, countryInfo.NsnLengths);
+        Assert.Equal([6, 8, 9], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -76,8 +76,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("AT", countryInfo.Iso3166Code);
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Austria", countryInfo.Name);
-        Assert.Equal(new[] { 4, 3, 2, 1 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 }, countryInfo.NsnLengths);
+        Assert.Equal([4, 3, 2, 1], countryInfo.NdcLengths);
+        Assert.Equal([4, 5, 6, 7, 8, 9, 10, 11, 12, 13], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -102,8 +102,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("BY", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Belarus", countryInfo.Name);
-        Assert.Equal(new[] { 4, 3, 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 6, 9, 10, 11 }, countryInfo.NsnLengths);
+        Assert.Equal([4, 3, 2], countryInfo.NdcLengths);
+        Assert.Equal([6, 9, 10, 11], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("8", countryInfo.TrunkPrefix);
     }
@@ -128,8 +128,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("BE", countryInfo.Iso3166Code);
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Belgium", countryInfo.Name);
-        Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 8, 9 }, countryInfo.NsnLengths);
+        Assert.Equal([3, 2, 1], countryInfo.NdcLengths);
+        Assert.Equal([8, 9], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -154,8 +154,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("BA", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Bosnia and Herzegovina", countryInfo.Name);
-        Assert.Equal(new[] { 4, 3, 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 6, 8, 9 }, countryInfo.NsnLengths);
+        Assert.Equal([4, 3, 2], countryInfo.NdcLengths);
+        Assert.Equal([6, 8, 9], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -180,8 +180,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("BG", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Bulgaria", countryInfo.Name);
-        Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 8, 9, 12 }, countryInfo.NsnLengths);
+        Assert.Equal([3, 2, 1], countryInfo.NdcLengths);
+        Assert.Equal([8, 9, 12], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -206,8 +206,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("HR", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Croatia", countryInfo.Name);
-        Assert.Equal(new[] { 5, 4, 3, 2, 1 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 6, 7, 8, 9, 10 }, countryInfo.NsnLengths);
+        Assert.Equal([5, 4, 3, 2, 1], countryInfo.NdcLengths);
+        Assert.Equal([6, 7, 8, 9, 10], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -232,8 +232,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("CY", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Cyprus", countryInfo.Name);
-        Assert.Equal(new[] { 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 8 }, countryInfo.NsnLengths);
+        Assert.Equal([2], countryInfo.NdcLengths);
+        Assert.Equal([8], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -258,8 +258,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("CZ", countryInfo.Iso3166Code);
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Czechia", countryInfo.Name);
-        Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 7, 9, 10, 11, 12 }, countryInfo.NsnLengths);
+        Assert.Equal([3, 2, 1], countryInfo.NdcLengths);
+        Assert.Equal([7, 9, 10, 11, 12], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -285,7 +285,7 @@ public class CountryInfo_Europe_Tests
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Denmark", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
-        Assert.Equal(new[] { 8, 12 }, countryInfo.NsnLengths);
+        Assert.Equal([8, 12], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -310,8 +310,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("EE", countryInfo.Iso3166Code);
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Estonia", countryInfo.Name);
-        Assert.Equal(new[] { 4, 3, 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 7, 8, 10, 12 }, countryInfo.NsnLengths);
+        Assert.Equal([4, 3, 2], countryInfo.NdcLengths);
+        Assert.Equal([7, 8, 10, 12], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -337,7 +337,7 @@ public class CountryInfo_Europe_Tests
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Faroe Islands", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
-        Assert.Equal(new[] { 6 }, countryInfo.NsnLengths);
+        Assert.Equal([6], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -362,8 +362,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("FI", countryInfo.Iso3166Code);
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Finland", countryInfo.Name);
-        Assert.Equal(new[] { 4, 3, 2, 1 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 5, 6, 7, 8, 9, 10, 11, 12 }, countryInfo.NsnLengths);
+        Assert.Equal([4, 3, 2, 1], countryInfo.NdcLengths);
+        Assert.Equal([5, 6, 7, 8, 9, 10, 11, 12], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -393,7 +393,7 @@ public class CountryInfo_Europe_Tests
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("France", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
-        Assert.Equal(new[] { 9, 13 }, countryInfo.NsnLengths);
+        Assert.Equal([9, 13], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -418,8 +418,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("DE", countryInfo.Iso3166Code);
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Germany", countryInfo.Name);
-        Assert.Equal(new[] { 5, 4, 3, 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 }, countryInfo.NsnLengths);
+        Assert.Equal([5, 4, 3, 2], countryInfo.NdcLengths);
+        Assert.Equal([4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -444,8 +444,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("GI", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Gibraltar", countryInfo.Name);
-        Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 4, 8 }, countryInfo.NsnLengths);
+        Assert.Equal([3, 2], countryInfo.NdcLengths);
+        Assert.Equal([4, 8], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -470,8 +470,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("GR", countryInfo.Iso3166Code);
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Greece", countryInfo.Name);
-        Assert.Equal(new[] { 4, 3, 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
+        Assert.Equal([4, 3, 2], countryInfo.NdcLengths);
+        Assert.Equal([10], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -496,8 +496,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("GG", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Guernsey", countryInfo.Name);
-        Assert.Equal(new[] { 4 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
+        Assert.Equal([4], countryInfo.NdcLengths);
+        Assert.Equal([10], countryInfo.NsnLengths);
         Assert.True(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -522,8 +522,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("HU", countryInfo.Iso3166Code);
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Hungary", countryInfo.Name);
-        Assert.Equal(new[] { 2, 1 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 8, 9, 12 }, countryInfo.NsnLengths);
+        Assert.Equal([2, 1], countryInfo.NdcLengths);
+        Assert.Equal([8, 9, 12], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("06", countryInfo.TrunkPrefix);
     }
@@ -549,7 +549,7 @@ public class CountryInfo_Europe_Tests
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Iceland", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
-        Assert.Equal(new[] { 7, 9 }, countryInfo.NsnLengths);
+        Assert.Equal([7, 9], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -574,8 +574,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("IE", countryInfo.Iso3166Code);
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Ireland", countryInfo.Name);
-        Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 7, 8, 9, 12 }, countryInfo.NsnLengths);
+        Assert.Equal([3, 2, 1], countryInfo.NdcLengths);
+        Assert.Equal([7, 8, 9, 12], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -600,8 +600,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("IM", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Isle of Man", countryInfo.Name);
-        Assert.Equal(new[] { 4 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
+        Assert.Equal([4], countryInfo.NdcLengths);
+        Assert.Equal([10], countryInfo.NsnLengths);
         Assert.True(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -626,8 +626,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("IT", countryInfo.Iso3166Code);
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Italy", countryInfo.Name);
-        Assert.Equal(new[] { 5, 4, 3, 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 5, 6, 7, 8, 9, 10, 11 }, countryInfo.NsnLengths);
+        Assert.Equal([5, 4, 3, 2], countryInfo.NdcLengths);
+        Assert.Equal([5, 6, 7, 8, 9, 10, 11], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -652,8 +652,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("JE", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Jersey", countryInfo.Name);
-        Assert.Equal(new[] { 4 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 10 }, countryInfo.NsnLengths);
+        Assert.Equal([4], countryInfo.NdcLengths);
+        Assert.Equal([10], countryInfo.NsnLengths);
         Assert.True(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -678,8 +678,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("XK", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Kosovo", countryInfo.Name);
-        Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 8, 9 }, countryInfo.NsnLengths);
+        Assert.Equal([3, 2], countryInfo.NdcLengths);
+        Assert.Equal([8, 9], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -705,7 +705,7 @@ public class CountryInfo_Europe_Tests
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Latvia", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
-        Assert.Equal(new[] { 8 }, countryInfo.NsnLengths);
+        Assert.Equal([8], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -731,7 +731,7 @@ public class CountryInfo_Europe_Tests
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Liechtenstein", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
-        Assert.Equal(new[] { 7, 9 }, countryInfo.NsnLengths);
+        Assert.Equal([7, 9], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -756,8 +756,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("LT", countryInfo.Iso3166Code);
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Lithuania", countryInfo.Name);
-        Assert.Equal(new[] { 3 , 2, 1}, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 8, 12 }, countryInfo.NsnLengths);
+        Assert.Equal([3 , 2, 1], countryInfo.NdcLengths);
+        Assert.Equal([8, 12], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("8", countryInfo.TrunkPrefix);
     }
@@ -783,7 +783,7 @@ public class CountryInfo_Europe_Tests
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Luxembourg", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
-        Assert.Equal(new[] { 4, 5, 6, 7, 8, 9, 10, 11, 12 }, countryInfo.NsnLengths);
+        Assert.Equal([4, 5, 6, 7, 8, 9, 10, 11, 12], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -809,7 +809,7 @@ public class CountryInfo_Europe_Tests
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Malta", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
-        Assert.Equal(new[] { 8, 10 }, countryInfo.NsnLengths);
+        Assert.Equal([8, 10], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -834,8 +834,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("MD", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Moldova", countryInfo.Name);
-        Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 5, 6, 7, 8 }, countryInfo.NsnLengths);
+        Assert.Equal([3, 2], countryInfo.NdcLengths);
+        Assert.Equal([5, 6, 7, 8], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -861,7 +861,7 @@ public class CountryInfo_Europe_Tests
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Monaco", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
-        Assert.Equal(new[] { 8, 9, 12 }, countryInfo.NsnLengths);
+        Assert.Equal([8, 9, 12], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -886,8 +886,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("ME", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Montenegro", countryInfo.Name);
-        Assert.Equal(new[] { 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 4, 5, 8, 12 }, countryInfo.NsnLengths);
+        Assert.Equal([2], countryInfo.NdcLengths);
+        Assert.Equal([4, 5, 8, 12], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -912,8 +912,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("NL", countryInfo.Iso3166Code);
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Netherlands", countryInfo.Name);
-        Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 9 }, countryInfo.NsnLengths);
+        Assert.Equal([3, 2], countryInfo.NdcLengths);
+        Assert.Equal([9], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -938,8 +938,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("MK", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("North Macedonia", countryInfo.Name);
-        Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 8 } ,countryInfo.NsnLengths);
+        Assert.Equal([3, 2, 1], countryInfo.NdcLengths);
+        Assert.Equal([8] ,countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -965,7 +965,7 @@ public class CountryInfo_Europe_Tests
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Norway", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
-        Assert.Equal(new[] { 8, 12 }, countryInfo.NsnLengths);
+        Assert.Equal([8, 12], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -990,8 +990,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("PL", countryInfo.Iso3166Code);
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Poland", countryInfo.Name);
-        Assert.Equal(new[] { 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 6, 7, 8, 9 }, countryInfo.NsnLengths);
+        Assert.Equal([2], countryInfo.NdcLengths);
+        Assert.Equal([6, 7, 8, 9], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -1016,8 +1016,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("PT", countryInfo.Iso3166Code);
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Portugal", countryInfo.Name);
-        Assert.Equal(new[] { 3 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 9 }, countryInfo.NsnLengths);
+        Assert.Equal([3], countryInfo.NdcLengths);
+        Assert.Equal([9], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -1042,8 +1042,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("RO", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Romania", countryInfo.Name);
-        Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 6, 7, 8, 9 }, countryInfo.NsnLengths);
+        Assert.Equal([3, 2], countryInfo.NdcLengths);
+        Assert.Equal([6, 7, 8, 9], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -1069,7 +1069,7 @@ public class CountryInfo_Europe_Tests
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("San Marino", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
-        Assert.Equal(new[] { 6, 7, 8, 9, 10 }, countryInfo.NsnLengths);
+        Assert.Equal([6, 7, 8, 9, 10], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -1094,8 +1094,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("RS", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Serbia", countryInfo.Name);
-        Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 8, 9, 10, 11, 12 }, countryInfo.NsnLengths);
+        Assert.Equal([3, 2], countryInfo.NdcLengths);
+        Assert.Equal([8, 9, 10, 11, 12], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -1120,8 +1120,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("SK", countryInfo.Iso3166Code);
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Slovakia", countryInfo.Name);
-        Assert.Equal(new[] { 4, 3, 2, 1 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 9, 12 }, countryInfo.NsnLengths);
+        Assert.Equal([4, 3, 2, 1], countryInfo.NdcLengths);
+        Assert.Equal([9, 12], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -1146,8 +1146,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("SI", countryInfo.Iso3166Code);
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Slovenia", countryInfo.Name);
-        Assert.Equal(new[] { 4, 3, 2, 1 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 8, 12 }, countryInfo.NsnLengths);
+        Assert.Equal([4, 3, 2, 1], countryInfo.NdcLengths);
+        Assert.Equal([8, 12], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -1172,8 +1172,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("ES", countryInfo.Iso3166Code);
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Spain", countryInfo.Name);
-        Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 9, 13  }, countryInfo.NsnLengths);
+        Assert.Equal([3, 2], countryInfo.NdcLengths);
+        Assert.Equal([9, 13], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Null(countryInfo.TrunkPrefix);
     }
@@ -1198,8 +1198,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("SE", countryInfo.Iso3166Code);
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Sweden", countryInfo.Name);
-        Assert.Equal(new[] { 3, 2, 1 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 6, 7, 8, 9, 10, 13 }, countryInfo.NsnLengths);
+        Assert.Equal([3, 2, 1], countryInfo.NdcLengths);
+        Assert.Equal([6, 7, 8, 9, 10, 13], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -1224,8 +1224,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("CH", countryInfo.Iso3166Code);
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Switzerland", countryInfo.Name);
-        Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 9 }, countryInfo.NsnLengths);
+        Assert.Equal([3, 2], countryInfo.NdcLengths);
+        Assert.Equal([9], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -1250,8 +1250,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("UA", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Ukraine", countryInfo.Name);
-        Assert.Equal(new[] { 3, 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 9, 10 }, countryInfo.NsnLengths);
+        Assert.Equal([3, 2], countryInfo.NdcLengths);
+        Assert.Equal([9, 10], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
@@ -1276,8 +1276,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("GB", countryInfo.Iso3166Code);
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("United Kingdom", countryInfo.Name);
-        Assert.Equal(new[] { 5, 4, 3, 2 }, countryInfo.NdcLengths);
-        Assert.Equal(new[] { 7, 9, 10 }, countryInfo.NsnLengths);
+        Assert.Equal([5, 4, 3, 2], countryInfo.NdcLengths);
+        Assert.Equal([7, 9, 10], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }

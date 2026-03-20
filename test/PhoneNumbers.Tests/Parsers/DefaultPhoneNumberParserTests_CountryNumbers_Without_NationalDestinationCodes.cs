@@ -5,71 +5,70 @@ namespace PhoneNumbers.Tests.Parsers;
 /// </summary>
 public class DefaultPhoneNumberParserTests_CountryNumbers_WithoutNationalDestinationCodes
 {
-    private readonly CountryInfo _countryInfo = TestHelper.CreateCountryInfo(nsnLengths: new[] { 5 });
+    private readonly CountryInfo _countryInfo = TestHelper.CreateCountryInfo(nsnLengths: [5]);
 
     private readonly PhoneNumberParser _parser;
 
     public DefaultPhoneNumberParserTests_CountryNumbers_WithoutNationalDestinationCodes() =>
         _parser = new DefaultPhoneNumberParser(
             _countryInfo,
-            new[]
-            {
+            [
                 new CountryNumber
                 {
-                    SubscriberNumberRanges = new[] { NumberRange.Create("10000-10999") },
+                    SubscriberNumberRanges = [NumberRange.Create("10000-10999")],
                     Kind = PhoneNumberKind.MobilePhoneNumber,
                     Hint = PhoneNumberHint.None,
                 },
                 new CountryNumber
                 {
-                    SubscriberNumberRanges = new[] { NumberRange.Create("12000-12999") },
+                    SubscriberNumberRanges = [NumberRange.Create("12000-12999")],
                     Kind = PhoneNumberKind.MobilePhoneNumber,
                     Hint = PhoneNumberHint.Pager,
                 },
                 new CountryNumber
                 {
-                    SubscriberNumberRanges = new[] { NumberRange.Create("13000-13999") },
+                    SubscriberNumberRanges = [NumberRange.Create("13000-13999")],
                     Kind = PhoneNumberKind.MobilePhoneNumber,
                     Hint = PhoneNumberHint.Virtual,
                 },
                 new CountryNumber
                 {
-                    SubscriberNumberRanges = new[] { NumberRange.Create("20000-20999") },
+                    SubscriberNumberRanges = [NumberRange.Create("20000-20999")],
                     Kind = PhoneNumberKind.NonGeographicPhoneNumber,
                     Hint = PhoneNumberHint.None,
                 },
                 new CountryNumber
                 {
-                    SubscriberNumberRanges = new[] { NumberRange.Create("28000-28999") },
+                    SubscriberNumberRanges = [NumberRange.Create("28000-28999")],
                     Kind = PhoneNumberKind.NonGeographicPhoneNumber,
                     Hint = PhoneNumberHint.Freephone,
                 },
                 new CountryNumber
                 {
-                    SubscriberNumberRanges = new[] { NumberRange.Create("29000-29999") },
+                    SubscriberNumberRanges = [NumberRange.Create("29000-29999")],
                     Kind = PhoneNumberKind.NonGeographicPhoneNumber,
                     Hint = PhoneNumberHint.PremiumRate,
                 },
                 new CountryNumber
                 {
                     GeographicArea = "Springfield",
-                    SubscriberNumberRanges = new[] { NumberRange.Create("30000-30999") },
+                    SubscriberNumberRanges = [NumberRange.Create("30000-30999")],
                     Kind = PhoneNumberKind.GeographicPhoneNumber,
                     Hint = PhoneNumberHint.None,
                 },
                 new CountryNumber
                 {
-                    SubscriberNumberRanges = new[] { NumberRange.Create("31000-31999") },
+                    SubscriberNumberRanges = [NumberRange.Create("31000-31999")],
                     Kind = PhoneNumberKind.NonGeographicPhoneNumber,
                     Hint = PhoneNumberHint.SharedCost,
                 },
                 new CountryNumber
                 {
-                    SubscriberNumberRanges = new[] { NumberRange.Create("41000-41999") },
+                    SubscriberNumberRanges = [NumberRange.Create("41000-41999")],
                     Kind = PhoneNumberKind.NonGeographicPhoneNumber,
                     Hint = PhoneNumberHint.MachineToMachine,
                 },
-            });
+            ]);
 
     [Fact]
     public void Parse_GeographicPhoneNumber()

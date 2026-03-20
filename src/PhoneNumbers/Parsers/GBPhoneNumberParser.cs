@@ -14,9 +14,7 @@ internal sealed class GBPhoneNumberParser : DefaultPhoneNumberParser
 
     private GBPhoneNumberParser(IReadOnlyList<CountryNumber> countryNumbers)
         : base(CountryInfo.UnitedKingdom, countryNumbers) =>
-        _fiveDigitGeoNdcs = countryNumbers
-            .Where(x => x.GeographicArea is not null && x.NationalDestinationCodeRanges![0].From.Length == 5)
-            .ToList();
+        _fiveDigitGeoNdcs = [.. countryNumbers.Where(x => x.GeographicArea is not null && x.NationalDestinationCodeRanges![0].From.Length == 5)];
 
     /// <summary>
     /// Creates an instance of the <see cref="GBPhoneNumberParser"/> class.

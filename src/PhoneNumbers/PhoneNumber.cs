@@ -129,12 +129,11 @@ public abstract class PhoneNumber(PhoneNumberHint phoneNumberHint)
 
         var countries = options.GetCountryInfos(value);
 
-        phoneNumbers = (countries.Any() ? countries : options.Countries)
+        phoneNumbers = [.. (countries.Any() ? countries : options.Countries)
             .Select(x => options.ParserFactory.GetParser(x).Parse(value))
             .Where(x => x.PhoneNumber is not null)
             .Select(x => x.PhoneNumber)
-            .Cast<PhoneNumber>()
-            .ToList();
+            .Cast<PhoneNumber>()];
 
         return phoneNumbers.Any();
     }

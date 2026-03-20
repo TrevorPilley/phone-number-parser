@@ -6,89 +6,88 @@ namespace PhoneNumbers.Tests.Parsers;
 public class DefaultPhoneNumberParserTests_CountryNumbers_WithNationalDestinationCodes
 {
     private readonly CountryInfo _countryInfo = TestHelper.CreateCountryInfo(
-        ndcLengths: new[] { 3, 2 },
-        nsnLengths: new[] { 7 });
+        ndcLengths: [3, 2],
+        nsnLengths: [7]);
 
     private readonly PhoneNumberParser _parser;
 
     public DefaultPhoneNumberParserTests_CountryNumbers_WithNationalDestinationCodes() =>
         _parser = new DefaultPhoneNumberParser(
             _countryInfo,
-            new[]
-            {
+            [
                 new CountryNumber
                 {
-                    NationalDestinationCodeRanges = new[] { NumberRange.Create("40") },
+                    NationalDestinationCodeRanges = [NumberRange.Create("40")],
                     GeographicArea = "Springfield",
-                    SubscriberNumberRanges = new[] { NumberRange.Create("10000-20999"), NumberRange.Create("40000-90999") },
+                    SubscriberNumberRanges = [NumberRange.Create("10000-20999"), NumberRange.Create("40000-90999")],
                     Kind = PhoneNumberKind.GeographicPhoneNumber,
                     Hint = PhoneNumberHint.None,
                 },
                 new CountryNumber
                 {
-                    NationalDestinationCodeRanges = new[] { NumberRange.Create("403") },
+                    NationalDestinationCodeRanges = [NumberRange.Create("403")],
                     GeographicArea = "Springfield B",
-                    SubscriberNumberRanges = new[] { NumberRange.Create("1000-2099") },
+                    SubscriberNumberRanges = [NumberRange.Create("1000-2099")],
                     Kind = PhoneNumberKind.GeographicPhoneNumber,
                     Hint = PhoneNumberHint.None,
                 },
                 new CountryNumber
                 {
-                    NationalDestinationCodeRanges = new[] { NumberRange.Create("70") },
-                    SubscriberNumberRanges = new[] { NumberRange.Create("10000-10999") },
+                    NationalDestinationCodeRanges = [NumberRange.Create("70")],
+                    SubscriberNumberRanges = [NumberRange.Create("10000-10999")],
                     Kind = PhoneNumberKind.MobilePhoneNumber,
                     Hint = PhoneNumberHint.None,
                 },
                 new CountryNumber
                 {
-                    NationalDestinationCodeRanges = new[] { NumberRange.Create("71") },
-                    SubscriberNumberRanges = new[] { NumberRange.Create("12000-12999") },
+                    NationalDestinationCodeRanges = [NumberRange.Create("71")],
+                    SubscriberNumberRanges = [NumberRange.Create("12000-12999")],
                     Kind = PhoneNumberKind.MobilePhoneNumber,
                     Hint = PhoneNumberHint.Pager,
                 },
                 new CountryNumber
                 {
-                    NationalDestinationCodeRanges = new[] { NumberRange.Create("72") },
-                    SubscriberNumberRanges = new[] { NumberRange.Create("13000-13999") },
+                    NationalDestinationCodeRanges = [NumberRange.Create("72")],
+                    SubscriberNumberRanges = [NumberRange.Create("13000-13999")],
                     Kind = PhoneNumberKind.MobilePhoneNumber,
                     Hint = PhoneNumberHint.Virtual,
                 },
                 new CountryNumber
                 {
-                    NationalDestinationCodeRanges = new[] { NumberRange.Create("50") },
-                    SubscriberNumberRanges = new[] { NumberRange.Create("20000-20999") },
+                    NationalDestinationCodeRanges = [NumberRange.Create("50")],
+                    SubscriberNumberRanges = [NumberRange.Create("20000-20999")],
                     Kind = PhoneNumberKind.NonGeographicPhoneNumber,
                     Hint = PhoneNumberHint.None,
                 },
                 new CountryNumber
                 {
-                    NationalDestinationCodeRanges = new[] { NumberRange.Create("60") },
-                    SubscriberNumberRanges = new[] { NumberRange.Create("28000-28999") },
+                    NationalDestinationCodeRanges = [NumberRange.Create("60")],
+                    SubscriberNumberRanges = [NumberRange.Create("28000-28999")],
                     Kind = PhoneNumberKind.NonGeographicPhoneNumber,
                     Hint = PhoneNumberHint.Freephone,
                 },
                 new CountryNumber
                 {
-                    NationalDestinationCodeRanges = new[] { NumberRange.Create("70") },
-                    SubscriberNumberRanges = new[] { NumberRange.Create("28000-28999") },
+                    NationalDestinationCodeRanges = [NumberRange.Create("70")],
+                    SubscriberNumberRanges = [NumberRange.Create("28000-28999")],
                     Kind = PhoneNumberKind.NonGeographicPhoneNumber,
                     Hint = PhoneNumberHint.PremiumRate,
                 },
                 new CountryNumber
                 {
-                    NationalDestinationCodeRanges = new[] { NumberRange.Create("80") },
-                    SubscriberNumberRanges = new[] { NumberRange.Create("28000-28999") },
+                    NationalDestinationCodeRanges = [NumberRange.Create("80")],
+                    SubscriberNumberRanges = [NumberRange.Create("28000-28999")],
                     Kind = PhoneNumberKind.NonGeographicPhoneNumber,
                     Hint = PhoneNumberHint.SharedCost,
                 },
                 new CountryNumber
                 {
-                    NationalDestinationCodeRanges = new[] { NumberRange.Create("90") },
-                    SubscriberNumberRanges = new[] { NumberRange.Create("28000-28999") },
+                    NationalDestinationCodeRanges = [NumberRange.Create("90")],
+                    SubscriberNumberRanges = [NumberRange.Create("28000-28999")],
                     Kind = PhoneNumberKind.NonGeographicPhoneNumber,
                     Hint = PhoneNumberHint.MachineToMachine,
                 },
-            });
+            ]);
 
     [Fact]
     public void Parse_GeographicPhoneNumber()
@@ -266,24 +265,23 @@ public class DefaultPhoneNumberParserTests_CountryNumbers_WithNationalDestinatio
     public void Parse_When_Nsn_Shorter_Than_Some_Ndc_Lengths()
     {
         var parser = new DefaultPhoneNumberParser(
-            TestHelper.CreateCountryInfo(ndcLengths: new[] { 5, 2 }, nsnLengths: new[] { 7, 4 }),
-            new[]
-            {
+            TestHelper.CreateCountryInfo(ndcLengths: [5, 2], nsnLengths: [7, 4]),
+            [
                 new CountryNumber
                 {
-                    NationalDestinationCodeRanges = new[] { NumberRange.Create("10000") },
-                    SubscriberNumberRanges = new[] { NumberRange.Create("00-99") },
+                    NationalDestinationCodeRanges = [NumberRange.Create("10000")],
+                    SubscriberNumberRanges = [NumberRange.Create("00-99")],
                     Kind = PhoneNumberKind.NonGeographicPhoneNumber,
                     Hint = PhoneNumberHint.None,
                 },
                 new CountryNumber
                 {
-                    NationalDestinationCodeRanges = new[] { NumberRange.Create("18") },
-                    SubscriberNumberRanges = new[] { NumberRange.Create("00-99") },
+                    NationalDestinationCodeRanges = [NumberRange.Create("18")],
+                    SubscriberNumberRanges = [NumberRange.Create("00-99")],
                     Kind = PhoneNumberKind.NonGeographicPhoneNumber,
                     Hint = PhoneNumberHint.None,
                 },
-            });
+            ]);
 
         var phoneNumber = parser.Parse("1801").PhoneNumber;
         Assert.NotNull(phoneNumber);
