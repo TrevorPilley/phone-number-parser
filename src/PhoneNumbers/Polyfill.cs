@@ -164,7 +164,7 @@ namespace PhoneNumbers
 
     file static class EmptyReadOnlyCollection<T>
     {
-        public static readonly System.Collections.ObjectModel.ReadOnlyCollection<T> Instance = new(System.Array.Empty<T>());
+        public static readonly System.Collections.ObjectModel.ReadOnlyCollection<T> Instance = new(Array.Empty<T>());
     }
 
     file static class EmptyReadOnlyDictionary<TKey, TValue> where TKey : notnull
