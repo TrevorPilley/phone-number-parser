@@ -34,10 +34,10 @@ internal sealed class GBPhoneNumberParser : DefaultPhoneNumberParser
 
         switch (nsnValue[0])
         {
-            case '1':
+            case Chars.One:
                 phoneNumberKind = PhoneNumberKind.GeographicPhoneNumber;
 
-                if (nsnValue[1] == '1' || nsnValue[2] == '1')
+                if (nsnValue[1] == Chars.One || nsnValue[2] == Chars.One)
                 {
                     ndcLength = 3;
                 }
@@ -50,17 +50,17 @@ internal sealed class GBPhoneNumberParser : DefaultPhoneNumberParser
                     ndcLength = 4;
                 }
                 break;
-            case '2':
+            case Chars.Two:
                 phoneNumberKind = PhoneNumberKind.GeographicPhoneNumber;
                 ndcLength = 2;
                 break;
-            case '3':
-            case '8':
-            case '9':
+            case Chars.Three:
+            case Chars.Eight:
+            case Chars.Nine:
                 phoneNumberKind = PhoneNumberKind.NonGeographicPhoneNumber;
                 ndcLength = 3;
                 break;
-            case '7':
+            case Chars.Seven:
                 phoneNumberKind = PhoneNumberKind.MobilePhoneNumber;
                 ndcLength = 4;
                 break;

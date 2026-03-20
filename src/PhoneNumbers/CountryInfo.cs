@@ -305,7 +305,7 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
 
     /// <remarks>Char.IsDigit returns true for more than 0-9 so use a more restricted version.</remarks>
     private static bool IsDigit(char charVal) =>
-        charVal is >= '0' and <= '9';
+        charVal is >= Chars.Zero and <= Chars.Nine;
 
     private static bool IsSeparator(char charVal) =>
         charVal is Chars.Hyphen || charVal is Chars.ForwardSlash;

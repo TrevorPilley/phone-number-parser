@@ -15,7 +15,7 @@ internal sealed class LUPhoneNumberFormatProvider : ComplexPhoneNumberFormatProv
         phoneNumber.NationalSignificantNumber.Length switch
         {
             6 => "## ## ##",
-            8 => phoneNumber.NationalSignificantNumber[0] == '2' ? "## ### ###" : base.ProvideFormat(phoneNumber, international),
+            8 => phoneNumber.NationalSignificantNumber[0] == Chars.Two ? "## ### ###" : base.ProvideFormat(phoneNumber, international),
             _ => base.ProvideFormat(phoneNumber, international),
         };
 }

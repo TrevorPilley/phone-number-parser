@@ -13,7 +13,7 @@ internal sealed class NOPhoneNumberFormatProvider : ComplexPhoneNumberFormatProv
 
     protected override string ProvideFormat(PhoneNumber phoneNumber, bool international)
     {
-        if (phoneNumber.NationalSignificantNumber[0] == '8')
+        if (phoneNumber.NationalSignificantNumber[0] == Chars.Eight)
         {
             return "### ## ###";
         }

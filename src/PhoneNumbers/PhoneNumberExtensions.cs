@@ -83,5 +83,5 @@ public static class PhoneNumberExtensions
 
     private static bool IsSanMarinoLandline(this PhoneNumber phoneNumber) =>
         phoneNumber.Country == CountryInfo.SanMarino &&
-        (phoneNumber.SubscriberNumber[0] == '0' || phoneNumber.SubscriberNumber[0] == '7' || phoneNumber.SubscriberNumber[0] == '8');
+        (phoneNumber.SubscriberNumber[0] == Chars.Zero || phoneNumber.SubscriberNumber[0] == Chars.Seven || phoneNumber.SubscriberNumber[0] == Chars.Eight);
 }
