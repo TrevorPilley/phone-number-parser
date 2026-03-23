@@ -1,4 +1,3 @@
-using System.Collections.ObjectModel;
 using System.Reflection;
 
 namespace PhoneNumbers.Parsers;
@@ -7,8 +6,8 @@ internal static class ResourceUtility
 {
     // The file format is as follows (spaces for readability, not present in the file):
     // Kind | NDC Range(s) | Geographic Area | SN Range(s) | Hint
-    internal static IReadOnlyList<CountryNumber> ReadCountryNumbers(string name) =>
-        ReadLines(name)
+    internal static List<CountryNumber> ReadCountryNumbers(string name) =>
+        [.. ReadLines(name)
             .Select(x => x.Split(Chars.Pipe))
             .Select(x =>
             {
@@ -21,9 +20,7 @@ internal static class ResourceUtility
                     ParseNumberKind(x[0][0]),
                     x[1].Length > 0 ? ParseNumberRanges(x[1]) : null,
                     ParseNumberRanges(x[3]));
-            })
-            .ToList()
-            .AsReadOnly();
+            })];
 
     private static PhoneNumberHint ParseNumberHint(char value) =>
         value switch
@@ -48,12 +45,10 @@ internal static class ResourceUtility
             _ => throw new NotSupportedException(value.ToString()),
         };
 
-    private static ReadOnlyCollection<NumberRange> ParseNumberRanges(string value) =>
-        value
+    private static List<NumberRange> ParseNumberRanges(string value) =>
+        [.. value
             .Split(Chars.Comma)
-            .Select(NumberRange.Create)
-            .ToList()
-            .AsReadOnly();
+            .Select(NumberRange.Create)];
 
     private static IEnumerable<string> ReadLines(string name)
     {

@@ -7,6 +7,6 @@ internal sealed record CountryNumber(
     string? GeographicArea,
     PhoneNumberHint Hint,
     PhoneNumberKind Kind,
-    IReadOnlyList<NumberRange>? NationalDestinationCodeRanges,
-    IReadOnlyList<NumberRange> SubscriberNumberRanges
+    List<NumberRange>? NationalDestinationCodeRanges,
+    List<NumberRange> SubscriberNumberRanges
 );
