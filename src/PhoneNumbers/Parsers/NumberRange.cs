@@ -15,8 +15,8 @@ internal sealed class NumberRange
 
     private NumberRange(string from, string to)
     {
-        ArgumentNullException.ThrowIfNullOrWhiteSpace(from);
-        ArgumentNullException.ThrowIfNullOrWhiteSpace(to);
+        ArgumentException.ThrowIfNullOrWhiteSpace(from);
+        ArgumentException.ThrowIfNullOrWhiteSpace(to);
 #pragma warning disable S3236
         ArgumentOutOfRangeException.ThrowIfLessThan(to.Length, from.Length, nameof(to));
 #pragma warning restore S3236
