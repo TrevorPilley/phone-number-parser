@@ -15,14 +15,14 @@ internal class DefaultPhoneNumberParser : PhoneNumberParser
     /// <param name="countryInfo">The <see cref="CountryInfo"/> of the country for the parser.</param>
     /// <param name="countryNumbers">The <see cref="CountryNumber"/>s for the country.</param>
     /// <remarks>The constructor is internal for unit tests only.</remarks>
-    internal DefaultPhoneNumberParser(CountryInfo countryInfo, IReadOnlyList<CountryNumber> countryNumbers)
+    internal DefaultPhoneNumberParser(CountryInfo countryInfo, List<CountryNumber> countryNumbers)
         : base(countryInfo)
         => CountryNumbers = countryNumbers ?? throw new ArgumentNullException(nameof(countryNumbers));
 
     /// <summary>
     /// Gets the <see cref="CountryNumber"/>s for the country.
     /// </summary>
-    protected IReadOnlyList<CountryNumber> CountryNumbers { get; }
+    protected List<CountryNumber> CountryNumbers { get; }
 
     /// <summary>
     /// Creates an instance of the <see cref="DefaultPhoneNumberParser"/> class.
@@ -50,22 +50,20 @@ internal class DefaultPhoneNumberParser : PhoneNumberParser
                 var ndc = len > 0 ? nsnValue[0..len] : null;
                 var sn = ndc is not null ? nsnValue[len..] : nsnValue;
 
-                var countryNumber = CountryNumbers
-                    .FirstOrDefault(x =>
-                        (ndc is null || x.NationalDestinationCodeRanges?.Any(x => x.Contains(ndc)) == true) &&
-                        x.SubscriberNumberRanges.Any(x => x.Contains(sn)));
-
-                if (countryNumber is not null)
+                foreach (var countryNumber in CountryNumbers)
                 {
-                    return (ndc, sn, countryNumber);
+                    if ((ndc is null || countryNumber.NationalDestinationCodeRanges?.Exists(r => r.Contains(ndc)) == true) &&
+                        countryNumber.SubscriberNumberRanges.Exists(r => r.Contains(sn)))
+                    {
+                        return (ndc, sn, countryNumber);
+                    }
                 }
             }
         }
         else
         {
             var sn = nsnValue;
-            var countryNumber = CountryNumbers
-                .FirstOrDefault(x => x.SubscriberNumberRanges.Any(x => x.Contains(nsnValue)));
+            var countryNumber = CountryNumbers.Find(cn => cn.SubscriberNumberRanges.Exists(r => r.Contains(sn)));
 
             return (null, sn, countryNumber);
         }
