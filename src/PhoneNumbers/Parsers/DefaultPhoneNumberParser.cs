@@ -37,10 +37,6 @@ internal class DefaultPhoneNumberParser : PhoneNumberParser
     /// <remarks>By the time this method is called, nsnValue will have been validated against the <see cref="CountryInfo"/>.NsnLengths and contain digits only.</remarks>
     protected virtual (string? NationalDestinationCode, string? SubscriberNumber, CountryNumber? CountryNumber) ParseNdcAndSn(string nsnValue)
     {
-        string? ndc = null;
-        string? sn = null;
-        CountryNumber? countryNumber = null;
-
         if (Country.HasNationalDestinationCodes)
         {
             foreach (var len in Country.NdcLengths)
@@ -51,31 +47,27 @@ internal class DefaultPhoneNumberParser : PhoneNumberParser
                 }
 
                 // Necessary as some countries (e.g. Türkiye) have NDCs but also have some SNs without NDCs.
-                ndc = len > 0 ? nsnValue[0..len] : null;
-                sn = ndc is not null ? nsnValue[ndc.Length..] : nsnValue;
+                var ndc = len > 0 ? nsnValue[0..len] : null;
+                var sn = ndc is not null ? nsnValue[len..] : nsnValue;
 
-                countryNumber = CountryNumbers
+                var countryNumber = CountryNumbers
                     .FirstOrDefault(x =>
                         (ndc is null || x.NationalDestinationCodeRanges?.Any(x => x.Contains(ndc)) == true) &&
                         x.SubscriberNumberRanges.Any(x => x.Contains(sn)));
 
                 if (countryNumber is not null)
                 {
-                    break;
+                    return (ndc, sn, countryNumber);
                 }
             }
         }
         else
         {
-            sn = nsnValue;
-
-            countryNumber = CountryNumbers
+            var sn = nsnValue;
+            var countryNumber = CountryNumbers
                 .FirstOrDefault(x => x.SubscriberNumberRanges.Any(x => x.Contains(nsnValue)));
-        }
 
-        if (countryNumber is not null)
-        {
-            return (ndc, sn, countryNumber);
+            return (null, sn, countryNumber);
         }
 
         return (null, null, null);
