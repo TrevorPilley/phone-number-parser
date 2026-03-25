@@ -10,7 +10,7 @@ namespace PhoneNumbers.Parsers;
 /// </remarks>
 internal sealed class GBPhoneNumberParser : DefaultPhoneNumberParser
 {
-    private readonly IReadOnlyList<CountryNumber> _fiveDigitGeoNdcs;
+    private readonly List<CountryNumber> _fiveDigitGeoNdcs;
 
     private GBPhoneNumberParser(IReadOnlyList<CountryNumber> countryNumbers)
         : base(CountryInfo.UnitedKingdom, countryNumbers) =>
@@ -39,7 +39,7 @@ internal sealed class GBPhoneNumberParser : DefaultPhoneNumberParser
                 {
                     ndcLength = 3;
                 }
-                else if (_fiveDigitGeoNdcs.Any(x => nsnValue.StartsWith(x.NationalDestinationCodeRanges![0].From, StringComparison.Ordinal)))
+                else if (_fiveDigitGeoNdcs.Exists(x => nsnValue.StartsWith(x.NationalDestinationCodeRanges![0].From, StringComparison.Ordinal)))
                 {
                     ndcLength = 5;
                 }

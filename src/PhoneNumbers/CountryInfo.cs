@@ -20,14 +20,14 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
     internal const string Oceania = "Oceania";
     internal const string SouthAmerica = "South America";
 
-    private static readonly ReadOnlyCollection<PhoneNumberFormatter> s_formatters = new(
+    private static readonly List<PhoneNumberFormatter> s_formatters =
     [
         E164PhoneNumberFormatter.Instance,
         E123PhoneNumberFormatter.Instance,
         NationalPhoneNumberFormatter.Instance,
         NationalUnformattedPhoneNumberFormatter.Instance,
         Rfc3966PhoneNumberFormatter.Instance,
-    ]);
+    ];
 
     private static readonly ReadOnlyCollection<int> s_ndc_1 = new([1]);
     private static readonly ReadOnlyCollection<int> s_ndc_2 = new([2]);
@@ -243,7 +243,7 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
     /// <exception cref="FormatException">Thrown if the format string is not valid.</exception>
     /// <returns>The <see cref="PhoneNumberFormatter"/>.</returns>
     internal static PhoneNumberFormatter GetFormatter(string format) =>
-        s_formatters.SingleOrDefault(x => x.CanFormat(format)) ?? throw new FormatException($"{format} is not a supported format");
+        s_formatters.Find(x => x.CanFormat(format)) ?? throw new FormatException($"{format} is not a supported format");
 
     /// <summary>
     /// Gets a value indicating whether the specified value has the calling code for this country.
