@@ -50,6 +50,7 @@ internal class DefaultPhoneNumberParser : PhoneNumberParser
                     continue;
                 }
 
+                // Necessary as some countries (e.g. Türkiye) have NDCs but also have some SNs without NDCs.
                 ndc = len > 0 ? nsnValue[0..len] : null;
                 sn = ndc is not null ? nsnValue[ndc.Length..] : nsnValue;
 
