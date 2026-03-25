@@ -15,14 +15,12 @@ internal static class ResourceUtility
                 System.Diagnostics.Debug.Assert(x[0].Length <= 1);
                 System.Diagnostics.Debug.Assert(x[4].Length <= 1);
 
-                return new CountryNumber
-                {
-                    GeographicArea = x[2].Length > 0 ? x[2] : null,
-                    Hint = ParseNumberHint(x[4].Length > 0 ? x[4][0] : Chars.Null),
-                    Kind = ParseNumberKind(x[0][0]),
-                    NationalDestinationCodeRanges = x[1].Length > 0 ? ParseNumberRanges(x[1]) : null,
-                    SubscriberNumberRanges = ParseNumberRanges(x[3]),
-                };
+                return new CountryNumber(
+                    x[2].Length > 0 ? x[2] : null,
+                    ParseNumberHint(x[4].Length > 0 ? x[4][0] : Chars.Null),
+                    ParseNumberKind(x[0][0]),
+                    x[1].Length > 0 ? ParseNumberRanges(x[1]) : null,
+                    ParseNumberRanges(x[3]));
             })
             .ToList()
             .AsReadOnly();
