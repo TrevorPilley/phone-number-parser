@@ -1,2 +1,3 @@
 # Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200006D0001PDFE.pdf
 # Reference Date: 19/05/2014
+G|3|Tokyo Region|00000000-99999999|
