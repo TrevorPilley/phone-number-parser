@@ -40,7 +40,7 @@ public class CountryInfo_Asia_Tests
         Assert.False(countryInfo.AllowsLocalGeographicDialling);
         Assert.Equal("81", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
-        Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.IsType<JPPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.Equal("Japan", countryInfo.FullName);
         Assert.Equal("010", countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
