@@ -139,7 +139,7 @@ public class ParseOptionsTests
         parseOptions.Countries.Clear();
         parseOptions.AllowOecdCountries();
 
-        Assert.Equal(32, parseOptions.Countries.Count);
+        Assert.Equal(33, parseOptions.Countries.Count);
         Assert.All(parseOptions.Countries, x => Assert.True(x.IsOecdMember));
     }
 
