@@ -14,7 +14,7 @@ internal sealed class JPPhoneNumberFormatProvider : ComplexPhoneNumberFormatProv
     protected override string ProvideFormat(PhoneNumber phoneNumber, bool international) =>
         phoneNumber.NationalDestinationCode!.Length switch
         {
-            3 => international ? "### ## ####" : "0### ## ####",
+            3 => international ? "### ## ####" : "(0###) ## ####",
             _ => base.ProvideFormat(phoneNumber, international),
         };
 }
