@@ -25,6 +25,7 @@ public partial class CountryInfo
     {
         CallingCode = "81",
         Continent = Asia,
+        FormatProvider = JPPhoneNumberFormatProvider.Instance,
         FullName = "Japan",
         InternationalCallPrefix = "010",
         IsOecdMember = true,
