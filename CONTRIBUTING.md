@@ -10,7 +10,7 @@ Before raising a bug, please check whether the issue still exists in the latest 
 
 ## Building the project
 
-The project multi targets .NET 9.0 and 8.0 in addition to .NET Standard 2.1 & 2.0 so you will need to have the relevant SDK's installed in order to build the solution locally. It also utilises C# 13 language features so you will need an IDE that supports it.
+The project multi targets .NET 10.0, 9.0 and 8.0 in addition to .NET Standard 2.1 & 2.0 so you will need to have the relevant SDK's installed in order to build the solution locally. It also utilises C# 14 language features so you will need an IDE that supports it.
 
 Firstly clone or fork the repository.
 
@@ -29,7 +29,8 @@ public static CountryInfo CountryName { get; } = new()
 {
     CallingCode = "NN",
     Continent = Africa/Asia/Europe/Oceania/NorthAmerica/SouthAmerica, // as appropriate
-    FullName = "Country Name",
+    FullName = "Full Country Name",
+    IsABCMember = true / false, // e.g. IsEuropeanUnionMember as appropriate
     Iso3166Code = "ZZ",
     Name = "Country Name",
     NsnLengths = new ReadOnlyCollection<int>([N]),
@@ -71,7 +72,7 @@ Or a combination thereof (e.g. `NNNN,NNNN-NNNN,NNNN-NNNN`).
 
 #### Geographical area
 
-The name of the area a geographically assigned number is allocated to, preferably in the local language of the country the data file relates to rather than English (e.g. `Firenze` rather than `Florence` in Italy).
+The name of the area a geographically assigned number is allocated to. This is written using the Latin alphabet, preferring the local language of the country the data file relates to where they use the Latin alphabet (e.g. `Firenze` rather than `Florence` in Italy) otherwise using English.
 
 #### Subscriber number ranges
 
