@@ -1,3 +1,5 @@
 # Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200006D0001PDFE.pdf
 # Reference Date: 19/05/2014
+G|11|Sapporo Region|0000000-9999999|
+G|289|Kanuma Region|000000-999999|
 G|3|Tokyo Region|00000000-99999999|
