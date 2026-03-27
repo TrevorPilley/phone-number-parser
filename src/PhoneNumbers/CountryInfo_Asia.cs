@@ -20,6 +20,23 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Japan.
+    /// </summary>
+    public static CountryInfo Japan { get; } = new()
+    {
+        CallingCode = "81",
+        Continent = Asia,
+        FullName = "Japan",
+        InternationalCallPrefix = "010",
+        IsOecdMember = true,
+        Iso3166Code = "JP",
+        Name = "Japan",
+        NdcLengths = s_ndc_4_3_2_1,
+        NsnLengths = s_nsn_9_10,
+        TrunkPrefix = "0",
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Jordan.
     /// </summary>
     public static CountryInfo Jordan { get; } = new()
