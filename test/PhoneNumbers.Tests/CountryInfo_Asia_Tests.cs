@@ -31,6 +31,32 @@ public class CountryInfo_Asia_Tests
     }
 
     [Fact]
+    public void CountryInfo_Japan()
+    {
+        Assert.Same(CountryInfo.Japan, CountryInfo.Japan);
+
+        var countryInfo = CountryInfo.Japan;
+
+        Assert.False(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal("81", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
+        Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Japan", countryInfo.FullName);
+        Assert.Equal("010", countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
+        Assert.Equal("JP", countryInfo.Iso3166Code);
+        Assert.True(countryInfo.IsOecdMember);
+        Assert.Equal("Japan", countryInfo.Name);
+        Assert.Equal([4, 3, 2, 1], countryInfo.NdcLengths);
+        Assert.Equal([9, 10], countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Equal("0", countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_Jordan()
     {
         Assert.Same(CountryInfo.Jordan, CountryInfo.Jordan);
