@@ -24,6 +24,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Japan { get; } = new()
     {
+        AllowsLocalGeographicDialling = true,
         CallingCode = "81",
         Continent = Asia,
         FormatProvider = JPPhoneNumberFormatProvider.Instance,
