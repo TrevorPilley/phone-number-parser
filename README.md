@@ -159,7 +159,7 @@ ParseOptions.Default.AllowSouthAmericanCountries();
 ParseOptions.Default.AllowArabLeagueCountries();    // 7 of 22 members
 ParseOptions.Default.AllowEuropeanUnionCountries(); // all 27 member states + 6 territories with special status
 ParseOptions.Default.AllowNatoCountries();          // 31 of 32 members (Albania not supported yet)
-ParseOptions.Default.AllowOecdCountries();          // 32 of 38 members
+ParseOptions.Default.AllowOecdCountries();          // 33 of 38 members
 
 // Add all countries supported by the library using the same numbering plan:
 ParseOptions.Default.AllowFinlandNumberingPlanCountries(); // Finland and Åland Islands
