@@ -1,4 +1,3 @@
-using System.Collections.ObjectModel;
 using PhoneNumbers.Formatters.FormatProviders;
 
 namespace PhoneNumbers;
