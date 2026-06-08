@@ -13,7 +13,7 @@ public partial class CountryInfo
         AllowsLocalGeographicDialling = true,
         CallingCode = "358",
         Continent = Europe,
-        FullName = "Region of Åland",
+        FullName = "Åland Islands",
         IsEuropeanUnionMember = true, // as a result of being part of Finland
         IsNatoMember = false,
         Iso3166Code = "AX",
@@ -331,7 +331,7 @@ public partial class CountryInfo
         CallingCode = "44",
         Continent = Europe,
         FormatProvider = GBPhoneNumberFormatProvider.Instance,
-        FullName = "Guernsey",
+        FullName = "The Bailiwick of Guernsey",
         Iso3166Code = "GG",
         Name = "Guernsey",
         NdcLengths = s_ndc_4,

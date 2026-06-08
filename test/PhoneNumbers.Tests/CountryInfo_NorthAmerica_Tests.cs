@@ -700,7 +700,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("VI", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
-        Assert.Equal("United States Virgin Islands", countryInfo.Name);
+        Assert.Equal("Virgin Islands (U.S.)", countryInfo.Name);
         Assert.Equal([3], countryInfo.NdcLengths);
         Assert.Equal([10], countryInfo.NsnLengths);
         Assert.True(countryInfo.SharesCallingCode);

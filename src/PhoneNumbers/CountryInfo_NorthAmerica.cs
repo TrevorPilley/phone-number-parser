@@ -478,7 +478,7 @@ public partial class CountryInfo
         FullName = "Virgin Islands of the United States",
         InternationalCallPrefix = NanpInternationalCallPrefix,
         Iso3166Code = "VI",
-        Name = "United States Virgin Islands",
+        Name = "Virgin Islands (U.S.)",
         NdcLengths = s_ndc_3,
         NsnLengths = s_nsn_10,
         SharesCallingCode = true,
