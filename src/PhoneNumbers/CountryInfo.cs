@@ -193,11 +193,21 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
     /// </summary>
     internal ReadOnlyCollection<int> NsnLengths { get; init; } = ReadOnlyCollection<int>.Empty;
 
-    /// <inheritdoc/>
+    /// <summary>
+    /// Determines whether two <see cref="CountryInfo"/> instances are not equal.
+    /// </summary>
+    /// <param name="countryInfo1">The first country information instance.</param>
+    /// <param name="countryInfo2">The second country information instance.</param>
+    /// <returns><see langword="true"/> if the instances are not equal; otherwise, <see langword="false"/>.</returns>
     public static bool operator !=(CountryInfo? countryInfo1, CountryInfo? countryInfo2) =>
         !(countryInfo1 == countryInfo2);
 
-    /// <inheritdoc/>
+    /// <summary>
+    /// Determines whether two <see cref="CountryInfo"/> instances are equal.
+    /// </summary>
+    /// <param name="countryInfo1">The first country information instance.</param>
+    /// <param name="countryInfo2">The second country information instance.</param>
+    /// <returns><see langword="true"/> if the instances are equal; otherwise, <see langword="false"/>.</returns>
     public static bool operator ==(CountryInfo? countryInfo1, CountryInfo? countryInfo2) =>
         countryInfo1 is null ? countryInfo2 is null : countryInfo1.Equals(countryInfo2);
 
