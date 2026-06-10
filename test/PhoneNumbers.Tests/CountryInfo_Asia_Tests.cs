@@ -15,7 +15,7 @@ public class CountryInfo_Asia_Tests
         Assert.Equal("852", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
-        Assert.Equal("Hong Kong Special Administrative Region of China", countryInfo.FullName);
+        Assert.Equal("Hong Kong Special Administrative Region of the People's Republic of China", countryInfo.FullName);
         Assert.Equal("001", countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsArabLeagueMember);
@@ -67,7 +67,7 @@ public class CountryInfo_Asia_Tests
         Assert.Equal("853", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
-        Assert.Equal("Macao Special Administrative Region of China", countryInfo.FullName);
+        Assert.Equal("Macao Special Administrative Region of the People's Republic of China", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsArabLeagueMember);

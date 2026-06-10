@@ -11,7 +11,7 @@ public partial class CountryInfo
     {
         CallingCode = "852",
         Continent = Asia,
-        FullName = "Hong Kong Special Administrative Region of China",
+        FullName = "Hong Kong Special Administrative Region of the People's Republic of China",
         InternationalCallPrefix = "001",
         Iso3166Code = "HK",
         Name = "Hong Kong",
@@ -42,7 +42,7 @@ public partial class CountryInfo
     {
         CallingCode = "853",
         Continent = Asia,
-        FullName = "Macao Special Administrative Region of China",
+        FullName = "Macao Special Administrative Region of the People's Republic of China",
         Iso3166Code = "MO",
         Name = "Macao",
         NsnLengths = s_nsn_8,
