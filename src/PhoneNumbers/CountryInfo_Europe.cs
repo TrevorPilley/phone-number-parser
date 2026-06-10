@@ -330,7 +330,7 @@ public partial class CountryInfo
         CallingCode = "44",
         Continent = Europe,
         FormatProvider = GBPhoneNumberFormatProvider.Instance,
-        FullName = "The Bailiwick of Guernsey",
+        FullName = "Bailiwick of Guernsey",
         Iso3166Code = "GG",
         Name = "Guernsey",
         NdcLengths = s_ndc_4,

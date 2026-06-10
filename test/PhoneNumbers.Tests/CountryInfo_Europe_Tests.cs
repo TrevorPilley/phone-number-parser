@@ -487,7 +487,7 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("44", countryInfo.CallingCode);
         Assert.Equal(CountryInfo.Europe, countryInfo.Continent);
         Assert.IsType<GBPhoneNumberFormatProvider>(countryInfo.FormatProvider);
-        Assert.Equal("The Bailiwick of Guernsey", countryInfo.FullName);
+        Assert.Equal("Bailiwick of Guernsey", countryInfo.FullName);
         Assert.Equal(CountryInfo.ItuInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsArabLeagueMember);
