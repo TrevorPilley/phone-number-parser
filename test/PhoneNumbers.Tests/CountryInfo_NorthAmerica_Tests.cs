@@ -146,7 +146,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.Equal(CountryInfo.NanpCallingCode, countryInfo.CallingCode);
         Assert.Equal(CountryInfo.NorthAmerica, countryInfo.Continent);
         Assert.IsType<NanpPhoneNumberFormatProvider>(countryInfo.FormatProvider);
-        Assert.Equal("British Virgin Islands", countryInfo.FullName);
+        Assert.Equal("Virgin Islands", countryInfo.FullName);
         Assert.Equal(CountryInfo.NanpInternationalCallPrefix, countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsArabLeagueMember);
@@ -154,7 +154,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("VG", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
-        Assert.Equal("Virgin Islands (British)", countryInfo.Name);
+        Assert.Equal("British Virgin Islands", countryInfo.Name);
         Assert.Equal([3], countryInfo.NdcLengths);
         Assert.Equal([10], countryInfo.NsnLengths);
         Assert.True(countryInfo.SharesCallingCode);
@@ -700,7 +700,7 @@ public class CountryInfo_NorthAmerica_Tests
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("VI", countryInfo.Iso3166Code);
         Assert.False(countryInfo.IsOecdMember);
-        Assert.Equal("Virgin Islands (U.S.)", countryInfo.Name);
+        Assert.Equal("United States Virgin Islands", countryInfo.Name);
         Assert.Equal([3], countryInfo.NdcLengths);
         Assert.Equal([10], countryInfo.NsnLengths);
         Assert.True(countryInfo.SharesCallingCode);
