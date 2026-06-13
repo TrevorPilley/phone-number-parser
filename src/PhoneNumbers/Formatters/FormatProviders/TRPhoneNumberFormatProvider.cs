@@ -1,7 +1,7 @@
 namespace PhoneNumbers.Formatters.FormatProviders;
 
 /// <summary>
-/// A <see cref="PhoneNumberFormatProvider"/> for Turkey numbers.
+/// A <see cref="PhoneNumberFormatProvider"/> for Türkiye numbers.
 /// </summary>
 internal sealed class TRPhoneNumberFormatProvider : ComplexPhoneNumberFormatProvider
 {
