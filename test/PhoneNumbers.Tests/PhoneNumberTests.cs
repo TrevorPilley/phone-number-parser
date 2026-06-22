@@ -75,9 +75,28 @@ public class PhoneNumberTests
     [InlineData("tel:+44-114-272-6444,1234")]
     [InlineData("tel:+44-114-272-6444;1234")]
     [InlineData("tel:+44-114-272-6444;ext=1234")]
-    public void Parse_Value_CountryCode(string input)
+    public void Parse_Value_Iso3116Alpha2Code(string input)
     {
         var phoneNumber = PhoneNumber.Parse(input, "GB");
+        Assert.Equal("1142726444", phoneNumber.NationalSignificantNumber);
+    }
+
+    [Theory]
+    [InlineData("0114 272 6444")]
+    [InlineData("0114-272-6444")]
+    [InlineData("0114.272.6444")]
+    [InlineData("(0114) 272 6444")]
+    [InlineData("+441142726444")]
+    [InlineData("+44 114 272 6444")]
+    [InlineData("+44 (114) 272 6444")]
+    [InlineData("+44 (0) 114 272 6444")]
+    [InlineData("tel:+44-114-272-6444")]
+    [InlineData("tel:+44-114-272-6444,1234")]
+    [InlineData("tel:+44-114-272-6444;1234")]
+    [InlineData("tel:+44-114-272-6444;ext=1234")]
+    public void Parse_Value_Iso3116Alpha3Code(string input)
+    {
+        var phoneNumber = PhoneNumber.Parse(input, "GBR");
         Assert.Equal("1142726444", phoneNumber.NationalSignificantNumber);
     }
 
@@ -88,6 +107,34 @@ public class PhoneNumberTests
     [Fact]
     public void Parse_Value_CountryCode_Throws_ArgumentNullException_If_CountryCode_Null() =>
         Assert.Throws<ArgumentNullException>(() => PhoneNumber.Parse("0123456789", default(string)));
+
+    [Fact]
+    public void Parse_Value_Iso3116Alpha2Code_Throws_If_CountryCode_Not_Supported()
+    {
+        var exception = Assert.Throws<ParseException>(() => PhoneNumber.Parse("0123456789", "ZZ"));
+        Assert.Equal("The country code ZZ is not currently supported, or is not enabled in ParseOptions.", exception.Message);
+    }
+
+    [Fact]
+    public void Parse_Value_Iso3116Alpha3Code_Throws_If_CountryCode_Not_Supported()
+    {
+        var exception = Assert.Throws<ParseException>(() => PhoneNumber.Parse("0123456789", "ZZZ"));
+        Assert.Equal("The country code ZZZ is not currently supported, or is not enabled in ParseOptions.", exception.Message);
+    }
+
+    [Fact]
+    public void Parse_Value_Iso3116Alpha2Code_Throws_If_Value_In_Incorrect_International_Format_For_CountryCode()
+    {
+        var exception = Assert.Throws<ParseException>(() => PhoneNumber.Parse("+441142726444", "FR"));
+        Assert.Equal("The value must be a France phone number starting +33 or 0 and the national significant number of the phone number must be 9 or 13 digits in length.", exception.Message);
+    }
+
+    [Fact]
+    public void Parse_Value_Iso3116Alpha3Code_Throws_If_Value_In_Incorrect_International_Format_For_CountryCode()
+    {
+        var exception = Assert.Throws<ParseException>(() => PhoneNumber.Parse("+441142726444", "FRA"));
+        Assert.Equal("The value must be a France phone number starting +33 or 0 and the national significant number of the phone number must be 9 or 13 digits in length.", exception.Message);
+    }
 
     [Theory]
     [InlineData("")]
@@ -275,9 +322,29 @@ public class PhoneNumberTests
     [InlineData("tel:+44-114-272-6444,1234")]
     [InlineData("tel:+44-114-272-6444;1234")]
     [InlineData("tel:+44-114-272-6444;ext=1234")]
-    public void TryParse_Value_CountryCode(string input)
+    public void TryParse_Value_Iso3116Alpha2Code(string input)
     {
         Assert.True(PhoneNumber.TryParse(input, "GB", out var phoneNumber));
+        Assert.NotNull(phoneNumber);
+        Assert.Equal("1142726444", phoneNumber.NationalSignificantNumber);
+    }
+
+    [Theory]
+    [InlineData("0114 272 6444")]
+    [InlineData("0114-272-6444")]
+    [InlineData("0114.272.6444")]
+    [InlineData("(0114) 272 6444")]
+    [InlineData("+441142726444")]
+    [InlineData("+44 114 272 6444")]
+    [InlineData("+44 (114) 272 6444")]
+    [InlineData("+44 (0) 114 272 6444")]
+    [InlineData("tel:+44-114-272-6444")]
+    [InlineData("tel:+44-114-272-6444,1234")]
+    [InlineData("tel:+44-114-272-6444;1234")]
+    [InlineData("tel:+44-114-272-6444;ext=1234")]
+    public void TryParse_Value_Iso3116Alpha3Code(string input)
+    {
+        Assert.True(PhoneNumber.TryParse(input, "GBR", out var phoneNumber));
         Assert.NotNull(phoneNumber);
         Assert.Equal("1142726444", phoneNumber.NationalSignificantNumber);
     }
@@ -289,6 +356,30 @@ public class PhoneNumberTests
     [Fact]
     public void TryParse_Value_CountryCode_Returns_False_If_CountryCode_Null() =>
         Assert.False(PhoneNumber.TryParse("0123456789", default(string), out var _));
+
+    [Fact]
+    public void TryParse_Value_CountryCode_False_If_Iso3116Alpha2Code_Not_Supported()
+    {
+        Assert.False(PhoneNumber.TryParse("0123456789", "ZZ", out var phoneNumber));
+        Assert.Null(phoneNumber);
+    }
+
+    [Fact]
+    public void TryParse_Value_CountryCode_False_If_Iso3116Alpha3Code_Not_Supported()
+    {
+        Assert.False(PhoneNumber.TryParse("0123456789", "ZZZ", out var phoneNumber));
+        Assert.Null(phoneNumber);
+    }
+
+    [Fact]
+    public void TryParse_Value_CountryCode_False_If_ParseOptions_Null()
+    {
+        var parseOptions = new ParseOptions();
+        parseOptions.Countries.Remove(CountryInfo.UnitedKingdom);
+
+        Assert.False(PhoneNumber.TryParse("01142726444", "GB", out var phoneNumber, parseOptions));
+        Assert.Null(phoneNumber);
+    }
 
     [Theory]
     [InlineData("")]
