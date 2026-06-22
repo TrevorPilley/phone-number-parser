@@ -34,14 +34,15 @@ public class CountryInfoTests
     }
 
     [Fact]
-    public void Equality_Same_Iso3166Code()
+    public void Equality_Same_Iso3166Alpha2Code()
     {
         var countryInfo1 = new CountryInfo
         {
             CallingCode = "-1",
             Continent = "Pangea",
             FullName = "Nowhere",
-            Iso3166Code = "YZ",
+            Iso3166Alpha2Code = "YZ",
+            Iso3166Alpha3Code = "YZZ",
             Name = "Nowhere",
         };
 
@@ -50,7 +51,8 @@ public class CountryInfoTests
             CallingCode = "-1",
             Continent = "Pangea",
             FullName = "Nowhere",
-            Iso3166Code = "YZ",
+            Iso3166Alpha2Code = "YZ",
+            Iso3166Alpha3Code = "YZZ",
             Name = "Nowhere",
         };
 
@@ -60,6 +62,7 @@ public class CountryInfoTests
         Assert.True(countryInfo1 == countryInfo2);
         Assert.False(countryInfo1 != countryInfo2);
     }
+
     [Fact]
     public void GetFormatter_E123_Returns_E123PhoneNumberFormatter() =>
         Assert.IsType<E123PhoneNumberFormatter>(CountryInfo.GetFormatter("E.123"));
@@ -128,7 +131,8 @@ public class CountryInfoTests
             CallingCode = "-1",
             Continent = "Pangea",
             FullName = "Nowhere",
-            Iso3166Code = "YZ",
+            Iso3166Alpha2Code = "YZ",
+            Iso3166Alpha3Code = "YZZ",
             Name = "Nowhere",
         };
 
@@ -153,7 +157,8 @@ public class CountryInfoTests
             CallingCode = "-1",
             Continent = "Pangea",
             FullName = "Nowhere",
-            Iso3166Code = "YY",
+            Iso3166Alpha2Code = "YY",
+            Iso3166Alpha3Code = "YYY",
             Name = "Nowhere",
         };
 
@@ -285,7 +290,8 @@ public class CountryInfoTests
         Assert.Null(countryInfo.Continent);
         Assert.False(countryInfo.HasNationalDestinationCodes);
         Assert.False(countryInfo.HasTrunkPrefix);
-        Assert.Null(countryInfo.Iso3166Code);
+        Assert.Null(countryInfo.Iso3166Alpha2Code);
+        Assert.Null(countryInfo.Iso3166Alpha3Code);
         Assert.Null(countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
         Assert.Empty(countryInfo.NsnLengths);
