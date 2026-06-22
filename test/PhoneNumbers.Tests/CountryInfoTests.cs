@@ -42,6 +42,7 @@ public class CountryInfoTests
             Continent = "Pangea",
             FullName = "Nowhere",
             Iso3166Alpha2Code = "YZ",
+            Iso3166Alpha3Code = "YZZ",
             Name = "Nowhere",
         };
 
@@ -51,6 +52,7 @@ public class CountryInfoTests
             Continent = "Pangea",
             FullName = "Nowhere",
             Iso3166Alpha2Code = "YZ",
+            Iso3166Alpha3Code = "YZZ",
             Name = "Nowhere",
         };
 
@@ -60,6 +62,7 @@ public class CountryInfoTests
         Assert.True(countryInfo1 == countryInfo2);
         Assert.False(countryInfo1 != countryInfo2);
     }
+
     [Fact]
     public void GetFormatter_E123_Returns_E123PhoneNumberFormatter() =>
         Assert.IsType<E123PhoneNumberFormatter>(CountryInfo.GetFormatter("E.123"));
@@ -129,6 +132,7 @@ public class CountryInfoTests
             Continent = "Pangea",
             FullName = "Nowhere",
             Iso3166Alpha2Code = "YZ",
+            Iso3166Alpha3Code = "YZZ",
             Name = "Nowhere",
         };
 
@@ -154,6 +158,7 @@ public class CountryInfoTests
             Continent = "Pangea",
             FullName = "Nowhere",
             Iso3166Alpha2Code = "YY",
+            Iso3166Alpha3Code = "YYY",
             Name = "Nowhere",
         };
 

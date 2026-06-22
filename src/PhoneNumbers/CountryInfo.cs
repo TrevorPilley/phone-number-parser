@@ -158,6 +158,12 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
     public required string Iso3166Alpha2Code { get; init; } = null!;
 
     /// <summary>
+    /// Gets the ISO 3166 Alpha-3 code for the country.
+    /// </summary>
+    /// <remarks>See https://www.iso.org/iso-3166-country-codes.html</remarks>
+    public required string Iso3166Alpha3Code { get; init; } = null!;
+
+    /// <summary>
     /// Gets the name of the country in English.
     /// </summary>
     public required string Name { get; init; } = null!;

@@ -20,6 +20,7 @@ internal static class TestHelper
             Continent = "Pangea",
             FullName = "Zulu",
             Iso3166Alpha2Code = "ZZ", // ZZ isn't a used ISO 3166 code.
+            Iso3166Alpha3Code = "ZZZ",
             Name = "Zulu",
             NdcLengths = new ReadOnlyCollection<int>(ndcLengths ?? Array.Empty<int>()),
             NsnLengths = new ReadOnlyCollection<int>(nsnLengths ?? Array.Empty<int>()),

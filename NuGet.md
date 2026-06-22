@@ -13,7 +13,7 @@ phoneNumber.SubscriberNumber;            // 2726444 (aka line number)
 
 // Country specific information is accessible via the Country property, for example:
 phoneNumber.Country.CallingCode;         // 44
-phoneNumber.Country.Iso3166Alpha2Code;         // GB
+phoneNumber.Country.Iso3166Alpha2Code;   // GB
 phoneNumber.Country.Name;                // United Kingdom
 phoneNumber.Country.TrunkPrefix;         // 0
 
