@@ -44,8 +44,9 @@ var phoneNumber = PhoneNumber.Parse("+441142726444");
 // specify the typed CountryInfo instance as the second parameter:
 var phoneNumber = PhoneNumber.Parse("01142726444", CountryInfo.UnitedKingdom);
 
-// Alternatively the ISO 3166 Alpha-2 code for the country:
+// Alternatively either the Alpha-2 or Alpha-3 ISO 3166 code for the country:
 var phoneNumber = PhoneNumber.Parse("01142726444", "GB");
+var phoneNumber = PhoneNumber.Parse("01142726444", "GBR");
 ```
 
 There are 4 overloads for TryParse:
@@ -58,8 +59,9 @@ PhoneNumber.TryParse("+442079813000", out PhoneNumber phoneNumber);
 // specify the typed CountryInfo instance for the country as the second parameter:
 PhoneNumber.TryParse("01142726444", CountryInfo.UnitedKingdom, out PhoneNumber phoneNumber);
 
-// Alternatively the ISO 3166 Alpha-2 code:
+// Alternatively either the Alpha-2 or Alpha-3 ISO 3166 code for the country:
 PhoneNumber.TryParse("01142726444", "GB", out PhoneNumber phoneNumber);
+PhoneNumber.TryParse("01142726444", "GBR", out PhoneNumber phoneNumber);
 
 // If the phone number string is not in international format and the country code is not known,
 // any possible matches can be determined via:
@@ -81,7 +83,8 @@ phoneNumber.Country.IsArabLeagueMember;            // false
 phoneNumber.Country.IsEuropeanUnionMember;         // false
 phoneNumber.Country.IsNatoMember;                  // true
 phoneNumber.Country.IsOecdMember;                  // true
-phoneNumber.Country.Iso3166Code;                   // GB
+phoneNumber.Country.Iso3166Alpha2Code;             // GB
+phoneNumber.Country.Iso3166Alpha3Code;             // GBR
 phoneNumber.Country.Name;                          // United Kingdom
 phoneNumber.Country.SharesCallingCode;             // true
 phoneNumber.Country.TrunkPrefix;                   // 0
