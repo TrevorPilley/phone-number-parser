@@ -24,11 +24,12 @@ public sealed class ParseOptions
     internal PhoneNumberParserFactory ParserFactory { get; } = new();
 
     /// <summary>
-    /// Gets the supported <see cref="CountryInfo"/> with the specified ISO 3166 Alpha-2 code.
+    /// Gets the supported <see cref="CountryInfo"/> with the specified ISO 3166 Alpha-2, or Alpha-3 code.
     /// </summary>
-    /// <param name="countryCode">A string containing an ISO 3166 Alpha-2 code.</param>
+    /// <param name="countryCode">A string containing an ISO 3166 Alpha-2 or Alpha-3 code.</param>
     internal CountryInfo? GetCountryInfo(string countryCode) =>
-        Countries.SingleOrDefault(x => x.Iso3166Alpha2Code.Equals(countryCode, StringComparison.Ordinal));
+        Countries.SingleOrDefault(x => x.Iso3166Alpha2Code.Equals(countryCode, StringComparison.Ordinal)
+        || x.Iso3166Alpha3Code.Equals(countryCode, StringComparison.Ordinal));
 
     /// <summary>
     /// Gets the supported <see cref="CountryInfo"/>s for which the specified value is potentially an international number.
