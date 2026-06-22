@@ -19,7 +19,7 @@ internal static class TestHelper
             CallingCode = "422", // 422 isn't a used calling code.
             Continent = "Pangea",
             FullName = "Zulu",
-            Iso3166Code = "ZZ", // ZZ isn't a used ISO 3166 code.
+            Iso3166Alpha2Code = "ZZ", // ZZ isn't a used ISO 3166 code.
             Name = "Zulu",
             NdcLengths = new ReadOnlyCollection<int>(ndcLengths ?? Array.Empty<int>()),
             NsnLengths = new ReadOnlyCollection<int>(nsnLengths ?? Array.Empty<int>()),

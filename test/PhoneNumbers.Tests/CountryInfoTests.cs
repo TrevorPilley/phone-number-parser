@@ -34,14 +34,14 @@ public class CountryInfoTests
     }
 
     [Fact]
-    public void Equality_Same_Iso3166Code()
+    public void Equality_Same_Iso3166Alpha2Code()
     {
         var countryInfo1 = new CountryInfo
         {
             CallingCode = "-1",
             Continent = "Pangea",
             FullName = "Nowhere",
-            Iso3166Code = "YZ",
+            Iso3166Alpha2Code = "YZ",
             Name = "Nowhere",
         };
 
@@ -50,7 +50,7 @@ public class CountryInfoTests
             CallingCode = "-1",
             Continent = "Pangea",
             FullName = "Nowhere",
-            Iso3166Code = "YZ",
+            Iso3166Alpha2Code = "YZ",
             Name = "Nowhere",
         };
 
@@ -128,7 +128,7 @@ public class CountryInfoTests
             CallingCode = "-1",
             Continent = "Pangea",
             FullName = "Nowhere",
-            Iso3166Code = "YZ",
+            Iso3166Alpha2Code = "YZ",
             Name = "Nowhere",
         };
 
@@ -153,7 +153,7 @@ public class CountryInfoTests
             CallingCode = "-1",
             Continent = "Pangea",
             FullName = "Nowhere",
-            Iso3166Code = "YY",
+            Iso3166Alpha2Code = "YY",
             Name = "Nowhere",
         };
 
@@ -285,7 +285,7 @@ public class CountryInfoTests
         Assert.Null(countryInfo.Continent);
         Assert.False(countryInfo.HasNationalDestinationCodes);
         Assert.False(countryInfo.HasTrunkPrefix);
-        Assert.Null(countryInfo.Iso3166Code);
+        Assert.Null(countryInfo.Iso3166Alpha2Code);
         Assert.Null(countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
         Assert.Empty(countryInfo.NsnLengths);

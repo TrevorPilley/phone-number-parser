@@ -155,7 +155,7 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
     /// Gets the ISO 3166 Alpha-2 code for the country.
     /// </summary>
     /// <remarks>See https://www.iso.org/iso-3166-country-codes.html</remarks>
-    public required string Iso3166Code { get; init; } = null!;
+    public required string Iso3166Alpha2Code { get; init; } = null!;
 
     /// <summary>
     /// Gets the name of the country in English.
@@ -228,13 +228,13 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
             return true;
         }
 
-        return Iso3166Code.Equals(other.Iso3166Code, StringComparison.Ordinal);
+        return Iso3166Alpha2Code.Equals(other.Iso3166Alpha2Code, StringComparison.Ordinal);
     }
 
     /// <inheritdoc/>
     [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
     public override int GetHashCode() =>
-        HashCode.Combine(Iso3166Code);
+        HashCode.Combine(Iso3166Alpha2Code);
 
     internal static IEnumerable<CountryInfo> GetCountries() =>
         typeof(CountryInfo)
@@ -322,7 +322,7 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
 
     [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
     private string GetDebuggerDisplay() =>
-        $"{Iso3166Code} {CallingCode}";
+        $"{Iso3166Alpha2Code} {CallingCode}";
 
     private bool IsValidNsnLength(int length) =>
         NsnLengths.Contains(length);

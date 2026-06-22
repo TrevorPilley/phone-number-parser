@@ -21,7 +21,7 @@ public class CountryInfo_SouthAmerica_Tests
         Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
-        Assert.Equal("BR", countryInfo.Iso3166Code);
+        Assert.Equal("BR", countryInfo.Iso3166Alpha2Code);
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Brazil", countryInfo.Name);
         Assert.Equal([3, 2], countryInfo.NdcLengths);
@@ -47,7 +47,7 @@ public class CountryInfo_SouthAmerica_Tests
         Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
-        Assert.Equal("CO", countryInfo.Iso3166Code);
+        Assert.Equal("CO", countryInfo.Iso3166Alpha2Code);
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Colombia", countryInfo.Name);
         Assert.Equal([3], countryInfo.NdcLengths);
@@ -73,7 +73,7 @@ public class CountryInfo_SouthAmerica_Tests
         Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
-        Assert.Equal("FK", countryInfo.Iso3166Code);
+        Assert.Equal("FK", countryInfo.Iso3166Alpha2Code);
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Falkland Islands", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
@@ -99,7 +99,7 @@ public class CountryInfo_SouthAmerica_Tests
         Assert.False(countryInfo.IsArabLeagueMember);
         Assert.True(countryInfo.IsEuropeanUnionMember); // as a result of being part of France
         Assert.False(countryInfo.IsNatoMember);
-        Assert.Equal("GF", countryInfo.Iso3166Code);
+        Assert.Equal("GF", countryInfo.Iso3166Alpha2Code);
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("French Guiana", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
@@ -125,7 +125,7 @@ public class CountryInfo_SouthAmerica_Tests
         Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
-        Assert.Equal("PE", countryInfo.Iso3166Code);
+        Assert.Equal("PE", countryInfo.Iso3166Alpha2Code);
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Peru", countryInfo.Name);
         Assert.Equal([2, 1], countryInfo.NdcLengths);

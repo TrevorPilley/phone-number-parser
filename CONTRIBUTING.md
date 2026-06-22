@@ -31,7 +31,7 @@ public static CountryInfo CountryName { get; } = new()
     Continent = Africa/Asia/Europe/Oceania/NorthAmerica/SouthAmerica, // as appropriate
     FullName = "Full Country Name",
     IsABCMember = true / false, // e.g. IsEuropeanUnionMember as appropriate
-    Iso3166Code = "ZZ",
+    Iso3166Alpha2Code = "ZZ",
     Name = "Country Name",
     NsnLengths = new ReadOnlyCollection<int>([N]),
 };
@@ -47,7 +47,7 @@ public static CountryInfo CountryName { get; } = new()
 
 ### Add the data file
 
-1. Add a `{Iso3166Code}.txt` in `/src/PhoneNumbers/DataFiles/`.
+1. Add a `{Iso3166Alpha2Code}.txt` in `/src/PhoneNumbers/DataFiles/`.
 
 The structure of the file is pipe `|` delimited and the "columns" are as follows:
 
@@ -103,5 +103,5 @@ A single line comment can be added in a data file by starting the line with a `#
 ### Add a parser
 
 1. If the `DefaultPhoneNumberParser` can parse the file, add tests for the country using the `DefaultPhoneNumberParser` as appropriate - typically the min and max permitted subscriber number(s) are tested within each national destination code/number kind.
-2. If country requires more complex logic to determine the national destination code, or the performance of the `DefaultPhoneNumberParser` is not acceptable then add a custom parser named `{Iso3166Code}PhoneNumberParser` (see the GB one as an example) and add test cases based upon the data file.
+2. If country requires more complex logic to determine the national destination code, or the performance of the `DefaultPhoneNumberParser` is not acceptable then add a custom parser named `{Iso3166Alpha2Code}PhoneNumberParser` (see the GB one as an example) and add test cases based upon the data file.
 3. Add a unit test for `Parse` in `PhoneNumber_Parse_{Continent}_Tests.cs` to check the number is parsed correctly and the country code is assigned.

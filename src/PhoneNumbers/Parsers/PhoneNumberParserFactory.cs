@@ -14,7 +14,7 @@ internal sealed class PhoneNumberParserFactory
             {
                 var createMethod = typeof(PhoneNumberParser)
                     .Assembly
-                    .GetType($"PhoneNumbers.Parsers.{x.Iso3166Code}PhoneNumberParser")
+                    .GetType($"PhoneNumbers.Parsers.{x.Iso3166Alpha2Code}PhoneNumberParser")
                     ?.GetMethod("Create", BindingFlags.Public | BindingFlags.Static);
 
                 if (createMethod?.Invoke(obj: null, parameters: null) is PhoneNumberParser parser)

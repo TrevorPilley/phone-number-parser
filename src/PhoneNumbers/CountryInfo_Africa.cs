@@ -13,7 +13,7 @@ public partial class CountryInfo
         Continent = Africa,
         FullName = "Arab Republic of Egypt",
         IsArabLeagueMember = true,
-        Iso3166Code = "EG",
+        Iso3166Alpha2Code = "EG",
         Name = "Egypt",
         NdcLengths = s_ndc_3_2_1,
         NsnLengths = s_nsn_8_9_10_11,
@@ -35,7 +35,7 @@ public partial class CountryInfo
             { "255", "007" }, // To call Tanzania from Kenya, subscribers dial 007 instead of +255
             { "256", "006" }, // To call Uganda from Kenya, subscribers dial 006 instead of +256
         }.AsReadOnly(),
-        Iso3166Code = "KE",
+        Iso3166Alpha2Code = "KE",
         Name = "Kenya",
         NdcLengths = s_ndc_3_2,
         NsnLengths = s_nsn_7_8_9_12,
@@ -52,7 +52,7 @@ public partial class CountryInfo
         FormatProvider = FodPhoneNumberFormatProvider.Instance,
         FullName = "Mayotte",
         IsEuropeanUnionMember = true, // as a result of being part of France
-        Iso3166Code = "YT",
+        Iso3166Alpha2Code = "YT",
         Name = "Mayotte",
         NsnLengths = s_nsn_9_12,
         SharesCallingCode = true,
@@ -69,7 +69,7 @@ public partial class CountryInfo
         Continent = Africa,
         FullName = "Federal Republic of Nigeria",
         InternationalCallPrefix = "009",
-        Iso3166Code = "NG",
+        Iso3166Alpha2Code = "NG",
         Name = "Nigeria",
         NdcLengths = s_ndc_4_3,
         NsnLengths = s_nsn_10,
@@ -86,7 +86,7 @@ public partial class CountryInfo
         FormatProvider = FodPhoneNumberFormatProvider.Instance,
         FullName = "Réunion",
         IsEuropeanUnionMember = true, // as a result of being part of France
-        Iso3166Code = "RE",
+        Iso3166Alpha2Code = "RE",
         Name = "Réunion",
         NsnLengths = s_nsn_9_12,
         TrunkPrefix = "0",
@@ -100,7 +100,7 @@ public partial class CountryInfo
         CallingCode = "27",
         Continent = Africa,
         FullName = "Republic of South Africa",
-        Iso3166Code = "ZA",
+        Iso3166Alpha2Code = "ZA",
         Name = "South Africa",
         NdcLengths = s_ndc_2,
         NsnLengths = s_nsn_9_13,
@@ -121,7 +121,7 @@ public partial class CountryInfo
             { "254", "005" }, // To call Kenya from Tanzania, subscribers dial 005 instead of +254
             { "256", "006" }, // To call Uganda from Tanzania, subscribers dial 006 instead of +256
         }.AsReadOnly(),
-        Iso3166Code = "TZ",
+        Iso3166Alpha2Code = "TZ",
         Name = "Tanzania",
         NdcLengths = s_ndc_5_4_3_2,
         NsnLengths = s_nsn_9_12,
@@ -143,7 +143,7 @@ public partial class CountryInfo
             { "254", "005" }, // To call Kenya from Uganda, subscribers dial 005 instead of +254
             { "255", "007" }, // To call Tanzania from Uganda, subscribers dial 007 instead of +255
         }.AsReadOnly(),
-        Iso3166Code = "UG",
+        Iso3166Alpha2Code = "UG",
         Name = "Uganda",
         NdcLengths = s_ndc_6_5_4_3_1,
         NsnLengths = s_nsn_9,

@@ -81,7 +81,7 @@ phoneNumber.Country.IsArabLeagueMember;            // false
 phoneNumber.Country.IsEuropeanUnionMember;         // false
 phoneNumber.Country.IsNatoMember;                  // true
 phoneNumber.Country.IsOecdMember;                  // true
-phoneNumber.Country.Iso3166Code;                   // GB
+phoneNumber.Country.Iso3166Alpha2Code;             // GB
 phoneNumber.Country.Name;                          // United Kingdom
 phoneNumber.Country.SharesCallingCode;             // true
 phoneNumber.Country.TrunkPrefix;                   // 0

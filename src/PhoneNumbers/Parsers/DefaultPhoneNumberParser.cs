@@ -29,7 +29,7 @@ internal class DefaultPhoneNumberParser : PhoneNumberParser
     /// </summary>
     /// <returns>The created <see cref="PhoneNumberParser"/>.</returns>
     internal static PhoneNumberParser Create(CountryInfo countryInfo) =>
-        new DefaultPhoneNumberParser(countryInfo, ResourceUtility.ReadCountryNumbers($"{countryInfo.Iso3166Code}.txt"));
+        new DefaultPhoneNumberParser(countryInfo, ResourceUtility.ReadCountryNumbers($"{countryInfo.Iso3166Alpha2Code}.txt"));
 
     /// <summary>
     /// Parses the national destination code, subscriber number and respective <see cref="CountryNumber"/>.
