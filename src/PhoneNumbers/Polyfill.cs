@@ -81,7 +81,7 @@ namespace System.Runtime.CompilerServices
 
 namespace PhoneNumbers
 {
-    internal static partial class PolyfillMembers
+    internal static class PolyfillMembers
     {
         #if !NET8_0_OR_GREATER
 
@@ -108,10 +108,8 @@ namespace PhoneNumbers
 
         #if NETSTANDARD2_0
 
-        internal static int IndexOf(this string target, char value, System.StringComparison comparisonType)
-        {
-            return target.IndexOf(value.ToString(), comparisonType);
-        }
+        internal static int IndexOf(this string target, char value, System.StringComparison comparisonType) =>
+            target.IndexOf(value.ToString(), comparisonType);
 
         internal static HashSet<TSource> ToHashSet<TSource>(this IEnumerable<TSource> source) =>
             new HashSet<TSource>(source);
@@ -162,12 +160,12 @@ namespace PhoneNumbers
 
     #if !NET8_OR_GREATER
 
-    file static class EmptyReadOnlyCollection<T>
+    static file class EmptyReadOnlyCollection<T>
     {
         public static readonly System.Collections.ObjectModel.ReadOnlyCollection<T> Instance = new(Array.Empty<T>());
     }
 
-    file static class EmptyReadOnlyDictionary<TKey, TValue> where TKey : notnull
+    static file class EmptyReadOnlyDictionary<TKey, TValue> where TKey : notnull
     {
         public static readonly System.Collections.ObjectModel.ReadOnlyDictionary<TKey, TValue> Instance = new(new Dictionary<TKey, TValue>());
     }
