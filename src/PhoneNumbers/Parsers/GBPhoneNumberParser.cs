@@ -69,8 +69,8 @@ internal sealed class GBPhoneNumberParser : DefaultPhoneNumberParser
 
         var countryNumber = CountryNumbers
             .Find(x => x.Kind == phoneNumberKind &&
-                x.NationalDestinationCodeRanges!.Any(x => x.Contains(ndc)) &&
-                x.SubscriberNumberRanges.Any(x => x.Contains(sn)));
+                x.NationalDestinationCodeRanges!.Exists(x => x.Contains(ndc)) &&
+                x.SubscriberNumberRanges.Exists(x => x.Contains(sn)));
 
         return (ndc, sn, countryNumber);
     }
