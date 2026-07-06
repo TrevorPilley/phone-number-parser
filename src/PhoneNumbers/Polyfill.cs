@@ -116,6 +116,20 @@ namespace PhoneNumbers
 
         #endif //NETSTANDARD2_0
 
+        #if NET && !NET11_0_OR_GREATER
+
+        internal static int LastIndexOf(this string target, char value, System.StringComparison comparisonType) =>
+            target.LastIndexOf(new ReadOnlySpan<char>(ref value), comparisonType);
+
+        #endif //NET && !NET11_0_OR_GREATER
+
+        #if NETSTANDARD
+
+        internal static int LastIndexOf(this string target, char value, System.StringComparison comparisonType) =>
+            target.LastIndexOf(value.ToString(), comparisonType);
+
+        #endif //NETSTANDARD
+
         #if !NET7_0_OR_GREATER
 
         extension(ArgumentException)
