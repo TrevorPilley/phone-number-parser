@@ -311,14 +311,14 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
         CallingCode.Equals(countryInfo.CallingCode, StringComparison.Ordinal);
 
     private static bool IsDelimiter(char charVal) =>
-        charVal is Chars.Comma || charVal is Chars.Semicolon;
+        charVal is Chars.Comma or Chars.Semicolon;
 
     /// <remarks>Char.IsDigit returns true for more than 0-9 so use a more restricted version.</remarks>
     private static bool IsDigit(char charVal) =>
         charVal is >= Chars.Zero and <= Chars.Nine;
 
     private static bool IsSeparator(char charVal) =>
-        charVal is Chars.Hyphen || charVal is Chars.ForwardSlash;
+        charVal is Chars.Hyphen or Chars.ForwardSlash;
 
     [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
     private string GetDebuggerDisplay() =>
