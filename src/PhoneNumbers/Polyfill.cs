@@ -28,7 +28,7 @@ namespace System.Diagnostics.CodeAnalysis
 
 namespace System.Runtime.CompilerServices
 {
-    #if NETSTANDARD2_0 || NETSTANDARD2_1
+    #if NETSTANDARD
 
     [AttributeUsage(AttributeTargets.Parameter, AllowMultiple = false, Inherited = false)]
     internal sealed class CallerArgumentExpressionAttribute : Attribute
@@ -41,7 +41,7 @@ namespace System.Runtime.CompilerServices
         public string ParameterName { get; }
     }
 
-    # endif //NETSTANDARD2_0 || NETSTANDARD2_1
+    # endif //NETSTANDARD
 
     #if !NET5_0_OR_GREATER
 
@@ -158,7 +158,7 @@ namespace PhoneNumbers
         #endif //!NET7_0_OR_GREATER
     }
 
-    #if !NET8_OR_GREATER
+    #if !NET8_0_OR_GREATER
 
     static file class EmptyReadOnlyCollection<T>
     {
@@ -170,7 +170,7 @@ namespace PhoneNumbers
         public static readonly System.Collections.ObjectModel.ReadOnlyDictionary<TKey, TValue> Instance = new(new Dictionary<TKey, TValue>());
     }
 
-    #endif //!NET8_OR_GREATER
+    #endif //!NET8_0_OR_GREATER
 
 }
 #pragma warning restore IDE0130 // Namespace does not match folder structure
