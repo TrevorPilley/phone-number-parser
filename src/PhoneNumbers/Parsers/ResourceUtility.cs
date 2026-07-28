@@ -11,7 +11,8 @@ internal static class ResourceUtility
             .Select(x => x.Split(Chars.Pipe))
             .Select(x =>
             {
-                System.Diagnostics.Debug.Assert(x[0].Length <= 1);
+                System.Diagnostics.Debug.Assert(x.Length == 5);
+                System.Diagnostics.Debug.Assert(x[0].Length == 1);
                 System.Diagnostics.Debug.Assert(x[4].Length <= 1);
 
                 return new CountryNumber(
