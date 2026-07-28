@@ -273,14 +273,6 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
     }
 
     /// <summary>
-    /// Gets a value indicating whether the specified value has a length equal to a valid national significant number (NSN) for this country.
-    /// </summary>
-    /// <param name="value">A string containing a phone number.</param>
-    /// <returns>True if the value has a valid length for this country, otherwise false.</returns>
-    internal bool HasValidNsnLength(string value) =>
-        IsValidNsnLength(value.Length);
-
-    /// <summary>
     /// Reads the national significant number (NSN) from the specified phone number value.
     /// </summary>
     /// <param name="value">A string containing a phone number.</param>
@@ -329,7 +321,10 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
 
     private string ReadNationalSignificantNumber(string value, int startPos)
     {
-        Span<char> ar = stackalloc char[16]; // longer than any valid phone number
+        Debug.Assert(NsnLengths.Count > 0, "NsnLengths.Count > 0");
+
+        var trunkPrefixLength = HasTrunkPrefix ? TrunkPrefix!.Length : 0;
+        Span<char> ar = stackalloc char[NsnLengths.Max() + trunkPrefixLength];
         var arPos = 0;
         var startsWithTrunkPrefix = HasTrunkPrefix;
 
@@ -339,20 +334,20 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
 
             if (IsDigit(charVal))
             {
-                if (startsWithTrunkPrefix && arPos < TrunkPrefix!.Length)
+                if (arPos >= ar.Length)
                 {
-                    startsWithTrunkPrefix &= TrunkPrefix[arPos] == charVal;
+                    return string.Empty;
+                }
+
+                if (startsWithTrunkPrefix && arPos < trunkPrefixLength)
+                {
+                    startsWithTrunkPrefix &= TrunkPrefix![arPos] == charVal;
                 }
 
                 ar[arPos++] = charVal;
-
-                if (arPos == ar.Length)
-                {
-                    break;
-                }
             }
             else if (IsDelimiter(charVal)
-                || IsSeparator(charVal) && (startsWithTrunkPrefix && IsValidNsnLength(arPos - TrunkPrefix!.Length) || (!startsWithTrunkPrefix && IsValidNsnLength(arPos))))
+                || IsSeparator(charVal) && (startsWithTrunkPrefix && IsValidNsnLength(arPos - trunkPrefixLength) || (!startsWithTrunkPrefix && IsValidNsnLength(arPos))))
             {
                 break;
             }
@@ -365,9 +360,11 @@ public sealed partial class CountryInfo : IEquatable<CountryInfo>
 
         if (startsWithTrunkPrefix)
         {
-            return ar.Slice(TrunkPrefix!.Length, arPos - TrunkPrefix.Length).ToString();
+            return IsValidNsnLength(arPos - trunkPrefixLength) ?
+                ar.Slice(trunkPrefixLength, arPos - trunkPrefixLength).ToString()
+                : string.Empty;
         }
 
-        return ar.Slice(0, arPos).ToString();
+        return IsValidNsnLength(arPos) ? ar.Slice(0, arPos).ToString() : string.Empty;
     }
 }
