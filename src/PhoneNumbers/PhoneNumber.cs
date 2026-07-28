@@ -65,7 +65,7 @@ public abstract class PhoneNumber(PhoneNumberHint phoneNumberHint)
 
             if (result.PhoneNumber is not null)
             {
-                return result.PhoneNumber!;
+                return result.PhoneNumber;
             }
         }
 
