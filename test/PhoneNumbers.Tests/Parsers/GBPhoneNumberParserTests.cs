@@ -68,12 +68,13 @@ public class GBPhoneNumberParserTests
     }
 
     [Theory]
+    [InlineData("0")]
     [InlineData("02")]
     [InlineData("020")]
     [InlineData("0201")]
     [InlineData("02011")]
     [InlineData("020111")]
-    [InlineData("0201111")]
+    [InlineData("0201111")]      // 6
     [InlineData("020111111")]    // 8
     [InlineData("020111111111")] // 11
     public void Parse_Returns_Failure_If_Nsn_Incorrect_Length(string value)
