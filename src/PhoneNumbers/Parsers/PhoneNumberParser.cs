@@ -21,7 +21,7 @@ internal abstract class PhoneNumberParser(CountryInfo countryInfo)
     {
         var nsnValue = Country.ReadNationalSignificantNumber(value);
 
-        if (!Country.HasValidNsnLength(nsnValue))
+        if (string.IsNullOrEmpty(nsnValue))
         {
             return ParseResult.Failure(
                 $"The value must be a {Country.Name} phone number starting {Chars.Plus}{Country.CallingCode}{(Country.HasTrunkPrefix ? " or " + Country.TrunkPrefix : "")} and the national significant number of the phone number must be {string.Join(" or ", Country.NsnLengths)} digits in length.");

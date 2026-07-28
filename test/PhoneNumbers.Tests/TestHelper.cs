@@ -21,8 +21,8 @@ internal static class TestHelper
             FullName = "Zulu",
             Iso3166Code = "ZZ", // ZZ isn't a used ISO 3166 code.
             Name = "Zulu",
-            NdcLengths = new ReadOnlyCollection<int>(ndcLengths ?? Array.Empty<int>()),
-            NsnLengths = new ReadOnlyCollection<int>(nsnLengths ?? Array.Empty<int>()),
+            NdcLengths = new ReadOnlyCollection<int>(ndcLengths ?? []),
+            NsnLengths = new ReadOnlyCollection<int>(nsnLengths ?? [10]),
             TrunkPrefix = trunkPrefix,
         };
 
