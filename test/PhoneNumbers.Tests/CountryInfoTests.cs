@@ -4,6 +4,14 @@ namespace PhoneNumbers.Tests;
 
 public class CountryInfoTests
 {
+    [Fact]
+    public void CountryInfo_Instances_Have_Unique_Iso3166_Codes()
+    {
+        var countries = CountryInfo.GetCountries().ToArray();
+
+        Assert.Equal(countries.Length, countries.Select(country => country.Iso3166Alpha2Code).Distinct().Count());
+        Assert.Equal(countries.Length, countries.Select(country => country.Iso3166Alpha3Code).Distinct().Count());
+    }
 
     [Fact]
     public void Equality_Both_Null()
