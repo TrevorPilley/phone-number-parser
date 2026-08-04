@@ -205,12 +205,36 @@ public class ParseOptionsTests
     }
 
     [Fact]
-    public void GetCountryInfo_Does_Not_Exist() =>
+    public void GetCountryInfo_Iso3166Alpha2Code_Does_Not_Exist() =>
         Assert.Null(ParseOptions.Default.GetCountryInfo("ZZ"));
 
     [Fact]
-    public void GetCountryInfo_Exists() =>
+    public void GetCountryInfo_Iso3166Alpha2Code_Exists_LowerCased() =>
+        Assert.Same(CountryInfo.UnitedKingdom, ParseOptions.Default.GetCountryInfo("gb"));
+
+    [Fact]
+    public void GetCountryInfo_Iso3166Alpha2Code_Exists_MixedCased() =>
+        Assert.Same(CountryInfo.UnitedKingdom, ParseOptions.Default.GetCountryInfo("Gb"));
+
+    [Fact]
+    public void GetCountryInfo_Iso3166Alpha2Code_Exists_UpperCased() =>
         Assert.Same(CountryInfo.UnitedKingdom, ParseOptions.Default.GetCountryInfo("GB"));
+
+    [Fact]
+    public void GetCountryInfo_Iso3166Alpha3Code_Does_Not_Exist() =>
+        Assert.Null(ParseOptions.Default.GetCountryInfo("ZZZ"));
+
+    [Fact]
+    public void GetCountryInfo_Iso3166Alpha3Code_Exists_LowerCased() =>
+        Assert.Same(CountryInfo.UnitedKingdom, ParseOptions.Default.GetCountryInfo("gbr"));
+
+    [Fact]
+    public void GetCountryInfo_Iso3166Alpha3Code_Exists_MixedCased() =>
+        Assert.Same(CountryInfo.UnitedKingdom, ParseOptions.Default.GetCountryInfo("Gbr"));
+
+    [Fact]
+    public void GetCountryInfo_Iso3166Alpha3Code_Exists_UpperCased() =>
+        Assert.Same(CountryInfo.UnitedKingdom, ParseOptions.Default.GetCountryInfo("GBR"));
 
     [Fact]
     public void GetCountryInfos_Does_Not_Exist() =>

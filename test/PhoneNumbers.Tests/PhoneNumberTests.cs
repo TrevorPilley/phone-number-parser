@@ -101,6 +101,20 @@ public class PhoneNumberTests
     }
 
     [Fact]
+    public void Parse_Value_Iso3116Alpha2Code_Is_Case_Insensitive()
+    {
+        var phoneNumber = PhoneNumber.Parse("01142726444", "gb");
+        Assert.Equal("1142726444", phoneNumber.NationalSignificantNumber);
+    }
+
+    [Fact]
+    public void Parse_Value_Iso3116Alpha3Code_Is_Case_Insensitive()
+    {
+        var phoneNumber = PhoneNumber.Parse("01142726444", "gbr");
+        Assert.Equal("1142726444", phoneNumber.NationalSignificantNumber);
+    }
+
+    [Fact]
     public void Parse_Value_CountryCode_Throws_ArgumentNullException_If_Value_Null() =>
         Assert.Throws<ArgumentNullException>(() => PhoneNumber.Parse(null!, "GB"));
 
@@ -329,6 +343,12 @@ public class PhoneNumberTests
         Assert.Equal("1142726444", phoneNumber.NationalSignificantNumber);
     }
 
+    [Fact]
+    public void TryParse_Value_Returns_False_For_National_Format_Without_Country_Code()
+    {
+        Assert.False(PhoneNumber.TryParse("01142726444", out PhoneNumber _));
+    }
+
     [Theory]
     [InlineData("0114 272 6444")]
     [InlineData("0114-272-6444")]
@@ -362,6 +382,22 @@ public class PhoneNumberTests
     {
         Assert.False(PhoneNumber.TryParse("0123456789", "ZZ", out var phoneNumber));
         Assert.Null(phoneNumber);
+    }
+
+    [Fact]
+    public void TryParse_Value_Iso3116Alpha2Code_Is_Case_Insensitive()
+    {
+        Assert.True(PhoneNumber.TryParse("01142726444", "gb", out var phoneNumber));
+        Assert.NotNull(phoneNumber);
+        Assert.Equal("1142726444", phoneNumber.NationalSignificantNumber);
+    }
+
+    [Fact]
+    public void TryParse_Value_Iso3116Alpha3Code_Is_Case_Insensitive()
+    {
+        Assert.True(PhoneNumber.TryParse("01142726444", "gbr", out var phoneNumber));
+        Assert.NotNull(phoneNumber);
+        Assert.Equal("1142726444", phoneNumber.NationalSignificantNumber);
     }
 
     [Fact]
