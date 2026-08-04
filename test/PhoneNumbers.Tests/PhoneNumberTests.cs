@@ -37,14 +37,29 @@ public class PhoneNumberTests
     }
 
     [Fact]
-    public void Parse_Value_CallingCode_With_Custom_ParseOptions()
+    public void Parse_Value_Throws_ArgumentNullException_If_Value_Null() =>
+        Assert.Throws<ArgumentNullException>(() => PhoneNumber.Parse(null!));
+
+    [Theory]
+    [InlineData("")]
+    [InlineData(" ")]
+    [InlineData("-")]
+    [InlineData("/")]
+    [InlineData("+44")]
+    [InlineData("+44-1/2")]
+    [InlineData("441142726444")]
+    public void Parse_Value_Throws_ParseException_If_Value_Invalid(string input) =>
+        Assert.Throws<ParseException>(() => PhoneNumber.Parse(input));
+
+    [Fact]
+    public void Parse_Value_With_Custom_ParseOptions_Throws_ParseException_If_Country_Not_Supported()
     {
         var parseOptions = new ParseOptions();
         parseOptions.Countries.Remove(CountryInfo.UnitedKingdom);
 
         // Should throw as the specified parse options override the default ones and the United Kingdom isn't enabled in the custom parse options
-        var exception = Assert.Throws<ParseException>(() => PhoneNumber.Parse("01142726444", "GB", parseOptions));
-        Assert.Equal("The country code GB is not currently supported, or is not enabled in ParseOptions.", exception.Message);
+        var exception = Assert.Throws<ParseException>(() => PhoneNumber.Parse("+441142726444", parseOptions));
+        Assert.Equal("The value '+441142726444' could not be successfully parsed into a phone number for any country enabled in ParseOptions.", exception.Message);
     }
 
     [Theory]
@@ -67,21 +82,14 @@ public class PhoneNumberTests
     }
 
     [Fact]
-    public void Parse_Value_CountryCode_Throws_If_CountryCode_Not_Supported()
-    {
-        var exception = Assert.Throws<ParseException>(() => PhoneNumber.Parse("0123456789", "ZZ"));
-        Assert.Equal("The country code ZZ is not currently supported, or is not enabled in ParseOptions.", exception.Message);
-    }
+    public void Parse_Value_CountryCode_Throws_ArgumentNullException_If_Value_Null() =>
+        Assert.Throws<ArgumentNullException>(() => PhoneNumber.Parse(null!, "GB"));
 
     [Fact]
-    public void Parse_Value_CountryCode_Throws_If_Value_In_Incorrect_International_Format_For_CountryCode()
-    {
-        var exception = Assert.Throws<ParseException>(() => PhoneNumber.Parse("+441142726444", "FR"));
-        Assert.Equal("The value must be a France phone number starting +33 or 0 and the national significant number of the phone number must be 9 or 13 digits in length.", exception.Message);
-    }
+    public void Parse_Value_CountryCode_Throws_ArgumentNullException_If_CountryCode_Null() =>
+        Assert.Throws<ArgumentNullException>(() => PhoneNumber.Parse("0123456789", default(string)));
 
     [Theory]
-    [InlineData(default(string))]
     [InlineData("")]
     [InlineData(" ")]
     [InlineData("-")]
@@ -89,8 +97,33 @@ public class PhoneNumberTests
     [InlineData("+44")]
     [InlineData("+44-1/2")]
     [InlineData("441142726444")]
-    public void Parse_Value_CountryCode_Throws_If_Value_Invalid(string input) =>
+    public void Parse_Value_CountryCode_Throws_ParseException_If_Value_Invalid(string input) =>
         Assert.Throws<ParseException>(() => PhoneNumber.Parse(input, "GB"));
+
+    [Fact]
+    public void Parse_Value_CountryCode_Throws_ParseException_If_CountryCode_Not_Supported()
+    {
+        var exception = Assert.Throws<ParseException>(() => PhoneNumber.Parse("0123456789", "ZZ"));
+        Assert.Equal("The country code ZZ is not currently supported, or is not enabled in ParseOptions.", exception.Message);
+    }
+
+    [Fact]
+    public void Parse_Value_CountryCode_With_Custom_ParseOptions_Throws_ParseException_If_Country_Not_Supported()
+    {
+        var parseOptions = new ParseOptions();
+        parseOptions.Countries.Remove(CountryInfo.UnitedKingdom);
+
+        // Should throw as the specified parse options override the default ones and the United Kingdom isn't enabled in the custom parse options
+        var exception = Assert.Throws<ParseException>(() => PhoneNumber.Parse("01142726444", "GB", parseOptions));
+        Assert.Equal("The country code GB is not currently supported, or is not enabled in ParseOptions.", exception.Message);
+    }
+
+    [Fact]
+    public void Parse_Value_CountryCode_Throws_ParseException_If_Value_In_Incorrect_International_Format_For_CountryCode()
+    {
+        var exception = Assert.Throws<ParseException>(() => PhoneNumber.Parse("+441142726444", "FR"));
+        Assert.Equal("The value must be a France phone number starting +33 or 0 and the national significant number of the phone number must be 9 or 13 digits in length.", exception.Message);
+    }
 
     [Theory]
     [InlineData("0114 272 6444")]
@@ -112,18 +145,14 @@ public class PhoneNumberTests
     }
 
     [Fact]
-    public void Parse_Value_CountryInfo_Throws_If_CountryInfo_Not_Supported()
-    {
-        var exception = Assert.Throws<ParseException>(() => PhoneNumber.Parse("0123456789", TestHelper.CreateCountryInfo()));
-        Assert.Equal("The country Zulu is not enabled in ParseOptions.", exception.Message);
-    }
+    public void Parse_Value_CountryInfo_Throws_ArgumentNullException_If_Value_Null() =>
+        Assert.Throws<ArgumentNullException>(() => PhoneNumber.Parse(null!, CountryInfo.UnitedKingdom));
 
     [Fact]
-    public void Parse_Value_CountryInfo_Throws_If_CountryInfo_Null() =>
+    public void Parse_Value_CountryInfo_Throws_ArgumentNullException_If_CountryInfo_Null() =>
         Assert.Throws<ArgumentNullException>(() => PhoneNumber.Parse("0123456789", default(CountryInfo)));
 
     [Theory]
-    [InlineData(default(string))]
     [InlineData("")]
     [InlineData(" ")]
     [InlineData("-")]
@@ -131,11 +160,18 @@ public class PhoneNumberTests
     [InlineData("+44")]
     [InlineData("+44-1/2")]
     [InlineData("441142726444")]
-    public void Parse_Value_CountryInfo_Throws_If_Value_Invalid(string input) =>
+    public void Parse_Value_CountryInfo_Throws_ParseException_If_Value_Invalid(string input) =>
         Assert.Throws<ParseException>(() => PhoneNumber.Parse(input, CountryInfo.UnitedKingdom));
 
     [Fact]
-    public void Parse_Value_CountryInfo_With_Custom_ParseOptions()
+    public void Parse_Value_CountryInfo_Throws_ParseException_If_CountryInfo_Not_Supported()
+    {
+        var exception = Assert.Throws<ParseException>(() => PhoneNumber.Parse("0123456789", TestHelper.CreateCountryInfo()));
+        Assert.Equal("The country Zulu is not enabled in ParseOptions.", exception.Message);
+    }
+
+    [Fact]
+    public void Parse_Value_CountryInfo_With_Custom_ParseOptions_Throws_ParseException_If_Country_Not_Supported()
     {
         var parseOptions = new ParseOptions();
         parseOptions.Countries.Remove(CountryInfo.UnitedKingdom);
@@ -146,27 +182,11 @@ public class PhoneNumberTests
         Assert.Equal("The country United Kingdom is not enabled in ParseOptions.", exception.Message);
     }
 
-    [Theory]
-    [InlineData(default(string))]
-    [InlineData("")]
-    [InlineData(" ")]
-    [InlineData("-")]
-    [InlineData("/")]
-    [InlineData("+44")]
-    [InlineData("+44-1/2")]
-    [InlineData("441142726444")]
-    public void Parse_Value_Throws_If_Value_Invalid(string input) =>
-        Assert.Throws<ParseException>(() => PhoneNumber.Parse(input));
-
     [Fact]
-    public void Parse_Value_With_Custom_ParseOptions()
+    public void Parse_Value_CountryInfo_Throws_ParseException_If_Value_In_Incorrect_International_Format_For_CountryInfo()
     {
-        var parseOptions = new ParseOptions();
-        parseOptions.Countries.Remove(CountryInfo.UnitedKingdom);
-
-        // Should throw as the specified parse options override the default ones and the United Kingdom isn't enabled in the custom parse options
-        var exception = Assert.Throws<ParseException>(() => PhoneNumber.Parse("+441142726444", parseOptions));
-        Assert.Equal("The value '+441142726444' could not be successfully parsed into a phone number for any country enabled in ParseOptions.", exception.Message);
+        var exception = Assert.Throws<ParseException>(() => PhoneNumber.Parse("+441142726444", CountryInfo.France));
+        Assert.Equal("The value must be a France phone number starting +33 or 0 and the national significant number of the phone number must be 9 or 13 digits in length.", exception.Message);
     }
 
     [Fact]
@@ -202,13 +222,6 @@ public class PhoneNumberTests
             phoneNumber.ToString());
     }
 
-    [Fact]
-    public void TryParse_Invalid_Value()
-    {
-        Assert.False(PhoneNumber.TryParse("+441110000000", out PhoneNumber phoneNumber));
-        Assert.Null(phoneNumber);
-    }
-
     [Theory]
     [InlineData("+441142726444")]
     [InlineData("+44 114 272 6444")]
@@ -223,6 +236,30 @@ public class PhoneNumberTests
         Assert.True(PhoneNumber.TryParse(input, out PhoneNumber phoneNumber));
         Assert.NotNull(phoneNumber);
         Assert.Equal("1142726444", phoneNumber.NationalSignificantNumber);
+    }
+
+    [Fact]
+    public void TryParse_Value_Returns_False_If_Value_Null() =>
+        Assert.False(PhoneNumber.TryParse(null!, out PhoneNumber _));
+
+    [Theory]
+    [InlineData("")]
+    [InlineData(" ")]
+    [InlineData("-")]
+    [InlineData("/")]
+    [InlineData("+44")]
+    [InlineData("+44-1/2")]
+    [InlineData("441142726444")]
+    public void TryParse_Value_Returns_False_If_Value_Invalid(string input) =>
+        Assert.False(PhoneNumber.TryParse(input, out PhoneNumber _));
+
+    [Fact]
+    public void TryParse_Value_With_Custom_ParseOptions_Returns_False_If_Country_Not_Supported()
+    {
+        var parseOptions = new ParseOptions();
+        parseOptions.Countries.Remove(CountryInfo.UnitedKingdom);
+
+        Assert.False(PhoneNumber.TryParse("+441142726444", out PhoneNumber _, parseOptions));
     }
 
     [Theory]
@@ -246,24 +283,14 @@ public class PhoneNumberTests
     }
 
     [Fact]
-    public void TryParse_Value_CountryCode_False_If_CountryCode_Not_Supported()
-    {
-        Assert.False(PhoneNumber.TryParse("0123456789", "ZZ", out var phoneNumber));
-        Assert.Null(phoneNumber);
-    }
+    public void TryParse_Value_CountryCode_Returns_False_If_Value_Null() =>
+        Assert.False(PhoneNumber.TryParse(null!, "GB", out var _));
 
     [Fact]
-    public void TryParse_Value_CountryCode_False_If_ParseOptions_Null()
-    {
-        var parseOptions = new ParseOptions();
-        parseOptions.Countries.Remove(CountryInfo.UnitedKingdom);
-
-        Assert.False(PhoneNumber.TryParse("01142726444", "GB", out var phoneNumber, parseOptions));
-        Assert.Null(phoneNumber);
-    }
+    public void TryParse_Value_CountryCode_Returns_False_If_CountryCode_Null() =>
+        Assert.False(PhoneNumber.TryParse("0123456789", default(string), out var _));
 
     [Theory]
-    [InlineData(default(string))]
     [InlineData("")]
     [InlineData(" ")]
     [InlineData("-")]
@@ -271,18 +298,25 @@ public class PhoneNumberTests
     [InlineData("+44")]
     [InlineData("+44-1/2")]
     [InlineData("441142726444")]
-    public void TryParse_Value_CountryCode_False_If_Value_Invalid(string input)
+    public void TryParse_Value_CountryCode_Returns_False_If_Value_Invalid(string input) =>
+        Assert.False(PhoneNumber.TryParse(input, "GB", out var _));
+
+    [Fact]
+    public void TryParse_Value_CountryCode_Returns_False_If_CountryCode_Not_Supported() =>
+        Assert.False(PhoneNumber.TryParse("0123456789", "ZZ", out var _));
+
+    [Fact]
+    public void TryParse_Value_CountryCode_With_Custom_ParseOptions_Returns_False_If_Country_Not_Supported()
     {
-        Assert.False(PhoneNumber.TryParse(input, "GB", out var phoneNumber));
-        Assert.Null(phoneNumber);
+        var parseOptions = new ParseOptions();
+        parseOptions.Countries.Remove(CountryInfo.UnitedKingdom);
+
+        Assert.False(PhoneNumber.TryParse("01142726444", "GB", out var _, parseOptions));
     }
 
     [Fact]
-    public void TryParse_Value_CountryCode_Ignores_Spaces()
-    {
-        Assert.True(PhoneNumber.TryParse("0114 272 6444", "GB", out var phoneNumber));
-        Assert.NotNull(phoneNumber);
-    }
+    public void TryParse_Value_CountryCode_Returns_False_If_Value_In_Incorrect_International_Format_For_CountryCode() =>
+        Assert.False(PhoneNumber.TryParse("+441142726444", "FR", out var _));
 
     [Theory]
     [InlineData("0114 272 6444")]
@@ -300,19 +334,18 @@ public class PhoneNumberTests
     public void TryParse_Value_CountryInfo(string input)
     {
         Assert.True(PhoneNumber.TryParse(input, CountryInfo.UnitedKingdom, out var phoneNumber));
-        Assert.NotNull(phoneNumber);
         Assert.Equal("1142726444", phoneNumber.NationalSignificantNumber);
     }
 
     [Fact]
-    public void TryParse_Value_CountryInfo_False_If_CountryInfo_Not_Supported()
-    {
-        Assert.False(PhoneNumber.TryParse("0123456789", TestHelper.CreateCountryInfo(), out var phoneNumber));
-        Assert.Null(phoneNumber);
-    }
+    public void TryParse_Value_CountryInfo_Returns_False_If_Value_Null() =>
+        Assert.False(PhoneNumber.TryParse(null!, CountryInfo.UnitedKingdom, out var _));
+
+    [Fact]
+    public void TryParse_Value_CountryInfo_Returns_False_If_CountryInfo_Null() =>
+        Assert.False(PhoneNumber.TryParse("0123456789", default(CountryInfo), out var _));
 
     [Theory]
-    [InlineData(default(string))]
     [InlineData("")]
     [InlineData(" ")]
     [InlineData("-")]
@@ -320,41 +353,25 @@ public class PhoneNumberTests
     [InlineData("+44")]
     [InlineData("+44-1/2")]
     [InlineData("441142726444")]
-    public void TryParse_Value_CountryInfo_False_If_Value_Invalid(string input)
+    public void TryParse_Value_CountryInfo_Returns_False_If_Value_Invalid(string input) =>
+        Assert.False(PhoneNumber.TryParse(input, CountryInfo.UnitedKingdom, out var _));
+
+    [Fact]
+    public void TryParse_Value_CountryInfo_Returns_False_If_CountryInfo_Not_Supported() =>
+        Assert.False(PhoneNumber.TryParse("0123456789", TestHelper.CreateCountryInfo(), out var _));
+
+    [Fact]
+    public void TryParse_Value_CountryInfo_With_Custom_ParseOptions_Returns_False_If_Country_Not_Supported()
     {
-        Assert.False(PhoneNumber.TryParse(input, CountryInfo.UnitedKingdom, out var phoneNumber));
-        Assert.Null(phoneNumber);
+        var parseOptions = new ParseOptions();
+        parseOptions.Countries.Remove(CountryInfo.UnitedKingdom);
+
+        Assert.False(PhoneNumber.TryParse("01142726444", CountryInfo.UnitedKingdom, out var _, parseOptions));
     }
 
-    [Theory]
-    [InlineData(default(string))]
-    [InlineData("")]
-    [InlineData(" ")]
-    [InlineData("-")]
-    [InlineData("/")]
-    [InlineData("+44")]
-    [InlineData("+44-1/2")]
-    [InlineData("441142726444")]
-    public void TryParse_Value_False_If_Value_Invalid(string input)
-    {
-        Assert.False(PhoneNumber.TryParse(input, out PhoneNumber phoneNumber));
-        Assert.Null(phoneNumber);
-    }
-
-    [Theory]
-    [InlineData(default(string))]
-    [InlineData("")]
-    [InlineData(" ")]
-    [InlineData("-")]
-    [InlineData("/")]
-    [InlineData("+44")]
-    [InlineData("+44-1/2")]
-    public void TryParse_Value_PhoneNumbers_False_If_Value_Invalid(string input)
-    {
-        Assert.False(PhoneNumber.TryParse(input, out IEnumerable<PhoneNumber> phoneNumbers));
-        Assert.NotNull(phoneNumbers);
-        Assert.Empty(phoneNumbers);
-    }
+    [Fact]
+    public void TryParse_Value_CountryInfo_Returns_False_If_Value_In_Incorrect_International_Format_For_CountryInfo() =>
+        Assert.False(PhoneNumber.TryParse("+441142726444", CountryInfo.France, out var _));
 
     [Fact]
     public void TryParse_Value_PhoneNumbers_Value_With_CallingCode_UK()
@@ -391,22 +408,16 @@ public class PhoneNumberTests
     }
 
     [Fact]
-    public void TryParse_Value_PhoneNumbers_With_Custom_ParseOptions()
+    public void TryParse_Value_PhoneNumbers_Returns_False_If_Value_Null() =>
+        Assert.False(PhoneNumber.TryParse(null!, out IEnumerable<PhoneNumber> _));
+
+    [Fact]
+    public void TryParse_Value_PhoneNumbers_With_Custom_ParseOptions_Returns_False_If_Country_Not_Supported()
     {
         var parseOptions = new ParseOptions();
         parseOptions.Countries.Clear();
 
-        Assert.False(PhoneNumber.TryParse("01142726444", out IEnumerable<PhoneNumber> phoneNumbers, parseOptions));
+        Assert.False(PhoneNumber.TryParse("+441142726444", out IEnumerable<PhoneNumber> phoneNumbers, parseOptions));
         Assert.Empty(phoneNumbers);
-    }
-
-    [Fact]
-    public void TryParse_Value_To_PhoneNumber_With_Custom_ParseOptions()
-    {
-        var parseOptions = new ParseOptions();
-        parseOptions.Countries.Remove(CountryInfo.UnitedKingdom);
-
-        Assert.False(PhoneNumber.TryParse("01142726444", out PhoneNumber phoneNumber, parseOptions));
-        Assert.Null(phoneNumber);
     }
 }
