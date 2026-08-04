@@ -386,6 +386,9 @@ healthchecksdb
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 MigrationBackup/
 
+# A library folder github copilot seems to create
+Library/
+
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 
