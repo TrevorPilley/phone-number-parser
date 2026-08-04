@@ -57,6 +57,8 @@ public abstract class PhoneNumber(PhoneNumberHint phoneNumberHint)
     /// <returns>A <see cref="PhoneNumber"/> instance representing the specified phone number string value.</returns>
     public static PhoneNumber Parse(string value, ParseOptions? options = null)
     {
+        ArgumentNullException.ThrowIfNull(value);
+
         options ??= ParseOptions.Default;
 
         foreach (var countryInfo in options.GetCountryInfos(value))
@@ -78,11 +80,12 @@ public abstract class PhoneNumber(PhoneNumberHint phoneNumberHint)
     /// <param name="value">A string containing a phone number in the international (e.g. +XX) or national format for the given <see cref="CountryInfo"/>.</param>
     /// <param name="countryInfo">The <see cref="CountryInfo"/> of the country for the phone number.</param>
     /// <param name="options">The <see cref="ParseOptions"/> to use for parsing the phone number, if not specified (or explicitly set to null) the default parse options are used.</param>
-    /// <exception cref="ArgumentNullException">Thrown if the specified <paramref name="countryInfo"/> is null.</exception>
+    /// <exception cref="ArgumentNullException">Thrown if the specified <paramref name="value"/> or <paramref name="countryInfo"/> is null.</exception>
     /// <exception cref="ParseException">Thrown if the value cannot be successfully parsed into a <see cref="PhoneNumber"/>.</exception>
     /// <returns>A <see cref="PhoneNumber"/> instance representing the specified phone number string value.</returns>
     public static PhoneNumber Parse(string value, CountryInfo countryInfo, ParseOptions? options = null)
     {
+        ArgumentNullException.ThrowIfNull(value);
         ArgumentNullException.ThrowIfNull(countryInfo);
 
         options ??= ParseOptions.Default;
@@ -104,10 +107,14 @@ public abstract class PhoneNumber(PhoneNumberHint phoneNumberHint)
     /// <param name="value">A string containing a phone number in the international (e.g. +XX) or national format for the given ISO 3166 Alpha-2 country code.</param>
     /// <param name="countryCode">The ISO 3166 Alpha-2 country code of the country for the phone number.</param>
     /// <param name="options">The <see cref="ParseOptions"/> to use for parsing the phone number, if not specified (or explicitly set to null) the default parse options are used.</param>
+    /// <exception cref="ArgumentNullException">Thrown if the specified <paramref name="value"/> or <paramref name="countryCode"/> is null.</exception>
     /// <exception cref="ParseException">Thrown if the value cannot be successfully parsed into a <see cref="PhoneNumber"/>.</exception>
     /// <returns>A <see cref="PhoneNumber"/> instance representing the specified phone number string value.</returns>
     public static PhoneNumber Parse(string value, string countryCode, ParseOptions? options = null)
     {
+        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullException.ThrowIfNull(countryCode);
+
         options ??= ParseOptions.Default;
 
         return Parse(
@@ -125,6 +132,12 @@ public abstract class PhoneNumber(PhoneNumberHint phoneNumberHint)
     /// <returns><c>true</c> if value was converted successfully; otherwise, <c>false</c>.</returns>
     public static bool TryParse(string value, out IEnumerable<PhoneNumber> phoneNumbers, ParseOptions? options = null)
     {
+        if (value is null)
+        {
+            phoneNumbers = [];
+            return false;
+        }
+
         options ??= ParseOptions.Default;
 
         var countries = options.GetCountryInfos(value);
@@ -147,6 +160,12 @@ public abstract class PhoneNumber(PhoneNumberHint phoneNumberHint)
     /// <returns><c>true</c> if value was converted successfully; otherwise, <c>false</c>.</returns>
     public static bool TryParse(string value, [NotNullWhen(true)] out PhoneNumber? phoneNumber, ParseOptions? options = null)
     {
+        if (value is null)
+        {
+            phoneNumber = default;
+            return false;
+        }
+
         options ??= ParseOptions.Default;
 
         foreach (var countryInfo in options.GetCountryInfos(value))
@@ -174,10 +193,15 @@ public abstract class PhoneNumber(PhoneNumberHint phoneNumberHint)
     /// <returns><c>true</c> if value was converted successfully; otherwise, <c>false</c>.</returns>
     public static bool TryParse(string value, CountryInfo countryInfo, [NotNullWhen(true)] out PhoneNumber? phoneNumber, ParseOptions? options = null)
     {
+        if (value is null || countryInfo is null)
+        {
+            phoneNumber = default;
+            return false;
+        }
+
         options ??= ParseOptions.Default;
 
-        if (countryInfo is not null &&
-            options.Countries.Contains(countryInfo))
+        if (options.Countries.Contains(countryInfo))
         {
             var result = options.ParserFactory.GetParser(countryInfo).Parse(value);
 
