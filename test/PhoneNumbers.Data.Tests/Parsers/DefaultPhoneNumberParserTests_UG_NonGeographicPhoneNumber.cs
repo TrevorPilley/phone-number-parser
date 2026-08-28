@@ -14,6 +14,8 @@ public class DefaultPhoneNumberParserTests_UG_NonGeographicPhoneNumber
     [InlineData("0201999999", "201", "999999")]
     [InlineData("0202400000", "20240", "0000")]
     [InlineData("0202409999", "20240", "9999")]
+    [InlineData("0202490000", "20249", "0000")]
+    [InlineData("0202499999", "20249", "9999")]
     [InlineData("0203100000", "2031", "00000")]
     [InlineData("0203199999", "2031", "99999")]
     [InlineData("0203200000", "2032", "00000")]
