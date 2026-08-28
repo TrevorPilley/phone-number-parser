@@ -1,5 +1,5 @@
-# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000610005PDFE.pdf
-# Reference Date: 06/05/2021
+# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000610006PDFE.pdf
+# Reference Date: 10/03/2026
 G|1|Budapest|0000000-9999999|
 M|20,30-31,50,70||0000000-9999999|
 N|21,38||0000000-9999999|
@@ -9,6 +9,7 @@ G|24|Szigetszentmiklós|000000-999999|
 G|25|Dunaújváros|000000-999999|
 G|26|Szentendre|000000-999999|
 G|27|Vác|000000-999999|
+G|28|Gödöllő|000000-999999|
 G|29|Monor|000000-999999|
 G|32|Salgótarján|000000-999999|
 G|33|Esztergom|000000-999999|
@@ -22,6 +23,7 @@ G|45|Kisvárda|000000-999999|
 G|46|Miskolc|000000-999999|
 G|47|Szerencs|000000-999999|
 G|48|Ózd|000000-999999|
+G|49|Mezőkövesd|000000-999999|
 G|52|Debrecen|000000-999999|
 G|53|Cegléd|000000-999999|
 G|54|Berettyóújfalu|000000-999999|
@@ -40,6 +42,7 @@ G|74|Szekszárd|000000-999999|
 G|75|Paks|000000-999999|
 G|76|Kecskemét|000000-999999|
 G|77|Kiskunhalas|000000-999999|
+G|78|Kiskőrös|000000-999999|
 G|79|Baja|000000-999999|
 N|80||000000-999999|F
 G|82|Kaposvár|000000-999999|
@@ -54,4 +57,5 @@ G|92|Zalaegerszeg|000000-999999|
 G|93|Nagykanizsa|000000-999999|
 G|94|Szombathely|000000-999999|
 G|95|Sárvár|000000-999999|
+G|96|Győr|000000-999999|
 G|99|Sopron|000000-999999|
