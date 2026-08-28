@@ -41,6 +41,7 @@ public class PhoneNumberExtensionsTests
     [InlineData("FR", "+596596421995", "0596421995")]      // Martinique from France
     [InlineData("FR", "+594594299700", "0594299700")]      // French Guiana from France
     [InlineData("BY", "+49228141177", "8~1049228141177")]  // Germany number from Belarus
+    [InlineData("ES", "+35020074636", "0035020074636")]    // Gibraltar from Spain
     public void NumberToDialFrom_CountryInfo(string sourceCountryCode, string destination, string expected) =>
         Assert.Equal(
             expected,
@@ -102,6 +103,7 @@ public class PhoneNumberExtensionsTests
     [InlineData("+375172171185", "+375172841484", "8172841484")]     // Belarus Geo to Geo within NDC
     [InlineData("+375172171185", "+375162972325", "8162972325")]     // Belarus Geo to Geo different NDC
     [InlineData("+375172171185", "+49228141177", "8~1049228141177")] // Belarus to Germany
+    [InlineData("+34912582852", "+35020074636", "0035020074636")]    // Spain to Gibraltar
     public void NumberToDialFrom_PhoneNumber(string source, string destination, string expected) =>
         Assert.Equal(
             expected,
