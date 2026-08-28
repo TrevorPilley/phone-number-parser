@@ -45,6 +45,8 @@ public class DefaultPhoneNumberParserTests_SK_NonGeographicPhoneNumber
     [InlineData("0806999999", "806", "999999")]
     [InlineData("0809000000", "809", "000000")]
     [InlineData("0809999999", "809", "999999")]
+    [InlineData("0888000000", "888", "000000")]
+    [InlineData("0888999999", "888", "999999")]
     public void Parse_Known_NonGeographicPhoneNumber_8XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
@@ -168,6 +170,10 @@ public class DefaultPhoneNumberParserTests_SK_NonGeographicPhoneNumber
     [Theory]
     [InlineData("0850000000", "850", "000000")]
     [InlineData("0850999999", "850", "999999")]
+    [InlineData("0887000000", "887", "000000")]
+    [InlineData("0887999999", "887", "999999")]
+    [InlineData("0889000000", "889", "000000")]
+    [InlineData("0889999999", "889", "999999")]
     [InlineData("0899000000", "899", "000000")]
     [InlineData("0899999999", "899", "999999")]
     public void Parse_Known_NonGeographicPhoneNumber_SharedCost(string value, string NationalDestinationCode, string subscriberNumber)
