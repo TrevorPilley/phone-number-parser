@@ -8,12 +8,14 @@ public class DefaultPhoneNumberParserTests_PT_MobilePhoneNumber
     private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Portugal);
 
     [Theory]
-    [InlineData("900000000", "900", "000000")]
-    [InlineData("900999999", "900", "999999")]
-    [InlineData("903000000", "903", "000000")]
-    [InlineData("903999999", "903", "999999")]
-    [InlineData("906000000", "906", "000000")]
-    [InlineData("906999999", "906", "999999")]
+    [InlineData("910000000", "910", "000000")]
+    [InlineData("910999999", "910", "999999")]
+    [InlineData("939000000", "939", "000000")]
+    [InlineData("939999999", "939", "999999")]
+    [InlineData("960000000", "960", "000000")]
+    [InlineData("960999999", "960", "999999")]
+    [InlineData("969000000", "969", "000000")]
+    [InlineData("969999999", "969", "999999")]
     public void Parse_Known_MobilePhoneNumber(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);

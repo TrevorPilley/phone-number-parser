@@ -1,3 +1,7 @@
+# Reference: https://www.anacom.pt/pnn/pnnPlanosSelectAll.do?hc=off&channel=graphic&jscript=on&languageId=0&ssl=false&dataInicioDia=dd&dataInicioMes=mm&dataInicioAno=yyyy&dataFimDia=dd&dataFimMes=mm&dataFimAno=yyyy&assunto=Introduzir+qualquer+c%F3digo%2C+designa%E7%E3
+# Reference Date: 28/08/2026 (retrieved)
+# Reference: https://www.anacom.pt/pnn/pnnNiveis.do?niveisSelected=14&niveisSelected=16&niveisSelected=17&niveisSelected=18&niveisSelected=19&niveisSelected=20
+# Reference Date: 28/08/2026 (retrieved)
 G|210-219|Lisboa|000000-999999|
 G|220-229|Porto|000000-999999|
 G|231|Mealhada|000000-999999|
@@ -16,15 +20,14 @@ G|245|Portalegre|000000-999999|
 G|249|Torres Novas|000000-999999|
 G|251|Valença|000000-999999|
 G|252|Vila Nova de Famalicão|000000-999999|
-G|253|Braga|000000-999999|
+G|253,257|Braga|000000-999999|
 G|254|Peso da Régua|000000-999999|
 G|255|Penafiel|000000-999999|
 G|256|São João da Madeira|000000-999999|
-G|257|Braga|000000-999999|
 G|258|Viana do Castelo|000000-999999|
 G|259|Vila Real|000000-999999|
 G|261|Torres Vedras|000000-999999|
-G|262|Caldas da Rainha|000000-999999|
+G|262|Caldas da Raínha|000000-999999|
 G|263|Vila Franca de Xira|000000-999999|
 G|265|Setúbal|000000-999999|
 G|266|Évora|000000-999999|
@@ -50,9 +53,9 @@ G|291|Funchal|000000-999999|
 G|292|Horta|000000-999999|
 G|295|Angra do Heroísmo|000000-999999|
 G|296|Ponta Delgada|000000-999999|
-N|300-399,700-799,882||000000-999999|
-N|607||000000-999999|R
-N|800||000000-999999|F
+N|300-399,600-601,607-609,610-619,639,646,659,669,670-690,703,705,707-708,710-719,760-762,882||000000-999999|
+N|648||000000-999999|R
+N|800,802||000000-999999|F
 N|808-809||000000-999999|S
 M|884||000000-999999|V
-M|900-903,906||000000-999999|
+M|910-939,960-969||000000-999999|
