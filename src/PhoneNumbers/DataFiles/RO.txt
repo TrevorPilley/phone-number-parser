@@ -1,4 +1,6 @@
-G|21|Bucharest Municipality and Ilfov county|0000-9999999|
+# Reference: https://www.ancom.ro/uncategorized-ro/presentation-of-e-164-national-numbering-for-country-code-40-romania-2/
+# Reference Date: 28/08/2026 (retrieved)
+G|21,31|Bucharest Municipality and Ilfov county|0000-9999999|
 G|230|Suceava county|000-999999|
 G|231|Botosani county|000-999999|
 G|232|Iasi county|000-999999|
@@ -79,10 +81,10 @@ G|366|Harghita county|000-999999|
 G|367|Covasna county|000-999999|
 G|368|Brasov county|000-999999|
 G|369|Sibiu county|000-999999|
-N|37-39||0000000-9999999|
-M|60,70||0000000-9999999|V
-M|61-69,71-79||0000000-9999999|
+N|37-39,71-79||0000000-9999999|
+M|70||0000000-9999999|V
+M|60-69||0000000-9999999|
 N|800||000000-999999|F
-N|801,803||000000-999999|S
+N|801||000000-999999|S
 N|805,808,870||000000-999999|
 N|900,903,906||000000-999999|R
