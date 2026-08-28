@@ -1,7 +1,7 @@
 # Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000B70005PDFE.pdf
 # Reference Date: 06/12/2021
-# Reference: https://www.cst.gov.sa/en/RulesandSystems/RegulatoryDocuments/Numbering/Documents/TA103E-NationalNumberingPlanIssue2.pdf
-# Reference Date: 08/2011
+# Reference: https://www.cst.gov.sa/-/media/4EF6D881C20A4A798B14CAB586CA6145.pdf?cachebust=1787923717716
+# Reference Date: 08/02/2024
 G|11|Area 1 (Riyadh, Kharj)|2000000-8999999|
 G|12|Area 2 (Makkah, Jeddah)|2000000-8999999|
 G|13|Area 3 (Dammam, Khobar, Dahran)|2000000-8999999|
