@@ -8,6 +8,8 @@ public class DefaultPhoneNumberParserTests_ES_NonGeographicPhoneNumber
     private static readonly PhoneNumberParser s_parser = DefaultPhoneNumberParser.Create(CountryInfo.Spain);
 
     [Theory]
+    [InlineData("50000", "50", "000")]
+    [InlineData("50999999999999", "50", "999999999999")]
     [InlineData("510000000", "51", "0000000")]
     [InlineData("519999999", "51", "9999999")]
     public void Parse_Known_NonGeographicPhoneNumber_5X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
@@ -83,8 +85,8 @@ public class DefaultPhoneNumberParserTests_ES_NonGeographicPhoneNumber
     }
 
     [Theory]
-    [InlineData("5900000000000", "59", "00000000000")]
-    [InlineData("5999999999999", "59", "99999999999")]
+    [InlineData("5900000000000", "590", "0000000000")]
+    [InlineData("5909999999999", "590", "9999999999")]
     public void Parse_Known_NonGeographicPhoneNumber_MachineToMachine(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);

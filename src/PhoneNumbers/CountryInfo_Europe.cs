@@ -777,7 +777,7 @@ public partial class CountryInfo
         IsOecdMember = true,
         Name = "Spain",
         NdcLengths = s_ndc_3_2,
-        NsnLengths = s_nsn_9_13,
+        NsnLengths = s_nsn_5_6_7_8_9_10_11_12_13_14_15,
     };
 
     /// <summary>
