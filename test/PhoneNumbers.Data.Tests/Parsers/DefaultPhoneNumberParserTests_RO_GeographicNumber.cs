@@ -126,6 +126,26 @@ public class DefaultPhoneNumberParserTests_RO_GeographicNumber
     }
 
     [Theory]
+    [InlineData("0310000", "31", "0000", "Bucharest Municipality and Ilfov county")]
+    [InlineData("0319999999", "31", "9999999", "Bucharest Municipality and Ilfov county")]
+    public void Parse_Known_GeographicPhoneNumber_3X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
+    {
+        var parseResult = s_parser.Parse(value);
+        parseResult.ThrowIfFailure();
+
+        var phoneNumber = parseResult.PhoneNumber;
+
+        Assert.NotNull(phoneNumber);
+        Assert.IsType<GeographicPhoneNumber>(phoneNumber);
+
+        var geographicPhoneNumber = (GeographicPhoneNumber)phoneNumber;
+        Assert.Equal(CountryInfo.Romania, geographicPhoneNumber.Country);
+        Assert.Equal(geographicArea, geographicPhoneNumber.GeographicArea);
+        Assert.Equal(NationalDestinationCode, geographicPhoneNumber.NationalDestinationCode);
+        Assert.Equal(subscriberNumber, geographicPhoneNumber.SubscriberNumber);
+    }
+
+    [Theory]
     [InlineData("0330000", "330", "000", "Suceava county")]
     [InlineData("0330999999", "330", "999999", "Suceava county")]
     [InlineData("0331000", "331", "000", "Botosani county")]
