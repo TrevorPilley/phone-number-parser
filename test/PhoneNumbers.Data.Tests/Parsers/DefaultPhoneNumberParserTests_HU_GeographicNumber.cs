@@ -40,6 +40,8 @@ public class DefaultPhoneNumberParserTests_HU_GeographicNumber
     [InlineData("0626999999", "26", "999999", "Szentendre")]
     [InlineData("0627000000", "27", "000000", "Vác")]
     [InlineData("0627999999", "27", "999999", "Vác")]
+    [InlineData("0628000000", "28", "000000", "Gödöllő")]
+    [InlineData("0628999999", "28", "999999", "Gödöllő")]
     [InlineData("0629000000", "29", "000000", "Monor")]
     [InlineData("0629999999", "29", "999999", "Monor")]
     public void Parse_Known_GeographicPhoneNumber_2X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
@@ -102,6 +104,8 @@ public class DefaultPhoneNumberParserTests_HU_GeographicNumber
     [InlineData("0647999999", "47", "999999", "Szerencs")]
     [InlineData("0648000000", "48", "000000", "Ózd")]
     [InlineData("0648999999", "48", "999999", "Ózd")]
+    [InlineData("0649000000", "49", "000000", "Mezőkövesd")]
+    [InlineData("0649999999", "49", "999999", "Mezőkövesd")]
     public void Parse_Known_GeographicPhoneNumber_4X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
     {
         var parseResult = s_parser.Parse(value);
@@ -190,6 +194,8 @@ public class DefaultPhoneNumberParserTests_HU_GeographicNumber
     [InlineData("0676999999", "76", "999999", "Kecskemét")]
     [InlineData("0677000000", "77", "000000", "Kiskunhalas")]
     [InlineData("0677999999", "77", "999999", "Kiskunhalas")]
+    [InlineData("0678000000", "78", "000000", "Kiskőrös")]
+    [InlineData("0678999999", "78", "999999", "Kiskőrös")]
     [InlineData("0679000000", "79", "000000", "Baja")]
     [InlineData("0679999999", "79", "999999", "Baja")]
     public void Parse_Known_GeographicPhoneNumber_7X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
@@ -250,6 +256,8 @@ public class DefaultPhoneNumberParserTests_HU_GeographicNumber
     [InlineData("0694999999", "94", "999999", "Szombathely")]
     [InlineData("0695000000", "95", "000000", "Sárvár")]
     [InlineData("0695999999", "95", "999999", "Sárvár")]
+    [InlineData("0696000000", "96", "000000", "Győr")]
+    [InlineData("0696999999", "96", "999999", "Győr")]
     [InlineData("0699000000", "99", "000000", "Sopron")]
     [InlineData("0699999999", "99", "999999", "Sopron")]
     public void Parse_Known_GeographicPhoneNumber_9X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber, string geographicArea)
