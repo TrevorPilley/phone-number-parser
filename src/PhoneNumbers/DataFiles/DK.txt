@@ -1,4 +1,4 @@
-# Reference: https://eng.sdfi.dk/Media/638294944110731460/Guide%20to%20the%20Danish%20Numbering%20Plan.pdf via https://eng.sdfi.dk/digital-infrastructure/telecom/numbering
+# Reference: https://en.digst.dk/media/xwql1byl/guide-to-the-danish-numbering-plan.pdf via https://en.digst.dk/telecom/telecom/numbering/
 # Reference Date: 17/06/2022
 M|||20100000-31999999,40100000-42999999,50100000-53999999,60100000-61999999,71000000-71999999,91000000-93999999|
 # The mobile numbers that are a sub range of a non-geo range need to be listed before the non-geo range is listed
