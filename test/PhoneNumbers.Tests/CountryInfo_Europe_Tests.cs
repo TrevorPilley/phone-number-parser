@@ -913,7 +913,7 @@ public class CountryInfo_Europe_Tests
         Assert.True(countryInfo.IsOecdMember);
         Assert.Equal("Netherlands", countryInfo.Name);
         Assert.Equal([3, 2], countryInfo.NdcLengths);
-        Assert.Equal([9], countryInfo.NsnLengths);
+        Assert.Equal([9, 11], countryInfo.NsnLengths);
         Assert.False(countryInfo.SharesCallingCode);
         Assert.Equal("0", countryInfo.TrunkPrefix);
     }
