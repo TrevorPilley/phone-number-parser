@@ -604,7 +604,7 @@ public partial class CountryInfo
         IsOecdMember = true,
         Name = "Netherlands",
         NdcLengths = s_ndc_3_2,
-        NsnLengths = s_nsn_9,
+        NsnLengths = s_nsn_9_11,
         TrunkPrefix = "0",
     };
 

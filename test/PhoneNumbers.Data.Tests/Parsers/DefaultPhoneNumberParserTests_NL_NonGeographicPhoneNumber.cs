@@ -83,8 +83,8 @@ public class DefaultPhoneNumberParserTests_NL_NonGeographicPhoneNumber
     }
 
     [Theory]
-    [InlineData("0970000000", "97", "0000000")]
-    [InlineData("0978999999", "97", "8999999")]
+    [InlineData("097000000000", "97", "000000000")]
+    [InlineData("097899999999", "97", "899999999")]
     public void Parse_Known_NonGeographicPhoneNumber_MachineToMachine(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
