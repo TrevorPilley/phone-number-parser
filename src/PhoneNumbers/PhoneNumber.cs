@@ -7,7 +7,7 @@ namespace PhoneNumbers;
 /// The base class representing a <see cref="PhoneNumber"/>.
 /// </summary>
 /// <param name="phoneNumberHint">The <see cref="PhoneNumberHint"/> for the phone number.</param>
-public abstract class PhoneNumber(PhoneNumberHint phoneNumberHint)
+public closed class PhoneNumber(PhoneNumberHint phoneNumberHint)
 {
     /// <summary>
     /// Gets the <see cref="CountryInfo"/> for the phone number.
