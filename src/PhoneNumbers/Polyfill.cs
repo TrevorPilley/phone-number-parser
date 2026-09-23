@@ -77,6 +77,34 @@ namespace System.Runtime.CompilerServices
     }
 
     #endif //!NET7_0_OR_GREATER
+
+    #if !NET11_0_OR_GREATER
+
+    /// <summary>
+    /// Reserved for use by a compiler for tracking metadata.
+    /// This attribute should not be used by developers in source code.
+    /// </summary>
+    [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+    [AttributeUsage(AttributeTargets.Class, Inherited = false)]
+    public sealed class IsClosedTypeAttribute : Attribute
+    {
+        private Type[] _derivedTypes = Type.EmptyTypes;
+
+        /// <summary>Initializes the attribute.</summary>
+        public IsClosedTypeAttribute()
+        {
+        }
+
+        /// <summary>Gets or sets the derived types of the closed type.</summary>
+        /// <value>An array of the derived types of the closed type. A <see langword="null" /> value is normalized to an empty array.</value>
+        public Type[] DerivedTypes
+        {
+            get => _derivedTypes;
+            set => _derivedTypes = value ?? Type.EmptyTypes;
+        }
+    }
+
+    #endif // !NET11_0_OR_GREATER
 }
 
 namespace PhoneNumbers
