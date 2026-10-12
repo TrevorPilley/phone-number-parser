@@ -90,7 +90,7 @@ public class PhoneNumberExtensionsTests
     [InlineData("+12497121234", "+12494185634", "2494185634")]       // Canada within NDC, local dialling permitted, NDC required
     [InlineData("+18797121234", "+18794185634", "4185634")]          // Canada within NDC, local dialling permitted, NDC not required
     [InlineData("+19517121234", "+19514185634", "9514185634")]       // US within NDC, local dialling permitted, NDC required
-    [InlineData("+15597121234", "+15594185634", "4185634")]          // US within NDC, local dialling permitted, NDC not required
+    [InlineData("+12077121234", "+12074185634", "4185634")]          // US within NDC, local dialling permitted, NDC not required
     [InlineData("+18093725555", "+18093721909", "8093721909")]       // Dominican Republic, NANP but local dialling not permitted
     [InlineData("+35318049600", "+442894484957", "04894484957")]     // Republic of Ireland number to Northern Ireland (via 48 NDC)
     [InlineData("+35318049600", "+447106865391", "00447106865391")]  // Republic of Ireland number to United Kingdom number (international)
