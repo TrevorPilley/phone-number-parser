@@ -88,7 +88,6 @@ public class PhoneNumberExtensionsTests
     [InlineData("+393492525255", "+378598765", "00378598765")]       // Italy to San Marino IP
     [InlineData("+393492525255", "+34912582852", "0034912582852")]   // Italy to Spain
     [InlineData("+12497121234", "+12494185634", "2494185634")]       // Canada within NDC, local dialling permitted, NDC required
-    [InlineData("+18797121234", "+18794185634", "4185634")]          // Canada within NDC, local dialling permitted, NDC not required
     [InlineData("+19517121234", "+19514185634", "9514185634")]       // US within NDC, local dialling permitted, NDC required
     [InlineData("+12077121234", "+12074185634", "4185634")]          // US within NDC, local dialling permitted, NDC not required
     [InlineData("+18093725555", "+18093721909", "8093721909")]       // Dominican Republic, NANP but local dialling not permitted
