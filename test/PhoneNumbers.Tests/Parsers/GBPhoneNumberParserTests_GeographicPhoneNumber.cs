@@ -1,7 +1,7 @@
 namespace PhoneNumbers.Tests.Parsers;
 
 /// <summary>
-/// Contains unit tests for the <see cref="GBPhoneNumberParser"/> class for United kingdom <see cref="PhoneNumber"/>s.
+/// Contains unit tests for the <see cref="GBPhoneNumberParser"/> class for United Kingdom <see cref="PhoneNumber"/>s.
 /// </summary>
 public class GBPhoneNumberParserTests_GeographicPhoneNumber
 {
