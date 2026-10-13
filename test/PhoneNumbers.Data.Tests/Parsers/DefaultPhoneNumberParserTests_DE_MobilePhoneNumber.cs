@@ -22,8 +22,8 @@ public class DefaultPhoneNumberParserTests_DE_MobilePhoneNumber
     [InlineData("015179999999", "1517", "9999999")]
     [InlineData("015180000000", "15180", "000000")]
     [InlineData("015180999999", "15180", "999999")]
-    [InlineData("015186000000", "15186", "000000")]
-    [InlineData("015186999999", "15186", "999999")]
+    [InlineData("015189000000", "15189", "000000")]
+    [InlineData("015189999999", "15189", "999999")]
     [InlineData("015200000000", "1520", "0000000")]
     [InlineData("015209999999", "1520", "9999999")]
     [InlineData("015230000000", "1523", "0000000")]
@@ -38,6 +38,8 @@ public class DefaultPhoneNumberParserTests_DE_MobilePhoneNumber
     [InlineData("015310999999", "15310", "999999")]
     [InlineData("015333000000", "15333", "000000")]
     [InlineData("015333999999", "15333", "999999")]
+    [InlineData("015410000000", "15410", "000000")]
+    [InlineData("015410999999", "15410", "999999")]
     [InlineData("015510000000", "15510", "000000")]
     [InlineData("015510999999", "15510", "999999")]
     [InlineData("015511000000", "15511", "000000")]
@@ -46,14 +48,18 @@ public class DefaultPhoneNumberParserTests_DE_MobilePhoneNumber
     [InlineData("015550999999", "15550", "999999")]
     [InlineData("015569000000", "15569", "000000")]
     [InlineData("015569999999", "15569", "999999")]
+    [InlineData("015591000000", "15591", "000000")]
+    [InlineData("015591999999", "15591", "999999")]
     [InlineData("015630000000", "15630", "000000")]
     [InlineData("015630999999", "15630", "999999")]
+    [InlineData("015636000000", "15636", "000000")]
+    [InlineData("015636999999", "15636", "999999")]
     [InlineData("015678000000", "15678", "000000")]
     [InlineData("015678999999", "15678", "999999")]
     [InlineData("015679000000", "15679", "000000")]
     [InlineData("015679999999", "15679", "999999")]
-    [InlineData("015701000000", "15701", "000000")]
-    [InlineData("015701999999", "15701", "999999")]
+    [InlineData("015700000000", "15700", "000000")]
+    [InlineData("015700999999", "15700", "999999")]
     [InlineData("015704000000", "15704", "000000")]
     [InlineData("015704999999", "15704", "999999")]
     [InlineData("015706000000", "15706", "000000")]
@@ -89,17 +95,13 @@ public class DefaultPhoneNumberParserTests_DE_MobilePhoneNumber
     }
 
     [Theory]
-    [InlineData("01600000000", "1600", "000000")]
-    [InlineData("01600999999", "1600", "999999")]
-    [InlineData("01608000000", "1608", "000000")]
-    [InlineData("01608999999", "1608", "999999")]
-    [InlineData("016090000000", "1609", "0000000")]
-    [InlineData("016099999999", "1609", "9999999")]
-    [InlineData("01620000000", "162", "0000000")]
-    [InlineData("01629999999", "162", "9999999")]
-    [InlineData("01630000000", "163", "0000000")]
-    [InlineData("01639999999", "163", "9999999")]
-    public void Parse_Known_MobilePhoneNumber_16XX_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
+    [InlineData("016000000000", "160", "00000000")]
+    [InlineData("016099999999", "160", "99999999")]
+    [InlineData("016200000000", "162", "00000000")]
+    [InlineData("016299999999", "162", "99999999")]
+    [InlineData("016300000000", "163", "00000000")]
+    [InlineData("016399999999", "163", "99999999")]
+    public void Parse_Known_MobilePhoneNumber_16X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
         parseResult.ThrowIfFailure();
@@ -118,16 +120,12 @@ public class DefaultPhoneNumberParserTests_DE_MobilePhoneNumber
     }
 
     [Theory]
-    [InlineData("01700000000", "170", "0000000")]
-    [InlineData("01709999999", "170", "9999999")]
-    [InlineData("01750000000", "175", "0000000")]
-    [InlineData("01759999999", "175", "9999999")]
+    [InlineData("017000000000", "170", "00000000")]
+    [InlineData("017099999999", "170", "99999999")]
     [InlineData("017600000000", "176", "00000000")]
     [InlineData("017699999999", "176", "99999999")]
-    [InlineData("01770000000", "177", "0000000")]
-    [InlineData("01779999999", "177", "9999999")]
-    [InlineData("01790000000", "179", "0000000")]
-    [InlineData("01799999999", "179", "9999999")]
+    [InlineData("017900000000", "179", "00000000")]
+    [InlineData("017999999999", "179", "99999999")]
     public void Parse_Known_MobilePhoneNumber_17X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
