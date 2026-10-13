@@ -1,3 +1,5 @@
+# Reference: https://pts.se/globalassets/globala-block/nummertillstand/the-swedish-numbering-plan-for-telephony-according-to-itu---2024-01-08.pdf via https://pts.se/en/internet-and-telephony/numbering-and-addressing/
+# Reference Date: 08/01/2024
 N|10||1000000-8999999|
 G|11|Norrköping|00000-9999999|
 G|120|Åtvidaberg|00000-999999|
