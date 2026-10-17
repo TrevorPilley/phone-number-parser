@@ -1,7 +1,7 @@
 namespace PhoneNumbers.Tests.Parsers;
 
 /// <summary>
-/// Contains unit tests for the <see cref="DefaultPhoneNumberParser"/> class for Saint vincent and the grenadines <see cref="PhoneNumber"/>s.
+/// Contains unit tests for the <see cref="DefaultPhoneNumberParser"/> class for Saint Vincent and the Grenadines <see cref="PhoneNumber"/>s.
 /// </summary>
 public class DefaultPhoneNumberParserTests_VC_NonGeographicPhoneNumber
 {

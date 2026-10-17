@@ -1,7 +1,7 @@
 namespace PhoneNumbers.Tests.Parsers;
 
 /// <summary>
-/// Contains unit tests for the <see cref="DefaultPhoneNumberParser"/> class for South africa <see cref="PhoneNumber"/>s.
+/// Contains unit tests for the <see cref="DefaultPhoneNumberParser"/> class for South Africa <see cref="PhoneNumber"/>s.
 /// </summary>
 public class DefaultPhoneNumberParserTests_ZA_NonGeographicPhoneNumber
 {

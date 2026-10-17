@@ -1,7 +1,7 @@
 namespace PhoneNumbers.Tests.Parsers;
 
 /// <summary>
-/// Contains unit tests for the <see cref="DefaultPhoneNumberParser"/> class for Sint maarten <see cref="PhoneNumber"/>s.
+/// Contains unit tests for the <see cref="DefaultPhoneNumberParser"/> class for Sint Maarten <see cref="PhoneNumber"/>s.
 /// </summary>
 public class DefaultPhoneNumberParserTests_SX_NonGeographicPhoneNumber
 {

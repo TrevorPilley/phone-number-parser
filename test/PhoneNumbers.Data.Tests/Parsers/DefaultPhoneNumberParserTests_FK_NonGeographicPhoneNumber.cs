@@ -1,7 +1,7 @@
 namespace PhoneNumbers.Tests.Parsers;
 
 /// <summary>
-/// Contains unit tests for the <see cref="DefaultPhoneNumberParser"/> class for Falkland islands <see cref="PhoneNumber"/>s.
+/// Contains unit tests for the <see cref="DefaultPhoneNumberParser"/> class for Falkland Islands <see cref="PhoneNumber"/>s.
 /// </summary>
 public class DefaultPhoneNumberParserTests_FK_NonGeographicPhoneNumber
 {
