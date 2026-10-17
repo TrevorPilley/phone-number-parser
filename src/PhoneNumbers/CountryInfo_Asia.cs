@@ -110,6 +110,22 @@ public partial class CountryInfo
     };
 
     /// <summary>
+    /// Gets the <see cref="CountryInfo"/> for Taiwan.
+    /// </summary>
+    public static CountryInfo Taiwan { get; } = new()
+    {
+        CallingCode = "886",
+        Continent = Asia,
+        FullName = "Republic of China",
+        //InternationalCallPrefix = "001", //002, 005, 006, 007, 009 dependent on carrier
+        Iso3166Code = "TW",
+        Name = "Taiwan",
+        NdcLengths = s_ndc_3_2_1,
+        NsnLengths = s_nsn_8_9,
+        TrunkPrefix = "0",
+    };
+
+    /// <summary>
     /// Gets the <see cref="CountryInfo"/> for Türkiye.
     /// </summary>
     public static CountryInfo Turkey { get; } = new()
