@@ -118,7 +118,7 @@ public partial class CountryInfo
         CallingCode = "886",
         Continent = Asia,
         FullName = "Republic of China",
-        //InternationalCallPrefix = "001", //002, 005, 006, 007, 009 dependent on carrier
+        InternationalCallPrefix = "00x", // Standard prefix for default carrier, but carrier dependent (typically 002, 005, 006, 007, 009).
         Iso3166Code = "TW",
         Name = "Taiwan",
         NdcLengths = s_ndc_3_2_1,
