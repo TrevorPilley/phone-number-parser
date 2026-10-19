@@ -198,7 +198,7 @@ public class CountryInfo_Asia_Tests
         Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
         Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
         Assert.Equal("Republic of China", countryInfo.FullName);
-        Assert.Equal("00", countryInfo.InternationalCallPrefix);
+        Assert.Equal("00x", countryInfo.InternationalCallPrefix);
         Assert.Empty(countryInfo.InternationalCallPrefixes);
         Assert.False(countryInfo.IsArabLeagueMember);
         Assert.False(countryInfo.IsEuropeanUnionMember);
