@@ -12,7 +12,7 @@ public partial class CountryInfo
         CallingCode = "852",
         Continent = Asia,
         FullName = "Hong Kong Special Administrative Region of the People's Republic of China",
-        InternationalCallPrefix = "001",
+        InternationalCallPrefix = "001", // Standard prefix for default carrier, but carrier dependent.
         Iso3166Code = "HK",
         Name = "Hong Kong",
         NsnLengths = s_nsn_8_9_11_12,
@@ -103,7 +103,7 @@ public partial class CountryInfo
         CallingCode = "65",
         Continent = Asia,
         FullName = "Republic of Singapore",
-        InternationalCallPrefix = "000",
+        InternationalCallPrefix = "000", // Standard prefix for default carrier, but carrier dependent.
         Iso3166Code = "SG",
         Name = "Singapore",
         NsnLengths = s_nsn_8_10_11,

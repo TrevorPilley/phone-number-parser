@@ -32,7 +32,7 @@ public partial class CountryInfo
         Continent = Oceania,
         FormatProvider = AUPhoneNumberFormatProvider.Instance,
         FullName = "Commonwealth of Australia",
-        InternationalCallPrefix = "0011",
+        InternationalCallPrefix = "0011", // Standard prefix for default carrier, but carrier dependent.
         Iso3166Code = "AU",
         IsOecdMember = true,
         Name = "Australia",

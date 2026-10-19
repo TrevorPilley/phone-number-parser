@@ -233,6 +233,7 @@ public partial class CountryInfo
         CallingCode = "358",
         Continent = Europe,
         FullName = "Republic of Finland",
+        InternationalCallPrefix = ItuInternationalCallPrefix, // Standard prefix for default carrier, but carrier dependent.
         IsEuropeanUnionMember = true,
         IsNatoMember = true,
         Iso3166Code = "FI",
