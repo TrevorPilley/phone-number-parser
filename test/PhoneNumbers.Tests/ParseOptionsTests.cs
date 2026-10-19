@@ -182,7 +182,7 @@ public class ParseOptionsTests
             .Cast<CountryInfo>()
             .OrderBy(x => x.Name);
 
-        Assert.True(countryInfos.Count() > 0);
+        Assert.True(countryInfos.Any());
         Assert.Equal(countryInfos, ParseOptions.Default.Countries.OrderBy(x => x.Name));
     }
 
