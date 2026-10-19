@@ -59,6 +59,14 @@ public class PhoneNumber_ToString_Asia_Tests
         Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
 
     [Theory]
+    [InlineData("+886287703460", "E.123", "+886 2 8770 3460")]
+    [InlineData("+886287703460", "N", "(02) 8770 3460")]
+    [InlineData("+886287703460", "RFC3966", "tel:+886-2-8770-3460")]
+    [InlineData("+886287703460", "U", "0287703460")]
+    public void Taiwan_Numbers(string input, string format, string expected) =>
+        Assert.Equal(expected, PhoneNumber.Parse(input).ToString(format));
+
+    [Theory]
     [InlineData("+904441234", "E.123", "+90 444 12 34")]
     [InlineData("+903122947200", "E.123", "+90 312 294 72 00")]
     [InlineData("+904441234", "N", "(0444) 12 34")]

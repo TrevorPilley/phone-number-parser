@@ -114,6 +114,7 @@ public partial class CountryInfo
     /// </summary>
     public static CountryInfo Taiwan { get; } = new()
     {
+        AllowsLocalGeographicDialling = true,
         CallingCode = "886",
         Continent = Asia,
         FullName = "Republic of China",

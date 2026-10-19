@@ -1,2 +1,15 @@
-#Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000EB0004PDFE.pdf
-#Reference Date: 10/01/2023
+# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T02020000EB0004PDFE.pdf
+# Reference Date: 10/01/2023
+G|2|Taipei, New Taipei, Keelung|00000000-99999999|
+G|3|Taoyuan, Hsinchu, Hualien, Yilan|00000000-69999999,70000000-99999999|
+G|37|Miaoli|0000000-9999999|
+G|4|Taichung, Changhua|00000000-89999999|
+G|49|Nantou|0000000-9999999|
+G|5|Chiayi, Yunlin|00000000-99999999|
+G|6|Tainan, Penghu|00000000-99999999|
+G|7|Kaohsiung|00000000-99999999|
+G|8|Pingtung|00000000-19999999,30000000-35999999,37000000-89999999|
+G|82|Kinmen|0000000-5999999,7000000-9999999|
+G|826|Wuqiu|000000-999999|
+G|836|Matsu|000000-999999|
+G|89|Taitung|0000000-9999999|

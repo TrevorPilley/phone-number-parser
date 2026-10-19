@@ -187,6 +187,32 @@ public class CountryInfo_Asia_Tests
     }
 
     [Fact]
+    public void CountryInfo_Taiwan()
+    {
+        Assert.Same(CountryInfo.Taiwan, CountryInfo.Taiwan);
+
+        var countryInfo = CountryInfo.Taiwan;
+
+        Assert.True(countryInfo.AllowsLocalGeographicDialling);
+        Assert.Equal("886", countryInfo.CallingCode);
+        Assert.Equal(CountryInfo.Asia, countryInfo.Continent);
+        Assert.IsType<ComplexPhoneNumberFormatProvider>(countryInfo.FormatProvider);
+        Assert.Equal("Republic of China", countryInfo.FullName);
+        Assert.Equal("00", countryInfo.InternationalCallPrefix);
+        Assert.Empty(countryInfo.InternationalCallPrefixes);
+        Assert.False(countryInfo.IsArabLeagueMember);
+        Assert.False(countryInfo.IsEuropeanUnionMember);
+        Assert.False(countryInfo.IsNatoMember);
+        Assert.Equal("TW", countryInfo.Iso3166Code);
+        Assert.False(countryInfo.IsOecdMember);
+        Assert.Equal("Taiwan", countryInfo.Name);
+        Assert.Equal([3, 2, 1], countryInfo.NdcLengths);
+        Assert.Equal([8, 9], countryInfo.NsnLengths);
+        Assert.False(countryInfo.SharesCallingCode);
+        Assert.Equal("0", countryInfo.TrunkPrefix);
+    }
+
+    [Fact]
     public void CountryInfo_Turkey()
     {
         Assert.Same(CountryInfo.Turkey, CountryInfo.Turkey);

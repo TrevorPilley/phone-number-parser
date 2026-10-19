@@ -59,6 +59,14 @@ public class PhoneNumber_Parse_Asia_Tests
     }
 
     [Fact]
+    public void Parse_Value_For_Taiwan_CallingCode()
+    {
+        var phoneNumber = PhoneNumber.Parse("+886287703460");
+        Assert.NotNull(phoneNumber);
+        Assert.Equal(CountryInfo.Taiwan, phoneNumber.Country);
+    }
+
+    [Fact]
     public void Parse_Value_For_Turkey_CallingCode()
     {
         var phoneNumber = PhoneNumber.Parse("+903122947200");
