@@ -95,12 +95,14 @@ public class DefaultPhoneNumberParserTests_DE_MobilePhoneNumber
     }
 
     [Theory]
-    [InlineData("016000000000", "160", "00000000")]
-    [InlineData("016099999999", "160", "99999999")]
-    [InlineData("016200000000", "162", "00000000")]
-    [InlineData("016299999999", "162", "99999999")]
-    [InlineData("016300000000", "163", "00000000")]
-    [InlineData("016399999999", "163", "99999999")]
+    [InlineData("01600000000", "160", "0000000")]
+    [InlineData("01608999999", "160", "8999999")]
+    [InlineData("016090000000", "1609", "0000000")]
+    [InlineData("016099999999", "1609", "9999999")]
+    [InlineData("01620000000", "162", "0000000")]
+    [InlineData("01629999999", "162", "9999999")]
+    [InlineData("01630000000", "163", "0000000")]
+    [InlineData("01639999999", "163", "9999999")]
     public void Parse_Known_MobilePhoneNumber_16X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
@@ -120,12 +122,16 @@ public class DefaultPhoneNumberParserTests_DE_MobilePhoneNumber
     }
 
     [Theory]
-    [InlineData("017000000000", "170", "00000000")]
-    [InlineData("017099999999", "170", "99999999")]
+    [InlineData("01700000000", "170", "0000000")]
+    [InlineData("01709999999", "170", "9999999")]
+    [InlineData("01750000000", "175", "0000000")]
+    [InlineData("01759999999", "175", "9999999")]
     [InlineData("017600000000", "176", "00000000")]
     [InlineData("017699999999", "176", "99999999")]
-    [InlineData("017900000000", "179", "00000000")]
-    [InlineData("017999999999", "179", "99999999")]
+    [InlineData("01770000000", "177", "0000000")]
+    [InlineData("01779999999", "177", "9999999")]
+    [InlineData("01790000000", "179", "0000000")]
+    [InlineData("01799999999", "179", "9999999")]
     public void Parse_Known_MobilePhoneNumber_17X_NationalDestinationCode(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
