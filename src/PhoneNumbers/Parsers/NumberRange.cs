@@ -18,7 +18,7 @@ internal sealed class NumberRange
         ArgumentException.ThrowIfNullOrWhiteSpace(from);
         ArgumentException.ThrowIfNullOrWhiteSpace(to);
 #pragma warning disable S3236
-        ArgumentOutOfRangeException.ThrowIfLessThan(to.Length, from.Length, nameof(to));
+        ArgumentOutOfRangeException.ThrowIfLessThan(to.Length, from.Length, $"The 'to' value '{to}' must be the same length or longer than the 'from' value '{from}'");
 #pragma warning restore S3236
 
         (From, To) = (from, to);
