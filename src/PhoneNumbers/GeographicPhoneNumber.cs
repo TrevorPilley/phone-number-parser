@@ -39,7 +39,7 @@ public sealed class GeographicPhoneNumber : PhoneNumber, IEquatable<GeographicPh
     /// </summary>
     /// <param name="phoneNumber1">The first phone number to compare.</param>
     /// <param name="phoneNumber2">The second phone number to compare.</param>
-    /// <returns><c>true</c> if the specified phone numbers are not equal; otherwise, <see langword="false" />.</returns>
+    /// <returns><see langword="true"/> if the specified phone numbers are not equal; otherwise, <see langword="false" />.</returns>
     public static bool operator !=(GeographicPhoneNumber? phoneNumber1, GeographicPhoneNumber? phoneNumber2) =>
         !(phoneNumber1 == phoneNumber2);
 
@@ -48,7 +48,7 @@ public sealed class GeographicPhoneNumber : PhoneNumber, IEquatable<GeographicPh
     /// </summary>
     /// <param name="phoneNumber1">The first phone number to compare.</param>
     /// <param name="phoneNumber2">The second phone number to compare.</param>
-    /// <returns><c>true</c> if the specified phone numbers are equal; otherwise, <see langword="false" />.</returns>
+    /// <returns><see langword="true"/> if the specified phone numbers are equal; otherwise, <see langword="false" />.</returns>
     public static bool operator ==(GeographicPhoneNumber? phoneNumber1, GeographicPhoneNumber? phoneNumber2) =>
         phoneNumber1 is null ? phoneNumber2 is null : phoneNumber1.Equals(phoneNumber2);
 
