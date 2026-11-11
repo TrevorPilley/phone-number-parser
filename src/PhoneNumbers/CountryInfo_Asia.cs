@@ -126,7 +126,8 @@ public partial class CountryInfo
         Continent = Asia,
         FullName = "Republic of China",
         InternationalCallPrefix = "00x", // Standard prefix for default carrier, but carrier dependent (typically 002, 005, 006, 007, 009).
-        Iso3166Code = "TW",
+        Iso3166Alpha2Code = "TW",
+        Iso3166Alpha3Code = "TWN",
         Name = "Taiwan",
         NdcLengths = s_ndc_3_2_1,
         NsnLengths = s_nsn_8_9,
