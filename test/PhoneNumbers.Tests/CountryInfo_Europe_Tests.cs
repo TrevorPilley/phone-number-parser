@@ -45,7 +45,8 @@ public class CountryInfo_Europe_Tests
         Assert.Equal("Republic of Albania", countryInfo.FullName);
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.True(countryInfo.IsNatoMember);
-        Assert.Equal("AL", countryInfo.Iso3166Code);
+        Assert.Equal("AL", countryInfo.Iso3166Alpha2Code);
+        Assert.Equal("ALB", countryInfo.Iso3166Alpha3Code);
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Albania", countryInfo.Name);
         Assert.Empty(countryInfo.NdcLengths);
