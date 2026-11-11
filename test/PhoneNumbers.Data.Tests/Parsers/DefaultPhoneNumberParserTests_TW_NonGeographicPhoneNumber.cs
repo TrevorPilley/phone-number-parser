@@ -35,6 +35,8 @@ public class DefaultPhoneNumberParserTests_TW_NonGeographicPhoneNumber
     [Theory]
     [InlineData("0800000000", "800", "000000")]
     [InlineData("0800999999", "800", "999999")]
+    [InlineData("0809000000", "809", "000000")]
+    [InlineData("0809999999", "809", "999999")]
     public void Parse_Known_NonGeographicPhoneNumber_Freephone(string value, string NationalDestinationCode, string subscriberNumber)
     {
         var parseResult = s_parser.Parse(value);
