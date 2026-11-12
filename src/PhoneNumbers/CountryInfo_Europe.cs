@@ -482,8 +482,8 @@ public partial class CountryInfo
         CallingCode = "383",
         Continent = Europe,
         FullName = "Republic of Kosovo",
-        Iso3166Alpha2Code = "XK",
-        Iso3166Alpha3Code = "XKK",
+        Iso3166Alpha2Code = "XK",  // Not officially recognised under ISO3116
+        Iso3166Alpha3Code = "XKX", // Not officially recognised under ISO3116
         Name = "Kosovo",
         NdcLengths = s_ndc_3_2,
         NsnLengths = s_nsn_8_9,
