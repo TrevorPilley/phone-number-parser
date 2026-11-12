@@ -701,7 +701,7 @@ public class CountryInfo_Europe_Tests
         Assert.False(countryInfo.IsEuropeanUnionMember);
         Assert.False(countryInfo.IsNatoMember);
         Assert.Equal("XK", countryInfo.Iso3166Alpha2Code);
-        Assert.Equal("XKK", countryInfo.Iso3166Alpha3Code);
+        Assert.Equal("XKX", countryInfo.Iso3166Alpha3Code);
         Assert.False(countryInfo.IsOecdMember);
         Assert.Equal("Kosovo", countryInfo.Name);
         Assert.Equal([3, 2], countryInfo.NdcLengths);
