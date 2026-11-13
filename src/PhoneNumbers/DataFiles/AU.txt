@@ -1,77 +1,109 @@
-# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200000D0001PDFE.pdf
-# Reference Date: 25/05/2011
-N|13||0000-99999999|
-N|141-145,147||000000-999999|
-M|16||000-9999999|P
-N|18||00000000-00999999,02000-02999|F
-N|19||00000000-02999999,06000000-06999999|R
-N|191,193-195||000-999|R
-N|192||000-999|
-N|198||0000000-9999999|
-N|196-197,199||00000-99999|R
+# Reference: https://www.itu.int/dms_pub/itu-t/oth/02/02/T020200000D0002PDFE.pdf
+# Reference Date: 18/03/2026
+G|2|Newcastle|30000000-30999999,40000000-41999999,49000000-49999999|
+G|2|Bathurst, Cowra, Lithgow, Mudgee, Orange, Rylstone, Young|31000000-31999999,53000000-53999999,63000000-63999999|
+G|2|Wollongong|32000000-32999999,42000000-42999999|
 G|2|Gosford|33000000-33999999,43000000-43999999|
+G|2|Bourke, Condoblin, Coonamble, Dubbo, Forbes, Moree, Nyngan, Parkes, Wellington|34000000-34999999,58000000-58999999,68000000-68999999|
+G|2|Kempsey, Lord Howe Island, Muswellbrook, Singleton, Taree, Wauchope|35000000-35999999,55000000-55499999,55510000-55599999,65000000-65999999|
+G|2|Casino, Coffs Harbour, Graton, Kyogle, Lismore, Murwillumbah|36000000-36999999,56000000-56999999,66000000-66999999|
+G|2|Armidale, Barraba, Glen Innes, Gunnedah, Inverell, Moree, Narrabri, Tamworth, Moree|37000000-37999999,57000000-57999999,67000000-67999999|
 G|2|Bowral, Crookwell, Goulburn, Marulan|38000000-38999999,48000000-48999999|
-G|2|Newcastle|40000000-41999999,49000000-49999999|
-G|2|Wollongong|42000000-42999999|
+G|2|Adelong, Griffith, Hay, Narrandera, Temora, Wagga Wagga, West Wyalong|39000000-39999999,59000000-59999999,69000000-69999999|
 G|2|Moruya, Nowra|44000000-44999999|
 G|2|Windsor|45000000-45999999|
-G|2|Campbelltown|46000000-46999999|
+G|2|Camden, Campbelltown, Picton|46000000-46999999|
 G|2|Penrith|47000000-47999999|
 G|2|Albury, Corryong|50000000-50999999,60000000-60999999|
 G|2|Canberra|51000000-52999999,61000000-62999999|
-G|2|Bathurst, Cowra, Lithgow, Mudgee, Orange, Rylstone, Young|53000000-53999999,63000000-63999999|
-G|2|Bega, Cooma|64000000-64999999|
-G|2|Kempsey, Lord Howe Island, Muswellbrook, Singleton, Taree, Wauchope|55000000-55999999,65000000-65999999|
-G|2|Casino, Coffs Harbour, Graton, Kyogle, Lismore, Murwillumbah|56000000-56999999,66000000-66999999|
-G|2|Armidale, Barraba, Gunnedah, Inverell, Moree, Narrabri, Glen Innes, Tamworth|57000000-57999999,67000000-67999999|
-G|2|Bourke, Condoblin, Coonamble, Dubbo, Forbes, Moree, Nyngan, Parkes, Wellington|58000000-58999999,68000000-68999999|
-G|2|Adelong, Griffith, Hay, Narrandera, Temora, Wagga Wagga, West Wyalong|59000000-59999999,69000000-69999999|
-G|2|Sydney|70000000-99999999|
-# The other numbers in NDC 2 are generalised in the line below, more specific ones are listed above and first.
-G|2|Central East Region (New South Wales, the Australian Capital Territory and parts of northern Victoria)|20000000-32999999,34000000-37999999,39000000-39999999,54000000-54999999|
-G|3|Balranald, Hopetoun, Mildura, Ouyen, Swan Hill|40000000-40999999,50000000-50999999|
-G|3|Bairnsdale, Morwell, Sale|41000000-41999999,51000000-51999999|
-G|3|Geelong, Colac|42000000-42999999,52000000-52999999|
-G|3|Ararat, Ballarat, Horsham, Kyneton, Nhill|43000000-43999999,53000000-53999999|
-G|3|Bendigo, Charlton, Echuca, Kerang, Kyneton, Maryborough|44000000-44999999,54000000-54999999|
-G|3|Camperdown, Casterton, Edenhope, Hamilton, Portland, Warrnambool|45000000-45999999,55000000-55999999|
-G|3|Foster, Korumburra, Warragul|56000000-56999999|
-G|3|Alexandra, Myrtleford, Seymour, Wangaratta, Deniliquin, Numurkah, Shepparton|47000000-47999999,57000000-57999999|
-G|3|Deniliquin, Numurkah, Shepparton|58000000-58999999|
+G|2|Bega, Cooma|54000000-54999999,64000000-64999999|
+G|2|Sydney|70000000-74999999,76000000-77999999,79000000-80999999,82000000-83999999,90000000-93999999,96000000-96999999|
+G|2|Engadine, Sutherland|75000000-75999999|
+G|2|Parramatta|78000000-78999999|
+G|2|Bankstown, Liverpool|81000000-81999999|
+G|2|Avalon Beach, Dural, Terrey Hills|84000000-84999999,89000000-89999999,94000000-94999999|
+G|2|Engadine, Sutherland, Sydney|85000000-85999999,95000000-95999999|
+G|2|Blacktown|86000000-86999999|
+G|2|Blacktown, Liverpool|87000000-87999999|
+G|2|Blacktown, Parramatta, Sidney|88000000-88999999,98000000-98999999|
+G|2|Bankstown, Liverpool, Sydney|97000000-97999999|
+G|2|Avalon Beach, Dural, Sidney, Terrey Hills|99000000-99999999|
+G|3|Balranald, Hopetoun, Mildura, Ouyen, Swan Hill|30000000-30999999,40000000-40999999,50000000-50999999|
+G|3|Bairnsdale, Morwell, Sale|31000000-31999999,41000000-41999999,51000000-51999999|
+G|3|Colac, Geelong|32000000-32999999,42000000-42999999,52000000-52999999|
+G|3|Ararat, Ballarat, Horsham, Kyneton, Nhill, Kyneton|33000000-33999999,43000000-43999999,53000000-53999999|
+G|3|Bendigo, Charlton, Echuca, Kerang, Kyneton, Maryborough|34000000-34999999,44000000-44999999,54000000-54999999|
+G|3|Camperdown, Casterton, Edenhope, Hamilton, Portland, Warrnambool|45000000-45999999,55000000-55499999,55510000-55599999|
+G|3|Foster, Korumburra, Warragul|46000000-46999999,56000000-56999999|
+G|3|Alexandra, Myrtleford, Seymour, Wangaratta|47000000-47999999,57000000-57999999|
+G|3|Deniliquin, Numurkah, Shepparton|48000000-48999999,58000000-58999999|
 G|3|Mornington, Warragul|49000000-49999999,59000000-59999999|
-G|3|Hobart, Geeveston, Oatlands, Ouse|61000000-62999999|
-G|3|Deloraine, Flinders Island, Launceston, Scottsdale, St Mary’s|63000000-63999999,67000000-67999999|
+G|3|Geeveston, Hobart, Oatlands, Ouse|60000000-62999999|
+G|3|Deloraine, Flinders Island, Launceston, Scottsdale, St Mary’s|63000000-63999999,67000000-68999999|
 G|3|Burnie, Devonport, King Island, Queenstown, Smithton|64000000-65999999|
-G|3|Melbourne|70000000-99999999|
-# The other numbers in NDC 3 are generalised in the line below, more specific ones are listed above and first.
-G|3|South East Region (Tasmania, most of Victoria and parts of southern New South Wales)|20000000-39999999,46000000-46999999,48000000-48999999,60000000-60999999,66000000-66999999,68000000-69999999|
+G|3|Melbourne|70000000-70099999,70200000-70999999,71000000-72999999,74000000-74999999,76000000-79999999,86000000-86999999,90000000-92999999,96000000-96999999,99000000-99999999|
+G|3|Craigieburn, Point Cook, Sydenham|73000000-73999999|
+G|3|Clayton|75000000-75999999|
+G|3|Sunbury, Werribee|80000000-80999999|
+G|3|Kalkallo, Whittlesea|81000000-81999999|
+G|3|Croydon|82000000-82999999|
+G|3|Craigieburn, Melbourne, Point Cook, Sydenham|83000000-83999999,93000000-93999999|
+G|3|Eltham|84000000-84999999|
+G|3|Clayton, Melbourne|85000000-85999999,95000000-95999999|
+G|3|Clayton, Craigieburn, Dandenong, Eltham, Point Cook, Ringwood|87000000-87999999|
+G|3|Ringwood|88000000-88999999|
+G|3|Dandenong|89000000-89999999|
+G|3|Eltham, Melbourne|94000000-94999999|
+G|3|Croydon, Dandenong, Kalkallo, Sunbury, Werribee, Whittlesea|97000000-97999999|
+G|3|Melbourne, Ringwood|98000000-98999999|
 M|4||00000000-99999999|
-M|50||0000000-9999999|V
-N|55||0000000-9999999|
-G|7|Brisbane, Bribie Island, Esk|20000000-39999999|
-G|7|Cairns|40000000-40999999,42000000-42999999|
-G|7|Bundaberg, Gayndah, Kingaroy, Maryborough, Murgon|41000000-41999999,43000000-43999999|
-G|7|Cloncurry, Hughenden, Townsville|44000000-44999999,47000000-47999999|
-G|7|Charleville, Dalby, Dirranbandi, Goondiwindi, Inglewood, Longreach, Miles, Roma, Stanthorpe, Toowoomba, Warwick|45000000-46999999,76000000-76999999|
-G|7|Biloela, Emerald, Gladstone, Mackay, Rockhampton|48000000-49999999|
-G|7|Caboolture, Esk, Gatton, Gympie, Nambour|52000000-54999999|
-G|7|Beaudesert, Southport, Tweed Heads|55000000-57999999|
-# The other numbers in NDC 7 are generalised in the line below, more specific ones are listed above and first.
-G|7|North East Region (Queensland)|50000000-51999999,58000000-75999999,77000000-99999999|
+M|5||00000000-99999999|
+G|7|Redcliffe, Samford|20000000-20999999|
+G|7|Brisbane|21000000-21999999,31000000-31999999,32100000-32599999,32700000-32799999,32900000-33799999,33900000-33999999,35000000-35999999,37000000-37999999,38100000-38599999,38700000-38799999,38900000-39999999|
+G|7|Bribie Island, Brisbane, Dayboro|22000000-22999999|
+G|7|Bribie Island, Brisbane, Dayboro, Esk|23000000-27999999,29000000-29999999|
+G|7|Beenleigh, Cleveland, Ipswich|28000000-28999999|
+G|7|Beenleigh, Brisbane, Cleveland, Ipswich, Redcliffe, Samford|30000000-30999999|
+G|7|Beenleigh, Cleveland, Ipswich, Redcliffe, Samford|32000000-32099999,32800000-32899999,33800000-33899999,34000000-34999999,38800000-38899999|
+G|7|Brisbane, Sandgate|32600000-32699999,38600000-38699999|
+G|7|Sandgate|36000000-36999999|
+G|7|Beenleigh|38000000-38099999|
+G|7|Cairns|40000000-40999999,42000000-42999999,70000000-70999999,72000000-72999999|
+G|7|Bundaberg, Gayndah, Kingaroy, Maryborough, Murgon|41000000-41999999,43000000-43999999,73000000-73999999|
+G|7|Cloncurry, Hughenden, Townsville|44000000-44999999,47000000-47999999,77000000-77999999|
+G|7|Charleville, Dalby, Dirranbandi, Goondiwindi, Inglewood, Longreach, Miles, Roma, Stanthorpe, Toowoomba, Warwick|45000000-46999999,75000000-76999999|
+G|7|Biloela, Emerald, Gladstone, Mackay, Rockhampton|48000000-49999999,78000000-79999999|
+G|7|Caboolture, Esk, Gatton, Gympie, Nambour|51000000-54999999|
+G|7|Beaudesert|56000000-58999999|
+G|8|Adelaide|20000000-21999999,70000000-70099999,70110000-71799999,72000000-72599999,73000000-73699999,74000000-74799999,81000000-81799999,81900000-82899999,82900000-83799999,83900000-84799999,84900000-84999999|
+G|8|Berri, Gawler, Kangaroo Island, Malalla, Murray Bridge, Nurioopta, Tailem Bend, Victor Harbour, Waikerie|25000000-25999999,75000000-75999999,85000000-85999999|
+G|8|Ceduna, Cook, Gladstone, Peterborough, Port Augusta, Port Pirie, Port Lincoln, Woomera|26000000-26999999,76000000-76999999,86000000-86999999|
+G|8|Bordertown, Mount Gambier, Naracoorte|27000000-27999999,77000000-77999999,87000000-87999999|
+G|8|Balaklava, Burra, Clare, Gawler, Kadina, Maitland, Port Lincoln, Yorketown|28000000-28999999,78000000-78999999,88000000-88999999|
+G|8|Alice Springs, Darwin|29000000-29999999,79000000-79999999,89000000-89999999|
+G|8|Christmas Island, Cocos (Keeling) Islands, Derby, Great Sandy, Port Hedland|41000000-41999999,51000000-51999999,91000000-91999999|
+G|8|Perth|52000000-54999999,61000000-61299999,61400000-61699999,61800000-61899999,62400000-62899999,63200000-63299999,63500000-63899999,64300000-64899999,65000000-65099999,65400000-65599999,92100000-92299999,92400000-92899999,93100000-93299999,93400000-93899999,94100000-94299999,94400000-94899999|
+G|8|Bullsbrook East, Northam, Pinjarra|55000000-55499999,55510000-55999999|
+G|8|Bridgetown, Bunbury, Busselton, Pinjarra|57000000-57999999,97000000-97999999|
+G|8|Albany, Katanning, Kondinin, Narrogin, Wagin|58000000-58999999,68000000-68999999,98000000-98999999|
 G|8|Bruce Rock, Great Victoria, Kalgoorlie, Merredin|60000000-60999999,90000000-90999999|
-G|8|Perth|52000000-54999999,61000000-65999999,92000000-94999999|
-G|8|Christmas Island, Cocos (Keeling) Islands, Derby, Great Sandy, Port Hedland|51000000-51999999,91000000-91999999|
-G|8|Bullsbrook East, Northam, Pinjarra|95000000-95999999|
+G|8|Rottnest Island, Spearwood|61300000-61399999,61700000-61799999|
+G|8|Armadale, Herne Hill, Kalamunda, Rottnest, Spearwood|61900000-61999999,62900000-62999999,63900000-63999999,64900000-64999999,92900000-92999999,93900000-93999999,94900000-94999999|
+G|8|Wanneroo|62000000-62099999,63000000-63099999,63400000-63499999,93000000-93099999,94000000-94099999|
+G|8|Fremantle, Perth|62100000-62399999,63100000-63199999,63300000-63399999,64200000-64299999,92300000-92399999,93300000-93399999,94300000-94399999|
+G|8|Perth, Wanneroo|64000000-64099999,92000000-92099999|
+G|8|Fremantle|64100000-64199999,65100000-65199999|
+G|8|Herne Hill|65200000-65399999|
+G|8|Kalamunda|65600000-65799999|
+G|8|Armadale|65800000-65999999|
 G|8|Moora, Northam, Wongan Hills, Wyalkatchem, York|66000000-66999999,96000000-96999999|
-G|8|Bridgetown, Bunbury, Busselton, Pinjarra|67000000-67999999,97000000-97999999|
-G|8|Albany, Katanning, Kondinin, Narrogin, Wagin|68000000-68999999,98000000-98999999|
-G|8|Adelaide|70000000-74999999,81000000-84999999|
-G|8|Berri, Gawler, Kangaroo Island, Malalla, Murray Bridge, Nurioopta, Tailem Bend, Victor Harbour, Waikerie|75000000-75999999,85000000-85999999|
-G|8|Ceduna, Port Augusta, Port Pirie, Port Lincoln, Gladstone, Peterborough, Cook, Woomera|76000000-76999999,86000000-86999999|
-G|8|Bordertown, Mount Gambier, Naracoorte|77000000-77999999,87000000-87999999|
-G|8|Clare, Kadina, Port Lincoln, Burra, Balaklava, Maitland, Gawler, Yorketown|78000000-78999999,88000000-88999999|
-G|8|Alice Springs, Darwin|79000000-79999999,89000000-89999999|
-G|8|Broken Hill|80000000-80999999|
-G|8|Carnamah, Carnarvon, Geraldton, Meekatharra, Morawa, Mullewa, Wongan Hills|99000000-99999999|
-# The other numbers in NDC 8 are generalised in the line below, more specific ones are listed above and first.
-G|8|Central and West Region (Western Australia, South Australia, the Northern Territory and parts of New South Wales)|20000000-50999999,55000000-59999999,69000000-69999999|
+G|8|Bridgetown, Bunbury, Busselton, Pinjarra|67000000-67999999|
+G|8|Carnamah, Carnarvon, Geraldton, Meekatharra, Morawa, Mullewa, Wongan Hills|69000000-69999999,99000000-99999999|
+G|8|McLaren Vale, Mount Barker (South Australia), Salisbury, Woodside (South Australia)|718000000-718999999,728000000-728999999,818000000-818999999,838000000-838999999,848000000-848999999|
+G|8|Mount Barker (South Australia)|719000000-719999999,729000000-729999999|
+G|8|McLaren Vale|726000000-727999999|
+G|8|Salisbury|737000000-739999999,828000000-828999999|
+G|8|Woodside (South Australia)|749000000-749999999|
+G|8|Broken Hill|800000000-809999999|
+G|8|Bullsbrook East, Pinjarra|95000000-95999999|
+N|900,910,920,930,940||0000000-9999999|M
